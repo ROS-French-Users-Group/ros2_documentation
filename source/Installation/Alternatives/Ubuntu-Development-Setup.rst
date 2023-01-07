@@ -8,45 +8,45 @@
 Ubuntu (source)
 ===============
 
-.. contents:: Table of Contents
+.. contents:: Table des matières
    :depth: 2
    :local:
 
 
-System requirements
--------------------
-The current Debian-based target platforms for {DISTRO_TITLE_FULL} are:
+Configuration requise
+---------------------
+Les plateformes cibles basées sur Debian pour  {DISTRO_TITLE_FULL} sont:
 
-- Tier 1: Ubuntu Linux - Jammy (22.04) 64-bit
-- Tier 3: Ubuntu Linux - Focal (20.04) 64-bit
-- Tier 3: Debian Linux - Bullseye (11) 64-bit
+- Niveau 1: Ubuntu Linux - Jammy (22.04) 64-bit
+- Niveau 3: Ubuntu Linux - Focal (20.04) 64-bit
+- Niveau 3: Debian Linux - Bullseye (11) 64-bit
 
 
-Other Linux platforms with varying support levels include:
+Les autres plateformes Linux supportées avec différents niveaux sont:
 
-- Arch Linux, see `alternate instructions <https://wiki.archlinux.org/index.php/ROS#ROS_2>`__
-- Fedora Linux, see :doc:`alternate instructions <Fedora-Development-Setup>`
-- OpenEmbedded / webOS OSE, see `alternate instructions <https://github.com/ros/meta-ros/wiki/OpenEmbedded-Build-Instructions>`__
+- Arch Linux, voir `instructions alternatives <https://wiki.archlinux.org/index.php/ROS#ROS_2>`__
+- Fedora Linux, voir :doc:`instructions alternatives <Fedora-Development-Setup>`
+- OpenEmbedded / webOS OSE, voir `instructions alternatives <https://github.com/ros/meta-ros/wiki/OpenEmbedded-Build-Instructions>`__
 
-As defined in `REP 2000 <https://www.ros.org/reps/rep-2000.html>`_.
+Comme défini dans  `REP 2000 <https://www.ros.org/reps/rep-2000.html>`_.
 
-System setup
-------------
+Installation du système
+-----------------------
 
-Set locale
-^^^^^^^^^^
+Spécifier la langue
+^^^^^^^^^^^^^^^^^^^
 
 .. include:: ../_Ubuntu-Set-Locale.rst
 
-Add the ROS 2 apt repository
+Ajouter le dépôt apt ROS 2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. include:: ../_Apt-Repositories.rst
 
-Install development tools and ROS tools
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Installer les outils de développement et ceux de ROS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Install common packages.
+Installation des paquets communs.
 
 .. code-block:: bash
 
@@ -56,11 +56,11 @@ Install common packages.
      python3-pytest-cov \
      ros-dev-tools
 
-Install packages according to your Ubuntu version.
+Installation des paquets suivant votre version d'Ubuntu.
 
 .. tabs::
 
-   .. group-tab:: Ubuntu 22.04 LTS and later
+   .. group-tab:: Ubuntu 22.04 LTS et plus récent
 
       .. code-block:: console
 
@@ -93,10 +93,10 @@ Install packages according to your Ubuntu version.
 
 .. _Rolling_linux-dev-get-ros2-code:
 
-Get ROS 2 code
---------------
+Obtenir le code ROS 2
+---------------------
 
-Create a workspace and clone all repos:
+Il faut créer un espace de travail et cloner tous les dépôts:
 
 .. code-block:: bash
 
@@ -106,8 +106,8 @@ Create a workspace and clone all repos:
 
 .. _linux-development-setup-install-dependencies-using-rosdep:
 
-Install dependencies using rosdep
----------------------------------
+Installer les dépendences en utilisant rosdep
+---------------------------------------------
 
 .. include:: ../_Apt-Upgrade-Admonition.rst
 
@@ -119,20 +119,21 @@ Install dependencies using rosdep
 
 .. include:: ../_rosdep_Linux_Mint.rst
 
-Install additional DDS implementations (optional)
--------------------------------------------------
+Installer des implémentations DDS additionnelles (optionel)
+-----------------------------------------------------------
 
-If you would like to use another DDS or RTPS vendor besides the default, you can find instructions :doc:`here <../DDS-Implementations>`.
+Si vous souhaitez utiliser un autre fournisseur de DDS ou de RTPS vendor en plus de la version par défaut, il est possible de trouver les instructions :doc:`ici <../DDS-Implementations>`.
 
-Build the code in the workspace
--------------------------------
+Construire le code dans l'espace de travail
+-------------------------------------------
 
-If you have already installed ROS 2 another way (either via Debians or the binary distribution), make sure that you run the below commands in a fresh environment that does not have those other installations sourced.
-Also ensure that you do not have ``source /opt/ros/${ROS_DISTRO}/setup.bash`` in your ``.bashrc``.
-You can make sure that ROS 2 is not sourced with the command ``printenv | grep -i ROS``.
-The output should be empty.
+Si vous avez déjà installé ROS 2 d'une autre façon (soit par des paquets Debians ou une distribution binaire), assurez vous que vous exécutez les commandes suivantes dans un nouvel environnement
+où les autres installations n'ont pas été "sourcées".
+Il faut également vous assurer que vous n'avez pas la ligne ``source /opt/ros/${ROS_DISTRO}/setup.bash`` dans votre fichier ``.bashrc``.
+Vous pouvez vous assurez que ROS 2 n'a pas été sourcé avec la commande ``printenv | grep -i ROS``.
+La sortie devrait être vide.
 
-More info on working with a ROS workspace can be found in :doc:`this tutorial <../../Tutorials/Beginner-Client-Libraries/Colcon-Tutorial>`.
+Plus d'informations sur l'utilisation d'un espace de travail ROS est disponible dans  :doc:`ce tutoriel <../../Tutorials/Beginner-Client-Libraries/Colcon-Tutorial>`.
 
 .. code-block:: bash
 
