@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GurumNetworks GurumDDS &mdash; ROS 2 documentation  documentation</title>
+  <title>GurumNetworks GurumDDS &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
     <link rel="next" title="eProsima Fast DDS" href="Working-with-eProsima-Fast-DDS.html" />
     <link rel="prev" title="Eclipse Cyclone DDS" href="Working-with-Eclipse-CycloneDDS.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -343,7 +344,7 @@
           <li class="breadcrumb-item"><a href="../DDS-Implementations.html">DDS implementations</a></li>
       <li class="breadcrumb-item active">GurumNetworks GurumDDS</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -354,12 +355,12 @@
 
 
   <div class="section" id="gurumnetworks-gurumdds">
-<h1>GurumNetworks GurumDDS<a class="headerlink" href="#gurumnetworks-gurumdds" title="Permalink to this headline"></a></h1>
+<h1>GurumNetworks GurumDDS<a class="headerlink" href="#gurumnetworks-gurumdds" title="Lien permanent vers ce titre"></a></h1>
 <p>rmw_gurumdds is a implementation of the ROS middleware interface using GurumNetworks GurumDDS.
 More information about GurumDDS is available on our website: <a class="reference external" href="https://gurum.cc/index_eng">https://gurum.cc/index_eng</a></p>
 <div class="section" id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"></a></h2>
-<p>The following description assumes that you have completed the ‘Environment setup’ process
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Lien permanent vers ce titre"></a></h2>
+<p>The following description assumes that you have completed the “Environment setup” process
 from the <a class="reference internal" href="../Ubuntu-Install-Debians.html"><span class="doc">Installing ROS 2 via Debian Packages</span></a> or
 from the <a class="reference internal" href="../Alternatives/Ubuntu-Development-Setup.html"><span class="doc">Building ROS 2 on Ubuntu Linux</span></a>.</p>
 <p>rmw_gurumdds requires version of GurumDDS-2.7.x.
@@ -388,7 +389,7 @@ After getting a license, move it to the following location.</p>
 </table>
 </div>
 <div class="section" id="install-packages">
-<h2>Install packages<a class="headerlink" href="#install-packages" title="Permalink to this headline"></a></h2>
+<h2>Install packages<a class="headerlink" href="#install-packages" title="Lien permanent vers ce titre"></a></h2>
 <p>The easiest way is to install from ROS 2 apt repository.
 When ros-rolling-rmw-gurumdds-cpp is installed, gurumdds-2.7 is also installed.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-rolling-rmw-gurumdds-cpp
@@ -396,7 +397,7 @@ When ros-rolling-rmw-gurumdds-cpp is installed, gurumdds-2.7 is also installed.<
 </div>
 </div>
 <div class="section" id="build-from-source-code">
-<h2>Build from source code<a class="headerlink" href="#build-from-source-code" title="Permalink to this headline"></a></h2>
+<h2>Build from source code<a class="headerlink" href="#build-from-source-code" title="Lien permanent vers ce titre"></a></h2>
 <p>Building from source code is also another way to install.</p>
 <p>First, clone rosidl_typesupport_gurumdds and rmw_gurumdds in the ROS 2 workspace source directory.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>ros2_ws/src
@@ -415,7 +416,7 @@ rosdep<span class="w"> </span>install<span class="w"> </span>--from<span class="
 </div>
 </div>
 <div class="section" id="switch-to-rmw-gurumdds">
-<h2>Switch to rmw_gurumdds<a class="headerlink" href="#switch-to-rmw-gurumdds" title="Permalink to this headline"></a></h2>
+<h2>Switch to rmw_gurumdds<a class="headerlink" href="#switch-to-rmw-gurumdds" title="Lien permanent vers ce titre"></a></h2>
 <p>Switch from other rmw to rmw_gurumdds by specifying the environment variable.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">RMW_IMPLEMENTATION</span><span class="o">=</span>rmw_gurumdds_cpp
 </pre></div>
@@ -423,7 +424,7 @@ rosdep<span class="w"> </span>install<span class="w"> </span>--from<span class="
 <p>See also: <a class="reference internal" href="../../How-To-Guides/Working-with-multiple-RMW-implementations.html"><span class="doc">Working with multiple RMW implementations</span></a></p>
 </div>
 <div class="section" id="run-the-talker-and-listener">
-<h2>Run the talker and listener<a class="headerlink" href="#run-the-talker-and-listener" title="Permalink to this headline"></a></h2>
+<h2>Run the talker and listener<a class="headerlink" href="#run-the-talker-and-listener" title="Lien permanent vers ce titre"></a></h2>
 <p>Now run <code class="docutils literal notranslate"><span class="pre">talker</span></code> and <code class="docutils literal notranslate"><span class="pre">listener</span></code> to test GurumDDS.
 Don’t forget to set up environment by setup script.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>demo_nodes_cpp<span class="w"> </span>talker
@@ -439,9 +440,9 @@ Don’t forget to set up environment by setup script.</p>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Working-with-Eclipse-CycloneDDS.html" class="btn btn-neutral float-left" title="Eclipse Cyclone DDS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Working-with-eProsima-Fast-DDS.html" class="btn btn-neutral float-right" title="eProsima Fast DDS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Working-with-Eclipse-CycloneDDS.html" class="btn btn-neutral float-left" title="Eclipse Cyclone DDS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Working-with-eProsima-Fast-DDS.html" class="btn btn-neutral float-right" title="eProsima Fast DDS" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -450,9 +451,9 @@ Don’t forget to set up environment by setup script.</p>
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Examining network traffic &mdash; ROS 2 documentation  documentation</title>
+  <title>Examining network traffic &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
+        <script src="../../../_static/translations.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="search" title="Recherche" href="../../../search.html" />
     <link rel="next" title="Setting access controls" href="Access-Controls.html" />
     <link rel="prev" title="Ensuring security across machines" href="Security-on-Two.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -344,7 +345,7 @@
           <li class="breadcrumb-item"><a href="Security-Main.html">Security</a></li>
       <li class="breadcrumb-item active">Examining network traffic</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Advanced/Security/Examine-Traffic.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Advanced/Security/Examine-Traffic.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -355,7 +356,7 @@
 
 
   <div class="section" id="examining-network-traffic">
-<span id="examine-traffic"></span><h1>Examining network traffic<a class="headerlink" href="#examining-network-traffic" title="Permalink to this headline"></a></h1>
+<span id="examine-traffic"></span><h1>Examining network traffic<a class="headerlink" href="#examining-network-traffic" title="Lien permanent vers ce titre"></a></h1>
 <p><strong>Goal:</strong> Capture and examine raw ROS 2 network traffic.</p>
 <p><strong>Tutorial level:</strong> Advanced</p>
 <p><strong>Time:</strong> 20 minutes</p>
@@ -377,15 +378,15 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2><a class="toc-backref" href="#id1">Background</a><a class="headerlink" href="#background" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id1">Background</a><a class="headerlink" href="#background" title="Lien permanent vers ce titre"></a></h2>
 <p>ROS 2 communications security is all about protecting communications between nodes.
 Prior tutorials enabled security, but how can you <strong>really</strong> tell if traffic is being encrypted?
 In this tutorial we’ll take a look at capturing live network traffic to show the difference between encrypted and unencrypted traffic.</p>
 </div>
 <div class="section" id="run-the-demo">
-<h2><a class="toc-backref" href="#id2">Run the demo</a><a class="headerlink" href="#run-the-demo" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id2">Run the demo</a><a class="headerlink" href="#run-the-demo" title="Lien permanent vers ce titre"></a></h2>
 <div class="section" id="install-tcpdump">
-<h3><a class="toc-backref" href="#id3">Install <code class="docutils literal notranslate"><span class="pre">tcpdump</span></code></a><a class="headerlink" href="#install-tcpdump" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id3">Install <code class="docutils literal notranslate"><span class="pre">tcpdump</span></code></a><a class="headerlink" href="#install-tcpdump" title="Lien permanent vers ce titre"></a></h3>
 <p>Begin in a new terminal window by installing <a class="reference external" href="https://www.tcpdump.org/manpages/tcpdump.1.html">tcpdump</a>, a command-line tool for capturing and displaying network traffic.
 Although this tutorial describes <code class="docutils literal notranslate"><span class="pre">tcpdump</span></code> commands, you can also use <a class="reference external" href="https://www.wireshark.org/">Wireshark</a>, a similar graphical tool for capturing and analyzing traffic.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
@@ -395,7 +396,7 @@ sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> <
 <p>Run following commands on a single machine through multiple <code class="docutils literal notranslate"><span class="pre">ssh</span></code> sessions.</p>
 </div>
 <div class="section" id="start-the-talker-and-listener">
-<h3><a class="toc-backref" href="#id4">Start the talker and listener</a><a class="headerlink" href="#start-the-talker-and-listener" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id4">Start the talker and listener</a><a class="headerlink" href="#start-the-talker-and-listener" title="Lien permanent vers ce titre"></a></h3>
 <p>Start both the talker and the listener again, each in its own terminal.
 The security environment variables are not set so security is not enabled for these sessions.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># In terminal 1:</span>
@@ -407,7 +408,7 @@ ros2<span class="w"> </span>run<span class="w"> </span>demo_nodes_cpp<span class
 </div>
 </div>
 <div class="section" id="display-unencrypted-discovery-packets">
-<h3><a class="toc-backref" href="#id5">Display unencrypted discovery packets</a><a class="headerlink" href="#display-unencrypted-discovery-packets" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id5">Display unencrypted discovery packets</a><a class="headerlink" href="#display-unencrypted-discovery-packets" title="Lien permanent vers ce titre"></a></h3>
 <p>With the talker and listener running, open another terminal and start <code class="docutils literal notranslate"><span class="pre">tcpdump</span></code> to look at the network traffic.
 You need to use <code class="docutils literal notranslate"><span class="pre">sudo</span></code> since reading raw network traffic is a privileged operation.</p>
 <p>The command below uses the <code class="docutils literal notranslate"><span class="pre">-X</span></code> option to print packet contents, the <code class="docutils literal notranslate"><span class="pre">-i</span></code> option to listen for packets on any interface, and captures only <a class="reference external" href="https://en.wikipedia.org/wiki/User_Datagram_Protocol">UDP</a> port 7400 traffic.</p>
@@ -434,11 +435,11 @@ Some other features of a typical discovery packet:</p>
 <ul class="simple">
 <li><p>The destination address is 239.255.0.1, which is a multicast IP address; ROS 2 uses multicast traffic for discovery by default.</p></li>
 <li><p>UDP 7400 is the destination port, as per the <a class="reference external" href="https://www.omg.org/spec/DDSI-RTPS/About-DDSI-RTPS/">DDS-RTPS specification</a>.</p></li>
-<li><p>The packet contains the “RTPS” tag, also as defined to the DDS-RTPS specification.</p></li>
+<li><p>The packet contains the « RTPS » tag, also as defined to the DDS-RTPS specification.</p></li>
 </ul>
 </div>
 <div class="section" id="display-unencrypted-data-packets">
-<h3><a class="toc-backref" href="#id6">Display unencrypted data packets</a><a class="headerlink" href="#display-unencrypted-data-packets" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id6">Display unencrypted data packets</a><a class="headerlink" href="#display-unencrypted-data-packets" title="Lien permanent vers ce titre"></a></h3>
 <p>Use <code class="docutils literal notranslate"><span class="pre">tcpdump</span></code> to capture non-discovery RTPS packets by filtering on UDP ports above 7400:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>tcpdump<span class="w"> </span>-i<span class="w"> </span>any<span class="w"> </span>-X<span class="w"> </span>udp<span class="w"> </span>portrange<span class="w"> </span><span class="m">7401</span>-7500
 </pre></div>
@@ -456,12 +457,12 @@ Some other features of a typical discovery packet:</p>
 </div>
 <p>Some features to note about this packet:</p>
 <ul class="simple">
-<li><p>The message contents, “Hello World: 2135”, are sent in clear text</p></li>
+<li><p>The message contents, « Hello World: 2135 », are sent in clear text</p></li>
 <li><p>The source and destination IP address is <code class="docutils literal notranslate"><span class="pre">localhost</span></code>: since both nodes are running on the same machine, the nodes discovered each other on the <code class="docutils literal notranslate"><span class="pre">localhost</span></code> interface</p></li>
 </ul>
 </div>
 <div class="section" id="enable-encryption">
-<h3><a class="toc-backref" href="#id7">Enable encryption</a><a class="headerlink" href="#enable-encryption" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id7">Enable encryption</a><a class="headerlink" href="#enable-encryption" title="Lien permanent vers ce titre"></a></h3>
 <p>Stop both the talker and the listener nodes.
 Enable encryption for both by setting the security environment variables and run them again.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># In terminal 1:</span>
@@ -479,7 +480,7 @@ ros2<span class="w"> </span>run<span class="w"> </span>demo_nodes_cpp<span class
 </div>
 </div>
 <div class="section" id="display-encrypted-discovery-packets">
-<h3><a class="toc-backref" href="#id8">Display encrypted discovery packets</a><a class="headerlink" href="#display-encrypted-discovery-packets" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id8">Display encrypted discovery packets</a><a class="headerlink" href="#display-encrypted-discovery-packets" title="Lien permanent vers ce titre"></a></h3>
 <p>Run the same <code class="docutils literal notranslate"><span class="pre">tcpdump</span></code> command used earlier to examine the output of discovery traffic with encryption enabled:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>tcpdump<span class="w"> </span>-X<span class="w"> </span>-i<span class="w"> </span>any<span class="w"> </span>udp<span class="w"> </span>port<span class="w"> </span><span class="m">7400</span>
 </pre></div>
@@ -510,7 +511,7 @@ As we will see shortly, this actually includes some of the security configuratio
 Interested in learning more? Take a look at the excellent paper <a class="reference external" href="https://arxiv.org/abs/1908.05310">Network Reconnaissance and Vulnerability Excavation of Secure DDS Systems</a> to understand why this matters.</p>
 </div>
 <div class="section" id="display-encrypted-data-packets">
-<h3><a class="toc-backref" href="#id9">Display encrypted data packets</a><a class="headerlink" href="#display-encrypted-data-packets" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id9">Display encrypted data packets</a><a class="headerlink" href="#display-encrypted-data-packets" title="Lien permanent vers ce titre"></a></h3>
 <p>Now use <code class="docutils literal notranslate"><span class="pre">tcpdump</span></code> to capture data packets:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>tcpdump<span class="w"> </span>-i<span class="w"> </span>any<span class="w"> </span>-X<span class="w"> </span>udp<span class="w"> </span>portrange<span class="w"> </span><span class="m">7401</span>-7500
 </pre></div>
@@ -541,9 +542,9 @@ Encryption options for these packets can also be controlled by security policy.<
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Security-on-Two.html" class="btn btn-neutral float-left" title="Ensuring security across machines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Access-Controls.html" class="btn btn-neutral float-right" title="Setting access controls" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Security-on-Two.html" class="btn btn-neutral float-left" title="Ensuring security across machines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Access-Controls.html" class="btn btn-neutral float-right" title="Setting access controls" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -552,9 +553,9 @@ Encryption options for these packets can also be controlled by security policy.<
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

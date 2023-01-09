@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Building RQt from source on Windows 10 &mdash; ROS 2 documentation  documentation</title>
+  <title>Building RQt from source on Windows 10 &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Concepts" href="../Concepts.html" />
     <link rel="prev" title="Building RQt from source on macOS" href="RQt-Source-Install-MacOS.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -343,7 +344,7 @@
           <li class="breadcrumb-item"><a href="RQt-Source-Install.html">Building RQt from source</a></li>
       <li class="breadcrumb-item active">Building RQt from source on Windows 10</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/How-To-Guides/RQt-Source-Install-Windows10.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/How-To-Guides/RQt-Source-Install-Windows10.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -354,12 +355,12 @@
 
 
   <div class="section" id="building-rqt-from-source-on-windows-10">
-<h1>Building RQt from source on Windows 10<a class="headerlink" href="#building-rqt-from-source-on-windows-10" title="Permalink to this headline"></a></h1>
+<h1>Building RQt from source on Windows 10<a class="headerlink" href="#building-rqt-from-source-on-windows-10" title="Lien permanent vers ce titre"></a></h1>
 <p>This page provides specific information to building RQt from source on Windows.
 Follow these instructions before proceeding with the <a class="reference internal" href="RQt-Source-Install.html"><span class="doc">RQt Source Install</span></a> page.</p>
 <p>If you have not done so, follow the <a class="reference internal" href="../Installation/Alternatives/Windows-Development-Setup.html"><span class="doc">ROS 2 Windows Development Setup guide</span></a> before continuing.</p>
 <div class="section" id="system-requirements">
-<h2>System Requirements<a class="headerlink" href="#system-requirements" title="Permalink to this headline"></a></h2>
+<h2>System Requirements<a class="headerlink" href="#system-requirements" title="Lien permanent vers ce titre"></a></h2>
 <ul class="simple">
 <li><p>Windows 10</p></li>
 <li><p>Visual Studio 15.7.6</p></li>
@@ -368,12 +369,12 @@ Follow these instructions before proceeding with the <a class="reference interna
 Older versions of VS can be found <a class="reference external" href="https://docs.microsoft.com/en-us/visualstudio/productinfo/installing-an-earlier-release-of-vs2017">here</a>.</p>
 </div>
 <div class="section" id="dependencies">
-<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline"></a></h2>
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Lien permanent vers ce titre"></a></h2>
 <p>The primary dependencies of the RQt package are sip and PyQt5.
 PySide2 may be supported in the future.
 Even though they are provided through PyPI and chocolatey, you must install them by source to get compatible versions.</p>
 <div class="section" id="install-sip-by-source">
-<h3>Install sip by source<a class="headerlink" href="#install-sip-by-source" title="Permalink to this headline"></a></h3>
+<h3>Install sip by source<a class="headerlink" href="#install-sip-by-source" title="Lien permanent vers ce titre"></a></h3>
 <p>Download from <a class="reference external" href="https://www.riverbankcomputing.com/software/sip/download">https://www.riverbankcomputing.com/software/sip/download</a></p>
 <p>Run the x64 Native Tools Command Prompt as Administrator, and <code class="docutils literal notranslate"><span class="pre">cd</span></code> to the uncompressed source directory.</p>
 <p>Run:</p>
@@ -385,7 +386,7 @@ nmake install
 <p>If <code class="docutils literal notranslate"><span class="pre">python3</span></code> is installed on your system as <code class="docutils literal notranslate"><span class="pre">python</span></code>, be sure to use that program name instead.</p>
 </div>
 <div class="section" id="install-pyqt5-by-source">
-<h3>Install PyQt5 by source<a class="headerlink" href="#install-pyqt5-by-source" title="Permalink to this headline"></a></h3>
+<h3>Install PyQt5 by source<a class="headerlink" href="#install-pyqt5-by-source" title="Lien permanent vers ce titre"></a></h3>
 <p>Download from <a class="reference external" href="https://www.riverbankcomputing.com/software/pyqt/download5">https://www.riverbankcomputing.com/software/pyqt/download5</a></p>
 <p>Run the x64 Native Tools Command Prompt as Administrator, and <code class="docutils literal notranslate"><span class="pre">cd</span></code> to the uncompressed source directory.
 I ran into trouble with Qt 5.11.3 and PyQt5 compiling QtNfc, but it can be easily disabled.</p>
@@ -396,7 +397,7 @@ nmake install
 </div>
 </div>
 <div class="section" id="test-that-it-works">
-<h3>Test that it works<a class="headerlink" href="#test-that-it-works" title="Permalink to this headline"></a></h3>
+<h3>Test that it works<a class="headerlink" href="#test-that-it-works" title="Lien permanent vers ce titre"></a></h3>
 <p>If install occurred without failure, try the commands below.
 They should run without issue and you should see 4.19.13 as your <code class="docutils literal notranslate"><span class="pre">sip.exe</span></code> version.</p>
 <div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>sip -V
@@ -405,7 +406,7 @@ python3 -c <span class="s2">&quot;from PyQt5 import QtCore&quot;</span>
 </div>
 </div>
 <div class="section" id="other-dependencies">
-<h3>Other dependencies<a class="headerlink" href="#other-dependencies" title="Permalink to this headline"></a></h3>
+<h3>Other dependencies<a class="headerlink" href="#other-dependencies" title="Lien permanent vers ce titre"></a></h3>
 <p>Install GraphViz from <a class="reference external" href="https://graphviz.gitlab.io/_pages/Download/Download_windows.html">https://graphviz.gitlab.io/_pages/Download/Download_windows.html</a>.</p>
 <p>Install <code class="docutils literal notranslate"><span class="pre">pydot</span></code> and <code class="docutils literal notranslate"><span class="pre">pyparsing</span></code>:</p>
 <div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>pip3 install pydot pyparsing
@@ -417,7 +418,7 @@ Manually merging this patch is the currently recommended solution (not verified)
 </div>
 </div>
 <div class="section" id="install-rqt-by-source">
-<h2>Install RQt by source<a class="headerlink" href="#install-rqt-by-source" title="Permalink to this headline"></a></h2>
+<h2>Install RQt by source<a class="headerlink" href="#install-rqt-by-source" title="Lien permanent vers ce titre"></a></h2>
 <p>Continue with the <a class="reference internal" href="RQt-Source-Install.html"><span class="doc">RQt source install page</span></a>.</p>
 </div>
 </div>
@@ -426,9 +427,9 @@ Manually merging this patch is the currently recommended solution (not verified)
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="RQt-Source-Install-MacOS.html" class="btn btn-neutral float-left" title="Building RQt from source on macOS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../Concepts.html" class="btn btn-neutral float-right" title="Concepts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="RQt-Source-Install-MacOS.html" class="btn btn-neutral float-left" title="Building RQt from source on macOS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../Concepts.html" class="btn btn-neutral float-right" title="Concepts" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -437,9 +438,9 @@ Manually merging this patch is the currently recommended solution (not verified)
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

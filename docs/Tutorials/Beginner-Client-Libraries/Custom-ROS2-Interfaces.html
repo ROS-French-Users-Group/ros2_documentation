@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Creating custom msg and srv files &mdash; ROS 2 documentation  documentation</title>
+  <title>Creating custom msg and srv files &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -22,9 +22,10 @@
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
         <script src="../../_static/tabs.js"></script>
+        <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
     <link rel="next" title="Implementing custom interfaces" href="Single-Package-Define-And-Use-Interface.html" />
     <link rel="prev" title="Writing a simple service and client (Python)" href="Writing-A-Simple-Py-Service-And-Client.html" /> 
 </head>
@@ -38,7 +39,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -80,7 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -344,7 +345,7 @@
           <li class="breadcrumb-item"><a href="../Beginner-Client-Libraries.html">Beginner: Client libraries</a></li>
       <li class="breadcrumb-item active">Creating custom msg and srv files</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -355,7 +356,7 @@
 
 
   <div class="section" id="creating-custom-msg-and-srv-files">
-<span id="custominterfaces"></span><h1>Creating custom msg and srv files<a class="headerlink" href="#creating-custom-msg-and-srv-files" title="Permalink to this headline"></a></h1>
+<span id="custominterfaces"></span><h1>Creating custom msg and srv files<a class="headerlink" href="#creating-custom-msg-and-srv-files" title="Lien permanent vers ce titre"></a></h1>
 <p><strong>Goal:</strong> Define custom interface files (<code class="docutils literal notranslate"><span class="pre">.msg</span></code> and <code class="docutils literal notranslate"><span class="pre">.srv</span></code>) and use them with Python and C++ nodes.</p>
 <p><strong>Tutorial level:</strong> Beginner</p>
 <p><strong>Time:</strong> 20 minutes</p>
@@ -380,21 +381,21 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2><a class="toc-backref" href="#id1">Background</a><a class="headerlink" href="#background" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id1">Background</a><a class="headerlink" href="#background" title="Lien permanent vers ce titre"></a></h2>
 <p>In previous tutorials you utilized message and service interfaces to learn about <a class="reference internal" href="../Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html"><span class="doc">topics</span></a>, <a class="reference internal" href="../Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services.html"><span class="doc">services</span></a>, and simple publisher/subscriber (<a class="reference internal" href="Writing-A-Simple-Cpp-Publisher-And-Subscriber.html"><span class="doc">C++</span></a>/<a class="reference internal" href="Writing-A-Simple-Py-Publisher-And-Subscriber.html"><span class="doc">Python</span></a>) and service/client (<a class="reference internal" href="Writing-A-Simple-Cpp-Service-And-Client.html"><span class="doc">C++</span></a>/<a class="reference internal" href="Writing-A-Simple-Py-Service-And-Client.html"><span class="doc">Python</span></a>) nodes.
 The interfaces you used were predefined in those cases.</p>
 <p>While it’s good practice to use predefined interface definitions, you will probably need to define your own messages and services sometimes as well.
 This tutorial will introduce you to the simplest method of creating custom interface definitions.</p>
 </div>
 <div class="section" id="prerequisites">
-<h2><a class="toc-backref" href="#id2">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id2">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Lien permanent vers ce titre"></a></h2>
 <p>You should have a <a class="reference internal" href="Creating-A-Workspace/Creating-A-Workspace.html"><span class="doc">ROS 2 workspace</span></a>.</p>
 <p>This tutorial also uses the packages created in the publisher/subscriber (<a class="reference internal" href="Writing-A-Simple-Cpp-Publisher-And-Subscriber.html"><span class="doc">C++</span></a> and <a class="reference internal" href="Writing-A-Simple-Py-Publisher-And-Subscriber.html"><span class="doc">Python</span></a>) and service/client  (<a class="reference internal" href="Writing-A-Simple-Cpp-Service-And-Client.html"><span class="doc">C++</span></a> and <a class="reference internal" href="Writing-A-Simple-Py-Service-And-Client.html"><span class="doc">Python</span></a>) tutorials to try out the new custom messages.</p>
 </div>
 <div class="section" id="tasks">
-<h2><a class="toc-backref" href="#id3">Tasks</a><a class="headerlink" href="#tasks" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id3">Tasks</a><a class="headerlink" href="#tasks" title="Lien permanent vers ce titre"></a></h2>
 <div class="section" id="create-a-new-package">
-<h3><a class="toc-backref" href="#id4">1 Create a new package</a><a class="headerlink" href="#create-a-new-package" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id4">1 Create a new package</a><a class="headerlink" href="#create-a-new-package" title="Lien permanent vers ce titre"></a></h3>
 <p>For this tutorial you will be creating custom <code class="docutils literal notranslate"><span class="pre">.msg</span></code> and <code class="docutils literal notranslate"><span class="pre">.srv</span></code> files in their own package, and then utilizing them in a separate package.
 Both packages should be in the same workspace.</p>
 <p>Since we will use the pub/sub and service/client packages created in earlier tutorials, make sure you are in the same workspace as those packages (<code class="docutils literal notranslate"><span class="pre">ros2_ws/src</span></code>), and then run the following command to create a new package:</p>
@@ -413,9 +414,9 @@ Create the directories in <code class="docutils literal notranslate"><span class
 </div>
 </div>
 <div class="section" id="create-custom-definitions">
-<h3><a class="toc-backref" href="#id5">2 Create custom definitions</a><a class="headerlink" href="#create-custom-definitions" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id5">2 Create custom definitions</a><a class="headerlink" href="#create-custom-definitions" title="Lien permanent vers ce titre"></a></h3>
 <div class="section" id="msg-definition">
-<h4>2.1 msg definition<a class="headerlink" href="#msg-definition" title="Permalink to this headline"></a></h4>
+<h4>2.1 msg definition<a class="headerlink" href="#msg-definition" title="Lien permanent vers ce titre"></a></h4>
 <p>In the <code class="docutils literal notranslate"><span class="pre">tutorial_interfaces/msg</span></code> directory you just created, make a new file called <code class="docutils literal notranslate"><span class="pre">Num.msg</span></code> with one line of code declaring its data structure:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">int64 num</span>
 </pre></div>
@@ -429,7 +430,7 @@ Create the directories in <code class="docutils literal notranslate"><span class
 <p>This custom message uses a message from another message package (<code class="docutils literal notranslate"><span class="pre">geometry_msgs/Point</span></code> in this case).</p>
 </div>
 <div class="section" id="srv-definition">
-<h4>2.2 srv definition<a class="headerlink" href="#srv-definition" title="Permalink to this headline"></a></h4>
+<h4>2.2 srv definition<a class="headerlink" href="#srv-definition" title="Lien permanent vers ce titre"></a></h4>
 <p>Back in the <code class="docutils literal notranslate"><span class="pre">tutorial_interfaces/srv</span></code> directory you just created, make a new file called <code class="docutils literal notranslate"><span class="pre">AddThreeInts.srv</span></code> with the following request and response structure:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">int64 a</span>
 <span class="go">int64 b</span>
@@ -442,7 +443,7 @@ Create the directories in <code class="docutils literal notranslate"><span class
 </div>
 </div>
 <div class="section" id="cmakelists-txt">
-<h3><a class="toc-backref" href="#id6">3 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code></a><a class="headerlink" href="#cmakelists-txt" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id6">3 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code></a><a class="headerlink" href="#cmakelists-txt" title="Lien permanent vers ce titre"></a></h3>
 <p>To convert the interfaces you defined into language-specific code (like C++ and Python) so that they can be used in those languages, add the following lines to <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>:</p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">find_package</span><span class="p">(</span><span class="s">geometry_msgs</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
 <span class="nb">find_package</span><span class="p">(</span><span class="s">rosidl_default_generators</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
@@ -461,7 +462,7 @@ Create the directories in <code class="docutils literal notranslate"><span class
 </div>
 </div>
 <div class="section" id="package-xml">
-<h3><a class="toc-backref" href="#id7">4 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code></a><a class="headerlink" href="#package-xml" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id7">4 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code></a><a class="headerlink" href="#package-xml" title="Lien permanent vers ce titre"></a></h3>
 <p>Because the interfaces rely on <code class="docutils literal notranslate"><span class="pre">rosidl_default_generators</span></code> for generating language-specific code, you need to declare a dependency on it.
 The <code class="docutils literal notranslate"><span class="pre">&lt;exec_depend&gt;</span></code> tag is used to specify runtime or execution-stage dependencies and the <code class="docutils literal notranslate"><span class="pre">rosidl_interface_packages</span></code> is the name of the dependency group to which the package belongs, declared using the <code class="docutils literal notranslate"><span class="pre">&lt;member_of_group&gt;</span></code> tag.</p>
 <p>Add the following lines to <code class="docutils literal notranslate"><span class="pre">package.xml</span></code></p>
@@ -476,7 +477,7 @@ The <code class="docutils literal notranslate"><span class="pre">&lt;exec_depend
 </div>
 </div>
 <div class="section" id="build-the-tutorial-interfaces-package">
-<h3><a class="toc-backref" href="#id8">5 Build the <code class="docutils literal notranslate"><span class="pre">tutorial_interfaces</span></code> package</a><a class="headerlink" href="#build-the-tutorial-interfaces-package" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id8">5 Build the <code class="docutils literal notranslate"><span class="pre">tutorial_interfaces</span></code> package</a><a class="headerlink" href="#build-the-tutorial-interfaces-package" title="Lien permanent vers ce titre"></a></h3>
 <p>Now that all the parts of your custom interfaces package are in place, you can build the package.
 In the root of your workspace (<code class="docutils literal notranslate"><span class="pre">~/ros2_ws</span></code>), run the following command:</p>
 <div class="sphinx-tabs docutils container">
@@ -493,7 +494,7 @@ In the root of your workspace (<code class="docutils literal notranslate"><span 
 <p>Now the interfaces will be discoverable by other ROS 2 packages.</p>
 </div>
 <div class="section" id="confirm-msg-and-srv-creation">
-<h3><a class="toc-backref" href="#id9">6 Confirm msg and srv creation</a><a class="headerlink" href="#confirm-msg-and-srv-creation" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id9">6 Confirm msg and srv creation</a><a class="headerlink" href="#confirm-msg-and-srv-creation" title="Lien permanent vers ce titre"></a></h3>
 <p>In a new terminal, run the following command from within your workspace (<code class="docutils literal notranslate"><span class="pre">ros2_ws</span></code>) to source it:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-1-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-1-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">. install/setup.bash</span>
@@ -540,11 +541,11 @@ In the root of your workspace (<code class="docutils literal notranslate"><span 
 </div>
 </div>
 <div class="section" id="test-the-new-interfaces">
-<h3><a class="toc-backref" href="#id10">7 Test the new interfaces</a><a class="headerlink" href="#test-the-new-interfaces" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id10">7 Test the new interfaces</a><a class="headerlink" href="#test-the-new-interfaces" title="Lien permanent vers ce titre"></a></h3>
 <p>For this step you can use the packages you created in previous tutorials.
 A few simple modifications to the nodes, <code class="docutils literal notranslate"><span class="pre">CMakeLists</span></code> and <code class="docutils literal notranslate"><span class="pre">package</span></code> files will allow you to use your new interfaces.</p>
 <div class="section" id="testing-num-msg-with-pub-sub">
-<h4>7.1 Testing <code class="docutils literal notranslate"><span class="pre">Num.msg</span></code> with pub/sub<a class="headerlink" href="#testing-num-msg-with-pub-sub" title="Permalink to this headline"></a></h4>
+<h4>7.1 Testing <code class="docutils literal notranslate"><span class="pre">Num.msg</span></code> with pub/sub<a class="headerlink" href="#testing-num-msg-with-pub-sub" title="Lien permanent vers ce titre"></a></h4>
 <p>With some slight modifications to the publisher/subscriber package created in a previous tutorial (<a class="reference internal" href="Writing-A-Simple-Cpp-Publisher-And-Subscriber.html"><span class="doc">C++</span></a> or <a class="reference internal" href="Writing-A-Simple-Py-Publisher-And-Subscriber.html"><span class="doc">Python</span></a>), you can see <code class="docutils literal notranslate"><span class="pre">Num.msg</span></code> in action.
 Since you’ll be changing the standard string msg to a numerical one, the output will be slightly different.</p>
 <p>Publisher:</p>
@@ -775,7 +776,7 @@ Since you’ll be changing the standard string msg to a numerical one, the outpu
 </div>
 </div>
 <div class="section" id="testing-addthreeints-srv-with-service-client">
-<h4>7.2 Testing <code class="docutils literal notranslate"><span class="pre">AddThreeInts.srv</span></code> with service/client<a class="headerlink" href="#testing-addthreeints-srv-with-service-client" title="Permalink to this headline"></a></h4>
+<h4>7.2 Testing <code class="docutils literal notranslate"><span class="pre">AddThreeInts.srv</span></code> with service/client<a class="headerlink" href="#testing-addthreeints-srv-with-service-client" title="Lien permanent vers ce titre"></a></h4>
 <p>With some slight modifications to the service/client package created in a previous tutorial (<a class="reference internal" href="Writing-A-Simple-Cpp-Service-And-Client.html"><span class="doc">C++</span></a> or <a class="reference internal" href="Writing-A-Simple-Py-Service-And-Client.html"><span class="doc">Python</span></a>), you can see <code class="docutils literal notranslate"><span class="pre">AddThreeInts.srv</span></code> in action.
 Since you’ll be changing the original two integer request srv to a three integer request srv, the output will be slightly different.</p>
 <p>Service:</p>
@@ -1015,13 +1016,13 @@ Since you’ll be changing the original two integer request srv to a three integ
 </div>
 </div>
 <div class="section" id="summary">
-<h2><a class="toc-backref" href="#id11">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id11">Summary</a><a class="headerlink" href="#summary" title="Lien permanent vers ce titre"></a></h2>
 <p>In this tutorial, you learned how to create custom interfaces in their own package and how to utilize those interfaces from within other packages.</p>
 <p>This is a simple method of interface creation and utilization.
 You can learn more about interfaces <a class="reference internal" href="../../Concepts/About-ROS-Interfaces.html"><span class="doc">here</span></a>.</p>
 </div>
 <div class="section" id="next-steps">
-<h2><a class="toc-backref" href="#id12">Next steps</a><a class="headerlink" href="#next-steps" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id12">Next steps</a><a class="headerlink" href="#next-steps" title="Lien permanent vers ce titre"></a></h2>
 <p>The <a class="reference internal" href="Single-Package-Define-And-Use-Interface.html"><span class="doc">next tutorial</span></a> covers more ways to use interfaces in ROS 2.</p>
 </div>
 </div>
@@ -1030,9 +1031,9 @@ You can learn more about interfaces <a class="reference internal" href="../../Co
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Writing-A-Simple-Py-Service-And-Client.html" class="btn btn-neutral float-left" title="Writing a simple service and client (Python)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Single-Package-Define-And-Use-Interface.html" class="btn btn-neutral float-right" title="Implementing custom interfaces" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Writing-A-Simple-Py-Service-And-Client.html" class="btn btn-neutral float-left" title="Writing a simple service and client (Python)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Single-Package-Define-And-Use-Interface.html" class="btn btn-neutral float-right" title="Implementing custom interfaces" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -1041,9 +1042,9 @@ You can learn more about interfaces <a class="reference internal" href="../../Co
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

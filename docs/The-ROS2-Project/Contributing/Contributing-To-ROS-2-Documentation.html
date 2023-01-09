@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contributing to ROS 2 Documentation &mdash; ROS 2 documentation  documentation</title>
+  <title>Contributing to ROS 2 Documentation &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -22,9 +22,10 @@
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
         <script src="../../_static/tabs.js"></script>
+        <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
     <link rel="next" title="Features Status" href="../Features.html" />
     <link rel="prev" title="Windows Tips and Tricks" href="Windows-Tips-and-Tricks.html" /> 
 </head>
@@ -38,7 +39,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -80,7 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -344,7 +345,7 @@
           <li class="breadcrumb-item"><a href="../Contributing.html">Contributing</a></li>
       <li class="breadcrumb-item active">Contributing to ROS 2 Documentation</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/The-ROS2-Project/Contributing/Contributing-To-ROS-2-Documentation.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/The-ROS2-Project/Contributing/Contributing-To-ROS-2-Documentation.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -355,7 +356,7 @@
 
 
   <div class="section" id="contributing-to-ros-2-documentation">
-<h1>Contributing to ROS 2 Documentation<a class="headerlink" href="#contributing-to-ros-2-documentation" title="Permalink to this headline"></a></h1>
+<h1>Contributing to ROS 2 Documentation<a class="headerlink" href="#contributing-to-ros-2-documentation" title="Lien permanent vers ce titre"></a></h1>
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">Table of Contents</p>
 <ul class="simple">
@@ -385,20 +386,20 @@ This page explains how to contribute to ROS 2 Documentation.
 Please be sure to read the below sections carefully before contributing.</p>
 <p>The site is built using <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx</a>, and more particularly using <a class="reference external" href="https://holzhaus.github.io/sphinx-multiversion/master/index.html">Sphinx multiversion</a>.</p>
 <div class="section" id="branch-structure">
-<h2><a class="toc-backref" href="#id2">Branch structure</a><a class="headerlink" href="#branch-structure" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id2">Branch structure</a><a class="headerlink" href="#branch-structure" title="Lien permanent vers ce titre"></a></h2>
 <p>The source code of documentation is located in the <a class="reference external" href="https://github.com/ros2/ros2_documentation">ROS 2 Documentation GitHub repository</a>.
 This repository is set up with one branch per ROS 2 distribution to handle differences between the distributions.
 If a change is common to all ROS 2 distributions, it should be made to the <code class="docutils literal notranslate"><span class="pre">rolling</span></code> branch (and then will be backported as appropriate).
 If a change is specific to a particular ROS 2 distribution, it should be made to the respective branch.</p>
 </div>
 <div class="section" id="source-structure">
-<h2><a class="toc-backref" href="#id3">Source structure</a><a class="headerlink" href="#source-structure" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id3">Source structure</a><a class="headerlink" href="#source-structure" title="Lien permanent vers ce titre"></a></h2>
 <p>The source files for the site are all located under the <code class="docutils literal notranslate"><span class="pre">source</span></code> subdirectory.
 Templates for various sphinx plugins are located under <code class="docutils literal notranslate"><span class="pre">source/_templates</span></code>.
 The root directory contains configuration and files required to locally build the site for testing.</p>
 </div>
 <div class="section" id="building-the-site-locally">
-<h2><a class="toc-backref" href="#id4">Building the site locally</a><a class="headerlink" href="#building-the-site-locally" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id4">Building the site locally</a><a class="headerlink" href="#building-the-site-locally" title="Lien permanent vers ce titre"></a></h2>
 <p>Start by installing requirements located in the <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><p>The next command does a user-specific install, which requires <code class="docutils literal notranslate"><span class="pre">~/.local/bin/</span></code> to be added to <code class="docutils literal notranslate"><span class="pre">$PATH</span></code>:</p>
@@ -424,7 +425,7 @@ The root directory contains configuration and files required to locally build th
 Make sure to allow the installer to add it to the Windows <code class="docutils literal notranslate"><span class="pre">%PATH%</span></code>, otherwise Sphinx will not be able to find it.</p>
 </div></div>
 <div class="section" id="building-the-site-for-one-branch">
-<h3><a class="toc-backref" href="#id5">Building the site for one branch</a><a class="headerlink" href="#building-the-site-for-one-branch" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id5">Building the site for one branch</a><a class="headerlink" href="#building-the-site-for-one-branch" title="Lien permanent vers ce titre"></a></h3>
 <p>To build the site for just this branch, type <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> at the top-level of the repository.
 This is the recommended way to test out local changes.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make html</span>
@@ -438,7 +439,7 @@ To see the output, open <code class="docutils literal notranslate"><span class="
 </div>
 </div>
 <div class="section" id="building-the-site-for-all-branches">
-<h3><a class="toc-backref" href="#id6">Building the site for all branches</a><a class="headerlink" href="#building-the-site-for-all-branches" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id6">Building the site for all branches</a><a class="headerlink" href="#building-the-site-for-all-branches" title="Lien permanent vers ce titre"></a></h3>
 <p>To build the site for all branches, type <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">multiversion</span></code> from the <code class="docutils literal notranslate"><span class="pre">rolling</span></code> branch.
 This has two drawbacks:</p>
 <ol class="arabic simple">
@@ -451,7 +452,7 @@ That means that local changes will not be shown.</p></li>
 Then you must edit the <a class="reference external" href="https://github.com/ros2/ros2_documentation/blob/rolling/conf.py">conf.py</a> file and change the <code class="docutils literal notranslate"><span class="pre">smv_branch_whitelist</span></code> variable to point to your branch.</p>
 </div>
 <div class="section" id="checking-for-broken-links">
-<h3><a class="toc-backref" href="#id7">Checking for broken links</a><a class="headerlink" href="#checking-for-broken-links" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id7">Checking for broken links</a><a class="headerlink" href="#checking-for-broken-links" title="Lien permanent vers ce titre"></a></h3>
 <p>To check for broken links on the site, run:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make linkcheck</span>
 </pre></div>
@@ -460,12 +461,12 @@ Then you must edit the <a class="reference external" href="https://github.com/ro
 </div>
 </div>
 <div class="section" id="writing-pages">
-<h2><a class="toc-backref" href="#id8">Writing pages</a><a class="headerlink" href="#writing-pages" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id8">Writing pages</a><a class="headerlink" href="#writing-pages" title="Lien permanent vers ce titre"></a></h2>
 <p>The ROS 2 documentation website uses the <code class="docutils literal notranslate"><span class="pre">reStructuredText</span></code> format, which is the default plaintext markup language used by Sphinx.
 This section is a brief introduction to <code class="docutils literal notranslate"><span class="pre">reStructuredText</span></code> concepts, syntax, and best practices.</p>
 <p>You can refer to <a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText User Documentation</a> for a detailed technical specification.</p>
 <div class="section" id="id1">
-<h3><a class="toc-backref" href="#id9">Table of Contents</a><a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id9">Table of Contents</a><a class="headerlink" href="#id1" title="Lien permanent vers ce titre"></a></h3>
 <p>There are two types of directives used for the generation of a table of contents, <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">toctree::</span></code> and <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">contents::</span></code>.
 The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">toctree::</span></code> is used in top-level pages like <code class="docutils literal notranslate"><span class="pre">Tutorials.rst</span></code> to set ordering and visibility of its child pages.
 This directive creates both left navigation panel and in-page navigation links to the child pages listed.
@@ -486,7 +487,7 @@ Using <code class="docutils literal notranslate"><span class="pre">:depth:</span
 </div>
 </div>
 <div class="section" id="headings">
-<h3><a class="toc-backref" href="#id10">Headings</a><a class="headerlink" href="#headings" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id10">Headings</a><a class="headerlink" href="#headings" title="Lien permanent vers ce titre"></a></h3>
 <p>There are four main Heading types used in the documentation.
 Note that the number of symbols has to match the length of the title.</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">Page Title Header</span>
@@ -505,7 +506,7 @@ Note that the number of symbols has to match the length of the title.</p>
 <p>We usually use one digit for numbering subsections and two digits (dot separated) for numbering subsubsections in Tutorials and How-To-Guides.</p>
 </div>
 <div class="section" id="lists">
-<h3><a class="toc-backref" href="#id11">Lists</a><a class="headerlink" href="#lists" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id11">Lists</a><a class="headerlink" href="#lists" title="Lien permanent vers ce titre"></a></h3>
 <p>Stars <code class="docutils literal notranslate"><span class="pre">*</span></code> are used for listing unordered items with bullet points and number sign <code class="docutils literal notranslate"><span class="pre">#.</span></code>  is used for listing numbered items.
 Both of them support nested definitions and will render accordingly.</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="m">*</span> bullet point
@@ -522,7 +523,7 @@ Both of them support nested definitions and will render accordingly.</p>
 </div>
 </div>
 <div class="section" id="code-formatting">
-<h3><a class="toc-backref" href="#id12">Code Formatting</a><a class="headerlink" href="#code-formatting" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id12">Code Formatting</a><a class="headerlink" href="#code-formatting" title="Lien permanent vers ce titre"></a></h3>
 <p>In-text code can be formatted using <code class="docutils literal notranslate"><span class="pre">backticks</span></code> for showing <code class="docutils literal notranslate"><span class="pre">highlighted</span></code> code.</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>In-text code can be formatted using <span class="s">``backticks``</span> for showing <span class="s">``highlighted``</span> code.
 </pre></div>
@@ -543,16 +544,16 @@ Code inside the directive needs to be indented.</p>
 </div>
 </div>
 <div class="section" id="images">
-<h3><a class="toc-backref" href="#id13">Images</a><a class="headerlink" href="#images" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id13">Images</a><a class="headerlink" href="#images" title="Lien permanent vers ce titre"></a></h3>
 <p>Images can be inserted using the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">image::</span></code> directive.</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> images/turtlesim_follow1.png
 </pre></div>
 </div>
 </div>
 <div class="section" id="references-and-links">
-<h3><a class="toc-backref" href="#id14">References and Links</a><a class="headerlink" href="#references-and-links" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id14">References and Links</a><a class="headerlink" href="#references-and-links" title="Lien permanent vers ce titre"></a></h3>
 <div class="section" id="external-links">
-<h4>External links<a class="headerlink" href="#external-links" title="Permalink to this headline"></a></h4>
+<h4>External links<a class="headerlink" href="#external-links" title="Lien permanent vers ce titre"></a></h4>
 <p>The syntax of creating links to external web pages is shown below.</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="s">`ROS Docs </span><span class="si">&lt;https://docs.ros.org&gt;</span><span class="s">`_</span>
 </pre></div>
@@ -561,7 +562,7 @@ Code inside the directive needs to be indented.</p>
 Note the underscore after the final single quote.</p>
 </div>
 <div class="section" id="internal-links">
-<h4>Internal links<a class="headerlink" href="#internal-links" title="Permalink to this headline"></a></h4>
+<h4>Internal links<a class="headerlink" href="#internal-links" title="Lien permanent vers ce titre"></a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">:doc:</span></code> directive is used to create in-text links to other pages.</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:doc:</span><span class="nv">`Quality of Service &lt;../Tutorials/Quality-of-Service&gt;`</span>
 </pre></div>
@@ -584,7 +585,7 @@ In the example below, the target is defined as <code class="docutils literal not
 <p>This link will navigate a reader to the target page with an HTML anchor link <code class="docutils literal notranslate"><span class="pre">#talker-listener</span></code>.</p>
 </div>
 <div class="section" id="macros">
-<h4>Macros<a class="headerlink" href="#macros" title="Permalink to this headline"></a></h4>
+<h4>Macros<a class="headerlink" href="#macros" title="Lien permanent vers ce titre"></a></h4>
 <p>Macros can be used to simplify writing documentation that targets multiple distributions.</p>
 <p>Use a macro by including the macro name in curly braces.
 For example, when generating the docs for Rolling on the <code class="docutils literal notranslate"><span class="pre">rolling</span></code> branch:</p>
@@ -629,9 +630,9 @@ For example, when generating the docs for Rolling on the <code class="docutils l
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Windows-Tips-and-Tricks.html" class="btn btn-neutral float-left" title="Windows Tips and Tricks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../Features.html" class="btn btn-neutral float-right" title="Features Status" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Windows-Tips-and-Tricks.html" class="btn btn-neutral float-left" title="Windows Tips and Tricks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../Features.html" class="btn btn-neutral float-right" title="Features Status" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -640,9 +641,9 @@ For example, when generating the docs for Rolling on the <code class="docutils l
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

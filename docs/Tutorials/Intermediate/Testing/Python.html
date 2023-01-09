@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Writing Basic Tests with Python &mdash; ROS 2 documentation  documentation</title>
+  <title>Writing Basic Tests with Python &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
+        <script src="../../../_static/translations.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="search" title="Recherche" href="../../../search.html" />
     <link rel="next" title="URDF" href="../URDF/URDF-Main.html" />
     <link rel="prev" title="Running Tests in ROS 2 from the Command Line" href="CLI.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -344,7 +345,7 @@
           <li class="breadcrumb-item"><a href="Testing-Main.html">Testing</a></li>
       <li class="breadcrumb-item active">Writing Basic Tests with Python</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Intermediate/Testing/Python.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Intermediate/Testing/Python.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -355,25 +356,25 @@
 
 
   <div class="section" id="writing-basic-tests-with-python">
-<h1>Writing Basic Tests with Python<a class="headerlink" href="#writing-basic-tests-with-python" title="Permalink to this headline"></a></h1>
+<h1>Writing Basic Tests with Python<a class="headerlink" href="#writing-basic-tests-with-python" title="Lien permanent vers ce titre"></a></h1>
 <p>Starting point: we’ll assume you have a <a class="reference internal" href="../../Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html#createpkg"><span class="std std-ref">basic ament_python package</span></a> set up already and you want to add some tests to it.</p>
 <p>If you are using ament_cmake_python, refer to the the <a class="reference internal" href="../../../How-To-Guides/Ament-CMake-Python-Documentation.html"><span class="doc">ament_cmake_python docs</span></a> for how to make tests dicoverable.
 The test contents and invocation with <code class="docutils literal notranslate"><span class="pre">colcon</span></code> remain the same.</p>
 <div class="section" id="package-setup">
-<h2>Package Setup<a class="headerlink" href="#package-setup" title="Permalink to this headline"></a></h2>
+<h2>Package Setup<a class="headerlink" href="#package-setup" title="Lien permanent vers ce titre"></a></h2>
 <div class="section" id="setup-py">
-<h3>setup.py<a class="headerlink" href="#setup-py" title="Permalink to this headline"></a></h3>
+<h3>setup.py<a class="headerlink" href="#setup-py" title="Lien permanent vers ce titre"></a></h3>
 <p>Your <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> must a test dependency on <code class="docutils literal notranslate"><span class="pre">pytest</span></code> within the call to <code class="docutils literal notranslate"><span class="pre">setup(...)</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tests_require</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;pytest&#39;</span><span class="p">],</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="test-files-and-folders">
-<h3>Test Files and Folders<a class="headerlink" href="#test-files-and-folders" title="Permalink to this headline"></a></h3>
+<h3>Test Files and Folders<a class="headerlink" href="#test-files-and-folders" title="Lien permanent vers ce titre"></a></h3>
 <p>Your test code needs to go in a folder named <code class="docutils literal notranslate"><span class="pre">tests</span></code> in the root of your package.</p>
 <p>Any file that contains tests that you want to run must have the pattern <code class="docutils literal notranslate"><span class="pre">test_FOO.py</span></code> where <code class="docutils literal notranslate"><span class="pre">FOO</span></code> can be replaced with anything.</p>
 <div class="section" id="example-package-layout">
-<h4>Example package layout:<a class="headerlink" href="#example-package-layout" title="Permalink to this headline"></a></h4>
+<h4>Example package layout:<a class="headerlink" href="#example-package-layout" title="Lien permanent vers ce titre"></a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">awesome_ros_package</span><span class="o">/</span>
   <span class="n">awesome_ros_package</span><span class="o">/</span>
       <span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
@@ -391,7 +392,7 @@ The test contents and invocation with <code class="docutils literal notranslate"
 </div>
 </div>
 <div class="section" id="test-contents">
-<h2>Test Contents<a class="headerlink" href="#test-contents" title="Permalink to this headline"></a></h2>
+<h2>Test Contents<a class="headerlink" href="#test-contents" title="Lien permanent vers ce titre"></a></h2>
 <p>You can now write tests to your heart’s content. There are <a class="reference external" href="https://docs.pytest.org">plenty of resources on pytest</a>, but in short, you can write functions with the <code class="docutils literal notranslate"><span class="pre">test_</span></code> prefix and include whatever assert statements you’d like.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_math</span><span class="p">():</span>
     <span class="k">assert</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">5</span>   <span class="c1"># This should fail for most mathematical systems</span>
@@ -399,7 +400,7 @@ The test contents and invocation with <code class="docutils literal notranslate"
 </div>
 </div>
 <div class="section" id="special-commands">
-<h2>Special Commands<a class="headerlink" href="#special-commands" title="Permalink to this headline"></a></h2>
+<h2>Special Commands<a class="headerlink" href="#special-commands" title="Lien permanent vers ce titre"></a></h2>
 <p>Beyond the <a class="reference internal" href="CLI.html"><span class="doc">standard colcon testing commands</span></a> you can also specify arguments to the <code class="docutils literal notranslate"><span class="pre">pytest</span></code> framework from the command line with the <code class="docutils literal notranslate"><span class="pre">--pytest-args</span></code> flag.
 For example, you can specify the name of the function to run with</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon test --packages-select &lt;name-of-pkg&gt; --pytest-args -k name_of_the_test_function</span>
@@ -412,9 +413,9 @@ For example, you can specify the name of the function to run with</p>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="CLI.html" class="btn btn-neutral float-left" title="Running Tests in ROS 2 from the Command Line" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../URDF/URDF-Main.html" class="btn btn-neutral float-right" title="URDF" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="CLI.html" class="btn btn-neutral float-left" title="Running Tests in ROS 2 from the Command Line" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../URDF/URDF-Main.html" class="btn btn-neutral float-right" title="URDF" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -423,9 +424,9 @@ For example, you can specify the name of the function to run with</p>
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

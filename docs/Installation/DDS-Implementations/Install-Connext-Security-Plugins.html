@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Connext security plugins &mdash; ROS 2 documentation  documentation</title>
+  <title>Connext security plugins &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
     <link rel="next" title="RTI Connext DDS" href="Install-Connext-University-Eval.html" />
     <link rel="prev" title="DDS implementations" href="../DDS-Implementations.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -343,7 +344,7 @@
           <li class="breadcrumb-item"><a href="../DDS-Implementations.html">DDS implementations</a></li>
       <li class="breadcrumb-item active">Connext security plugins</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Installation/DDS-Implementations/Install-Connext-Security-Plugins.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Installation/DDS-Implementations/Install-Connext-Security-Plugins.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -354,7 +355,7 @@
 
 
   <div class="section" id="connext-security-plugins">
-<h1>Connext security plugins<a class="headerlink" href="#connext-security-plugins" title="Permalink to this headline"></a></h1>
+<h1>Connext security plugins<a class="headerlink" href="#connext-security-plugins" title="Lien permanent vers ce titre"></a></h1>
 <p>The Connext DDS Libraries are included with ROS 2 under a <a class="reference external" href="https://www.rti.com/ncl">non-commercial
 license</a> and do not include the security
 plug-in libraries. These libraries are available in the commercial,
@@ -367,15 +368,15 @@ available
 <a class="reference external" href="https://www.rti.com/gettingstarted/installwindows_secure">here</a> at
 the RTI website. The steps are:</p>
 <p><strong>Install Connext DDS Pro (Host)</strong>
-This is a host-specific installer application (for Windows, Linux, MacOS) to install a ‘Host’ bundle which includes the Launcher, tools, and other software services.
-At the end of the installation, the RTI ‘Launcher’ program will be started.
+This is a host-specific installer application (for Windows, Linux, MacOS) to install a “Host” bundle which includes the Launcher, tools, and other software services.
+At the end of the installation, the RTI “Launcher” program will be started.
 The Launcher is used to install target libraries, security plugins, and other layered services.</p>
 <p><strong>Use the Package Installer in Launcher</strong></p>
 <div class="figure align-default" id="id1">
 <img alt="Launcher Image" src="https://cdn2.hubspot.net/hub/1754418/file-3649043118-png/blog-files/launchermacos.png" />
-<p class="caption"><span class="caption-text">Launcher Image</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-text">Launcher Image</span><a class="headerlink" href="#id1" title="Lien permanent vers cette image"></a></p>
 </div>
-<p>The ‘RTI Package Installer’ is used to install ‘.rtipkg’ files – target
+<p>The “RTI Package Installer” is used to install “.rtipkg” files – target
 libraries, security plug-ins, etc. Open the Package Installer and select
 all of the .rtipkg files that were included in the Connext DDS Secure
 bundle for installation:</p>
@@ -391,7 +392,7 @@ bundle for installation:</p>
 This is included as an archive (.zip or
 otherwise) and can be simply extracted and copied to a convenient
 location on your host computer. As a suggestion, this could also be
-installed into the ‘rti_connext_dds-[version]’ directory in your home
+installed into the “rti_connext_dds-[version]” directory in your home
 directory space (this was created during installation of the RTI host
 tools). Note: this directory location may need to be placed in your PATH
 environment variable.
@@ -403,9 +404,9 @@ See the <a class="reference external" href="https://community.rti.com/static/doc
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../DDS-Implementations.html" class="btn btn-neutral float-left" title="DDS implementations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Install-Connext-University-Eval.html" class="btn btn-neutral float-right" title="RTI Connext DDS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../DDS-Implementations.html" class="btn btn-neutral float-left" title="DDS implementations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Install-Connext-University-Eval.html" class="btn btn-neutral float-right" title="RTI Connext DDS" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -414,9 +415,9 @@ See the <a class="reference external" href="https://community.rti.com/static/doc
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Python migration guide from ROS 1 &mdash; ROS 2 documentation  documentation</title>
+  <title>Python migration guide from ROS 1 &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
     <link rel="next" title="ROS Build Farms" href="Build-Farms.html" />
     <link rel="prev" title="Migration guide from ROS 1" href="Migration-Guide.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -344,7 +345,7 @@
           <li class="breadcrumb-item"><a href="Migration-Guide.html">Migration guide from ROS 1</a></li>
       <li class="breadcrumb-item active">Python migration guide from ROS 1</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/The-ROS2-Project/Contributing/Migration-Guide-Python.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/The-ROS2-Project/Contributing/Migration-Guide-Python.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -355,9 +356,9 @@
 
 
   <div class="section" id="python-migration-guide-from-ros-1">
-<h1>Python migration guide from ROS 1<a class="headerlink" href="#python-migration-guide-from-ros-1" title="Permalink to this headline"></a></h1>
+<h1>Python migration guide from ROS 1<a class="headerlink" href="#python-migration-guide-from-ros-1" title="Lien permanent vers ce titre"></a></h1>
 <div class="section" id="node-initialization">
-<h2>Node Initialization<a class="headerlink" href="#node-initialization" title="Permalink to this headline"></a></h2>
+<h2>Node Initialization<a class="headerlink" href="#node-initialization" title="Lien permanent vers ce titre"></a></h2>
 <p>In ROS 1:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;asdf&#39;</span><span class="p">)</span>
 
@@ -373,7 +374,7 @@
 </div>
 </div>
 <div class="section" id="ros-parameters">
-<h2>ROS Parameters<a class="headerlink" href="#ros-parameters" title="Permalink to this headline"></a></h2>
+<h2>ROS Parameters<a class="headerlink" href="#ros-parameters" title="Lien permanent vers ce titre"></a></h2>
 <p>In ROS 1:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="n">port</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s1">&#39;port&#39;</span><span class="p">,</span> <span class="s1">&#39;/dev/ttyUSB0&#39;</span><span class="p">)</span>
  <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="nb">str</span><span class="p">),</span> <span class="s1">&#39;port parameter must be a str&#39;</span>
@@ -396,7 +397,7 @@
 </div>
 </div>
 <div class="section" id="creating-a-publisher">
-<h2>Creating a Publisher<a class="headerlink" href="#creating-a-publisher" title="Permalink to this headline"></a></h2>
+<h2>Creating a Publisher<a class="headerlink" href="#creating-a-publisher" title="Lien permanent vers ce titre"></a></h2>
 <p>In ROS 1:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s1">&#39;chatter&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">)</span>
 </pre></div>
@@ -407,7 +408,7 @@
 </div>
 </div>
 <div class="section" id="creating-a-subscriber">
-<h2>Creating a Subscriber<a class="headerlink" href="#creating-a-subscriber" title="Permalink to this headline"></a></h2>
+<h2>Creating a Subscriber<a class="headerlink" href="#creating-a-subscriber" title="Lien permanent vers ce titre"></a></h2>
 <p>In ROS 1:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Subscriber</span><span class="p">(</span><span class="s1">&#39;chatter&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
 </pre></div>
@@ -418,7 +419,7 @@
 </div>
 </div>
 <div class="section" id="creating-a-service">
-<h2>Creating a Service<a class="headerlink" href="#creating-a-service" title="Permalink to this headline"></a></h2>
+<h2>Creating a Service<a class="headerlink" href="#creating-a-service" title="Lien permanent vers ce titre"></a></h2>
 <p>In ROS 1:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">srv</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s1">&#39;add_two_ints&#39;</span><span class="p">,</span> <span class="n">AddTwoInts</span><span class="p">,</span> <span class="n">add_two_ints_callback</span><span class="p">)</span>
 </pre></div>
@@ -429,7 +430,7 @@
 </div>
 </div>
 <div class="section" id="creating-a-service-client">
-<h2>Creating a Service Client<a class="headerlink" href="#creating-a-service-client" title="Permalink to this headline"></a></h2>
+<h2>Creating a Service Client<a class="headerlink" href="#creating-a-service-client" title="Lien permanent vers ce titre"></a></h2>
 <p>In ROS 1:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rospy</span><span class="o">.</span><span class="n">wait_for_service</span><span class="p">(</span><span class="s1">&#39;add_two_ints&#39;</span><span class="p">)</span>
 <span class="n">add_two_ints</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceProxy</span><span class="p">(</span><span class="s1">&#39;add_two_ints&#39;</span><span class="p">,</span> <span class="n">AddTwoInts</span><span class="p">)</span>
@@ -451,9 +452,9 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Migration-Guide.html" class="btn btn-neutral float-left" title="Migration guide from ROS 1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Build-Farms.html" class="btn btn-neutral float-right" title="ROS Build Farms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Migration-Guide.html" class="btn btn-neutral float-left" title="Migration guide from ROS 1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Build-Farms.html" class="btn btn-neutral float-right" title="ROS Build Farms" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -462,9 +463,9 @@
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ROS 2 developer guide &mdash; ROS 2 documentation  documentation</title>
+  <title>ROS 2 developer guide &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
     <link rel="next" title="Code style and language versions" href="Code-Style-Language-Versions.html" />
     <link rel="prev" title="Contributing" href="../Contributing.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -343,7 +344,7 @@
           <li class="breadcrumb-item"><a href="../Contributing.html">Contributing</a></li>
       <li class="breadcrumb-item active">ROS 2 developer guide</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/The-ROS2-Project/Contributing/Developer-Guide.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/The-ROS2-Project/Contributing/Developer-Guide.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -354,7 +355,7 @@
 
 
   <div class="section" id="ros-2-developer-guide">
-<h1>ROS 2 developer guide<a class="headerlink" href="#ros-2-developer-guide" title="Permalink to this headline"></a></h1>
+<h1>ROS 2 developer guide<a class="headerlink" href="#ros-2-developer-guide" title="Lien permanent vers ce titre"></a></h1>
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">Table of Contents</p>
 <ul class="simple">
@@ -398,7 +399,7 @@
 </div>
 <p>This page defines the practices and policies we employ when developing ROS 2.</p>
 <div class="section" id="general-principles">
-<h2><a class="toc-backref" href="#id2">General Principles</a><a class="headerlink" href="#general-principles" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id2">General Principles</a><a class="headerlink" href="#general-principles" title="Lien permanent vers ce titre"></a></h2>
 <p>Some principles are common to all ROS 2 development:</p>
 <ul class="simple">
 <li><p><strong>Shared ownership</strong>:
@@ -412,13 +413,13 @@ If you run into trouble on something, ask your fellow developers for help, via t
 </ul>
 </div>
 <div class="section" id="quality-practices">
-<h2><a class="toc-backref" href="#id3">Quality Practices</a><a class="headerlink" href="#quality-practices" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id3">Quality Practices</a><a class="headerlink" href="#quality-practices" title="Lien permanent vers ce titre"></a></h2>
 <p>Packages can ascribe to different levels of quality based on the development practices they adhere to, as per the guidelines in <a class="reference external" href="https://www.ros.org/reps/rep-2004.html">REP 2004: Package Quality Categories</a>.
 The categories are differentiated by their policies on versioning, testing, documentation, and more.</p>
-<p>The following sections are the specific development rules we follow to ensure core packages are of the highest quality (‘Level 1’).
+<p>The following sections are the specific development rules we follow to ensure core packages are of the highest quality (“Level 1”).
 We recommend all ROS developers strive to adhere to the following policies to ensure quality across the ROS ecosystem.</p>
 <div class="section" id="versioning">
-<span id="semver"></span><h3><a class="toc-backref" href="#id4">Versioning</a><a class="headerlink" href="#versioning" title="Permalink to this headline"></a></h3>
+<span id="semver"></span><h3><a class="toc-backref" href="#id4">Versioning</a><a class="headerlink" href="#versioning" title="Lien permanent vers ce titre"></a></h3>
 <p>We will use the <a class="reference external" href="http://semver.org/">Semantic Versioning guidelines</a> (<code class="docutils literal notranslate"><span class="pre">semver</span></code>) for versioning.</p>
 <p>We will also adhere to some ROS-specific rules built on top of <code class="docutils literal notranslate"><span class="pre">semver's</span></code> full meaning:</p>
 <ul class="simple">
@@ -443,7 +444,7 @@ Any change that requires recompiling dependent code is considered major (breakin
 </li>
 </ul>
 <div class="section" id="caveats">
-<h4>Caveats<a class="headerlink" href="#caveats" title="Permalink to this headline"></a></h4>
+<h4>Caveats<a class="headerlink" href="#caveats" title="Lien permanent vers ce titre"></a></h4>
 <p>These rules are <em>best-effort</em>.
 In unlikely, extreme cases, it may be necessary to break API within a major version/distribution.
 Whether an unplanned break increments the major or minor version will be assessed on a case-by-case basis.</p>
@@ -462,9 +463,9 @@ This case adheres to SemVer, but breaks from our own rule that major increments 
 As unlikely as the examples above are, it is important to accurately define our versioning system.</p>
 </div>
 <div class="section" id="public-api-declaration">
-<h4>Public API declaration<a class="headerlink" href="#public-api-declaration" title="Permalink to this headline"></a></h4>
+<h4>Public API declaration<a class="headerlink" href="#public-api-declaration" title="Lien permanent vers ce titre"></a></h4>
 <p>According to <code class="docutils literal notranslate"><span class="pre">semver</span></code>, every package must clearly declare a public API.
-We will use the “Public API Declaration” section of the quality declaration of a package to declare what symbols are part of the public API.</p>
+We will use the « Public API Declaration » section of the quality declaration of a package to declare what symbols are part of the public API.</p>
 <p>For most C and C++ packages the declaration is any header that it installs.
 However, it is acceptable to define a set of symbols which are considered private.
 Avoiding private symbols in headers can help with ABI stability, but is not required.</p>
@@ -474,7 +475,7 @@ Any elements of the public API should be clearly stated in the package’s docum
 If something you are using is not explicitly listed as part of the public API in the package’s documentation, then you cannot depend on it not changing between minor or patch versions.</p>
 </div>
 <div class="section" id="deprecation-strategy">
-<h4>Deprecation strategy<a class="headerlink" href="#deprecation-strategy" title="Permalink to this headline"></a></h4>
+<h4>Deprecation strategy<a class="headerlink" href="#deprecation-strategy" title="Lien permanent vers ce titre"></a></h4>
 <p>Where possible, we will also use the tick-tock deprecation and migration strategy for major version increments.
 New deprecations will come in a new distribution release, accompanied by compiler warnings expressing that the functionality is being deprecated.
 In the next release, the functionality will be completely removed (no warnings).</p>
@@ -494,7 +495,7 @@ In the next release, the functionality will be completely removed (no warnings).
 <td><p>void foo();</p></td>
 </tr>
 <tr class="row-odd"><td><p>Y-turtle</p></td>
-<td><p>[[deprecated(“use bar()”)]] void foo(); &lt;br&gt; void bar();</p></td>
+<td><p>[[deprecated(« use bar() »)]] void foo(); &lt;br&gt; void bar();</p></td>
 </tr>
 <tr class="row-even"><td><p>Z-turtle</p></td>
 <td><p>void bar();</p></td>
@@ -510,7 +511,7 @@ However, like the caveats associated with SemVer, tick-tock or even deprecation 
 </div>
 </div>
 <div class="section" id="change-control-process">
-<h3><a class="toc-backref" href="#id5">Change control process</a><a class="headerlink" href="#change-control-process" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id5">Change control process</a><a class="headerlink" href="#change-control-process" title="Lien permanent vers ce titre"></a></h3>
 <ul class="simple">
 <li><p>All changes must go through a pull request.</p></li>
 <li><p>We will enforce the <a class="reference external" href="https://developercertificate.org/">Developer Certificate of Origin (DCO)</a> on pull requests in ROSCore repositories.</p>
@@ -531,20 +532,20 @@ Approval is required before merging.</p>
 <li><p>Any required changes to documentation (API documentation, feature documentation, release notes, etc.) must be proposed before merging related changes.</p></li>
 </ul>
 <div class="section" id="guidelines-for-backporting-prs">
-<h4>Guidelines for backporting PRs<a class="headerlink" href="#guidelines-for-backporting-prs" title="Permalink to this headline"></a></h4>
+<h4>Guidelines for backporting PRs<a class="headerlink" href="#guidelines-for-backporting-prs" title="Lien permanent vers ce titre"></a></h4>
 <p>When changing an older version of ROS:</p>
 <ul class="simple">
 <li><p>Make sure the features or fixes are accepted and merged in the rolling branch before opening a PR to backport the changes to older versions.</p></li>
 <li><p>When backporting to older versions, also consider backporting to any other <a class="reference internal" href="../../Releases.html"><span class="doc">still supported versions</span></a>, even non-LTS versions.</p></li>
-<li><p>If you are backporting a single PR in its entirety, title the backport PR “[Distro] &lt;name of original PR&gt;”.
-If backporting a subset of changes from one or multiple PRs, the title should be “[Distro] &lt;description of changes&gt;”.</p></li>
+<li><p>If you are backporting a single PR in its entirety, title the backport PR « [Distro] &lt;name of original PR&gt; ».
+If backporting a subset of changes from one or multiple PRs, the title should be « [Distro] &lt;description of changes&gt; ».</p></li>
 <li><p>Link to all PRs whose changes you’re backporting from the description of your backport PR.
 In a Dashing backport of a Foxy change, you do not need to link to the Eloquent backport of the same change.</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="documentation">
-<h3><a class="toc-backref" href="#id6">Documentation</a><a class="headerlink" href="#documentation" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id6">Documentation</a><a class="headerlink" href="#documentation" title="Lien permanent vers ce titre"></a></h3>
 <p>All packages should have these documentation elements present in their README or linked to from their README:</p>
 <ul class="simple">
 <li><p>Description and purpose</p></li>
@@ -581,7 +582,7 @@ This might include workflows for testing the code using something like <code cla
 <p><em>(API docs are not yet being automatically generated)</em></p>
 </div>
 <div class="section" id="testing">
-<h3><a class="toc-backref" href="#id7">Testing</a><a class="headerlink" href="#testing" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id7">Testing</a><a class="headerlink" href="#testing" title="Lien permanent vers ce titre"></a></h3>
 <p>All packages should have some level of <a class="reference internal" href="../../Tutorials/Intermediate/Testing/Testing-Main.html#testingmain"><span class="std std-ref">system, integration, and/or unit tests.</span></a></p>
 <p><strong>Unit tests</strong> should always be in the package which is being tested and should make use of tools like <code class="docutils literal notranslate"><span class="pre">Mock</span></code> to try and test narrow parts of the code base in constructed scenarios.
 Unit tests should not bring in test dependencies that are not testing tools, e.g. gtest, nosetest, pytest, mock, etc…</p>
@@ -591,22 +592,22 @@ Like Unit tests, Integration tests should be in the package which is being teste
 <p><strong>System tests</strong> are designed to test end-to-end situations between packages and should be in their own packages to avoid bloating or coupling packages and to avoid circular dependencies.</p>
 <p>In general minimizing external or cross package test dependencies should be avoided to prevent circular dependencies and tightly coupled test packages.</p>
 <p>All packages should have some unit tests and possibly integration tests, but the degree to which they should have them is based on the package’s quality category.
-The following subsections apply to ‘Level 1’ packages:</p>
+The following subsections apply to “Level 1” packages:</p>
 <div class="section" id="code-coverage">
-<h4>Code coverage<a class="headerlink" href="#code-coverage" title="Permalink to this headline"></a></h4>
+<h4>Code coverage<a class="headerlink" href="#code-coverage" title="Lien permanent vers ce titre"></a></h4>
 <p>We will provide line coverage, and achieve line coverage above 95%.
 If a lower percentage target is justifiable, it must be prominently documented.
 We may provide branch coverage, or exclude code from coverage (test code, debug code, etc.).
 We require that coverage increase or stay the same before merging a change, but it may be acceptable to make a change that decreases code coverage with proper justification (e.g. deleting code that was previously covered can cause the percentage to drop).</p>
 </div>
 <div class="section" id="performance">
-<h4>Performance<a class="headerlink" href="#performance" title="Permalink to this headline"></a></h4>
+<h4>Performance<a class="headerlink" href="#performance" title="Lien permanent vers ce titre"></a></h4>
 <p>We strongly recommend performance tests, but recognize they don’t make sense for some packages.
 If there are performance tests, we will choose to either check each change or before each release or both.
 We will also require justification for merging a change or making a release that lowers performance.</p>
 </div>
 <div class="section" id="linters-and-static-analysis">
-<h4>Linters and static analysis<a class="headerlink" href="#linters-and-static-analysis" title="Permalink to this headline"></a></h4>
+<h4>Linters and static analysis<a class="headerlink" href="#linters-and-static-analysis" title="Lien permanent vers ce titre"></a></h4>
 <p>We will use <a class="reference internal" href="Code-Style-Language-Versions.html"><span class="doc">ROS code style</span></a> and enforce it with linters from <a class="reference external" href="https://github.com/ament/ament_lint/tree/rolling/ament_lint_common/doc/index.rst">ament_lint_common</a>.
 All linters/static analysis that are part of <code class="docutils literal notranslate"><span class="pre">ament_lint_common</span></code> must be used.</p>
 <p>The <a class="reference external" href="https://github.com/ament/ament_lint/blob/rolling/ament_lint_auto/doc/index.rst">ament_lint_auto</a> documentation provides information on running <code class="docutils literal notranslate"><span class="pre">ament_lint_common</span></code>.</p>
@@ -614,11 +615,11 @@ All linters/static analysis that are part of <code class="docutils literal notra
 </div>
 </div>
 <div class="section" id="general-practices">
-<h2><a class="toc-backref" href="#id8">General Practices</a><a class="headerlink" href="#general-practices" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id8">General Practices</a><a class="headerlink" href="#general-practices" title="Lien permanent vers ce titre"></a></h2>
 <p>Some practices are common to all ROS 2 development.</p>
 <p>These practices don’t affect package quality level as described in <a class="reference external" href="https://www.ros.org/reps/rep-2004.html">REP 2004</a>, but are still highly recommended for the development process.</p>
 <div class="section" id="issues">
-<h3><a class="toc-backref" href="#id9">Issues</a><a class="headerlink" href="#issues" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id9">Issues</a><a class="headerlink" href="#issues" title="Lien permanent vers ce titre"></a></h3>
 <p>When filing an issue please make sure to:</p>
 <ul class="simple">
 <li><p>Include enough information for another person to understand the issue.
@@ -628,7 +629,7 @@ Testing with as many alternatives in each category as feasible will be especiall
 <li><p><strong>The operating system and version.</strong>
 Reasoning: ROS 2 supports multiple platforms, and some bugs are specific to particular versions of operating systems/compilers.</p></li>
 <li><p><strong>The installation method.</strong>
-Reasoning: Some issues only manifest if ROS 2 has been installed from “fat archives” or from Debians.
+Reasoning: Some issues only manifest if ROS 2 has been installed from « fat archives » or from Debians.
 This can help us determine if the issue is with the packaging process.</p></li>
 <li><p><strong>The specific version of ROS 2.</strong>
 Reasoning: Some bugs may be present in a particular ROS 2 release and later fixed.
@@ -645,7 +646,7 @@ Issues are much more likely to be resolved if others can reproduce them easily.<
 <li><p>Mention troubleshooting steps that have been tried already, including:</p>
 <ul>
 <li><p>Upgrading to the latest version of the code, which may include bug fixes that have not been released yet.
-See <a class="reference internal" href="../../Installation.html#building-from-source"><span class="std std-ref">this section</span></a> and follow the instructions to get the “rolling” branches.</p></li>
+See <a class="reference internal" href="../../Installation.html#building-from-source"><span class="std std-ref">this section</span></a> and follow the instructions to get the « rolling » branches.</p></li>
 <li><p>Trying with a different RMW implementation.
 See <a class="reference internal" href="../../How-To-Guides/Working-with-multiple-RMW-implementations.html"><span class="doc">this page</span></a> for how to do that.</p></li>
 </ul>
@@ -653,7 +654,7 @@ See <a class="reference internal" href="../../How-To-Guides/Working-with-multipl
 </ul>
 </div>
 <div class="section" id="branches">
-<h3><a class="toc-backref" href="#id10">Branches</a><a class="headerlink" href="#branches" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id10">Branches</a><a class="headerlink" href="#branches" title="Lien permanent vers ce titre"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>These are just guidelines.
@@ -677,7 +678,7 @@ to the Humble distribution (does not break API, etc.), then it is good practice 
 <p><code class="docutils literal notranslate"><span class="pre">main</span></code> typically targets <a class="reference internal" href="../../Releases/Release-Rolling-Ridley.html"><span class="doc">Rolling</span></a> (and so, the next unreleased ROS distribution), though the maintainers may decide to develop and release from a <code class="docutils literal notranslate"><span class="pre">rolling</span></code> branch instead.</p>
 </div>
 <div class="section" id="pull-requests">
-<h3><a class="toc-backref" href="#id11">Pull requests</a><a class="headerlink" href="#pull-requests" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id11">Pull requests</a><a class="headerlink" href="#pull-requests" title="Lien permanent vers ce titre"></a></h3>
 <ul class="simple">
 <li><p>A pull request should only focus on one change.
 Separate changes should go into separate pull requests.
@@ -705,14 +706,14 @@ As a reviewer, also feel free to make more substantial improvements, but conside
 </ul>
 </div>
 <div class="section" id="library-versioning">
-<h3><a class="toc-backref" href="#id12">Library versioning</a><a class="headerlink" href="#library-versioning" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id12">Library versioning</a><a class="headerlink" href="#library-versioning" title="Lien permanent vers ce titre"></a></h3>
 <p>We will version all libraries within a package together.
 This means that libraries inherit their version from the package.
 This keeps library and package versions from diverging and shares reasoning with the policy of releasing packages which share a repository together.
 If you need libraries to have different versions then consider splitting them into different packages.</p>
 </div>
 <div class="section" id="development-process">
-<h3><a class="toc-backref" href="#id13">Development process</a><a class="headerlink" href="#development-process" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id13">Development process</a><a class="headerlink" href="#development-process" title="Lien permanent vers ce titre"></a></h3>
 <ul class="simple">
 <li><p>The default branch (in most cases the rolling branch) must always build, pass all tests and compile without warnings.
 If at any time there is a regression it is the top priority to restore at least the previous state.</p></li>
@@ -724,7 +725,7 @@ Besides using automated tests, also run the modified code path manually to ensur
 <p>For more details on recommended software development workflow, see <a class="reference internal" href="#software-development-lifecycle">Software Development Lifecycle</a> section.</p>
 </div>
 <div class="section" id="changes-to-rmw-api">
-<h3><a class="toc-backref" href="#id14">Changes to RMW API</a><a class="headerlink" href="#changes-to-rmw-api" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id14">Changes to RMW API</a><a class="headerlink" href="#changes-to-rmw-api" title="Lien permanent vers ce titre"></a></h3>
 <p>When updating <a class="reference external" href="https://github.com/ros2/rmw">RMW API</a>, it is required that RMW implementations for the Tier 1 middleware libraries are updated as well.
 For example, a new function <code class="docutils literal notranslate"><span class="pre">rmw_foo()</span></code> introduced to the RMW API must be implemented in the following packages (as of ROS Galactic):</p>
 <ul class="simple">
@@ -736,11 +737,11 @@ For example, a new function <code class="docutils literal notranslate"><span cla
 See <a class="reference external" href="https://www.ros.org/reps/rep-2000.html">REP-2000</a> for the list of middleware libraries and their tiers.</p>
 </div>
 <div class="section" id="tracking-tasks">
-<h3><a class="toc-backref" href="#id15">Tracking tasks</a><a class="headerlink" href="#tracking-tasks" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id15">Tracking tasks</a><a class="headerlink" href="#tracking-tasks" title="Lien permanent vers ce titre"></a></h3>
 <p>To help organize work on ROS 2, the core ROS 2 development team uses kanban-style <a class="reference external" href="https://github.com/orgs/ros2/projects">GitHub project boards</a>.</p>
 <p>Not all issues and pull requests are tracked on the project boards, however.
 A board usually represents an upcoming release or specific project.
-Tickets can be browsed on a per-repo basis by browsing the <a class="reference external" href="https://github.com/ros2">ROS 2 repositories’</a> individual issue pages.</p>
+Tickets can be browsed on a per-repo basis by browsing the <a class="reference external" href="https://github.com/ros2">ROS 2 repositories”</a> individual issue pages.</p>
 <p>The names and purposes of columns in any given ROS 2 project board vary, but typically follow the same general structure:</p>
 <ul class="simple">
 <li><p><strong>To do</strong>:
@@ -758,7 +759,7 @@ We will update the status (if you don’t have the permission) and you can start
 If you contribute regularly we will likely just grant you permission to manage the labels etc. yourself.</p>
 </div>
 <div class="section" id="programming-conventions">
-<h3><a class="toc-backref" href="#id16">Programming conventions</a><a class="headerlink" href="#programming-conventions" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id16">Programming conventions</a><a class="headerlink" href="#programming-conventions" title="Lien permanent vers ce titre"></a></h3>
 <ul class="simple">
 <li><p>Defensive programming: ensure that assumptions are held as early as possible.
 E.g. check every return code and make sure to at least throw an exception until the case is handled more gracefully.</p></li>
@@ -767,7 +768,7 @@ E.g. check every return code and make sure to at least throw an exception until 
 <li><p>Keep group of items (dependencies, imports, includes, etc.) ordered alphabetically.</p></li>
 </ul>
 <div class="section" id="c-specific">
-<h4>C++ specific<a class="headerlink" href="#c-specific" title="Permalink to this headline"></a></h4>
+<h4>C++ specific<a class="headerlink" href="#c-specific" title="Lien permanent vers ce titre"></a></h4>
 <ul class="simple">
 <li><p>Avoid using direct streaming (<code class="docutils literal notranslate"><span class="pre">&lt;&lt;</span></code>) to <code class="docutils literal notranslate"><span class="pre">stdout</span></code> / <code class="docutils literal notranslate"><span class="pre">stderr</span></code> to prevent interleaving between multiple threads.</p></li>
 <li><p>Avoid using references for <code class="docutils literal notranslate"><span class="pre">std::shared_ptr</span></code> since that subverts the reference counting.
@@ -776,10 +777,10 @@ If the original instance goes out of scope and the reference is being used it ac
 </div>
 </div>
 <div class="section" id="filesystem-layout">
-<h3><a class="toc-backref" href="#id17">Filesystem layout</a><a class="headerlink" href="#filesystem-layout" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id17">Filesystem layout</a><a class="headerlink" href="#filesystem-layout" title="Lien permanent vers ce titre"></a></h3>
 <p>The filesystem layout of packages and repositories should follow the same conventions in order to provide a consistent experience for users browsing our source code.</p>
 <div class="section" id="package-layout">
-<h4>Package layout<a class="headerlink" href="#package-layout" title="Permalink to this headline"></a></h4>
+<h4>Package layout<a class="headerlink" href="#package-layout" title="Lien permanent vers ce titre"></a></h4>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">src</span></code>: contains all C and C++ code</p>
 <ul>
@@ -816,14 +817,14 @@ If the original instance goes out of scope and the reference is being used it ac
 </ul>
 </div>
 <div class="section" id="repository-layout">
-<h4>Repository layout<a class="headerlink" href="#repository-layout" title="Permalink to this headline"></a></h4>
+<h4>Repository layout<a class="headerlink" href="#repository-layout" title="Lien permanent vers ce titre"></a></h4>
 <p>Each package should be in a subfolder which has the same name as the package.
 If a repository contains only a single package it can optionally be in the root of the repository.</p>
 </div>
 </div>
 </div>
 <div class="section" id="developer-workflow">
-<h2><a class="toc-backref" href="#id18">Developer Workflow</a><a class="headerlink" href="#developer-workflow" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id18">Developer Workflow</a><a class="headerlink" href="#developer-workflow" title="Lien permanent vers ce titre"></a></h2>
 <p>We track open tickets and active PRs related to upcoming releases and larger projects using <a class="reference external" href="https://github.com/orgs/ros2/projects">GitHub project boards</a>.</p>
 <p>The usual workflow is:</p>
 <ul>
@@ -841,8 +842,8 @@ If a repository contains only a single package it can optionally be in the root 
 <li><p>Go to ci.ros2.org</p></li>
 <li><p>Log in (top right corner)</p></li>
 <li><p>Click on the <code class="docutils literal notranslate"><span class="pre">ci_launcher</span></code> job</p></li>
-<li><p>Click “Build with Parameters” (left column)</p></li>
-<li><p>In the first box “CI_BRANCH_TO_TEST” enter your feature branch name</p></li>
+<li><p>Click « Build with Parameters » (left column)</p></li>
+<li><p>In the first box « CI_BRANCH_TO_TEST » enter your feature branch name</p></li>
 <li><p>Hit the <code class="docutils literal notranslate"><span class="pre">build</span></code> button</p></li>
 </ul>
 <p>(if you are not a ROS 2 committer, you don’t have access to the CI farm. In that case, ping the reviewer of your PR to run CI for you)</p>
@@ -852,8 +853,8 @@ If a repository contains only a single package it can optionally be in the root 
 <li><p>Go to ci.ros2.org</p></li>
 <li><p>Log in (top right corner)</p></li>
 <li><p>Click on the <code class="docutils literal notranslate"><span class="pre">ci_linux_coverage</span></code> job</p></li>
-<li><p>Click “Build with Parameters” (left column)</p></li>
-<li><p>Be sure of leaving “CI_BUILD_ARGS” and “CI_TEST_ARGS” with the default values</p></li>
+<li><p>Click « Build with Parameters » (left column)</p></li>
+<li><p>Be sure of leaving « CI_BUILD_ARGS » and « CI_TEST_ARGS » with the default values</p></li>
 <li><p>Hit the <code class="docutils literal notranslate"><span class="pre">build</span></code> button</p></li>
 <li><p>At the end of the document there are instructions on how to <a class="reference internal" href="#read-coverage-report"><span class="std std-ref">interpret the result of the report</span></a> and <a class="reference internal" href="#calculate-coverage-rate"><span class="std std-ref">calculate the coverage rate</span></a></p></li>
 </ul>
@@ -865,7 +866,7 @@ If a repository contains only a single package it can optionally be in the root 
 </li>
 <li><p>When the PR has been approved:</p>
 <ul class="simple">
-<li><p>the person who submitted the PR merges it using “Squash and Merge” option so that we keep a clean history</p>
+<li><p>the person who submitted the PR merges it using « Squash and Merge » option so that we keep a clean history</p>
 <ul>
 <li><p>If the commits deserve to keep separated: squash all the nitpick/linters/typo ones together and merge the remaining set</p>
 <ul>
@@ -880,10 +881,10 @@ If a repository contains only a single package it can optionally be in the root 
 </ul>
 </div>
 <div class="section" id="architectural-development-practices">
-<h2><a class="toc-backref" href="#id19">Architectural Development Practices</a><a class="headerlink" href="#architectural-development-practices" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id19">Architectural Development Practices</a><a class="headerlink" href="#architectural-development-practices" title="Lien permanent vers ce titre"></a></h2>
 <p>This section describes the ideal lifecycle that should be employed when making large architectural changes to ROS 2.</p>
 <div class="section" id="software-development-lifecycle">
-<h3><a class="toc-backref" href="#id20">Software Development Lifecycle</a><a class="headerlink" href="#software-development-lifecycle" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id20">Software Development Lifecycle</a><a class="headerlink" href="#software-development-lifecycle" title="Lien permanent vers ce titre"></a></h3>
 <p>This section describes step-by-step how to plan, design, and implement a new feature:</p>
 <ol class="arabic simple">
 <li><p>Task Creation</p></li>
@@ -893,7 +894,7 @@ If a repository contains only a single package it can optionally be in the root 
 <li><p>Code Review</p></li>
 </ol>
 <div class="section" id="task-creation">
-<h4>Task creation<a class="headerlink" href="#task-creation" title="Permalink to this headline"></a></h4>
+<h4>Task creation<a class="headerlink" href="#task-creation" title="Lien permanent vers ce titre"></a></h4>
 <p>Tasks requiring changes to critical parts of ROS 2 should have design reviews during early stages of the release cycle.
 If a design review is happening in the later stages, the changes will be part of a future release.</p>
 <ul class="simple">
@@ -906,7 +907,7 @@ If a design review is happening in the later stages, the changes will be part of
 </ul>
 </div>
 <div class="section" id="writing-the-design-document">
-<h4>Writing the design document<a class="headerlink" href="#writing-the-design-document" title="Permalink to this headline"></a></h4>
+<h4>Writing the design document<a class="headerlink" href="#writing-the-design-document" title="Lien permanent vers ce titre"></a></h4>
 <p>Design docs must never include confidential information.
 Whether or not a design document is required for your change depends on how big the task is.</p>
 <ol class="arabic simple">
@@ -932,7 +933,7 @@ Design comments will be made directly on the pull request.</p>
 <p>If the task is planned to be released with a specific version of ROS, this information should be included in the pull request.</p>
 </div>
 <div class="section" id="design-document-review">
-<h4>Design document review<a class="headerlink" href="#design-document-review" title="Permalink to this headline"></a></h4>
+<h4>Design document review<a class="headerlink" href="#design-document-review" title="Lien permanent vers ce titre"></a></h4>
 <p>Once the design is ready for review, a pull request should be opened and appropriate reviewers should be assigned.
 It is recommended to include project owner(s) -
 maintainers of all impacted packages (as defined by <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> maintainer field, see <a class="reference external" href="https://www.ros.org/reps/rep-0140.html#maintainer-multiple-but-at-least-one">REP-140</a>) - as reviewers.</p>
@@ -981,7 +982,7 @@ In this case,</p>
 </ul>
 </div>
 <div class="section" id="implementation">
-<h4>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline"></a></h4>
+<h4>Implementation<a class="headerlink" href="#implementation" title="Lien permanent vers ce titre"></a></h4>
 <p>Before starting, go through the <a class="reference internal" href="#pull-requests">Pull requests</a> section for best practices.</p>
 <ul class="simple">
 <li><p>For each repo to be modified:</p>
@@ -1005,7 +1006,7 @@ See this <a class="reference external" href="https://help.github.com/articles/cl
 </ul>
 </div>
 <div class="section" id="code-review">
-<h4>Code review<a class="headerlink" href="#code-review" title="Permalink to this headline"></a></h4>
+<h4>Code review<a class="headerlink" href="#code-review" title="Lien permanent vers ce titre"></a></h4>
 <p>Once the change is ready for code review:</p>
 <ul class="simple">
 <li><p>Open a pull request for each modified repository.</p>
@@ -1026,7 +1027,7 @@ code authors to reply back to comments within a week, so there is no loss of con
 </div>
 </div>
 <div class="section" id="build-farm-introduction">
-<h2><a class="toc-backref" href="#id21">Build Farm Introduction</a><a class="headerlink" href="#build-farm-introduction" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id21">Build Farm Introduction</a><a class="headerlink" href="#build-farm-introduction" title="Lien permanent vers ce titre"></a></h2>
 <p>The build farm is located at <a class="reference external" href="https://ci.ros2.org/">ci.ros2.org</a>.</p>
 <p>Every night we run nightly jobs which build and run all the tests in various scenarios on various platforms.
 Additionally, we test all pull requests against these platforms before merging.</p>
@@ -1100,19 +1101,19 @@ Additionally, we test all pull requests against these platforms before merging.<
 binary packages, continuous integration, testing, and analysis.</p>
 <p>For details, frequently asked questions, and troubleshooting see <a class="reference internal" href="Build-Farms.html"><span class="doc">build farms</span></a>.</p>
 <div class="section" id="note-on-coverage-runs">
-<h3><a class="toc-backref" href="#id22">Note on Coverage runs</a><a class="headerlink" href="#note-on-coverage-runs" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id22">Note on Coverage runs</a><a class="headerlink" href="#note-on-coverage-runs" title="Lien permanent vers ce titre"></a></h3>
 <p>ROS 2 packages are organized in a way that the testing code for a given package is not only contained within the package, but could also be present in a different package.
 In other words: packages can exercise code belonging to other packages during the testing phase.</p>
 <p>To achieve the coverage rate reached by all code available in the ROS 2 core packages it is recommended to run builds using a fixed set of proposed repositories.
 That set is defined in the default parameters of coverage jobs in Jenkins.</p>
 </div>
 <div class="section" id="how-to-read-the-coverage-rate-from-the-buildfarm-report">
-<span id="read-coverage-report"></span><h3><a class="toc-backref" href="#id23">How to read the coverage rate from the buildfarm report</a><a class="headerlink" href="#how-to-read-the-coverage-rate-from-the-buildfarm-report" title="Permalink to this headline"></a></h3>
+<span id="read-coverage-report"></span><h3><a class="toc-backref" href="#id23">How to read the coverage rate from the buildfarm report</a><a class="headerlink" href="#how-to-read-the-coverage-rate-from-the-buildfarm-report" title="Lien permanent vers ce titre"></a></h3>
 <p>To see the coverage report for a given package:</p>
 <ul class="simple">
 <li><p>When the <code class="docutils literal notranslate"><span class="pre">ci_linux_coverage</span></code> build finishes, click on <code class="docutils literal notranslate"><span class="pre">Coverage</span> <span class="pre">Report</span></code></p></li>
 <li><p>Scroll down to the <code class="docutils literal notranslate"><span class="pre">Coverage</span> <span class="pre">Breakdown</span> <span class="pre">by</span> <span class="pre">Package</span></code> table</p></li>
-<li><p>In the table, look at the first column called “Name”</p></li>
+<li><p>In the table, look at the first column called « Name »</p></li>
 </ul>
 <p>The coverage reports in the buildfarm include all the packages that were used in the ROS workspace.
 The coverage report includes different paths corresponding to the same package:</p>
@@ -1126,24 +1127,24 @@ These correspond to the system/integration tests coming from testing runs of oth
 </ul>
 </div>
 <div class="section" id="how-to-calculate-the-coverage-rate-from-the-buildfarm-report">
-<span id="calculate-coverage-rate"></span><h3><a class="toc-backref" href="#id24">How to calculate the coverage rate from the buildfarm report</a><a class="headerlink" href="#how-to-calculate-the-coverage-rate-from-the-buildfarm-report" title="Permalink to this headline"></a></h3>
+<span id="calculate-coverage-rate"></span><h3><a class="toc-backref" href="#id24">How to calculate the coverage rate from the buildfarm report</a><a class="headerlink" href="#how-to-calculate-the-coverage-rate-from-the-buildfarm-report" title="Lien permanent vers ce titre"></a></h3>
 <p>Get the combined unit coverage rate using the automatic script:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>From the ci_linux_coverage Jenkins build copy the URL of the build</p></li>
 <li><p>Download the <a class="reference external" href="https://raw.githubusercontent.com/ros2/ci/master/tools/get_coverage_ros2_pkg.py">get_coverage_ros2_pkg</a> script</p></li>
 <li><p>Execute the script: <code class="docutils literal notranslate"><span class="pre">./get_coverage_ros2_pkg.py</span> <span class="pre">&lt;jenkins_build_url&gt;</span> <span class="pre">&lt;ros2_package_name&gt;</span></code> (<a class="reference external" href="https://github.com/ros2/ci/blob/master/tools/README.md">README</a>)</p></li>
-<li><p>Grab the results from the “Combined unit testing” final line in the output of the script</p></li>
+<li><p>Grab the results from the « Combined unit testing » final line in the output of the script</p></li>
 </ul>
 </div></blockquote>
 <p>Alternative: get the combined unit coverage rate from coverage report (require manual calculation):</p>
 <ul class="simple">
 <li><p>When the ci_linux_coverage build finishes, click on <code class="docutils literal notranslate"><span class="pre">Cobertura</span> <span class="pre">Coverage</span> <span class="pre">Report</span></code></p></li>
 <li><p>Scroll down to the <code class="docutils literal notranslate"><span class="pre">Coverage</span> <span class="pre">Breakdown</span> <span class="pre">by</span> <span class="pre">Package</span></code> table</p></li>
-<li><p>In the table, under the first column “Name”, look for (where &lt;package_name&gt; is your package under testing):</p>
+<li><p>In the table, under the first column « Name », look for (where &lt;package_name&gt; is your package under testing):</p>
 <ul>
-<li><p>all the directories under the pattern <code class="docutils literal notranslate"><span class="pre">src.*.&lt;repository_name&gt;.&lt;package_name&gt;.*</span></code> grab the two absolute values in the column “Lines”.</p></li>
-<li><p>all the directories under the pattern <code class="docutils literal notranslate"><span class="pre">build/.&lt;repository_name&gt;.*</span></code> grab the two absolute values in the column “Lines”.</p></li>
+<li><p>all the directories under the pattern <code class="docutils literal notranslate"><span class="pre">src.*.&lt;repository_name&gt;.&lt;package_name&gt;.*</span></code> grab the two absolute values in the column « Lines ».</p></li>
+<li><p>all the directories under the pattern <code class="docutils literal notranslate"><span class="pre">build/.&lt;repository_name&gt;.*</span></code> grab the two absolute values in the column « Lines ».</p></li>
 </ul>
 </li>
 <li><p>With the previous selection: for each cell, the first value is the lines tested and the second is the total lines of code.
@@ -1152,7 +1153,7 @@ Divide to get the coverage rate.</p></li>
 </ul>
 </div>
 <div class="section" id="how-to-measure-coverage-locally-using-lcov-ubuntu">
-<span id="measure-coverage-locally"></span><h3><a class="toc-backref" href="#id25">How to measure coverage locally using lcov (Ubuntu)</a><a class="headerlink" href="#how-to-measure-coverage-locally-using-lcov-ubuntu" title="Permalink to this headline"></a></h3>
+<span id="measure-coverage-locally"></span><h3><a class="toc-backref" href="#id25">How to measure coverage locally using lcov (Ubuntu)</a><a class="headerlink" href="#how-to-measure-coverage-locally-using-lcov-ubuntu" title="Lien permanent vers ce titre"></a></h3>
 <p>To measure coverage on your own machine, install <code class="docutils literal notranslate"><span class="pre">lcov</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>lcov
 </pre></div>
@@ -1194,9 +1195,9 @@ genhtml<span class="w"> </span>~/ros2_coverage.info<span class="w"> </span>--out
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../Contributing.html" class="btn btn-neutral float-left" title="Contributing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Code-Style-Language-Versions.html" class="btn btn-neutral float-right" title="Code style and language versions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../Contributing.html" class="btn btn-neutral float-left" title="Contributing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Code-Style-Language-Versions.html" class="btn btn-neutral float-right" title="Code style and language versions" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -1205,9 +1206,9 @@ genhtml<span class="w"> </span>~/ros2_coverage.info<span class="w"> </span>--out
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

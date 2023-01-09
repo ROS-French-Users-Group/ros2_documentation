@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>On the mixing of ament and catkin (catment) &mdash; ROS 2 documentation  documentation</title>
+  <title>On the mixing of ament and catkin (catment) &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="About Cross-compilation" href="About-Cross-Compilation.html" />
     <link rel="prev" title="About Composition" href="About-Composition.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -342,7 +343,7 @@
           <li class="breadcrumb-item"><a href="../Concepts.html">Concepts</a></li>
       <li class="breadcrumb-item active">On the mixing of ament and catkin (catment)</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Concepts/About-Catment.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Concepts/About-Catment.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -353,7 +354,7 @@
 
 
   <div class="section" id="on-the-mixing-of-ament-and-catkin-catment">
-<h1>On the mixing of ament and catkin (catment)<a class="headerlink" href="#on-the-mixing-of-ament-and-catkin-catment" title="Permalink to this headline"></a></h1>
+<h1>On the mixing of ament and catkin (catment)<a class="headerlink" href="#on-the-mixing-of-ament-and-catkin-catment" title="Lien permanent vers ce titre"></a></h1>
 <p><strong>All that follows is experimental and speculative.</strong></p>
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">Table of Contents</p>
@@ -371,11 +372,11 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2><a class="toc-backref" href="#id1">Background</a><a class="headerlink" href="#background" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id1">Background</a><a class="headerlink" href="#background" title="Lien permanent vers ce titre"></a></h2>
 <p>There once was a thing called <code class="docutils literal notranslate"><span class="pre">rosbuild</span></code>.
 Then came a thing called <code class="docutils literal notranslate"><span class="pre">catkin</span></code>, which largely replaced <code class="docutils literal notranslate"><span class="pre">rosbuild</span></code>.
 Recently introduced is a thing called <code class="docutils literal notranslate"><span class="pre">ament</span></code>, which may one day replace <code class="docutils literal notranslate"><span class="pre">catkin</span></code>.</p>
-<p>All three tools can be considered “meta-build systems.”
+<p>All three tools can be considered « meta-build systems. »
 They sit atop other build systems (e.g., CMake, Python setuptools) and provide extra functionality that’s intended to make those build systems easier to use, especially when managing dependencies across multiple packages and when building multiple packages in a single workspace.</p>
 <p>Each of these meta-build systems does two things:</p>
 <ol class="arabic simple">
@@ -399,7 +400,7 @@ There are usually hooks to allow injection of extra API by packages outside of t
 This manifest is required (with some exceptions) for both parts of the meta-build system (API and building tool) to function.</p>
 </div>
 <div class="section" id="postulates">
-<h2><a class="toc-backref" href="#id2">Postulates</a><a class="headerlink" href="#postulates" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id2">Postulates</a><a class="headerlink" href="#postulates" title="Lien permanent vers ce titre"></a></h2>
 <ol class="arabic simple">
 <li><p><strong>While we usually consider the two aspects of a meta-build system to be coupled, they needn’t be.</strong>
 The API used inside a package and the tool that iterates over the packages can be considered largely independent, with the package manifest forming the interface between them.
@@ -410,7 +411,7 @@ While it’s reasonable to ask developers to make changes in exchange for gettin
 This is especially true when the old system is in widespread use.</p>
 <ol class="arabic simple">
 <li><p>Corollary: <strong>Migration to a new meta-build system should not be required without a very good reason.</strong>
-If a developer doesn’t want the functionality offered by the new system, then she shouldn’t be coerced into migrating from the old system unless there’s something irrevocably broken about the old system (e.g., <code class="docutils literal notranslate"><span class="pre">rosbuild</span></code>‘s in-source build pattern and lack of an “install” step).</p></li>
+If a developer doesn’t want the functionality offered by the new system, then she shouldn’t be coerced into migrating from the old system unless there’s something irrevocably broken about the old system (e.g., <code class="docutils literal notranslate"><span class="pre">rosbuild</span></code>“s in-source build pattern and lack of an « install » step).</p></li>
 </ol>
 </li>
 <li><p><strong>Interoperability is a good thing.</strong>
@@ -428,9 +429,9 @@ It could be auto-generated by <code class="docutils literal notranslate"><span c
 </ol>
 </div>
 <div class="section" id="use-cases-with-experimental-implementations">
-<h2><a class="toc-backref" href="#id3">Use cases, with experimental implementations</a><a class="headerlink" href="#use-cases-with-experimental-implementations" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id3">Use cases, with experimental implementations</a><a class="headerlink" href="#use-cases-with-experimental-implementations" title="Lien permanent vers ce titre"></a></h2>
 <div class="section" id="adding-ros-packages-to-a-ros-2-workspace-and-building-with-ament-build">
-<h3><a class="toc-backref" href="#id4">Adding ROS packages to a ROS 2 workspace and building with <code class="docutils literal notranslate"><span class="pre">ament</span> <span class="pre">build</span></code></a><a class="headerlink" href="#adding-ros-packages-to-a-ros-2-workspace-and-building-with-ament-build" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id4">Adding ROS packages to a ROS 2 workspace and building with <code class="docutils literal notranslate"><span class="pre">ament</span> <span class="pre">build</span></code></a><a class="headerlink" href="#adding-ros-packages-to-a-ros-2-workspace-and-building-with-ament-build" title="Lien permanent vers ce titre"></a></h3>
 <p>Let’s say that you want to add some existing ROS packages to your ROS 2 workspace and don’t want to migrate the ROS packages from <code class="docutils literal notranslate"><span class="pre">catkin</span></code> to <code class="docutils literal notranslate"><span class="pre">ament</span></code> (or vice versa). Here are two patches that let you do that:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/ament/ament_package/compare/catkin?expand=1">ament_package</a>:
@@ -451,7 +452,7 @@ It could be made more sophisticated.</p></li>
 </ol>
 <p>Voila: your existing code isn’t suddenly broken just because there’s a new builder tool in use.</p>
 <div class="section" id="variation-building-ros-packages-with-ament-build">
-<h4>Variation: Building ROS packages with <code class="docutils literal notranslate"><span class="pre">ament</span> <span class="pre">build</span></code><a class="headerlink" href="#variation-building-ros-packages-with-ament-build" title="Permalink to this headline"></a></h4>
+<h4>Variation: Building ROS packages with <code class="docutils literal notranslate"><span class="pre">ament</span> <span class="pre">build</span></code><a class="headerlink" href="#variation-building-ros-packages-with-ament-build" title="Lien permanent vers ce titre"></a></h4>
 <p>Let’s say that you love the new <code class="docutils literal notranslate"><span class="pre">ament</span></code> tool and want to use it to build your existing ROS packages that use <code class="docutils literal notranslate"><span class="pre">catkin</span></code> internally.
 Here’s an example of how to do that, by doing a minimal installation of <code class="docutils literal notranslate"><span class="pre">ament</span></code> and then using it to build a workspace full of ROS <code class="docutils literal notranslate"><span class="pre">catkin</span></code> packages:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/ament_ws/src
@@ -477,7 +478,7 @@ ament<span class="w"> </span>build
 <p>Voila: you used the <code class="docutils literal notranslate"><span class="pre">ament</span></code> build tool to build your <code class="docutils literal notranslate"><span class="pre">catkin</span></code> packages, without having to migrate them.</p>
 </div>
 <div class="section" id="variation-using-the-catkin-api-in-a-ros-2-package">
-<h4>Variation: Using the <code class="docutils literal notranslate"><span class="pre">catkin</span></code> API in a ROS 2 package<a class="headerlink" href="#variation-using-the-catkin-api-in-a-ros-2-package" title="Permalink to this headline"></a></h4>
+<h4>Variation: Using the <code class="docutils literal notranslate"><span class="pre">catkin</span></code> API in a ROS 2 package<a class="headerlink" href="#variation-using-the-catkin-api-in-a-ros-2-package" title="Lien permanent vers ce titre"></a></h4>
 <p>Let’s say that you’re building on top of ROS 2, which internally uses the <code class="docutils literal notranslate"><span class="pre">ament</span></code> API, and you want to add a new package using the <code class="docutils literal notranslate"><span class="pre">catkin</span></code> API.</p>
 <p>To make this work, we need a Python3 installation of <code class="docutils literal notranslate"><span class="pre">catkin</span></code> (the binary debians use Python2.7).
 Here’s an example of doing that, installing to <code class="docutils literal notranslate"><span class="pre">$HOME/catkin</span></code>:</p>
@@ -516,7 +517,7 @@ That constraint needs to be relaxed somehow.</p></li>
 </div>
 </div>
 <div class="section" id="building-ros-2-packages-with-catkin-make-isolated">
-<h3><a class="toc-backref" href="#id5">Building ROS 2 packages with <code class="docutils literal notranslate"><span class="pre">catkin_make_isolated</span></code></a><a class="headerlink" href="#building-ros-2-packages-with-catkin-make-isolated" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id5">Building ROS 2 packages with <code class="docutils literal notranslate"><span class="pre">catkin_make_isolated</span></code></a><a class="headerlink" href="#building-ros-2-packages-with-catkin-make-isolated" title="Lien permanent vers ce titre"></a></h3>
 <p>Let’s say that you’re already familiar with ROS and <code class="docutils literal notranslate"><span class="pre">catkin</span></code> and that you’re excited to try ROS 2, but that you’re not in the mood to learn about <code class="docutils literal notranslate"><span class="pre">ament</span></code>.
 You’d rather stick to what you know, such as using <code class="docutils literal notranslate"><span class="pre">catkin_make_isolated</span></code> to build everything.
 Here is a patch that allows you to do that:</p>
@@ -577,7 +578,7 @@ Options: backport those heuristics to <code class="docutils literal notranslate"
 </ul>
 </div>
 <div class="section" id="combining-all-of-ros-and-ros-2-in-one-workspace-and-building-it-todo">
-<h3><a class="toc-backref" href="#id6">Combining all of ROS and ROS 2 in one workspace and building it (TODO)</a><a class="headerlink" href="#combining-all-of-ros-and-ros-2-in-one-workspace-and-building-it-todo" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id6">Combining all of ROS and ROS 2 in one workspace and building it (TODO)</a><a class="headerlink" href="#combining-all-of-ros-and-ros-2-in-one-workspace-and-building-it-todo" title="Lien permanent vers ce titre"></a></h3>
 <p>This step will require sorting out some things, including at least:</p>
 <ul class="simple">
 <li><p>Package name conflicts.
@@ -589,7 +590,7 @@ Something sort of sophisticated needs to be done to allow generation of all the 
 </ul>
 </div>
 <div class="section" id="using-bloom-to-release-ament-packages-todo">
-<h3><a class="toc-backref" href="#id7">Using <code class="docutils literal notranslate"><span class="pre">bloom</span></code> to release <code class="docutils literal notranslate"><span class="pre">ament</span></code> packages (TODO)</a><a class="headerlink" href="#using-bloom-to-release-ament-packages-todo" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id7">Using <code class="docutils literal notranslate"><span class="pre">bloom</span></code> to release <code class="docutils literal notranslate"><span class="pre">ament</span></code> packages (TODO)</a><a class="headerlink" href="#using-bloom-to-release-ament-packages-todo" title="Lien permanent vers ce titre"></a></h3>
 <p>It seems like <code class="docutils literal notranslate"><span class="pre">bloom</span></code> ought be able to release packages that use the <code class="docutils literal notranslate"><span class="pre">ament</span></code> CMake API, and that the resulting releases should be able to be built on the farm.
 We can make changes to <code class="docutils literal notranslate"><span class="pre">bloom</span></code> and <code class="docutils literal notranslate"><span class="pre">ros_buildfarm</span></code> as needed to enable this use case.</p>
 </div>
@@ -600,9 +601,9 @@ We can make changes to <code class="docutils literal notranslate"><span class="p
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="About-Composition.html" class="btn btn-neutral float-left" title="About Composition" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="About-Cross-Compilation.html" class="btn btn-neutral float-right" title="About Cross-compilation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="About-Composition.html" class="btn btn-neutral float-left" title="About Composition" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="About-Cross-Compilation.html" class="btn btn-neutral float-right" title="About Cross-compilation" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -611,9 +612,9 @@ We can make changes to <code class="docutils literal notranslate"><span class="p
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

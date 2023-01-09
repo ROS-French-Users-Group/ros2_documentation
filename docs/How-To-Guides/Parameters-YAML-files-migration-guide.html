@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Migrating YAML parameter files from ROS 1 to ROS 2 &mdash; ROS 2 documentation  documentation</title>
+  <title>Migrating YAML parameter files from ROS 1 to ROS 2 &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Passing ROS arguments to nodes via the command-line" href="Node-arguments.html" />
     <link rel="prev" title="Using ROS 2 launch to launch composable nodes" href="Launching-composable-nodes.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -342,7 +343,7 @@
           <li class="breadcrumb-item"><a href="../How-To-Guides.html">How-to Guides</a></li>
       <li class="breadcrumb-item active">Migrating YAML parameter files from ROS 1 to ROS 2</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/How-To-Guides/Parameters-YAML-files-migration-guide.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/How-To-Guides/Parameters-YAML-files-migration-guide.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -353,13 +354,13 @@
 
 
   <div class="section" id="migrating-yaml-parameter-files-from-ros-1-to-ros-2">
-<span id="yaml-ros1-ros2"></span><h1>Migrating YAML parameter files from ROS 1 to ROS 2<a class="headerlink" href="#migrating-yaml-parameter-files-from-ros-1-to-ros-2" title="Permalink to this headline"></a></h1>
+<span id="yaml-ros1-ros2"></span><h1>Migrating YAML parameter files from ROS 1 to ROS 2<a class="headerlink" href="#migrating-yaml-parameter-files-from-ros-1-to-ros-2" title="Lien permanent vers ce titre"></a></h1>
 <p>This guide describes how to adapt ROS 1 parameters files for ROS 2.</p>
 <div class="section" id="yaml-file-example">
-<h2>YAML file example<a class="headerlink" href="#yaml-file-example" title="Permalink to this headline"></a></h2>
+<h2>YAML file example<a class="headerlink" href="#yaml-file-example" title="Lien permanent vers ce titre"></a></h2>
 <p>YAML is used to write parameters files in both ROS 1 and ROS 2.
 The main difference in ROS 2 is that node names must be used to address parameters.
-In addition to the fully qualified node name, we use the key “ros__parameters” to signal the start of parameters for the node.</p>
+In addition to the fully qualified node name, we use the key « ros__parameters » to signal the start of parameters for the node.</p>
 <p>For example, here is a parameters file in ROS 1:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">lidar_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo</span>
 <span class="nt">lidar_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
@@ -385,7 +386,7 @@ In addition to the fully qualified node name, we use the key “ros__parameters�
 <p>Note the use of wildcards (<code class="docutils literal notranslate"><span class="pre">/**</span></code>) to indicate that the parameter <code class="docutils literal notranslate"><span class="pre">debug</span></code> should be set on any node in any namespace.</p>
 </div>
 <div class="section" id="feature-parity">
-<h2>Feature parity<a class="headerlink" href="#feature-parity" title="Permalink to this headline"></a></h2>
+<h2>Feature parity<a class="headerlink" href="#feature-parity" title="Lien permanent vers ce titre"></a></h2>
 <p>Some features of ROS 1 parameters files do not exist in ROS 2:</p>
 <ul class="simple">
 <li><p>Mixed types in a list is not supported yet (<a class="reference external" href="https://github.com/ros2/rcl/issues/463">related issue</a>)</p></li>
@@ -398,9 +399,9 @@ In addition to the fully qualified node name, we use the key “ros__parameters�
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Launching-composable-nodes.html" class="btn btn-neutral float-left" title="Using ROS 2 launch to launch composable nodes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Node-arguments.html" class="btn btn-neutral float-right" title="Passing ROS arguments to nodes via the command-line" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Launching-composable-nodes.html" class="btn btn-neutral float-left" title="Using ROS 2 launch to launch composable nodes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Node-arguments.html" class="btn btn-neutral float-right" title="Passing ROS arguments to nodes via the command-line" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -409,9 +410,9 @@ In addition to the fully qualified node name, we use the key “ros__parameters�
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

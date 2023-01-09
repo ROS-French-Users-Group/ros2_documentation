@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Building a visual robot model from scratch &mdash; ROS 2 documentation  documentation</title>
+  <title>Building a visual robot model from scratch &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
+        <script src="../../../_static/translations.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="search" title="Recherche" href="../../../search.html" />
     <link rel="next" title="Building a movable robot model" href="Building-a-Movable-Robot-Model-with-URDF.html" />
     <link rel="prev" title="URDF" href="URDF-Main.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -344,7 +345,7 @@
           <li class="breadcrumb-item"><a href="URDF-Main.html">URDF</a></li>
       <li class="breadcrumb-item active">Building a visual robot model from scratch</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Intermediate/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Intermediate/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -355,7 +356,7 @@
 
 
   <div class="section" id="building-a-visual-robot-model-from-scratch">
-<span id="buildingurdf"></span><h1>Building a visual robot model from scratch<a class="headerlink" href="#building-a-visual-robot-model-from-scratch" title="Permalink to this headline"></a></h1>
+<span id="buildingurdf"></span><h1>Building a visual robot model from scratch<a class="headerlink" href="#building-a-visual-robot-model-from-scratch" title="Lien permanent vers ce titre"></a></h1>
 <p><strong>Goal:</strong> Learn how to build a visual model of a robot that you can view in Rviz</p>
 <p><strong>Tutorial level:</strong> Intermediate</p>
 <p><strong>Time:</strong> 20 minutes</p>
@@ -380,7 +381,7 @@ If you installed <a class="reference external" href="https://index.ros.org/p/urd
 If not, please update your installation to include that package (use <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> to check).</p>
 <p>All of the robot models mentioned in this tutorial (and the source files) can be found in the <a class="reference external" href="https://index.ros.org/p/urdf_tutorial">urdf_tutorial</a> package.</p>
 <div class="section" id="one-shape">
-<h2><a class="toc-backref" href="#id3">One Shape</a><a class="headerlink" href="#one-shape" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id3">One Shape</a><a class="headerlink" href="#one-shape" title="Lien permanent vers ce titre"></a></h2>
 <p>First, we’re just going to explore one simple shape.
 Here’s about as simple as a urdf as you can make.
 <a class="reference external" href="https://github.com/ros/urdf_tutorial/blob/ros2/urdf/01-myfirst.urdf">[Source: 01-myfirst.urdf]</a></p>
@@ -430,7 +431,7 @@ Hence, half the cylinder is below the grid.</p></li>
 </dl>
 </div>
 <div class="section" id="multiple-shapes">
-<h2><a class="toc-backref" href="#id4">Multiple Shapes</a><a class="headerlink" href="#multiple-shapes" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id4">Multiple Shapes</a><a class="headerlink" href="#multiple-shapes" title="Lien permanent vers ce titre"></a></h2>
 <p>Now let’s look at how to add multiple shapes/links.
 If we just add more link elements to the urdf, the parser won’t know where to put them.
 So, we have to add joints.
@@ -477,7 +478,7 @@ This means that the leg’s position is dependent on the base_link’s position.
 If we want them not to overlap we must define more origins.</p>
 </div>
 <div class="section" id="origins">
-<h2><a class="toc-backref" href="#id5">Origins</a><a class="headerlink" href="#origins" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id5">Origins</a><a class="headerlink" href="#origins" title="Lien permanent vers ce titre"></a></h2>
 <p>R2D2’s leg attaches to the top half of his torso, on the side.
 So that’s where we specify the origin of the JOINT to be.
 Also, it doesn’t attach to the middle of the leg, it attaches to the upper part, so we must offset the origin for the leg as well.
@@ -533,7 +534,7 @@ Rviz uses this information to figure out where to display each shape.</p></li>
 </ul>
 </div>
 <div class="section" id="material-girl">
-<h2><a class="toc-backref" href="#id6">Material Girl</a><a class="headerlink" href="#material-girl" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id6">Material Girl</a><a class="headerlink" href="#material-girl" title="Lien permanent vers ce titre"></a></h2>
 <p>“Alright,” I hear you say.
 “That’s very cute, but not everyone owns a B21.
 My robot and R2D2 are not red!”
@@ -611,7 +612,7 @@ No one will even complain if you redefine it though.</p></li>
 <a class="reference internal image-reference" href="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/materials.png"><img alt="Materials Screenshot" src="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/materials.png" style="width: 800px;" /></a>
 </div>
 <div class="section" id="finishing-the-model">
-<h2><a class="toc-backref" href="#id7">Finishing the Model</a><a class="headerlink" href="#finishing-the-model" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id7">Finishing the Model</a><a class="headerlink" href="#finishing-the-model" title="Lien permanent vers ce titre"></a></h2>
 <p>Now we finish the model off with a few more shapes: feet, wheels, and head.
 Most notably, we add a sphere and a some meshes.
 We’ll also add few other pieces that we’ll use later.
@@ -910,9 +911,9 @@ Now you can continue on to the next step, <a class="reference internal" href="Bu
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="URDF-Main.html" class="btn btn-neutral float-left" title="URDF" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Building-a-Movable-Robot-Model-with-URDF.html" class="btn btn-neutral float-right" title="Building a movable robot model" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="URDF-Main.html" class="btn btn-neutral float-left" title="URDF" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Building-a-Movable-Robot-Model-with-URDF.html" class="btn btn-neutral float-right" title="Building a movable robot model" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -921,9 +922,9 @@ Now you can continue on to the next step, <a class="reference internal" href="Bu
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

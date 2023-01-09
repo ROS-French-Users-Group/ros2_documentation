@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Unlocking the potential of Fast DDS middleware [community-contributed] &mdash; ROS 2 documentation  documentation</title>
+  <title>Unlocking the potential of Fast DDS middleware [community-contributed] &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -22,9 +22,10 @@
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
         <script src="../../_static/tabs.js"></script>
+        <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
     <link rel="next" title="Recording a bag from a node (C++)" href="Recording-A-Bag-From-Your-Own-Node-CPP.html" />
     <link rel="prev" title="Implementing a custom memory allocator" href="Allocator-Template-Tutorial.html" /> 
 </head>
@@ -38,7 +39,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -80,7 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -344,7 +345,7 @@
           <li class="breadcrumb-item"><a href="../Advanced.html">Advanced</a></li>
       <li class="breadcrumb-item active">Unlocking the potential of Fast DDS middleware [community-contributed]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Advanced/FastDDS-Configuration.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Advanced/FastDDS-Configuration.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -355,7 +356,7 @@
 
 
   <div class="section" id="unlocking-the-potential-of-fast-dds-middleware-community-contributed">
-<h1>Unlocking the potential of Fast DDS middleware [community-contributed]<a class="headerlink" href="#unlocking-the-potential-of-fast-dds-middleware-community-contributed" title="Permalink to this headline"></a></h1>
+<h1>Unlocking the potential of Fast DDS middleware [community-contributed]<a class="headerlink" href="#unlocking-the-potential-of-fast-dds-middleware-community-contributed" title="Lien permanent vers ce titre"></a></h1>
 <p><strong>Goal:</strong> This tutorial will show how to use the extended configuration capabilities of Fast DDS in ROS 2.</p>
 <p><strong>Tutorial level:</strong> Advanced</p>
 <p><strong>Time:</strong> 20 minutes</p>
@@ -391,7 +392,7 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2><a class="toc-backref" href="#id1">Background</a><a class="headerlink" href="#background" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id1">Background</a><a class="headerlink" href="#background" title="Lien permanent vers ce titre"></a></h2>
 <p>The interface between the ROS 2 stack and <em>Fast DDS</em> is provided by the ROS 2 middleware implementation <a class="reference external" href="https://github.com/ros2/rmw_fastrtps">rmw_fastrtps</a>.
 This implementation is available in all ROS 2 distributions, both from binaries and from sources.</p>
 <p>ROS 2 RMW only allows for the configuration of certain middleware QoS
@@ -401,13 +402,13 @@ This tutorial will guide you through a series of examples explaining how to use 
 <p>In order to get more information about using <em>Fast DDS</em> on ROS 2, please check the <a class="reference external" href="https://fast-dds.docs.eprosima.com/en/latest/fastdds/ros2/ros2.html">following documentation</a>.</p>
 </div>
 <div class="section" id="prerequisites">
-<h2><a class="toc-backref" href="#id2">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id2">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Lien permanent vers ce titre"></a></h2>
 <p>This tutorial assumes that you know how to <a class="reference internal" href="../Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html"><span class="doc">create a package</span></a>.
 It also assumes you know how to write a <a class="reference internal" href="../Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html"><span class="doc">simple publisher and subscriber</span></a> and a <a class="reference internal" href="../Beginner-Client-Libraries/Writing-A-Simple-Cpp-Service-And-Client.html"><span class="doc">simple service and client</span></a>.
 Although the examples are implemented in C++, the same concepts apply to Python packages.</p>
 </div>
 <div class="section" id="mixing-synchronous-and-asynchronous-publications-in-the-same-node">
-<h2><a class="toc-backref" href="#id3">Mixing synchronous and asynchronous publications in the same node</a><a class="headerlink" href="#mixing-synchronous-and-asynchronous-publications-in-the-same-node" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id3">Mixing synchronous and asynchronous publications in the same node</a><a class="headerlink" href="#mixing-synchronous-and-asynchronous-publications-in-the-same-node" title="Lien permanent vers ce titre"></a></h2>
 <p>In this first example, a node with two publishers, one of them with synchronous publication mode and the other one with asynchronous publication mode, will be created.</p>
 <p><code class="docutils literal notranslate"><span class="pre">rmw_fastrtps</span></code> uses asynchronous publication mode by default.
 When the publisher invokes the write operation, the data is copied into a queue,
@@ -417,7 +418,7 @@ The background thread is in charge of consuming the queue and sending the data t
 This entails that any blocking call occurring during the write operation would block the user thread, thus preventing the application from continuing its operation.
 However, this mode typically yields higher throughput rates at lower latencies, since there is no notification nor context switching between threads.</p>
 <div class="section" id="create-the-node-with-the-publishers">
-<h3><a class="toc-backref" href="#id4">Create the node with the publishers</a><a class="headerlink" href="#create-the-node-with-the-publishers" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id4">Create the node with the publishers</a><a class="headerlink" href="#create-the-node-with-the-publishers" title="Lien permanent vers ce titre"></a></h3>
 <p>First, create a new package named <code class="docutils literal notranslate"><span class="pre">sync_async_node_example_cpp</span></code> on a new workspace:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir -p ~/ros2_ws/src</span>
@@ -559,7 +560,7 @@ Note that the synchronous publisher will be publishing on topic <code class="doc
 The default publication mode configuration can be changed in runtime during the node launching, using an XML file.</p>
 </div>
 <div class="section" id="create-the-xml-file-with-the-profile-configuration">
-<h3><a class="toc-backref" href="#id5">Create the XML file with the profile configuration</a><a class="headerlink" href="#create-the-xml-file-with-the-profile-configuration" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id5">Create the XML file with the profile configuration</a><a class="headerlink" href="#create-the-xml-file-with-the-profile-configuration" title="Lien permanent vers ce titre"></a></h3>
 <p>Create a file with name <code class="docutils literal notranslate"><span class="pre">SyncAsync.xml</span></code> and the following content:</p>
 <div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
 <span class="nt">&lt;profiles</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.eprosima.com/XMLSchemas/fastRTPS_Profiles&quot;</span><span class="nt">&gt;</span>
@@ -598,7 +599,7 @@ These last two profiles set the publication mode to <code class="docutils litera
 Note also that all profiles specify a <code class="docutils literal notranslate"><span class="pre">historyMemoryPolicy</span></code> value, which is needed for the example to work, and the reason will be explained later on this tutorial.</p>
 </div>
 <div class="section" id="execute-the-publisher-node">
-<h3><a class="toc-backref" href="#id6">Execute the publisher node</a><a class="headerlink" href="#execute-the-publisher-node" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id6">Execute the publisher node</a><a class="headerlink" href="#execute-the-publisher-node" title="Lien permanent vers ce titre"></a></h3>
 <p>You will need to export the following environment variables for the XML to be loaded:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-1-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-1-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export RMW_IMPLEMENTATION=rmw_fastrtps_cpp</span>
@@ -634,7 +635,7 @@ Note also that all profiles specify a <code class="docutils literal notranslate"
 <p>Now you have a synchronous publisher and an asynchronous publisher running inside the same node.</p>
 </div>
 <div class="section" id="create-a-node-with-the-subscribers">
-<h3><a class="toc-backref" href="#id7">Create a node with the subscribers</a><a class="headerlink" href="#create-a-node-with-the-subscribers" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id7">Create a node with the subscribers</a><a class="headerlink" href="#create-a-node-with-the-subscribers" title="Lien permanent vers ce titre"></a></h3>
 <p>Next, a new node with the subscribers that will listen to the <code class="docutils literal notranslate"><span class="pre">sync_topic</span></code> and <code class="docutils literal notranslate"><span class="pre">async_topic</span></code> publications is going to be created.
 In a new source file named <code class="docutils literal notranslate"><span class="pre">src/sync_async_reader.cpp</span></code> write the following content:</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;functional&gt;</span>
@@ -700,7 +701,7 @@ In a new source file named <code class="docutils literal notranslate"><span clas
 </div>
 </div>
 <div class="section" id="add-the-subscriber-profiles-to-the-the-xml">
-<h3><a class="toc-backref" href="#id8">Add the subscriber profiles to the the XML</a><a class="headerlink" href="#add-the-subscriber-profiles-to-the-the-xml" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id8">Add the subscriber profiles to the the XML</a><a class="headerlink" href="#add-the-subscriber-profiles-to-the-the-xml" title="Lien permanent vers ce titre"></a></h3>
 <p>Configuration profiles for the subscribers can be added in the same XML file <code class="docutils literal notranslate"><span class="pre">SyncAsync.xml</span></code>.
 For the moment, only the default profile will be set.
 The subscriber profiles will be extended later on.
@@ -713,7 +714,7 @@ Open the <code class="docutils literal notranslate"><span class="pre">SyncAsync.
 </div>
 </div>
 <div class="section" id="execute-the-subscriber-node">
-<h3><a class="toc-backref" href="#id9">Execute the subscriber node</a><a class="headerlink" href="#execute-the-subscriber-node" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id9">Execute the subscriber node</a><a class="headerlink" href="#execute-the-subscriber-node" title="Lien permanent vers ce titre"></a></h3>
 <p>With the publisher node running in one terminal, open another one and export the required environment variables for the XML to be loaded:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-2-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-2-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-2-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-2-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export RMW_IMPLEMENTATION=rmw_fastrtps_cpp</span>
@@ -748,9 +749,9 @@ Open the <code class="docutils literal notranslate"><span class="pre">SyncAsync.
 </div>
 </div>
 <div class="section" id="analysis-of-the-example">
-<h3><a class="toc-backref" href="#id10">Analysis of the example</a><a class="headerlink" href="#analysis-of-the-example" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id10">Analysis of the example</a><a class="headerlink" href="#analysis-of-the-example" title="Lien permanent vers ce titre"></a></h3>
 <div class="section" id="configuration-profiles-xml">
-<h4>Configuration profiles XML<a class="headerlink" href="#configuration-profiles-xml" title="Permalink to this headline"></a></h4>
+<h4>Configuration profiles XML<a class="headerlink" href="#configuration-profiles-xml" title="Lien permanent vers ce titre"></a></h4>
 <p>The XML file defines several configurations for publishers and subscribers.
 You can have a default publisher configuration profile and several topic-specific publisher profiles.
 The only requirement is that all publisher profiles have a different name and that there is only a single default profile.
@@ -761,7 +762,7 @@ The default configuration profile is identified by the attribute <code class="do
 <p>The environment variable <code class="docutils literal notranslate"><span class="pre">FASTRTPS_DEFAULT_PROFILES_FILE</span></code> is used to inform <em>Fast DDS</em> the path to the XML file with the configuration profiles to load.</p>
 </div>
 <div class="section" id="rmw-fastrtps-use-qos-from-xml">
-<h4>RMW_FASTRTPS_USE_QOS_FROM_XML<a class="headerlink" href="#rmw-fastrtps-use-qos-from-xml" title="Permalink to this headline"></a></h4>
+<h4>RMW_FASTRTPS_USE_QOS_FROM_XML<a class="headerlink" href="#rmw-fastrtps-use-qos-from-xml" title="Lien permanent vers ce titre"></a></h4>
 <p>Among all the configurable attributes, <code class="docutils literal notranslate"><span class="pre">rmw_fastrtps</span></code> treats <code class="docutils literal notranslate"><span class="pre">publishMode</span></code> and <code class="docutils literal notranslate"><span class="pre">historyMemoryPolicy</span></code> differently.
 By default, these values are set to <code class="docutils literal notranslate"><span class="pre">ASYNCHRONOUS</span></code> and <code class="docutils literal notranslate"><span class="pre">PREALLOCATED_WITH_REALLOC</span></code> within the <code class="docutils literal notranslate"><span class="pre">rmw_fastrtps</span></code> implementation, and the values set on the XML file are ignored.
 In order to use the values in the XML file, the environment variable <code class="docutils literal notranslate"><span class="pre">RMW_FASTRTPS_USE_QOS_FROM_XML</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
@@ -771,7 +772,7 @@ This is important, especially for <code class="docutils literal notranslate"><sp
 Therefore, in the example, a valid value for this policy has been explicitly set (<code class="docutils literal notranslate"><span class="pre">DYNAMIC</span></code>).</p>
 </div>
 <div class="section" id="prioritization-of-rmw-qos-profile-t">
-<h4>Prioritization of rmw_qos_profile_t<a class="headerlink" href="#prioritization-of-rmw-qos-profile-t" title="Permalink to this headline"></a></h4>
+<h4>Prioritization of rmw_qos_profile_t<a class="headerlink" href="#prioritization-of-rmw-qos-profile-t" title="Lien permanent vers ce titre"></a></h4>
 <p>ROS 2 QoS contained in <a class="reference external" href="http://docs.ros2.org/latest/api/rmw/structrmw__qos__profile__t.html">rmw_qos_profile_t</a> are always honored, unless set to <code class="docutils literal notranslate"><span class="pre">*_SYSTEM_DEFAULT</span></code>.
 In that case, XML values (or <em>Fast DDS</em> default values in the absence of XML ones) are applied.
 This means that if any QoS in <code class="docutils literal notranslate"><span class="pre">rmw_qos_profile_t</span></code> is set to something other than <code class="docutils literal notranslate"><span class="pre">*_SYSTEM_DEFAULT</span></code>, the corresponding value in the XML is ignored.</p>
@@ -779,14 +780,14 @@ This means that if any QoS in <code class="docutils literal notranslate"><span c
 </div>
 </div>
 <div class="section" id="using-other-fastdds-capabilities-with-xml">
-<h2><a class="toc-backref" href="#id11">Using other FastDDS capabilities with XML</a><a class="headerlink" href="#using-other-fastdds-capabilities-with-xml" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id11">Using other FastDDS capabilities with XML</a><a class="headerlink" href="#using-other-fastdds-capabilities-with-xml" title="Lien permanent vers ce titre"></a></h2>
 <p>Although we have created a node with two publishers with different configuration, it is not easy to check that they are behaving differently.
 Now that the basics of XML profiles have been covered, let us use them to configure something which has some visual effect on the nodes.
 Specifically, a maximum number of matching subscribers on one of the publishers and a partition definition on the other will be set.
 Note that these are only very simple examples among all the configuration attributes that can be tuned on <code class="docutils literal notranslate"><span class="pre">rmw_fastrtps</span></code> through XML files.
 Please refer to <a class="reference external" href="https://fast-dds.docs.eprosima.com/en/latest/fastdds/xml_configuration/xml_configuration.html#xml-profiles">*Fast DDS* documentation</a> to  see the whole list of attributes that can be configured through XML files.</p>
 <div class="section" id="limiting-the-number-of-matching-subscribers">
-<h3><a class="toc-backref" href="#id12">Limiting the number of matching subscribers</a><a class="headerlink" href="#limiting-the-number-of-matching-subscribers" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id12">Limiting the number of matching subscribers</a><a class="headerlink" href="#limiting-the-number-of-matching-subscribers" title="Lien permanent vers ce titre"></a></h3>
 <p>Add a maximum number of matched subscribers to the <code class="docutils literal notranslate"><span class="pre">/async_topic</span></code> publisher profile.
 It should look like this:</p>
 <div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- publisher profile for topic async_topic --&gt;</span>
@@ -818,7 +819,7 @@ Consequently, only the messages from the <code class="docutils literal notransla
 </div>
 </div>
 <div class="section" id="using-partitions-within-the-topic">
-<h3><a class="toc-backref" href="#id13">Using partitions within the topic</a><a class="headerlink" href="#using-partitions-within-the-topic" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id13">Using partitions within the topic</a><a class="headerlink" href="#using-partitions-within-the-topic" title="Lien permanent vers ce titre"></a></h3>
 <p>The partitions feature can be used to control which publishers and subscribers exchange information within the same topic.</p>
 <p>Partitions introduce a logical entity isolation level concept inside the physical isolation induced by a Domain ID.
 For a publisher to communicate with a subscriber, they have to belong at least to one common partition.
@@ -856,7 +857,7 @@ Their profiles should now look like this:</p>
 <span class="nt">&lt;/subscriber&gt;</span>
 </pre></div>
 </div>
-<p>Also be sure to remove the “default_subscriber” subscriber profile.
+<p>Also be sure to remove the « default_subscriber » subscriber profile.
 Open two terminals.
 Do not forget to source the setup files and to set the required environment variables.
 On the first terminal run the publisher node, and the subscriber node on the other one.
@@ -870,7 +871,7 @@ The <code class="docutils literal notranslate"><span class="pre">/sync_topic</sp
 </div>
 </div>
 <div class="section" id="configuring-a-service-and-a-client">
-<h2><a class="toc-backref" href="#id14">Configuring a service and a client</a><a class="headerlink" href="#configuring-a-service-and-a-client" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id14">Configuring a service and a client</a><a class="headerlink" href="#configuring-a-service-and-a-client" title="Lien permanent vers ce titre"></a></h2>
 <p>Services and clients have a publisher and a subscriber each, that communicate through two different topics.
 For example, for a service named <code class="docutils literal notranslate"><span class="pre">ping</span></code> there is:</p>
 <ul class="simple">
@@ -883,7 +884,7 @@ For example, for a service named <code class="docutils literal notranslate"><spa
 Instead of copying the same profile with all topic names generated for all services, you can just create a publisher and subscriber profile pair named <code class="docutils literal notranslate"><span class="pre">service</span></code>.
 The same can be done for clients creating a pair named <code class="docutils literal notranslate"><span class="pre">client</span></code>.</p>
 <div class="section" id="create-the-nodes-with-the-service-and-client">
-<h3><a class="toc-backref" href="#id15">Create the nodes with the service and client</a><a class="headerlink" href="#create-the-nodes-with-the-service-and-client" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id15">Create the nodes with the service and client</a><a class="headerlink" href="#create-the-nodes-with-the-service-and-client" title="Lien permanent vers ce titre"></a></h3>
 <p>Start creating the node with the service.
 Add a new source file named <code class="docutils literal notranslate"><span class="pre">src/ping_service.cpp</span></code> on your package with the following content:</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span>
@@ -995,7 +996,7 @@ Add a new source file named <code class="docutils literal notranslate"><span cla
 <p>Finally, build the package.</p>
 </div>
 <div class="section" id="create-the-xml-profiles-for-the-service-and-client">
-<h3><a class="toc-backref" href="#id16">Create the XML profiles for the service and client</a><a class="headerlink" href="#create-the-xml-profiles-for-the-service-and-client" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id16">Create the XML profiles for the service and client</a><a class="headerlink" href="#create-the-xml-profiles-for-the-service-and-client" title="Lien permanent vers ce titre"></a></h3>
 <p>Create a file with name <code class="docutils literal notranslate"><span class="pre">ping.xml</span></code> with the following content:</p>
 <div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
 <span class="nt">&lt;profiles</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.eprosima.com/XMLSchemas/fastRTPS_Profiles&quot;</span><span class="nt">&gt;</span>
@@ -1037,7 +1038,7 @@ Add a new source file named <code class="docutils literal notranslate"><span cla
 Note that we are only defining the publisher profiles for both the service and the client, but subscriber profiles could be provided too.</p>
 </div>
 <div class="section" id="execute-the-nodes">
-<h3><a class="toc-backref" href="#id17">Execute the nodes</a><a class="headerlink" href="#execute-the-nodes" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id17">Execute the nodes</a><a class="headerlink" href="#execute-the-nodes" title="Lien permanent vers ce titre"></a></h3>
 <p>Open two terminals and source the setup files on each one.
 Then set the required environment variables for the XML to be loaded:</p>
 <div class="sphinx-tabs docutils container">
@@ -1088,9 +1089,9 @@ Then set the required environment variables for the XML to be loaded:</p>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Allocator-Template-Tutorial.html" class="btn btn-neutral float-left" title="Implementing a custom memory allocator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Recording-A-Bag-From-Your-Own-Node-CPP.html" class="btn btn-neutral float-right" title="Recording a bag from a node (C++)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Allocator-Template-Tutorial.html" class="btn btn-neutral float-left" title="Implementing a custom memory allocator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Recording-A-Bag-From-Your-Own-Node-CPP.html" class="btn btn-neutral float-right" title="Recording a bag from a node (C++)" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -1099,9 +1100,9 @@ Then set the required environment variables for the XML to be loaded:</p>
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

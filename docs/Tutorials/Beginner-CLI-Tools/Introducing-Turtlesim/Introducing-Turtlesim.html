@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Using turtlesim and rqt &mdash; ROS 2 documentation  documentation</title>
+  <title>Using turtlesim and rqt &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -22,9 +22,10 @@
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
         <script src="../../../_static/tabs.js"></script>
+        <script src="../../../_static/translations.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="search" title="Recherche" href="../../../search.html" />
     <link rel="next" title="Understanding nodes" href="../Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html" />
     <link rel="prev" title="Configuring environment" href="../Configuring-ROS2-Environment.html" /> 
 </head>
@@ -38,7 +39,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -80,7 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -344,7 +345,7 @@
           <li class="breadcrumb-item"><a href="../../Beginner-CLI-Tools.html">Beginner: CLI tools</a></li>
       <li class="breadcrumb-item active">Using <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> and <code class="docutils literal notranslate"><span class="pre">rqt</span></code></li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -355,7 +356,7 @@
 
 
   <div class="section" id="using-turtlesim-and-rqt">
-<span id="turtlesim"></span><h1>Using <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> and <code class="docutils literal notranslate"><span class="pre">rqt</span></code><a class="headerlink" href="#using-turtlesim-and-rqt" title="Permalink to this headline"></a></h1>
+<span id="turtlesim"></span><h1>Using <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> and <code class="docutils literal notranslate"><span class="pre">rqt</span></code><a class="headerlink" href="#using-turtlesim-and-rqt" title="Lien permanent vers ce titre"></a></h1>
 <p><strong>Goal:</strong> Install and use the turtlesim package and rqt tools to prepare for upcoming tutorials.</p>
 <p><strong>Tutorial level:</strong> Beginner</p>
 <p><strong>Time:</strong> 15 minutes</p>
@@ -381,7 +382,7 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2><a class="toc-backref" href="#id1">Background</a><a class="headerlink" href="#background" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id1">Background</a><a class="headerlink" href="#background" title="Lien permanent vers ce titre"></a></h2>
 <p>Turtlesim is a lightweight simulator for learning ROS 2.
 It illustrates what ROS 2 does at the most basic level, to give you an idea of what you will do with a real robot or robot simulation later on.</p>
 <p>rqt is a GUI tool for ROS 2.
@@ -390,13 +391,13 @@ Everything done in rqt can be done on the command line, but it provides an easie
 All of these concepts will be elaborated on in later tutorials; for now, you will simply set up the tools and get a feel for them.</p>
 </div>
 <div class="section" id="prerequisites">
-<h2><a class="toc-backref" href="#id2">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id2">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Lien permanent vers ce titre"></a></h2>
 <p>The previous tutorial, <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">Configuring environment</span></a>, will show you how to set up your environment.</p>
 </div>
 <div class="section" id="tasks">
-<h2><a class="toc-backref" href="#id3">Tasks</a><a class="headerlink" href="#tasks" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id3">Tasks</a><a class="headerlink" href="#tasks" title="Lien permanent vers ce titre"></a></h2>
 <div class="section" id="install-turtlesim">
-<h3><a class="toc-backref" href="#id4">1 Install turtlesim</a><a class="headerlink" href="#install-turtlesim" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id4">1 Install turtlesim</a><a class="headerlink" href="#install-turtlesim" title="Lien permanent vers ce titre"></a></h3>
 <p>As always, start by sourcing your setup files in a new terminal, as described in the <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">previous tutorial</span></a>.</p>
 <p>Install the turtlesim package for your ROS 2 distro:</p>
 <div class="sphinx-tabs docutils container">
@@ -421,7 +422,7 @@ All of these concepts will be elaborated on in later tutorials; for now, you wil
 </div>
 </div>
 <div class="section" id="start-turtlesim">
-<h3><a class="toc-backref" href="#id5">2 Start turtlesim</a><a class="headerlink" href="#start-turtlesim" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id5">2 Start turtlesim</a><a class="headerlink" href="#start-turtlesim" title="Lien permanent vers ce titre"></a></h3>
 <p>To start turtlesim, enter the following command in your terminal:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtlesim_node</span>
 </pre></div>
@@ -437,7 +438,7 @@ All of these concepts will be elaborated on in later tutorials; for now, you wil
 <p>Here you can see your default turtle’s name is <code class="docutils literal notranslate"><span class="pre">turtle1</span></code>, and the default coordinates where it spawns.</p>
 </div>
 <div class="section" id="use-turtlesim">
-<h3><a class="toc-backref" href="#id6">3 Use turtlesim</a><a class="headerlink" href="#use-turtlesim" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id6">3 Use turtlesim</a><a class="headerlink" href="#use-turtlesim" title="Lien permanent vers ce titre"></a></h3>
 <p>Open a new terminal and source ROS 2 again.</p>
 <p>Now you will run a new node to control the turtle in the first node:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtle_teleop_key</span>
@@ -446,7 +447,7 @@ All of these concepts will be elaborated on in later tutorials; for now, you wil
 <p>At this point you should have three windows open: a terminal running <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code>, a terminal running <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code> and the turtlesim window.
 Arrange these windows so that you can see the turtlesim window, but also have the terminal running <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code> active so that you can control the turtle in turtlesim.</p>
 <p>Use the arrow keys on your keyboard to control the turtle.
-It will move around the screen, using its attached “pen” to draw the path it followed so far.</p>
+It will move around the screen, using its attached « pen » to draw the path it followed so far.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Pressing an arrow key will only cause the turtle to move a short distance and then stop.
@@ -463,7 +464,7 @@ This is because, realistically, you wouldn’t want a robot to continue carrying
 Since the goal of this tutorial is only to get a general overview of turtlesim, we will use rqt (a graphical user interface for ROS 2) to look at services a little closer.</p>
 </div>
 <div class="section" id="install-rqt">
-<h3><a class="toc-backref" href="#id7">4 Install rqt</a><a class="headerlink" href="#install-rqt" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id7">4 Install rqt</a><a class="headerlink" href="#install-rqt" title="Lien permanent vers ce titre"></a></h3>
 <p>Open a new terminal to install <code class="docutils literal notranslate"><span class="pre">rqt</span></code> and its plugins:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-TGludXggKGFwdCAyLjAvVWJ1bnR1IDIwLjA0IGFuZCBuZXdlcik=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXggKGFwdCAyLjAvVWJ1bnR1IDIwLjA0IGFuZCBuZXdlcik=" name="TGludXggKGFwdCAyLjAvVWJ1bnR1IDIwLjA0IGFuZCBuZXdlcik=" role="tab" tabindex="0">Linux (apt 2.0/Ubuntu 20.04 and newer)</button><button aria-controls="panel-1-TGludXggKGFwdCAxLngvVWJ1bnR1IDE4LjA0IGFuZCBvbGRlcik=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXggKGFwdCAxLngvVWJ1bnR1IDE4LjA0IGFuZCBvbGRlcik=" name="TGludXggKGFwdCAxLngvVWJ1bnR1IDE4LjA0IGFuZCBvbGRlcik=" role="tab" tabindex="-1">Linux (apt 1.x/Ubuntu 18.04 and older)</button><button aria-controls="panel-1-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-TGludXggKGFwdCAyLjAvVWJ1bnR1IDIwLjA0IGFuZCBuZXdlcik=" class="sphinx-tabs-panel group-tab" id="panel-1-TGludXggKGFwdCAyLjAvVWJ1bnR1IDIwLjA0IGFuZCBuZXdlcik=" name="TGludXggKGFwdCAyLjAvVWJ1bnR1IDIwLjA0IGFuZCBuZXdlcik=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt update</span>
@@ -485,7 +486,7 @@ Since the goal of this tutorial is only to get a general overview of turtlesim, 
 </div>
 </div>
 <div class="section" id="use-rqt">
-<h3><a class="toc-backref" href="#id8">5 Use rqt</a><a class="headerlink" href="#use-rqt" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id8">5 Use rqt</a><a class="headerlink" href="#use-rqt" title="Lien permanent vers ce titre"></a></h3>
 <p>After running rqt the first time, the window will be blank.
 No worries; just select <strong>Plugins</strong> &gt; <strong>Services</strong> &gt; <strong>Service Caller</strong> from the menu bar at the top.</p>
 <div class="admonition note">
@@ -497,7 +498,7 @@ If you click on <strong>Plugins</strong>, but don’t see <strong>Services</stro
 <p>Use the refresh button to the left of the <strong>Service</strong> dropdown list to ensure all the services of your turtlesim node are available.</p>
 <p>Click on the <strong>Service</strong> dropdown list to see turtlesim’s services, and select the <code class="docutils literal notranslate"><span class="pre">/spawn</span></code> service.</p>
 <div class="section" id="try-the-spawn-service">
-<h4>5.1 Try the spawn service<a class="headerlink" href="#try-the-spawn-service" title="Permalink to this headline"></a></h4>
+<h4>5.1 Try the spawn service<a class="headerlink" href="#try-the-spawn-service" title="Lien permanent vers ce titre"></a></h4>
 <p>Let’s use rqt to call the <code class="docutils literal notranslate"><span class="pre">/spawn</span></code> service.
 You can guess from its name that <code class="docutils literal notranslate"><span class="pre">/spawn</span></code> will create another turtle in the turtlesim window.</p>
 <p>Give the new turtle a unique name, like <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> by double-clicking between the empty single quotes in the <strong>Expression</strong> column.
@@ -516,7 +517,7 @@ You can see that this expression corresponds to the <strong>name</strong> value,
 <p>If you refresh the service list in rqt, you will also see that now there are services related to the new turtle, <code class="docutils literal notranslate"><span class="pre">/turtle2/…</span></code>, in addition to <code class="docutils literal notranslate"><span class="pre">/turtle1/…</span></code>.</p>
 </div>
 <div class="section" id="try-the-set-pen-service">
-<h4>5.2 Try the set_pen service<a class="headerlink" href="#try-the-set-pen-service" title="Permalink to this headline"></a></h4>
+<h4>5.2 Try the set_pen service<a class="headerlink" href="#try-the-set-pen-service" title="Lien permanent vers ce titre"></a></h4>
 <p>Now let’s give turtle1 a unique pen using the <code class="docutils literal notranslate"><span class="pre">/set_pen</span></code> service:</p>
 <img alt="../../../_images/set_pen.png" src="../../../_images/set_pen.png" />
 <p>The values for <strong>r</strong>, <strong>g</strong> and <strong>b</strong>, between 0 and 255, will set the color of the pen turtle1 draws with, and <strong>width</strong> sets the thickness of the line.</p>
@@ -529,7 +530,7 @@ You can accomplish this by remapping turtle1’s <code class="docutils literal n
 </div>
 </div>
 <div class="section" id="remapping">
-<h3><a class="toc-backref" href="#id9">6 Remapping</a><a class="headerlink" href="#remapping" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id9">6 Remapping</a><a class="headerlink" href="#remapping" title="Lien permanent vers ce titre"></a></h3>
 <p>In a new terminal, source ROS 2, and run:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtle_teleop_key --ros-args --remap turtle1/cmd_vel:=turtle2/cmd_vel</span>
 </pre></div>
@@ -538,20 +539,20 @@ You can accomplish this by remapping turtle1’s <code class="docutils literal n
 <img alt="../../../_images/remap.png" src="../../../_images/remap.png" />
 </div>
 <div class="section" id="close-turtlesim">
-<h3><a class="toc-backref" href="#id10">7 Close turtlesim</a><a class="headerlink" href="#close-turtlesim" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id10">7 Close turtlesim</a><a class="headerlink" href="#close-turtlesim" title="Lien permanent vers ce titre"></a></h3>
 <p>To stop the simulation, you can enter <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">C</span></code> in the <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code> terminal, and <code class="docutils literal notranslate"><span class="pre">q</span></code> in the teleop terminal.</p>
 </div>
 </div>
 <div class="section" id="summary">
-<h2><a class="toc-backref" href="#id11">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id11">Summary</a><a class="headerlink" href="#summary" title="Lien permanent vers ce titre"></a></h2>
 <p>Using turtlesim and rqt is a great way to learn the core concepts of ROS 2.</p>
 </div>
 <div class="section" id="next-steps">
-<h2><a class="toc-backref" href="#id12">Next steps</a><a class="headerlink" href="#next-steps" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id12">Next steps</a><a class="headerlink" href="#next-steps" title="Lien permanent vers ce titre"></a></h2>
 <p>Now that you have turtlesim and rqt up and running, and an idea of how they work, let’s dive in to the first core ROS 2 concept with the next tutorial, <a class="reference internal" href="../Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html"><span class="doc">Understanding nodes</span></a>.</p>
 </div>
 <div class="section" id="related-content">
-<h2><a class="toc-backref" href="#id13">Related content</a><a class="headerlink" href="#related-content" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id13">Related content</a><a class="headerlink" href="#related-content" title="Lien permanent vers ce titre"></a></h2>
 <p>The turtlesim package can be found in the <a class="reference external" href="https://github.com/ros/ros_tutorials/tree/humble/turtlesim">ros_tutorials repo</a>.
 Make sure to adjust the branch to view the version of turtlesim corresponding to your installed ROS 2 distro.</p>
 <p><a class="reference external" href="https://youtu.be/xwT7XWflMdc">This community contributed video</a> demonstrates many of the items covered in this tutorial.</p>
@@ -562,9 +563,9 @@ Make sure to adjust the branch to view the version of turtlesim corresponding to
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../Configuring-ROS2-Environment.html" class="btn btn-neutral float-left" title="Configuring environment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html" class="btn btn-neutral float-right" title="Understanding nodes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../Configuring-ROS2-Environment.html" class="btn btn-neutral float-left" title="Configuring environment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html" class="btn btn-neutral float-right" title="Understanding nodes" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -573,9 +574,9 @@ Make sure to adjust the branch to view the version of turtlesim corresponding to
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

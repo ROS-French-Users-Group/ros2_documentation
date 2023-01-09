@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Visualizing ROS 2 data with Foxglove Studio &mdash; ROS 2 documentation  documentation</title>
+  <title>Visualizing ROS 2 data with Foxglove Studio &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="ROS 2 Package Maintainer Guide" href="Package-maintainer-guide.html" />
     <link rel="prev" title="Running ROS 2 nodes in Docker [community-contributed]" href="Run-2-nodes-in-single-or-separate-docker-containers.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -342,7 +343,7 @@
           <li class="breadcrumb-item"><a href="../How-To-Guides.html">How-to Guides</a></li>
       <li class="breadcrumb-item active">Visualizing ROS 2 data with Foxglove Studio</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -353,19 +354,19 @@
 
 
   <div class="section" id="visualizing-ros-2-data-with-foxglove-studio">
-<h1>Visualizing ROS 2 data with Foxglove Studio<a class="headerlink" href="#visualizing-ros-2-data-with-foxglove-studio" title="Permalink to this headline"></a></h1>
+<h1>Visualizing ROS 2 data with Foxglove Studio<a class="headerlink" href="#visualizing-ros-2-data-with-foxglove-studio" title="Lien permanent vers ce titre"></a></h1>
 <p><a class="reference external" href="https://foxglove.dev/studio">Foxglove Studio</a> is an open source visualization and debugging tool for your robotics data.</p>
 <p>It is available in a variety of ways to make development as convenient as possible – it can be run as a standalone desktop app, accessed via your browser, or even self-hosted on your own domain.</p>
 <p>View the source code on <a class="reference external" href="https://www.github.com/foxglove/studio">GitHub</a>.</p>
 <div class="section" id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Lien permanent vers ce titre"></a></h2>
 <p>To use the web app, simply open Google Chrome and navigate to <a class="reference external" href="https://studio.foxglove.dev">studio.foxglove.dev</a>.</p>
 <p>To use the desktop app for Linux, macOS, or Windows, download it directly from the <a class="reference external" href="https://foxglove.dev/download">Foxglove Studio website</a>.</p>
 </div>
 <div class="section" id="connect-to-a-data-source">
-<h2>Connect to a data source<a class="headerlink" href="#connect-to-a-data-source" title="Permalink to this headline"></a></h2>
+<h2>Connect to a data source<a class="headerlink" href="#connect-to-a-data-source" title="Lien permanent vers ce titre"></a></h2>
 <p>On opening Foxglove Studio, you will see a dialog with a list of <a class="reference external" href="https://foxglove.dev/docs/studio/connection/data-sources">all possible data sources</a>.</p>
-<p>To connect to your ROS 2 stack, click “Open connection”, select the “Rosbridge (ROS 1 &amp; 2)” tab, and configure your “WebSocket URL”.</p>
+<p>To connect to your ROS 2 stack, click « Open connection », select the « Rosbridge (ROS 1 &amp; 2) » tab, and configure your « WebSocket URL ».</p>
 <p>You could also drag-and-drop any local ROS 2 <code class="docutils literal notranslate"><span class="pre">.db3</span></code> files directly into the application to load them for playback.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -374,32 +375,32 @@
 <p>Check out the <a class="reference external" href="https://foxglove.dev/docs/studio/connection/native">Foxglove Studio docs</a> for more detailed instructions.</p>
 </div>
 <div class="section" id="building-layouts-with-panels">
-<h2>Building layouts with panels<a class="headerlink" href="#building-layouts-with-panels" title="Permalink to this headline"></a></h2>
+<h2>Building layouts with panels<a class="headerlink" href="#building-layouts-with-panels" title="Lien permanent vers ce titre"></a></h2>
 <p><a class="reference external" href="https://foxglove.dev/docs/studio/panels/introduction">Panels</a> are modular visualization interfaces that can be configured and arranged into Studio <a class="reference external" href="https://foxglove.dev/docs/studio/layouts">layouts</a>.
 You can also save your layouts for future use, for your own personal reference or with your larger robotics team.</p>
-<p>Find the full list of available panels in the sidebar’s “Add panel” tab.</p>
+<p>Find the full list of available panels in the sidebar’s « Add panel » tab.</p>
 <p>We’ve highlighted some particularly useful ones below:</p>
 <div class="section" id="d-display-visualization-markers-in-a-3d-scene">
-<h3>1 3D: Display visualization markers in a 3D scene<a class="headerlink" href="#d-display-visualization-markers-in-a-3d-scene" title="Permalink to this headline"></a></h3>
+<h3>1 3D: Display visualization markers in a 3D scene<a class="headerlink" href="#d-display-visualization-markers-in-a-3d-scene" title="Lien permanent vers ce titre"></a></h3>
 <p>Publish marker messages to add primitive shapes (arrows, spheres, etc.) and more complex visualizations (occupancy grids, point clouds, etc.) to your 3D panel’s scene.</p>
-<p>Choose the topics you want to display via the topic picker on the left, and configure each topic’s visualization settings in the “Edit topic settings” menu.</p>
+<p>Choose the topics you want to display via the topic picker on the left, and configure each topic’s visualization settings in the « Edit topic settings » menu.</p>
 <a class="reference internal image-reference" href="../_images/3d.png"><img alt="Foxglove Studio's 3D panel" src="../_images/3d.png" style="width: 500px;" /></a>
 <p>Reference the <a class="reference external" href="https://foxglove.dev/docs/studio/panels/3d">docs</a> for a full list of <a class="reference external" href="https://foxglove.dev/docs/studio/panels/3d#supported-messages">supported message types</a> and some useful <a class="reference external" href="https://foxglove.dev/docs/studio/panels/3d#user-interactions">user interactions</a>.</p>
 </div>
 <div class="section" id="diagnostics-filter-and-sort-diagnostics-messages">
-<h3>2 Diagnostics: Filter and sort diagnostics messages<a class="headerlink" href="#diagnostics-filter-and-sort-diagnostics-messages" title="Permalink to this headline"></a></h3>
+<h3>2 Diagnostics: Filter and sort diagnostics messages<a class="headerlink" href="#diagnostics-filter-and-sort-diagnostics-messages" title="Lien permanent vers ce titre"></a></h3>
 <p>Display the status of seen nodes (i.e. stale, error, warn, or OK) from topics with a <code class="docutils literal notranslate"><span class="pre">diagnostic_msgs/msg/DiagnosticArray</span></code> datatype in a running feed, and display the diagnostics data for a given <code class="docutils literal notranslate"><span class="pre">diagnostic_name/hardware_id</span></code>.</p>
 <a class="reference internal image-reference" href="../_images/diagnostics.png"><img alt="Foxglove Studio's Diagnostics panel" src="../_images/diagnostics.png" style="width: 500px;" /></a>
 <p>Reference the <a class="reference external" href="https://foxglove.dev/docs/studio/panels/diagnostics">docs</a> for more details.</p>
 </div>
 <div class="section" id="image-view-camera-feed-images">
-<h3>3 Image: View camera feed images<a class="headerlink" href="#image-view-camera-feed-images" title="Permalink to this headline"></a></h3>
+<h3>3 Image: View camera feed images<a class="headerlink" href="#image-view-camera-feed-images" title="Lien permanent vers ce titre"></a></h3>
 <p>Select a <code class="docutils literal notranslate"><span class="pre">sensor_msgs/msg/Image</span></code> or <code class="docutils literal notranslate"><span class="pre">sensor_msgs/msg/CompressedImage</span></code> topic to display.</p>
 <a class="reference internal image-reference" href="../_images/image.png"><img alt="Foxglove Studio's Image panel" src="../_images/image.png" style="width: 500px;" /></a>
 <p>Reference the <a class="reference external" href="https://foxglove.dev/docs/studio/panels/image">docs</a> for more details.</p>
 </div>
 <div class="section" id="log-view-log-messages">
-<h3>4 Log: View log messages<a class="headerlink" href="#log-view-log-messages" title="Permalink to this headline"></a></h3>
+<h3>4 Log: View log messages<a class="headerlink" href="#log-view-log-messages" title="Lien permanent vers ce titre"></a></h3>
 <p>To view <code class="docutils literal notranslate"><span class="pre">rcl_interfaces/msg/Log</span></code> messages live, use the desktop app to <a class="reference external" href="https://foxglove.dev/docs/studio/connection/native">connect</a> to your running ROS stack.
 To view <code class="docutils literal notranslate"><span class="pre">rcl_interfaces/msg/Log</span></code> messages from a pre-recorded data file, you can drag-and-drop your file into either the <a class="reference external" href="https://studio.foxglove.dev">web</a> or desktop app.</p>
 <p>Next, add a <a class="reference external" href="https://foxglove.dev/docs/studio/panels/log">Log</a> panel to your layout.
@@ -407,59 +408,59 @@ If you’ve connected to your ROS stack correctly, you should now see a list of 
 <p>Reference the <a class="reference external" href="https://foxglove.dev/docs/studio/panels/log">docs</a> for more details.</p>
 </div>
 <div class="section" id="plot-plot-arbitrary-values-over-time">
-<h3>5 Plot: Plot arbitrary values over time<a class="headerlink" href="#plot-plot-arbitrary-values-over-time" title="Permalink to this headline"></a></h3>
-<p>Plot arbitrary values from your topics’ message paths over playback time.</p>
+<h3>5 Plot: Plot arbitrary values over time<a class="headerlink" href="#plot-plot-arbitrary-values-over-time" title="Lien permanent vers ce titre"></a></h3>
+<p>Plot arbitrary values from your topics” message paths over playback time.</p>
 <p>Specify the topic values you want to plot along the y-axis.
 For the x-axis, choose between plotting the y-axis value’s timestamp, element index, or another custom topic message path.</p>
 <a class="reference internal image-reference" href="../_images/plot.png"><img alt="Foxglove Studio's Plot panel" src="../_images/plot.png" style="width: 500px;" /></a>
 <p>Reference the <a class="reference external" href="https://foxglove.dev/docs/studio/panels/plot">docs</a> for more details.</p>
 </div>
 <div class="section" id="raw-messages-view-incoming-topic-messages">
-<h3>6 Raw Messages: View incoming topic messages<a class="headerlink" href="#raw-messages-view-incoming-topic-messages" title="Permalink to this headline"></a></h3>
+<h3>6 Raw Messages: View incoming topic messages<a class="headerlink" href="#raw-messages-view-incoming-topic-messages" title="Lien permanent vers ce titre"></a></h3>
 <p>Display incoming topic data in an easy-to-read collapsible JSON tree format.</p>
 <a class="reference internal image-reference" href="../_images/raw-messages.png"><img alt="Foxglove Studio's Raw Messages panel" src="../_images/raw-messages.png" style="width: 500px;" /></a>
 <p>Reference the <a class="reference external" href="https://foxglove.dev/docs/studio/panels/raw-messages">docs</a> for more details.</p>
 </div>
 <div class="section" id="teleop-teleoperate-your-robot">
-<h3>7 Teleop: Teleoperate your robot<a class="headerlink" href="#teleop-teleoperate-your-robot" title="Permalink to this headline"></a></h3>
+<h3>7 Teleop: Teleoperate your robot<a class="headerlink" href="#teleop-teleoperate-your-robot" title="Lien permanent vers ce titre"></a></h3>
 <p>Teleoperate your physical robot by publishing <code class="docutils literal notranslate"><span class="pre">geometry_msgs/msg/Twist</span></code> messages on a given topic back to your live ROS stack.</p>
 <a class="reference internal image-reference" href="../_images/teleop.png"><img alt="Foxglove Studio's URDF Viewer panel" src="../_images/teleop.png" style="width: 300px;" /></a>
 <p>Reference the <a class="reference external" href="https://foxglove.dev/docs/studio/panels/teleop">docs</a> for more details.</p>
 </div>
 <div class="section" id="urdf-viewer-view-and-manipulate-your-urdf-model">
-<h3>8 URDF Viewer: View and manipulate your URDF model<a class="headerlink" href="#urdf-viewer-view-and-manipulate-your-urdf-model" title="Permalink to this headline"></a></h3>
+<h3>8 URDF Viewer: View and manipulate your URDF model<a class="headerlink" href="#urdf-viewer-view-and-manipulate-your-urdf-model" title="Lien permanent vers ce titre"></a></h3>
 <p>To visualize and control your robot model in Foxglove Studio, open the web or desktop application and add a <a class="reference external" href="https://foxglove.dev/docs/studio/panels/urdf-viewer">URDF Viewer</a> panel to your layout.
 Then, drag and drop your URDF file into that panel to visualize your robot model.</p>
 <a class="reference internal image-reference" href="../_images/urdf.png"><img alt="Foxglove Studio's URDF Viewer panel" src="../_images/urdf.png" style="width: 300px;" /></a>
 <p>Select any topic publishing a <code class="docutils literal notranslate"><span class="pre">JointState</span></code> message to update the visualization based on the published joint states (defaults to <code class="docutils literal notranslate"><span class="pre">/joint_states</span></code>).</p>
-<p>Toggle to “Manual joint control” to set joint positions using the provided controls.</p>
+<p>Toggle to « Manual joint control » to set joint positions using the provided controls.</p>
 <a class="reference internal image-reference" href="../_images/urdf-joints.png"><img alt="Foxglove Studio's URDF Viewer panel with editable joint positions" src="../_images/urdf-joints.png" style="width: 500px;" /></a>
 <p>Reference the <a class="reference external" href="https://foxglove.dev/docs/studio/panels/urdf-viewer">docs</a> for more details.</p>
 </div>
 </div>
 <div class="section" id="other-basic-actions">
-<h2>Other basic actions<a class="headerlink" href="#other-basic-actions" title="Permalink to this headline"></a></h2>
+<h2>Other basic actions<a class="headerlink" href="#other-basic-actions" title="Lien permanent vers ce titre"></a></h2>
 <div class="section" id="view-your-ros-graph">
-<h3>1 View your ROS graph<a class="headerlink" href="#view-your-ros-graph" title="Permalink to this headline"></a></h3>
+<h3>1 View your ROS graph<a class="headerlink" href="#view-your-ros-graph" title="Lien permanent vers ce titre"></a></h3>
 <p><a class="reference external" href="https://foxglove.dev/download">Using the desktop app</a>, <a class="reference external" href="https://foxglove.dev/docs/studio/connection/native">connect</a> to your running ROS stack.
 Next, add a <a class="reference external" href="https://foxglove.dev/docs/studio/panels/topic-graph">Topic Graph</a> panel to your layout.
 If you’ve connected to your ROS stack correctly, you should now see a computational graph of your ROS nodes, topics, and services in that panel.
 Use the controls on the right side of the panel to select which topics to display or to toggle services.</p>
 </div>
 <div class="section" id="view-and-edit-your-ros-params">
-<h3>2 View and edit your ROS params<a class="headerlink" href="#view-and-edit-your-ros-params" title="Permalink to this headline"></a></h3>
+<h3>2 View and edit your ROS params<a class="headerlink" href="#view-and-edit-your-ros-params" title="Lien permanent vers ce titre"></a></h3>
 <p><a class="reference external" href="https://foxglove.dev/download">Using the desktop app</a>, <a class="reference external" href="https://foxglove.dev/docs/studio/connection/native">connect</a> to your running ROS stack.
 Next, add a <a class="reference external" href="https://foxglove.dev/docs/studio/panels/parameters">Parameters</a> panel to your layout.
 If you’ve connected to your ROS stack correctly, you should now see a live view of your current <code class="docutils literal notranslate"><span class="pre">rosparams</span></code>.
 You can edit these parameter values to publish <code class="docutils literal notranslate"><span class="pre">rosparam</span></code> updates back to your ROS stack.</p>
 </div>
 <div class="section" id="publish-messages-back-to-your-live-ros-stack">
-<h3>3 Publish messages back to your live ROS stack<a class="headerlink" href="#publish-messages-back-to-your-live-ros-stack" title="Permalink to this headline"></a></h3>
+<h3>3 Publish messages back to your live ROS stack<a class="headerlink" href="#publish-messages-back-to-your-live-ros-stack" title="Lien permanent vers ce titre"></a></h3>
 <p><a class="reference external" href="https://foxglove.dev/download">Using the desktop app</a>, <a class="reference external" href="https://foxglove.dev/docs/studio/connection/native">connect</a> to your running ROS stack.
 Next, add a <a class="reference external" href="https://foxglove.dev/docs/studio/panels/publish">Publish</a> panel to your layout.</p>
 <p>Specify the topic you want to publish on to infer its datatype and populate the text field with a JSON message template.</p>
 <p>Selecting a datatype in the dropdown of common ROS datatypes will also populate the text field with a JSON message template.</p>
-<p>Edit the template to customize your message before hitting “Publish”.</p>
+<p>Edit the template to customize your message before hitting « Publish ».</p>
 <a class="reference internal image-reference" href="../_images/publish.png"><img alt="Foxglove Studio's Publish panel" src="../_images/publish.png" style="width: 300px;" /></a>
 </div>
 </div>
@@ -469,9 +470,9 @@ Next, add a <a class="reference external" href="https://foxglove.dev/docs/studio
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Run-2-nodes-in-single-or-separate-docker-containers.html" class="btn btn-neutral float-left" title="Running ROS 2 nodes in Docker [community-contributed]" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Package-maintainer-guide.html" class="btn btn-neutral float-right" title="ROS 2 Package Maintainer Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Run-2-nodes-in-single-or-separate-docker-containers.html" class="btn btn-neutral float-left" title="Running ROS 2 nodes in Docker [community-contributed]" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Package-maintainer-guide.html" class="btn btn-neutral float-right" title="ROS 2 Package Maintainer Guide" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -480,9 +481,9 @@ Next, add a <a class="reference external" href="https://foxglove.dev/docs/studio
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

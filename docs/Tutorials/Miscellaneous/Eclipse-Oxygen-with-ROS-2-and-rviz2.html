@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Using Eclipse Oxygen with rviz2 [community-contributed] &mdash; ROS 2 documentation  documentation</title>
+  <title>Using Eclipse Oxygen with rviz2 [community-contributed] &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
     <link rel="next" title="Building a real-time Linux kernel [community-contributed]" href="Building-Realtime-rt_preempt-kernel-for-ROS-2.html" />
     <link rel="prev" title="Deploying on IBM Cloud Kubernetes [community-contributed]" href="Deploying-ROS-2-on-IBM-Cloud.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -343,7 +344,7 @@
           <li class="breadcrumb-item"><a href="../Miscellaneous.html">Miscellaneous</a></li>
       <li class="breadcrumb-item active">Using Eclipse Oxygen with <code class="docutils literal notranslate"><span class="pre">rviz2</span></code> [community-contributed]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Miscellaneous/Eclipse-Oxygen-with-ROS-2-and-rviz2.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Miscellaneous/Eclipse-Oxygen-with-ROS-2-and-rviz2.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -354,7 +355,7 @@
 
 
   <div class="section" id="using-eclipse-oxygen-with-rviz2-community-contributed">
-<h1>Using Eclipse Oxygen with <code class="docutils literal notranslate"><span class="pre">rviz2</span></code> [community-contributed]<a class="headerlink" href="#using-eclipse-oxygen-with-rviz2-community-contributed" title="Permalink to this headline"></a></h1>
+<h1>Using Eclipse Oxygen with <code class="docutils literal notranslate"><span class="pre">rviz2</span></code> [community-contributed]<a class="headerlink" href="#using-eclipse-oxygen-with-rviz2-community-contributed" title="Lien permanent vers ce titre"></a></h1>
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">Table of Contents</p>
 <ul class="simple">
@@ -364,7 +365,7 @@
 </ul>
 </div>
 <div class="section" id="setup">
-<h2><a class="toc-backref" href="#id1">Setup</a><a class="headerlink" href="#setup" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id1">Setup</a><a class="headerlink" href="#setup" title="Lien permanent vers ce titre"></a></h2>
 <p>This tutorial assumes Eclipse Oxygen, git, and Egit (<a class="reference external" href="http://www.eclipse.org/egit/download/">http://www.eclipse.org/egit/download/</a>) are already installed.</p>
 <p>Throughout the tutorial we name the eclipse workspace the same name as the ros2 package, but this is not required.</p>
 <p>HINT: We use nested projects and one Eclipse Workspace for each ROS-2 package.</p>
@@ -377,9 +378,9 @@ Choose a Makefile Project and Other Toolchain.</p>
 <img alt="../../_images/eclipse-oxygen-04.png" src="../../_images/eclipse-oxygen-04.png" />
 <p>Click on Finish</p>
 <img alt="../../_images/eclipse-oxygen-05.png" src="../../_images/eclipse-oxygen-05.png" />
-<p>Our project should be shown in the “Project Explorer”.</p>
+<p>Our project should be shown in the « Project Explorer ».</p>
 <img alt="../../_images/eclipse-oxygen-06.png" src="../../_images/eclipse-oxygen-06.png" />
-<p>Inside our Project create a folder called “src”.</p>
+<p>Inside our Project create a folder called « src ».</p>
 <img alt="../../_images/eclipse-oxygen-07.png" src="../../_images/eclipse-oxygen-07.png" />
 <p>Import a git repository.</p>
 <img alt="../../_images/eclipse-oxygen-08.png" src="../../_images/eclipse-oxygen-08.png" />
@@ -393,7 +394,7 @@ Choose a Makefile Project and Other Toolchain.</p>
 <p>Create a General-&gt;Project.</p>
 <img alt="../../_images/eclipse-oxygen-12.png" src="../../_images/eclipse-oxygen-12.png" />
 <p>Use the git repository name as the project name.
-IMPORTANT: Use the folder we cloned the git repository in as the “Location”.</p>
+IMPORTANT: Use the folder we cloned the git repository in as the « Location ».</p>
 <img alt="../../_images/eclipse-oxygen-13.png" src="../../_images/eclipse-oxygen-13.png" />
 <p>The git project and the new project should be visible in the Project Explorer view.
 The same files are listed multiple times, but only one project is linked with Egit.</p>
@@ -401,7 +402,7 @@ The same files are listed multiple times, but only one project is linked with Eg
 <p>Repeat this procedure again.
 Import git repository pluginlib.</p>
 <img alt="../../_images/eclipse-oxygen-15.png" src="../../_images/eclipse-oxygen-15.png" />
-<p>IMPORTANT: Use a folder inside the source folder as “Destination-&gt;Directory”.</p>
+<p>IMPORTANT: Use a folder inside the source folder as « Destination-&gt;Directory ».</p>
 <img alt="../../_images/eclipse-oxygen-16.png" src="../../_images/eclipse-oxygen-16.png" />
 <p>IMPORTANT: Use the folder we cloned the git repository in as the location for the new project.</p>
 <img alt="../../_images/eclipse-oxygen-17.png" src="../../_images/eclipse-oxygen-17.png" />
@@ -418,50 +419,50 @@ Now it looks like a ROS-2 project as it is on the hard drive.
 But this view loses the linkage to Egit, so use the Flat Project Presentation.
 The Egit linkage is good if you want to see e.g. which author wrote which code-line, etc.</p>
 <img alt="../../_images/eclipse-oxygen-22.png" src="../../_images/eclipse-oxygen-22.png" />
-<p>Go to “C/C++ build”-section and put “ament” into “Build command”.</p>
+<p>Go to « C/C++ build »-section and put « ament » into « Build command ».</p>
 <img alt="../../_images/eclipse-oxygen-23.png" src="../../_images/eclipse-oxygen-23.png" />
-<p>Go to “Behavior” tab and unselect “clean” and put “build” into Build textbox.</p>
+<p>Go to « Behavior » tab and unselect « clean » and put « build » into Build textbox.</p>
 <img alt="../../_images/eclipse-oxygen-24.png" src="../../_images/eclipse-oxygen-24.png" />
-<p>Before “Build project” will work, we need to close Eclipse.
+<p>Before « Build project » will work, we need to close Eclipse.
 Open a shell and source the ROS-2 setup.bash file, then cd into the directory of the eclipse project (here: /home/ubu/rviz2_ws/rviz2_ws) and start Eclipse from inside this directory.</p>
 <img alt="../../_images/eclipse-oxygen-25.png" src="../../_images/eclipse-oxygen-25.png" />
 <p>Now code completion, egit annotations, eclipse C/C++ Tools, etc. should all work.</p>
 <img alt="../../_images/eclipse-oxygen-26.png" src="../../_images/eclipse-oxygen-26.png" />
 </div>
 <div class="section" id="eclipse-indexer">
-<h2><a class="toc-backref" href="#id2">Eclipse-indexer</a><a class="headerlink" href="#eclipse-indexer" title="Permalink to this headline"></a></h2>
-<p>Opening the main.cpp of rviz2 may show a lot of “unresolved inclusion” warnings.
+<h2><a class="toc-backref" href="#id2">Eclipse-indexer</a><a class="headerlink" href="#eclipse-indexer" title="Lien permanent vers ce titre"></a></h2>
+<p>Opening the main.cpp of rviz2 may show a lot of « unresolved inclusion » warnings.
 To fix this, go to Project-&gt;Properties-&gt;C++ General-&gt;Path and Symbols.
-Click on the “References” tab and select “ros2_ws”.</p>
+Click on the « References » tab and select « ros2_ws ».</p>
 <img alt="../../_images/eclipse-oxygen-27.png" src="../../_images/eclipse-oxygen-27.png" />
-<p>Go to C/C++-General-&gt;Path-and-Symbols, click on the “Source locations” tab and click on “Link folder”.
+<p>Go to C/C++-General-&gt;Path-and-Symbols, click on the « Source locations » tab and click on « Link folder ».
 Choose the location of qt5 includes.</p>
 <img alt="../../_images/eclipse-oxygen-28.png" src="../../_images/eclipse-oxygen-28.png" />
 <p>The next image should be shown.
-It is a good idea to add excludes to the source locations, so that some directories (like “Build” and “Install”) don’t get indexed.</p>
+It is a good idea to add excludes to the source locations, so that some directories (like « Build » and « Install ») don’t get indexed.</p>
 <img alt="../../_images/eclipse-oxygen-29.png" src="../../_images/eclipse-oxygen-29.png" />
-<p>Go to C++General-&gt;Preprocessor includes, select “CDT GCC Built in compiler settings [Shared]” and enter in the “command to get compiler specs” text box the following:</p>
+<p>Go to C++General-&gt;Preprocessor includes, select « CDT GCC Built in compiler settings [Shared] » and enter in the « command to get compiler specs » text box the following:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-std<span class="o">=</span>c++14
 </pre></div>
 </div>
 <img alt="../../_images/eclipse-oxygen-30.png" src="../../_images/eclipse-oxygen-30.png" />
-<p>Go to “C/C++-General-&gt;Indexer” and select the following in the image.
-E.g “index unused headers as c files” to resolve e.g. QApplication, because the QApplication headers content is only “#include “qapplication.h”.</p>
+<p>Go to « C/C++-General-&gt;Indexer » and select the following in the image.
+E.g « index unused headers as c files » to resolve e.g. QApplication, because the QApplication headers content is only « #include « qapplication.h ».</p>
 <img alt="../../_images/eclipse-oxygen-31.png" src="../../_images/eclipse-oxygen-31.png" />
 <p>After running the indexer (which happens later, so you will see this also later), you can see what it added</p>
 <img alt="../../_images/eclipse-oxygen-32.png" src="../../_images/eclipse-oxygen-32.png" />
-<p>After that right-click on the rviz2 project and select “Indexer-&gt;Rebuild”, which will start rebuilding the index (there is an icon in the lower right showing progress).
+<p>After that right-click on the rviz2 project and select « Indexer-&gt;Rebuild », which will start rebuilding the index (there is an icon in the lower right showing progress).
 Once the index is finished rebuilding, it should be able to resolve all includes.</p>
 <img alt="../../_images/eclipse-oxygen-33.png" src="../../_images/eclipse-oxygen-33.png" />
 </div>
 <div class="section" id="debugging-with-eclipse">
-<h2><a class="toc-backref" href="#id3">Debugging with eclipse</a><a class="headerlink" href="#debugging-with-eclipse" title="Permalink to this headline"></a></h2>
-<p>Go to “C/C++-Build” and add to the build command:</p>
+<h2><a class="toc-backref" href="#id3">Debugging with eclipse</a><a class="headerlink" href="#debugging-with-eclipse" title="Lien permanent vers ce titre"></a></h2>
+<p>Go to « C/C++-Build » and add to the build command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Debug
 </pre></div>
 </div>
 <img alt="../../_images/eclipse-oxygen-34.png" src="../../_images/eclipse-oxygen-34.png" />
-<p>Then in eclipse go to “Run-&gt;Debug Configurations” and add the following and click on “Debug”.</p>
+<p>Then in eclipse go to « Run-&gt;Debug Configurations » and add the following and click on « Debug ».</p>
 <img alt="../../_images/eclipse-oxygen-35.png" src="../../_images/eclipse-oxygen-35.png" />
 </div>
 </div>
@@ -470,9 +471,9 @@ Once the index is finished rebuilding, it should be able to resolve all includes
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Deploying-ROS-2-on-IBM-Cloud.html" class="btn btn-neutral float-left" title="Deploying on IBM Cloud Kubernetes [community-contributed]" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Building-Realtime-rt_preempt-kernel-for-ROS-2.html" class="btn btn-neutral float-right" title="Building a real-time Linux kernel [community-contributed]" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Deploying-ROS-2-on-IBM-Cloud.html" class="btn btn-neutral float-left" title="Deploying on IBM Cloud Kubernetes [community-contributed]" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Building-Realtime-rt_preempt-kernel-for-ROS-2.html" class="btn btn-neutral float-right" title="Building a real-time Linux kernel [community-contributed]" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -481,9 +482,9 @@ Once the index is finished rebuilding, it should be able to resolve all includes
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

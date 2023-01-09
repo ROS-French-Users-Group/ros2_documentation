@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Development process for a release &mdash; ROS 2 documentation  documentation</title>
+  <title>Development process for a release &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Tutorials" href="../Tutorials.html" />
     <link rel="prev" title="Alphas" href="Alpha-Overview.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -342,7 +343,7 @@
           <li class="breadcrumb-item"><a href="../Releases.html">Distributions</a></li>
       <li class="breadcrumb-item active">Development process for a release</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Releases/Release-Process.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Releases/Release-Process.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -353,7 +354,7 @@
 
 
   <div class="section" id="development-process-for-a-release">
-<h1>Development process for a release<a class="headerlink" href="#development-process-for-a-release" title="Permalink to this headline"></a></h1>
+<h1>Development process for a release<a class="headerlink" href="#development-process-for-a-release" title="Lien permanent vers ce titre"></a></h1>
 <p>Each ROS 2 distribution goes through a process of development more than a year long that begins prior to the release of the previous distribution.
 Below is a high-level view of this development process.
 There is no specific due date for the items in this process, but in general earlier items should be completed before later items can be completed.</p>
@@ -370,7 +371,7 @@ There is no specific due date for the items in this process, but in general earl
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Find the ROS Boss</p></td>
-<td><p>The “ROS Boss” is the person in charge of shepherding a distribution through the development, release, update, and EOL’ing stages of its life. They are chosen from the internal ROS 2 team at Open Robotics.</p></td>
+<td><p>The « ROS Boss » is the person in charge of shepherding a distribution through the development, release, update, and EOL’ing stages of its life. They are chosen from the internal ROS 2 team at Open Robotics.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Run process to choose the distribution name</p></td>
 <td><p>The ROS Boss curates the process of choosing the distribution’s name, using input from sources such as the community and potential naming conflicts.</p></td>
@@ -406,7 +407,7 @@ There is no specific due date for the items in this process, but in general earl
 <td><p>The RMW freeze is the point at which the default RMW implementation for the new distribution is feature-frozen. This gives developers a stable target to test their packages with, which is particularly important for the client library developers, who need to know what features of the RMW layer will be available for use by client libraries.</p></td>
 </tr>
 <tr class="row-even"><td><p>Upgrade dependency packages</p></td>
-<td><p>Packages depended on by ROS but not ROS software and not available in the platform package manager (such as aptitude for Ubuntu), the so-called “vendor packages”, must be updated to the versions specified in REP-2000 (or an appropriate version, for those not listed in REP-2000). This is particularly important on Windows.</p></td>
+<td><p>Packages depended on by ROS but not ROS software and not available in the platform package manager (such as aptitude for Ubuntu), the so-called « vendor packages », must be updated to the versions specified in REP-2000 (or an appropriate version, for those not listed in REP-2000). This is particularly important on Windows.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Create a detailed release plan</p></td>
 <td><p>Planning for the final two months of the development process is performed. This produces a detailed test plan, timelines of when certain packages must be available, and so on. It enables the finding of dependencies between steps in the release process and finding people to perform each of those steps.</p></td>
@@ -455,9 +456,9 @@ There is no specific due date for the items in this process, but in general earl
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Alpha-Overview.html" class="btn btn-neutral float-left" title="Alphas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../Tutorials.html" class="btn btn-neutral float-right" title="Tutorials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Alpha-Overview.html" class="btn btn-neutral float-left" title="Alphas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../Tutorials.html" class="btn btn-neutral float-right" title="Tutorials" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -466,9 +467,9 @@ There is no specific due date for the items in this process, but in general earl
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The ROS_DOMAIN_ID &mdash; ROS 2 documentation  documentation</title>
+  <title>The ROS_DOMAIN_ID &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -22,9 +22,10 @@
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
         <script src="../_static/tabs.js"></script>
+        <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="About different ROS 2 DDS/RTPS vendors" href="About-Different-Middleware-Vendors.html" />
     <link rel="prev" title="Concepts" href="../Concepts.html" /> 
 </head>
@@ -38,7 +39,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -80,7 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -343,7 +344,7 @@
           <li class="breadcrumb-item"><a href="../Concepts.html">Concepts</a></li>
       <li class="breadcrumb-item active">The ROS_DOMAIN_ID</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Concepts/About-Domain-ID.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Concepts/About-Domain-ID.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -354,9 +355,9 @@
 
 
   <div class="section" id="the-ros-domain-id">
-<h1>The ROS_DOMAIN_ID<a class="headerlink" href="#the-ros-domain-id" title="Permalink to this headline"></a></h1>
+<h1>The ROS_DOMAIN_ID<a class="headerlink" href="#the-ros-domain-id" title="Lien permanent vers ce titre"></a></h1>
 <div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Lien permanent vers ce titre"></a></h2>
 <p>As explained elsewhere, the default middleware that ROS 2 uses for communication is DDS.
 In DDS, the primary mechanism for having different logical networks share a physical network is known as the Domain ID.
 ROS 2 nodes on the same domain can freely discover and send messages to each other, while ROS 2 nodes on different domains cannot.
@@ -364,19 +365,19 @@ All ROS 2 nodes use domain ID 0 by default.
 To avoid interference between different groups of computers running ROS 2 on the same network, a different domain ID should be set for each group.</p>
 </div>
 <div class="section" id="choosing-a-domain-id-short-version">
-<h2>Choosing a domain ID (short version)<a class="headerlink" href="#choosing-a-domain-id-short-version" title="Permalink to this headline"></a></h2>
+<h2>Choosing a domain ID (short version)<a class="headerlink" href="#choosing-a-domain-id-short-version" title="Lien permanent vers ce titre"></a></h2>
 <p>The text below explains the derivation of the range of domain IDs that should be used in ROS 2.
 To skip that background and just choose a safe number, simply choose a domain ID between 0 and 101, inclusive.</p>
 </div>
 <div class="section" id="choosing-a-domain-id-long-version">
-<h2>Choosing a domain ID (long version)<a class="headerlink" href="#choosing-a-domain-id-long-version" title="Permalink to this headline"></a></h2>
+<h2>Choosing a domain ID (long version)<a class="headerlink" href="#choosing-a-domain-id-long-version" title="Lien permanent vers ce titre"></a></h2>
 <p>The domain ID is used by DDS to compute the UDP ports that will be used for discovery and communication.
 See <a class="reference external" href="https://community.rti.com/content/forum-topic/statically-configure-firewall-let-omg-dds-traffic-through">this article</a> for details on how the ports are computed.
 Remembering our basic networking, the UDP port is an <a class="reference external" href="https://en.wikipedia.org/wiki/User_Datagram_Protocol#Ports">unsigned 16-bit integer</a>.
 Thus, the highest port number that can be allocated is 65535.
 Doing some math with the formula in the article above, this means that the highest domain ID that can possibly be assigned is 232, while the lowest that can be assigned is 0.</p>
 <div class="section" id="platform-specific-constraints">
-<h3>Platform-specific constraints<a class="headerlink" href="#platform-specific-constraints" title="Permalink to this headline"></a></h3>
+<h3>Platform-specific constraints<a class="headerlink" href="#platform-specific-constraints" title="Lien permanent vers ce titre"></a></h3>
 <p>For maximum compatibility, some additional platform-specific constraints should be followed when choosing a domain ID.
 In particular, it is best to avoid allocating domain IDs in the operating system’s <a class="reference external" href="https://en.wikipedia.org/wiki/Ephemeral_port">ephemeral port range</a>.
 This avoids possible conflicts between the ports used by the ROS 2 nodes and other networking services on the computers.</p>
@@ -397,8 +398,8 @@ If a custom ephemeral port range is used, the above numbers may have to be adjus
 </div></div>
 </div>
 <div class="section" id="participant-constraints">
-<h3>Participant constraints<a class="headerlink" href="#participant-constraints" title="Permalink to this headline"></a></h3>
-<p>For each ROS 2 process running on a computer, one DDS “participant” is created.
+<h3>Participant constraints<a class="headerlink" href="#participant-constraints" title="Lien permanent vers ce titre"></a></h3>
+<p>For each ROS 2 process running on a computer, one DDS « participant » is created.
 Since each DDS participant takes up two ports on the computer, running more than 120 ROS 2 processes on one computer may spill over into other domain IDs or the ephemeral ports.</p>
 <p>To see why, consider the domain IDs 1 and 2.</p>
 <ul class="simple">
@@ -423,7 +424,7 @@ Similarly, the maximum number of processes that should be created when using dom
 On macOS and Windows, when choosing a domain ID of 166 (the top of the range), the maximum number of ROS 2 processes that can be created on a computer before running into the ephemeral port range is 120.</p>
 </div>
 <div class="section" id="domain-id-to-udp-port-calculator">
-<h3>Domain ID to UDP Port Calculator<a class="headerlink" href="#domain-id-to-udp-port-calculator" title="Permalink to this headline"></a></h3>
+<h3>Domain ID to UDP Port Calculator<a class="headerlink" href="#domain-id-to-udp-port-calculator" title="Lien permanent vers ce titre"></a></h3>
 <table>
   <tr>
     <td style="text-align: right; vertical-align: middle;"><label>Domain ID:</label></td>
@@ -491,9 +492,9 @@ On macOS and Windows, when choosing a domain ID of 166 (the top of the range), t
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../Concepts.html" class="btn btn-neutral float-left" title="Concepts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="About-Different-Middleware-Vendors.html" class="btn btn-neutral float-right" title="About different ROS 2 DDS/RTPS vendors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../Concepts.html" class="btn btn-neutral float-left" title="Concepts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="About-Different-Middleware-Vendors.html" class="btn btn-neutral float-right" title="About different ROS 2 DDS/RTPS vendors" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -502,9 +503,9 @@ On macOS and Windows, when choosing a domain ID of 166 (the top of the range), t
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

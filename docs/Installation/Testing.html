@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Testing with pre-release binaries &mdash; ROS 2 documentation  documentation</title>
+  <title>Testing with pre-release binaries &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -22,9 +22,10 @@
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
         <script src="../_static/tabs.js"></script>
+        <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="DDS implementations" href="DDS-Implementations.html" />
     <link rel="prev" title="Maintain source checkout" href="Maintaining-a-Source-Checkout.html" /> 
 </head>
@@ -38,7 +39,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -80,7 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -343,7 +344,7 @@
           <li class="breadcrumb-item"><a href="../Installation.html">Installation</a></li>
       <li class="breadcrumb-item active">Testing with pre-release binaries</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Installation/Testing.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Installation/Testing.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -354,13 +355,13 @@
 
 
   <div class="section" id="testing-with-pre-release-binaries">
-<h1>Testing with pre-release binaries<a class="headerlink" href="#testing-with-pre-release-binaries" title="Permalink to this headline"></a></h1>
+<h1>Testing with pre-release binaries<a class="headerlink" href="#testing-with-pre-release-binaries" title="Lien permanent vers ce titre"></a></h1>
 <p>Many ROS packages are provided as pre-built binaries.
 Usually, you will get the released version of binaries when following <a class="reference internal" href="../Installation.html"><span class="doc">Installation</span></a>.
 There are also pre-released versions of binaries that are useful for testing before making an official release.
 This article describes several options if you would like to try out pre-released versions of ROS binaries.</p>
 <div class="section" id="debian-testing-repository">
-<h2>Debian testing repository<a class="headerlink" href="#debian-testing-repository" title="Permalink to this headline"></a></h2>
+<h2>Debian testing repository<a class="headerlink" href="#debian-testing-repository" title="Lien permanent vers ce titre"></a></h2>
 <p>When packages are released into a ROS distribution (using bloom), the buildfarm builds them into debian packages which are stored temporarily in the <strong>building</strong> apt repository.
 As dependent packages are rebuilt, an automatic process periodically synchronizes the packages in <strong>building</strong> to a secondary repository called <strong>ros-testing</strong>.
 <strong>ros-testing</strong> is intended as a soaking area where developers and bleeding-edge users may give the packages extra testing, before they are manually synced into the public ros repository from which users typically install packages.</p>
@@ -404,13 +405,13 @@ sudo<span class="w"> </span>apt<span class="w"> </span>dist-upgrade
 </ol>
 </div>
 <div class="section" id="fat-binaries">
-<span id="prerelease-binaries"></span><h2>Fat binaries<a class="headerlink" href="#fat-binaries" title="Permalink to this headline"></a></h2>
+<span id="prerelease-binaries"></span><h2>Fat binaries<a class="headerlink" href="#fat-binaries" title="Lien permanent vers ce titre"></a></h2>
 <p>For core packages, we run nightly packaging jobs for Ubuntu Linux, RHEL, and Windows.
 These packaging jobs produce archives with pre-built binaries that can be downloaded and extracted to your filesystem.</p>
 <ol class="arabic">
 <li><p>Make sure you have all dependencies installed according to the <a class="reference internal" href="Alternatives/Latest-Development-Setup.html"><span class="doc">latest development setup</span></a> for your platform.</p></li>
 <li><p>Go to <a class="reference external" href="https://ci.ros2.org/view/packaging/">https://ci.ros2.org/view/packaging/</a> and select a packaging job from the list corresponding to your platform.</p></li>
-<li><p>Under the heading “Last Successful Artifacts” you should see a download link (e.g. for Windows, <code class="docutils literal notranslate"><span class="pre">ros2-package-windows-AMD64.zip</span></code>).</p></li>
+<li><p>Under the heading « Last Successful Artifacts » you should see a download link (e.g. for Windows, <code class="docutils literal notranslate"><span class="pre">ros2-package-windows-AMD64.zip</span></code>).</p></li>
 <li><p>Download and extract the archive to your file system.</p></li>
 <li><p>To use the fat binary installation, source the <code class="docutils literal notranslate"><span class="pre">setup.*</span></code> file that can be found in the root of the archive.</p>
 <div class="sphinx-tabs docutils container">
@@ -425,7 +426,7 @@ These packaging jobs produce archives with pre-built binaries that can be downlo
 </ol>
 </div>
 <div class="section" id="docker">
-<h2>Docker<a class="headerlink" href="#docker" title="Permalink to this headline"></a></h2>
+<h2>Docker<a class="headerlink" href="#docker" title="Lien permanent vers ce titre"></a></h2>
 <p>For Ubuntu Linux, there is also a nightly Docker image based on the nightly fat archive.</p>
 <ol class="arabic">
 <li><p>Pull the Docker image:</p>
@@ -447,9 +448,9 @@ These packaging jobs produce archives with pre-built binaries that can be downlo
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Maintaining-a-Source-Checkout.html" class="btn btn-neutral float-left" title="Maintain source checkout" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="DDS-Implementations.html" class="btn btn-neutral float-right" title="DDS implementations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Maintaining-a-Source-Checkout.html" class="btn btn-neutral float-left" title="Maintain source checkout" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="DDS-Implementations.html" class="btn btn-neutral float-right" title="DDS implementations" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -458,9 +459,9 @@ These packaging jobs produce archives with pre-built binaries that can be downlo
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

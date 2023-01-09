@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About ROS 2 interfaces &mdash; ROS 2 documentation  documentation</title>
+  <title>About ROS 2 interfaces &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="About parameters in ROS 2" href="About-ROS-2-Parameters.html" />
     <link rel="prev" title="About ROS 2 client libraries" href="About-ROS-2-Client-Libraries.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -342,7 +343,7 @@
           <li class="breadcrumb-item"><a href="../Concepts.html">Concepts</a></li>
       <li class="breadcrumb-item active">About ROS 2 interfaces</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Concepts/About-ROS-Interfaces.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Concepts/About-ROS-Interfaces.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -353,7 +354,7 @@
 
 
   <div class="section" id="about-ros-2-interfaces">
-<span id="interfaceconcept"></span><h1>About ROS 2 interfaces<a class="headerlink" href="#about-ros-2-interfaces" title="Permalink to this headline"></a></h1>
+<span id="interfaceconcept"></span><h1>About ROS 2 interfaces<a class="headerlink" href="#about-ros-2-interfaces" title="Lien permanent vers ce titre"></a></h1>
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">Table of Contents</p>
 <ul class="simple">
@@ -375,7 +376,7 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2><a class="toc-backref" href="#id1">1. Background</a><a class="headerlink" href="#background" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id1">1. Background</a><a class="headerlink" href="#background" title="Lien permanent vers ce titre"></a></h2>
 <p>ROS applications typically communicate through interfaces of one of three types: messages, services and actions.
 ROS 2 uses a simplified description language, the interface definition language (IDL), to describe these interfaces.
 This description makes it easy for ROS tools to automatically generate source code for the interface type in several target languages.</p>
@@ -388,11 +389,11 @@ Each part is a message declaration itself.</p></li>
 </ul>
 </div>
 <div class="section" id="message-description-specification">
-<h2><a class="toc-backref" href="#id2">2. Message description specification</a><a class="headerlink" href="#message-description-specification" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id2">2. Message description specification</a><a class="headerlink" href="#message-description-specification" title="Lien permanent vers ce titre"></a></h2>
 <p>Messages are described and defined in <code class="docutils literal notranslate"><span class="pre">.msg</span></code> files in the <code class="docutils literal notranslate"><span class="pre">msg/</span></code> directory of a ROS package.
 <code class="docutils literal notranslate"><span class="pre">.msg</span></code> files are composed of two parts: fields and constants.</p>
 <div class="section" id="fields">
-<h3><a class="toc-backref" href="#id3">2.1 Fields</a><a class="headerlink" href="#fields" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id3">2.1 Fields</a><a class="headerlink" href="#fields" title="Lien permanent vers ce titre"></a></h3>
 <p>Each field consists of a type and a name, separated by a space, i.e:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fieldtype1<span class="w"> </span>fieldname1
 fieldtype2<span class="w"> </span>fieldname2
@@ -405,11 +406,11 @@ string<span class="w"> </span>my_string
 </pre></div>
 </div>
 <div class="section" id="field-types">
-<h4><a class="toc-backref" href="#id4">2.1.1 Field types</a><a class="headerlink" href="#field-types" title="Permalink to this headline"></a></h4>
+<h4><a class="toc-backref" href="#id4">2.1.1 Field types</a><a class="headerlink" href="#field-types" title="Lien permanent vers ce titre"></a></h4>
 <p>Field types can be:</p>
 <ul class="simple">
 <li><p>a built-in-type</p></li>
-<li><p>names of Message descriptions defined on their own, such as “geometry_msgs/PoseStamped”</p></li>
+<li><p>names of Message descriptions defined on their own, such as « geometry_msgs/PoseStamped »</p></li>
 </ul>
 <p><em>Built-in-types currently supported:</em></p>
 <table class="docutils align-default">
@@ -558,11 +559,11 @@ string&lt;<span class="o">=</span><span class="m">10</span><span class="o">[</sp
 </div>
 </div>
 <div class="section" id="field-names">
-<h4><a class="toc-backref" href="#id5">2.1.2 Field names</a><a class="headerlink" href="#field-names" title="Permalink to this headline"></a></h4>
+<h4><a class="toc-backref" href="#id5">2.1.2 Field names</a><a class="headerlink" href="#field-names" title="Lien permanent vers ce titre"></a></h4>
 <p>Field names must be lowercase alphanumeric characters with underscores for separating words. They must start with an alphabetic character, they must not end with an underscore and never have two consecutive underscores.</p>
 </div>
 <div class="section" id="field-default-value">
-<h4><a class="toc-backref" href="#id6">2.1.3 Field default value</a><a class="headerlink" href="#field-default-value" title="Permalink to this headline"></a></h4>
+<h4><a class="toc-backref" href="#id6">2.1.3 Field default value</a><a class="headerlink" href="#field-default-value" title="Lien permanent vers ce titre"></a></h4>
 <p>Default values can be set to any field in the message type.
 Currently default values are not supported for string arrays and complex types (i.e. types not present in the built-in-types table above, that applies to all nested messages)</p>
 <p>Defining a default value is done by adding a third element to the field definition line, i.e:</p>
@@ -584,8 +585,8 @@ int32<span class="o">[]</span><span class="w"> </span>samples<span class="w"> </
 </div>
 </div>
 <div class="section" id="constants">
-<h3><a class="toc-backref" href="#id7">2.2 Constants</a><a class="headerlink" href="#constants" title="Permalink to this headline"></a></h3>
-<p>Each constant definition is like a field description with a default value, except that this value can never be changed programatically. This value assignment is indicated by use of an equal ‘=’ sign, e.g.</p>
+<h3><a class="toc-backref" href="#id7">2.2 Constants</a><a class="headerlink" href="#constants" title="Lien permanent vers ce titre"></a></h3>
+<p>Each constant definition is like a field description with a default value, except that this value can never be changed programatically. This value assignment is indicated by use of an equal “=” sign, e.g.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>constanttype<span class="w"> </span><span class="nv">CONSTANTNAME</span><span class="o">=</span>constantvalue
 </pre></div>
 </div>
@@ -603,9 +604,9 @@ string<span class="w"> </span><span class="nv">EXAMPLE</span><span class="o">=</
 </div>
 </div>
 <div class="section" id="service-description-specification">
-<h2><a class="toc-backref" href="#id8">3. Service description specification</a><a class="headerlink" href="#service-description-specification" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id8">3. Service description specification</a><a class="headerlink" href="#service-description-specification" title="Lien permanent vers ce titre"></a></h2>
 <p>Services are described and defined in <code class="docutils literal notranslate"><span class="pre">.srv</span></code> files in the <code class="docutils literal notranslate"><span class="pre">srv/</span></code> directory of a ROS package.</p>
-<p>A service description file consists of a request and a response msg type, separated by ‘—’. Any two <code class="docutils literal notranslate"><span class="pre">.msg</span></code> files concatenated with a ‘—’ are a legal service description.</p>
+<p>A service description file consists of a request and a response msg type, separated by “—”. Any two <code class="docutils literal notranslate"><span class="pre">.msg</span></code> files concatenated with a “—” are a legal service description.</p>
 <p>Here is a very simple example of a service that takes in a string and returns a string:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>string<span class="w"> </span>str
 ---
@@ -631,7 +632,7 @@ uint32<span class="w"> </span>an_integer
 <p>You cannot embed another service inside of a service.</p>
 </div>
 <div class="section" id="new-features-in-ros-2-interfaces">
-<h2><a class="toc-backref" href="#id9">4. New features in ROS 2 interfaces</a><a class="headerlink" href="#new-features-in-ros-2-interfaces" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id9">4. New features in ROS 2 interfaces</a><a class="headerlink" href="#new-features-in-ros-2-interfaces" title="Lien permanent vers ce titre"></a></h2>
 <p>The ROS 2 IDL is closely related to the <a class="reference external" href="https://wiki.ros.org/msg">ROS 1 IDL</a>.
 Most existing ROS 1 <code class="docutils literal notranslate"><span class="pre">.msg</span></code> and <code class="docutils literal notranslate"><span class="pre">.srv</span></code> files should be usable as-is with ROS 2.
 Atop ROS 1’s existing feature set, the ROS 2 IDL introduces some new features, namely:</p>
@@ -650,9 +651,9 @@ You can also specify default values for action parts.</p></li>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="About-ROS-2-Client-Libraries.html" class="btn btn-neutral float-left" title="About ROS 2 client libraries" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="About-ROS-2-Parameters.html" class="btn btn-neutral float-right" title="About parameters in ROS 2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="About-ROS-2-Client-Libraries.html" class="btn btn-neutral float-left" title="About ROS 2 client libraries" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="About-ROS-2-Parameters.html" class="btn btn-neutral float-right" title="About parameters in ROS 2" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -661,9 +662,9 @@ You can also specify default values for action parts.</p></li>
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DDS tuning information &mdash; ROS 2 documentation  documentation</title>
+  <title>DDS tuning information &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="rosbag2: Overriding QoS Policies" href="Overriding-QoS-Policies-For-Recording-And-Playback.html" />
     <link rel="prev" title="Synchronous vs. asynchronous service clients" href="Sync-Vs-Async.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -342,7 +343,7 @@
           <li class="breadcrumb-item"><a href="../How-To-Guides.html">How-to Guides</a></li>
       <li class="breadcrumb-item active">DDS tuning information</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/How-To-Guides/DDS-tuning.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/How-To-Guides/DDS-tuning.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -353,7 +354,7 @@
 
 
   <div class="section" id="dds-tuning-information">
-<h1>DDS tuning information<a class="headerlink" href="#dds-tuning-information" title="Permalink to this headline"></a></h1>
+<h1>DDS tuning information<a class="headerlink" href="#dds-tuning-information" title="Lien permanent vers ce titre"></a></h1>
 <p>This page provides some guidance on parameter tunings that were found to address issues faced while using various DDS implementations on Linux in real-world situations.
 It is possible that the issues we identified on Linux or while using one vendor may occur for other platforms and vendors not documented here.</p>
 <p>The recommendations below are starting points for tuning; they worked for specific systems and environments, but the tuning may vary depending on a number of factors.
@@ -361,11 +362,11 @@ You may need to increase or decrease values while debugging relative to factors 
 <p>It is important to recognize that tuning parameters can come at a cost to resources, and may affect parts of your system beyond the scope of the desired improvements.
 The benefits of improving reliability should be weighed against any detriments for each individual case.</p>
 <div class="section" id="cross-vendor-tuning">
-<span id="id1"></span><h2>Cross-vendor tuning<a class="headerlink" href="#cross-vendor-tuning" title="Permalink to this headline"></a></h2>
+<span id="id1"></span><h2>Cross-vendor tuning<a class="headerlink" href="#cross-vendor-tuning" title="Lien permanent vers ce titre"></a></h2>
 <p><strong>Issue:</strong> Sending data over lossy (usually WiFi) connections becomes problematic when some IP fragments are dropped, possibly causing the kernel buffer on the receiving side to become full.</p>
 <p>When a UDP packet is missing at least one IP fragment, the rest of the received fragments fill up the kernel buffer.
 By default, the Linux kernel will time out after 30s of trying to recombine packet fragments.
-Since the kernel buffer is full at this point (default size is 256KB), no new fragments can come in, and so the connection will seemingly “hang” for long periods of time.</p>
+Since the kernel buffer is full at this point (default size is 256KB), no new fragments can come in, and so the connection will seemingly « hang » for long periods of time.</p>
 <p>This issue is generic across all DDS vendors, so the solutions involve adjusting kernel parameters.</p>
 <p><strong>Solution:</strong> Use best-effort QoS settings instead of reliable.</p>
 <p>Best-effort settings reduce the amount of network traffic since the DDS implementation does not have to incur the overhead of reliable communications, where publishers require acknowledgements for messages sent to subscribers and must resend samples that have not been properly received.</p>
@@ -410,12 +411,12 @@ For example, instead of defining a <code class="docutils literal notranslate"><s
 </div>
 </div>
 <div class="section" id="fast-rtps-tuning">
-<h2>Fast RTPS tuning<a class="headerlink" href="#fast-rtps-tuning" title="Permalink to this headline"></a></h2>
+<h2>Fast RTPS tuning<a class="headerlink" href="#fast-rtps-tuning" title="Lien permanent vers ce titre"></a></h2>
 <p><strong>Issue:</strong> Fast RTPS floods the network with large pieces of data or fast-published data when operating over WiFi.</p>
 <p>See the solutions under <a class="reference internal" href="#cross-vendor-tuning"><span class="std std-ref">Cross-vendor tuning</span></a>.</p>
 </div>
 <div class="section" id="cyclone-dds-tuning">
-<h2>Cyclone DDS tuning<a class="headerlink" href="#cyclone-dds-tuning" title="Permalink to this headline"></a></h2>
+<h2>Cyclone DDS tuning<a class="headerlink" href="#cyclone-dds-tuning" title="Lien permanent vers ce titre"></a></h2>
 <p><strong>Issue:</strong> Cyclone DDS is not delivering large messages reliably, despite using reliable settings and transferring over a wired network.</p>
 <p>This issue should be <a class="reference external" href="https://github.com/eclipse-cyclonedds/cyclonedds/issues/484">addressed soon</a>.
 Until then, we’ve come up with the following solution (debugged using <a class="reference external" href="https://github.com/jacobperron/pc_pipe">this test program</a>):</p>
@@ -451,7 +452,7 @@ Until then, we’ve come up with the following solution (debugged using <a class
 </div>
 </div>
 <div class="section" id="rti-connext-tuning">
-<h2>RTI Connext tuning<a class="headerlink" href="#rti-connext-tuning" title="Permalink to this headline"></a></h2>
+<h2>RTI Connext tuning<a class="headerlink" href="#rti-connext-tuning" title="Lien permanent vers ce titre"></a></h2>
 <p><strong>Issue:</strong> Connext is not delivering large messages reliably, despite using reliable settings and transferring over a wired network.</p>
 <p><strong>Solution:</strong> This <a class="reference external" href="https://github.com/jacobperron/pc_pipe/blob/master/etc/ROS2TEST_QOS_PROFILES.xml">Connext QoS profile</a>, along with increasing the <code class="docutils literal notranslate"><span class="pre">rmem_max</span></code> parameter.</p>
 <p>Set the maximum receive buffer size, <code class="docutils literal notranslate"><span class="pre">rmem_max</span></code>, by running:</p>
@@ -477,9 +478,9 @@ The Connext flow controllers can be used to tune bandwidth and its aggressivenes
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Sync-Vs-Async.html" class="btn btn-neutral float-left" title="Synchronous vs. asynchronous service clients" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Overriding-QoS-Policies-For-Recording-And-Playback.html" class="btn btn-neutral float-right" title="rosbag2: Overriding QoS Policies" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Sync-Vs-Async.html" class="btn btn-neutral float-left" title="Synchronous vs. asynchronous service clients" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Overriding-QoS-Policies-For-Recording-And-Playback.html" class="btn btn-neutral float-right" title="rosbag2: Overriding QoS Policies" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -488,9 +489,9 @@ The Connext flow controllers can be used to tune bandwidth and its aggressivenes
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

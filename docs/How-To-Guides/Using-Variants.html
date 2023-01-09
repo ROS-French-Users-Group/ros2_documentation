@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Using variants &mdash; ROS 2 documentation  documentation</title>
+  <title>Using variants &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Using the ros2 param command-line tool" href="Using-ros2-param.html" />
     <link rel="prev" title="Topics vs Services vs Actions" href="Topics-Services-Actions.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -342,7 +343,7 @@
           <li class="breadcrumb-item"><a href="../How-To-Guides.html">How-to Guides</a></li>
       <li class="breadcrumb-item active">Using variants</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/How-To-Guides/Using-Variants.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/How-To-Guides/Using-Variants.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -353,7 +354,7 @@
 
 
   <div class="section" id="using-variants">
-<h1>Using variants<a class="headerlink" href="#using-variants" title="Permalink to this headline"></a></h1>
+<h1>Using variants<a class="headerlink" href="#using-variants" title="Lien permanent vers ce titre"></a></h1>
 <p>Metapackages do not provide software directly but depend on a group of other related packages to provide a convienent installation mechanism for the complete group of packages. <a class="footnote-reference brackets" href="#id3" id="id1">1</a> <a class="footnote-reference brackets" href="#id4" id="id2">2</a>
 Variants are a list of official metapackages for commonly useful groups of ROS packages.</p>
 <dl class="footnote brackets">
@@ -367,12 +368,12 @@ Variants are a list of official metapackages for commonly useful groups of ROS p
 <p>The different variants in ROS 2 are specified in <a class="reference external" href="https://ros.org/reps/rep-2001.html">REP-2001</a>.</p>
 <p>In addition to the official variants, there may be metapackages for specific institutions or robots as described in <a class="reference external" href="https://www.ros.org/reps/rep-0108.html#institution-specific">REP-108</a>.</p>
 <div class="section" id="adding-variants">
-<h2>Adding variants<a class="headerlink" href="#adding-variants" title="Permalink to this headline"></a></h2>
+<h2>Adding variants<a class="headerlink" href="#adding-variants" title="Lien permanent vers ce titre"></a></h2>
 <p>Additional variants that are of general use to the ROS community can be proposed by contributing an update to <a class="reference external" href="https://github.com/ros-infrastructure/rep/blob/master/rep-2001.rst">REP-2001 via pull request</a> describing the packages included in the new variant.
 Institution and robot specific variants can be published directly by their respective maintainers and no update to REP-2001 is required.</p>
 </div>
 <div class="section" id="creating-project-specific-variants">
-<h2>Creating project-specific variants<a class="headerlink" href="#creating-project-specific-variants" title="Permalink to this headline"></a></h2>
+<h2>Creating project-specific variants<a class="headerlink" href="#creating-project-specific-variants" title="Lien permanent vers ce titre"></a></h2>
 <p>If you are creating ROS packages to use privately in your own projects, you can create variants specific to your projects using the official variants as examples.
 To do so you need only create two files:</p>
 <ol class="arabic simple">
@@ -411,7 +412,7 @@ To do so you need only create two files:</p>
 <li><p>You can then build and install your variant package alongside your other private packages.</p></li>
 </ol>
 <div class="section" id="creating-custom-variants-with-platform-specific-tools">
-<h3>Creating custom variants with platform-specific tools<a class="headerlink" href="#creating-custom-variants-with-platform-specific-tools" title="Permalink to this headline"></a></h3>
+<h3>Creating custom variants with platform-specific tools<a class="headerlink" href="#creating-custom-variants-with-platform-specific-tools" title="Lien permanent vers ce titre"></a></h3>
 <p>Some platforms have tools for creating basic packages that do not require a full ROS build farm environment or equivalent infrastructure.
 It is possible to use these tools to create platform-dependent variants.
 This approach does not include support for ROS packaging tools and is platform dependent but requires much less infrastructure to produce if you are creating collections of existing packages rather than a mix of public and private ROS packages.
@@ -425,9 +426,9 @@ The Debian Administrator’s handbook has a <a class="reference external" href="
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Topics-Services-Actions.html" class="btn btn-neutral float-left" title="Topics vs Services vs Actions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Using-ros2-param.html" class="btn btn-neutral float-right" title="Using the ros2 param command-line tool" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Topics-Services-Actions.html" class="btn btn-neutral float-left" title="Topics vs Services vs Actions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Using-ros2-param.html" class="btn btn-neutral float-right" title="Using the ros2 param command-line tool" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -436,9 +437,9 @@ The Debian Administrator’s handbook has a <a class="reference external" href="
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

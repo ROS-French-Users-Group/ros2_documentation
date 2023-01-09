@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Windows (source) &mdash; ROS 2 documentation  documentation</title>
+  <title>Windows (source) &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
     <link rel="next" title="RHEL (source)" href="RHEL-Development-Setup.html" />
     <link rel="prev" title="Ubuntu (binary)" href="Ubuntu-Install-Binary.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -343,7 +344,7 @@
           <li class="breadcrumb-item"><a href="../Alternatives.html">Alternatives</a></li>
       <li class="breadcrumb-item active">Windows (source)</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Installation/Alternatives/Windows-Development-Setup.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Installation/Alternatives/Windows-Development-Setup.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -354,7 +355,7 @@
 
 
   <div class="section" id="windows-source">
-<span id="windows-latest"></span><h1>Windows (source)<a class="headerlink" href="#windows-source" title="Permalink to this headline"></a></h1>
+<span id="windows-latest"></span><h1>Windows (source)<a class="headerlink" href="#windows-source" title="Lien permanent vers ce titre"></a></h1>
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">Table of Contents</p>
 <ul class="simple">
@@ -402,38 +403,38 @@
 </div>
 <p>This guide is about how to setup a development environment for ROS 2 on Windows.</p>
 <div class="section" id="system-requirements">
-<h2><a class="toc-backref" href="#id2">System requirements</a><a class="headerlink" href="#system-requirements" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id2">System requirements</a><a class="headerlink" href="#system-requirements" title="Lien permanent vers ce titre"></a></h2>
 <p>Only Windows 10 is supported.</p>
 <div class="section" id="language-support">
-<h3><a class="toc-backref" href="#id3">Language support</a><a class="headerlink" href="#language-support" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id3">Language support</a><a class="headerlink" href="#language-support" title="Lien permanent vers ce titre"></a></h3>
 <p>Make sure you have a locale which supports <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code>.
 For example, for a Chinese-language Windows 10 installation, you may need to install an <a class="reference external" href="https://support.microsoft.com/en-us/windows/language-packs-for-windows-a5094319-a92d-18de-5b53-1cfc697cfca8">English language pack</a>.</p>
 </div>
 </div>
 <div class="section" id="installing-prerequisites">
-<h2><a class="toc-backref" href="#id4">Installing prerequisites</a><a class="headerlink" href="#installing-prerequisites" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id4">Installing prerequisites</a><a class="headerlink" href="#installing-prerequisites" title="Lien permanent vers ce titre"></a></h2>
 <div class="section" id="install-chocolatey">
-<h3><a class="toc-backref" href="#id5">Install Chocolatey</a><a class="headerlink" href="#install-chocolatey" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id5">Install Chocolatey</a><a class="headerlink" href="#install-chocolatey" title="Lien permanent vers ce titre"></a></h3>
 <p>Chocolatey is a package manager for Windows, install it by following their installation instructions:</p>
 <p><a class="reference external" href="https://chocolatey.org/">https://chocolatey.org/</a></p>
 <p>You’ll use Chocolatey to install some other developer tools.</p>
 </div>
 <div class="section" id="install-python">
-<h3><a class="toc-backref" href="#id6">Install Python</a><a class="headerlink" href="#install-python" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id6">Install Python</a><a class="headerlink" href="#install-python" title="Lien permanent vers ce titre"></a></h3>
 <p>Open a Command Prompt and type the following to install Python via Chocolatey:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>choco<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>python<span class="w"> </span>--version<span class="w"> </span><span class="m">3</span>.8.3
 </pre></div>
 </div>
 </div>
 <div class="section" id="install-visual-c-redistributables">
-<h3><a class="toc-backref" href="#id7">Install Visual C++ Redistributables</a><a class="headerlink" href="#install-visual-c-redistributables" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id7">Install Visual C++ Redistributables</a><a class="headerlink" href="#install-visual-c-redistributables" title="Lien permanent vers ce titre"></a></h3>
 <p>Open a Command Prompt and type the following to install them via Chocolatey:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>choco<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>vcredist2013<span class="w"> </span>vcredist140
 </pre></div>
 </div>
 </div>
 <div class="section" id="install-openssl">
-<h3><a class="toc-backref" href="#id8">Install OpenSSL</a><a class="headerlink" href="#install-openssl" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id8">Install OpenSSL</a><a class="headerlink" href="#install-openssl" title="Lien permanent vers ce titre"></a></h3>
 <p>Download the <em>Win64 OpenSSL v1.1.1n</em> OpenSSL installer from <a class="reference external" href="https://slproweb.com/products/Win32OpenSSL.html">this page</a>.
 Scroll to the bottom of the page and download <em>Win64 OpenSSL v1.1.1n</em>.
 Don’t download the Win32 or Light versions, or the v3.X.Y installers.</p>
@@ -443,14 +444,14 @@ Don’t download the Win32 or Light versions, or the v3.X.Y installers.</p>
 </pre></div>
 </div>
 <p>You will need to append the OpenSSL-Win64 bin folder to your PATH.
-You can do this by clicking the Windows icon, typing “Environment Variables”, then clicking on “Edit the system environment variables”.
-In the resulting dialog, click “Environment Variables”, then click “Path” on the bottom pane, finally click “Edit” and add the path below.</p>
+You can do this by clicking the Windows icon, typing « Environment Variables », then clicking on « Edit the system environment variables ».
+In the resulting dialog, click « Environment Variables », then click « Path » on the bottom pane, finally click « Edit » and add the path below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\OpenSSL-Win64\bin\</span></code></p></li>
 </ul>
 </div>
 <div class="section" id="install-visual-studio">
-<h3><a class="toc-backref" href="#id9">Install Visual Studio</a><a class="headerlink" href="#install-visual-studio" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id9">Install Visual Studio</a><a class="headerlink" href="#install-visual-studio" title="Lien permanent vers ce titre"></a></h3>
 <p>Install Visual Studio 2019.</p>
 <p>If you already have a paid version of Visual Studio 2019 (Professional, Enterprise), skip this step.</p>
 <p>Microsoft provides a free of charge version of Visual Studio 2019, named Community, which can be used to build applications that use ROS 2.
@@ -463,7 +464,7 @@ In the resulting dialog, click “Environment Variables”, then click “Path�
 <p>Make sure that no C++ CMake tools are installed by unselecting them in the list of components to be installed.</p>
 </div>
 <div class="section" id="install-opencv">
-<h3><a class="toc-backref" href="#id10">Install OpenCV</a><a class="headerlink" href="#install-opencv" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id10">Install OpenCV</a><a class="headerlink" href="#install-opencv" title="Lien permanent vers ce titre"></a></h3>
 <p>Some of the examples require OpenCV to be installed.</p>
 <p>You can download a precompiled version of OpenCV 3.4.6 from <a class="reference external" href="https://github.com/ros2/ros2/releases/download/opencv-archives/opencv-3.4.6-vc16.VS2019.zip">https://github.com/ros2/ros2/releases/download/opencv-archives/opencv-3.4.6-vc16.VS2019.zip</a> .</p>
 <p>Assuming you unpacked it to <code class="docutils literal notranslate"><span class="pre">C:\opencv</span></code>, type the following on a Command Prompt (requires Admin privileges):</p>
@@ -474,7 +475,7 @@ In the resulting dialog, click “Environment Variables”, then click “Path�
 You have to extend the <code class="docutils literal notranslate"><span class="pre">PATH</span></code> variable to <code class="docutils literal notranslate"><span class="pre">C:\opencv\x64\vc16\bin</span></code>.</p>
 </div>
 <div class="section" id="install-dependencies">
-<h3><a class="toc-backref" href="#id11">Install dependencies</a><a class="headerlink" href="#install-dependencies" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id11">Install dependencies</a><a class="headerlink" href="#install-dependencies" title="Lien permanent vers ce titre"></a></h3>
 <p>There are a few dependencies not available in the Chocolatey package database.
 In order to ease the manual installation process, we provide the necessary Chocolatey packages.</p>
 <p>As some chocolatey packages rely on it, we start by installing CMake</p>
@@ -506,7 +507,7 @@ In order to ease the manual installation process, we provide the necessary Choco
 </div>
 </div>
 <div class="section" id="install-qt5">
-<h3><a class="toc-backref" href="#id12">Install Qt5</a><a class="headerlink" href="#install-qt5" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id12">Install Qt5</a><a class="headerlink" href="#install-qt5" title="Lien permanent vers ce titre"></a></h3>
 <p>Download the <a class="reference external" href="https://www.qt.io/offline-installers">5.12.X offline installer</a> from Qt’s website.
 Run the installer.
 Make sure to select the <code class="docutils literal notranslate"><span class="pre">MSVC</span> <span class="pre">2017</span> <span class="pre">64-bit</span></code> component under the <code class="docutils literal notranslate"><span class="pre">Qt</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Qt</span> <span class="pre">5.12.12</span></code> tree.</p>
@@ -522,35 +523,35 @@ setx<span class="w"> </span>/m<span class="w"> </span>QT_QPA_PLATFORM_PLUGIN_PAT
 </div>
 </div>
 <div class="section" id="rqt-dependencies">
-<h3><a class="toc-backref" href="#id13">RQt dependencies</a><a class="headerlink" href="#rqt-dependencies" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id13">RQt dependencies</a><a class="headerlink" href="#rqt-dependencies" title="Lien permanent vers ce titre"></a></h3>
 <p>To run rqt_graph you need to <a class="reference external" href="https://graphviz.gitlab.io/_pages/Download/Download_windows.html">download</a> and install <a class="reference external" href="https://graphviz.gitlab.io/">Graphviz</a>.
 The installer will ask if to add graphviz to PATH, choose to either add it to the current user or all users.</p>
 </div>
 <div class="section" id="install-additional-dds-implementations-optional">
-<h3><a class="toc-backref" href="#id14">Install additional DDS implementations (optional)</a><a class="headerlink" href="#install-additional-dds-implementations-optional" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id14">Install additional DDS implementations (optional)</a><a class="headerlink" href="#install-additional-dds-implementations-optional" title="Lien permanent vers ce titre"></a></h3>
 <p>If you would like to use another DDS or RTPS vendor besides the default, Fast DDS, you can find instructions <a class="reference external" href="/Installation/DDS-Implementations">here</a>.</p>
 </div>
 </div>
 <div class="section" id="additional-prerequisites">
-<h2><a class="toc-backref" href="#id15">Additional prerequisites</a><a class="headerlink" href="#additional-prerequisites" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id15">Additional prerequisites</a><a class="headerlink" href="#additional-prerequisites" title="Lien permanent vers ce titre"></a></h2>
 <p>When building from source you’ll need a few additional prerequisites installed.</p>
 <div class="section" id="install-additional-prerequisites-from-chocolatey">
-<h3><a class="toc-backref" href="#id16">Install additional prerequisites from Chocolatey</a><a class="headerlink" href="#install-additional-prerequisites-from-chocolatey" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id16">Install additional prerequisites from Chocolatey</a><a class="headerlink" href="#install-additional-prerequisites-from-chocolatey" title="Lien permanent vers ce titre"></a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>choco<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>cppcheck<span class="w"> </span>curl<span class="w"> </span>git<span class="w"> </span>winflexbison3
 </pre></div>
 </div>
-<p>You will need to append the Git cmd folder <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\Git\cmd</span></code> to the PATH (you can do this by clicking the Windows icon, typing “Environment Variables”, then clicking on “Edit the system environment variables”.
-In the resulting dialog, click “Environment Variables”, the click “Path” on the bottom pane, then click “Edit” and add the path).</p>
+<p>You will need to append the Git cmd folder <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\Git\cmd</span></code> to the PATH (you can do this by clicking the Windows icon, typing « Environment Variables », then clicking on « Edit the system environment variables ».
+In the resulting dialog, click « Environment Variables », the click « Path » on the bottom pane, then click « Edit » and add the path).</p>
 </div>
 <div class="section" id="install-python-prerequisites">
-<h3><a class="toc-backref" href="#id17">Install Python prerequisites</a><a class="headerlink" href="#install-python-prerequisites" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id17">Install Python prerequisites</a><a class="headerlink" href="#install-python-prerequisites" title="Lien permanent vers ce titre"></a></h3>
 <p>Installing additional Python dependencies:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>colcon-common-extensions<span class="w"> </span>coverage<span class="w"> </span>flake8<span class="w"> </span>flake8-blind-except<span class="w"> </span>flake8-builtins<span class="w"> </span>flake8-class-newline<span class="w"> </span>flake8-comprehensions<span class="w"> </span>flake8-deprecated<span class="w"> </span>flake8-docstrings<span class="w"> </span>flake8-import-order<span class="w"> </span>flake8-quotes<span class="w"> </span>mock<span class="w"> </span><span class="nv">mypy</span><span class="o">==</span><span class="m">0</span>.931<span class="w"> </span>pep8<span class="w"> </span>pydocstyle<span class="w"> </span>pytest<span class="w"> </span>pytest-mock<span class="w"> </span>vcstool
 </pre></div>
 </div>
 </div>
 <div class="section" id="install-miscellaneous-prerequisites">
-<h3><a class="toc-backref" href="#id18">Install miscellaneous prerequisites</a><a class="headerlink" href="#install-miscellaneous-prerequisites" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id18">Install miscellaneous prerequisites</a><a class="headerlink" href="#install-miscellaneous-prerequisites" title="Lien permanent vers ce titre"></a></h3>
 <p>Next install xmllint:</p>
 <ul class="simple">
 <li><p>Download the <a class="reference external" href="https://www.zlatkovic.com/pub/libxml/64bit/">64 bit binary archives</a> of <code class="docutils literal notranslate"><span class="pre">libxml2</span></code> (and its dependencies <code class="docutils literal notranslate"><span class="pre">iconv</span></code> and <code class="docutils literal notranslate"><span class="pre">zlib</span></code>) from <a class="reference external" href="https://www.zlatkovic.com/projects/libxml/">https://www.zlatkovic.com/projects/libxml/</a></p></li>
@@ -560,7 +561,7 @@ In the resulting dialog, click “Environment Variables”, the click “Path”
 </div>
 </div>
 <div class="section" id="get-the-ros-2-code">
-<h2><a class="toc-backref" href="#id19">Get the ROS 2 code</a><a class="headerlink" href="#get-the-ros-2-code" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id19">Get the ROS 2 code</a><a class="headerlink" href="#get-the-ros-2-code" title="Lien permanent vers ce titre"></a></h2>
 <p>Now that we have the development tools we can get the ROS 2 source code.</p>
 <p>First setup a development folder, for example <code class="docutils literal notranslate"><span class="pre">C:\rolling</span></code>:</p>
 <div class="admonition note">
@@ -577,14 +578,14 @@ To allow longer paths, see <a class="reference external" href="https://learn.mic
 </pre></div>
 </div>
 <div class="section" id="id1">
-<h3><a class="toc-backref" href="#id20">Install additional DDS implementations (optional)</a><a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id20">Install additional DDS implementations (optional)</a><a class="headerlink" href="#id1" title="Lien permanent vers ce titre"></a></h3>
 <p>Fast DDS is bundled with the ROS 2 source and will always be built unless you put an <code class="docutils literal notranslate"><span class="pre">COLCON_IGNORE</span></code> file in the <code class="docutils literal notranslate"><span class="pre">src\eProsima</span></code> folder.</p>
 <p>If you would like to use another DDS or RTPS vendor besides the default, you can find instructions <a class="reference internal" href="../DDS-Implementations.html"><span class="doc">here</span></a>.</p>
 </div>
 </div>
 <div class="section" id="build-the-ros-2-code">
-<h2><a class="toc-backref" href="#id21">Build the ROS 2 code</a><a class="headerlink" href="#build-the-ros-2-code" title="Permalink to this headline"></a></h2>
-<p id="windows-dev-build-ros2">To build ROS 2 you will need a Visual Studio Command Prompt (“x64 Native Tools Command Prompt for VS 2019”) running as Administrator.</p>
+<h2><a class="toc-backref" href="#id21">Build the ROS 2 code</a><a class="headerlink" href="#build-the-ros-2-code" title="Lien permanent vers ce titre"></a></h2>
+<p id="windows-dev-build-ros2">To build ROS 2 you will need a Visual Studio Command Prompt (« x64 Native Tools Command Prompt for VS 2019 ») running as Administrator.</p>
 <p>To build the <code class="docutils literal notranslate"><span class="pre">\rolling</span></code> folder tree:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon<span class="w"> </span>build<span class="w"> </span>--merge-install
 </pre></div>
@@ -601,16 +602,16 @@ See <a class="reference internal" href="#extra-stuff-for-debug-mode">Extra stuff
 </div>
 </div>
 <div class="section" id="environment-setup">
-<h2><a class="toc-backref" href="#id22">Environment setup</a><a class="headerlink" href="#environment-setup" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id22">Environment setup</a><a class="headerlink" href="#environment-setup" title="Lien permanent vers ce titre"></a></h2>
 <p>Start a command shell and source the ROS 2 setup file to set up the workspace:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>call<span class="w"> </span>C:<span class="se">\r</span>olling<span class="se">\i</span>nstall<span class="se">\l</span>ocal_setup.bat
 </pre></div>
 </div>
 <p>This will automatically set up the environment for any DDS vendors that support was built for.</p>
-<p>It is normal that the previous command, if nothing else went wrong, outputs “The system cannot find the path specified.” exactly once.</p>
+<p>It is normal that the previous command, if nothing else went wrong, outputs « The system cannot find the path specified. » exactly once.</p>
 </div>
 <div class="section" id="test-and-run">
-<h2><a class="toc-backref" href="#id23">Test and run</a><a class="headerlink" href="#test-and-run" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id23">Test and run</a><a class="headerlink" href="#test-and-run" title="Lien permanent vers ce titre"></a></h2>
 <p>Note that the first time you run any executable you will have to allow access to the network through a Windows Firewall popup.</p>
 <p>You can run the tests using this command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--merge-install
@@ -644,16 +645,16 @@ Hooray!</p>
 </div>
 </div>
 <div class="section" id="next-steps-after-installing">
-<h2><a class="toc-backref" href="#id24">Next steps after installing</a><a class="headerlink" href="#next-steps-after-installing" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id24">Next steps after installing</a><a class="headerlink" href="#next-steps-after-installing" title="Lien permanent vers ce titre"></a></h2>
 <p>Continue with the <a class="reference internal" href="../../Tutorials.html"><span class="doc">tutorials and demos</span></a> to configure your environment, create your own workspace and packages, and learn ROS 2 core concepts.</p>
 </div>
 <div class="section" id="additional-rmw-implementations-optional">
-<h2><a class="toc-backref" href="#id25">Additional RMW implementations (optional)</a><a class="headerlink" href="#additional-rmw-implementations-optional" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id25">Additional RMW implementations (optional)</a><a class="headerlink" href="#additional-rmw-implementations-optional" title="Lien permanent vers ce titre"></a></h2>
 <p>The default middleware that ROS 2 uses is <code class="docutils literal notranslate"><span class="pre">Fast</span> <span class="pre">DDS</span></code>, but the middleware (RMW) can be replaced at runtime.
 See the <a class="reference internal" href="../../How-To-Guides/Working-with-multiple-RMW-implementations.html"><span class="doc">guide</span></a> on how to work with multiple RMWs.</p>
 </div>
 <div class="section" id="extra-stuff-for-debug-mode">
-<h2><a class="toc-backref" href="#id26">Extra stuff for Debug mode</a><a class="headerlink" href="#extra-stuff-for-debug-mode" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id26">Extra stuff for Debug mode</a><a class="headerlink" href="#extra-stuff-for-debug-mode" title="Lien permanent vers ce titre"></a></h2>
 <p>If you want to be able to run all the tests in Debug mode, you’ll need to install a few more things:</p>
 <ul class="simple">
 <li><p>To be able to extract the Python source tarball, you can use PeaZip:</p></li>
@@ -732,17 +733,17 @@ python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </sp
 </ul>
 </div>
 <div class="section" id="stay-up-to-date">
-<h2><a class="toc-backref" href="#id27">Stay up to date</a><a class="headerlink" href="#stay-up-to-date" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id27">Stay up to date</a><a class="headerlink" href="#stay-up-to-date" title="Lien permanent vers ce titre"></a></h2>
 <p>See <a class="reference internal" href="../Maintaining-a-Source-Checkout.html"><span class="doc">Maintain source checkout</span></a> to periodically refresh your source installation.</p>
 </div>
 <div class="section" id="troubleshooting">
-<h2><a class="toc-backref" href="#id28">Troubleshooting</a><a class="headerlink" href="#troubleshooting" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id28">Troubleshooting</a><a class="headerlink" href="#troubleshooting" title="Lien permanent vers ce titre"></a></h2>
 <p>Troubleshooting techniques can be found <a class="reference internal" href="../../How-To-Guides/Installation-Troubleshooting.html#windows-troubleshooting"><span class="std std-ref">here</span></a>.</p>
 </div>
 <div class="section" id="uninstall">
-<h2><a class="toc-backref" href="#id29">Uninstall</a><a class="headerlink" href="#uninstall" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id29">Uninstall</a><a class="headerlink" href="#uninstall" title="Lien permanent vers ce titre"></a></h2>
 <ol class="arabic">
-<li><p>If you installed your workspace with colcon as instructed above, “uninstalling” could be just a matter of opening a new terminal and not sourcing the workspace’s <code class="docutils literal notranslate"><span class="pre">setup</span></code> file.
+<li><p>If you installed your workspace with colcon as instructed above, « uninstalling » could be just a matter of opening a new terminal and not sourcing the workspace’s <code class="docutils literal notranslate"><span class="pre">setup</span></code> file.
 This way, your environment will behave as though there is no Rolling install on your system.</p></li>
 <li><p>If you’re also trying to free up space, you can delete the entire workspace directory with:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rmdir<span class="w"> </span>/s<span class="w"> </span>/q<span class="w"> </span><span class="se">\r</span>os2_rolling
@@ -757,9 +758,9 @@ This way, your environment will behave as though there is no Rolling install on 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Ubuntu-Install-Binary.html" class="btn btn-neutral float-left" title="Ubuntu (binary)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="RHEL-Development-Setup.html" class="btn btn-neutral float-right" title="RHEL (source)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Ubuntu-Install-Binary.html" class="btn btn-neutral float-left" title="Ubuntu (binary)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="RHEL-Development-Setup.html" class="btn btn-neutral float-right" title="RHEL (source)" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -768,9 +769,9 @@ This way, your environment will behave as though there is no Rolling install on 
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

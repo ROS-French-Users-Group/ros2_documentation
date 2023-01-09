@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Cross-compilation &mdash; ROS 2 documentation  documentation</title>
+  <title>About Cross-compilation &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="About ROS 2 Security" href="About-Security.html" />
     <link rel="prev" title="On the mixing of ament and catkin (catment)" href="About-Catment.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -342,7 +343,7 @@
           <li class="breadcrumb-item"><a href="../Concepts.html">Concepts</a></li>
       <li class="breadcrumb-item active">About Cross-compilation</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Concepts/About-Cross-Compilation.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Concepts/About-Cross-Compilation.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -353,9 +354,9 @@
 
 
   <div class="section" id="about-cross-compilation">
-<h1>About Cross-compilation<a class="headerlink" href="#about-cross-compilation" title="Permalink to this headline"></a></h1>
+<h1>About Cross-compilation<a class="headerlink" href="#about-cross-compilation" title="Lien permanent vers ce titre"></a></h1>
 <div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Lien permanent vers ce titre"></a></h2>
 <dl class="simple">
 <dt>Open Robotics provides pre-built ROS 2 packages for multiple platforms, but a number of developers still rely on <a class="reference external" href="https://en.wikipedia.org/wiki/Cross_compiler">cross-compilation</a> for different reasons such as:</dt><dd><ul class="simple">
 <li><p>The development machine does not match the target system.</p></li>
@@ -366,7 +367,7 @@
 </dl>
 </div>
 <div class="section" id="how-does-it-work">
-<h2>How does it work ?<a class="headerlink" href="#how-does-it-work" title="Permalink to this headline"></a></h2>
+<h2>How does it work ?<a class="headerlink" href="#how-does-it-work" title="Lien permanent vers ce titre"></a></h2>
 <p>Cross-compiling simple software (e.g. no dependencies on external libraries) is relatively simple and only requiring a cross-compiler toolchain to be used instead of the native toolchain.</p>
 <p>There are a number of factors which make this process more complex:
 - The software being built must support the target architecture. Architecture specific code must be properly isolated and enabled during the build according to the target architecture. Examples include assembly code.
@@ -374,7 +375,7 @@
 - When building software stacks (as opposed to standalone software) using build tools (e.g. colcon), it is expected that the build tool provides a mechanism to allow the developer to enable cross-compilation on the underlying build system used by each piece of software in the stack.</p>
 </div>
 <div class="section" id="cross-compiling-ros-2">
-<h2>Cross-compiling ROS 2<a class="headerlink" href="#cross-compiling-ros-2" title="Permalink to this headline"></a></h2>
+<h2>Cross-compiling ROS 2<a class="headerlink" href="#cross-compiling-ros-2" title="Lien permanent vers ce titre"></a></h2>
 <p>The ROS 2 cross-compile tool is under shared ownership of Open Robotics and ROS Tooling Working Group.
 It is a Python script that compiles ROS 2 source files for supported target architectures using an emulator in a docker container.
 Detailed design of the tool can be found on <a class="reference external" href="https://design.ros2.org/articles/cc_build_tools.html">ROS 2 design</a>.
@@ -387,9 +388,9 @@ Instructions to use the tool are in the <a class="reference external" href="http
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="About-Catment.html" class="btn btn-neutral float-left" title="On the mixing of ament and catkin (catment)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="About-Security.html" class="btn btn-neutral float-right" title="About ROS 2 Security" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="About-Catment.html" class="btn btn-neutral float-left" title="On the mixing of ament and catkin (catment)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="About-Security.html" class="btn btn-neutral float-right" title="About ROS 2 Security" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -398,9 +399,9 @@ Instructions to use the tool are in the <a class="reference external" href="http
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

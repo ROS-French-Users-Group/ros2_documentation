@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ROS 2 on Raspberry Pi &mdash; ROS 2 documentation  documentation</title>
+  <title>ROS 2 on Raspberry Pi &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Using Callback Groups" href="Using-callback-groups.html" />
     <link rel="prev" title="Disabling Zero Copy Loaned Messages" href="Disabling-ZeroCopy-loaned-messages.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -342,7 +343,7 @@
           <li class="breadcrumb-item"><a href="../How-To-Guides.html">How-to Guides</a></li>
       <li class="breadcrumb-item active">ROS 2 on Raspberry Pi</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/How-To-Guides/Installing-on-Raspberry-Pi.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/How-To-Guides/Installing-on-Raspberry-Pi.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -353,20 +354,20 @@
 
 
   <div class="section" id="ros-2-on-raspberry-pi">
-<h1>ROS 2 on Raspberry Pi<a class="headerlink" href="#ros-2-on-raspberry-pi" title="Permalink to this headline"></a></h1>
+<h1>ROS 2 on Raspberry Pi<a class="headerlink" href="#ros-2-on-raspberry-pi" title="Lien permanent vers ce titre"></a></h1>
 <p>ROS 2 is supported on both 32 bit (arm32) and 64 bit (arm64) ARM processors.
 However, you can see <a class="reference external" href="https://www.ros.org/reps/rep-2000.html">here</a> that arm64 receives Tier 1 support, while arm32 is Tier 3.
 Tier 1 support means distribution specific packages and binary archives are available, while Tier 3 requires the user to compile ROS 2 from source.</p>
 <p>The fastest and simplest way to use ROS 2 is to use a Tier 1 supported configuration.</p>
 <p>This would mean either installing 64 bit Ubuntu on to the Raspberry Pi, or using the 64 bit version of Raspberry Pi OS and running ROS 2 in Docker.</p>
 <div class="section" id="ubuntu-linux-on-raspberry-pi-with-binary-ros-2-install">
-<h2>Ubuntu Linux on Raspberry Pi with binary ROS 2 install<a class="headerlink" href="#ubuntu-linux-on-raspberry-pi-with-binary-ros-2-install" title="Permalink to this headline"></a></h2>
+<h2>Ubuntu Linux on Raspberry Pi with binary ROS 2 install<a class="headerlink" href="#ubuntu-linux-on-raspberry-pi-with-binary-ros-2-install" title="Lien permanent vers ce titre"></a></h2>
 <p>Ubuntu for Raspberry Pi is available <a class="reference external" href="https://ubuntu.com/download/raspberry-pi">here</a>.</p>
 <p>Make sure to confirm that you have selected the correct version as described in <a class="reference external" href="https://www.ros.org/reps/rep-2000.html">REP-2000</a>.</p>
 <p>You can now install ROS 2 using the normal binary installation instructions for Ubuntu Linux.</p>
 </div>
 <div class="section" id="raspberry-pi-os-with-ros-2-in-docker">
-<h2>Raspberry Pi OS with ROS 2 in docker<a class="headerlink" href="#raspberry-pi-os-with-ros-2-in-docker" title="Permalink to this headline"></a></h2>
+<h2>Raspberry Pi OS with ROS 2 in docker<a class="headerlink" href="#raspberry-pi-os-with-ros-2-in-docker" title="Lien permanent vers ce titre"></a></h2>
 <p>Raspberry Pi OS 64 bit version is <a class="reference external" href="https://www.raspberrypi.com/software/operating-systems/">available here</a>.</p>
 <p>Raspberry Pi OS is based on Debian which receives Tier 3 support, but it can run Ubuntu docker containers for Tier 1 support.</p>
 <p>After flashing the OS, <a class="reference external" href="https://docs.docker.com/engine/install/debian/#install-using-the-convenience-script">install Docker</a>.</p>
@@ -380,7 +381,7 @@ Tier 1 support means distribution specific packages and binary archives are avai
 <p>On a supported system it will only take a minute or two to build the docker containers, as the source code is already built in to binaries.</p>
 </div>
 <div class="section" id="pre-built-docker-container">
-<h2>Pre-built Docker container<a class="headerlink" href="#pre-built-docker-container" title="Permalink to this headline"></a></h2>
+<h2>Pre-built Docker container<a class="headerlink" href="#pre-built-docker-container" title="Lien permanent vers ce titre"></a></h2>
 <p>A pre-built container for the desktop variant is available as well, which only requires a docker pull command.</p>
 <p>See <a class="reference internal" href="Run-2-nodes-in-single-or-separate-docker-containers.html"><span class="doc">this page</span></a> for more information.</p>
 </div>
@@ -390,9 +391,9 @@ Tier 1 support means distribution specific packages and binary archives are avai
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Disabling-ZeroCopy-loaned-messages.html" class="btn btn-neutral float-left" title="Disabling Zero Copy Loaned Messages" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Using-callback-groups.html" class="btn btn-neutral float-right" title="Using Callback Groups" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Disabling-ZeroCopy-loaned-messages.html" class="btn btn-neutral float-left" title="Disabling Zero Copy Loaned Messages" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Using-callback-groups.html" class="btn btn-neutral float-right" title="Using Callback Groups" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -401,9 +402,9 @@ Tier 1 support means distribution specific packages and binary archives are avai
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

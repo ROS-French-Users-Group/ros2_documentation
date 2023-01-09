@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Writing a broadcaster (Python) &mdash; ROS 2 documentation  documentation</title>
+  <title>Writing a broadcaster (Python) &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -22,9 +22,10 @@
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
         <script src="../../../_static/tabs.js"></script>
+        <script src="../../../_static/translations.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="search" title="Recherche" href="../../../search.html" />
     <link rel="next" title="Writing a broadcaster (C++)" href="Writing-A-Tf2-Broadcaster-Cpp.html" />
     <link rel="prev" title="Writing a static broadcaster (C++)" href="Writing-A-Tf2-Static-Broadcaster-Cpp.html" /> 
 </head>
@@ -38,7 +39,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -80,7 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -345,7 +346,7 @@
           <li class="breadcrumb-item"><a href="Tf2-Main.html"><code class="docutils literal notranslate"><span class="pre">tf2</span></code></a></li>
       <li class="breadcrumb-item active">Writing a broadcaster (Python)</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Py.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Py.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -356,7 +357,7 @@
 
 
   <div class="section" id="writing-a-broadcaster-python">
-<span id="writingatf2broadcasterpy"></span><h1>Writing a broadcaster (Python)<a class="headerlink" href="#writing-a-broadcaster-python" title="Permalink to this headline"></a></h1>
+<span id="writingatf2broadcasterpy"></span><h1>Writing a broadcaster (Python)<a class="headerlink" href="#writing-a-broadcaster-python" title="Lien permanent vers ce titre"></a></h1>
 <p><strong>Goal:</strong> Learn how to broadcast the state of a robot to tf2.</p>
 <p><strong>Tutorial level:</strong> Intermediate</p>
 <p><strong>Time:</strong> 15 minutes</p>
@@ -377,20 +378,20 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2><a class="toc-backref" href="#id2">Background</a><a class="headerlink" href="#background" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id2">Background</a><a class="headerlink" href="#background" title="Lien permanent vers ce titre"></a></h2>
 <p>In the next two tutorials we will write the code to reproduce the demo from the <a class="reference internal" href="Introduction-To-Tf2.html"><span class="doc">Introduction to tf2</span></a> tutorial.
 After that, following tutorials focus on extending the demo with more advanced tf2 features, including the usage of timeouts in transformation lookups and time travel.</p>
 </div>
 <div class="section" id="prerequisites">
-<h2><a class="toc-backref" href="#id3">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id3">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Lien permanent vers ce titre"></a></h2>
 <p>This tutorial assumes you have a working knowledge of ROS 2 and you have completed the <a class="reference internal" href="Introduction-To-Tf2.html"><span class="doc">Introduction to tf2 tutorial</span></a>.
 In previous tutorials, you learned how to <a class="reference internal" href="../../Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.html"><span class="doc">create a workspace</span></a> and <a class="reference internal" href="../../Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html"><span class="doc">create a package</span></a>.
 You also have created the <code class="docutils literal notranslate"><span class="pre">learning_tf2_py</span></code> <a class="reference internal" href="Writing-A-Tf2-Static-Broadcaster-Py.html"><span class="doc">package</span></a>, which is where we will continue working from.</p>
 </div>
 <div class="section" id="tasks">
-<h2><a class="toc-backref" href="#id4">Tasks</a><a class="headerlink" href="#tasks" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id4">Tasks</a><a class="headerlink" href="#tasks" title="Lien permanent vers ce titre"></a></h2>
 <div class="section" id="write-the-broadcaster-node">
-<h3><a class="toc-backref" href="#id5">1 Write the broadcaster node</a><a class="headerlink" href="#write-the-broadcaster-node" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id5">1 Write the broadcaster node</a><a class="headerlink" href="#write-the-broadcaster-node" title="Lien permanent vers ce titre"></a></h3>
 <p>Let’s first create the source files.
 Go to the <code class="docutils literal notranslate"><span class="pre">learning_tf2_py</span></code> package we created in the previous tutorial.
 Inside the <code class="docutils literal notranslate"><span class="pre">src/learning_tf2_py/learning_tf2_py</span></code> directory download the example broadcaster code by entering the following command:</p>
@@ -510,7 +511,7 @@ Inside the <code class="docutils literal notranslate"><span class="pre">src/lear
 </pre></div>
 </div>
 <div class="section" id="examine-the-code">
-<h4>1.1 Examine the code<a class="headerlink" href="#examine-the-code" title="Permalink to this headline"></a></h4>
+<h4>1.1 Examine the code<a class="headerlink" href="#examine-the-code" title="Lien permanent vers ce titre"></a></h4>
 <p>Now, let’s take a look at the code that is relevant to publishing the turtle pose to tf2.
 Firstly, we define and acquire a single parameter <code class="docutils literal notranslate"><span class="pre">turtlename</span></code>, which specifies a turtle name, e.g. <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> or <code class="docutils literal notranslate"><span class="pre">turtle2</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">turtlename</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">declare_parameter</span><span class="p">(</span>
@@ -571,7 +572,7 @@ For more details see <a class="reference internal" href="Writing-A-Tf2-Static-Br
 </div>
 </div>
 <div class="section" id="add-an-entry-point">
-<h4>1.2 Add an entry point<a class="headerlink" href="#add-an-entry-point" title="Permalink to this headline"></a></h4>
+<h4>1.2 Add an entry point<a class="headerlink" href="#add-an-entry-point" title="Lien permanent vers ce titre"></a></h4>
 <p>To allow the <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> command to run your node, you must add the entry point
 to <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> (located in the <code class="docutils literal notranslate"><span class="pre">src/learning_tf2_py</span></code> directory).</p>
 <p>Finally, add the following line between the <code class="docutils literal notranslate"><span class="pre">'console_scripts':</span></code> brackets:</p>
@@ -581,7 +582,7 @@ to <code class="docutils literal notranslate"><span class="pre">setup.py</span><
 </div>
 </div>
 <div class="section" id="write-the-launch-file">
-<h3><a class="toc-backref" href="#id6">2 Write the launch file</a><a class="headerlink" href="#write-the-launch-file" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id6">2 Write the launch file</a><a class="headerlink" href="#write-the-launch-file" title="Lien permanent vers ce titre"></a></h3>
 <p>Now create a launch file for this demo.
 With your text editor, create a new file called <code class="docutils literal notranslate"><span class="pre">turtle_tf2_demo.launch.py</span></code> in the <code class="docutils literal notranslate"><span class="pre">launch</span></code> folder, and add the following lines:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">launch</span> <span class="kn">import</span> <span class="n">LaunchDescription</span>
@@ -607,7 +608,7 @@ With your text editor, create a new file called <code class="docutils literal no
 </pre></div>
 </div>
 <div class="section" id="id1">
-<h4>2.1 Examine the code<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h4>
+<h4>2.1 Examine the code<a class="headerlink" href="#id1" title="Lien permanent vers ce titre"></a></h4>
 <p>First we import required modules from the <code class="docutils literal notranslate"><span class="pre">launch</span></code> and <code class="docutils literal notranslate"><span class="pre">launch_ros</span></code> packages.
 It should be noted that <code class="docutils literal notranslate"><span class="pre">launch</span></code> is a generic launching framework (not ROS 2 specific) and <code class="docutils literal notranslate"><span class="pre">launch_ros</span></code> has ROS 2 specific things, like nodes that we import here.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">launch</span> <span class="kn">import</span> <span class="n">LaunchDescription</span>
@@ -632,7 +633,7 @@ It should be noted that <code class="docutils literal notranslate"><span class="
 </div>
 </div>
 <div class="section" id="add-dependencies">
-<h4>2.2 Add dependencies<a class="headerlink" href="#add-dependencies" title="Permalink to this headline"></a></h4>
+<h4>2.2 Add dependencies<a class="headerlink" href="#add-dependencies" title="Lien permanent vers ce titre"></a></h4>
 <p>Navigate one level back to the <code class="docutils literal notranslate"><span class="pre">src/learning_tf2_py</span></code> directory, where the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>, <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code>, and <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> files are located.</p>
 <p>Open <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> with your text editor.
 Add the following dependencies corresponding to your launch file’s import statements:</p>
@@ -644,7 +645,7 @@ Add the following dependencies corresponding to your launch file’s import stat
 <p>Make sure to save the file.</p>
 </div>
 <div class="section" id="update-setup-py">
-<h4>2.3 Update setup.py<a class="headerlink" href="#update-setup-py" title="Permalink to this headline"></a></h4>
+<h4>2.3 Update setup.py<a class="headerlink" href="#update-setup-py" title="Lien permanent vers ce titre"></a></h4>
 <p>Reopen <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> and add the line so that the launch files from the <code class="docutils literal notranslate"><span class="pre">launch/</span></code> folder would be installed.
 The <code class="docutils literal notranslate"><span class="pre">data_files</span></code> field should now look like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data_files</span><span class="o">=</span><span class="p">[</span>
@@ -662,7 +663,7 @@ The <code class="docutils literal notranslate"><span class="pre">data_files</spa
 </div>
 </div>
 <div class="section" id="build">
-<h3><a class="toc-backref" href="#id7">3 Build</a><a class="headerlink" href="#build" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id7">3 Build</a><a class="headerlink" href="#build" title="Lien permanent vers ce titre"></a></h3>
 <p>Run <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> in the root of your workspace to check for missing dependencies.</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-1-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-1-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">rosdep install -i --from-path src --rosdistro rolling -y</span>
@@ -701,7 +702,7 @@ The <code class="docutils literal notranslate"><span class="pre">data_files</spa
 </div></div>
 </div>
 <div class="section" id="run">
-<h3><a class="toc-backref" href="#id8">4 Run</a><a class="headerlink" href="#run" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id8">4 Run</a><a class="headerlink" href="#run" title="Lien permanent vers ce titre"></a></h3>
 <p>Now run the launch file that will start the turtlesim simulation node and <code class="docutils literal notranslate"><span class="pre">turtle_tf2_broadcaster</span></code> node:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch learning_tf2_py turtle_tf2_demo.launch.py</span>
 </pre></div>
@@ -738,7 +739,7 @@ However, as soon as we add the second turtle in the next tutorial, the pose of <
 </div>
 </div>
 <div class="section" id="summary">
-<h2><a class="toc-backref" href="#id9">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id9">Summary</a><a class="headerlink" href="#summary" title="Lien permanent vers ce titre"></a></h2>
 <p>In this tutorial you learned how to broadcast the pose of the robot (position and orientation of the turtle) to tf2 and how to use the <code class="docutils literal notranslate"><span class="pre">tf2_echo</span></code> tool.
 To actually use the transforms broadcasted to tf2, you should move on to the next tutorial about creating a <a class="reference internal" href="Writing-A-Tf2-Listener-Py.html"><span class="doc">tf2 listener</span></a>.</p>
 </div>
@@ -748,9 +749,9 @@ To actually use the transforms broadcasted to tf2, you should move on to the nex
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Writing-A-Tf2-Static-Broadcaster-Cpp.html" class="btn btn-neutral float-left" title="Writing a static broadcaster (C++)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Writing-A-Tf2-Broadcaster-Cpp.html" class="btn btn-neutral float-right" title="Writing a broadcaster (C++)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Writing-A-Tf2-Static-Broadcaster-Cpp.html" class="btn btn-neutral float-left" title="Writing a static broadcaster (C++)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Writing-A-Tf2-Broadcaster-Cpp.html" class="btn btn-neutral float-right" title="Writing a broadcaster (C++)" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -759,9 +760,9 @@ To actually use the transforms broadcasted to tf2, you should move on to the nex
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

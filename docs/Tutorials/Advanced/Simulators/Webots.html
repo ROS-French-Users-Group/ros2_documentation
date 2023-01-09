@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Setting up a robot simulation (Webots) &mdash; ROS 2 documentation  documentation</title>
+  <title>Setting up a robot simulation (Webots) &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -22,9 +22,10 @@
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
         <script src="../../../_static/tabs.js"></script>
+        <script src="../../../_static/translations.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="search" title="Recherche" href="../../../search.html" />
     <link rel="next" title="Setting up a robot simulation (Gazebo)" href="Gazebo.html" />
     <link rel="prev" title="Simulation" href="Simulation-Main.html" /> 
 </head>
@@ -38,7 +39,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -80,7 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -345,7 +346,7 @@
           <li class="breadcrumb-item"><a href="Simulation-Main.html">Simulation</a></li>
       <li class="breadcrumb-item active">Setting up a robot simulation (Webots)</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Advanced/Simulators/Webots.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Advanced/Simulators/Webots.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -356,7 +357,7 @@
 
 
   <div class="section" id="setting-up-a-robot-simulation-webots">
-<span id="simulators"></span><h1>Setting up a robot simulation (Webots)<a class="headerlink" href="#setting-up-a-robot-simulation-webots" title="Permalink to this headline"></a></h1>
+<span id="simulators"></span><h1>Setting up a robot simulation (Webots)<a class="headerlink" href="#setting-up-a-robot-simulation-webots" title="Lien permanent vers ce titre"></a></h1>
 <p><strong>Goal:</strong> Setup a robot simulation and control it from ROS 2.</p>
 <p><strong>Tutorial level:</strong> Advanced</p>
 <p><strong>Time:</strong> 20 minutes</p>
@@ -385,7 +386,7 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2><a class="toc-backref" href="#id1">Background</a><a class="headerlink" href="#background" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id1">Background</a><a class="headerlink" href="#background" title="Lien permanent vers ce titre"></a></h2>
 <p>Several robot simulators can be used with ROS 2, such as Gazebo, Webots, etc.
 Unlike turtlesim, they provide fairly realistic results relying on physics-based models for robots, sensors, actuators and objects.
 Hence, what you observe in simulation is very close to what you will get when transferring your ROS 2 controllers to a real robot.
@@ -396,7 +397,7 @@ Some other sub-packages contain demos with different robots such as the TurtleBo
 They are documented in the <a class="reference internal" href="../../Demos.html"><span class="doc">Demos</span></a> page.</p>
 </div>
 <div class="section" id="prerequisites">
-<h2><a class="toc-backref" href="#id2">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id2">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Lien permanent vers ce titre"></a></h2>
 <p>It is recommended to understand basic ROS principles covered in the beginner <a class="reference internal" href="../../../Tutorials.html"><span class="doc">Tutorials</span></a>.
 In particular, <a class="reference internal" href="../../Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html"><span class="doc">Using turtlesim and rqt</span></a>, <a class="reference internal" href="../../Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html"><span class="doc">Understanding topics</span></a>, <a class="reference internal" href="../../Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.html"><span class="doc">Creating a workspace</span></a>, <a class="reference internal" href="../../Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html"><span class="doc">Creating a package</span></a> and <a class="reference internal" href="../../Intermediate/Launch/Creating-Launch-Files.html"><span class="doc">Creating a launch file</span></a> are useful prerequisites.</p>
 <div class="sphinx-tabs docutils container">
@@ -419,9 +420,9 @@ See the <a class="reference external" href="https://github.com/cyberbotics/webot
 </div>
 </div>
 <div class="section" id="tasks">
-<h2><a class="toc-backref" href="#id3">Tasks</a><a class="headerlink" href="#tasks" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id3">Tasks</a><a class="headerlink" href="#tasks" title="Lien permanent vers ce titre"></a></h2>
 <div class="section" id="create-the-package-structure">
-<h3><a class="toc-backref" href="#id4">1 Create the package structure</a><a class="headerlink" href="#create-the-package-structure" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id4">1 Create the package structure</a><a class="headerlink" href="#create-the-package-structure" title="Lien permanent vers ce titre"></a></h3>
 <p>Let’s organize the code in a custom ROS 2 package.
 Create a new package named <code class="docutils literal notranslate"><span class="pre">my_package</span></code> from the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder of your ROS 2 workspace.
 Change the current directory of your terminal to <code class="docutils literal notranslate"><span class="pre">ros2_ws/src</span></code> and run:</p>
@@ -457,7 +458,7 @@ Let’s add a <code class="docutils literal notranslate"><span class="pre">launc
 </div>
 </div>
 <div class="section" id="setup-the-simulation-world">
-<h3><a class="toc-backref" href="#id5">2 Setup the simulation world</a><a class="headerlink" href="#setup-the-simulation-world" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id5">2 Setup the simulation world</a><a class="headerlink" href="#setup-the-simulation-world" title="Lien permanent vers ce titre"></a></h3>
 <p>You will need a world file containing a robot to launch your simulation.
 <a class="reference download internal" download="" href="../../../_downloads/c0d343388f672b7ea879394d1f179ca1/my_world.wbt"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">this</span> <span class="pre">world</span> <span class="pre">file</span></code></a> and move it inside <code class="docutils literal notranslate"><span class="pre">my_package/worlds/</span></code>.</p>
 <p>This is actually a fairly simple text file you can visualize in a text editor.
@@ -468,7 +469,7 @@ A simple robot is already included in this <code class="docutils literal notrans
 </div>
 </div>
 <div class="section" id="change-the-my-robot-driver-py-file">
-<h3><a class="toc-backref" href="#id6">3 Change the my_robot_driver.py file</a><a class="headerlink" href="#change-the-my-robot-driver-py-file" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id6">3 Change the my_robot_driver.py file</a><a class="headerlink" href="#change-the-my-robot-driver-py-file" title="Lien permanent vers ce titre"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">webots_ros2_driver</span></code> sub-package automatically creates a ROS 2 interface for most sensors.
 In this task, you will extend this interface by changing the <code class="docutils literal notranslate"><span class="pre">my_robot_driver.py</span></code> file.</p>
 <div class="admonition note">
@@ -568,7 +569,7 @@ This conversion depends on the structure of the robot, more specifically on the 
 </div>
 </div>
 <div class="section" id="create-the-my-robot-urdf-file">
-<h3><a class="toc-backref" href="#id7">4 Create the my_robot.urdf file</a><a class="headerlink" href="#create-the-my-robot-urdf-file" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id7">4 Create the my_robot.urdf file</a><a class="headerlink" href="#create-the-my-robot-urdf-file" title="Lien permanent vers ce titre"></a></h3>
 <p>You now have to create a URDF file to declare the <code class="docutils literal notranslate"><span class="pre">my_robot_driver.py</span></code> Python plugin.
 This will allow the <code class="docutils literal notranslate"><span class="pre">webots_ros2_driver</span></code> ROS node to launch the plugin.</p>
 <p>In the <code class="docutils literal notranslate"><span class="pre">my_package/resource</span></code> folder create a text file named <code class="docutils literal notranslate"><span class="pre">my_robot.urdf</span></code> with this contents:</p>
@@ -587,7 +588,7 @@ However, URDF files usually contain much more information as explained in the <a
 </div>
 </div>
 <div class="section" id="create-the-launch-file">
-<h3><a class="toc-backref" href="#id8">5 Create the launch file</a><a class="headerlink" href="#create-the-launch-file" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id8">5 Create the launch file</a><a class="headerlink" href="#create-the-launch-file" title="Lien permanent vers ce titre"></a></h3>
 <p>Let’s create now the launch file to easily launch the simulation and the ROS controller with a single command.
 In the <code class="docutils literal notranslate"><span class="pre">my_package/launch</span></code> folder create a new text file named <code class="docutils literal notranslate"><span class="pre">robot_launch.py</span></code> with this code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -687,7 +688,7 @@ The <code class="docutils literal notranslate"><span class="pre">robot_descripti
 </div>
 </div>
 <div class="section" id="modify-the-setup-py-file">
-<h3><a class="toc-backref" href="#id9">6 Modify the setup.py file</a><a class="headerlink" href="#modify-the-setup-py-file" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id9">6 Modify the setup.py file</a><a class="headerlink" href="#modify-the-setup-py-file" title="Lien permanent vers ce titre"></a></h3>
 <p>Finally, before you can start the launch file, you have to modify the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file to include the extra files you added.
 Open <code class="docutils literal notranslate"><span class="pre">my_package/setup.py</span></code> and replace its contents with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
@@ -723,7 +724,7 @@ Open <code class="docutils literal notranslate"><span class="pre">my_package/set
 <p>This sets-up the package and adds in the <code class="docutils literal notranslate"><span class="pre">data_files</span></code> variable the newly added files: <code class="docutils literal notranslate"><span class="pre">my_world.wbt</span></code>, <code class="docutils literal notranslate"><span class="pre">my_robot.urdf</span></code> and <code class="docutils literal notranslate"><span class="pre">robot_launch.py</span></code>.</p>
 </div>
 <div class="section" id="test-the-code">
-<h3><a class="toc-backref" href="#id10">7 Test the code</a><a class="headerlink" href="#test-the-code" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id10">7 Test the code</a><a class="headerlink" href="#test-the-code" title="Lien permanent vers ce titre"></a></h3>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-2-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button><button aria-controls="panel-2-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button></div><div aria-labelledby="tab-2-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-2-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><p>From a terminal in your ROS 2 workspace run:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build</span>
@@ -776,7 +777,7 @@ Close the Webots window, this should also shutdown your ROS nodes started from t
 Close also the topic command with <code class="docutils literal notranslate"><span class="pre">Ctrl+C</span></code> in the second terminal.</p>
 </div>
 <div class="section" id="updating-my-robot-urdf">
-<h3><a class="toc-backref" href="#id11">8 Updating my_robot.urdf</a><a class="headerlink" href="#updating-my-robot-urdf" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id11">8 Updating my_robot.urdf</a><a class="headerlink" href="#updating-my-robot-urdf" title="Lien permanent vers ce titre"></a></h3>
 <p>You have to modify the URDF file in order to enable the sensors.
 In <code class="docutils literal notranslate"><span class="pre">my_robot.urdf</span></code> replace the whole contents with:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; ?&gt;</span>
@@ -802,7 +803,7 @@ In <code class="docutils literal notranslate"><span class="pre">my_robot.urdf</s
 <p>The ROS 2 interface will parse the <code class="docutils literal notranslate"><span class="pre">&lt;device&gt;</span></code> tags referring to the <strong>DistanceSensor</strong> nodes and use the standard parameters in the <code class="docutils literal notranslate"><span class="pre">&lt;ros&gt;</span></code> tags to enable the sensors and name their topics.</p>
 </div>
 <div class="section" id="creating-a-ros-node-to-avoid-obstacles">
-<h3><a class="toc-backref" href="#id12">9 Creating a ROS node to avoid obstacles</a><a class="headerlink" href="#creating-a-ros-node-to-avoid-obstacles" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id12">9 Creating a ROS node to avoid obstacles</a><a class="headerlink" href="#creating-a-ros-node-to-avoid-obstacles" title="Lien permanent vers ce titre"></a></h3>
 <p>The robot will use a standard ROS node to detect the wall and send motor commands to avoid it.
 In the <code class="docutils literal notranslate"><span class="pre">my_package/my_package/</span></code> folder, create a file named <code class="docutils literal notranslate"><span class="pre">obstacle_avoider.py</span></code> with this code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rclpy</span>
@@ -884,7 +885,7 @@ If any of the two sensors detect an obstacle, <code class="docutils literal notr
 </div>
 </div>
 <div class="section" id="updating-setup-py-and-robot-launch-py">
-<h3><a class="toc-backref" href="#id13">10 Updating setup.py and robot_launch.py</a><a class="headerlink" href="#updating-setup-py-and-robot-launch-py" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id13">10 Updating setup.py and robot_launch.py</a><a class="headerlink" href="#updating-setup-py-and-robot-launch-py" title="Lien permanent vers ce titre"></a></h3>
 <p>You have to modify these two other files to launch your new node.
 Edit <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> and replace <code class="docutils literal notranslate"><span class="pre">'console_scripts'</span></code> with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;console_scripts&#39;</span><span class="p">:</span> <span class="p">[</span>
@@ -937,7 +938,7 @@ Edit <code class="docutils literal notranslate"><span class="pre">setup.py</span
 <p>This will create an <code class="docutils literal notranslate"><span class="pre">obstacle_avoider</span></code> node that will be included in the <code class="docutils literal notranslate"><span class="pre">LaunchDescription</span></code>.</p>
 </div>
 <div class="section" id="test-the-obstacle-avoidance-code">
-<h3><a class="toc-backref" href="#id14">11 Test the obstacle avoidance code</a><a class="headerlink" href="#test-the-obstacle-avoidance-code" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id14">11 Test the obstacle avoidance code</a><a class="headerlink" href="#test-the-obstacle-avoidance-code" title="Lien permanent vers ce titre"></a></h3>
 <p>As in task <code class="docutils literal notranslate"><span class="pre">7</span></code>, launch the simulation from a terminal in your ROS 2 workspace:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-3-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button><button aria-controls="panel-3-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button></div><div aria-labelledby="tab-3-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-3-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><p>From a terminal in your ROS 2 workspace run:</p>
@@ -975,11 +976,11 @@ You can press <code class="docutils literal notranslate"><span class="pre">Ctrl+
 </div>
 </div>
 <div class="section" id="summary">
-<h2><a class="toc-backref" href="#id15">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id15">Summary</a><a class="headerlink" href="#summary" title="Lien permanent vers ce titre"></a></h2>
 <p>In this tutorial, you set-up a realistic robot simulation with Webots, implemented a Python plugin to control the motors of the robot, and implemented a ROS node using the sensors to avoid the obstacles.</p>
 </div>
 <div class="section" id="next-steps">
-<h2><a class="toc-backref" href="#id16">Next steps</a><a class="headerlink" href="#next-steps" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id16">Next steps</a><a class="headerlink" href="#next-steps" title="Lien permanent vers ce titre"></a></h2>
 <p>You might want to improve the plugin or create new nodes to change the behavior of the robot.
 Taking inspiration from these previous tutorials could be a starting point:</p>
 <ul class="simple">
@@ -993,9 +994,9 @@ Taking inspiration from these previous tutorials could be a starting point:</p>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Simulation-Main.html" class="btn btn-neutral float-left" title="Simulation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Gazebo.html" class="btn btn-neutral float-right" title="Setting up a robot simulation (Gazebo)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Simulation-Main.html" class="btn btn-neutral float-left" title="Simulation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Gazebo.html" class="btn btn-neutral float-right" title="Setting up a robot simulation (Gazebo)" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -1004,9 +1005,9 @@ Taking inspiration from these previous tutorials could be a starting point:</p>
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

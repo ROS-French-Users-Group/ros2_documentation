@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Logging &mdash; ROS 2 documentation  documentation</title>
+  <title>Logging &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -22,9 +22,10 @@
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
         <script src="../../_static/tabs.js"></script>
+        <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
     <link rel="next" title="Creating a content filtering subscription" href="Content-Filtering-Subscription.html" />
     <link rel="prev" title="Experimenting with a dummy robot" href="dummy-robot-demo.html" /> 
 </head>
@@ -38,7 +39,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -80,7 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -344,7 +345,7 @@
           <li class="breadcrumb-item"><a href="../Demos.html">Demos</a></li>
       <li class="breadcrumb-item active">Logging</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Demos/Logging-and-logger-configuration.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Demos/Logging-and-logger-configuration.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -355,7 +356,7 @@
 
 
   <div class="section" id="logging">
-<h1>Logging<a class="headerlink" href="#logging" title="Permalink to this headline"></a></h1>
+<h1>Logging<a class="headerlink" href="#logging" title="Lien permanent vers ce titre"></a></h1>
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">Table of Contents</p>
 <ul class="simple">
@@ -388,9 +389,9 @@
 </div>
 <p>See <a class="reference internal" href="../../Concepts/About-Logging.html"><span class="doc">the logging page</span></a> for details on available functionality.</p>
 <div class="section" id="using-log-statements-in-code">
-<h2><a class="toc-backref" href="#id1">Using log statements in code</a><a class="headerlink" href="#using-log-statements-in-code" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id1">Using log statements in code</a><a class="headerlink" href="#using-log-statements-in-code" title="Lien permanent vers ce titre"></a></h2>
 <div class="section" id="basic-logging">
-<h3><a class="toc-backref" href="#id2">Basic logging</a><a class="headerlink" href="#basic-logging" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id2">Basic logging</a><a class="headerlink" href="#basic-logging" title="Lien permanent vers ce titre"></a></h3>
 <p>The following code will output a log message from a ROS 2 node at <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code> severity:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-0-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-0-Qysr" class="sphinx-tabs-panel group-tab" id="panel-0-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// printf style</span>
@@ -407,7 +408,7 @@
 <p>Note that in both cases, no trailing newline is added, as the logging infrastructure will automatically add one.</p>
 </div>
 <div class="section" id="logging-only-the-first-time">
-<h3><a class="toc-backref" href="#id3">Logging only the first time</a><a class="headerlink" href="#logging-only-the-first-time" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id3">Logging only the first time</a><a class="headerlink" href="#logging-only-the-first-time" title="Lien permanent vers ce titre"></a></h3>
 <p>The following code will output a log message from a ROS 2 node at <code class="docutils literal notranslate"><span class="pre">INFO</span></code> severity, but only the first time it is hit:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-1-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-1-Qysr" class="sphinx-tabs-panel group-tab" id="panel-1-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// printf style</span>
@@ -424,7 +425,7 @@
 </div></div>
 </div>
 <div class="section" id="logging-all-but-the-first-time">
-<h3><a class="toc-backref" href="#id4">Logging all but the first time</a><a class="headerlink" href="#logging-all-but-the-first-time" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id4">Logging all but the first time</a><a class="headerlink" href="#logging-all-but-the-first-time" title="Lien permanent vers ce titre"></a></h3>
 <p>The following code will output a log message from a ROS 2 node at <code class="docutils literal notranslate"><span class="pre">WARN</span></code> severity, but not the very first time it is hit:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-2-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-2-Qysr" class="sphinx-tabs-panel group-tab" id="panel-2-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// printf style</span>
@@ -441,7 +442,7 @@
 </div></div>
 </div>
 <div class="section" id="logging-throttled">
-<h3><a class="toc-backref" href="#id5">Logging throttled</a><a class="headerlink" href="#logging-throttled" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id5">Logging throttled</a><a class="headerlink" href="#logging-throttled" title="Lien permanent vers ce titre"></a></h3>
 <p>The following code will output a log message from a ROS 2 node at <code class="docutils literal notranslate"><span class="pre">ERROR</span></code> severity, but no more than once per second.</p>
 <p>The interval parameter specifying milliseconds between messages should have an integer data type so it can be converted to a <code class="docutils literal notranslate"><span class="pre">rcutils_duration_value_t</span></code> (an <code class="docutils literal notranslate"><span class="pre">int64_t</span></code>):</p>
 <div class="sphinx-tabs docutils container">
@@ -462,7 +463,7 @@
 </div></div>
 </div>
 <div class="section" id="logging-throttled-all-but-the-first-time">
-<h3><a class="toc-backref" href="#id6">Logging throttled all but the first time</a><a class="headerlink" href="#logging-throttled-all-but-the-first-time" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id6">Logging throttled all but the first time</a><a class="headerlink" href="#logging-throttled-all-but-the-first-time" title="Lien permanent vers ce titre"></a></h3>
 <p>The following code will output a log message from a ROS 2 node at <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code> severity, no more than once per second, skipping the very first time it is hit:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-4-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-4-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-4-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-4-Qysr" class="sphinx-tabs-panel group-tab" id="panel-4-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// printf style</span>
@@ -479,7 +480,7 @@
 </div>
 </div>
 <div class="section" id="logging-demo">
-<h2><a class="toc-backref" href="#id7">Logging demo</a><a class="headerlink" href="#logging-demo" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id7">Logging demo</a><a class="headerlink" href="#logging-demo" title="Lien permanent vers ce titre"></a></h2>
 <p>In this <a class="reference external" href="https://github.com/ros2/demos/tree/rolling/logging_demo">demo</a>, different types of log calls are shown and the severity level of different loggers is configured locally and externally.</p>
 <p>Start the demo with:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>logging_demo<span class="w"> </span>logging_demo_main
@@ -490,7 +491,7 @@ To start with you will only see output from log calls with severity <code class=
 Note that the first message will only be logged once, though the line is reached on each iteration, as that is a property of the log call used for that message.</p>
 </div>
 <div class="section" id="logging-directory-configuration">
-<h2><a class="toc-backref" href="#id8">Logging directory configuration</a><a class="headerlink" href="#logging-directory-configuration" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id8">Logging directory configuration</a><a class="headerlink" href="#logging-directory-configuration" title="Lien permanent vers ce titre"></a></h2>
 <p>The logging directory can be configured through two environment variables: <code class="docutils literal notranslate"><span class="pre">ROS_LOG_DIR</span></code> and <code class="docutils literal notranslate"><span class="pre">ROS_HOME</span></code>.
 The logic is as follows:</p>
 <ul class="simple">
@@ -534,13 +535,13 @@ ros2<span class="w"> </span>run<span class="w"> </span>logging_demo<span class="
 <p>You will then find the logs under <code class="docutils literal notranslate"><span class="pre">~/my_ros_home/log/</span></code>.</p>
 </div>
 <div class="section" id="logger-level-configuration-programmatically">
-<h2><a class="toc-backref" href="#id9">Logger level configuration: programmatically</a><a class="headerlink" href="#logger-level-configuration-programmatically" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id9">Logger level configuration: programmatically</a><a class="headerlink" href="#logger-level-configuration-programmatically" title="Lien permanent vers ce titre"></a></h2>
 <p>After 10 iterations the level of the logger will be set to <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code>, which will cause additional messages to be logged.</p>
 <p>Some of these debug messages cause additional functions/expressions to be evaluated, which were previously skipped as <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code> log calls were not enabled.
 See <a class="reference external" href="https://github.com/ros2/demos/blob/rolling/logging_demo/src/logger_usage_component.cpp">the source code</a> of the demo for further explanation of the calls used, and see the rclcpp logging documentation for a full list of supported logging calls.</p>
 </div>
 <div class="section" id="logger-level-configuration-externally">
-<h2><a class="toc-backref" href="#id10">Logger level configuration: externally</a><a class="headerlink" href="#logger-level-configuration-externally" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id10">Logger level configuration: externally</a><a class="headerlink" href="#logger-level-configuration-externally" title="Lien permanent vers ce titre"></a></h2>
 <p>In the future there will be a generalized approach to external configuration of loggers at runtime (similar to how <a class="reference external" href="https://wiki.ros.org/rqt_logger_level">rqt_logger_level</a> in ROS 1 allows logger configuration via remote procedural calls).
 <strong>This concept is not yet officially supported in ROS 2.</strong>
 In the meantime, this demo provides an <strong>example</strong> service that can be called externally to request configuration of logger levels for known names of loggers in the process.</p>
@@ -557,7 +558,7 @@ To enable debug logging for <code class="docutils literal notranslate"><span cla
 </div>
 <p>You should see debug output from <code class="docutils literal notranslate"><span class="pre">rcl</span></code> start to show.</p>
 <div class="section" id="using-the-logger-config-component">
-<h3><a class="toc-backref" href="#id11">Using the logger config component</a><a class="headerlink" href="#using-the-logger-config-component" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id11">Using the logger config component</a><a class="headerlink" href="#using-the-logger-config-component" title="Lien permanent vers ce titre"></a></h3>
 <p>The server that responds to the logger configuration requests has been developed as a component so that it may be added to an existing composition-based system.
 For example, if you are using <a class="reference internal" href="../Intermediate/Composition.html"><span class="doc">a container to run your nodes</span></a>, to be able to configure your loggers you only need to request that it additionally load the <code class="docutils literal notranslate"><span class="pre">logging_demo::LoggerConfig</span></code> component into the container.</p>
 <p>As an example, if you want to debug the <code class="docutils literal notranslate"><span class="pre">composition::Talker</span></code> demo, you can start the talker as normal with:</p>
@@ -584,7 +585,7 @@ Note that loggers that have been specifically configured to use a particular sev
 </div>
 </div>
 <div class="section" id="logger-level-configuration-command-line">
-<h2><a class="toc-backref" href="#id12">Logger level configuration: command line</a><a class="headerlink" href="#logger-level-configuration-command-line" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id12">Logger level configuration: command line</a><a class="headerlink" href="#logger-level-configuration-command-line" title="Lien permanent vers ce titre"></a></h2>
 <p>As of the Bouncy ROS 2 release, the severity level for loggers that have not had their severity set explicitly can be configured from the command line.
 Restart the demo including the following command line argument:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>logging_demo<span class="w"> </span>logging_demo_main<span class="w"> </span>--ros-args<span class="w"> </span>--log-level<span class="w"> </span>debug
@@ -598,7 +599,7 @@ Restart the demo including the following command line arguments:</p>
 </pre></div>
 </div>
 <div class="section" id="console-output-formatting">
-<h3><a class="toc-backref" href="#id13">Console output formatting</a><a class="headerlink" href="#console-output-formatting" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id13">Console output formatting</a><a class="headerlink" href="#console-output-formatting" title="Lien permanent vers ce titre"></a></h3>
 <p>If you would like more or less verbose formatting, you can use RCUTILS_CONSOLE_OUTPUT_FORMAT environment variable.
 For example, to additionally get the timestamp and location of the log calls, stop the demo and restart it with the environment variable set:</p>
 <div class="sphinx-tabs docutils container">
@@ -617,7 +618,7 @@ ros2<span class="w"> </span>run<span class="w"> </span>logging_demo<span class="
 <em>The ``time`` option is only supported as of the ROS 2 Bouncy release.</em></p>
 </div>
 <div class="section" id="console-output-colorizing">
-<h3><a class="toc-backref" href="#id14">Console output colorizing</a><a class="headerlink" href="#console-output-colorizing" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id14">Console output colorizing</a><a class="headerlink" href="#console-output-colorizing" title="Lien permanent vers ce titre"></a></h3>
 <p>By default, the output is colorized when it’s targeting a terminal.
 If you would like to force enabling or disabling it, you can use the <code class="docutils literal notranslate"><span class="pre">RCUTILS_COLORIZED_OUTPUT</span></code> environment variable.
 For example:</p>
@@ -643,7 +644,7 @@ The default behavior already checks if the output is a console or not, so forcin
 </div>
 </div>
 <div class="section" id="default-stream-for-console-output">
-<h3><a class="toc-backref" href="#id15">Default stream for console output</a><a class="headerlink" href="#default-stream-for-console-output" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id15">Default stream for console output</a><a class="headerlink" href="#default-stream-for-console-output" title="Lien permanent vers ce titre"></a></h3>
 <p>In Foxy and later, the output from all debug levels goes to stderr by default.  It is possible to force all output to go to stdout by setting the <code class="docutils literal notranslate"><span class="pre">RCUTILS_LOGGING_USE_STDOUT</span></code> environment variable to <code class="docutils literal notranslate"><span class="pre">1</span></code>.
 For example:</p>
 <div class="sphinx-tabs docutils container">
@@ -659,7 +660,7 @@ For example:</p>
 </div></div>
 </div>
 <div class="section" id="line-buffered-console-output">
-<h3><a class="toc-backref" href="#id16">Line buffered console output</a><a class="headerlink" href="#line-buffered-console-output" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id16">Line buffered console output</a><a class="headerlink" href="#line-buffered-console-output" title="Lien permanent vers ce titre"></a></h3>
 <p>By default, all logging output is unbuffered.
 You can force it to be buffered by setting the <code class="docutils literal notranslate"><span class="pre">RCUTILS_LOGGING_BUFFERED_STREAM</span></code> environment variable to 1.
 For example:</p>
@@ -686,9 +687,9 @@ For example:</p>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="dummy-robot-demo.html" class="btn btn-neutral float-left" title="Experimenting with a dummy robot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Content-Filtering-Subscription.html" class="btn btn-neutral float-right" title="Creating a content filtering subscription" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="dummy-robot-demo.html" class="btn btn-neutral float-left" title="Experimenting with a dummy robot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Content-Filtering-Subscription.html" class="btn btn-neutral float-right" title="Creating a content filtering subscription" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -697,9 +698,9 @@ For example:</p>
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

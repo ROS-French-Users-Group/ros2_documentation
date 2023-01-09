@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Recording a bag from a node (C++) &mdash; ROS 2 documentation  documentation</title>
+  <title>Recording a bag from a node (C++) &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -22,9 +22,10 @@
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
         <script src="../../_static/tabs.js"></script>
+        <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
     <link rel="next" title="Recording a bag from a node (Python)" href="Recording-A-Bag-From-Your-Own-Node-Py.html" />
     <link rel="prev" title="Unlocking the potential of Fast DDS middleware [community-contributed]" href="FastDDS-Configuration.html" /> 
 </head>
@@ -38,7 +39,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -80,7 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -344,7 +345,7 @@
           <li class="breadcrumb-item"><a href="../Advanced.html">Advanced</a></li>
       <li class="breadcrumb-item active">Recording a bag from a node (C++)</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-CPP.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-CPP.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -355,7 +356,7 @@
 
 
   <div class="section" id="recording-a-bag-from-a-node-c">
-<span id="ros2bagownnode"></span><h1>Recording a bag from a node (C++)<a class="headerlink" href="#recording-a-bag-from-a-node-c" title="Permalink to this headline"></a></h1>
+<span id="ros2bagownnode"></span><h1>Recording a bag from a node (C++)<a class="headerlink" href="#recording-a-bag-from-a-node-c" title="Lien permanent vers ce titre"></a></h1>
 <p><strong>Goal:</strong> Record data from your own C++ node to a bag.</p>
 <p><strong>Tutorial level:</strong> Advanced</p>
 <p><strong>Time:</strong> 20 minutes</p>
@@ -377,13 +378,13 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2><a class="toc-backref" href="#id7">Background</a><a class="headerlink" href="#background" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id7">Background</a><a class="headerlink" href="#background" title="Lien permanent vers ce titre"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">rosbag2</span></code> doesn’t just provide the <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code> command line tool.
 It also provides a C++ API for reading from and writing to a bag from your own source code.
 This allows you to subscribe to a topic and save the received data to a bag at the same time as performing any other processing of your choice on that data.</p>
 </div>
 <div class="section" id="prerequisites">
-<h2><a class="toc-backref" href="#id8">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id8">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Lien permanent vers ce titre"></a></h2>
 <p>You should have the <code class="docutils literal notranslate"><span class="pre">rosbag2</span></code> packages installed as part of your regular ROS 2 setup.</p>
 <p>If you’ve installed from Debian packages on Linux, it may be installed by default.
 If it is not, you can install it using this command.</p>
@@ -394,9 +395,9 @@ If it is not, you can install it using this command.</p>
 You should have already completed the <a class="reference internal" href="../Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.html"><span class="doc">basic ROS 2 bag tutorial</span></a>.</p>
 </div>
 <div class="section" id="tasks">
-<h2><a class="toc-backref" href="#id9">Tasks</a><a class="headerlink" href="#tasks" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id9">Tasks</a><a class="headerlink" href="#tasks" title="Lien permanent vers ce titre"></a></h2>
 <div class="section" id="create-a-package">
-<h3><a class="toc-backref" href="#id10">1 Create a package</a><a class="headerlink" href="#create-a-package" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id10">1 Create a package</a><a class="headerlink" href="#create-a-package" title="Lien permanent vers ce titre"></a></h3>
 <p>Open a new terminal and <a class="reference internal" href="../Beginner-CLI-Tools/Configuring-ROS2-Environment.html"><span class="doc">source your ROS 2 installation</span></a> so that <code class="docutils literal notranslate"><span class="pre">ros2</span></code> commands will work.</p>
 <p>Navigate into the <code class="docutils literal notranslate"><span class="pre">ros2_ws</span></code> directory created in a <a class="reference internal" href="../Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.html#new-directory"><span class="std std-ref">previous tutorial</span></a>.
 Navigate into the <code class="docutils literal notranslate"><span class="pre">ros2_ws/src</span></code> directory and create a new package:</p>
@@ -408,7 +409,7 @@ The <code class="docutils literal notranslate"><span class="pre">--dependencies<
 In this case, the package will use the <code class="docutils literal notranslate"><span class="pre">rosbag2_cpp</span></code> package as well as the <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> package.
 A dependency on the <code class="docutils literal notranslate"><span class="pre">example_interfaces</span></code> package is also required for later parts of this tutorial.</p>
 <div class="section" id="update-package-xml">
-<h4>1.1 Update <code class="docutils literal notranslate"><span class="pre">package.xml</span></code><a class="headerlink" href="#update-package-xml" title="Permalink to this headline"></a></h4>
+<h4>1.1 Update <code class="docutils literal notranslate"><span class="pre">package.xml</span></code><a class="headerlink" href="#update-package-xml" title="Lien permanent vers ce titre"></a></h4>
 <p>Because you used the <code class="docutils literal notranslate"><span class="pre">--dependencies</span></code> option during package creation, you don’t have to manually add dependencies to <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> or <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>.
 As always, though, make sure to add the description, maintainer email and name, and license information to <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;description&gt;</span>C++<span class="w"> </span>bag<span class="w"> </span>writing<span class="w"> </span>tutorial<span class="nt">&lt;/description&gt;</span>
@@ -419,7 +420,7 @@ As always, though, make sure to add the description, maintainer email and name, 
 </div>
 </div>
 <div class="section" id="write-the-c-node">
-<h3><a class="toc-backref" href="#id11">2 Write the C++ node</a><a class="headerlink" href="#write-the-c-node" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id11">2 Write the C++ node</a><a class="headerlink" href="#write-the-c-node" title="Lien permanent vers ce titre"></a></h3>
 <p>Inside the <code class="docutils literal notranslate"><span class="pre">ros2_ws/src/bag_recorder_nodes/src</span></code> directory, create a new file called <code class="docutils literal notranslate"><span class="pre">simple_bag_recorder.cpp</span></code> and paste the following code into it.</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rclcpp/rclcpp.hpp&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;std_msgs/msg/string.hpp&gt;</span>
@@ -464,7 +465,7 @@ As always, though, make sure to add the description, maintainer email and name, 
 </pre></div>
 </div>
 <div class="section" id="examine-the-code">
-<h4>2.1 Examine the code<a class="headerlink" href="#examine-the-code" title="Permalink to this headline"></a></h4>
+<h4>2.1 Examine the code<a class="headerlink" href="#examine-the-code" title="Lien permanent vers ce titre"></a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">#include</span></code> statements at the top are the package dependencies.
 Note the inclusion of headers from the <code class="docutils literal notranslate"><span class="pre">rosbag2_cpp</span></code> package for the functions and structures necessary to work with bag files.</p>
 <p>In the class constructor we begin by creating the writer object we will use to write to the bag.</p>
@@ -532,7 +533,7 @@ Other writers may be available with different behaviours.</p></li>
 </div>
 </div>
 <div class="section" id="add-executable">
-<h4>2.2 Add executable<a class="headerlink" href="#add-executable" title="Permalink to this headline"></a></h4>
+<h4>2.2 Add executable<a class="headerlink" href="#add-executable" title="Lien permanent vers ce titre"></a></h4>
 <p>Now open the <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> file.</p>
 <p>Near the top of the file, change <code class="docutils literal notranslate"><span class="pre">CMAKE_CXX_STANDARD</span></code> from <code class="docutils literal notranslate"><span class="pre">14</span></code> to <code class="docutils literal notranslate"><span class="pre">17</span></code>.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>Default<span class="w"> </span>to<span class="w"> </span>C++17
@@ -554,7 +555,7 @@ Other writers may be available with different behaviours.</p></li>
 </div>
 </div>
 <div class="section" id="build-and-run">
-<h3><a class="toc-backref" href="#id12">3 Build and run</a><a class="headerlink" href="#build-and-run" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id12">3 Build and run</a><a class="headerlink" href="#build-and-run" title="Lien permanent vers ce titre"></a></h3>
 <p>Navigate back to the root of your workspace, <code class="docutils literal notranslate"><span class="pre">ros2_ws</span></code>, and build your new package.</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --packages-select bag_recorder_nodes</span>
@@ -602,7 +603,7 @@ Then, in one terminal start the <code class="docutils literal notranslate"><span
 <p>If you wish to run the bag-writing node again, you will first need to delete the <code class="docutils literal notranslate"><span class="pre">my_bag</span></code> directory.</p>
 </div>
 <div class="section" id="record-synthetic-data-from-a-node">
-<h3><a class="toc-backref" href="#id13">4 Record synthetic data from a node</a><a class="headerlink" href="#record-synthetic-data-from-a-node" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id13">4 Record synthetic data from a node</a><a class="headerlink" href="#record-synthetic-data-from-a-node" title="Lien permanent vers ce titre"></a></h3>
 <p>Any data can be recorded into a bag, not just data received over a topic.
 A common use case for writing to a bag from your own node is to generate and store synthetic data.
 In this section you will learn how to write a node that generates some data and stores it in a bag.
@@ -610,7 +611,7 @@ We will demonstrate two approaches for doing this.
 The first uses a node with a timer; this is the approach that you would use if your data generation is external to the node, such as reading data directly from hardware (e.g. a camera).
 The second approach does not use a node; this is the approach you can use when you do not need to use any functionality from the ROS infrastructure.</p>
 <div class="section" id="write-a-c-node">
-<h4>4.1 Write a C++ node<a class="headerlink" href="#write-a-c-node" title="Permalink to this headline"></a></h4>
+<h4>4.1 Write a C++ node<a class="headerlink" href="#write-a-c-node" title="Lien permanent vers ce titre"></a></h4>
 <p>Inside the <code class="docutils literal notranslate"><span class="pre">ros2_ws/src/bag_recorder_nodes/src</span></code> directory, create a new file called <code class="docutils literal notranslate"><span class="pre">data_generator_node.cpp</span></code> and paste the following code into it.</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span>
 
@@ -665,7 +666,7 @@ The second approach does not use a node; this is the approach you can use when y
 </div>
 </div>
 <div class="section" id="id1">
-<h4>4.2 Examine the code<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h4>
+<h4>4.2 Examine the code<a class="headerlink" href="#id1" title="Lien permanent vers ce titre"></a></h4>
 <p>Much of this code is the same as the first example.
 The important differences are described here.</p>
 <p>First, the name of the bag is changed.</p>
@@ -695,7 +696,7 @@ The writer will serialise the data for us before writing it into the bag.</p>
 </div>
 </div>
 <div class="section" id="id2">
-<h4>4.3 Add executable<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h4>
+<h4>4.3 Add executable<a class="headerlink" href="#id2" title="Lien permanent vers ce titre"></a></h4>
 <p>Open the <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> file and add the following lines after the previously-added lines (specifically, after the <code class="docutils literal notranslate"><span class="pre">install(TARGETS</span> <span class="pre">...)</span></code> macro call).</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">add_executable(data_generator_node src/data_generator_node.cpp)</span>
 <span class="go">ament_target_dependencies(data_generator_node rclcpp rosbag2_cpp example_interfaces)</span>
@@ -708,7 +709,7 @@ The writer will serialise the data for us before writing it into the bag.</p>
 </div>
 </div>
 <div class="section" id="id3">
-<h4>4.4 Build and run<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h4>
+<h4>4.4 Build and run<a class="headerlink" href="#id3" title="Lien permanent vers ce titre"></a></h4>
 <p>Navigate back to the root of your workspace, <code class="docutils literal notranslate"><span class="pre">ros2_ws</span></code>, and build your package.</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-2-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-2-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-2-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-2-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --packages-select bag_recorder_nodes</span>
@@ -751,11 +752,11 @@ Next, play back the created bag.</p>
 </div>
 </div>
 <div class="section" id="record-synthetic-data-from-an-executable">
-<h3><a class="toc-backref" href="#id14">5 Record synthetic data from an executable</a><a class="headerlink" href="#record-synthetic-data-from-an-executable" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id14">5 Record synthetic data from an executable</a><a class="headerlink" href="#record-synthetic-data-from-an-executable" title="Lien permanent vers ce titre"></a></h3>
 <p>Now that you can create a bag that stores data from a source other than a topic, you will learn how to generate and record synthetic data from a non-node executable.
 The advantage of this approach is simpler code and rapid creation of a large quantity of data.</p>
 <div class="section" id="write-a-c-executable">
-<h4>5.1 Write a C++ executable<a class="headerlink" href="#write-a-c-executable" title="Permalink to this headline"></a></h4>
+<h4>5.1 Write a C++ executable<a class="headerlink" href="#write-a-c-executable" title="Lien permanent vers ce titre"></a></h4>
 <p>Inside the <code class="docutils literal notranslate"><span class="pre">ros2_ws/src/bag_recorder_nodes/src</span></code> directory, create a new file called <code class="docutils literal notranslate"><span class="pre">data_generator_executable.cpp</span></code> and paste the following code into it.</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span>
 
@@ -796,7 +797,7 @@ The advantage of this approach is simpler code and rapid creation of a large qua
 </div>
 </div>
 <div class="section" id="id4">
-<h4>5.2 Examine the code<a class="headerlink" href="#id4" title="Permalink to this headline"></a></h4>
+<h4>5.2 Examine the code<a class="headerlink" href="#id4" title="Lien permanent vers ce titre"></a></h4>
 <p>A comparison of this sample and the previous sample will reveal that they are not that different.
 The only significant difference is the use of a for loop to drive the data generation rather than a timer.</p>
 <p>Notice that we are also now generating time stamps for the data rather than relying on the current system time for each sample.
@@ -815,7 +816,7 @@ This allows us to generate a lot of data covering a wide span of time in much le
 </div>
 </div>
 <div class="section" id="id5">
-<h4>5.3 Add executable<a class="headerlink" href="#id5" title="Permalink to this headline"></a></h4>
+<h4>5.3 Add executable<a class="headerlink" href="#id5" title="Lien permanent vers ce titre"></a></h4>
 <p>Open the <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> file and add the following lines after the previously-added lines.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">add_executable(data_generator_executable src/data_generator_executable.cpp)</span>
 <span class="go">ament_target_dependencies(data_generator_executable rclcpp rosbag2_cpp example_interfaces)</span>
@@ -828,7 +829,7 @@ This allows us to generate a lot of data covering a wide span of time in much le
 </div>
 </div>
 <div class="section" id="id6">
-<h4>5.4 Build and run<a class="headerlink" href="#id6" title="Permalink to this headline"></a></h4>
+<h4>5.4 Build and run<a class="headerlink" href="#id6" title="Lien permanent vers ce titre"></a></h4>
 <p>Navigate back to the root of your workspace, <code class="docutils literal notranslate"><span class="pre">ros2_ws</span></code>, and build your package.</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-4-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-4-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-4-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-4-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-4-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-4-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --packages-select bag_recorder_nodes</span>
@@ -873,7 +874,7 @@ Even though the bag was generated rapidly it is still played back at the rate th
 </div>
 </div>
 <div class="section" id="summary">
-<h2><a class="toc-backref" href="#id15">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id15">Summary</a><a class="headerlink" href="#summary" title="Lien permanent vers ce titre"></a></h2>
 <p>You created a node that records data it receives on a topic into a bag.
 You tested recording a bag using the node, and verified the data was recorded by playing back the bag.
 You then went on to create a node and an executable to generate synthetic data and store it in a bag.</p>
@@ -884,9 +885,9 @@ You then went on to create a node and an executable to generate synthetic data a
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="FastDDS-Configuration.html" class="btn btn-neutral float-left" title="Unlocking the potential of Fast DDS middleware [community-contributed]" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Recording-A-Bag-From-Your-Own-Node-Py.html" class="btn btn-neutral float-right" title="Recording a bag from a node (Python)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="FastDDS-Configuration.html" class="btn btn-neutral float-left" title="Unlocking the potential of Fast DDS middleware [community-contributed]" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Recording-A-Bag-From-Your-Own-Node-Py.html" class="btn btn-neutral float-right" title="Recording a bag from a node (Python)" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -895,9 +896,9 @@ You then went on to create a node and an executable to generate synthetic data a
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

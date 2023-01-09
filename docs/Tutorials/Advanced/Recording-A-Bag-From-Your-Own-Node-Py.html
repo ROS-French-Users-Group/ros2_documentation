@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Recording a bag from a node (Python) &mdash; ROS 2 documentation  documentation</title>
+  <title>Recording a bag from a node (Python) &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -22,9 +22,10 @@
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
         <script src="../../_static/tabs.js"></script>
+        <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
     <link rel="next" title="Simulation" href="Simulators/Simulation-Main.html" />
     <link rel="prev" title="Recording a bag from a node (C++)" href="Recording-A-Bag-From-Your-Own-Node-CPP.html" /> 
 </head>
@@ -38,7 +39,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -80,7 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -344,7 +345,7 @@
           <li class="breadcrumb-item"><a href="../Advanced.html">Advanced</a></li>
       <li class="breadcrumb-item active">Recording a bag from a node (Python)</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-Py.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-Py.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -355,7 +356,7 @@
 
 
   <div class="section" id="recording-a-bag-from-a-node-python">
-<span id="ros2bagownnodepython"></span><h1>Recording a bag from a node (Python)<a class="headerlink" href="#recording-a-bag-from-a-node-python" title="Permalink to this headline"></a></h1>
+<span id="ros2bagownnodepython"></span><h1>Recording a bag from a node (Python)<a class="headerlink" href="#recording-a-bag-from-a-node-python" title="Lien permanent vers ce titre"></a></h1>
 <p><strong>Goal:</strong> Record data from your own Python node to a bag.</p>
 <p><strong>Tutorial level:</strong> Advanced</p>
 <p><strong>Time:</strong> 20 minutes</p>
@@ -377,7 +378,7 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2><a class="toc-backref" href="#id6">Background</a><a class="headerlink" href="#background" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id6">Background</a><a class="headerlink" href="#background" title="Lien permanent vers ce titre"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">rosbag2</span></code> doesn’t just provide the <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code> command line tool.
 It also provides a Python API for reading from and writing to a bag from your own source code.
 This allows you to subscribe to a topic and save the received data to a bag at the same time as performing any other processing of your choice on that data.
@@ -386,7 +387,7 @@ Because any data can be recorded in a bag, it is also possible to save data gene
 This is useful, for example, for quickly generating a bag that contains a large number of samples spread over a long playback time.</p>
 </div>
 <div class="section" id="prerequisites">
-<h2><a class="toc-backref" href="#id7">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id7">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Lien permanent vers ce titre"></a></h2>
 <p>You should have the <code class="docutils literal notranslate"><span class="pre">rosbag2</span></code> packages installed as part of your regular ROS 2 setup.</p>
 <p>If you’ve installed from Debian packages on Linux, it may be installed by default.
 If it is not, you can install it using this command.</p>
@@ -397,9 +398,9 @@ If it is not, you can install it using this command.</p>
 You should have already completed the <a class="reference internal" href="../Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.html"><span class="doc">basic ROS 2 bag tutorial</span></a>.</p>
 </div>
 <div class="section" id="tasks">
-<h2><a class="toc-backref" href="#id8">Tasks</a><a class="headerlink" href="#tasks" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id8">Tasks</a><a class="headerlink" href="#tasks" title="Lien permanent vers ce titre"></a></h2>
 <div class="section" id="create-a-package">
-<h3><a class="toc-backref" href="#id9">1 Create a package</a><a class="headerlink" href="#create-a-package" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id9">1 Create a package</a><a class="headerlink" href="#create-a-package" title="Lien permanent vers ce titre"></a></h3>
 <p>Open a new terminal and <a class="reference internal" href="../Beginner-CLI-Tools/Configuring-ROS2-Environment.html"><span class="doc">source your ROS 2 installation</span></a> so that <code class="docutils literal notranslate"><span class="pre">ros2</span></code> commands will work.</p>
 <p>Follow <a class="reference internal" href="../Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.html#new-directory"><span class="std std-ref">these instructions</span></a> to create a new workspace named <code class="docutils literal notranslate"><span class="pre">ros2_ws</span></code>.</p>
 <p>Navigate into the <code class="docutils literal notranslate"><span class="pre">ros2_ws/src</span></code> directory and create a new package:</p>
@@ -411,7 +412,7 @@ The <code class="docutils literal notranslate"><span class="pre">--dependencies<
 In this case, the package will use the <code class="docutils literal notranslate"><span class="pre">rosbag2_py</span></code> package as well as the <code class="docutils literal notranslate"><span class="pre">rclpy</span></code> package.
 A dependency on the <code class="docutils literal notranslate"><span class="pre">example_interfaces</span></code> package is also required for message definitions.</p>
 <div class="section" id="update-package-xml-and-setup-py">
-<h4>1.1 Update <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> and <code class="docutils literal notranslate"><span class="pre">setup.py</span></code><a class="headerlink" href="#update-package-xml-and-setup-py" title="Permalink to this headline"></a></h4>
+<h4>1.1 Update <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> and <code class="docutils literal notranslate"><span class="pre">setup.py</span></code><a class="headerlink" href="#update-package-xml-and-setup-py" title="Lien permanent vers ce titre"></a></h4>
 <p>Because you used the <code class="docutils literal notranslate"><span class="pre">--dependencies</span></code> option during package creation, you don’t have to manually add dependencies to <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>.txt``.
 As always, though, make sure to add the description, maintainer email and name, and license information to <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;description&gt;</span>Python<span class="w"> </span>bag<span class="w"> </span>writing<span class="w"> </span>tutorial<span class="nt">&lt;/description&gt;</span>
@@ -429,7 +430,7 @@ As always, though, make sure to add the description, maintainer email and name, 
 </div>
 </div>
 <div class="section" id="write-the-python-node">
-<h3><a class="toc-backref" href="#id10">2 Write the Python node</a><a class="headerlink" href="#write-the-python-node" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id10">2 Write the Python node</a><a class="headerlink" href="#write-the-python-node" title="Lien permanent vers ce titre"></a></h3>
 <p>Inside the <code class="docutils literal notranslate"><span class="pre">ros2_ws/src/bag_recorder_nodes_py/bag_recorder_nodes_py</span></code> directory, create a new file called <code class="docutils literal notranslate"><span class="pre">simple_bag_recorder.py</span></code> and paste the following code into it.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rclpy</span>
 <span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
@@ -481,7 +482,7 @@ As always, though, make sure to add the description, maintainer email and name, 
 </pre></div>
 </div>
 <div class="section" id="examine-the-code">
-<h4>2.1 Examine the code<a class="headerlink" href="#examine-the-code" title="Permalink to this headline"></a></h4>
+<h4>2.1 Examine the code<a class="headerlink" href="#examine-the-code" title="Lien permanent vers ce titre"></a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">import</span></code> statements at the top are the package dependencies.
 Note the importation of the <code class="docutils literal notranslate"><span class="pre">rosbag2_py</span></code> package for the functions and structures necessary to work with bag files.</p>
 <p>In the class constructor, we begin by creating the writer object that we will use to write to the bag.
@@ -541,7 +542,7 @@ For this reason, we call <code class="docutils literal notranslate"><span class=
 </div>
 </div>
 <div class="section" id="add-entry-point">
-<h4>2.2 Add entry point<a class="headerlink" href="#add-entry-point" title="Permalink to this headline"></a></h4>
+<h4>2.2 Add entry point<a class="headerlink" href="#add-entry-point" title="Lien permanent vers ce titre"></a></h4>
 <p>Open the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file in the <code class="docutils literal notranslate"><span class="pre">bag_recorder_nodes_py</span></code> package and add an entry point for your node.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
     <span class="s1">&#39;console_scripts&#39;</span><span class="p">:</span> <span class="p">[</span>
@@ -553,7 +554,7 @@ For this reason, we call <code class="docutils literal notranslate"><span class=
 </div>
 </div>
 <div class="section" id="build-and-run">
-<h3><a class="toc-backref" href="#id11">3 Build and run</a><a class="headerlink" href="#build-and-run" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id11">3 Build and run</a><a class="headerlink" href="#build-and-run" title="Lien permanent vers ce titre"></a></h3>
 <p>Navigate back to the root of your workspace, <code class="docutils literal notranslate"><span class="pre">ros2_ws</span></code>, and build your new package.</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --packages-select bag_recorder_nodes_py</span>
@@ -603,7 +604,7 @@ Then, in one terminal start the <code class="docutils literal notranslate"><span
 <p>If you wish to run the bag-writing node again, you will first need to delete the <code class="docutils literal notranslate"><span class="pre">my_bag</span></code> directory.</p>
 </div>
 <div class="section" id="record-synthetic-data-from-a-node">
-<h3><a class="toc-backref" href="#id12">4 Record synthetic data from a node</a><a class="headerlink" href="#record-synthetic-data-from-a-node" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id12">4 Record synthetic data from a node</a><a class="headerlink" href="#record-synthetic-data-from-a-node" title="Lien permanent vers ce titre"></a></h3>
 <p>Any data can be recorded into a bag, not just data received over a topic.
 A common use case for writing to a bag from your own node is to generate and store synthetic data.
 In this section you will learn how to write a node that generates some data and stores it in a bag.
@@ -611,7 +612,7 @@ We will demonstrate two approaches for doing this.
 The first uses a node with a timer; this is the approach that you would use if your data generation is external to the node, such as reading data directly from hardware (e.g. a camera).
 The second approach does not use a node; this is the approach you can use when you do not need to use any functionality from the ROS infrastructure.</p>
 <div class="section" id="write-a-python-node">
-<h4>4.1 Write a Python node<a class="headerlink" href="#write-a-python-node" title="Permalink to this headline"></a></h4>
+<h4>4.1 Write a Python node<a class="headerlink" href="#write-a-python-node" title="Lien permanent vers ce titre"></a></h4>
 <p>Inside the <code class="docutils literal notranslate"><span class="pre">ros2_ws/src/bag_recorder_nodes_py/bag_recorder_nodes_py</span></code> directory, create a new file called <code class="docutils literal notranslate"><span class="pre">data_generator_node.py</span></code> and paste the following code into it.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rclpy</span>
 <span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
@@ -662,7 +663,7 @@ The second approach does not use a node; this is the approach you can use when y
 </div>
 </div>
 <div class="section" id="id1">
-<h4>4.2 Examine the code<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h4>
+<h4>4.2 Examine the code<a class="headerlink" href="#id1" title="Lien permanent vers ce titre"></a></h4>
 <p>Much of this code is the same as the first example.
 The important differences are described here.</p>
 <p>First, the name of the bag is changed.</p>
@@ -694,7 +695,7 @@ As with the previous example, the data is not yet serialised, so we must seriali
 </div>
 </div>
 <div class="section" id="add-executable">
-<h4>4.3 Add executable<a class="headerlink" href="#add-executable" title="Permalink to this headline"></a></h4>
+<h4>4.3 Add executable<a class="headerlink" href="#add-executable" title="Lien permanent vers ce titre"></a></h4>
 <p>Open the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file in the <code class="docutils literal notranslate"><span class="pre">bag_recorder_nodes_py</span></code> package and add an entry point for your node.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
     <span class="s1">&#39;console_scripts&#39;</span><span class="p">:</span> <span class="p">[</span>
@@ -706,7 +707,7 @@ As with the previous example, the data is not yet serialised, so we must seriali
 </div>
 </div>
 <div class="section" id="id2">
-<h4>4.4 Build and run<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h4>
+<h4>4.4 Build and run<a class="headerlink" href="#id2" title="Lien permanent vers ce titre"></a></h4>
 <p>Navigate back to the root of your workspace, <code class="docutils literal notranslate"><span class="pre">ros2_ws</span></code>, and build your package.</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-2-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-2-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-2-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-2-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --packages-select bag_recorder_nodes_py</span>
@@ -749,11 +750,11 @@ Next, play back the created bag.</p>
 </div>
 </div>
 <div class="section" id="record-synthetic-data-from-an-executable">
-<h3><a class="toc-backref" href="#id13">5 Record synthetic data from an executable</a><a class="headerlink" href="#record-synthetic-data-from-an-executable" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id13">5 Record synthetic data from an executable</a><a class="headerlink" href="#record-synthetic-data-from-an-executable" title="Lien permanent vers ce titre"></a></h3>
 <p>Now that you can create a bag that stores data from a source other than a topic, you will learn how to generate and record synthetic data from a non-node executable.
 The advantage of this approach is simpler code and rapid creation of a large quantity of data.</p>
 <div class="section" id="write-a-python-executable">
-<h4>5.1 Write a Python executable<a class="headerlink" href="#write-a-python-executable" title="Permalink to this headline"></a></h4>
+<h4>5.1 Write a Python executable<a class="headerlink" href="#write-a-python-executable" title="Lien permanent vers ce titre"></a></h4>
 <p>Inside the <code class="docutils literal notranslate"><span class="pre">ros2_ws/src/bag_recorder_nodes_py/bag_recorder_nodes_py</span></code> directory, create a new file called <code class="docutils literal notranslate"><span class="pre">data_generator_executable.py</span></code> and paste the following code into it.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rclpy.clock</span> <span class="kn">import</span> <span class="n">Clock</span>
 <span class="kn">from</span> <span class="nn">rclpy.duration</span> <span class="kn">import</span> <span class="n">Duration</span>
@@ -794,7 +795,7 @@ The advantage of this approach is simpler code and rapid creation of a large qua
 </div>
 </div>
 <div class="section" id="id3">
-<h4>5.2 Examine the code<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h4>
+<h4>5.2 Examine the code<a class="headerlink" href="#id3" title="Lien permanent vers ce titre"></a></h4>
 <p>A comparison of this sample and the previous sample will reveal that they are not that different.
 The only significant difference is the use of a for loop to drive the data generation rather than a timer.</p>
 <p>Notice that we are also now generating time stamps for the data rather than relying on the current system time for each sample.
@@ -815,7 +816,7 @@ This allows us to generate a lot of data covering a wide span of time in much le
 </div>
 </div>
 <div class="section" id="id4">
-<h4>5.3 Add executable<a class="headerlink" href="#id4" title="Permalink to this headline"></a></h4>
+<h4>5.3 Add executable<a class="headerlink" href="#id4" title="Lien permanent vers ce titre"></a></h4>
 <p>Open the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file in the <code class="docutils literal notranslate"><span class="pre">bag_recorder_nodes_py</span></code> package and add an entry point for your node.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
     <span class="s1">&#39;console_scripts&#39;</span><span class="p">:</span> <span class="p">[</span>
@@ -828,7 +829,7 @@ This allows us to generate a lot of data covering a wide span of time in much le
 </div>
 </div>
 <div class="section" id="id5">
-<h4>5.4 Build and run<a class="headerlink" href="#id5" title="Permalink to this headline"></a></h4>
+<h4>5.4 Build and run<a class="headerlink" href="#id5" title="Lien permanent vers ce titre"></a></h4>
 <p>Navigate back to the root of your workspace, <code class="docutils literal notranslate"><span class="pre">ros2_ws</span></code>, and build your package.</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-4-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-4-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-4-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-4-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-4-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-4-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --packages-select bag_recorder_nodes_py</span>
@@ -873,7 +874,7 @@ Even though the bag was generated rapidly it is still played back at the rate th
 </div>
 </div>
 <div class="section" id="summary">
-<h2><a class="toc-backref" href="#id14">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id14">Summary</a><a class="headerlink" href="#summary" title="Lien permanent vers ce titre"></a></h2>
 <p>You created a node that records data it receives on a topic into a bag.
 You tested recording a bag using the node, and verified the data was recorded by playing back the bag.
 This approach can be used to record a bag with additional data than it received over a topic, for example with results obtained from processing the received data.
@@ -886,9 +887,9 @@ The latter approaches are useful especially for generating synthetic data that c
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Recording-A-Bag-From-Your-Own-Node-CPP.html" class="btn btn-neutral float-left" title="Recording a bag from a node (C++)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Simulators/Simulation-Main.html" class="btn btn-neutral float-right" title="Simulation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Recording-A-Bag-From-Your-Own-Node-CPP.html" class="btn btn-neutral float-left" title="Recording a bag from a node (C++)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Simulators/Simulation-Main.html" class="btn btn-neutral float-right" title="Simulation" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -897,9 +898,9 @@ The latter approaches are useful especially for generating synthetic data that c
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

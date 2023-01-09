@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adding a frame (Python) &mdash; ROS 2 documentation  documentation</title>
+  <title>Adding a frame (Python) &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -22,9 +22,10 @@
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
         <script src="../../../_static/tabs.js"></script>
+        <script src="../../../_static/translations.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="search" title="Recherche" href="../../../search.html" />
     <link rel="next" title="Adding a frame (C++)" href="Adding-A-Frame-Cpp.html" />
     <link rel="prev" title="Writing a listener (C++)" href="Writing-A-Tf2-Listener-Cpp.html" /> 
 </head>
@@ -38,7 +39,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -80,7 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -345,7 +346,7 @@
           <li class="breadcrumb-item"><a href="Tf2-Main.html"><code class="docutils literal notranslate"><span class="pre">tf2</span></code></a></li>
       <li class="breadcrumb-item active">Adding a frame (Python)</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -356,7 +357,7 @@
 
 
   <div class="section" id="adding-a-frame-python">
-<span id="addingaframepy"></span><h1>Adding a frame (Python)<a class="headerlink" href="#adding-a-frame-python" title="Permalink to this headline"></a></h1>
+<span id="addingaframepy"></span><h1>Adding a frame (Python)<a class="headerlink" href="#adding-a-frame-python" title="Lien permanent vers ce titre"></a></h1>
 <p><strong>Goal:</strong> Learn how to to add an extra frame to tf2.</p>
 <p><strong>Tutorial level:</strong> Intermediate</p>
 <p><strong>Time:</strong> 15 minutes</p>
@@ -391,7 +392,7 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2><a class="toc-backref" href="#id6">Background</a><a class="headerlink" href="#background" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id6">Background</a><a class="headerlink" href="#background" title="Lien permanent vers ce titre"></a></h2>
 <p>In previous tutorials, we recreated the turtle demo by writing a <a class="reference internal" href="Writing-A-Tf2-Broadcaster-Py.html"><span class="doc">tf2 broadcaster</span></a> and a <a class="reference internal" href="Writing-A-Tf2-Listener-Py.html"><span class="doc">tf2 listener</span></a>.
 This tutorial will teach you how to add extra fixed and dynamic frames to the transformation tree.
 In fact, adding a frame in tf2 is very similar to creating the tf2 broadcaster, but this example will show you some additional features of tf2.</p>
@@ -401,7 +402,7 @@ tf2 allows you to define a local frame for each sensor, link, or joint in your s
 When transforming from one frame to another, tf2 will take care of all the hidden intermediate frame transformations that are introduced.</p>
 </div>
 <div class="section" id="tf2-tree">
-<h2><a class="toc-backref" href="#id7">tf2 tree</a><a class="headerlink" href="#tf2-tree" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id7">tf2 tree</a><a class="headerlink" href="#tf2-tree" title="Lien permanent vers ce titre"></a></h2>
 <p>tf2 builds up a tree structure of frames and, thus, does not allow a closed loop in the frame structure.
 This means that a frame only has one single parent, but it can have multiple children.
 Currently, our tf2 tree contains three frames: <code class="docutils literal notranslate"><span class="pre">world</span></code>, <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> and <code class="docutils literal notranslate"><span class="pre">turtle2</span></code>.
@@ -410,9 +411,9 @@ If we want to add a new frame to tf2, one of the three existing frames needs to 
 <img alt="../../../_images/turtlesim_frames.png" src="../../../_images/turtlesim_frames.png" />
 </div>
 <div class="section" id="tasks">
-<h2><a class="toc-backref" href="#id8">Tasks</a><a class="headerlink" href="#tasks" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id8">Tasks</a><a class="headerlink" href="#tasks" title="Lien permanent vers ce titre"></a></h2>
 <div class="section" id="write-the-fixed-frame-broadcaster">
-<h3><a class="toc-backref" href="#id9">1 Write the fixed frame broadcaster</a><a class="headerlink" href="#write-the-fixed-frame-broadcaster" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id9">1 Write the fixed frame broadcaster</a><a class="headerlink" href="#write-the-fixed-frame-broadcaster" title="Lien permanent vers ce titre"></a></h3>
 <p>In our turtle example, we’ll add a new frame <code class="docutils literal notranslate"><span class="pre">carrot1</span></code>, which will be the child of the <code class="docutils literal notranslate"><span class="pre">turtle1</span></code>.
 This frame will serve as the goal for the second turtle.</p>
 <p>Let’s first create the source files. Go to the <code class="docutils literal notranslate"><span class="pre">learning_tf2_py</span></code> package we created in the previous tutorials.
@@ -479,7 +480,7 @@ Download the fixed frame broadcaster code by entering the following command:</p>
 </div>
 <p>The code is very similar to the tf2 broadcaster tutorial example and the only difference is that the transform here does not change over time.</p>
 <div class="section" id="examine-the-code">
-<h4><a class="toc-backref" href="#id10">1.1 Examine the code</a><a class="headerlink" href="#examine-the-code" title="Permalink to this headline"></a></h4>
+<h4><a class="toc-backref" href="#id10">1.1 Examine the code</a><a class="headerlink" href="#examine-the-code" title="Lien permanent vers ce titre"></a></h4>
 <p>Let’s take a look at the key lines in this piece of code.
 Here we create a new transform, from the parent <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> to the new child <code class="docutils literal notranslate"><span class="pre">carrot1</span></code>.
 The <code class="docutils literal notranslate"><span class="pre">carrot1</span></code> frame is 2 meters offset in y axis in terms of the <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> frame.</p>
@@ -495,7 +496,7 @@ The <code class="docutils literal notranslate"><span class="pre">carrot1</span><
 </div>
 </div>
 <div class="section" id="add-an-entry-point">
-<h4><a class="toc-backref" href="#id11">1.2 Add an entry point</a><a class="headerlink" href="#add-an-entry-point" title="Permalink to this headline"></a></h4>
+<h4><a class="toc-backref" href="#id11">1.2 Add an entry point</a><a class="headerlink" href="#add-an-entry-point" title="Lien permanent vers ce titre"></a></h4>
 <p>To allow the <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> command to run your node, you must add the entry point
 to <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> (located in the <code class="docutils literal notranslate"><span class="pre">src/learning_tf2_py</span></code> directory).</p>
 <p>Finally, add the following line between the <code class="docutils literal notranslate"><span class="pre">'console_scripts':</span></code> brackets:</p>
@@ -504,7 +505,7 @@ to <code class="docutils literal notranslate"><span class="pre">setup.py</span><
 </div>
 </div>
 <div class="section" id="write-the-launch-file">
-<h4><a class="toc-backref" href="#id12">1.3 Write the launch file</a><a class="headerlink" href="#write-the-launch-file" title="Permalink to this headline"></a></h4>
+<h4><a class="toc-backref" href="#id12">1.3 Write the launch file</a><a class="headerlink" href="#write-the-launch-file" title="Lien permanent vers ce titre"></a></h4>
 <p>Now let’s create a launch file for this example.
 With your text editor, create a new file called <code class="docutils literal notranslate"><span class="pre">launch/turtle_tf2_fixed_frame_demo.launch.py</span></code>, and add the following lines:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -546,7 +547,7 @@ With your text editor, create a new file called <code class="docutils literal no
 </div>
 </div>
 <div class="section" id="build">
-<h4><a class="toc-backref" href="#id13">1.4 Build</a><a class="headerlink" href="#build" title="Permalink to this headline"></a></h4>
+<h4><a class="toc-backref" href="#id13">1.4 Build</a><a class="headerlink" href="#build" title="Lien permanent vers ce titre"></a></h4>
 <p>Run <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> in the root of your workspace to check for missing dependencies.</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-1-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-1-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">rosdep install -i --from-path src --rosdistro rolling -y</span>
@@ -585,7 +586,7 @@ With your text editor, create a new file called <code class="docutils literal no
 </div></div>
 </div>
 <div class="section" id="run">
-<h4><a class="toc-backref" href="#id14">1.5 Run</a><a class="headerlink" href="#run" title="Permalink to this headline"></a></h4>
+<h4><a class="toc-backref" href="#id14">1.5 Run</a><a class="headerlink" href="#run" title="Lien permanent vers ce titre"></a></h4>
 <p>Now you are ready to run the launch file:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch learning_tf2_py turtle_tf2_fixed_frame_demo.launch.py</span>
 </pre></div>
@@ -614,7 +615,7 @@ To do so, open the <code class="docutils literal notranslate"><span class="pre">
 </div>
 </div>
 <div class="section" id="write-the-dynamic-frame-broadcaster">
-<h3><a class="toc-backref" href="#id15">2 Write the dynamic frame broadcaster</a><a class="headerlink" href="#write-the-dynamic-frame-broadcaster" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id15">2 Write the dynamic frame broadcaster</a><a class="headerlink" href="#write-the-dynamic-frame-broadcaster" title="Lien permanent vers ce titre"></a></h3>
 <p>The extra frame we published in this tutorial is a fixed frame that doesn’t change over time in relation to the parent frame.
 However, if you want to publish a moving frame you can code the broadcaster to change the frame over time.
 Let’s change our <code class="docutils literal notranslate"><span class="pre">carrot1</span></code> frame so that it changes relative to <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> frame over time.
@@ -684,7 +685,7 @@ Now download the dynamic frame broadcaster code by entering the following comman
 </pre></div>
 </div>
 <div class="section" id="id1">
-<h4><a class="toc-backref" href="#id16">2.1 Examine the code</a><a class="headerlink" href="#id1" title="Permalink to this headline"></a></h4>
+<h4><a class="toc-backref" href="#id16">2.1 Examine the code</a><a class="headerlink" href="#id1" title="Lien permanent vers ce titre"></a></h4>
 <p>Instead of a fixed definition of our x and y offsets, we are using the <code class="docutils literal notranslate"><span class="pre">sin()</span></code> and <code class="docutils literal notranslate"><span class="pre">cos()</span></code> functions on the current time so that the offset of <code class="docutils literal notranslate"><span class="pre">carrot1</span></code> is constantly changing.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">seconds</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_clock</span><span class="p">()</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">seconds_nanoseconds</span><span class="p">()</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">seconds</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
@@ -695,7 +696,7 @@ Now download the dynamic frame broadcaster code by entering the following comman
 </div>
 </div>
 <div class="section" id="id2">
-<h4><a class="toc-backref" href="#id17">2.2 Add an entry point</a><a class="headerlink" href="#id2" title="Permalink to this headline"></a></h4>
+<h4><a class="toc-backref" href="#id17">2.2 Add an entry point</a><a class="headerlink" href="#id2" title="Lien permanent vers ce titre"></a></h4>
 <p>To allow the <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> command to run your node, you must add the entry point
 to <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> (located in the <code class="docutils literal notranslate"><span class="pre">src/learning_tf2_py</span></code> directory).</p>
 <p>Finally, add the following line between the <code class="docutils literal notranslate"><span class="pre">'console_scripts':</span></code> brackets:</p>
@@ -704,7 +705,7 @@ to <code class="docutils literal notranslate"><span class="pre">setup.py</span><
 </div>
 </div>
 <div class="section" id="id3">
-<h4><a class="toc-backref" href="#id18">2.3 Write the launch file</a><a class="headerlink" href="#id3" title="Permalink to this headline"></a></h4>
+<h4><a class="toc-backref" href="#id18">2.3 Write the launch file</a><a class="headerlink" href="#id3" title="Lien permanent vers ce titre"></a></h4>
 <p>To test this code, create a new launch file <code class="docutils literal notranslate"><span class="pre">launch/turtle_tf2_dynamic_frame_demo.launch.py</span></code> and paste the following code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 
@@ -737,7 +738,7 @@ to <code class="docutils literal notranslate"><span class="pre">setup.py</span><
 </div>
 </div>
 <div class="section" id="id4">
-<h4><a class="toc-backref" href="#id19">2.4 Build</a><a class="headerlink" href="#id4" title="Permalink to this headline"></a></h4>
+<h4><a class="toc-backref" href="#id19">2.4 Build</a><a class="headerlink" href="#id4" title="Lien permanent vers ce titre"></a></h4>
 <p>Run <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> in the root of your workspace to check for missing dependencies.</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-5-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-5-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-5-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-5-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-5-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-5-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">rosdep install -i --from-path src --rosdistro rolling -y</span>
@@ -776,7 +777,7 @@ to <code class="docutils literal notranslate"><span class="pre">setup.py</span><
 </div></div>
 </div>
 <div class="section" id="id5">
-<h4><a class="toc-backref" href="#id20">1.5 Run</a><a class="headerlink" href="#id5" title="Permalink to this headline"></a></h4>
+<h4><a class="toc-backref" href="#id20">1.5 Run</a><a class="headerlink" href="#id5" title="Lien permanent vers ce titre"></a></h4>
 <p>Now you are ready to run the launch file:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch learning_tf2_py turtle_tf2_dynamic_frame_demo.launch.py</span>
 </pre></div>
@@ -787,7 +788,7 @@ to <code class="docutils literal notranslate"><span class="pre">setup.py</span><
 </div>
 </div>
 <div class="section" id="summary">
-<h2><a class="toc-backref" href="#id21">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id21">Summary</a><a class="headerlink" href="#summary" title="Lien permanent vers ce titre"></a></h2>
 <p>In this tutorial, you learned about the tf2 transformation tree, its structure, and its features.
 You also learned that it is easiest to think inside a local frame, and learned to add extra fixed and dynamic frames for that local frame.</p>
 </div>
@@ -797,9 +798,9 @@ You also learned that it is easiest to think inside a local frame, and learned t
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Writing-A-Tf2-Listener-Cpp.html" class="btn btn-neutral float-left" title="Writing a listener (C++)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Adding-A-Frame-Cpp.html" class="btn btn-neutral float-right" title="Adding a frame (C++)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Writing-A-Tf2-Listener-Cpp.html" class="btn btn-neutral float-left" title="Writing a listener (C++)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Adding-A-Frame-Cpp.html" class="btn btn-neutral float-right" title="Adding a frame (C++)" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -808,9 +809,9 @@ You also learned that it is easiest to think inside a local frame, and learned t
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

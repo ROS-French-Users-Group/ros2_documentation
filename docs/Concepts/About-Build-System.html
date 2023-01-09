@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About the build system &mdash; ROS 2 documentation  documentation</title>
+  <title>About the build system &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="About internal ROS 2 interfaces" href="About-Internal-Interfaces.html" />
     <link rel="prev" title="About tf2" href="About-Tf2.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -342,7 +343,7 @@
           <li class="breadcrumb-item"><a href="../Concepts.html">Concepts</a></li>
       <li class="breadcrumb-item active">About the build system</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Concepts/About-Build-System.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Concepts/About-Build-System.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -353,7 +354,7 @@
 
 
   <div class="section" id="about-the-build-system">
-<h1>About the build system<a class="headerlink" href="#about-the-build-system" title="Permalink to this headline"></a></h1>
+<h1>About the build system<a class="headerlink" href="#about-the-build-system" title="Lien permanent vers ce titre"></a></h1>
 <p>Under everything is the build system.
 Iterating on <code class="docutils literal notranslate"><span class="pre">catkin</span></code> from ROS 1 we have created a set of <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">packages</span></a> under the moniker <code class="docutils literal notranslate"><span class="pre">ament</span></code>.
 Some of the reasons for changing the name to <code class="docutils literal notranslate"><span class="pre">ament</span></code> are that we wanted it to not collide with <code class="docutils literal notranslate"><span class="pre">catkin</span></code> (in case we want mix them at some point) and to prevent confusion with existing <code class="docutils literal notranslate"><span class="pre">catkin</span></code> documentation.
@@ -361,7 +362,7 @@ Some of the reasons for changing the name to <code class="docutils literal notra
 However, this responsibility extends to any user who is willing to make use of our build system conventions and tools.
 Additionally it should make <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">packages</span></a> conventional, such that developers should be able to pick up any <code class="docutils literal notranslate"><span class="pre">ament</span></code> based <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a> and make some assumptions about how it works, how to introspect it, and how to build or use it.</p>
 <p><code class="docutils literal notranslate"><span class="pre">ament</span></code> consists of a few important repositories which are all in the <code class="docutils literal notranslate"><span class="pre">ament</span></code> <a class="reference external" href="https://github.com/">GitHub</a> organization:</p>
-<div class="contents local topic" id="contents">
+<div class="contents local topic" id="sommaire">
 <ul class="simple">
 <li><p><a class="reference internal" href="#the-ament-package-package" id="id3">The <code class="docutils literal notranslate"><span class="pre">ament_package</span></code> Package</a></p></li>
 <li><p><a class="reference internal" href="#the-ament-cmake-repository" id="id4">The <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> Repository</a></p></li>
@@ -370,43 +371,43 @@ Additionally it should make <a class="reference internal" href="../Glossary.html
 </ul>
 </div>
 <div class="section" id="the-ament-package-package">
-<h2><a class="toc-backref" href="#id3">The <code class="docutils literal notranslate"><span class="pre">ament_package</span></code> Package</a><a class="headerlink" href="#the-ament-package-package" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id3">The <code class="docutils literal notranslate"><span class="pre">ament_package</span></code> Package</a><a class="headerlink" href="#the-ament-package-package" title="Lien permanent vers ce titre"></a></h2>
 <p>Located on <a class="reference external" href="https://github.com/">GitHub</a> at <a class="reference external" href="https://github.com/ament/ament_package">ament/ament_package</a>, this repository contains a single <a class="reference internal" href="#term-ament-Python-package"><span class="xref std std-term">ament Python package</span></a> that provides various utilities for <a class="reference internal" href="#term-ament-package"><span class="xref std std-term">ament packages</span></a>, e.g. templates for environment hooks.</p>
 <p>All <a class="reference internal" href="#term-ament-package"><span class="xref std std-term">ament packages</span></a> must contain a single <a class="reference internal" href="#term-package.xml"><span class="xref std std-term">package.xml</span></a> file at the root of the package regardless of their underlying build system.
-The <a class="reference internal" href="#term-package.xml"><span class="xref std std-term">package.xml</span></a> “manifest” file contains information that is required in order to process and operate on a <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a>.
+The <a class="reference internal" href="#term-package.xml"><span class="xref std std-term">package.xml</span></a> « manifest » file contains information that is required in order to process and operate on a <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a>.
 This <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a> information includes things like the <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a>’s name, which is globally unique, and the package’s dependencies.
 The <a class="reference internal" href="#term-package.xml"><span class="xref std std-term">package.xml</span></a> file also serves as the marker file which indicates the location of the <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a> on the file system.</p>
 <p>Parsing of the <a class="reference internal" href="#term-package.xml"><span class="xref std std-term">package.xml</span></a> files is provided by <code class="docutils literal notranslate"><span class="pre">catkin_pkg</span></code> (as in ROS 1), while functionality to locate <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">packages</span></a> by searching the file system for these <a class="reference internal" href="#term-package.xml"><span class="xref std std-term">package.xml</span></a> files is provided by build tools such as <code class="docutils literal notranslate"><span class="pre">colcon</span></code>.</p>
 <dl class="glossary simple">
-<dt id="term-package.xml">package.xml<a class="headerlink" href="#term-package.xml" title="Permalink to this term"></a></dt><dd><p>Package manifest file which marks the root of a <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a> and contains meta information about the <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a> including its name, version, description, maintainer, license, dependencies, and more.
+<dt id="term-package.xml">package.xml<a class="headerlink" href="#term-package.xml" title="Lien permanent vers ce terme"></a></dt><dd><p>Package manifest file which marks the root of a <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a> and contains meta information about the <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a> including its name, version, description, maintainer, license, dependencies, and more.
 The contents of the manifest are in machine readable XML format and the contents are described in the <a class="reference internal" href="../Glossary.html#term-REP"><span class="xref std std-term">REPs</span></a> <a class="reference external" href="http://www.ros.org/reps/rep-0127.html">127</a> and <a class="reference external" href="http://www.ros.org/reps/rep-0140.html">140</a>, with the possibility of further modifications in future <a class="reference internal" href="../Glossary.html#term-REP"><span class="xref std std-term">REPs</span></a>.</p>
 </dd>
 </dl>
 <p>So anytime some <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a> is referred to as an <a class="reference internal" href="#term-ament-package"><span class="xref std std-term">ament package</span></a>, it means that it is a single unit of software (source code, build files, tests, documentation, and other resources) which is described using a <a class="reference internal" href="#term-package.xml"><span class="xref std std-term">package.xml</span></a> manifest file.</p>
 <dl class="glossary simple">
-<dt id="term-ament-package">ament package<a class="headerlink" href="#term-ament-package" title="Permalink to this term"></a></dt><dd><p>Any <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a> which contains a <a class="reference internal" href="#term-package.xml"><span class="xref std std-term">package.xml</span></a> and follows the packaging guidelines of <code class="docutils literal notranslate"><span class="pre">ament</span></code>, regardless of the underlying build system.</p>
+<dt id="term-ament-package">ament package<a class="headerlink" href="#term-ament-package" title="Lien permanent vers ce terme"></a></dt><dd><p>Any <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a> which contains a <a class="reference internal" href="#term-package.xml"><span class="xref std std-term">package.xml</span></a> and follows the packaging guidelines of <code class="docutils literal notranslate"><span class="pre">ament</span></code>, regardless of the underlying build system.</p>
 </dd>
 </dl>
 <p>Since the term <a class="reference internal" href="#term-ament-package"><span class="xref std std-term">ament package</span></a> is build system agnostic, there can be different kinds of <a class="reference internal" href="#term-ament-package"><span class="xref std std-term">ament packages</span></a>, e.g. <a class="reference internal" href="#term-ament-CMake-package"><span class="xref std std-term">ament CMake package</span></a>, <a class="reference internal" href="#term-ament-Python-package"><span class="xref std std-term">ament Python package</span></a>, etc.</p>
 <p>Here is a list of common package types that you might run into in this software stack:</p>
 <dl class="glossary simple">
-<dt id="term-CMake-package">CMake package<a class="headerlink" href="#term-CMake-package" title="Permalink to this term"></a></dt><dd><p>Any <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a> containing a plain CMake project and a <a class="reference internal" href="#term-package.xml"><span class="xref std std-term">package.xml</span></a> manifest file.</p>
+<dt id="term-CMake-package">CMake package<a class="headerlink" href="#term-CMake-package" title="Lien permanent vers ce terme"></a></dt><dd><p>Any <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a> containing a plain CMake project and a <a class="reference internal" href="#term-package.xml"><span class="xref std std-term">package.xml</span></a> manifest file.</p>
 </dd>
-<dt id="term-ament-CMake-package">ament CMake package<a class="headerlink" href="#term-ament-CMake-package" title="Permalink to this term"></a></dt><dd><p>A <a class="reference internal" href="#term-CMake-package"><span class="xref std std-term">CMake package</span></a> that also follows the <code class="docutils literal notranslate"><span class="pre">ament</span></code> packaging guidelines.</p>
+<dt id="term-ament-CMake-package">ament CMake package<a class="headerlink" href="#term-ament-CMake-package" title="Lien permanent vers ce terme"></a></dt><dd><p>A <a class="reference internal" href="#term-CMake-package"><span class="xref std std-term">CMake package</span></a> that also follows the <code class="docutils literal notranslate"><span class="pre">ament</span></code> packaging guidelines.</p>
 </dd>
-<dt id="term-Python-package">Python package<a class="headerlink" href="#term-Python-package" title="Permalink to this term"></a></dt><dd><p>Any <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a> containing a <a class="reference external" href="https://pypi.org/project/setuptools/">setuptools</a> based Python project and a <a class="reference internal" href="#term-package.xml"><span class="xref std std-term">package.xml</span></a> manifest file.</p>
+<dt id="term-Python-package">Python package<a class="headerlink" href="#term-Python-package" title="Lien permanent vers ce terme"></a></dt><dd><p>Any <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a> containing a <a class="reference external" href="https://pypi.org/project/setuptools/">setuptools</a> based Python project and a <a class="reference internal" href="#term-package.xml"><span class="xref std std-term">package.xml</span></a> manifest file.</p>
 </dd>
-<dt id="term-ament-Python-package">ament Python package<a class="headerlink" href="#term-ament-Python-package" title="Permalink to this term"></a></dt><dd><p>A <a class="reference internal" href="#term-Python-package"><span class="xref std std-term">Python package</span></a> that also follows the <code class="docutils literal notranslate"><span class="pre">ament</span></code> packaging guidelines.</p>
+<dt id="term-ament-Python-package">ament Python package<a class="headerlink" href="#term-ament-Python-package" title="Lien permanent vers ce terme"></a></dt><dd><p>A <a class="reference internal" href="#term-Python-package"><span class="xref std std-term">Python package</span></a> that also follows the <code class="docutils literal notranslate"><span class="pre">ament</span></code> packaging guidelines.</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="the-ament-cmake-repository">
-<h2><a class="toc-backref" href="#id4">The <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> Repository</a><a class="headerlink" href="#the-ament-cmake-repository" title="Permalink to this headline"></a></h2>
-<p>Located on <a class="reference external" href="https://github.com/">GitHub</a> at <a class="reference external" href="https://github.com/ament/ament_cmake">ament/ament_cmake</a>, this repository contains many “ament CMake” and pure CMake packages which provide the infrastructure in CMake that is required to create “ament CMake” packages.
-In this context “ament CMake” packages means: <code class="docutils literal notranslate"><span class="pre">ament</span></code> packages that are built using CMake.
-So the <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">packages</span></a> in this repository provide the necessary CMake functions/macros and CMake Modules to facilitate creating more “ament CMake” (or <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code>) packages.
+<h2><a class="toc-backref" href="#id4">The <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> Repository</a><a class="headerlink" href="#the-ament-cmake-repository" title="Lien permanent vers ce titre"></a></h2>
+<p>Located on <a class="reference external" href="https://github.com/">GitHub</a> at <a class="reference external" href="https://github.com/ament/ament_cmake">ament/ament_cmake</a>, this repository contains many « ament CMake » and pure CMake packages which provide the infrastructure in CMake that is required to create « ament CMake » packages.
+In this context « ament CMake » packages means: <code class="docutils literal notranslate"><span class="pre">ament</span></code> packages that are built using CMake.
+So the <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">packages</span></a> in this repository provide the necessary CMake functions/macros and CMake Modules to facilitate creating more « ament CMake » (or <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code>) packages.
 Packages of this type are identified with the <code class="docutils literal notranslate"><span class="pre">&lt;build_type&gt;ament_cmake&lt;/build_type&gt;</span></code> tag in the <code class="docutils literal notranslate"><span class="pre">&lt;export&gt;</span></code> tag of the <a class="reference internal" href="#term-package.xml"><span class="xref std std-term">package.xml</span></a> file.</p>
-<p>The <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">packages</span></a> in this repository are extremely modular, but there is a single “bottleneck” <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a> called <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code>.
+<p>The <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">packages</span></a> in this repository are extremely modular, but there is a single « bottleneck » <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a> called <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code>.
 Anyone can depend on the <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a> to get all of the aggregate functionality of the <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">packages</span></a> in this repository.
 Here a list of the <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">packages</span></a> in the repository along with a short description:</p>
 <ul class="simple">
@@ -457,23 +458,23 @@ This makes the <a class="reference internal" href="../Glossary.html#term-package
 For instance it provides a standard way to pass include directories, libraries, definitions, and dependencies between <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">packages</span></a> so that consumers of this information can access this information in a conventional way.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">ament_cmake_core</span></code> <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a> also provides features of the <code class="docutils literal notranslate"><span class="pre">ament</span></code> build system like symbolic link installation, which allows you to symbolically link files from either the source space or the build space into the install space rather than copying them.
 This allows you to install once and then edit non-generated resources like Python code and configuration files without having to rerun the install step for them to take effect.
-This feature essentially replaces the “devel space” from <code class="docutils literal notranslate"><span class="pre">catkin</span></code> because it has most of the advantages with few of the complications or drawbacks.</p>
+This feature essentially replaces the « devel space » from <code class="docutils literal notranslate"><span class="pre">catkin</span></code> because it has most of the advantages with few of the complications or drawbacks.</p>
 <p>Another feature provided by <code class="docutils literal notranslate"><span class="pre">ament_cmake_core</span></code> is the <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a> resource indexing which is a way for <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">packages</span></a> to indicate that they contain a resource of some type.
 The design of this feature makes it much more efficient to answer simple questions like what <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">packages</span></a> are in this prefix (e.g. <code class="docutils literal notranslate"><span class="pre">/usr/local</span></code>) because it only requires that you list the files in a single possible location under that prefix.
 You can read more about this feature in the <a class="reference external" href="https://github.com/ament/ament_cmake/blob/rolling/ament_cmake_core/doc/resource_index.md">design docs</a> for the resource index.</p>
 <p>Like <code class="docutils literal notranslate"><span class="pre">catkin</span></code>, <code class="docutils literal notranslate"><span class="pre">ament_cmake_core</span></code> also provides environment setup files and <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a> specific environment hooks.
 The environment setup files, often named something like <code class="docutils literal notranslate"><span class="pre">setup.bash</span></code>, are a place for <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a> developers to define changes to the environment that are needed to utilize their <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">package</span></a>.
-The developers are able to do this using an “environment hook” which is basically an arbitrary bit of shell code that can set or modify environment variables, define shell functions, setup auto-completion rules, etc…
+The developers are able to do this using an « environment hook » which is basically an arbitrary bit of shell code that can set or modify environment variables, define shell functions, setup auto-completion rules, etc…
 This feature is how, for example, ROS 1 set the <code class="docutils literal notranslate"><span class="pre">ROS_DISTRO</span></code> environment variable without <code class="docutils literal notranslate"><span class="pre">catkin</span></code> knowing anything about the ROS distribution.</p>
 </div>
 <div class="section" id="the-ament-lint-repository">
-<h2><a class="toc-backref" href="#id5">The <code class="docutils literal notranslate"><span class="pre">ament_lint</span></code> Repository</a><a class="headerlink" href="#the-ament-lint-repository" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id5">The <code class="docutils literal notranslate"><span class="pre">ament_lint</span></code> Repository</a><a class="headerlink" href="#the-ament-lint-repository" title="Lien permanent vers ce titre"></a></h2>
 <p>Located on <a class="reference external" href="https://github.com/">GitHub</a> at <a class="reference external" href="https://github.com/ament/ament_lint">ament/ament_lint</a>, this repository provides several <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">packages</span></a> which provide linting and testing services in a convenient and consistent manner.
 Currently there are <a class="reference internal" href="../Glossary.html#term-package"><span class="xref std std-term">packages</span></a> to support C++ style linting using <code class="docutils literal notranslate"><span class="pre">uncrustify</span></code>, static C++ code checks using <code class="docutils literal notranslate"><span class="pre">cppcheck</span></code>, checking for copyright in source code, Python style linting using <code class="docutils literal notranslate"><span class="pre">pep8</span></code>, and other things.
 The list of helper packages will likely grow in the future.</p>
 </div>
 <div class="section" id="build-tools">
-<h2><a class="toc-backref" href="#id6">Build tools</a><a class="headerlink" href="#build-tools" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id6">Build tools</a><a class="headerlink" href="#build-tools" title="Lien permanent vers ce titre"></a></h2>
 <p>A build tool performs the task of building a workspace of packages together at once with a single invocation.
 For ROS 2 releases up to Ardent, the build tool providing this functionality is called <code class="docutils literal notranslate"><span class="pre">ament_tools</span></code>.
 As of ROS 2 Bouncy, <code class="docutils literal notranslate"><span class="pre">ament_tools</span></code> has been superseded by <code class="docutils literal notranslate"><span class="pre">colcon</span></code>, as described in <a class="reference external" href="http://design.ros2.org/articles/build_tool.html">the universal build tool article</a>.</p>
@@ -484,9 +485,9 @@ As of ROS 2 Bouncy, <code class="docutils literal notranslate"><span class="pre"
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="About-Tf2.html" class="btn btn-neutral float-left" title="About tf2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="About-Internal-Interfaces.html" class="btn btn-neutral float-right" title="About internal ROS 2 interfaces" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="About-Tf2.html" class="btn btn-neutral float-left" title="About tf2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="About-Internal-Interfaces.html" class="btn btn-neutral float-right" title="About internal ROS 2 interfaces" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -495,9 +496,9 @@ As of ROS 2 Bouncy, <code class="docutils literal notranslate"><span class="pre"
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

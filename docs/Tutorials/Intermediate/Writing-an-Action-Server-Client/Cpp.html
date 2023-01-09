@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Writing an action server and client (C++) &mdash; ROS 2 documentation  documentation</title>
+  <title>Writing an action server and client (C++) &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -22,9 +22,10 @@
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
         <script src="../../../_static/tabs.js"></script>
+        <script src="../../../_static/translations.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="search" title="Recherche" href="../../../search.html" />
     <link rel="next" title="Writing an action server and client (Python)" href="Py.html" />
     <link rel="prev" title="Creating an action" href="../Creating-an-Action.html" /> 
 </head>
@@ -38,7 +39,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -80,7 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -344,7 +345,7 @@
           <li class="breadcrumb-item"><a href="../../Intermediate.html">Intermediate</a></li>
       <li class="breadcrumb-item active">Writing an action server and client (C++)</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Intermediate/Writing-an-Action-Server-Client/Cpp.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Intermediate/Writing-an-Action-Server-Client/Cpp.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -355,7 +356,7 @@
 
 
   <div class="section" id="writing-an-action-server-and-client-c">
-<span id="actionscpp"></span><h1>Writing an action server and client (C++)<a class="headerlink" href="#writing-an-action-server-and-client-c" title="Permalink to this headline"></a></h1>
+<span id="actionscpp"></span><h1>Writing an action server and client (C++)<a class="headerlink" href="#writing-an-action-server-and-client-c" title="Lien permanent vers ce titre"></a></h1>
 <p><strong>Goal:</strong> Implement an action server and client in C++.</p>
 <p><strong>Tutorial level:</strong> Intermediate</p>
 <p><strong>Time:</strong> 15 minutes</p>
@@ -376,23 +377,23 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2><a class="toc-backref" href="#id2">Background</a><a class="headerlink" href="#background" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id2">Background</a><a class="headerlink" href="#background" title="Lien permanent vers ce titre"></a></h2>
 <p>Actions are a form of asynchronous communication in ROS.
 <em>Action clients</em> send goal requests to <em>action servers</em>.
 <em>Action servers</em> send goal feedback and results to <em>action clients</em>.</p>
 </div>
 <div class="section" id="prerequisites">
-<h2><a class="toc-backref" href="#id3">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id3">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Lien permanent vers ce titre"></a></h2>
 <p>You will need the <code class="docutils literal notranslate"><span class="pre">action_tutorials_interfaces</span></code> package and the <code class="docutils literal notranslate"><span class="pre">Fibonacci.action</span></code>
 interface defined in the previous tutorial, <a class="reference internal" href="../Creating-an-Action.html"><span class="doc">Creating an action</span></a>.</p>
 </div>
 <div class="section" id="tasks">
-<h2><a class="toc-backref" href="#id4">Tasks</a><a class="headerlink" href="#tasks" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id4">Tasks</a><a class="headerlink" href="#tasks" title="Lien permanent vers ce titre"></a></h2>
 <div class="section" id="creating-the-action-tutorials-cpp-package">
-<h3><a class="toc-backref" href="#id5">1 Creating the action_tutorials_cpp package</a><a class="headerlink" href="#creating-the-action-tutorials-cpp-package" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id5">1 Creating the action_tutorials_cpp package</a><a class="headerlink" href="#creating-the-action-tutorials-cpp-package" title="Lien permanent vers ce titre"></a></h3>
 <p>As we saw in the <a class="reference internal" href="../../Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html"><span class="doc">Creating a package</span></a> tutorial, we need to create a new package to hold our C++ and supporting code.</p>
 <div class="section" id="id1">
-<h4>1.1 Creating the action_tutorials_cpp package<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h4>
+<h4>1.1 Creating the action_tutorials_cpp package<a class="headerlink" href="#id1" title="Lien permanent vers ce titre"></a></h4>
 <p>Go into the action workspace you created in the <a class="reference internal" href="../Creating-an-Action.html"><span class="doc">previous tutorial</span></a> (remember to source the workspace), and create a new package for the C++ action server:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src
@@ -410,8 +411,8 @@ ros2<span class="w"> </span>pkg<span class="w"> </span>create<span class="w"> </
 </div></div>
 </div>
 <div class="section" id="adding-in-visibility-control">
-<h4>1.2 Adding in visibility control<a class="headerlink" href="#adding-in-visibility-control" title="Permalink to this headline"></a></h4>
-<p>In order to make the package compile and work on Windows, we need to add in some “visibility control”.
+<h4>1.2 Adding in visibility control<a class="headerlink" href="#adding-in-visibility-control" title="Lien permanent vers ce titre"></a></h4>
+<p>In order to make the package compile and work on Windows, we need to add in some « visibility control ».
 For more details, see <a class="reference internal" href="../../../The-ROS2-Project/Contributing/Windows-Tips-and-Tricks.html#windows-symbol-visibility"><span class="std std-ref">Windows Symbol Visibility in the Windows Tips and Tricks document</span></a>.</p>
 <p>Open up <code class="docutils literal notranslate"><span class="pre">action_tutorials_cpp/include/action_tutorials_cpp/visibility_control.h</span></code>, and put the following code in:</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef ACTION_TUTORIALS_CPP__VISIBILITY_CONTROL_H_</span>
@@ -463,10 +464,10 @@ For more details, see <a class="reference internal" href="../../../The-ROS2-Proj
 </div>
 </div>
 <div class="section" id="writing-an-action-server">
-<h3><a class="toc-backref" href="#id6">2 Writing an action server</a><a class="headerlink" href="#writing-an-action-server" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id6">2 Writing an action server</a><a class="headerlink" href="#writing-an-action-server" title="Lien permanent vers ce titre"></a></h3>
 <p>Let’s focus on writing an action server that computes the Fibonacci sequence using the action we created in the <a class="reference internal" href="../Creating-an-Action.html"><span class="doc">Creating an action</span></a> tutorial.</p>
 <div class="section" id="writing-the-action-server-code">
-<h4>2.1 Writing the action server code<a class="headerlink" href="#writing-the-action-server-code" title="Permalink to this headline"></a></h4>
+<h4>2.1 Writing the action server code<a class="headerlink" href="#writing-the-action-server-code" title="Lien permanent vers ce titre"></a></h4>
 <p>Open up <code class="docutils literal notranslate"><span class="pre">action_tutorials_cpp/src/fibonacci_action_server.cpp</span></code>, and put the following code in:</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;functional&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span>
@@ -676,7 +677,7 @@ When it has finished processing, it marks the <code class="docutils literal notr
 <p>We now have a fully functioning action server.  Let’s get it built and running.</p>
 </div>
 <div class="section" id="compiling-the-action-server">
-<h4>2.2 Compiling the action server<a class="headerlink" href="#compiling-the-action-server" title="Permalink to this headline"></a></h4>
+<h4>2.2 Compiling the action server<a class="headerlink" href="#compiling-the-action-server" title="Lien permanent vers ce titre"></a></h4>
 <p>In the previous section we put the action server code into place.
 To get it to compile and run, we need to do a couple of additional things.</p>
 <p>First we need to setup the CMakeLists.txt so that the action server is compiled.
@@ -708,7 +709,7 @@ Open up <code class="docutils literal notranslate"><span class="pre">action_tuto
 <p>This should compile the entire workspace, including the <code class="docutils literal notranslate"><span class="pre">fibonacci_action_server</span></code> in the <code class="docutils literal notranslate"><span class="pre">action_tutorials_cpp</span></code> package.</p>
 </div>
 <div class="section" id="running-the-action-server">
-<h4>2.3 Running the action server<a class="headerlink" href="#running-the-action-server" title="Permalink to this headline"></a></h4>
+<h4>2.3 Running the action server<a class="headerlink" href="#running-the-action-server" title="Lien permanent vers ce titre"></a></h4>
 <p>Now that we have the action server built, we can run it.
 Source the workspace we just built (<code class="docutils literal notranslate"><span class="pre">ros2_ws</span></code>), and try to run the action server:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>action_tutorials_cpp<span class="w"> </span>fibonacci_action_server
@@ -717,9 +718,9 @@ Source the workspace we just built (<code class="docutils literal notranslate"><
 </div>
 </div>
 <div class="section" id="writing-an-action-client">
-<h3><a class="toc-backref" href="#id7">3 Writing an action client</a><a class="headerlink" href="#writing-an-action-client" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id7">3 Writing an action client</a><a class="headerlink" href="#writing-an-action-client" title="Lien permanent vers ce titre"></a></h3>
 <div class="section" id="writing-the-action-client-code">
-<h4>3.1 Writing the action client code<a class="headerlink" href="#writing-the-action-client-code" title="Permalink to this headline"></a></h4>
+<h4>3.1 Writing the action client code<a class="headerlink" href="#writing-the-action-client-code" title="Lien permanent vers ce titre"></a></h4>
 <p>Open up <code class="docutils literal notranslate"><span class="pre">action_tutorials_cpp/src/fibonacci_action_client.cpp</span></code>, and put the following code in:</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;functional&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;future&gt;</span>
@@ -956,7 +957,7 @@ The result is handled by the <code class="docutils literal notranslate"><span cl
 <p>We now have a fully functioning action client.  Let’s get it built and running.</p>
 </div>
 <div class="section" id="compiling-the-action-client">
-<h4>3.2 Compiling the action client<a class="headerlink" href="#compiling-the-action-client" title="Permalink to this headline"></a></h4>
+<h4>3.2 Compiling the action client<a class="headerlink" href="#compiling-the-action-client" title="Lien permanent vers ce titre"></a></h4>
 <p>In the previous section we put the action client code into place.
 To get it to compile and run, we need to do a couple of additional things.</p>
 <p>First we need to setup the CMakeLists.txt so that the action client is compiled.
@@ -988,7 +989,7 @@ Open up <code class="docutils literal notranslate"><span class="pre">action_tuto
 <p>This should compile the entire workspace, including the <code class="docutils literal notranslate"><span class="pre">fibonacci_action_client</span></code> in the <code class="docutils literal notranslate"><span class="pre">action_tutorials_cpp</span></code> package.</p>
 </div>
 <div class="section" id="running-the-action-client">
-<h4>3.3 Running the action client<a class="headerlink" href="#running-the-action-client" title="Permalink to this headline"></a></h4>
+<h4>3.3 Running the action client<a class="headerlink" href="#running-the-action-client" title="Lien permanent vers ce titre"></a></h4>
 <p>Now that we have the action client built, we can run it.
 First make sure that an action server is running in a separate terminal.
 Now source the workspace we just built (<code class="docutils literal notranslate"><span class="pre">ros2_ws</span></code>), and try to run the action client:</p>
@@ -1000,11 +1001,11 @@ Now source the workspace we just built (<code class="docutils literal notranslat
 </div>
 </div>
 <div class="section" id="summary">
-<h2><a class="toc-backref" href="#id8">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id8">Summary</a><a class="headerlink" href="#summary" title="Lien permanent vers ce titre"></a></h2>
 <p>In this tutorial, you put together a C++ action server and action client line by line, and configured them to exchange goals, feedback, and results.</p>
 </div>
 <div class="section" id="related-content">
-<h2><a class="toc-backref" href="#id9">Related content</a><a class="headerlink" href="#related-content" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id9">Related content</a><a class="headerlink" href="#related-content" title="Lien permanent vers ce titre"></a></h2>
 <ul class="simple">
 <li><p>There are several ways you could write an action server and client in C++; check out the <code class="docutils literal notranslate"><span class="pre">minimal_action_server</span></code> and <code class="docutils literal notranslate"><span class="pre">minimal_action_client</span></code> packages in the <a class="reference external" href="https://github.com/ros2/examples/tree/rolling/rclcpp">ros2/examples</a> repo.</p></li>
 <li><p>For more detailed information about ROS actions, please refer to the <a class="reference external" href="http://design.ros2.org/articles/actions.html">design article</a>.</p></li>
@@ -1016,9 +1017,9 @@ Now source the workspace we just built (<code class="docutils literal notranslat
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../Creating-an-Action.html" class="btn btn-neutral float-left" title="Creating an action" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Py.html" class="btn btn-neutral float-right" title="Writing an action server and client (Python)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../Creating-an-Action.html" class="btn btn-neutral float-left" title="Creating an action" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Py.html" class="btn btn-neutral float-right" title="Writing an action server and client (Python)" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -1027,9 +1028,9 @@ Now source the workspace we just built (<code class="docutils literal notranslat
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

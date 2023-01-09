@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Using the ros2 param command-line tool &mdash; ROS 2 documentation  documentation</title>
+  <title>Using the ros2 param command-line tool &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Using ros1_bridge with upstream ROS on Ubuntu 22.04" href="Using-ros1_bridge-Jammy-upstream.html" />
     <link rel="prev" title="Using variants" href="Using-Variants.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -342,7 +343,7 @@
           <li class="breadcrumb-item"><a href="../How-To-Guides.html">How-to Guides</a></li>
       <li class="breadcrumb-item active">Using the <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> command-line tool</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/How-To-Guides/Using-ros2-param.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/How-To-Guides/Using-ros2-param.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -353,7 +354,7 @@
 
 
   <div class="section" id="using-the-ros2-param-command-line-tool">
-<h1>Using the <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> command-line tool<a class="headerlink" href="#using-the-ros2-param-command-line-tool" title="Permalink to this headline"></a></h1>
+<h1>Using the <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> command-line tool<a class="headerlink" href="#using-the-ros2-param-command-line-tool" title="Lien permanent vers ce titre"></a></h1>
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">Table of Contents</p>
 <ul class="simple">
@@ -369,7 +370,7 @@
 <p>Parameters in ROS 2 can be get, set, listed, and described through a set of services as described in <a class="reference internal" href="../Concepts/About-ROS-2-Parameters.html"><span class="doc">the concept document</span></a>.
 The <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> command-line tool is a wrapper around these service calls that makes it easy to manipulate parameters from the command-line.</p>
 <div class="section" id="ros2-param-list">
-<h2><a class="toc-backref" href="#id1"><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">list</span></code></a><a class="headerlink" href="#ros2-param-list" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id1"><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">list</span></code></a><a class="headerlink" href="#ros2-param-list" title="Lien permanent vers ce titre"></a></h2>
 <p>This command will list all of the available parameters on a given node, or on all discoverable nodes if no node is given.</p>
 <p>To get all of the parameters on a given node:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param list /my_node</span>
@@ -381,7 +382,7 @@ The <code class="docutils literal notranslate"><span class="pre">ros2</span> <sp
 </div>
 </div>
 <div class="section" id="ros2-param-get">
-<h2><a class="toc-backref" href="#id2"><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">get</span></code></a><a class="headerlink" href="#ros2-param-get" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id2"><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">get</span></code></a><a class="headerlink" href="#ros2-param-get" title="Lien permanent vers ce titre"></a></h2>
 <p>This command will get the value of a particular parameter on a particular node.</p>
 <p>To get the value of a parameter on a node:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param get /my_node use_sim_time</span>
@@ -389,7 +390,7 @@ The <code class="docutils literal notranslate"><span class="pre">ros2</span> <sp
 </div>
 </div>
 <div class="section" id="ros2-param-set">
-<h2><a class="toc-backref" href="#id3"><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">set</span></code></a><a class="headerlink" href="#ros2-param-set" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id3"><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">set</span></code></a><a class="headerlink" href="#ros2-param-set" title="Lien permanent vers ce titre"></a></h2>
 <p>This command will set the value of a particular parameter on a particular node.
 For most parameters, the type of the new value must be the same as the existing type.</p>
 <p>To set the value of a parameter on a node:</p>
@@ -402,7 +403,7 @@ For instance, if the parameter <code class="docutils literal notranslate"><span 
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param set /my_node my_string off</span>
 </pre></div>
 </div>
-<p>That’s because YAML is interpreting “off” as a boolean, and <code class="docutils literal notranslate"><span class="pre">my_string</span></code> is a string type.
+<p>That’s because YAML is interpreting « off » as a boolean, and <code class="docutils literal notranslate"><span class="pre">my_string</span></code> is a string type.
 This can be worked around by using the YAML syntax for explicitly setting strings, e.g.:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros param set /my_node my_string &#39;!!str off&#39;</span>
 </pre></div>
@@ -419,7 +420,7 @@ Assuming that the parameter <code class="docutils literal notranslate"><span cla
 </div>
 </div>
 <div class="section" id="ros2-param-delete">
-<h2><a class="toc-backref" href="#id4"><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">delete</span></code></a><a class="headerlink" href="#ros2-param-delete" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id4"><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">delete</span></code></a><a class="headerlink" href="#ros2-param-delete" title="Lien permanent vers ce titre"></a></h2>
 <p>This command will remove a parameter from a particular node.
 However, note that this can only remove dynamic parameters (not declared parameters).
 See <a class="reference internal" href="../Concepts/About-ROS-2-Parameters.html"><span class="doc">the concept document</span></a> for more information.</p>
@@ -428,14 +429,14 @@ See <a class="reference internal" href="../Concepts/About-ROS-2-Parameters.html"
 </div>
 </div>
 <div class="section" id="ros2-param-describe">
-<h2><a class="toc-backref" href="#id5"><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">describe</span></code></a><a class="headerlink" href="#ros2-param-describe" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id5"><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">describe</span></code></a><a class="headerlink" href="#ros2-param-describe" title="Lien permanent vers ce titre"></a></h2>
 <p>This command will provide a textual description of a particular parameter on a particular node:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param describe /my_node use_sim_time</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="ros2-param-dump">
-<h2><a class="toc-backref" href="#id6"><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">dump</span></code></a><a class="headerlink" href="#ros2-param-dump" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id6"><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">dump</span></code></a><a class="headerlink" href="#ros2-param-dump" title="Lien permanent vers ce titre"></a></h2>
 <p>This command will print out all of the parameters on a particular node in a YAML file format.
 The output of this command can then be used to re-run the node with the same parameters later:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param dump /my_node</span>
@@ -443,7 +444,7 @@ The output of this command can then be used to re-run the node with the same par
 </div>
 </div>
 <div class="section" id="ros2-param-load">
-<h2><a class="toc-backref" href="#id7"><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">load</span></code></a><a class="headerlink" href="#ros2-param-load" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id7"><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">load</span></code></a><a class="headerlink" href="#ros2-param-load" title="Lien permanent vers ce titre"></a></h2>
 <p>This command will load the values of the parameters from a YAML file into a particular node.
 That is, this command can reload values at runtime that were dumped out by <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">dump</span></code>:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param load /my_node my_node.yaml</span>
@@ -456,9 +457,9 @@ That is, this command can reload values at runtime that were dumped out by <code
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Using-Variants.html" class="btn btn-neutral float-left" title="Using variants" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Using-ros1_bridge-Jammy-upstream.html" class="btn btn-neutral float-right" title="Using ros1_bridge with upstream ROS on Ubuntu 22.04" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Using-Variants.html" class="btn btn-neutral float-left" title="Using variants" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Using-ros1_bridge-Jammy-upstream.html" class="btn btn-neutral float-right" title="Using ros1_bridge with upstream ROS on Ubuntu 22.04" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -467,9 +468,9 @@ That is, this command can reload values at runtime that were dumped out by <code
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

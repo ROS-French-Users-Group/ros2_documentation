@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ubuntu (source) &mdash; ROS 2 documentation  documentation</title>
+  <title>Ubuntu (source) &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -22,9 +22,10 @@
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
         <script src="../../_static/tabs.js"></script>
+        <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
     <link rel="next" title="Ubuntu (binary)" href="Ubuntu-Install-Binary.html" />
     <link rel="prev" title="Alternatives" href="../Alternatives.html" /> 
 </head>
@@ -38,7 +39,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -80,7 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -344,7 +345,7 @@
           <li class="breadcrumb-item"><a href="../Alternatives.html">Alternatives</a></li>
       <li class="breadcrumb-item active">Ubuntu (source)</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Installation/Alternatives/Ubuntu-Development-Setup.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Installation/Alternatives/Ubuntu-Development-Setup.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -355,7 +356,7 @@
 
 
   <div class="section" id="ubuntu-source">
-<span id="linux-latest"></span><h1>Ubuntu (source)<a class="headerlink" href="#ubuntu-source" title="Permalink to this headline"></a></h1>
+<span id="linux-latest"></span><h1>Ubuntu (source)<a class="headerlink" href="#ubuntu-source" title="Lien permanent vers ce titre"></a></h1>
 <div class="contents local topic" id="table-des-matieres">
 <p class="topic-title">Table des matières</p>
 <ul class="simple">
@@ -391,7 +392,7 @@
 </ul>
 </div>
 <div class="section" id="configuration-requise">
-<h2><a class="toc-backref" href="#id1">Configuration requise</a><a class="headerlink" href="#configuration-requise" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id1">Configuration requise</a><a class="headerlink" href="#configuration-requise" title="Lien permanent vers ce titre"></a></h2>
 <p>Les plateformes cibles basées sur Debian pour  Rolling Ridley sont:</p>
 <ul class="simple">
 <li><p>Niveau 1: Ubuntu Linux - Jammy (22.04) 64-bit</p></li>
@@ -407,9 +408,9 @@
 <p>Comme défini dans  <a class="reference external" href="https://www.ros.org/reps/rep-2000.html">REP 2000</a>.</p>
 </div>
 <div class="section" id="installation-du-systeme">
-<h2><a class="toc-backref" href="#id2">Installation du système</a><a class="headerlink" href="#installation-du-systeme" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id2">Installation du système</a><a class="headerlink" href="#installation-du-systeme" title="Lien permanent vers ce titre"></a></h2>
 <div class="section" id="specifier-la-langue">
-<h3><a class="toc-backref" href="#id3">Spécifier la langue</a><a class="headerlink" href="#specifier-la-langue" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id3">Spécifier la langue</a><a class="headerlink" href="#specifier-la-langue" title="Lien permanent vers ce titre"></a></h3>
 <p>Soyez sûr que vous avez installé les ressources permettant de supporter le mode <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code>.
 Si vous êtes dans un environnement minimal (comme un conteneur docker), l’environnement locale peut-être quelque chose d’aussi minimal que <code class="docutils literal notranslate"><span class="pre">POSIX</span></code>.
 ROS est testé avec les paramètres suivants. Toutefois, le système devrait fonctionner avec d’autres choix de langues UTF-8.</p>
@@ -425,7 +426,7 @@ locale<span class="w">  </span><span class="c1"># verify settings</span>
 </div>
 </div>
 <div class="section" id="ajouter-le-depot-apt-ros-2">
-<h3><a class="toc-backref" href="#id4">Ajouter le dépôt apt ROS 2</a><a class="headerlink" href="#ajouter-le-depot-apt-ros-2" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id4">Ajouter le dépôt apt ROS 2</a><a class="headerlink" href="#ajouter-le-depot-apt-ros-2" title="Lien permanent vers ce titre"></a></h3>
 <p>Vous devez ajouter le dépôt aps de ROS 2 à votre système:</p>
 <p>Il faut d’abordd s’assurer que <a class="reference external" href="https://help.ubuntu.com/community/Repositories/Ubuntu">Ubuntu Universe repository</a> est activé.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>software-properties-common
@@ -443,7 +444,7 @@ sudo<span class="w"> </span>curl<span class="w"> </span>-sSL<span class="w"> </s
 </div>
 </div>
 <div class="section" id="installer-les-outils-de-developpement-et-ceux-de-ros">
-<h3><a class="toc-backref" href="#id5">Installer les outils de développement et ceux de ROS</a><a class="headerlink" href="#installer-les-outils-de-developpement-et-ceux-de-ros" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id5">Installer les outils de développement et ceux de ROS</a><a class="headerlink" href="#installer-les-outils-de-developpement-et-ceux-de-ros" title="Lien permanent vers ce titre"></a></h3>
 <p>Installation des paquets communs.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>python3-flake8-docstrings<span class="w"> </span><span class="se">\</span>
@@ -482,7 +483,7 @@ sudo<span class="w"> </span>curl<span class="w"> </span>-sSL<span class="w"> </s
 </div>
 </div>
 <div class="section" id="obtenir-le-code-ros-2">
-<span id="rolling-linux-dev-get-ros2-code"></span><h2><a class="toc-backref" href="#id6">Obtenir le code ROS 2</a><a class="headerlink" href="#obtenir-le-code-ros-2" title="Permalink to this headline"></a></h2>
+<span id="rolling-linux-dev-get-ros2-code"></span><h2><a class="toc-backref" href="#id6">Obtenir le code ROS 2</a><a class="headerlink" href="#obtenir-le-code-ros-2" title="Lien permanent vers ce titre"></a></h2>
 <p>Il faut créer un espace de travail et cloner tous les dépôts:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/ros2_rolling/src
 <span class="nb">cd</span><span class="w"> </span>~/ros2_rolling
@@ -491,7 +492,7 @@ vcs<span class="w"> </span>import<span class="w"> </span>--input<span class="w">
 </div>
 </div>
 <div class="section" id="installer-les-dependences-en-utilisant-rosdep">
-<span id="linux-development-setup-install-dependencies-using-rosdep"></span><h2><a class="toc-backref" href="#id7">Installer les dépendences en utilisant rosdep</a><a class="headerlink" href="#installer-les-dependences-en-utilisant-rosdep" title="Permalink to this headline"></a></h2>
+<span id="linux-development-setup-install-dependencies-using-rosdep"></span><h2><a class="toc-backref" href="#id7">Installer les dépendences en utilisant rosdep</a><a class="headerlink" href="#installer-les-dependences-en-utilisant-rosdep" title="Lien permanent vers ce titre"></a></h2>
 <p>Les paquets ROS 2 sont construits sur les systèmes Ubuntu fréquemment mis à jour.
 Il est toujours recommandé de vous assurer que votre système est à jour avant d’installer de nouveaux paquets.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
@@ -505,13 +506,13 @@ rosdep<span class="w"> </span>install<span class="w"> </span>--from-paths<span c
 <p><strong>Note</strong>: If you’re using a distribution that is based on Ubuntu (like Linux Mint) but does not identify itself as such, you’ll get an error message like <code class="docutils literal notranslate"><span class="pre">Unsupported</span> <span class="pre">OS</span> <span class="pre">[mint]</span></code>. In this case append <code class="docutils literal notranslate"><span class="pre">--os=ubuntu:jammy</span></code> to the above command.</p>
 </div>
 <div class="section" id="installer-des-implementations-dds-additionnelles-optionel">
-<h2><a class="toc-backref" href="#id8">Installer des implémentations DDS additionnelles (optionel)</a><a class="headerlink" href="#installer-des-implementations-dds-additionnelles-optionel" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id8">Installer des implémentations DDS additionnelles (optionel)</a><a class="headerlink" href="#installer-des-implementations-dds-additionnelles-optionel" title="Lien permanent vers ce titre"></a></h2>
 <p>Si vous souhaitez utiliser un autre fournisseur de DDS ou de RTPS vendor en plus de la version par défaut, il est possible de trouver les instructions <a class="reference internal" href="../DDS-Implementations.html"><span class="doc">ici</span></a>.</p>
 </div>
 <div class="section" id="construire-le-code-dans-l-espace-de-travail">
-<h2><a class="toc-backref" href="#id9">Construire le code dans l’espace de travail</a><a class="headerlink" href="#construire-le-code-dans-l-espace-de-travail" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id9">Construire le code dans l’espace de travail</a><a class="headerlink" href="#construire-le-code-dans-l-espace-de-travail" title="Lien permanent vers ce titre"></a></h2>
 <p>Si vous avez déjà installé ROS 2 d’une autre façon (soit par des paquets Debians ou une distribution binaire), assurez vous que vous exécutez les commandes suivantes dans un nouvel environnement
-où les autres installations n’ont pas été “sourcées”.
+où les autres installations n’ont pas été « sourcées ».
 Il faut également vous assurer que vous n’avez pas la ligne <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">/opt/ros/${ROS_DISTRO}/setup.bash</span></code> dans votre fichier <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code>.
 Vous pouvez vous assurez que ROS 2 n’a pas été sourcé avec la commande <code class="docutils literal notranslate"><span class="pre">printenv</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">-i</span> <span class="pre">ROS</span></code>.
 La sortie devrait être vide.</p>
@@ -525,9 +526,9 @@ Prenons un exemple: vous souhaiteriez éviter d’installer la librairie OpenCV 
 Il suffit d’exécuter <code class="docutils literal notranslate"><span class="pre">touch</span> <span class="pre">COLCON_IGNORE</span></code> dans le répertoire <code class="docutils literal notranslate"><span class="pre">cam2image</span></code> dans demo pour ne pas l’inclure dans le processus de construction.</p>
 </div>
 <div class="section" id="configuration-de-l-environnement">
-<h2><a class="toc-backref" href="#id10">Configuration de l’environnement</a><a class="headerlink" href="#configuration-de-l-environnement" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id10">Configuration de l’environnement</a><a class="headerlink" href="#configuration-de-l-environnement" title="Lien permanent vers ce titre"></a></h2>
 <div class="section" id="sourcer-le-script-setup">
-<h3><a class="toc-backref" href="#id11">Sourcer le script <code class="docutils literal notranslate"><span class="pre">`setup`</span></code></a><a class="headerlink" href="#sourcer-le-script-setup" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id11">Sourcer le script <code class="docutils literal notranslate"><span class="pre">`setup`</span></code></a><a class="headerlink" href="#sourcer-le-script-setup" title="Lien permanent vers ce titre"></a></h3>
 <p>Configurer votre environnement en sourçant le fichier suivant:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remplacer &quot;.bash&quot; avec votre shell si vous n&#39;utilisez pas bash</span>
 <span class="c1"># Les valeurs possibles sont: setup.bash, setup.sh, setup.zsh</span>
@@ -537,7 +538,7 @@ Il suffit d’exécuter <code class="docutils literal notranslate"><span class="
 </div>
 </div>
 <div class="section" id="quelques-exemples">
-<span id="talker-listener"></span><h2><a class="toc-backref" href="#id12">Quelques exemples</a><a class="headerlink" href="#quelques-exemples" title="Permalink to this headline"></a></h2>
+<span id="talker-listener"></span><h2><a class="toc-backref" href="#id12">Quelques exemples</a><a class="headerlink" href="#quelques-exemples" title="Lien permanent vers ce titre"></a></h2>
 <p>Dans un terminal, il faut sourcer le fichier de configuration (setup) et lancer ensuite le programme C++ <code class="docutils literal notranslate"><span class="pre">talker</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.<span class="w"> </span>~/ros2_rolling/install/local_setup.bash
 ros2<span class="w"> </span>run<span class="w"> </span>demo_nodes_cpp<span class="w"> </span>talker
@@ -554,25 +555,25 @@ Cela permet de vérifier ques les APIs C++ et Python fonctionnent correctement.
 Hourra !</p>
 </div>
 <div class="section" id="les-etapes-apres-l-installation">
-<h2><a class="toc-backref" href="#id13">Les étapes après l’installation</a><a class="headerlink" href="#les-etapes-apres-l-installation" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id13">Les étapes après l’installation</a><a class="headerlink" href="#les-etapes-apres-l-installation" title="Lien permanent vers ce titre"></a></h2>
 <p>Il faut ensuite lire <a class="reference internal" href="../../Tutorials.html"><span class="doc">tutoriels et démonstrations</span></a> pour configurer votre environnement, créer votre propre espace de travail et paquets, et apprendre les concepts ROS-2 essentiels.</p>
 </div>
 <div class="section" id="utiliser-le-pont-ros-1">
-<h2><a class="toc-backref" href="#id14">Utiliser le pont ROS 1</a><a class="headerlink" href="#utiliser-le-pont-ros-1" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id14">Utiliser le pont ROS 1</a><a class="headerlink" href="#utiliser-le-pont-ros-1" title="Lien permanent vers ce titre"></a></h2>
 <p>Le pont ROS 1 peut connecter des topics de ROS 1 à ROS 2 et vice-versa. Vous pouvez consulter la page de <a class="reference external" href="https://github.com/ros2/ros1_bridge/blob/master/README.md">documentation</a> pour des explications sur la construction et l’utilisation du pont ROS 1.</p>
 </div>
 <div class="section" id="les-implementations-addtionnelles-rmw-implementations-optionel">
-<h2><a class="toc-backref" href="#id15">Les implémentations addtionnelles RMW implementations (optionel)</a><a class="headerlink" href="#les-implementations-addtionnelles-rmw-implementations-optionel" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id15">Les implémentations addtionnelles RMW implementations (optionel)</a><a class="headerlink" href="#les-implementations-addtionnelles-rmw-implementations-optionel" title="Lien permanent vers ce titre"></a></h2>
 <p>L’intergiciel par défaut qu’utilise ROS 2 est <code class="docutils literal notranslate"><span class="pre">Fast</span> <span class="pre">DDS</span></code>, mais l’intergiciel (RMW) peut-être remplacé à l’exécution.
 Voir le <a class="reference internal" href="../../How-To-Guides/Working-with-multiple-RMW-implementations.html"><span class="doc">guide</span></a> sur la façon de travailler
 avec de multiple RMWs.</p>
 </div>
 <div class="section" id="compilateurs-alternatifs">
-<h2><a class="toc-backref" href="#id16">Compilateurs alternatifs</a><a class="headerlink" href="#compilateurs-alternatifs" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id16">Compilateurs alternatifs</a><a class="headerlink" href="#compilateurs-alternatifs" title="Lien permanent vers ce titre"></a></h2>
 <p>Utiliser un compilateur différent de gcc pour compiler ROS 2 est facile. Si vous définissez les variables d’environnement <code class="docutils literal notranslate"><span class="pre">CC</span></code> et <code class="docutils literal notranslate"><span class="pre">CXX</span></code> sur des exécutables point vers un compilateur C et/ou C++ fonctionnel, respectivement, et que vous relancez la configuration de CMake (en utilisant <code class="docutils literal notranslate"><span class="pre">--force-cmake-config</span></code> ou en supprimant les packages que vous souhaitez recompilter), CMake
 se reconfigurera et utilisera le compilateur spécifié.</p>
 <div class="section" id="clang">
-<h3><a class="toc-backref" href="#id17">Clang</a><a class="headerlink" href="#clang" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id17">Clang</a><a class="headerlink" href="#clang" title="Lien permanent vers ce titre"></a></h3>
 <p>Pour configurer CMake de façon à ce qu’il détecte et utilise Clang:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>clang
 <span class="nb">export</span><span class="w"> </span><span class="nv">CC</span><span class="o">=</span>clang
@@ -583,15 +584,15 @@ colcon<span class="w"> </span>build<span class="w"> </span>--cmake-force-configu
 </div>
 </div>
 <div class="section" id="mise-a-jour">
-<h2><a class="toc-backref" href="#id18">Mise à jour</a><a class="headerlink" href="#mise-a-jour" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id18">Mise à jour</a><a class="headerlink" href="#mise-a-jour" title="Lien permanent vers ce titre"></a></h2>
 <p>Voir <a class="reference internal" href="../Maintaining-a-Source-Checkout.html"><span class="doc">Maintain source checkout</span></a> pour mettre à jour réguliérement votre installation source.</p>
 </div>
 <div class="section" id="depannage">
-<h2><a class="toc-backref" href="#id19">Dépannage</a><a class="headerlink" href="#depannage" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id19">Dépannage</a><a class="headerlink" href="#depannage" title="Lien permanent vers ce titre"></a></h2>
 <p>Les techniques de dépannages peuvent être trouvées <a class="reference internal" href="../../How-To-Guides/Installation-Troubleshooting.html#linux-troubleshooting"><span class="std std-ref">ici</span></a>.</p>
 </div>
 <div class="section" id="deinstaller">
-<h2><a class="toc-backref" href="#id20">Déinstaller</a><a class="headerlink" href="#deinstaller" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id20">Déinstaller</a><a class="headerlink" href="#deinstaller" title="Lien permanent vers ce titre"></a></h2>
 <ol class="arabic">
 <li><p>Si vous avez installé votre espace de travail avec colcon comme indiqué ci-dessus, la &quot;désinstallation&quot; pourrait consister simplement à ouvrir un nouveau terminal et à ne pas rechercher le fichier <code class="docutils literal notranslate"><span class="pre">setup</span></code> de l’espace de travail. De cette façon, votre environnement se comportera comme s’il n’y avait pas d’installation Rolling sur votre système.</p></li>
 <li><p>Si vous souhaitez également libérer de l’espace disque, vous pouvez effacer le répertoire de l’espace de travail entièrement avec:</p>
@@ -607,9 +608,9 @@ colcon<span class="w"> </span>build<span class="w"> </span>--cmake-force-configu
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../Alternatives.html" class="btn btn-neutral float-left" title="Alternatives" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Ubuntu-Install-Binary.html" class="btn btn-neutral float-right" title="Ubuntu (binary)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../Alternatives.html" class="btn btn-neutral float-left" title="Alternatives" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Ubuntu-Install-Binary.html" class="btn btn-neutral float-right" title="Ubuntu (binary)" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -618,9 +619,9 @@ colcon<span class="w"> </span>build<span class="w"> </span>--cmake-force-configu
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

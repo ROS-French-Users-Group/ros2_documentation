@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Writing a simple publisher and subscriber (Python) &mdash; ROS 2 documentation  documentation</title>
+  <title>Writing a simple publisher and subscriber (Python) &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -22,9 +22,10 @@
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
         <script src="../../_static/tabs.js"></script>
+        <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
     <link rel="next" title="Writing a simple service and client (C++)" href="Writing-A-Simple-Cpp-Service-And-Client.html" />
     <link rel="prev" title="Writing a simple publisher and subscriber (C++)" href="Writing-A-Simple-Cpp-Publisher-And-Subscriber.html" /> 
 </head>
@@ -38,7 +39,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -80,7 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -344,7 +345,7 @@
           <li class="breadcrumb-item"><a href="../Beginner-Client-Libraries.html">Beginner: Client libraries</a></li>
       <li class="breadcrumb-item active">Writing a simple publisher and subscriber (Python)</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -355,7 +356,7 @@
 
 
   <div class="section" id="writing-a-simple-publisher-and-subscriber-python">
-<span id="pypubsub"></span><h1>Writing a simple publisher and subscriber (Python)<a class="headerlink" href="#writing-a-simple-publisher-and-subscriber-python" title="Permalink to this headline"></a></h1>
+<span id="pypubsub"></span><h1>Writing a simple publisher and subscriber (Python)<a class="headerlink" href="#writing-a-simple-publisher-and-subscriber-python" title="Lien permanent vers ce titre"></a></h1>
 <p><strong>Goal:</strong> Create and run a publisher and subscriber node using Python</p>
 <p><strong>Tutorial level:</strong> Beginner</p>
 <p><strong>Time:</strong> 20 minutes</p>
@@ -378,21 +379,21 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2><a class="toc-backref" href="#id3">Background</a><a class="headerlink" href="#background" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id3">Background</a><a class="headerlink" href="#background" title="Lien permanent vers ce titre"></a></h2>
 <p>In this tutorial, you will create <a class="reference internal" href="../Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html"><span class="doc">nodes</span></a> that pass information in the form of string messages to each other over a <a class="reference internal" href="../Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html"><span class="doc">topic</span></a>.
 The example used here is a simple “talker” and “listener” system;
 one node publishes data and the other subscribes to the topic so it can receive that data.</p>
 <p>The code used in these examples can be found <a class="reference external" href="https://github.com/ros2/examples/tree/rolling/rclpy/topics">here</a>.</p>
 </div>
 <div class="section" id="prerequisites">
-<h2><a class="toc-backref" href="#id4">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id4">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Lien permanent vers ce titre"></a></h2>
 <p>In previous tutorials, you learned how to <a class="reference internal" href="Creating-A-Workspace/Creating-A-Workspace.html"><span class="doc">create a workspace</span></a> and <a class="reference internal" href="Creating-Your-First-ROS2-Package.html"><span class="doc">create a package</span></a>.</p>
 <p>A basic understanding of Python is recommended, but not entirely necessary.</p>
 </div>
 <div class="section" id="tasks">
-<h2><a class="toc-backref" href="#id5">Tasks</a><a class="headerlink" href="#tasks" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id5">Tasks</a><a class="headerlink" href="#tasks" title="Lien permanent vers ce titre"></a></h2>
 <div class="section" id="create-a-package">
-<h3><a class="toc-backref" href="#id6">1 Create a package</a><a class="headerlink" href="#create-a-package" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id6">1 Create a package</a><a class="headerlink" href="#create-a-package" title="Lien permanent vers ce titre"></a></h3>
 <p>Open a new terminal and <a class="reference internal" href="../Beginner-CLI-Tools/Configuring-ROS2-Environment.html"><span class="doc">source your ROS 2 installation</span></a> so that <code class="docutils literal notranslate"><span class="pre">ros2</span></code> commands will work.</p>
 <p>Navigate into the <code class="docutils literal notranslate"><span class="pre">ros2_ws</span></code> directory created in a <a class="reference internal" href="Creating-A-Workspace/Creating-A-Workspace.html#new-directory"><span class="std std-ref">previous tutorial</span></a>.</p>
 <p>Recall that packages should be created in the <code class="docutils literal notranslate"><span class="pre">src</span></code> directory, not the root of the workspace.
@@ -403,7 +404,7 @@ So, navigate into <code class="docutils literal notranslate"><span class="pre">r
 <p>Your terminal will return a message verifying the creation of your package <code class="docutils literal notranslate"><span class="pre">py_pubsub</span></code> and all its necessary files and folders.</p>
 </div>
 <div class="section" id="write-the-publisher-node">
-<h3><a class="toc-backref" href="#id7">2 Write the publisher node</a><a class="headerlink" href="#write-the-publisher-node" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id7">2 Write the publisher node</a><a class="headerlink" href="#write-the-publisher-node" title="Lien permanent vers ce titre"></a></h3>
 <p>Navigate into <code class="docutils literal notranslate"><span class="pre">ros2_ws/src/py_pubsub/py_pubsub</span></code>.
 Recall that this directory is a <a class="reference external" href="https://docs.python.org/3/tutorial/modules.html#packages">Python package</a> with the same name as the ROS 2 package it’s nested in.</p>
 <p>Download the example talker code by entering the following command:</p>
@@ -467,7 +468,7 @@ Recall that this directory is a <a class="reference external" href="https://docs
 </pre></div>
 </div>
 <div class="section" id="examine-the-code">
-<h4>2.1 Examine the code<a class="headerlink" href="#examine-the-code" title="Permalink to this headline"></a></h4>
+<h4>2.1 Examine the code<a class="headerlink" href="#examine-the-code" title="Lien permanent vers ce titre"></a></h4>
 <p>The first lines of code after the comments import <code class="docutils literal notranslate"><span class="pre">rclpy</span></code> so its <code class="docutils literal notranslate"><span class="pre">Node</span></code> class can be used.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rclpy</span>
 <span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
@@ -485,7 +486,7 @@ Recall that dependencies have to be added to <code class="docutils literal notra
 </div>
 <p>Following is the definition of the class’s constructor.
 <code class="docutils literal notranslate"><span class="pre">super().__init__</span></code> calls the <code class="docutils literal notranslate"><span class="pre">Node</span></code> class’s constructor and gives it your node name, in this case <code class="docutils literal notranslate"><span class="pre">minimal_publisher</span></code>.</p>
-<p><code class="docutils literal notranslate"><span class="pre">create_publisher</span></code> declares that the node publishes messages of type <code class="docutils literal notranslate"><span class="pre">String</span></code> (imported from the <code class="docutils literal notranslate"><span class="pre">std_msgs.msg</span></code> module), over a topic named <code class="docutils literal notranslate"><span class="pre">topic</span></code>, and that the “queue size” is 10.
+<p><code class="docutils literal notranslate"><span class="pre">create_publisher</span></code> declares that the node publishes messages of type <code class="docutils literal notranslate"><span class="pre">String</span></code> (imported from the <code class="docutils literal notranslate"><span class="pre">std_msgs.msg</span></code> module), over a topic named <code class="docutils literal notranslate"><span class="pre">topic</span></code>, and that the “queue size » is 10.
 Queue size is a required QoS (quality of service) setting that limits the amount of queued messages if a subscriber is not receiving them fast enough.</p>
 <p>Next, a timer is created with a callback to execute every 0.5 seconds.
 <code class="docutils literal notranslate"><span class="pre">self.i</span></code> is a counter used in the callback.</p>
@@ -524,7 +525,7 @@ Queue size is a required QoS (quality of service) setting that limits the amount
 <p>First the <code class="docutils literal notranslate"><span class="pre">rclpy</span></code> library is initialized, then the node is created, and then it “spins” the node so its callbacks are called.</p>
 </div>
 <div class="section" id="add-dependencies">
-<h4>2.2 Add dependencies<a class="headerlink" href="#add-dependencies" title="Permalink to this headline"></a></h4>
+<h4>2.2 Add dependencies<a class="headerlink" href="#add-dependencies" title="Lien permanent vers ce titre"></a></h4>
 <p>Navigate one level back to the <code class="docutils literal notranslate"><span class="pre">ros2_ws/src/py_pubsub</span></code> directory, where the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>, <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code>, and <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> files have been created for you.</p>
 <p>Open <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> with your text editor.</p>
 <p>As mentioned in the <a class="reference internal" href="Creating-Your-First-ROS2-Package.html"><span class="doc">previous tutorial</span></a>, make sure to fill in the <code class="docutils literal notranslate"><span class="pre">&lt;description&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;maintainer&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;license&gt;</span></code> tags:</p>
@@ -542,7 +543,7 @@ Queue size is a required QoS (quality of service) setting that limits the amount
 <p>Make sure to save the file.</p>
 </div>
 <div class="section" id="add-an-entry-point">
-<h4>2.3 Add an entry point<a class="headerlink" href="#add-an-entry-point" title="Permalink to this headline"></a></h4>
+<h4>2.3 Add an entry point<a class="headerlink" href="#add-an-entry-point" title="Lien permanent vers ce titre"></a></h4>
 <p>Open the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file.
 Again, match the <code class="docutils literal notranslate"><span class="pre">maintainer</span></code>, <code class="docutils literal notranslate"><span class="pre">maintainer_email</span></code>, <code class="docutils literal notranslate"><span class="pre">description</span></code> and <code class="docutils literal notranslate"><span class="pre">license</span></code> fields to your <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">maintainer</span><span class="o">=</span><span class="s1">&#39;YourName&#39;</span><span class="p">,</span>
@@ -562,7 +563,7 @@ Again, match the <code class="docutils literal notranslate"><span class="pre">ma
 <p>Don’t forget to save.</p>
 </div>
 <div class="section" id="check-setup-cfg">
-<h4>2.4 Check setup.cfg<a class="headerlink" href="#check-setup-cfg" title="Permalink to this headline"></a></h4>
+<h4>2.4 Check setup.cfg<a class="headerlink" href="#check-setup-cfg" title="Lien permanent vers ce titre"></a></h4>
 <p>The contents of the <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> file should be correctly populated automatically, like so:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[develop]</span>
 <span class="go">script_dir=$base/lib/py_pubsub</span>
@@ -575,7 +576,7 @@ Again, match the <code class="docutils literal notranslate"><span class="pre">ma
 </div>
 </div>
 <div class="section" id="write-the-subscriber-node">
-<h3><a class="toc-backref" href="#id8">3 Write the subscriber node</a><a class="headerlink" href="#write-the-subscriber-node" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id8">3 Write the subscriber node</a><a class="headerlink" href="#write-the-subscriber-node" title="Lien permanent vers ce titre"></a></h3>
 <p>Return to <code class="docutils literal notranslate"><span class="pre">ros2_ws/src/py_pubsub/py_pubsub</span></code> to create the next node.
 Enter the following code in your terminal:</p>
 <div class="sphinx-tabs docutils container">
@@ -599,7 +600,7 @@ Enter the following code in your terminal:</p>
 </pre></div>
 </div>
 <div class="section" id="id1">
-<h4>3.1 Examine the code<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h4>
+<h4>3.1 Examine the code<a class="headerlink" href="#id1" title="Lien permanent vers ce titre"></a></h4>
 <p>Open the <code class="docutils literal notranslate"><span class="pre">subscriber_member_function.py</span></code> with your text editor.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rclpy</span>
 <span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
@@ -668,7 +669,7 @@ Recall that the publisher defines <code class="docutils literal notranslate"><sp
 The <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> file can also remain untouched.</p>
 </div>
 <div class="section" id="id2">
-<h4>3.2 Add an entry point<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h4>
+<h4>3.2 Add an entry point<a class="headerlink" href="#id2" title="Lien permanent vers ce titre"></a></h4>
 <p>Reopen <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> and add the entry point for the subscriber node below the publisher’s entry point.
 The <code class="docutils literal notranslate"><span class="pre">entry_points</span></code> field should now look like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
@@ -683,7 +684,7 @@ The <code class="docutils literal notranslate"><span class="pre">entry_points</s
 </div>
 </div>
 <div class="section" id="build-and-run">
-<h3><a class="toc-backref" href="#id9">4 Build and run</a><a class="headerlink" href="#build-and-run" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id9">4 Build and run</a><a class="headerlink" href="#build-and-run" title="Lien permanent vers ce titre"></a></h3>
 <p>You likely already have the <code class="docutils literal notranslate"><span class="pre">rclpy</span></code> and <code class="docutils literal notranslate"><span class="pre">std_msgs</span></code> packages installed as part of your ROS 2 system.
 It’s good practice to run <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> in the root of your workspace (<code class="docutils literal notranslate"><span class="pre">ros2_ws</span></code>) to check for missing dependencies before building:</p>
 <div class="sphinx-tabs docutils container">
@@ -746,17 +747,17 @@ It’s good practice to run <code class="docutils literal notranslate"><span cla
 </div>
 </div>
 <div class="section" id="summary">
-<h2><a class="toc-backref" href="#id10">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id10">Summary</a><a class="headerlink" href="#summary" title="Lien permanent vers ce titre"></a></h2>
 <p>You created two nodes to publish and subscribe to data over a topic.
 Before running them, you added their dependencies and entry points to the package configuration files.</p>
 </div>
 <div class="section" id="next-steps">
-<h2><a class="toc-backref" href="#id11">Next steps</a><a class="headerlink" href="#next-steps" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id11">Next steps</a><a class="headerlink" href="#next-steps" title="Lien permanent vers ce titre"></a></h2>
 <p>Next you’ll create another simple ROS 2 package using the service/client model.
 Again, you can choose to write it in either <a class="reference internal" href="Writing-A-Simple-Cpp-Service-And-Client.html"><span class="doc">C++</span></a> or <a class="reference internal" href="Writing-A-Simple-Py-Service-And-Client.html"><span class="doc">Python</span></a>.</p>
 </div>
 <div class="section" id="related-content">
-<h2><a class="toc-backref" href="#id12">Related content</a><a class="headerlink" href="#related-content" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id12">Related content</a><a class="headerlink" href="#related-content" title="Lien permanent vers ce titre"></a></h2>
 <p>There are several ways you could write a publisher and subscriber in Python; check out the <code class="docutils literal notranslate"><span class="pre">minimal_publisher</span></code> and <code class="docutils literal notranslate"><span class="pre">minimal_subscriber</span></code> packages in the <a class="reference external" href="https://github.com/ros2/examples/tree/rolling/rclpy/topics">ros2/examples</a> repo.</p>
 </div>
 </div>
@@ -765,9 +766,9 @@ Again, you can choose to write it in either <a class="reference internal" href="
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Writing-A-Simple-Cpp-Publisher-And-Subscriber.html" class="btn btn-neutral float-left" title="Writing a simple publisher and subscriber (C++)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Writing-A-Simple-Cpp-Service-And-Client.html" class="btn btn-neutral float-right" title="Writing a simple service and client (C++)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Writing-A-Simple-Cpp-Publisher-And-Subscriber.html" class="btn btn-neutral float-left" title="Writing a simple publisher and subscriber (C++)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Writing-A-Simple-Cpp-Service-And-Client.html" class="btn btn-neutral float-right" title="Writing a simple service and client (C++)" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -776,9 +777,9 @@ Again, you can choose to write it in either <a class="reference internal" href="
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

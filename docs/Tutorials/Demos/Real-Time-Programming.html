@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Understanding real-time programming &mdash; ROS 2 documentation  documentation</title>
+  <title>Understanding real-time programming &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
     <link rel="next" title="Experimenting with a dummy robot" href="dummy-robot-demo.html" />
     <link rel="prev" title="Recording and playing back data with rosbag using the ROS 1 bridge" href="Rosbag-with-ROS1-Bridge.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -343,7 +344,7 @@
           <li class="breadcrumb-item"><a href="../Demos.html">Demos</a></li>
       <li class="breadcrumb-item active">Understanding real-time programming</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Demos/Real-Time-Programming.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Demos/Real-Time-Programming.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -354,7 +355,7 @@
 
 
   <div class="section" id="understanding-real-time-programming">
-<h1>Understanding real-time programming<a class="headerlink" href="#understanding-real-time-programming" title="Permalink to this headline"></a></h1>
+<h1>Understanding real-time programming<a class="headerlink" href="#understanding-real-time-programming" title="Lien permanent vers ce titre"></a></h1>
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">Table of Contents</p>
 <ul class="simple">
@@ -373,7 +374,7 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2><a class="toc-backref" href="#id1">Background</a><a class="headerlink" href="#background" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id1">Background</a><a class="headerlink" href="#background" title="Lien permanent vers ce titre"></a></h2>
 <p>Real-time computing is a key feature of many robotics systems, particularly safety- and mission-critical applications such as autonomous vehicles, spacecrafts, and industrial manufacturing.
 We are designing and prototyping ROS 2 with real-time performance constraints in mind, since this is a requirement that was not considered in the early stages of ROS 1 and it is now intractable to refactor ROS 1 to be real-time friendly.</p>
 <p><a class="reference external" href="https://design.ros2.org/articles/realtime_background.html">This document</a> outlines the requirements of real-time computing and best practices for software engineers.  In short:</p>
@@ -386,14 +387,14 @@ But if the controller reliably updates at a rate faster than the motor controlli
 <p>Now that you know everything about real-time computing, let’s try a demo!</p>
 </div>
 <div class="section" id="install-and-run-the-demo">
-<h2><a class="toc-backref" href="#id2">Install and run the demo</a><a class="headerlink" href="#install-and-run-the-demo" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id2">Install and run the demo</a><a class="headerlink" href="#install-and-run-the-demo" title="Lien permanent vers ce titre"></a></h2>
 <p>The real-time demo was written with Linux operating systems in mind, since many members of the ROS community doing real-time computing use Xenomai or RT_PREEMPT as their real-time solutions.
 Since many of the operations done in the demo to optimize performance or OS-specific, the demo only builds and runs on Linux systems.
 <strong>So, if you are an OSX or Windows user, don’t try this part!</strong></p>
 <p>Also this must be built from source using a the static DDS API. <strong>Currently the only supported implementation is Connext</strong>.</p>
 <p>First, follow the instructions to build ROS 2 <a class="reference internal" href="../../Installation/Alternatives/Ubuntu-Development-Setup.html"><span class="doc">from source</span></a> using Connext DDS as the middleware.</p>
 <div class="section" id="run-the-tests">
-<h3><a class="toc-backref" href="#id3">Run the tests</a><a class="headerlink" href="#run-the-tests" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id3">Run the tests</a><a class="headerlink" href="#run-the-tests" title="Lien permanent vers ce titre"></a></h3>
 <p><strong>Before you run make sure you have at least 8Gb of RAM free. With the memory locking, swap will not work anymore.</strong></p>
 <p>Source your ROS 2 setup.bash.</p>
 <p>Run the demo binary, and redirect the output. You may want to use <code class="docutils literal notranslate"><span class="pre">sudo</span></code> in case you get permission error:</p>
@@ -402,7 +403,7 @@ Since many of the operations done in the demo to optimize performance or OS-spec
 </div>
 </div>
 <div class="section" id="what-the-heck-just-happened">
-<h3><a class="toc-backref" href="#id4">What the heck just happened?</a><a class="headerlink" href="#what-the-heck-just-happened" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id4">What the heck just happened?</a><a class="headerlink" href="#what-the-heck-just-happened" title="Lien permanent vers ce titre"></a></h3>
 <p>First, even though you redirected stdout, you will see some output to the console (from stderr):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mlockall</span> <span class="n">failed</span><span class="p">:</span> <span class="n">Cannot</span> <span class="n">allocate</span> <span class="n">memory</span>
 <span class="n">Couldn</span><span class="s1">&#39;t lock all cached virtual memory.</span>
@@ -422,7 +423,7 @@ At the bottom of the output.txt file generated by the demo, you’ll see the num
 <p>If we want those pagefaults to go away, we’ll have to…</p>
 </div>
 <div class="section" id="adjust-permissions-for-memory-locking">
-<h3><a class="toc-backref" href="#id5">Adjust permissions for memory locking</a><a class="headerlink" href="#adjust-permissions-for-memory-locking" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id5">Adjust permissions for memory locking</a><a class="headerlink" href="#adjust-permissions-for-memory-locking" title="Lien permanent vers ce titre"></a></h3>
 <p>Add to <code class="docutils literal notranslate"><span class="pre">/etc/security/limits.conf</span></code> (as sudo):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">your</span> <span class="n">username</span><span class="o">&gt;</span>    <span class="o">-</span>   <span class="n">memlock</span>   <span class="o">&lt;</span><span class="n">limit</span> <span class="ow">in</span> <span class="n">kB</span><span class="o">&gt;</span>
 </pre></div>
@@ -436,7 +437,7 @@ If this happened, you didn’t have enough free memory available to lock the mem
 You’ll need to install more RAM in your computer to see zero pagefaults!</p>
 </div>
 <div class="section" id="output-overview">
-<h3><a class="toc-backref" href="#id6">Output overview</a><a class="headerlink" href="#output-overview" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id6">Output overview</a><a class="headerlink" href="#output-overview" title="Lien permanent vers ce titre"></a></h3>
 <p>To see more output, we have to run the <code class="docutils literal notranslate"><span class="pre">pendulum_logger</span></code> node.</p>
 <p>In one shell with your <code class="docutils literal notranslate"><span class="pre">install/setup.bash</span></code> sourced, invoke:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pendulum_logger
@@ -465,7 +466,7 @@ Another ROS node acts as a simple PID controller and calculates the next command
 <p>After the <code class="docutils literal notranslate"><span class="pre">pendulum_demo</span></code> is finished, you’ll have to CTRL-C out of the logger node to exit.</p>
 </div>
 <div class="section" id="latency">
-<h3><a class="toc-backref" href="#id7">Latency</a><a class="headerlink" href="#latency" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id7">Latency</a><a class="headerlink" href="#latency" title="Lien permanent vers ce titre"></a></h3>
 <p>At the <code class="docutils literal notranslate"><span class="pre">pendulum_demo</span></code> execution, you’ll see the final statistics collected for the demo:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rttest</span> <span class="n">statistics</span><span class="p">:</span>
   <span class="o">-</span> <span class="n">Minor</span> <span class="n">pagefaults</span><span class="p">:</span> <span class="mi">0</span>
@@ -488,11 +489,11 @@ Here, latency means the amount of time after the update was expected to occur.</
 If you’re running a vanilla Linux system and you don’t have the RT_PREEMPT kernel installed, you probably won’t be able to meet the real-time goal we set for ourselves, because the Linux scheduler won’t allow you to arbitrarily pre-empt threads at the user level.</p>
 <p>See the <a class="reference external" href="https://design.ros2.org/articles/realtime_background.html#multithreaded-programming-and-synchronization">realtime design article</a> for more information.</p>
 <p>The demo attempts to set the scheduler and thread priority of the demo to be suitable for real-time performance.
-If this operation failed, you’ll see an error message: “Couldn’t set scheduling priority and policy: Operation not permitted”.
+If this operation failed, you’ll see an error message: « Couldn’t set scheduling priority and policy: Operation not permitted ».
 You can get slightly better performance by following the instructions in the next section:</p>
 </div>
 <div class="section" id="setting-permissions-for-the-scheduler">
-<h3><a class="toc-backref" href="#id8">Setting permissions for the scheduler</a><a class="headerlink" href="#setting-permissions-for-the-scheduler" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id8">Setting permissions for the scheduler</a><a class="headerlink" href="#setting-permissions-for-the-scheduler" title="Lien permanent vers ce titre"></a></h3>
 <p>Add to <code class="docutils literal notranslate"><span class="pre">/etc/security/limits.conf</span></code> (as sudo):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">your</span> <span class="n">username</span><span class="o">&gt;</span>    <span class="o">-</span>   <span class="n">rtprio</span>   <span class="mi">98</span>
 </pre></div>
@@ -502,7 +503,7 @@ However, do NOT set the limit to 99 because then your processes could interfere 
 This demo will attempt to run the control loop at priority 98.</p>
 </div>
 <div class="section" id="plotting-results">
-<h3><a class="toc-backref" href="#id9">Plotting results</a><a class="headerlink" href="#plotting-results" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id9">Plotting results</a><a class="headerlink" href="#plotting-results" title="Lien permanent vers ce titre"></a></h3>
 <p>You can plot the latency and pagefault statistics that are collected in this demo after the demo runs.</p>
 <p>Because the code has been instrumented with <a class="reference external" href="https://github.com/ros2/rttest">rttest</a>, there are useful command line arguments available:</p>
 <table class="docutils align-default">
@@ -522,8 +523,8 @@ This demo will attempt to run the control loop at priority 98.</p>
 </tr>
 <tr class="row-odd"><td><p>-u</p></td>
 <td><p>Specify the update period with the default unit being microseconds.</p>
-<p>Use the suffix “s” for seconds, “ms” for milliseconds,</p>
-<p>“us” for microseconds, and “ns” for nanoseconds.</p>
+<p>Use the suffix « s » for seconds, « ms » for milliseconds,</p>
+<p>« us » for microseconds, and « ns » for nanoseconds.</p>
 </td>
 <td><p>1ms</p></td>
 </tr>
@@ -556,9 +557,9 @@ This demo will attempt to run the control loop at priority 98.</p>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Rosbag-with-ROS1-Bridge.html" class="btn btn-neutral float-left" title="Recording and playing back data with rosbag using the ROS 1 bridge" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="dummy-robot-demo.html" class="btn btn-neutral float-right" title="Experimenting with a dummy robot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Rosbag-with-ROS1-Bridge.html" class="btn btn-neutral float-left" title="Recording and playing back data with rosbag using the ROS 1 bridge" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="dummy-robot-demo.html" class="btn btn-neutral float-right" title="Experimenting with a dummy robot" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -567,9 +568,9 @@ This demo will attempt to run the control loop at priority 98.</p>
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

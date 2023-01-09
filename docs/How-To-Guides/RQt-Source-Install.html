@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Building RQt from source &mdash; ROS 2 documentation  documentation</title>
+  <title>Building RQt from source &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Building RQt from source on macOS" href="RQt-Source-Install-MacOS.html" />
     <link rel="prev" title="Using Callback Groups" href="Using-callback-groups.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -342,7 +343,7 @@
           <li class="breadcrumb-item"><a href="../How-To-Guides.html">How-to Guides</a></li>
       <li class="breadcrumb-item active">Building RQt from source</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/How-To-Guides/RQt-Source-Install.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/How-To-Guides/RQt-Source-Install.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -353,11 +354,11 @@
 
 
   <div class="section" id="building-rqt-from-source">
-<h1>Building RQt from source<a class="headerlink" href="#building-rqt-from-source" title="Permalink to this headline"></a></h1>
+<h1>Building RQt from source<a class="headerlink" href="#building-rqt-from-source" title="Lien permanent vers ce titre"></a></h1>
 <p>We’ve provided our development setup here to aid future users in easily extending RQt by creating their own plugins.
 We encourage you to contribute those plugins back to the <code class="docutils literal notranslate"><span class="pre">ros-visualization</span></code> GitHub repository!</p>
 <div class="section" id="system-requirements">
-<h2>System Requirements<a class="headerlink" href="#system-requirements" title="Permalink to this headline"></a></h2>
+<h2>System Requirements<a class="headerlink" href="#system-requirements" title="Lien permanent vers ce titre"></a></h2>
 <p>These instructions are written for the target platforms for Crystal Clemmys (see <a class="reference external" href="https://www.ros.org/reps/rep-2000.html">REP</a>).</p>
 <ul class="simple">
 <li><p>Ubuntu Bionic Beaver 18.04 64-bit</p></li>
@@ -365,18 +366,18 @@ We encourage you to contribute those plugins back to the <code class="docutils l
 <li><p>Windows 10 with Visual Studio 2017</p></li>
 </ul>
 <div class="section" id="other-requirements">
-<h3>Other Requirements<a class="headerlink" href="#other-requirements" title="Permalink to this headline"></a></h3>
+<h3>Other Requirements<a class="headerlink" href="#other-requirements" title="Lien permanent vers ce titre"></a></h3>
 <ul class="simple">
 <li><p>In ROS 2 Crystal the minimum Qt version is <code class="docutils literal notranslate"><span class="pre">Qt5</span></code></p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="building-from-source">
-<h2>Building From Source<a class="headerlink" href="#building-from-source" title="Permalink to this headline"></a></h2>
+<h2>Building From Source<a class="headerlink" href="#building-from-source" title="Lien permanent vers ce titre"></a></h2>
 <p>In order to build RQt from source, first create a ROS 2 workspace at <code class="docutils literal notranslate"><span class="pre">~/ros2_ws/</span></code>.
 This is step is already covered in <a class="reference internal" href="../Installation.html"><span class="doc">building ROS 2 from source instructions</span></a>, so we skip it here.</p>
 <div class="section" id="download-rqt-repositories">
-<h3>Download RQt Repositories<a class="headerlink" href="#download-rqt-repositories" title="Permalink to this headline"></a></h3>
+<h3>Download RQt Repositories<a class="headerlink" href="#download-rqt-repositories" title="Lien permanent vers ce titre"></a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_ws
 vcs<span class="w"> </span>import<span class="w"> </span>--force<span class="w"> </span>--input<span class="w"> </span>https://raw.githubusercontent.com/PickNikRobotics/rqt2_setup/master/rqt2.repos<span class="w"> </span>src
 </pre></div>
@@ -388,7 +389,7 @@ vcs<span class="w"> </span>import<span class="w"> </span>--force<span class="w">
 </div>
 </div>
 <div class="section" id="install-dependencies">
-<h3>Install Dependencies<a class="headerlink" href="#install-dependencies" title="Permalink to this headline"></a></h3>
+<h3>Install Dependencies<a class="headerlink" href="#install-dependencies" title="Lien permanent vers ce titre"></a></h3>
 <div class="toctree-wrapper compound">
 </div>
 <p>For non-Linux platforms, see the <a class="reference internal" href="RQt-Source-Install-MacOS.html"><span class="doc">macOS RQt source install page</span></a> or the <a class="reference internal" href="RQt-Source-Install-Windows10.html"><span class="doc">Windows 10 RQt source install page</span></a> before continuing here.</p>
@@ -397,7 +398,7 @@ vcs<span class="w"> </span>import<span class="w"> </span>--force<span class="w">
 </div>
 </div>
 <div class="section" id="build-the-workspace">
-<h3>Build The Workspace<a class="headerlink" href="#build-the-workspace" title="Permalink to this headline"></a></h3>
+<h3>Build The Workspace<a class="headerlink" href="#build-the-workspace" title="Lien permanent vers ce titre"></a></h3>
 <p>Generally building a workspace is as simple as:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon<span class="w"> </span>build
 </pre></div>
@@ -421,7 +422,7 @@ vcs<span class="w"> </span>import<span class="w"> </span>--force<span class="w">
 </ul>
 </div>
 <div class="section" id="source-your-environment">
-<h3>Source your environment<a class="headerlink" href="#source-your-environment" title="Permalink to this headline"></a></h3>
+<h3>Source your environment<a class="headerlink" href="#source-your-environment" title="Lien permanent vers ce titre"></a></h3>
 <p>Linux or macOS</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.<span class="w"> </span>install/local_setup.bash
 </pre></div>
@@ -433,7 +434,7 @@ vcs<span class="w"> </span>import<span class="w"> </span>--force<span class="w">
 </div>
 </div>
 <div class="section" id="using-rqt">
-<h2>Using RQt<a class="headerlink" href="#using-rqt" title="Permalink to this headline"></a></h2>
+<h2>Using RQt<a class="headerlink" href="#using-rqt" title="Lien permanent vers ce titre"></a></h2>
 <p>See <a class="reference internal" href="../Concepts/About-RQt.html"><span class="doc">Overview of RQt</span></a>.</p>
 </div>
 </div>
@@ -442,9 +443,9 @@ vcs<span class="w"> </span>import<span class="w"> </span>--force<span class="w">
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Using-callback-groups.html" class="btn btn-neutral float-left" title="Using Callback Groups" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="RQt-Source-Install-MacOS.html" class="btn btn-neutral float-right" title="Building RQt from source on macOS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Using-callback-groups.html" class="btn btn-neutral float-left" title="Using Callback Groups" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="RQt-Source-Install-MacOS.html" class="btn btn-neutral float-right" title="Building RQt from source on macOS" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -453,9 +454,9 @@ vcs<span class="w"> </span>import<span class="w"> </span>--force<span class="w">
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

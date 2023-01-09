@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Building a real-time Linux kernel [community-contributed] &mdash; ROS 2 documentation  documentation</title>
+  <title>Building a real-time Linux kernel [community-contributed] &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -21,9 +21,10 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
     <link rel="next" title="Building a package with Eclipse 2021-06" href="Building-ROS2-Package-with-eclipse-2021-06.html" />
     <link rel="prev" title="Using Eclipse Oxygen with rviz2 [community-contributed]" href="Eclipse-Oxygen-with-ROS-2-and-rviz2.html" /> 
 </head>
@@ -37,7 +38,7 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename ‘iron’; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -343,7 +344,7 @@
           <li class="breadcrumb-item"><a href="../Miscellaneous.html">Miscellaneous</a></li>
       <li class="breadcrumb-item active">Building a real-time Linux kernel [community-contributed]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Miscellaneous/Building-Realtime-rt_preempt-kernel-for-ROS-2.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Tutorials/Miscellaneous/Building-Realtime-rt_preempt-kernel-for-ROS-2.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -354,9 +355,9 @@
 
 
   <div class="section" id="building-a-real-time-linux-kernel-community-contributed">
-<h1>Building a real-time Linux kernel [community-contributed]<a class="headerlink" href="#building-a-real-time-linux-kernel-community-contributed" title="Permalink to this headline"></a></h1>
+<h1>Building a real-time Linux kernel [community-contributed]<a class="headerlink" href="#building-a-real-time-linux-kernel-community-contributed" title="Lien permanent vers ce titre"></a></h1>
 <p>This tutorial begins with a clean Ubuntu 20.04.1 install on Intel x86_64. Actual kernel is 5.4.0-54-generic, but we will install the Latest Stable RT_PREEMPT Version. To build the kernel you need at least 30GB free disk space.</p>
-<p>Check <a class="reference external" href="https://wiki.linuxfoundation.org/realtime/start">https://wiki.linuxfoundation.org/realtime/start</a> for the latest stable version, at the time of writing this is “Latest Stable Version 5.4-rt”.
+<p>Check <a class="reference external" href="https://wiki.linuxfoundation.org/realtime/start">https://wiki.linuxfoundation.org/realtime/start</a> for the latest stable version, at the time of writing this is « Latest Stable Version 5.4-rt ».
 If we click on the <a class="reference external" href="http://cdn.kernel.org/pub/linux/kernel/projects/rt/5.4/">link</a>, we get the exact version.
 Currently it is patch-5.4.78-rt44.patch.gz.</p>
 <img alt="../../_images/realtime-kernel-patch-version.png" src="../../_images/realtime-kernel-patch-version.png" />
@@ -368,7 +369,7 @@ Currently it is patch-5.4.78-rt44.patch.gz.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/kernel
 </pre></div>
 </div>
-<p>We can go with a browser to <a class="reference external" href="https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/">https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/</a> and see if the version is there. You can download it from the site and move it manually from /Downloads to the /kernel folder, or download it using wget by right clicking the link using “copy link location”. Example:</p>
+<p>We can go with a browser to <a class="reference external" href="https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/">https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/</a> and see if the version is there. You can download it from the site and move it manually from /Downloads to the /kernel folder, or download it using wget by right clicking the link using « copy link location ». Example:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/linux-5.4.78.tar.gz
 </pre></div>
 </div>
@@ -396,7 +397,7 @@ Currently it is patch-5.4.78-rt44.patch.gz.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>/boot/config-5.4.0-54-generic<span class="w"> </span>.config
 </pre></div>
 </div>
-<p>Open Software &amp; Updates. in the Ubuntu Software menu tick the ‘Source code’ box</p>
+<p>Open Software &amp; Updates. in the Ubuntu Software menu tick the “Source code” box</p>
 <p>We need some tools to build kernel, install them with</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>build-dep<span class="w"> </span>linux
 sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libncurses-dev<span class="w"> </span>flex<span class="w"> </span>bison<span class="w"> </span>openssl<span class="w"> </span>libssl-dev<span class="w"> </span>dkms<span class="w"> </span>libelf-dev<span class="w"> </span>libudev-dev<span class="w"> </span>libpci-dev<span class="w"> </span>libiberty-dev<span class="w"> </span>autoconf<span class="w"> </span>fakeroot
@@ -466,9 +467,9 @@ Linux<span class="w"> </span>ros2host<span class="w"> </span><span class="m">5</
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Eclipse-Oxygen-with-ROS-2-and-rviz2.html" class="btn btn-neutral float-left" title="Using Eclipse Oxygen with rviz2 [community-contributed]" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Building-ROS2-Package-with-eclipse-2021-06.html" class="btn btn-neutral float-right" title="Building a package with Eclipse 2021-06" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Eclipse-Oxygen-with-ROS-2-and-rviz2.html" class="btn btn-neutral float-left" title="Using Eclipse Oxygen with rviz2 [community-contributed]" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Building-ROS2-Package-with-eclipse-2021-06.html" class="btn btn-neutral float-right" title="Building a package with Eclipse 2021-06" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -477,9 +478,9 @@ Linux<span class="w"> </span>ros2host<span class="w"> </span><span class="m">5</
     <p>&#169; Copyright 2023, Open Robotics.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>
