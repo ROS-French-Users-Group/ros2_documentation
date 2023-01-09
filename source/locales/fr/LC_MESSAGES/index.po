@@ -1,0 +1,372 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 07:54+0100\n"
+"PO-Revision-Date: 2023-01-07 09:53:26.369750\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/index.rst:6
+msgid "ROS 2 Documentation"
+msgstr "Documentation ROS 2"
+
+#: ../../source/index.rst:24
+msgid ""
+"**The Robot Operating System (ROS) is a set of software libraries and tools "
+"for building robot applications.** From drivers and state-of-the-art "
+"algorithms to powerful developer tools, ROS has the open source tools you "
+"need for your next robotics project."
+msgstr ""
+"**Le système d'exploitation du robot (ROS) est un ensemble de bibliothèques "
+"logicielles et d'outils permettant de créer des applications robotiques.** "
+"Des pilotes et des algorithmes de pointe aux puissants outils de "
+"développement, ROS dispose des outils open source dont vous avez besoin pour"
+" votre prochain projet de robotique."
+
+#: ../../source/index.rst:27
+msgid ""
+"Since ROS was started in 2007, a lot has changed in the robotics and ROS "
+"community. The goal of the ROS 2 project is to adapt to these changes, "
+"leveraging what is great about ROS 1 and improving what isn’t."
+msgstr ""
+"Depuis le lancement de ROS en 2007, beaucoup de choses ont changé dans la "
+"communauté robotique et ROS. L'objectif du projet ROS 2 est de s'adapter à "
+"ces changements, en tirant parti de ce qui est génial avec ROS 1 et en "
+"améliorant ce qui ne l'est pas."
+
+#: ../../source/index.rst:30
+msgid ""
+"This site contains the documentation for ROS 2. If you are looking for ROS 1"
+" documentation, check out the `ROS wiki <https://wiki.ros.org>`__."
+msgstr ""
+"Ce site contient la documentation de ROS 2. Si vous recherchez de la "
+"documentation sur ROS 1, consultez le `wiki ROS <https://wiki.ros.org>`__."
+
+#: ../../source/index.rst:33
+msgid ""
+"If you use ROS 2 in your work, please see :doc:`Citations <Citations>` to "
+"cite ROS 2."
+msgstr ""
+"Si vous utilisez ROS 2 dans votre travail, veuillez consulter "
+":doc:`Citations <Citations>` pour citer ROS 2."
+
+#: ../../source/index.rst:36
+msgid "Getting started"
+msgstr "Commencer"
+
+#: ../../source/index.rst:38
+msgid ":doc:`Installation <Installation>`"
+msgstr ":doc:`Installation <Installation>`"
+
+#: ../../source/index.rst:40
+msgid "Instructions to set up ROS 2 for the first time"
+msgstr "Instructions pour configurer ROS 2 pour la première fois"
+
+#: ../../source/index.rst:42
+msgid ":doc:`Tutorials <Tutorials>`"
+msgstr ":doc:`Tutoriels <Tutoriels>`"
+
+#: ../../source/index.rst:44
+msgid "The best place to start for new users!"
+msgstr "Le meilleur point de départ pour les nouveaux utilisateurs !"
+
+#: ../../source/index.rst:45
+msgid ""
+"Hands-on sample projects that help you build a progression of necessary "
+"skills"
+msgstr ""
+"Exemples de projets pratiques qui vous aident à développer une progression "
+"des compétences nécessaires"
+
+#: ../../source/index.rst:47
+msgid ":doc:`How-To-Guides`"
+msgstr ":doc:`Guides pratiques`"
+
+#: ../../source/index.rst:49
+msgid ""
+"Quick answers to your \"How do I...?\" questions without working through the"
+" :doc:`Tutorials <Tutorials>`"
+msgstr ""
+"Des réponses rapides à votre \"Comment puis-je...?\" questions sans passer "
+"par les :doc:`Tutoriels <Tutoriels>`"
+
+#: ../../source/index.rst:51
+msgid ":doc:`Concepts <Concepts>`"
+msgstr ":doc:`Concepts <Concepts>`"
+
+#: ../../source/index.rst:53
+msgid ""
+"High-level explanations of core ROS 2 concepts covered in the "
+":doc:`Tutorials <Tutorials>`"
+msgstr ""
+"Explications de haut niveau des concepts de base de ROS 2 couverts dans les "
+":doc:`Tutoriels <Tutoriels>`"
+
+#: ../../source/index.rst:55
+msgid ":doc:`Contact <Contact>`"
+msgstr ":doc:`Contact <Contact>`"
+
+#: ../../source/index.rst:57
+msgid "Answers to your questions or a forum to start a discussion"
+msgstr "Des réponses à vos questions ou un forum pour démarrer une discussion"
+
+#: ../../source/index.rst:61
+msgid "The ROS 2 project"
+msgstr "Le projet ROS 2"
+
+#: ../../source/index.rst:63
+msgid "If you're interested in the advancement of the ROS 2 project:"
+msgstr "Si vous êtes intéressé par l'avancement du projet ROS 2 :"
+
+#: ../../source/index.rst:65
+msgid ":doc:`Contributing <The-ROS2-Project/Contributing>`"
+msgstr ":doc:`Contribuer <The-ROS2-Project/Contribuer>`"
+
+#: ../../source/index.rst:67
+msgid ""
+"Best practices and methodology for contributing to ROS 2, as well as "
+"instructions for migrating existing ROS 1 content to ROS 2"
+msgstr ""
+"Meilleures pratiques et méthodologie pour contribuer à ROS 2, ainsi que des "
+"instructions pour migrer le contenu ROS 1 existant vers ROS 2"
+
+#: ../../source/index.rst:69
+msgid ":doc:`Distributions <Releases>`"
+msgstr ":doc:`Distributions <Versions>`"
+
+#: ../../source/index.rst:71
+msgid "Past, present and future ROS 2 distributions"
+msgstr "Distributions passées, présentes et futures de ROS 2"
+
+#: ../../source/index.rst:73
+msgid ":doc:`Features Status <The-ROS2-Project/Features>`"
+msgstr ":doc:`Statut des fonctionnalités <Projet-ROS2/Fonctionnalités>`"
+
+#: ../../source/index.rst:75
+msgid "Features in the current release"
+msgstr "Fonctionnalités de la version actuelle"
+
+#: ../../source/index.rst:77
+msgid ":doc:`Feature Ideas <The-ROS2-Project/Feature-Ideas>`"
+msgstr ":doc:`Idées de fonctionnalités <The-ROS2-Project/Feature-Ideas>`"
+
+#: ../../source/index.rst:79
+msgid "Ideas for nice-to-have features that are not under active development"
+msgstr ""
+"Idées de fonctionnalités intéressantes qui ne sont pas en cours de "
+"développement"
+
+#: ../../source/index.rst:81
+msgid ":doc:`Roadmap <The-ROS2-Project/Roadmap>`"
+msgstr ":doc:`Feuille de route <The-ROS2-Project/Roadmap>`"
+
+#: ../../source/index.rst:83
+msgid "Planned work for ROS 2 development"
+msgstr "Travaux prévus pour le développement de ROS 2"
+
+#: ../../source/index.rst:85
+msgid ":doc:`ROSCon Talks <The-ROS2-Project/ROSCon-Content>`"
+msgstr ":doc:`ROSCon Talks <The-ROS2-Project/ROSCon-Content>`"
+
+#: ../../source/index.rst:87
+msgid "Presentations by the community on ROS 2"
+msgstr "Présentations par la communauté sur ROS 2"
+
+#: ../../source/index.rst:89
+msgid ":doc:`Project Governance <The-ROS2-Project/Governance>`"
+msgstr ":doc:`Gouvernance du projet <Projet-ROS2/Gouvernance>`"
+
+#: ../../source/index.rst:91
+msgid ""
+"Information about the ROS Technical Steering Committee, Working Groups, and "
+"upcoming events"
+msgstr ""
+"Informations sur le comité directeur technique du ROS, les groupes de "
+"travail et les événements à venir"
+
+#: ../../source/index.rst:93
+msgid ":doc:`Marketing <The-ROS2-Project/Marketing>`"
+msgstr ":doc:`Marketing <Projet-ROS2/Marketing>`"
+
+#: ../../source/index.rst:95
+msgid "Downloadable marketing materials"
+msgstr "Documents marketing téléchargeables"
+
+#: ../../source/index.rst:98
+msgid "Other ROS resources"
+msgstr "Autres ressources ROS"
+
+#: ../../source/index.rst:100
+msgid "`ROS Answers <https://answers.ros.org/questions/>`__ (ROS 1, ROS 2)"
+msgstr "`Réponses ROS <https://answers.ros.org/questions/>`__ (ROS 1, ROS 2)"
+
+#: ../../source/index.rst:102
+msgid ""
+"Q&A community website, similar to `Stack Exchange "
+"<https://stackexchange.com/>`_"
+msgstr ""
+"Site Web de la communauté Q&A, similaire à `Stack Exchange "
+"<https://stackexchange.com/>`_"
+
+#: ../../source/index.rst:103
+msgid "See :ref:`Contact Page <Using ROS Answers>` for more information"
+msgstr ""
+"Voir :ref:`Page de contact <Utilisation des réponses ROS>` pour plus "
+"d'informations"
+
+#: ../../source/index.rst:105
+msgid ""
+"`ROS Enhancement Proposals (REPs) <https://ros.org/reps/rep-0000.html>`__ "
+"(ROS 1, ROS 2)"
+msgstr ""
+"`Propositions d'amélioration de ROS (REP) "
+"<https://ros.org/reps/rep-0000.html>`__ (ROS 1, ROS 2)"
+
+#: ../../source/index.rst:107
+msgid "Proposals for new designs and conventions"
+msgstr "Propositions de nouveaux designs et conventions"
+
+#: ../../source/index.rst:109
+msgid "`ROS Discourse <https://discourse.ros.org/>`__ (ROS 1, ROS 2)"
+msgstr "`Discours ROS <https://discourse.ros.org/>`__ (ROS 1, ROS 2)"
+
+#: ../../source/index.rst:111
+msgid "Forum for general discussions and announcements for the ROS community"
+msgstr "Forum de discussions générales et d'annonces pour la communauté ROS"
+
+#: ../../source/index.rst:112
+msgid "See the :ref:`Contact Page <Using ROS Discourse>` for more information"
+msgstr ""
+"Voir la :ref:`Page de contact <Utilisation du discours ROS>` pour plus "
+"d'informations"
+
+#: ../../source/index.rst:114
+msgid "`ROS Index <https://index.ros.org/>`__ (ROS 1, ROS 2)"
+msgstr "`Indice ROS <https://index.ros.org/>`__ (ROS 1, ROS 2)"
+
+#: ../../source/index.rst:116
+msgid ""
+"Indexed list of all packages (i.e. `Python Package Index (PyPI) "
+"<https://pypi.org/>`_ for ROS packages)"
+msgstr ""
+"Liste indexée de tous les packages (c'est-à-dire `Python Package Index "
+"(PyPI) <https://pypi.org/>`_ pour les packages ROS)"
+
+#: ../../source/index.rst:117
+msgid "See which ROS distributions a package supports"
+msgstr "Voir quelles distributions ROS un package prend en charge"
+
+#: ../../source/index.rst:118
+msgid "Link to a package's repository, API documentation, or website"
+msgstr ""
+"Lien vers le référentiel d'un package, la documentation de l'API ou le site "
+"Web"
+
+#: ../../source/index.rst:119
+msgid ""
+"Inspect a package's license, build type, maintainers, status, and "
+"dependencies"
+msgstr ""
+"Inspecter la licence, le type de construction, les mainteneurs, le statut et"
+" les dépendances d'un paquet"
+
+#: ../../source/index.rst:120
+msgid ""
+"Get more info for a package on `ROS Answers "
+"<https://answers.ros.org/questions/>`__"
+msgstr ""
+"Obtenez plus d'informations pour un package sur `ROS Answers "
+"<https://answers.ros.org/questions/>`__"
+
+#: ../../source/index.rst:122
+msgid "`ROS Prerelease <http://prerelease.ros.org/>`__ (ROS 1)"
+msgstr "`Avant-première ROS <http://prerelease.ros.org/>`__ (ROS 1)"
+
+#: ../../source/index.rst:124
+msgid ""
+"Generates commands to emulate the `ROS Buildfarm <https://build.ros.org/>`_ "
+"on your local machine"
+msgstr ""
+"Génère des commandes pour émuler le `ROS Buildfarm "
+"<https://build.ros.org/>`_ sur votre machine locale"
+
+#: ../../source/index.rst:125
+msgid "Currently only shows ROS 1 distributions"
+msgstr "N'affiche actuellement que les distributions ROS 1"
+
+#: ../../source/index.rst:127
+msgid "`ROS Robots <https://robots.ros.org/>`__ (ROS 1, ROS 2)"
+msgstr "`Robots ROS <https://robots.ros.org/>`__ (ROS 1, ROS 2)"
+
+#: ../../source/index.rst:129
+msgid "Showcases robots proects from the community"
+msgstr "Présente les projets robotiques de la communauté"
+
+#: ../../source/index.rst:130
+msgid "Instructions on how to contribute a robot"
+msgstr "Instructions sur la façon de contribuer un robot"
+
+#: ../../source/index.rst:132
+msgid "`ROS Wiki <http://wiki.ros.org/>`__ (ROS 1)"
+msgstr "`ROS Wiki <http://wiki.ros.org/>`__ (ROS 1)"
+
+#: ../../source/index.rst:134
+msgid "ROS 1 documentation and user modifiable content"
+msgstr "Documentation ROS 1 et contenu modifiable par l'utilisateur"
+
+#: ../../source/index.rst:135
+msgid "Active until at least the last ROS 1 distribution is EOL"
+msgstr "Actif jusqu'à ce qu'au moins la dernière distribution ROS 1 soit EOL"
+
+#: ../../source/index.rst:137
+msgid "`ROS.org <https://www.ros.org/>`__ (ROS 1, ROS 2)"
+msgstr "`ROS.org <https://www.ros.org/>`__ (ROS 1, ROS 2)"
+
+#: ../../source/index.rst:139
+msgid ""
+"ROS 1 and ROS 2 product landing page, with high-level description of ROS and"
+" links to other ROS sites"
+msgstr ""
+"Page de destination des produits ROS 1 et ROS 2, avec une description de "
+"haut niveau de ROS et des liens vers d'autres sites ROS"
+
+#: ../../source/index.rst:142
+msgid "Deprecated"
+msgstr "Obsolète"
+
+#: ../../source/index.rst:144
+msgid "`ROS 2 Docs <https://docs.ros2.org>`_"
+msgstr "`Documents ROS 2 <https://docs.ros2.org>`_"
+
+#: ../../source/index.rst:146
+msgid "API documentation up to and including Galactic"
+msgstr "Documentation API jusqu'à Galactic inclus"
+
+#: ../../source/index.rst:148
+msgid "`ROS 2 Design <http://design.ros2.org/>`__"
+msgstr "`Conception ROS 2 <http://design.ros2.org/>`__"
+
+#: ../../source/index.rst:150
+msgid "Early design decisions behind ROS 2 development"
+msgstr ""
+"Les premières décisions de conception derrière le développement de ROS 2"
+
+#: ../../source/index.rst:151
+msgid ""
+"New design proposals should be submitted via `ROS Enhancement Proposals "
+"(REPs) <https://ros.org/reps/rep-0000.html>`__"
+msgstr ""
+"Les nouvelles propositions de conception doivent être soumises via `ROS "
+"Enhancement Proposals (REPs) <https://ros.org/reps/rep-0000.html>`__"

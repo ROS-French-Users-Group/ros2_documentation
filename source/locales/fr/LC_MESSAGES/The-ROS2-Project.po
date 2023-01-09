@@ -1,0 +1,31 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 09:53:05.651449\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/The-ROS2-Project.rst:2
+msgid "The ROS 2 Project"
+msgstr "Le projet ROS 2"
+
+#: ../../source/The-ROS2-Project.rst:4
+msgid ""
+"Check out the resources below to learn more about the advancement of the ROS"
+" 2 project."
+msgstr ""
+"Consultez les ressources ci-dessous pour en savoir plus sur l'avancement du "
+"projet ROS 2."

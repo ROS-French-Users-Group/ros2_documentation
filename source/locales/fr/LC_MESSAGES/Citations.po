@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 07:54+0100\n"
+"PO-Revision-Date: 2023-01-07 09:53:15.819572\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Citations.rst:4
+msgid "Citations"
+msgstr "Citations"
+
+#: ../../source/Citations.rst:6
+msgid ""
+"If you use ROS 2 in your work please cite the 2022 Science Robotics paper "
+"`Robot Operating System 2: Design, architecture, and uses in the wild "
+"<https://www.science.org/doi/10.1126/scirobotics.abm6074>`_."
+msgstr ""
+"Si vous utilisez ROS 2 dans votre travail, veuillez citer l'article 2022 de "
+"Science Robotics `Robot Operating System 2: Design, architecture, and uses "
+"in the wild <https://www.science.org/doi/10.1126/scirobotics.abm6074>` _."
+
+#: ../../source/Citations.rst:8
+msgid ""
+"Macenski, T. Foote, B. Gerkey, C. Lalancette, W. Woodall, “Robot Operating "
+"System 2: Design, architecture, and uses in the wild,” Science Robotics vol."
+" 7, May 2022."
+msgstr ""
+"Macenski, T. Foote, B. Gerkey, C. Lalancette, W. Woodall, \"Robot Operating "
+"System 2: Design, architecture, and uses in the wild,\" Science Robotics "
+"vol. 7 mai 2022."

@@ -1,0 +1,383 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 09:53:03.021684\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Releases.rst:4
+msgid "Distributions"
+msgstr "Distributions"
+
+#: ../../source/Releases.rst:7
+msgid "What is a Distribution?"
+msgstr "Qu'est-ce qu'une répartition ?"
+
+#: ../../source/Releases.rst:9
+msgid ""
+"A ROS distribution is a versioned set of ROS packages. These are akin to "
+"Linux distributions (e.g. Ubuntu). The purpose of the ROS distributions is "
+"to let developers work against a relatively stable codebase until they are "
+"ready to roll everything forward. Therefore once a distribution is released,"
+" we try to limit changes to bug fixes and non-breaking improvements for the "
+"core packages (every thing under ros-desktop-full). That generally applies "
+"to the whole community, but for \"higher\" level packages, the rules are "
+"less strict, and so it falls to the maintainers of a given package to avoid "
+"breaking changes."
+msgstr ""
+"Une distribution ROS est un ensemble versionné de packages ROS. Celles-ci "
+"s'apparentent aux distributions Linux (par exemple Ubuntu). Le but des "
+"distributions ROS est de permettre aux développeurs de travailler sur une "
+"base de code relativement stable jusqu'à ce qu'ils soient prêts à tout faire"
+" avancer. Par conséquent, une fois qu'une distribution est publiée, nous "
+"essayons de limiter les modifications aux corrections de bogues et aux "
+"améliorations incassables pour les packages de base (tout sous ros-desktop-"
+"full). Cela s'applique généralement à l'ensemble de la communauté, mais pour"
+" les paquets de niveau \"supérieur\", les règles sont moins strictes, et il "
+"incombe donc aux mainteneurs d'un paquet donné d'éviter de casser les "
+"changements."
+
+#: ../../source/Releases.rst:18
+msgid "List of Distributions"
+msgstr "Liste des diffusions"
+
+#: ../../source/Releases.rst:20
+msgid ""
+"Below is a list of current and historic ROS 2 distributions. Rows in the "
+"table marked in green are the currently supported distributions."
+msgstr ""
+"Vous trouverez ci-dessous une liste des distributions ROS 2 actuelles et "
+"historiques. Les lignes du tableau marquées en vert correspondent aux "
+"distributions actuellement prises en charge."
+
+#: ../../source/Releases.rst:53
+msgid "Rolling logo"
+msgstr "Logo roulant"
+
+#: ../../source/Releases.rst:56 ../../source/Releases.rst:56
+msgid "Humble logo"
+msgstr "Humble logo"
+
+#: ../../source/Releases.rst:59 ../../source/Releases.rst:59
+msgid "Galactic logo"
+msgstr "Logo galactique"
+
+#: ../../source/Releases.rst:62 ../../source/Releases.rst:62
+msgid "Foxy logo"
+msgstr "Logo renard"
+
+#: ../../source/Releases.rst:65 ../../source/Releases.rst:65
+msgid "Eloquent logo"
+msgstr "Logo éloquent"
+
+#: ../../source/Releases.rst:68 ../../source/Releases.rst:68
+msgid "Dashing logo"
+msgstr "Logo fringant"
+
+#: ../../source/Releases.rst:71 ../../source/Releases.rst:71
+msgid "Crystal logo"
+msgstr "Logo cristal"
+
+#: ../../source/Releases.rst:74 ../../source/Releases.rst:74
+msgid "Bouncy logo"
+msgstr "Logo rebondissant"
+
+#: ../../source/Releases.rst:77 ../../source/Releases.rst:77
+msgid "Ardent logo"
+msgstr "Logo ardent"
+
+#: ../../source/Releases.rst:85 ../../source/Releases.rst:150
+msgid "Distro"
+msgstr "Distro"
+
+#: ../../source/Releases.rst:86 ../../source/Releases.rst:151
+msgid "Release date"
+msgstr "Date de sortie"
+
+#: ../../source/Releases.rst:87
+msgid "Logo"
+msgstr "Logo"
+
+#: ../../source/Releases.rst:88
+msgid "EOL date"
+msgstr "Date de fin de vie"
+
+#: ../../source/Releases.rst:89
+msgid ":doc:`Humble Hawksbill <Releases/Release-Humble-Hawksbill>`"
+msgstr ":doc:`Humble Hawksbill <Releases/Release-Humble-Hawksbill>`"
+
+#: ../../source/Releases.rst:90
+msgid "May 23rd, 2022"
+msgstr "Spectacle de mai 2022"
+
+#: ../../source/Releases.rst:91
+msgid "|humble|"
+msgstr "|humble|"
+
+#: ../../source/Releases.rst:92
+msgid "May 2027"
+msgstr "Mai 2027"
+
+#: ../../source/Releases.rst:93
+msgid ":doc:`Galactic Geochelone <Releases/Release-Galactic-Geochelone>`"
+msgstr ":doc:`Galactic Geochelone <Releases/Release-Galactic-Geochelone>`"
+
+#: ../../source/Releases.rst:94
+msgid "May 23rd, 2021"
+msgstr "Spectacle de mai 2021"
+
+#: ../../source/Releases.rst:95
+msgid "|galactic|"
+msgstr "|galactique|"
+
+#: ../../source/Releases.rst:96
+msgid "December 9th, 2022"
+msgstr "9 décembre 2022"
+
+#: ../../source/Releases.rst:97
+msgid ":doc:`Foxy Fitzroy <Releases/Release-Foxy-Fitzroy>`"
+msgstr ":doc:`Foxy Fitzroy <Releases/Release-Foxy-Fitzroy>`"
+
+#: ../../source/Releases.rst:98
+msgid "June 5th, 2020"
+msgstr "5 juin 2020"
+
+#: ../../source/Releases.rst:99
+msgid "|foxy|"
+msgstr "|rusé|"
+
+#: ../../source/Releases.rst:100 ../../source/Releases.rst:154
+msgid "May 2023"
+msgstr "Mai 2023"
+
+#: ../../source/Releases.rst:101
+msgid ":doc:`Eloquent Elusor <Releases/Release-Eloquent-Elusor>`"
+msgstr ":doc:`Eloquent Elusor <Releases/Release-Eloquent-Elusor>`"
+
+#: ../../source/Releases.rst:102
+msgid "November 22nd, 2019"
+msgstr "22 novembre 2019"
+
+#: ../../source/Releases.rst:103
+msgid "|eloquent|"
+msgstr "|éloquent|"
+
+#: ../../source/Releases.rst:104
+msgid "November 2020"
+msgstr "novembre 2020"
+
+#: ../../source/Releases.rst:105
+msgid ":doc:`Dashing Diademata <Releases/Release-Dashing-Diademata>`"
+msgstr ":doc:`Dashing Diademata <Releases/Release-Dashing-Diademata>`"
+
+#: ../../source/Releases.rst:106
+msgid "May 31st, 2019"
+msgstr "31 mai 2019"
+
+#: ../../source/Releases.rst:107
+msgid "|dashing|"
+msgstr "|fringant|"
+
+#: ../../source/Releases.rst:108
+msgid "May 2021"
+msgstr "Mai 2021"
+
+#: ../../source/Releases.rst:109
+msgid ":doc:`Crystal Clemmys <Releases/Release-Crystal-Clemmys>`"
+msgstr ":doc:`Crystal Clemmys <Releases/Release-Crystal-Clemmys>`"
+
+#: ../../source/Releases.rst:110
+msgid "December 14th, 2018"
+msgstr "14 décembre 2018"
+
+#: ../../source/Releases.rst:111
+msgid "|crystal|"
+msgstr "|cristal|"
+
+#: ../../source/Releases.rst:112
+msgid "December 2019"
+msgstr "Décembre 2019"
+
+#: ../../source/Releases.rst:113
+msgid ":doc:`Bouncy Bolson <Releases/Release-Bouncy-Bolson>`"
+msgstr ":doc:`Bouncy Bolson <Releases/Release-Bouncy-Bolson>`"
+
+#: ../../source/Releases.rst:114
+msgid "July 2nd, 2018"
+msgstr "2 juillet 2018"
+
+#: ../../source/Releases.rst:115
+msgid "|bouncy|"
+msgstr "|rebondissant|"
+
+#: ../../source/Releases.rst:116
+msgid "July 2019"
+msgstr "juillet 2019"
+
+#: ../../source/Releases.rst:117
+msgid ":doc:`Ardent Apalone <Releases/Release-Ardent-Apalone>`"
+msgstr ":doc:`Ardent Apalone <Releases/Release-Ardent-Apalone>`"
+
+#: ../../source/Releases.rst:118
+msgid "December 8th, 2017"
+msgstr "8 décembre 2017"
+
+#: ../../source/Releases.rst:119
+msgid "|ardent|"
+msgstr "|ardent|"
+
+#: ../../source/Releases.rst:120
+msgid "December 2018"
+msgstr "Décembre 2018"
+
+#: ../../source/Releases.rst:121
+msgid ":doc:`beta3 <Releases/Beta3-Overview>`"
+msgstr ":dos:acheter <release/btaafarfo> un"
+
+#: ../../source/Releases.rst:122
+msgid "September 13th, 2017"
+msgstr "13 septembre 2017"
+
+#: ../../source/Releases.rst:124
+msgid "December 2017"
+msgstr "Décembre 2017"
+
+#: ../../source/Releases.rst:125
+msgid ":doc:`beta2 <Releases/Beta2-Overview>`"
+msgstr ":doc:`beta2 <Releases/Beta2-Aperçu>`"
+
+#: ../../source/Releases.rst:126
+msgid "July 5th, 2017"
+msgstr "5 juillet 2017"
+
+#: ../../source/Releases.rst:128
+msgid "September 2017"
+msgstr "Septembre 2017"
+
+#: ../../source/Releases.rst:129
+msgid ":doc:`beta1 <Releases/Beta1-Overview>`"
+msgstr ":doc:`beta1 <Releases/Beta1-Aperçu>`"
+
+#: ../../source/Releases.rst:130
+msgid "December 19th, 2016"
+msgstr "19 décembre 2016"
+
+#: ../../source/Releases.rst:132
+msgid "Jul 2017"
+msgstr "juil. 2017"
+
+#: ../../source/Releases.rst:133
+msgid ":doc:`alpha1 - alpha8 <Releases/Alpha-Overview>`"
+msgstr ":doc:`alpha 1 - alpha 8 <Released/Alpha-Overview>`"
+
+#: ../../source/Releases.rst:134
+msgid "August 31th, 2015"
+msgstr "31 août 2015"
+
+#: ../../source/Releases.rst:136
+msgid "December 2016"
+msgstr "Décembre 2016"
+
+#: ../../source/Releases.rst:139
+msgid "Future Distributions"
+msgstr "Distributions futures"
+
+#: ../../source/Releases.rst:141
+msgid ""
+"For details on upcoming features see the :doc:`roadmap <The-"
+"ROS2-Project/Roadmap>`."
+msgstr ""
+"Pour plus de détails sur les fonctionnalités à venir, consultez la "
+":doc:`roadmap <The-ROS2-Project/Roadmap>`."
+
+#: ../../source/Releases.rst:143
+msgid ""
+"There is a new ROS 2 distribution released yearly on May 23rd (`World Turtle"
+" Day <https://www.worldturtleday.org/>`_)."
+msgstr ""
+"Une nouvelle distribution ROS 2 est publiée chaque année le 23 mai (`World "
+"Turtle Day <https://www.worldturtleday.org/>`_)."
+
+#: ../../source/Releases.rst:152
+msgid "Supported until"
+msgstr "Pris en charge jusqu'à"
+
+#: ../../source/Releases.rst:153
+msgid ":doc:`Iron Irwini <Releases/Release-Iron-Irwini>`"
+msgstr ":doc:`Iron Race <Releases/Release-Iron-Race>`"
+
+#: ../../source/Releases.rst:155
+msgid "November 2024"
+msgstr "novembre 2024"
+
+#: ../../source/Releases.rst:158
+msgid "The expectation is to release new ROS 2 distributions once per year."
+msgstr ""
+"L'objectif est de publier de nouvelles distributions ROS 2 une fois par an."
+
+#: ../../source/Releases.rst:163
+msgid "Rolling Distribution"
+msgstr "Distribution roulante"
+
+#: ../../source/Releases.rst:165
+msgid ""
+":doc:`ROS 2 Rolling Ridley <Releases/Release-Rolling-Ridley>` is the rolling"
+" development distribution of ROS 2. It is described in `REP 2002 "
+"<https://www.ros.org/reps/rep-2002.html>`_ and was first introduced in June "
+"2020."
+msgstr ""
+":doc:`ROS 2 Rolling Ridley <Releases/Release-Rolling-Ridley>` est la "
+"distribution de développement continu de ROS 2. Elle est décrite dans `REP "
+"2002 <https://www.ros.org/reps/rep-2002 .html>`_ et a été introduit pour la "
+"première fois en juin 2020."
+
+#: ../../source/Releases.rst:168
+msgid "The Rolling distribution of ROS 2 serves two purposes:"
+msgstr "La distribution Rolling de ROS 2 a deux objectifs :"
+
+#: ../../source/Releases.rst:170
+msgid "it is a staging area for future stable distributions of ROS 2, and"
+msgstr ""
+"c'est une zone de transit pour les futures distributions stables de ROS 2, "
+"et"
+
+#: ../../source/Releases.rst:171
+msgid "it is a collection of the most recent development releases."
+msgstr ""
+"il s'agit d'une collection des versions de développement les plus récentes."
+
+#: ../../source/Releases.rst:173
+msgid ""
+"As the name implies, Rolling is continuously updated and **can have in-place"
+" updates that include breaking changes**. We recommend that most people use "
+"the most recent stable distribution instead (see "
+":ref:`list_of_distributions`)."
+msgstr ""
+"Comme son nom l'indique, Rolling est continuellement mis à jour et ** peut "
+"avoir des mises à jour sur place qui incluent des changements de rupture **."
+" Nous recommandons à la plupart des gens d'utiliser à la place la "
+"distribution stable la plus récente (voir :ref:`list_of_distributions`)."
+
+#: ../../source/Releases.rst:176
+msgid ""
+"Packages released into the Rolling distribution will be automatically "
+"released into future stable distributions of ROS 2. :doc:`Releasing a ROS 2 "
+"package <../How-To-Guides/Releasing/Releasing-a-Package>` into the Rolling "
+"distribution follows the same procedures as all other ROS 2 distributions."
+msgstr ""
+"Les packages publiés dans la distribution Rolling seront automatiquement "
+"publiés dans les futures distributions stables de ROS 2. suit les mêmes "
+"procédures que toutes les autres distributions ROS 2."
