@@ -199,7 +199,7 @@ avec de multiple RMWs.
 Compilateurs alternatifs
 ------------------------
 
-Utiliser un compilateur différent de gcc pour compiler ROS 2 est facile. Si vous définissez les variables d'environnement ``CC`` et ``CXX`` sur des exécutables point vers un compilateur C et/ou C++ fonctionnel, respectivement, et que vous relancez la configuration de CMake (en utilisant ``--force-cmake-config`` ou en supprimant les packages que vous souhaitez recompilter), CMake 
+Utiliser un compilateur différent de gcc pour compiler ROS 2 est facile. Si vous définissez les variables d'environnement ``CC`` et ``CXX`` sur des exécutables point vers un compilateur C et/ou C++ fonctionnel, respectivement, et que vous relancez la configuration de CMake (en utilisant ``--force-cmake-config`` ou en supprimant les packages que vous souhaitez recompilter), CMake
 se reconfigurera et utilisera le compilateur spécifié.
 
 Clang
