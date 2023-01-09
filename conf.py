@@ -165,6 +165,9 @@ htmlhelp_basename = 'ros2_docsdoc'
 
 html_baseurl = 'https://docs.ros.org/en'
 
+locale_dirs = ['locales/']   #path is an example but this is the recommended path.
+gettext_compact = False     #optional.
+
 class RedirectFrom(Directive):
 
     has_content = True
