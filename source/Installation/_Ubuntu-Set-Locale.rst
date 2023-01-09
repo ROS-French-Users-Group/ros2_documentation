@@ -1,6 +1,6 @@
-Make sure you have a locale which supports ``UTF-8``.
-If you are in a minimal environment (such as a docker container), the locale may be something minimal like ``POSIX``.
-We test with the following settings. However, it should be fine if you're using a different UTF-8 supported locale.
+Soyez sûr que vous avez installé les ressources permettant de supporter le mode ``UTF-8``.
+Si vous êtes dans un environnement minimal (comme un conteneur docker), l'environnement locale peut-être quelque chose d'aussi minimal que ``POSIX``.
+ROS est testé avec les paramètres suivants. Toutefois, le système devrait fonctionner avec d'autres choix de langues UTF-8.
 
 .. code-block:: bash
 
