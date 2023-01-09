@@ -222,7 +222,7 @@ Voir :doc:`../Maintaining-a-Source-Checkout` pour mettre à jour réguliérement
 Dépannage
 ---------
 
-Les techniques de dépannages peuvent être trouvées ici :ref:`here <linux-troubleshooting>`.
+Les techniques de dépannages peuvent être trouvées :ref:`ici <linux-troubleshooting>`.
 
 Déinstaller
 -----------

@@ -1,5 +1,5 @@
-ROS 2 packages are built on frequently updated Ubuntu systems.
-It is always recommended that you ensure your system is up to date before installing new packages.
+Les paquets ROS 2 sont construits sur les systèmes Ubuntu fréquemment mis à jour.
+Il est toujours recommandé de vous assurer que votre système est à jour avant d'installer de nouveaux paquets.
 
 .. code-block:: bash
 
