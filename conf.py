@@ -111,7 +111,7 @@ html_theme_options = {
 
 html_context = {
     'display_github': True,
-    'github_user': 'ros2',
+    'github_user': 'ROS-French-Users-Group',
     'github_repo': 'ros2_documentation',
     'github_version': 'rolling/source/',  # Will be overridden when building multiversion
 }
