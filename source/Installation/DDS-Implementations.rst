@@ -23,8 +23,7 @@ créera automatiquement la prise en charge des fournisseurs qui ont été correc
 
 
 Once you've installed a new DDS vendor, you can change the vendor used at runtime: :doc:`Working with Multiple RMW Implementations <../How-To-Guides/Working-with-multiple-RMW-implementations>`.
-Une fois que vous avez installé un nouveau fournisseur DDS, vous pouvez changer le fournisseur utilisé lors de l'exécution : :doc:`Travailler avec des multiples implémentation de RMW  <../How-To-Guides/Working-with-multiple-RMW-"
-"implementations>`."
+Une fois que vous avez installé un nouveau fournisseur DDS, vous pouvez changer le fournisseur utilisé lors de l'exécution : :doc:`Travailler avec des multiples implémentation de RMW  <../How-To-Guides/Working-with-multiple-RMW-implementations>`."
 
 Des instructions détaillées pour l'installation d'autres fournisseurs DDS sont fournies ci-dessous.
 
