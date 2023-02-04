@@ -3,7 +3,7 @@
 Citations
 =========
 
-If you use ROS 2 in your work please cite the 2022 Science Robotics paper `Robot Operating System 2: Design, architecture, and uses in the wild <https://www.science.org/doi/10.1126/scirobotics.abm6074>`_.
+Si vous utilisez ROS2 dans votre travail vous êtes invité à citer l'article paru dans Science Robotics en 2022: `Robot Operating System 2: Design, architecture, and uses in the wild <https://www.science.org/doi/10.1126/scirobotics.abm6074>`_.
 
 S. Macenski, T. Foote, B. Gerkey, C. Lalancette, W. Woodall, “Robot Operating System 2: Design, architecture, and uses in the wild,” Science Robotics vol. 7, May 2022.
 
