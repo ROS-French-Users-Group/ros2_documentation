@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maintain source checkout &mdash; Documentation ROS 2 documentation </title>
+  <title>Maintenir une installation à partir des sources via git &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -61,7 +61,7 @@
 <li class="toctree-l3"><a class="reference internal" href="Alternatives/Latest-Development-Setup.html">Latest development (source)</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Maintain source checkout</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Maintenir une installation à partir des sources via git</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Testing.html">Testing with pre-release binaries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="DDS-Implementations.html">Les implémentations DDS</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="DDS-Implementations/Install-Connext-Security-Plugins.html">Connext security plugins</a></li>
@@ -342,7 +342,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a></li>
           <li class="breadcrumb-item"><a href="../Installation.html">Installation</a></li>
-      <li class="breadcrumb-item active">Maintain source checkout</li>
+      <li class="breadcrumb-item active">Maintenir une installation à partir des sources via git</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Installation/Maintaining-a-Source-Checkout.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
@@ -354,29 +354,29 @@
              
 
 
-  <div class="section" id="maintain-source-checkout">
-<span id="maintainingsource"></span><h1>Maintain source checkout<a class="headerlink" href="#maintain-source-checkout" title="Lien permanent vers ce titre"></a></h1>
+  <div class="section" id="maintenir-une-installation-a-partir-des-sources-via-git">
+<span id="maintainingsource"></span><h1>Maintenir une installation à partir des sources via git<a class="headerlink" href="#maintenir-une-installation-a-partir-des-sources-via-git" title="Lien permanent vers ce titre"></a></h1>
 <div class="contents local topic" id="sommaire">
 <ul class="simple">
-<li><p><a class="reference internal" href="#update-your-repository-list" id="id1">Update your repository list</a></p>
+<li><p><a class="reference internal" href="#mettre-a-jour-votre-liste-de-depots" id="id1">Mettre à jour votre liste de dépôts.</a></p>
 <ul>
-<li><p><a class="reference internal" href="#latest-ros-2-rolling-branches" id="id2">Latest ROS 2 Rolling branches</a></p></li>
+<li><p><a class="reference internal" href="#dernieres-branches-de-rolling" id="id2">Dernières branches de Rolling</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#update-your-repositories" id="id3">Update your repositories</a></p></li>
-<li><p><a class="reference internal" href="#download-the-new-source-code" id="id4">Download the new source code</a></p></li>
-<li><p><a class="reference internal" href="#rebuild-your-workspace" id="id5">Rebuild your workspace</a></p></li>
-<li><p><a class="reference internal" href="#inspect-your-source-checkout" id="id6">Inspect your source checkout</a></p></li>
+<li><p><a class="reference internal" href="#mettre-a-jour-vos-depots" id="id3">Mettre à jour vos dépôts</a></p></li>
+<li><p><a class="reference internal" href="#telecharger-le-nouveau-code-source" id="id4">Télécharger le nouveau code source</a></p></li>
+<li><p><a class="reference internal" href="#reconstruire-votre-espace-de-travail" id="id5">Reconstruire votre espace de travail</a></p></li>
+<li><p><a class="reference internal" href="#inspecter-vos-sources" id="id6">Inspecter vos sources</a></p></li>
 </ul>
 </div>
-<p>If you have installed ROS 2 from source, there may have been changes made to the source code since the time that you checked it out.
-To keep your source checkout up to date, you will have to periodically update your <code class="docutils literal notranslate"><span class="pre">ros2.repos</span></code> file, download the latest sources, and rebuild your workspace.</p>
-<div class="section" id="update-your-repository-list">
-<h2><a class="toc-backref" href="#id1">Update your repository list</a><a class="headerlink" href="#update-your-repository-list" title="Lien permanent vers ce titre"></a></h2>
-<p>Each ROS 2 release includes a <code class="docutils literal notranslate"><span class="pre">ros2.repos</span></code> file that contains the list of repositories and their version for that release.</p>
-<div class="section" id="latest-ros-2-rolling-branches">
-<h3><a class="toc-backref" href="#id2">Latest ROS 2 Rolling branches</a><a class="headerlink" href="#latest-ros-2-rolling-branches" title="Lien permanent vers ce titre"></a></h3>
-<p>If you wish to checkout the latest code for ROS 2 Rolling, you can get the relevant repository list by running:</p>
+<p>Si vous avez installé ROS 2 à partir des sources, des modifications ont peut-être été apportées au code source depuis le moment où vous l’avez extrait.
+Pour garder votre extraction de source à jour, vous devrez périodiquement mettre à jour votre fichier <code class="docutils literal notranslate"><span class="pre">ros2.repos</span></code>, télécharger les dernières sources et reconstruire votre espace de travail.</p>
+<div class="section" id="mettre-a-jour-votre-liste-de-depots">
+<h2><a class="toc-backref" href="#id1">Mettre à jour votre liste de dépôts.</a><a class="headerlink" href="#mettre-a-jour-votre-liste-de-depots" title="Lien permanent vers ce titre"></a></h2>
+<p>Chaque version de ROS 2 inclut un fichier <code class="docutils literal notranslate"><span class="pre">ros2.repos</span></code> qui contient la liste des référentiels et leur version pour cette version.</p>
+<div class="section" id="dernieres-branches-de-rolling">
+<h3><a class="toc-backref" href="#id2">Dernières branches de Rolling</a><a class="headerlink" href="#dernieres-branches-de-rolling" title="Lien permanent vers ce titre"></a></h3>
+<p>Si vous souhaitez obtenir le dernier code pour ROS 2 Rolling, vous pouvez obtenir la liste des dépôts pertinents en exécutant:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_rolling
 mv<span class="w"> </span>-i<span class="w"> </span>ros2.repos<span class="w"> </span>ros2.repos.old
@@ -400,18 +400,19 @@ curl<span class="w"> </span>https://raw.githubusercontent.com/ros2/ros2/rolling/
 </div></div>
 </div>
 </div>
-<div class="section" id="update-your-repositories">
-<h2><a class="toc-backref" href="#id3">Update your repositories</a><a class="headerlink" href="#update-your-repositories" title="Lien permanent vers ce titre"></a></h2>
-<p>You will notice that in the <a class="reference external" href="https://raw.githubusercontent.com/ros2/ros2/rolling/ros2.repos">ros2.repos</a> file, each repository has a <code class="docutils literal notranslate"><span class="pre">version</span></code> associated with it that points to a particular commit hash, tag, or branch name.
-It is possible that these versions refer to new tags/branches that your local copy of the repositories will not recognize as they are out-of-date.
-Because of this, you should update the repositories that you have already checked out with the following command:</p>
+<div class="section" id="mettre-a-jour-vos-depots">
+<h2><a class="toc-backref" href="#id3">Mettre à jour vos dépôts</a><a class="headerlink" href="#mettre-a-jour-vos-depots" title="Lien permanent vers ce titre"></a></h2>
+<p>« Vous remarquerez que dans le fichier <a class="reference external" href="https://raw.githubusercontent.com/ros2/ros2/rolling/ros2.repos">ros2.repos</a> , chaque
+dépôt est associé à une <code class="docutils literal notranslate"><span class="pre">version</span></code> qui pointe vers un identifiant de commit, une balise (tag) ou un nom de branche particulier. Il est possible que
+ces versions fassent référence à de nouvelles balises/branches que votre copie locale ne reconnaîtra pas car elles ne sont pas à jour.
+Pour cette raison, vous devez mettre à jour les dépôts que vous avez déjà extraits avec la commande suivante :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vcs<span class="w"> </span>custom<span class="w"> </span>--args<span class="w"> </span>remote<span class="w"> </span>update
 </pre></div>
 </div>
 </div>
-<div class="section" id="download-the-new-source-code">
-<h2><a class="toc-backref" href="#id4">Download the new source code</a><a class="headerlink" href="#download-the-new-source-code" title="Lien permanent vers ce titre"></a></h2>
-<p>You should now be able to download the sources associated with the new repository list with:</p>
+<div class="section" id="telecharger-le-nouveau-code-source">
+<h2><a class="toc-backref" href="#id4">Télécharger le nouveau code source</a><a class="headerlink" href="#telecharger-le-nouveau-code-source" title="Lien permanent vers ce titre"></a></h2>
+<p>Vous devriez maintenant pouvoir télécharger les sources associées à la nouvelle liste de dépôts avec:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-1-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-1-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vcs<span class="w"> </span>import<span class="w"> </span>src<span class="w"> </span>&lt;<span class="w"> </span>ros2.repos
 vcs<span class="w"> </span>pull<span class="w"> </span>src
@@ -432,17 +433,18 @@ vcs<span class="w"> </span>pull<span class="w"> </span>src
 </div>
 </div></div>
 </div>
-<div class="section" id="rebuild-your-workspace">
-<h2><a class="toc-backref" href="#id5">Rebuild your workspace</a><a class="headerlink" href="#rebuild-your-workspace" title="Lien permanent vers ce titre"></a></h2>
-<p>Now that the workspace is up to date with the latest sources, remove your previous install and rebuild your workspace with, for example:</p>
+<div class="section" id="reconstruire-votre-espace-de-travail">
+<h2><a class="toc-backref" href="#id5">Reconstruire votre espace de travail</a><a class="headerlink" href="#reconstruire-votre-espace-de-travail" title="Lien permanent vers ce titre"></a></h2>
+<p>Maintenant que l’espace de travail est à jour avec les dernières sources, supprimez votre installation précédente et reconstruisez votre espace de travail avec, par exemple :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install
 </pre></div>
 </div>
 </div>
-<div class="section" id="inspect-your-source-checkout">
-<h2><a class="toc-backref" href="#id6">Inspect your source checkout</a><a class="headerlink" href="#inspect-your-source-checkout" title="Lien permanent vers ce titre"></a></h2>
-<p>During your development you may have deviated from the original state of your workspace from when you imported the repository list.
-If you wish to know the versions of the set of repositories in your workspace, you can export the information using the following command:</p>
+<div class="section" id="inspecter-vos-sources">
+<h2><a class="toc-backref" href="#id6">Inspecter vos sources</a><a class="headerlink" href="#inspecter-vos-sources" title="Lien permanent vers ce titre"></a></h2>
+<p>Au cours de votre développement, vous avez peut-être dévié du dépôt d’origine au moment où vous avez importé la liste
+des dépôts. Si vous souhaitez connaître les versions de l’ensemble des dépôts de votre espace de travail, vous pouvez exporter les informations
+à l’aide de la commande suivante :</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-2-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-2-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-2-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-2-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_rolling
 vcs<span class="w"> </span><span class="nb">export</span><span class="w"> </span>src<span class="w"> </span>&gt;<span class="w"> </span>my_ros2.repos
@@ -457,7 +459,7 @@ vcs<span class="w"> </span><span class="nb">export</span><span class="w"> </span
 </pre></div>
 </div>
 </div></div>
-<p>This <code class="docutils literal notranslate"><span class="pre">my_ros2.repos</span></code> file can then be shared with others so that they can reproduce the state of the repositories in your workspace.</p>
+<p>Ce fichier <code class="docutils literal notranslate"><span class="pre">my_ros2.repos</span></code> peut ensuite être partagé avec d’autres collaborateurs afin qu’ils puissent reproduire l’état des dépôts dans votre espace de travail.</p>
 </div>
 </div>
 
