@@ -61,9 +61,9 @@ Si vous souhaitez obtenir le dernier code pour ROS 2 {DISTRO_TITLE}, vous pouvez
 
 Mettre à jour vos dépôts
 ------------------------
-"Vous remarquerez que dans le fichier `ros2.repos <https://raw.githubusercontent.com/ros2/ros2/{REPOS_FILE_BRANCH}/ros2.repos>`__ , chaque 
+"Vous remarquerez que dans le fichier `ros2.repos <https://raw.githubusercontent.com/ros2/ros2/{REPOS_FILE_BRANCH}/ros2.repos>`__ , chaque
 dépôt est associé à une ``version`` qui pointe vers un identifiant de commit, une balise (tag) ou un nom de branche particulier. Il est possible que
-ces versions fassent référence à de nouvelles balises/branches que votre copie locale ne reconnaîtra pas car elles ne sont pas à jour. 
+ces versions fassent référence à de nouvelles balises/branches que votre copie locale ne reconnaîtra pas car elles ne sont pas à jour.
 Pour cette raison, vous devez mettre à jour les dépôts que vous avez déjà extraits avec la commande suivante :
 
 .. code-block:: bash
