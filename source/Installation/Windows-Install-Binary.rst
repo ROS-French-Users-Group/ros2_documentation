@@ -11,7 +11,7 @@ Cette page explique comment installer ROS 2 sur Windows à partir d'un paquet bi
 
     Le binaire pré-construit n'inclut pas tous les paquets ROS 2.
     Tous les paquets de la `variante de base ROS <https://ros.org/reps/rep-2001.html#ros-base>`_ sont inclus, et seul un sous-ensemble de paquets de la `variante de bureau ROS <https://ros.org/reps/rep-2001.html#desktop-variants>`_ sont inclus.
-    La liste exacte| des packages est décrite par les référentiels répertoriés dans `ce fichier ros2.repos <https://github.com/ros2/ros2/blob/rolling/ros2.repos>`_.
+    La liste exacte des packages est décrite par les référentiels répertoriés dans `ce fichier ros2.repos <https://github.com/ros2/ros2/blob/rolling/ros2.repos>`_.
 
 
 Configuration requise
@@ -75,7 +75,7 @@ Hourra!
 
 Etapes après l'installation
 ---------------------------
-Continuez avec les :doc:`tutoriels et démos <../../Tutoriels>` pour configurer votre environnement, créer votre propre espace de travail et vos paquets, et apprendre les concepts de base de ROS 2.
+Continuez avec les :doc:`tutoriels et démos <../../Tutorials>` pour configurer votre environnement, créer votre propre espace de travail et vos paquets, et apprendre les concepts de base de ROS 2.
 
 
 Implémentations RMW supplémentaires (facultatif)
@@ -159,7 +159,7 @@ Démarrez une invite de commande administrative et sourcez le fichier de configu
 
    call C:\opt\ros\foxy\x64\local_setup.bat
 
-Tiens-toi à jour
+Etre à jour
 ^^^^^^^^^^^^^^^^
 
 Pour vous tenir au courant des dernières versions, exécutez:

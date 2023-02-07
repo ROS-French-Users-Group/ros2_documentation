@@ -117,7 +117,7 @@ Une fois ces paquets téléchargés, ouvrez un shell d'administration et exécut
 
 Veuillez remplacer ``<PATH\TO\DOWNLOADS>`` par le dossier dans lequel vous avez téléchargé les paquets.
 
-Premier pip de mise à niveau et setuptools:
+Mise à niveau de pip et setuptools:
 
 .. code-block:: bash
 
