@@ -114,7 +114,7 @@ Hourra !
 
 Prochaines étapes après l'installation
 --------------------------------------
-Continuez avec les :doc:`tutoriels et démos <../../Tutoriels>` pour configurer votre environnement, créer votre propre espace de travail et vos paquets, et apprendre les concepts de base de ROS 2.
+Continuez avec les :doc:`tutoriels et démos <../../Tutorials>` pour configurer votre environnement, créer votre propre espace de travail et vos paquets, et apprendre les concepts de base de ROS 2.
 
 Implémentations RMW supplémentaires (facultatif)
 ------------------------------------------------
