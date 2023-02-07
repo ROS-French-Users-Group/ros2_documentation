@@ -1,103 +1,106 @@
-Installing prerequisites
-------------------------
+Installation des prérequis
+--------------------------
 
-Install Chocolatey
-^^^^^^^^^^^^^^^^^^
+Installer Chocolatey
+^^^^^^^^^^^^^^^^^^^^
 
-Chocolatey is a package manager for Windows, install it by following their installation instructions:
+Chocolatey est un gestionnaire de paquets pour Windows, installez-le en suivant les instructions d'installation:
 
 https://chocolatey.org/
 
-You'll use Chocolatey to install some other developer tools.
+Chocolatey sera utilisé pour installer d'autres outils de développement.
 
-Install Python
-^^^^^^^^^^^^^^
+Installer Python
+^^^^^^^^^^^^^^^^
 
-Open a Command Prompt and type the following to install Python via Chocolatey:
+Ouvrez une invite de commande et tapez ce qui suit pour installer Python via Chocolatey:
 
 .. code-block:: bash
 
    choco install -y python --version 3.8.3
 
-Install Visual C++ Redistributables
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Installer Visual C++ Redistributable
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Open a Command Prompt and type the following to install them via Chocolatey:
+Ouvrez une invite de commande et tapez ce qui suit pour les installer via Chocolatey:
 
 .. code-block:: bash
 
    choco install -y vcredist2013 vcredist140
 
-Install OpenSSL
-^^^^^^^^^^^^^^^
+Installer OpenSSL
+^^^^^^^^^^^^^^^^^
 
-Download the *Win64 OpenSSL v1.1.1n* OpenSSL installer from `this page <https://slproweb.com/products/Win32OpenSSL.html>`__.
-Scroll to the bottom of the page and download *Win64 OpenSSL v1.1.1n*.
-Don't download the Win32 or Light versions, or the v3.X.Y installers.
+Téléchargez le programme d'installation OpenSSL *Win64 OpenSSL v1.1.1n* à partir de `cette page <https://slproweb.com/products/Win32OpenSSL.html>`__.
+Faites défiler vers le bas de la page et téléchargez *Win64 OpenSSL v1.1.1n*.
+Ne téléchargez pas les versions Win32 ou Light, ni les programmes d'installation v3.X.Y.
 
-Run the installer with default parameters, as the following commands assume you used the default installation directory.
+Exécutez le programme d'installation avec les paramètres par défaut, car les commandes suivantes supposent que vous avez utilisé le répertoire d'installation par défaut.
 
-This command sets an environment variable that persists over sessions:
+Cette commande définit une variable d'environnement qui persiste au fil des sessions:
 
 .. code-block:: bash
 
    setx /m OPENSSL_CONF "C:\Program Files\OpenSSL-Win64\bin\openssl.cfg"
 
-You will need to append the OpenSSL-Win64 bin folder to your PATH.
-You can do this by clicking the Windows icon, typing "Environment Variables", then clicking on "Edit the system environment variables".
-In the resulting dialog, click "Environment Variables", then click "Path" on the bottom pane, finally click "Edit" and add the path below.
-
+Vous devrez ajouter le dossier bin OpenSSL-Win64 à votre PATH.
+Vous pouvez le faire en cliquant sur l'icône Windows, en tapant "Variables d'environnement",
+puis en cliquant sur "Modifier les variables d'environnement système".
+Dans la boîte de dialogue résultante, cliquez sur "Variables d'environnement",
+puis cliquez sur "Chemin" dans le volet inférieur, enfin cliquez sur "Modifier" et ajoutez le chemin ci-dessous.
+   
 * ``C:\Program Files\OpenSSL-Win64\bin\``
 
-Install Visual Studio
-^^^^^^^^^^^^^^^^^^^^^
+Installer Visual Studio
+^^^^^^^^^^^^^^^^^^^^^^^
 
-Install Visual Studio 2019.
+Installez Visual Studio 2019.
 
-If you already have a paid version of Visual Studio 2019 (Professional, Enterprise), skip this step.
+Si vous disposez déjà d'une version payante de Visual Studio 2019 (Professional, Enterprise),
+vous pouvez ignorer cette étape.
 
-Microsoft provides a free of charge version of Visual Studio 2019, named Community, which can be used to build applications that use ROS 2.
-`You can download the installer directly through this link. <https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=16&src=myvs&utm_medium=microsoft&utm_source=my.visualstudio.com&utm_campaign=download&utm_content=vs+community+2019>`_
+Microsoft fournit une version gratuite de Visual Studio 2019, nommée Community, qui peut être utilisée pour créer des applications utilisant ROS 2.
+`Vous pouvez télécharger le programme d'installation directement via ce lien. <https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=16&src=myvs&utm_medium=microsoft&utm_source=my.visualstudio.com&utm_campaign=download&utm_content=vs+community+2019>`_
 
-Make sure that the Visual C++ features are installed.
+Assurez-vous que les fonctionnalités Visual C++ sont installées.
 
-An easy way to make sure they're installed is to select the ``Desktop development with C++`` workflow during the install.
+Un moyen simple de s'assurer qu'ils sont installés est de sélectionner le flux de travail ``Développement de bureau avec C++`` lors de l'installation.
 
    .. image:: /Installation/images/windows-vs-studio-install.png
 
-Make sure that no C++ CMake tools are installed by unselecting them in the list of components to be installed.
+Assurez-vous qu'aucun outil C++ CMake n'est installé en les désélectionnant dans la liste des composants à installer.
 
-Install OpenCV
-^^^^^^^^^^^^^^
 
-Some of the examples require OpenCV to be installed.
+Installer OpenCV
+^^^^^^^^^^^^^^^^
 
-You can download a precompiled version of OpenCV 3.4.6 from https://github.com/ros2/ros2/releases/download/opencv-archives/opencv-3.4.6-vc16.VS2019.zip .
+Certains exemples nécessitent l'installation d'OpenCV.
 
-Assuming you unpacked it to ``C:\opencv``, type the following on a Command Prompt (requires Admin privileges):
+Vous pouvez télécharger une version précompilée d'OpenCV 3.4.6 à partir de https://github.com/ros2/ros2/releases/download/opencv-archives/opencv-3.4.6-vc16.VS2019.zip .
+
+En supposant que vous l'avez décompressé dans ``C:\opencv``, tapez ce qui suit sur une invite de commande (nécessite des privilèges d'administrateur):
 
 .. code-block:: bash
 
    setx /m OpenCV_DIR C:\opencv
 
-Since you are using a precompiled ROS version, we have to tell it where to find the OpenCV libraries.
-You have to extend the ``PATH`` variable to ``C:\opencv\x64\vc16\bin``.
+Puisque c'est une version ROS précompilée, il faut indiquer où trouver les bibliothèques OpenCV.
+Il faut étendre la variable ``PATH`` à ``C:\opencv\x64\vc16\bin``.
 
-Install dependencies
-^^^^^^^^^^^^^^^^^^^^
+Installer les dépendances
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-There are a few dependencies not available in the Chocolatey package database.
-In order to ease the manual installation process, we provide the necessary Chocolatey packages.
+Il existe quelques dépendances non disponibles dans la base de données du paquet Chocolatey. Afin de faciliter le processus d'installation manuelle, nous fournissons les paquets Chocolatey nécessaires.
 
-As some chocolatey packages rely on it, we start by installing CMake
+Comme certains paquets chocolatés en dépendent, nous commençons par installer CMake
 
 .. code-block:: bash
 
    choco install -y cmake
 
-You will need to append the CMake bin folder ``C:\Program Files\CMake\bin`` to your PATH.
+Vous devrez ajouter le dossier CMake bin ``C:\Program Files\CMake\bin`` à votre PATH.
 
-Please download these packages from `this <https://github.com/ros2/choco-packages/releases/latest>`__ GitHub repository.
+Veuillez télécharger ces paquets depuis `ce dépôt <https://github.com/ros2/choco-packages/releases/latest>`__  GitHub.
 
 * asio.1.12.1.nupkg
 * bullet.3.17.nupkg
@@ -106,35 +109,33 @@ Please download these packages from `this <https://github.com/ros2/choco-package
 * tinyxml-usestl.2.6.2.nupkg
 * tinyxml2.6.0.0.nupkg
 
-Once these packages are downloaded, open an administrative shell and execute the following command:
+Une fois ces paquets téléchargés, ouvrez un shell d'administration et exécutez la commande suivante:
 
 .. code-block:: bash
 
    choco install -y -s <PATH\TO\DOWNLOADS\> asio cunit eigen tinyxml-usestl tinyxml2 bullet
 
-Please replace ``<PATH\TO\DOWNLOADS>`` with the folder you downloaded the packages to.
+Veuillez remplacer ``<PATH\TO\DOWNLOADS>`` par le dossier dans lequel vous avez téléchargé les paquets.
 
-First upgrade pip and setuptools:
+Premier pip de mise à niveau et setuptools:
 
 .. code-block:: bash
 
    python -m pip install -U pip setuptools==59.6.0
 
-Now install some additional python dependencies:
+Installez maintenant quelques dépendances Python supplémentaires:
 
 .. code-block:: bash
 
    python -m pip install -U catkin_pkg cryptography empy importlib-metadata lark==1.1.1 lxml matplotlib netifaces numpy opencv-python PyQt5 pillow psutil pycairo pydot pyparsing==2.4.7 pyyaml rosdistro
 
-Install Qt5
-^^^^^^^^^^^
+Installer Qt5
+^^^^^^^^^^^^^
 
-Download the `5.12.X offline installer <https://www.qt.io/offline-installers>`_ from Qt's website.
-Run the installer.
-Make sure to select the ``MSVC 2017 64-bit`` component under the ``Qt`` -> ``Qt 5.12.12`` tree.
+Téléchargez le `5.12.X offline installer <https://www.qt.io/offline-installers>`_ depuis le site Web de Qt.
+Exécutez le programme d'installation. Assurez-vous de sélectionner le composant ``MSVC 2017 64-bit`` sous l'arborescence ``Qt`` -> ``Qt 5.12.12``.
 
-Finally, in an administrator ``cmd.exe`` window set these environment variables.
-The commands below assume you installed it to the default location of ``C:\Qt``.
+Enfin, dans une fenêtre administrateur ``cmd.exe``, définissez ces variables d'environnement. Les commandes ci-dessous supposent que vous l'avez installé à l'emplacement par défaut de ``C:\Qt``.
 
 .. code-block:: bash
 
@@ -144,15 +145,18 @@ The commands below assume you installed it to the default location of ``C:\Qt``.
 
 .. note::
 
-   This path might change based on the installed MSVC version, the directory Qt was installed to, and the version of Qt installed.
+   Ce chemin peut changer en fonction de la version de MSVC installée, du répertoire dans lequel Qt a été installé et de la version de Qt installée.
 
-RQt dependencies
-^^^^^^^^^^^^^^^^
 
-To run rqt_graph you need to `download <https://graphviz.gitlab.io/_pages/Download/Download_windows.html>`__ and install `Graphviz <https://graphviz.gitlab.io/>`__.
-The installer will ask if to add graphviz to PATH, choose to either add it to the current user or all users.
+Dépendances RQt
+^^^^^^^^^^^^^^^
 
-Install additional DDS implementations (optional)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Pour exécuter rqt_graph, vous devez `télécharger <https://graphviz.gitlab.io/_pages/Download/Download_windows.html>`__ et installer `Graphviz <https://graphviz.gitlab.io/>`__.
+Le programme d'installation vous demandera si vous souhaitez ajouter graphviz à PATH, choisissez de l'ajouter à l'utilisateur actuel ou à tous les utilisateurs.
 
-If you would like to use another DDS or RTPS vendor besides the default, Fast DDS, you can find instructions `here </Installation/DDS-Implementations>`_.
+
+Installer des implémentations DDS supplémentaires (facultatif)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Si vous souhaitez utiliser un autre fournisseur DDS ou RTPS en plus du Fast DDS par défaut, vous pouvez trouver des instructions `ici </Installation/DDS-Implementations>`_.
+
