@@ -34,10 +34,10 @@ Au lieu de cela, vous pouvez télécharger tous les soirs :ref:`binaries prerele
 .. note::
 
     Il peut y avoir plus d'une option de téléchargement binaire qui peut entraîner une différence de nom de fichier.
-    
+
 .. note::
 
-    Pour installer des bibliothèques de débogage pour ROS 2, voir `Extra Stuff for Debug`_.
+    Pour installer des bibliothèques de débogage pour ROS 2, voir `Suppléments pour le débogage`_.
     Continuez ensuite en téléchargeant ``ros2-package-windows-debug-AMD64.zip``.
 
 * Décompressez le fichier zip quelque part (nous supposerons ``C:\dev\ros2_{DISTRO}``\ ).
@@ -71,7 +71,7 @@ Démarrez un autre shell de commande et exécutez un ``listener`` Python\ :
 Vous devriez voir le ``talker`` dire ``Publishing`` (qu'il publie des messages) et le ``listener`` dire ``I heard`` ces messages.
 Cela permet de vérifier que les API C++ et Python fonctionnent correctement.
 Hourra!
-   
+
 
 Etapes après l'installation
 ---------------------------

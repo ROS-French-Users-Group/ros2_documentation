@@ -48,7 +48,7 @@ Vous pouvez le faire en cliquant sur l'icône Windows, en tapant "Variables d'en
 puis en cliquant sur "Modifier les variables d'environnement système".
 Dans la boîte de dialogue résultante, cliquez sur "Variables d'environnement",
 puis cliquez sur "Chemin" dans le volet inférieur, enfin cliquez sur "Modifier" et ajoutez le chemin ci-dessous.
-   
+
 * ``C:\Program Files\OpenSSL-Win64\bin\``
 
 Installer Visual Studio
@@ -159,4 +159,3 @@ Installer des implémentations DDS supplémentaires (facultatif)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Si vous souhaitez utiliser un autre fournisseur DDS ou RTPS en plus du Fast DDS par défaut, vous pouvez trouver des instructions `ici </Installation/DDS-Implementations>`_.
-
