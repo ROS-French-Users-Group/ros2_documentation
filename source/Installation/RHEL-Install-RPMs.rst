@@ -5,10 +5,6 @@ RHEL (RPM)
    :depth: 2
    :local:
 
-RPM packages for ROS 2 {DISTRO_TITLE_FULL} are currently available for RHEL 8.
-The Rolling Ridley distribution will change target platforms from time to time as new platforms are selected for development.
-The target platforms are defined in `REP 2000 <https://github.com/ros-infrastructure/rep/blob/master/rep-2000.rst>`__
-Most people will want to use a stable ROS distribution.
 Les packages RPM pour ROS 2 {DISTRO_TITLE_FULL} sont actuellement disponibles pour RHEL 8. La distribution Rolling Ridley changera de plates-formes cibles
 de temps à autre à mesure que de nouvelles plates-formes seront sélectionnées pour le développement. Les plateformes cibles sont définies dans `REP 2000 <https://github.com/ros-infrastructure/rep/blob/master/rep-2000.rst>`__
 La plupart des gens voudront utiliser une distribution ROS stable.
