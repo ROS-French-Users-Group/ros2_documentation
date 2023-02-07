@@ -1,6 +1,7 @@
-Make sure you have a locale which supports ``UTF-8``.
-If you are in a minimal environment (such as a docker container), the locale may be something minimal like ``C``.
-We test with the following settings. However, it should be fine if you're using a different UTF-8 supported locale.
+Assurez-vous d'avoir une locale qui supporte ``UTF-8``.
+Si vous êtes dans un environnement minimal (comme un conteneur docker), la locale peut être
+quelque chose de minimal comme ``C``. Nous testons avec les paramètres
+suivants. Cependant, un autre paramètre régional pris en charge par UTF-8 devrait fonctionner.
 
 .. code-block:: bash
 
