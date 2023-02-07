@@ -104,7 +104,8 @@ Déinstaller
 Suppléments pour le débogage
 ----------------------------
 
-Pour télécharger les bibliothèques de débogage de ROS 2, vous devez télécharger ``ros2-{DISTRO}-*-windows-debug-AMD64.zip``. Veuillez noter que les bibliothèques de débogage nécessitent une configuration/configuration supplémentaire pour fonctionner comme indiqué ci-dessous.
+Pour télécharger les bibliothèques de débogage de ROS 2, vous devez télécharger ``ros2-{DISTRO}-*-windows-debug-AMD64.zip``. Veuillez noter que les bibliothèques de débogage nécessitent une configuration
+supplémentaire pour fonctionner comme indiqué ci-dessous.
 
 L'installation de Python peut nécessiter une modification pour activer les symboles de débogage et les binaires de débogage:
 
