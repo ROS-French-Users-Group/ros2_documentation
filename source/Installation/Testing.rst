@@ -2,61 +2,60 @@
 
    Installation/Prerelease-Testing
 
-Testing with pre-release binaries
-=================================
+Tester avec des binaires de pré-version
+=======================================
 
-Many ROS packages are provided as pre-built binaries.
-Usually, you will get the released version of binaries when following :doc:`../Installation`.
-There are also pre-released versions of binaries that are useful for testing before making an official release.
-This article describes several options if you would like to try out pre-released versions of ROS binaries.
+De nombreux packages ROS sont fournis sous forme de fichiers binaires pré-compilés.
+Habituellement, vous obtiendrez la version publiée des binaires en suivant :doc:`../Installation`.
+Il existe également des versions pré-publiées de binaires qui sont utiles pour les tests avant de faire une version officielle.
+Cet article décrit plusieurs options si vous souhaitez essayer des versions pré-publiées des binaires ROS.
 
-Debian testing repository
--------------------------
+Dépot de test de Debian
+-----------------------
 
-When packages are released into a ROS distribution (using bloom), the buildfarm builds them into debian packages which are stored temporarily in the **building** apt repository.
-As dependent packages are rebuilt, an automatic process periodically synchronizes the packages in **building** to a secondary repository called **ros-testing**.
-**ros-testing** is intended as a soaking area where developers and bleeding-edge users may give the packages extra testing, before they are manually synced into the public ros repository from which users typically install packages.
+Lorsque des packages sont publiés dans une distribution ROS (à l'aide de bloom), le buildfarm les construit dans des packages debian qui sont stockés temporairement dans le dépôt **building** apt.
+Au fur et à mesure que les paquets dépendants sont reconstruits, un processus automatique synchronise périodiquement les packages dans **building** avec un référentiel secondaire appelé **ros-testing**.
+**ros-testing** est conçu comme une zone de test où les développeurs et les utilisateurs à la pointe de la technologie peuvent effectuer des tests supplémentaires sur les packages, avant qu'ils ne soient synchronisés manuellement dans le référentiel ros public à partir duquel les utilisateurs installent généralement les paquets.
 
-Approximately every two weeks, the rosdistro's release manager manually synchronizes the contents of **ros-testing** into the **main** ROS repository.
+Environ toutes les deux semaines, le gestionnaire de publication de rosdistro synchronise manuellement le contenu de **ros-testing** dans le référentiel ROS **principal**.
 
-For Debian-based operating systems, you can install binary packages from the **ros-testing** repository.
+Pour les systèmes d'exploitation basés sur Debian, vous pouvez installer des packages binaires à partir du dépôt **ros-testing**.
 
-1. Make sure you have a working ROS 2 installation from Debian packages (see :doc:`../Installation`).
+1. Assurez-vous d'avoir une installation ROS 2 fonctionnelle à partir des packages Debian (voir :doc:`../Installation`).
 
-2. Edit (with sudo) the file ``/etc/apt/sources.list.d/ros2-latest.list`` and change ``ros2`` with ``ros2-testing``.
-   For example, on Ubuntu Jammy the contents should look like the following:
+2. Modifiez (avec sudo) le fichier ``/etc/apt/sources.list.d/ros2-latest.list`` et remplacez ``ros2`` par ``ros2-testing``. Par exemple, sur Ubuntu Jammy, le contenu devrait ressembler à ceci:
 
    .. code-block:: sh
 
       # deb http://packages.ros.org/ros2/ubuntu jammy main
       deb http://packages.ros.org/ros2-testing/ubuntu jammy main
 
-3. Update the ``apt`` index:
+3. Mettez à jour l'index ``apt``:
 
    .. code-block:: sh
 
       sudo apt update
 
-4. You can now install individual packages from the testing repository, for example:
+4. Vous pouvez désormais installer des packages individuels à partir du référentiel testing, par exemple:
 
    .. code-block:: sh
 
       sudo apt install ros-{DISTRO}-my-just-released-package
 
-5. Alternatively, you can move your entire ROS 2 installation to the testing repository:
+5. Vous pouvez également déplacer l'intégralité de votre installation ROS 2 vers le dépôt testing:
 
    .. code-block:: sh
 
       sudo apt dist-upgrade
 
-6. Once you are finished testing, you can switch back to the normal repository by changing back the contents of ``/etc/apt/sources.list.d/ros2-latest.list``:
+6. Une fois que vous avez terminé les tests, vous pouvez revenir au dépôt normal en modifiant le contenu de ``/etc/apt/sources.list.d/ros2-latest.list``:
 
    .. code-block:: sh
 
       deb http://packages.ros.org/ros2/ubuntu jammy main
       # deb http://packages.ros.org/ros2-testing/ubuntu jammy main
 
-   and doing an update and upgrade:
+   et faire une mise à jour et une mise à niveau:
 
    .. code-block:: sh
 
@@ -65,21 +64,21 @@ For Debian-based operating systems, you can install binary packages from the **r
 
 .. _Prerelease_binaries:
 
-Fat binaries
-------------
+Enormes binaires
+----------------
 
-For core packages, we run nightly packaging jobs for Ubuntu Linux, RHEL, and Windows.
-These packaging jobs produce archives with pre-built binaries that can be downloaded and extracted to your filesystem.
+Pour les packages de base, nous exécutons des tâches d'empaquetage nocturnes pour Ubuntu Linux, RHEL et Windows.
+Ces travaux d'empaquetage produisent des archives avec des binaires pré-construits qui peuvent être téléchargés et extraits sur votre système de fichiers.
 
-1. Make sure you have all dependencies installed according to the :doc:`latest development setup <Alternatives/Latest-Development-Setup>` for your platform.
+1. Assurez-vous que toutes les dépendances sont installées conformément à la :doc:`dernière configuration de développement <Alternatives/Latest-Development-Setup>` pour votre plate-forme.
 
-2. Go to https://ci.ros2.org/view/packaging/ and select a packaging job from the list corresponding to your platform.
+2. Allez sur https://ci.ros2.org/view/packaging/ et dans la liste sélectionnez le packaging correspondant à votre plateforme.
 
-3. Under the heading "Last Successful Artifacts" you should see a download link (e.g. for Windows, ``ros2-package-windows-AMD64.zip``).
+3. Sous le titre "Derniers artefacts réussis", vous devriez voir un lien de téléchargement (par exemple, pour Windows, ``ros2-package-windows-AMD64.zip``).
 
-4. Download and extract the archive to your file system.
+4. Téléchargez et extrayez l'archive dans votre système de fichiers.
 
-5. To use the fat binary installation, source the ``setup.*`` file that can be found in the root of the archive.
+5. Pour utiliser l'installation avec un binaire unique, sourcez le fichier ``setup.*`` qui se trouve à la racine de l'archive.
 
    .. tabs::
 
@@ -98,18 +97,18 @@ These packaging jobs produce archives with pre-built binaries that can be downlo
 Docker
 ------
 
-For Ubuntu Linux, there is also a nightly Docker image based on the nightly fat archive.
+Pour Ubuntu Linux, il existe également une image Docker nocturne basée sur l'archive nocturne Fat.
 
-1. Pull the Docker image:
+1. Extrayez l'image Docker:
 
    .. code-block:: sh
 
       docker pull osrf/ros2:nightly
 
-2. Start an interactive container:
+2. Démarrez un conteneur interactif:
 
    .. code-block:: sh
 
       docker run -it osrf/ros2:nightly
 
-For support on running GUI applications in Docker, take a look at the tutorial `User GUI's with Docker <https://wiki.ros.org/docker/Tutorials/GUI>`_ or the tool `rocker <https://github.com/osrf/rocker>`_.
+Pour obtenir de l'aide sur l'exécution d'applications GUI dans Docker, consultez le tutoriel `User GUI's with Docker <https://wiki.ros.org/docker/Tutorials/GUI>`_ ou l'outil `rocker <https://github .com/osrf/rocker>`_.
