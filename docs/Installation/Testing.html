@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Testing with pre-release binaries &mdash; Documentation ROS 2 documentation </title>
+  <title>Tester avec des binaires de pré-version &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -62,7 +62,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Maintaining-a-Source-Checkout.html">Maintenir une installation à partir des sources via git</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Testing with pre-release binaries</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Tester avec des binaires de pré-version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="DDS-Implementations.html">Les implémentations DDS</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="DDS-Implementations/Install-Connext-Security-Plugins.html">Connext security plugins</a></li>
 <li class="toctree-l3"><a class="reference internal" href="DDS-Implementations/Install-Connext-University-Eval.html">RTI Connext DDS</a></li>
@@ -342,7 +342,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a></li>
           <li class="breadcrumb-item"><a href="../Installation.html">Installation</a></li>
-      <li class="breadcrumb-item active">Testing with pre-release binaries</li>
+      <li class="breadcrumb-item active">Tester avec des binaires de pré-version</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/Installation/Testing.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
@@ -354,49 +354,48 @@
              
 
 
-  <div class="section" id="testing-with-pre-release-binaries">
-<h1>Testing with pre-release binaries<a class="headerlink" href="#testing-with-pre-release-binaries" title="Lien permanent vers ce titre"></a></h1>
-<p>Many ROS packages are provided as pre-built binaries.
-Usually, you will get the released version of binaries when following <a class="reference internal" href="../Installation.html"><span class="doc">Installation</span></a>.
-There are also pre-released versions of binaries that are useful for testing before making an official release.
-This article describes several options if you would like to try out pre-released versions of ROS binaries.</p>
-<div class="section" id="debian-testing-repository">
-<h2>Debian testing repository<a class="headerlink" href="#debian-testing-repository" title="Lien permanent vers ce titre"></a></h2>
-<p>When packages are released into a ROS distribution (using bloom), the buildfarm builds them into debian packages which are stored temporarily in the <strong>building</strong> apt repository.
-As dependent packages are rebuilt, an automatic process periodically synchronizes the packages in <strong>building</strong> to a secondary repository called <strong>ros-testing</strong>.
-<strong>ros-testing</strong> is intended as a soaking area where developers and bleeding-edge users may give the packages extra testing, before they are manually synced into the public ros repository from which users typically install packages.</p>
-<p>Approximately every two weeks, the rosdistro’s release manager manually synchronizes the contents of <strong>ros-testing</strong> into the <strong>main</strong> ROS repository.</p>
-<p>For Debian-based operating systems, you can install binary packages from the <strong>ros-testing</strong> repository.</p>
+  <div class="section" id="tester-avec-des-binaires-de-pre-version">
+<h1>Tester avec des binaires de pré-version<a class="headerlink" href="#tester-avec-des-binaires-de-pre-version" title="Lien permanent vers ce titre"></a></h1>
+<p>De nombreux packages ROS sont fournis sous forme de fichiers binaires pré-compilés.
+Habituellement, vous obtiendrez la version publiée des binaires en suivant <a class="reference internal" href="../Installation.html"><span class="doc">Installation</span></a>.
+Il existe également des versions pré-publiées de binaires qui sont utiles pour les tests avant de faire une version officielle.
+Cet article décrit plusieurs options si vous souhaitez essayer des versions pré-publiées des binaires ROS.</p>
+<div class="section" id="depot-de-test-de-debian">
+<h2>Dépot de test de Debian<a class="headerlink" href="#depot-de-test-de-debian" title="Lien permanent vers ce titre"></a></h2>
+<p>Lorsque des packages sont publiés dans une distribution ROS (à l’aide de bloom), le buildfarm les construit dans des packages debian qui sont stockés temporairement dans le dépôt <strong>building</strong> apt.
+Au fur et à mesure que les paquets dépendants sont reconstruits, un processus automatique synchronise périodiquement les packages dans <strong>building</strong> avec un référentiel secondaire appelé <strong>ros-testing</strong>.
+<strong>ros-testing</strong> est conçu comme une zone de test où les développeurs et les utilisateurs à la pointe de la technologie peuvent effectuer des tests supplémentaires sur les packages, avant qu’ils ne soient synchronisés manuellement dans le référentiel ros public à partir duquel les utilisateurs installent généralement les paquets.</p>
+<p>Environ toutes les deux semaines, le gestionnaire de publication de rosdistro synchronise manuellement le contenu de <strong>ros-testing</strong> dans le référentiel ROS <strong>principal</strong>.</p>
+<p>Pour les systèmes d’exploitation basés sur Debian, vous pouvez installer des packages binaires à partir du dépôt <strong>ros-testing</strong>.</p>
 <ol class="arabic">
-<li><p>Make sure you have a working ROS 2 installation from Debian packages (see <a class="reference internal" href="../Installation.html"><span class="doc">Installation</span></a>).</p></li>
-<li><p>Edit (with sudo) the file <code class="docutils literal notranslate"><span class="pre">/etc/apt/sources.list.d/ros2-latest.list</span></code> and change <code class="docutils literal notranslate"><span class="pre">ros2</span></code> with <code class="docutils literal notranslate"><span class="pre">ros2-testing</span></code>.
-For example, on Ubuntu Jammy the contents should look like the following:</p>
+<li><p>Assurez-vous d’avoir une installation ROS 2 fonctionnelle à partir des packages Debian (voir <a class="reference internal" href="../Installation.html"><span class="doc">Installation</span></a>).</p></li>
+<li><p>Modifiez (avec sudo) le fichier <code class="docutils literal notranslate"><span class="pre">/etc/apt/sources.list.d/ros2-latest.list</span></code> et remplacez <code class="docutils literal notranslate"><span class="pre">ros2</span></code> par <code class="docutils literal notranslate"><span class="pre">ros2-testing</span></code>. Par exemple, sur Ubuntu Jammy, le contenu devrait ressembler à ceci:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># deb http://packages.ros.org/ros2/ubuntu jammy main</span>
 deb<span class="w"> </span>http://packages.ros.org/ros2-testing/ubuntu<span class="w"> </span>jammy<span class="w"> </span>main
 </pre></div>
 </div>
 </li>
-<li><p>Update the <code class="docutils literal notranslate"><span class="pre">apt</span></code> index:</p>
+<li><p>Mettez à jour l’index <code class="docutils literal notranslate"><span class="pre">apt</span></code>:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
 </pre></div>
 </div>
 </li>
-<li><p>You can now install individual packages from the testing repository, for example:</p>
+<li><p>Vous pouvez désormais installer des packages individuels à partir du référentiel testing, par exemple:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-rolling-my-just-released-package
 </pre></div>
 </div>
 </li>
-<li><p>Alternatively, you can move your entire ROS 2 installation to the testing repository:</p>
+<li><p>Vous pouvez également déplacer l’intégralité de votre installation ROS 2 vers le dépôt testing:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>dist-upgrade
 </pre></div>
 </div>
 </li>
-<li><p>Once you are finished testing, you can switch back to the normal repository by changing back the contents of <code class="docutils literal notranslate"><span class="pre">/etc/apt/sources.list.d/ros2-latest.list</span></code>:</p>
+<li><p>Une fois que vous avez terminé les tests, vous pouvez revenir au dépôt normal en modifiant le contenu de <code class="docutils literal notranslate"><span class="pre">/etc/apt/sources.list.d/ros2-latest.list</span></code>:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>deb<span class="w"> </span>http://packages.ros.org/ros2/ubuntu<span class="w"> </span>jammy<span class="w"> </span>main
 <span class="c1"># deb http://packages.ros.org/ros2-testing/ubuntu jammy main</span>
 </pre></div>
 </div>
-<p>and doing an update and upgrade:</p>
+<p>et faire une mise à jour et une mise à niveau:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
 sudo<span class="w"> </span>apt<span class="w"> </span>dist-upgrade
 </pre></div>
@@ -404,16 +403,16 @@ sudo<span class="w"> </span>apt<span class="w"> </span>dist-upgrade
 </li>
 </ol>
 </div>
-<div class="section" id="fat-binaries">
-<span id="prerelease-binaries"></span><h2>Fat binaries<a class="headerlink" href="#fat-binaries" title="Lien permanent vers ce titre"></a></h2>
-<p>For core packages, we run nightly packaging jobs for Ubuntu Linux, RHEL, and Windows.
-These packaging jobs produce archives with pre-built binaries that can be downloaded and extracted to your filesystem.</p>
+<div class="section" id="enormes-binaires">
+<span id="prerelease-binaries"></span><h2>Enormes binaires<a class="headerlink" href="#enormes-binaires" title="Lien permanent vers ce titre"></a></h2>
+<p>Pour les packages de base, nous exécutons des tâches d’empaquetage nocturnes pour Ubuntu Linux, RHEL et Windows.
+Ces travaux d’empaquetage produisent des archives avec des binaires pré-construits qui peuvent être téléchargés et extraits sur votre système de fichiers.</p>
 <ol class="arabic">
-<li><p>Make sure you have all dependencies installed according to the <a class="reference internal" href="Alternatives/Latest-Development-Setup.html"><span class="doc">latest development setup</span></a> for your platform.</p></li>
-<li><p>Go to <a class="reference external" href="https://ci.ros2.org/view/packaging/">https://ci.ros2.org/view/packaging/</a> and select a packaging job from the list corresponding to your platform.</p></li>
-<li><p>Under the heading « Last Successful Artifacts » you should see a download link (e.g. for Windows, <code class="docutils literal notranslate"><span class="pre">ros2-package-windows-AMD64.zip</span></code>).</p></li>
-<li><p>Download and extract the archive to your file system.</p></li>
-<li><p>To use the fat binary installation, source the <code class="docutils literal notranslate"><span class="pre">setup.*</span></code> file that can be found in the root of the archive.</p>
+<li><p>Assurez-vous que toutes les dépendances sont installées conformément à la <a class="reference internal" href="Alternatives/Latest-Development-Setup.html"><span class="doc">dernière configuration de développement</span></a> pour votre plate-forme.</p></li>
+<li><p>Allez sur <a class="reference external" href="https://ci.ros2.org/view/packaging/">https://ci.ros2.org/view/packaging/</a> et dans la liste sélectionnez le packaging correspondant à votre plateforme.</p></li>
+<li><p>Sous le titre « Derniers artefacts réussis », vous devriez voir un lien de téléchargement (par exemple, pour Windows, <code class="docutils literal notranslate"><span class="pre">ros2-package-windows-AMD64.zip</span></code>).</p></li>
+<li><p>Téléchargez et extrayez l’archive dans votre système de fichiers.</p></li>
+<li><p>Pour utiliser l’installation avec un binaire unique, sourcez le fichier <code class="docutils literal notranslate"><span class="pre">setup.*</span></code> qui se trouve à la racine de l’archive.</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-VWJ1bnR1IExpbnV4IGFuZCBSSEVM" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-VWJ1bnR1IExpbnV4IGFuZCBSSEVM" name="VWJ1bnR1IExpbnV4IGFuZCBSSEVM" role="tab" tabindex="0">Ubuntu Linux and RHEL</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-VWJ1bnR1IExpbnV4IGFuZCBSSEVM" class="sphinx-tabs-panel group-tab" id="panel-0-VWJ1bnR1IExpbnV4IGFuZCBSSEVM" name="VWJ1bnR1IExpbnV4IGFuZCBSSEVM" role="tabpanel" tabindex="0"><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>path/to/extracted/archive/setup.bash
 </pre></div>
@@ -427,20 +426,20 @@ These packaging jobs produce archives with pre-built binaries that can be downlo
 </div>
 <div class="section" id="docker">
 <h2>Docker<a class="headerlink" href="#docker" title="Lien permanent vers ce titre"></a></h2>
-<p>For Ubuntu Linux, there is also a nightly Docker image based on the nightly fat archive.</p>
+<p>Pour Ubuntu Linux, il existe également une image Docker nocturne basée sur l’archive nocturne Fat.</p>
 <ol class="arabic">
-<li><p>Pull the Docker image:</p>
+<li><p>Extrayez l’image Docker:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull<span class="w"> </span>osrf/ros2:nightly
 </pre></div>
 </div>
 </li>
-<li><p>Start an interactive container:</p>
+<li><p>Démarrez un conteneur interactif:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>osrf/ros2:nightly
 </pre></div>
 </div>
 </li>
 </ol>
-<p>For support on running GUI applications in Docker, take a look at the tutorial <a class="reference external" href="https://wiki.ros.org/docker/Tutorials/GUI">User GUI’s with Docker</a> or the tool <a class="reference external" href="https://github.com/osrf/rocker">rocker</a>.</p>
+<p>Pour obtenir de l’aide sur l’exécution d’applications GUI dans Docker, consultez le tutoriel <a class="reference external" href="https://wiki.ros.org/docker/Tutorials/GUI">User GUI’s with Docker</a> ou l’outil <a class="reference external" href="https://github.com/osrf/rocker">rocker</a>.</p>
 </div>
 </div>
 
