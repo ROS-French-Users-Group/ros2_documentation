@@ -1,0 +1,1593 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-07 07:17:45.971985\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:2
+msgid "Dashing Diademata (``dashing``)"
+msgstr "Dashing Diademata (``fringant``)"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:6
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:8
+msgid "*Dashing Diademata* is the fourth release of ROS 2."
+msgstr "*Dashing Diademata* est la quatrième version de ROS 2."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:11
+msgid "Supported Platforms"
+msgstr "Plates-formes prises en charge"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:13
+msgid "Dashing Diademata is primarily supported on the following platforms:"
+msgstr ""
+"Dashing Diademata est principalement pris en charge sur les plates-formes "
+"suivantes :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:15
+msgid "Tier 1 platforms:"
+msgstr "Plateformes de niveau 1 :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:17
+msgid "Ubuntu 18.04 (Bionic): ``amd64`` and ``arm64``"
+msgstr "Ubuntu 18.04 (Bionic) : ``amd64`` et ``arm64``"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:18
+msgid "Mac macOS 10.12 (Sierra)"
+msgstr "Mac macOS 10.12 (Sierra)"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:19
+msgid "Windows 10 (Visual Studio 2019)"
+msgstr "Windows 10 (Visual Studio 2019)"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:21
+msgid "Tier 2 platforms:"
+msgstr "Plateformes de niveau 2 :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:23
+msgid "Ubuntu 18.04 (Bionic): ``arm32``"
+msgstr "Ubuntu 18.04 (Bionic) : ``arm32``"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:25
+msgid "Tier 3 platforms:"
+msgstr "Plateformes de niveau 3 :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:27
+msgid "Debian Stretch (9): ``amd64``, ``arm64`` and ``arm32``"
+msgstr "Debian Stretch (9) : ``amd64``, ``arm64`` et ``arm32``"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:28
+msgid "OpenEmbedded Thud (2.6) / webOS OSE: ``arm32`` and ``x86``"
+msgstr "OpenEmbedded Thud (2.6) / webOS OSE : ``arm32`` et ``x86``"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:30
+msgid ""
+"For more information about RMW implementations, compiler / interpreter "
+"versions, and system dependency versions see `REP 2000 "
+"<https://www.ros.org/reps/rep-2000.html#dashing-diademata-"
+"may-2019-may-2021>`__."
+msgstr ""
+"Pour plus d'informations sur les implémentations RMW, les versions du "
+"compilateur/interpréteur et les versions de dépendance du système, consultez"
+" `REP 2000 <https://www.ros.org/reps/rep-2000.html#dashing-diademata-"
+"may-2019-may-2021 >`__."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:33
+msgid "Installation"
+msgstr "Installation"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:35
+msgid "`Install Dashing Diademata <../../dashing/Installation.html>`__"
+msgstr "`Installer Dashing Diademata <../../dashing/Installation.html>`__"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:38
+msgid "New features in this ROS 2 release"
+msgstr "Nouvelles fonctionnalités de cette version de ROS 2"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:40
+msgid "A few features and improvements we would like to highlight:"
+msgstr ""
+"Quelques fonctionnalités et améliorations que nous aimerions souligner :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:42
+msgid ""
+":doc:`Components <../Tutorials/Intermediate/Composition>` are now the "
+"recommended way to write your node. They can be used standalone as well as "
+"being composed within a process and both ways are fully support from "
+"``launch`` files."
+msgstr ""
+":doc:`Components <../Tutorials/Intermediate/Composition>` sont maintenant la"
+" méthode recommandée pour écrire votre nœud. Ils peuvent être utilisés de "
+"manière autonome ou composés au sein d'un processus et les deux méthodes "
+"sont entièrement prises en charge à partir des fichiers de lancement."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:44
+msgid ""
+"The :doc:`intra-process communication <../Tutorials/Demos/Intra-Process-"
+"Communication>` (C++ only) has been improved - both in terms of latency as "
+"well as minimizing copies."
+msgstr ""
+"La :doc:`communication intra-processus <../Tutorials/Demos/Intra-Process-"
+"Communication>` (C++ uniquement) a été améliorée - à la fois en termes de "
+"latence et de réduction des copies."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:45
+msgid ""
+"The Python client library has been updated to match most of the C++ "
+"equivalent and some important bug fixes and improvements have landed related"
+" to memory usage and performance."
+msgstr ""
+"La bibliothèque cliente Python a été mise à jour pour correspondre à la "
+"plupart des équivalents C++ et certaines corrections de bogues et "
+"améliorations importantes ont été apportées concernant l'utilisation de la "
+"mémoire et les performances."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:46
+msgid ""
+"Parameters are now a complete alternative to ``dynamic_reconfigure`` from "
+"ROS 1 including constraints like ranges or being read-only."
+msgstr ""
+"Les paramètres sont désormais une alternative complète à "
+"``dynamic_reconfigure`` de ROS 1, y compris des contraintes telles que des "
+"plages ou étant en lecture seule."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:47
+msgid ""
+"By relying on (a subset of) `IDL 4.2 <https://www.omg.org/spec/IDL/4.2>`__ "
+"for the message generation pipeline it is now possible to use ``.idl`` files"
+" (beside ``.msg`` / ``.srv`` / ``.action`` files). This change comes with "
+"support for optional UTF-8 encoding for ordinary strings as well as UTF-16 "
+"encoded multi-byte strings (see `wide strings design article "
+"<https://design.ros2.org/articles/wide_strings.html>`__)."
+msgstr ""
+"En s'appuyant sur (un sous-ensemble de) `IDL 4.2 "
+"<https://www.omg.org/spec/IDL/4.2>`__ pour le pipeline de génération de "
+"messages, il est désormais possible d'utiliser des fichiers ``.idl`` (à côté"
+" ``.msg`` / ``.srv`` / ``.action`` fichiers). Cette modification "
+"s'accompagne de la prise en charge de l'encodage UTF-8 facultatif pour les "
+"chaînes ordinaires ainsi que des chaînes multi-octets encodées en UTF-16 "
+"(voir `wide strings design article "
+"<https://design.ros2.org/articles/wide_strings.html>` __)."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:49
+msgid "Command line tools related to ``actions`` and ``components``."
+msgstr "Outils de ligne de commande liés aux ``actions`` et ``composants``."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:50
+msgid ""
+"Support for Deadline, Lifespan & Liveliness quality of service settings."
+msgstr ""
+"Prise en charge des paramètres de qualité de service Date limite, Durée de "
+"vie et vivacité."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:51
+msgid ""
+"MoveIt 2 `alpha release "
+"<https://github.com/AcutronicRobotics/moveit2/releases/tag/moveit_2_alpha>`__."
+msgstr ""
+"MoveIt 2 `version alpha "
+"<https://github.com/AcutronicRobotics/moveit2/releases/tag/moveit_2_alpha>`__."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:53
+msgid ""
+"Please see the `Dashing meta ticket "
+"<https://github.com/ros2/ros2/issues/607>`__ on GitHub, which contains more "
+"information as well as references to specific tickets with additional "
+"details."
+msgstr ""
+"Veuillez consulter le `Dashing meta ticket "
+"<https://github.com/ros2/ros2/issues/607>`__ sur GitHub, qui contient plus "
+"d'informations ainsi que des références à des tickets spécifiques avec des "
+"détails supplémentaires."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:57
+msgid "Changes since the Crystal release"
+msgstr "Changements depuis la sortie de Crystal"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:60
+msgid "Declaring Parameters"
+msgstr "Déclaration des paramètres"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:62
+msgid ""
+"There have been some changes to the behavior of parameters starting in "
+"Dashing, which have also lead to some new API's and the deprecation of other"
+" API's. See the ``rclcpp`` and ``rclpy`` sections below for more information"
+" about API changes."
+msgstr ""
+"Il y a eu quelques changements dans le comportement des paramètres à partir "
+"de Dashing, qui ont également conduit à de nouvelles API et à la "
+"dépréciation d'autres API. Voir les sections ``rclcpp`` et ``rclpy`` ci-"
+"dessous pour plus d'informations sur les modifications de l'API."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:66
+msgid "Getting and Setting Undeclared Parameters"
+msgstr "Obtenir et définir des paramètres non déclarés"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:68
+msgid ""
+"As of Dashing, parameters now need to be declared before being accessed or "
+"set."
+msgstr ""
+"Depuis Dashing, les paramètres doivent désormais être déclarés avant d'être "
+"consultés ou définis."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:70
+msgid ""
+"Before Dashing, you could call ``get_parameter(name)`` and get either a "
+"value, if it had been previously set, or a parameter of type "
+"``PARAMETER_NOT_SET``. You could also call ``set_parameter(name, value)`` at"
+" any point, even if the parameter was previously unset."
+msgstr ""
+"Avant Dashing, vous pouviez appeler ``get_parameter(name)`` et obtenir soit "
+"une valeur, si elle avait été précédemment définie, soit un paramètre de "
+"type ``PARAMETER_NOT_SET``. Vous pouvez également appeler "
+"``set_parameter(name, value)`` à tout moment, même si le paramètre n'était "
+"pas défini auparavant."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:73
+msgid ""
+"Since Dashing, you need to first declare a parameter before getting or "
+"setting it. If you try to get or set an undeclared parameter you will either"
+" get an exception thrown, e.g. ParameterNotDeclaredException, or in certain "
+"cases you will get an unsuccessful result communicated in a variety of ways "
+"(see specific functions for more details)."
+msgstr ""
+"Depuis Dashing, vous devez d'abord déclarer un paramètre avant de l'obtenir "
+"ou de le définir. Si vous essayez d'obtenir ou de définir un paramètre non "
+"déclaré, vous obtiendrez soit une exception levée, par ex. "
+"ParameterNotDeclaredException, ou dans certains cas, vous obtiendrez un "
+"résultat infructueux communiqué de différentes manières (voir les fonctions "
+"spécifiques pour plus de détails)."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:76
+msgid ""
+"However, you can get the old behavior (mostly, see the note in the next "
+"paragraph) by using the ``allow_undeclared_parameters`` option when creating"
+" your node. You might want to do this in order to avoid code changes for "
+"now, or in order to fulfill some uncommon use cases. For example, a \"global"
+" parameter server\" or \"parameter blackboard\" may want to allow external "
+"nodes to set new parameters on itself without first declaring them, so it "
+"may use the ``allow_undeclared_parameters`` option to accomplish that. In "
+"most cases, however, this option is not recommended because it makes the "
+"rest of the parameter API less safe to bugs like parameter name typos and "
+"\"use before set\" logical errors."
+msgstr ""
+"Cependant, vous pouvez obtenir l'ancien comportement (pour la plupart, voir "
+"la note dans le paragraphe suivant) en utilisant l'option "
+"``allow_undeclared_parameters`` lors de la création de votre nœud. Vous "
+"voudrez peut-être le faire afin d'éviter les changements de code pour le "
+"moment, ou afin de répondre à certains cas d'utilisation peu courants. Par "
+"exemple, un « serveur de paramètres globaux » ou un « tableau noir de "
+"paramètres » peut vouloir autoriser les nœuds externes à définir de nouveaux"
+" paramètres sur lui-même sans les déclarer au préalable, il peut donc "
+"utiliser l'option ``allow_undeclared_parameters`` pour accomplir cela. Dans "
+"la plupart des cas, cependant, cette option n'est pas recommandée car elle "
+"rend le reste de l'API de paramètre moins sûr pour les bogues tels que les "
+"fautes de frappe de nom de paramètre et les erreurs logiques \"utiliser "
+"avant de définir\"."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:81
+msgid ""
+"Note that using ``allow_undeclared_parameters`` will get you most of the old"
+" behavior specifically for \"get\" and \"set\" methods, but it will not "
+"revert all the behavior changes related to parameters back to how it was for"
+" ROS Crystal. For that you need to also set the "
+"``automatically_declare_parameters_from_overrides`` option to ``true``, "
+"which is described below in :ref:`Parameter Configuration using a YAML File "
+"<parameter-configuration-using-a-yaml-file>`."
+msgstr ""
+"Notez que l'utilisation de ``allow_undeclared_parameters`` vous permettra "
+"d'obtenir la plupart de l'ancien comportement spécifiquement pour les "
+"méthodes \"get\" et \"set\", mais cela ne rétablira pas tous les changements"
+" de comportement liés aux paramètres tels qu'ils étaient pour ROS Crystal. "
+"Pour cela, vous devez également définir l'option "
+"``automatically_declare_parameters_from_overrides`` sur ``true``, qui est "
+"décrite ci-dessous dans :ref:`Configuration des paramètres à l'aide d'un "
+"fichier YAML <parameter-configuration-using-a-yaml-file>` ."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:85
+msgid "Declaring a Parameter with a ParameterDescriptor"
+msgstr "Déclarer un paramètre avec un ParameterDescriptor"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:87
+msgid ""
+"Another benefit to declaring your parameters before using them, is that it "
+"allows you to declare a parameter descriptor at the same time."
+msgstr ""
+"Un autre avantage de déclarer vos paramètres avant de les utiliser est que "
+"cela vous permet de déclarer un descripteur de paramètre en même temps."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:89
+msgid ""
+"Now when declaring a parameter you may include a custom "
+"``ParameterDescriptor`` as well as a name and default value. The "
+"``ParameterDescriptor`` is defined as a message in "
+"``rcl_interfaces/msg/ParameterDescriptor`` and contains meta data like "
+"``description`` and constraints like ``read_only`` or ``integer_range``. "
+"These constraints can be used to reject invalid values when setting "
+"parameters and/or as hints to external tools about what values are valid for"
+" a given parameter. The ``read_only`` constraint will prevent the "
+"parameter's value from changing after being declared, as well as prevent if "
+"from being undeclared."
+msgstr ""
+"Désormais, lors de la déclaration d'un paramètre, vous pouvez inclure un "
+"``ParameterDescriptor`` personnalisé ainsi qu'un nom et une valeur par "
+"défaut. Le ``ParameterDescriptor`` est défini comme un message dans "
+"``rcl_interfaces/msg/ParameterDescriptor`` et contient des métadonnées comme"
+" ``description`` et des contraintes comme ``read_only`` ou "
+"``integer_range``. Ces contraintes peuvent être utilisées pour rejeter les "
+"valeurs non valides lors de la définition des paramètres et/ou comme "
+"conseils aux outils externes sur les valeurs valides pour un paramètre "
+"donné. La contrainte ``read_only`` empêchera la valeur du paramètre de "
+"changer après avoir été déclarée, ainsi que si elle n'est pas déclarée."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:94
+msgid ""
+"For reference, here's a link to the ``ParameterDescriptor`` message as of "
+"the time of writing this:"
+msgstr ""
+"Pour référence, voici un lien vers le message ``ParameterDescriptor`` au "
+"moment de la rédaction de ceci :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:96
+msgid ""
+"https://github.com/ros2/rcl_interfaces/blob/0aba5a142878c2077d7a03977087e7d74d40ee68/rcl_interfaces/msg/ParameterDescriptor.msg#L1"
+msgstr ""
+"https://github.com/ros2/rcl_interfaces/blob/0aba5a142878c2077d7a03977087e7d74d40ee68/rcl_interfaces/msg/ParameterDescriptor.msg#L1"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:101
+msgid "Parameter Configuration using a YAML File"
+msgstr "Configuration des paramètres à l'aide d'un fichier YAML"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:103
+msgid ""
+"As of Dashing, parameters in a YAML configuration file, e.g. passed to the "
+"node via the command line argument ``__params:=``, are only used to override"
+" a parameter's default value when declaring the parameter."
+msgstr ""
+"Depuis Dashing, les paramètres d'un fichier de configuration YAML, par ex. "
+"transmis au nœud via l'argument de ligne de commande ``__params:=``, ne sont"
+" utilisés que pour remplacer la valeur par défaut d'un paramètre lors de la "
+"déclaration du paramètre."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:105
+msgid ""
+"Before Dashing, any parameters you passed via a YAML file would be "
+"implicitly set on the node."
+msgstr ""
+"Avant Dashing, tous les paramètres que vous passiez via un fichier YAML "
+"étaient implicitement définis sur le nœud."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:107
+msgid ""
+"Since Dashing, this is no longer the case, as parameters need to be declared"
+" in order to appear on the node to external observers, like ``ros2 param "
+"list``."
+msgstr ""
+"Depuis Dashing, ce n'est plus le cas, car les paramètres doivent être "
+"déclarés pour apparaître sur le nœud aux observateurs externes, comme ``ros2"
+" param list``."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:109
+msgid ""
+"The old behavior may be achieved using the "
+"``automatically_declare_parameters_from_overrides`` option when creating a "
+"node. This option, if set to ``true``, will automatically declare all "
+"parameters in the input YAML file when the node is constructed. This may be "
+"used to avoid major changes to your existing code or to serve specific use "
+"cases. For example, a \"global parameter server\" may want to be seeded with"
+" arbitrary parameters on launch, which it could not have declared ahead of "
+"time. Most of the time, however, this option is not recommended, as it may "
+"lead to setting a parameter in a YAML file with the assumption that the node"
+" will use it, even if the node does not actually use it."
+msgstr ""
+"L'ancien comportement peut être obtenu en utilisant l'option "
+"``automatically_declare_parameters_from_overrides`` lors de la création d'un"
+" nœud. Cette option, si elle est définie sur ``true``, déclarera "
+"automatiquement tous les paramètres dans le fichier YAML d'entrée lors de la"
+" construction du nœud. Cela peut être utilisé pour éviter des changements "
+"majeurs à votre code existant ou pour servir des cas d'utilisation "
+"spécifiques. Par exemple, un \"serveur de paramètres globaux\" peut "
+"souhaiter recevoir des paramètres arbitraires au lancement, qu'il n'aurait "
+"pas pu déclarer à l'avance. La plupart du temps, cependant, cette option "
+"n'est pas recommandée, car elle peut conduire à définir un paramètre dans un"
+" fichier YAML en supposant que le nœud l'utilisera, même si le nœud ne "
+"l'utilise pas réellement."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:115
+msgid ""
+"In the future we hope to have a checker that will warn you if you pass a "
+"parameter to a node that it was not expecting."
+msgstr ""
+"À l'avenir, nous espérons avoir un vérificateur qui vous avertira si vous "
+"passez un paramètre à un nœud qu'il n'attendait pas."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:117
+msgid ""
+"The parameters in the YAML file will continue to influence the value of "
+"parameters when they are first declared."
+msgstr ""
+"Les paramètres du fichier YAML continueront d'influencer la valeur des "
+"paramètres lors de leur première déclaration."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:120
+msgid "ament_cmake"
+msgstr "current_cmake"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:122
+msgid ""
+"The CMake function ``ament_index_has_resource`` was returning either "
+"``TRUE`` or ``FALSE``. As of `this release "
+"<https://github.com/ament/ament_cmake/pull/155>`_ it returns either the "
+"prefix path in case the resource was found or ``FALSE``."
+msgstr ""
+"La fonction CMake ``ament_index_has_resource`` renvoyait soit ``TRUE`` ou "
+"``FALSE``. À partir de `cette version "
+"<https://github.com/ament/ament_cmake/pull/155>`_, il renvoie soit le chemin"
+" du préfixe au cas où la ressource a été trouvée, soit ``FALSE``."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:125
+msgid "If you are using the return value in a CMake condition like this:"
+msgstr ""
+"Si vous utilisez la valeur de retour dans une condition CMake comme celle-"
+"ci :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:132
+msgid ""
+"you need to update the condition to ensure it considers a string value as "
+"``TRUE``:"
+msgstr ""
+"vous devez mettre à jour la condition pour vous assurer qu'elle considère "
+"une valeur de chaîne comme ``TRUE`` :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:139
+msgid "rclcpp"
+msgstr "RCLCP"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:142
+msgid "Behavior Change for ``Node::get_node_names()``"
+msgstr "Changement de comportement pour ``Node::get_node_names()``"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:144
+msgid ""
+"The function ``NodeGraph::get_node_names()``, and therefore also "
+"``Node::get_node_names()``, now returns a ``std::vector<std::string>`` "
+"containing fully qualified node names with their namespaces included, "
+"instead of just the node names."
+msgstr ""
+"La fonction ``NodeGraph::get_node_names()``, et donc aussi "
+"``Node::get_node_names()``, renvoie désormais un "
+"``std::vector<std::string>`` contenant des noms de nœuds complets avec leurs"
+" espaces de noms inclus, au lieu de simplement les noms de nœuds."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:147
+msgid "Changed the Way that Options are Passed to Nodes"
+msgstr "Modification de la manière dont les options sont transmises aux nœuds"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:149
+msgid ""
+"Extended arguments (beyond name and namespace) to the ``rclcpp::Node()`` "
+"constructor have been replaced with a ``rclcpp::NodeOptions`` structure. See"
+" `ros2/rclcpp#622 <https://github.com/ros2/rclcpp/pull/622/files>`__ for "
+"details about the structure and default values of the options."
+msgstr ""
+"Les arguments étendus (au-delà du nom et de l'espace de noms) du "
+"constructeur ``rclcpp::Node()`` ont été remplacés par une structure "
+"``rclcpp::NodeOptions``. Voir `ros2/rclcpp#622 "
+"<https://github.com/ros2/rclcpp/pull/622/files>`__ pour plus de détails sur "
+"la structure et les valeurs par défaut des options."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:152
+msgid ""
+"If you are using any of the extended arguments to ``rclcpp::Node()`` like "
+"this:"
+msgstr ""
+"Si vous utilisez l'un des arguments étendus de ``rclcpp::Node()`` comme "
+"ceci :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:161
+msgid "You need to update to use the ``NodeOptions`` structure"
+msgstr "Vous devez mettre à jour pour utiliser la structure ``NodeOptions``"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:173
+msgid "Changes to Creating Publishers and Subscriptions"
+msgstr "Modifications apportées à la création d'éditeurs et d'abonnements"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:175
+msgid ""
+"There have been a few changes to creating publishers and subscriptions which"
+" are new in Dashing:"
+msgstr ""
+"Il y a eu quelques changements dans la création d'éditeurs et d'abonnements "
+"qui sont nouveaux dans Dashing :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:177
+msgid ""
+"QoS settings are now passed using the new ``rclcpp::QoS`` class, and the API"
+" encourages the user to specify at least the history depth."
+msgstr ""
+"Les paramètres QoS sont maintenant passés à l'aide de la nouvelle classe "
+"``rclcpp::QoS``, et l'API encourage l'utilisateur à spécifier au moins la "
+"profondeur de l'historique."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:178
+msgid ""
+"Options are now passed as an object, i.e. ``rclcpp::PublisherOptions`` and "
+"``rclcpp::SubscriptionOptions``."
+msgstr ""
+"Les options sont maintenant passées en tant qu'objet, c'est-à-dire "
+"``rclcpp::PublisherOptions`` et ``rclcpp::SubscriptionOptions``."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:180
+msgid ""
+"All changes are backwards compatible (no code changes are required), but "
+"several existing call styles have been deprecated. Users are encouraged to "
+"update to the new signatures."
+msgstr ""
+"Toutes les modifications sont rétrocompatibles (aucune modification de code "
+"n'est requise), mais plusieurs styles d'appel existants sont obsolètes. Les "
+"utilisateurs sont encouragés à mettre à jour les nouvelles signatures."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:185
+msgid ""
+"In the past, when creating a publisher or subscription, you could either not"
+" specify any QoS settings (e.g. just provide topic name for a publisher) or "
+"you could specify a \"qos profile\" data structure (of type "
+"``rmw_qos_profile_t``) with all the settings already set. Now you must use "
+"the new ``rclcpp::QoS`` object to specify your QoS and at least the history "
+"settings for your QoS. This encourages the user to specify a history depth "
+"when using ``KEEP_LAST``, rather than defaulting it to a value that may or "
+"may not be appropriate."
+msgstr ""
+"Dans le passé, lors de la création d'un éditeur ou d'un abonnement, vous "
+"pouviez soit ne spécifier aucun paramètre QoS (par exemple, fournir "
+"simplement le nom du sujet pour un éditeur), soit spécifier une structure de"
+" données de \"profil qos\" (de type ``rmw_qos_profile_t``) avec tous les "
+"paramètres déjà définis. Vous devez maintenant utiliser le nouvel objet "
+"``rclcpp::QoS`` pour spécifier votre QoS et au moins les paramètres "
+"d'historique de votre QoS. Cela encourage l'utilisateur à spécifier une "
+"profondeur d'historique lors de l'utilisation de ``KEEP_LAST``, plutôt que "
+"de lui attribuer par défaut une valeur qui peut ou non être appropriée."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:189
+msgid ""
+"In ROS 1, this was known as the ``queue_size`` and it was required in both "
+"C++ and Python. We're changing the ROS 2 API to bring this requirement back."
+msgstr ""
+"Dans ROS 1, cela s'appelait ``queue_size`` et était requis à la fois en C++ "
+"et en Python. Nous modifions l'API ROS 2 pour rétablir cette exigence."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:194
+msgid ""
+"Also, any options which could previously be passed during creation of a "
+"publisher or subscription have now been encapsulated in an "
+"``rclcpp::PublisherOptions`` and ``rclcpp::SubscriptionOptions`` class "
+"respectively. This allows for shorter signatures, more convenient use, and "
+"for adding new future options without breaking API."
+msgstr ""
+"De plus, toutes les options qui pouvaient auparavant être passées lors de la"
+" création d'un éditeur ou d'un abonnement ont maintenant été encapsulées "
+"dans une classe ``rclcpp::PublisherOptions`` et "
+"``rclcpp::SubscriptionOptions`` respectivement. Cela permet des signatures "
+"plus courtes, une utilisation plus pratique et l'ajout de nouvelles options "
+"futures sans casser l'API."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:199
+msgid ""
+"Some signatures for creating publishers and subscribers are now deprecated, "
+"and new signatures have been added to allow you to use the new "
+"``rclcpp::QoS`` and publisher/subscription option classes."
+msgstr ""
+"Certaines signatures pour la création d'éditeurs et d'abonnés sont désormais"
+" obsolètes, et de nouvelles signatures ont été ajoutées pour vous permettre "
+"d'utiliser les nouvelles classes d'options ``rclcpp::QoS`` et "
+"éditeur/abonnement."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:201
+msgid "These are the new and recommended API's:"
+msgstr "Voici les nouvelles API recommandées :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:235
+msgid "And these are the deprecated ones:"
+msgstr "Et ce sont ceux qui sont obsolètes :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:305
+msgid "The change to how QoS is passed is most likely to impact users."
+msgstr ""
+"La modification de la façon dont la qualité de service est transmise est "
+"très susceptible d'avoir un impact sur les utilisateurs."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:307
+msgid "A typical change for a publisher looks like this:"
+msgstr "Un changement typique pour un éditeur ressemble à ceci :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:314
+msgid "And for a subscription:"
+msgstr "Et pour un abonnement :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:321
+msgid ""
+"If you have no idea what depth to use and don't care right now (maybe just "
+"prototyping), then we recommend using ``10``, as that was the default before"
+" and should preserve existing behavior."
+msgstr ""
+"Si vous n'avez aucune idée de la profondeur à utiliser et que vous ne vous "
+"en souciez pas pour le moment (peut-être juste pour le prototypage), nous "
+"vous recommandons d'utiliser ``10``, car c'était la valeur par défaut "
+"auparavant et devrait préserver le comportement existant."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:323
+msgid ""
+"More in depth documentation about how to select an appropriate depth is "
+"forthcoming."
+msgstr ""
+"Une documentation plus détaillée sur la façon de sélectionner une profondeur"
+" appropriée est à venir."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:325
+msgid ""
+"This is an example of a slightly more involved change to avoid the newly "
+"deprecated API's:"
+msgstr ""
+"Voici un exemple d'un changement légèrement plus complexe pour éviter les "
+"API nouvellement obsolètes :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:342
+msgid ""
+"See the pull request (and connected pull requests) that introduced the QoS "
+"change for more examples and details:"
+msgstr ""
+"Consultez la demande d'extraction (et les demandes d'extraction connectées) "
+"qui ont introduit le changement de QoS pour plus d'exemples et de détails :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:344
+msgid "https://github.com/ros2/rclcpp/pull/713"
+msgstr "https://github.com/ros2/rclcpp/pull/713"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:346
+msgid "https://github.com/ros2/demos/pull/332"
+msgstr "https://github.com/ros2/demos/pull/332"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:347
+msgid "https://github.com/ros2/robot_state_publisher/pull/19"
+msgstr "https://github.com/ros2/robot_state_publisher/pull/19"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:348
+msgid "and others..."
+msgstr "et d'autres..."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:352
+#: ../../source/Releases/Release-Dashing-Diademata.rst:575
+msgid "Changes Due to Declare Parameter Change"
+msgstr "Modifications dues à la déclaration de modification de paramètre"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:354
+msgid ""
+"For details about the actual behavior change, see `Declaring Parameters`_ "
+"above."
+msgstr ""
+"Pour plus de détails sur le changement de comportement réel, voir "
+"`Déclaration des paramètres`_ ci-dessus."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:356
+msgid "There are several new API calls in the ``rclcpp::Node``'s interface:"
+msgstr ""
+"Il y a plusieurs nouveaux appels d'API dans l'interface ``rclcpp::Node`` :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:358
+msgid ""
+"Methods that declare parameters given a name, optional default value, "
+"optional descriptor, and return the value actually set:"
+msgstr ""
+"Méthodes qui déclarent des paramètres avec un nom, une valeur par défaut "
+"facultative, un descripteur facultatif et renvoient la valeur réellement "
+"définie :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:392
+msgid ""
+"A method to undeclare parameters and to check if a parameter has been "
+"declared:"
+msgstr ""
+"Une méthode pour annuler la déclaration des paramètres et vérifier si un "
+"paramètre a été déclaré :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:402
+msgid "Some convenience methods that did not previously exist:"
+msgstr "Quelques méthodes de commodité qui n'existaient pas auparavant :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:415
+msgid ""
+"A new method to set the callback which is called anytime a parameter will be"
+" changed, giving you the opportunity to reject it:"
+msgstr ""
+"Une nouvelle méthode pour définir le rappel qui est appelé à chaque fois "
+"qu'un paramètre sera modifié, vous donnant la possibilité de le rejeter :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:426
+msgid "There were also several deprecated methods:"
+msgstr "Il y avait aussi plusieurs méthodes obsolètes :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:458
+msgid "Memory Strategy"
+msgstr "Stratégie de mémoire"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:460
+msgid ""
+"The interface ``rclcpp::memory_strategy::MemoryStrategy`` was using the "
+"typedef ``WeakNodeVector`` in various method signatures. As of Dashing the "
+"typedef has been been changed to ``WeakNodeList`` and with it the type of "
+"the parameter in various methods. Any custom memory strategy needs to be "
+"updated to match the modified interface."
+msgstr ""
+"L'interface ``rclcpp::memory_strategy::MemoryStrategy`` utilisait le typedef"
+" ``WeakNodeVector`` dans diverses signatures de méthode. Depuis Dashing, le "
+"typedef a été changé en ``WeakNodeList`` et avec lui le type du paramètre "
+"dans diverses méthodes. Toute stratégie de mémoire personnalisée doit être "
+"mise à jour pour correspondre à l'interface modifiée."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:464
+msgid ""
+"The relevant API change can be found in `ros2/rclcpp#741 "
+"<https://github.com/ros2/rclcpp/pull/741>`__."
+msgstr ""
+"Le changement d'API pertinent peut être trouvé dans `ros2/rclcpp#741 "
+"<https://github.com/ros2/rclcpp/pull/741>`__."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:467
+msgid "rclcpp_components"
+msgstr "rclcpp_components"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:469
+msgid ""
+"The correct way to implement composition in Dashing is by utilizing the "
+"``rclcpp_components`` package."
+msgstr ""
+"La bonne façon d'implémenter la composition dans Dashing est d'utiliser le "
+"package ``rclcpp_components``."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:471
+msgid ""
+"The following changes must be made to nodes in order to correctly implement "
+"runtime composition:"
+msgstr ""
+"Les modifications suivantes doivent être apportées aux nœuds afin "
+"d'implémenter correctement la composition d'exécution :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:473
+msgid "The Node must have a constructor that takes ``rclcpp::NodeOptions``:"
+msgstr ""
+"Le Node doit avoir un constructeur qui prend ``rclcpp::NodeOptions`` :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:484
+msgid ""
+"C++ registration macros (if present) need to be updated to use the "
+"``rclcpp_components`` equivalent. If not present, registration macros must "
+"be added in one translation unit."
+msgstr ""
+"Les macros d'enregistrement C++ (si présentes) doivent être mises à jour "
+"pour utiliser l'équivalent ``rclcpp_components``. Si elles ne sont pas "
+"présentes, les macros d'enregistrement doivent être ajoutées dans une unité "
+"de traduction."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:494
+msgid ""
+"CMake registration macros (if present) need to be updated. If not present, "
+"registration macros must be added to the project's CMake."
+msgstr ""
+"Les macros d'enregistrement CMake (le cas échéant) doivent être mises à "
+"jour. Si elles ne sont pas présentes, les macros d'enregistrement doivent "
+"être ajoutées au CMake du projet."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:502
+msgid ""
+"For more information on composition, see `the tutorial "
+"<https://index.ros.org/doc/ros2/Tutorials/Composition/>`__"
+msgstr ""
+"Pour plus d'informations sur la composition, consultez `le tutoriel "
+"<https://index.ros.org/doc/ros2/Tutorials/Composition/>`__"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:505
+msgid "rclpy"
+msgstr "rclpy"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:508
+msgid "Changes to Creating Publishers, Subscriptions, and QoS Profiles"
+msgstr ""
+"Modifications apportées à la création d'éditeurs, d'abonnements et de "
+"profils QoS"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:510
+msgid ""
+"Prior to Dashing, you could optionally provide a ``QoSProfile`` object when "
+"creating a publisher or subscription. In an effort to encourage users to "
+"specify a history depth for message queues, we now **require** that a depth "
+"value or ``QoSProfile`` object is given when creating publishers or "
+"subscriptions."
+msgstr ""
+"Avant Dashing, vous pouviez éventuellement fournir un objet ``QoSProfile`` "
+"lors de la création d'un éditeur ou d'un abonnement. Afin d'encourager les "
+"utilisateurs à spécifier une profondeur d'historique pour les files "
+"d'attente de messages, nous **exigeons** désormais qu'une valeur de "
+"profondeur ou un objet ``QoSProfile`` soit donné lors de la création "
+"d'éditeurs ou d'abonnements."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:513
+msgid "To create a publisher, previously you would have written:"
+msgstr "Pour créer un éditeur, auparavant vous auriez écrit :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:521
+msgid ""
+"In Dashing, prefer the following API that provides a depth value or "
+"``QoSProfile`` object as a third positional argument:"
+msgstr ""
+"Dans Dashing, préférez l'API suivante qui fournit une valeur de profondeur "
+"ou un objet ``QoSProfile`` comme troisième argument positionnel :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:530
+msgid "Likewise for subscriptions, previously you would have written:"
+msgstr "De même pour les abonnements, auparavant vous auriez écrit :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:538
+msgid "In Dashing:"
+msgstr "En Fringant :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:547
+msgid ""
+"To ease the transition, users who do not use the new API will see "
+"deprecation warnings."
+msgstr ""
+"Pour faciliter la transition, les utilisateurs qui n'utilisent pas la "
+"nouvelle API verront des avertissements d'obsolescence."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:549
+msgid ""
+"Furthermore, we also require that when constructing ``QoSProfile`` objects "
+"that a history policy and/or depth is set. If a history policy of "
+"``KEEP_LAST`` is provided, then a depth argument is also required. For "
+"example, these calls are valid:"
+msgstr ""
+"De plus, nous exigeons également que lors de la construction des objets "
+"``QoSProfile``, une politique d'historique et/ou une profondeur soient "
+"définies. Si une politique d'historique de ``KEEP_LAST`` est fournie, un "
+"argument de profondeur est également requis. Par exemple, ces appels sont "
+"valides :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:559
+msgid "And these calls will cause a deprecation warning:"
+msgstr "Et ces appels provoqueront un avertissement d'obsolescence :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:568
+msgid ""
+"See the issue and pull request related to introducing this change for more "
+"details:"
+msgstr ""
+"Consultez le problème et la demande d'extraction liés à l'introduction de ce"
+" changement pour plus de détails :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:570
+msgid "https://github.com/ros2/rclpy/issues/342"
+msgstr "https://github.com/ros2/rclpy/issues/342"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:571
+msgid "https://github.com/ros2/rclpy/pull/344"
+msgstr "https://github.com/ros2/rclpy/pull/344"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:577
+msgid ""
+"For details about the actual behavior change, see `Declaring Parameters`_ "
+"above. The changes are analogous to the ones in ``rclcpp``."
+msgstr ""
+"Pour plus de détails sur le changement de comportement réel, voir "
+"`Déclaration des paramètres`_ ci-dessus. Les changements sont analogues à "
+"ceux de ``rclcpp``."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:579
+msgid ""
+"These are the new API methods available in ``rclpy.node.Node`` interface:"
+msgstr ""
+"Voici les nouvelles méthodes API disponibles dans l'interface "
+"``rclpy.node.Node`` :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:581
+msgid ""
+"To declare parameters given a name, an optional default value (supported by "
+"``rcl_interfaces.msg.ParameterValue``) and an optional descriptor, returning"
+" the value actually set:"
+msgstr ""
+"Pour déclarer des paramètres donnés un nom, une valeur par défaut "
+"optionnelle (supportée par ``rcl_interfaces.msg.ParameterValue``) et un "
+"descripteur optionnel, renvoyant la valeur réellement définie :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:600
+msgid ""
+"To undeclare previously declared parameters and to check if a parameter has "
+"been declared beforehand:"
+msgstr ""
+"Pour annuler la déclaration de paramètres précédemment déclarés et vérifier "
+"si un paramètre a été déclaré au préalable :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:608
+msgid "To get and set parameter descriptors:"
+msgstr "Pour obtenir et définir des descripteurs de paramètres :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:622
+msgid ""
+"A convenience method to get parameters that may not have been declared:"
+msgstr ""
+"Une méthode pratique pour obtenir des paramètres qui n'ont peut-être pas été"
+" déclarés :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:629
+msgid "Other changes"
+msgstr "Autres changements"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:631
+msgid ""
+"``rclpy.parameter.Parameter`` can now guess its type without explicitly "
+"setting it (as long as it's one of the supported ones by "
+"``rcl_interfaces.msg.ParameterValue``). For example, this code:"
+msgstr ""
+"``rclpy.parameter.Parameter`` peut maintenant deviner son type sans le "
+"définir explicitement (tant qu'il est l'un de ceux pris en charge par "
+"``rcl_interfaces.msg.ParameterValue``). Par exemple, ce code :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:638
+msgid "Is equivalent to this code:"
+msgstr "Est équivalent à ce code :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:644
+msgid "This change does not break existing API."
+msgstr "Cette modification n'interrompt pas l'API existante."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:647
+msgid "rosidl"
+msgstr "rose"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:649
+msgid ""
+"Until Crystal each message generator package registered itself using the "
+"``ament_cmake`` extension point ``rosidl_generate_interfaces`` and was "
+"passed a set of ``.msg`` / ``.srv`` / ``.action`` files. As of Dashing the "
+"message generation pipeline is based on ``.idl`` files instead."
+msgstr ""
+"Jusqu'à Crystal, chaque package générateur de messages s'enregistrait en "
+"utilisant le point d'extension ``ament_cmake`` "
+"``rosidl_generate_interfaces`` et recevait un ensemble de fichiers ``.msg`` "
+"/ ``.srv`` / ``.action``. Depuis Dashing, le pipeline de génération de "
+"messages est basé sur les fichiers ``.idl`` à la place."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:652
+msgid ""
+"Any message generator package needs to change and register itself using the "
+"new extension point ``rosidl_generate_idl_interfaces`` which passes only "
+"``.idl`` files instead. The message generators for the commonly supported "
+"languages C, C++, and Python as well as the typesupport packages for "
+"introspection, Fast RTPS, Connext and OpenSplice have already been updated "
+"(see `ros2/rosidl#334 <https://github.com/ros2/rosidl/pull/334/files>`__). "
+"The CMake code calling ``rosidl_generate_interfaces()`` can either pass "
+"``.idl`` files directly or pass ``.msg`` / ``.srv`` / ``.action`` which will"
+" then internally be converted into ``.idl`` files before being passed to "
+"each message generator."
+msgstr ""
+"Tout paquet de générateur de message doit changer et s'enregistrer en "
+"utilisant le nouveau point d'extension ``rosidl_generate_idl_interfaces`` "
+"qui ne transmet que les fichiers ``.idl`` à la place. Les générateurs de "
+"messages pour les langages couramment pris en charge C, C++ et Python ainsi "
+"que les packages de support de type pour l'introspection, Fast RTPS, Connext"
+" et OpenSplice ont déjà été mis à jour (voir `ros2/rosidl#334 "
+"<https://github.com/ ros2/rosidl/pull/334/files>`__). Le code CMake appelant"
+" ``rosidl_generate_interfaces()`` peut soit passer directement les fichiers "
+"``.idl``, soit passer ``.msg`` / ``.srv`` / ``.action`` qui sera ensuite "
+"converti en interne dans les fichiers ``.idl`` avant d'être transmis à "
+"chaque générateur de messages."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:656
+msgid ""
+"The format of ``.msg`` / ``.srv`` / ``.action`` files is not being evolved "
+"in the future. The mapping between ``.msg`` / ``.srv`` / ``.action`` files "
+"and ``.idl`` files is described in `this design article "
+"<https://design.ros2.org/articles/legacy_interface_definition.html>`__. A "
+"`second design article "
+"<https://design.ros2.org/articles/idl_interface_definition.html>`__ "
+"describes the supported features in ``.idl`` files. In order to leverage any"
+" of the new features existing interfaces need to be converted (e.g. using "
+"the command line tools  ``msg2idl`` / ``srv2idl`` / ``action2idl``)."
+msgstr ""
+"Le format des fichiers ``.msg`` / ``.srv`` / ``.action`` n'évoluera pas à "
+"l'avenir. Le mappage entre les fichiers ``.msg`` / ``.srv`` / ``.action`` et"
+" les fichiers ``.idl`` est décrit dans `cet article de conception "
+"<https://design.ros2.org/ articles/legacy_interface_definition.html>`__. Un "
+"`deuxième article de conception "
+"<https://design.ros2.org/articles/idl_interface_definition.html>`__ décrit "
+"les fonctionnalités prises en charge dans les fichiers ``.idl``. Afin de "
+"tirer parti des nouvelles fonctionnalités, les interfaces existantes doivent"
+" être converties (par exemple, en utilisant les outils de ligne de commande "
+"``msg2idl`` / ``srv2idl`` / ``action2idl``)."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:661
+msgid ""
+"To distinguish same type names, but with different namespaces, the "
+"introspection structs now contain a namespace field that replaces the "
+"package name (see `ros2/rosidl#335 "
+"<https://github.com/ros2/rosidl/pull/355/files>`_)."
+msgstr ""
+"Pour distinguer les mêmes noms de type, mais avec des espaces de noms "
+"différents, les structures d'introspection contiennent désormais un champ "
+"d'espace de noms qui remplace le nom du package (voir `ros2/rosidl#335 "
+"<https://github.com/ros2/rosidl/pull/355/files >`_)."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:664
+msgid "Mapping of char in .msg files"
+msgstr "Mappage de caractères dans les fichiers .msg"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:666
+msgid ""
+"In `ROS 1 <https://wiki.ros.org/msg#Fields>`__ ``char`` has been deprecated "
+"for a long time and is being mapped to ``uint8``. In ROS 2 until Crystal "
+"``char`` was mapped to a single character (``char`` in C / C++, ``str`` with"
+" length 1 in Python) in an effort to provide a more natural mapping. As of "
+"Dashing the ROS 1 semantic has been restored and ``char`` maps to ``uint8`` "
+"again."
+msgstr ""
+"Dans `ROS 1 <https://wiki.ros.org/msg#Fields>`__ ``char`` est obsolète "
+"depuis longtemps et est mappé sur ``uint8``. Dans ROS 2 jusqu'à Crystal, "
+"``char`` était mappé sur un seul caractère (``char`` en C / C++, ``str`` de "
+"longueur 1 en Python) dans le but de fournir un mappage plus naturel. Depuis"
+" Dashing, la sémantique ROS 1 a été restaurée et ``char`` est à nouveau "
+"mappé sur ``uint8``."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:671
+msgid "rosidl_generator_cpp"
+msgstr "rosidl_generator_cpp"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:673
+msgid ""
+"The C++ data structures generated for messages, services and actions provide"
+" setter methods for each field. Until Crystal each setter returned a pointer"
+" to the data structure itself to enable the named parameter idiom. As of "
+"Dashing these setters `return a reference "
+"<https://github.com/ros2/rosidl/pull/353>`__ instead since that seems to be "
+"the more common signature as well as it clarifies that the returned value "
+"can't be a ``nullptr``."
+msgstr ""
+"Les structures de données C++ générées pour les messages, les services et "
+"les actions fournissent des méthodes de définition pour chaque champ. "
+"Jusqu'à Crystal, chaque setter renvoyait un pointeur vers la structure de "
+"données elle-même pour activer l'idiome du paramètre nommé. À partir de "
+"Dashing, ces setters `renvoyent une référence "
+"<https://github.com/ros2/rosidl/pull/353>`__ à la place, car cela semble "
+"être la signature la plus courante et précise que la valeur renvoyée ne peut"
+" pas être un ``nullptr``."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:678
+msgid "rosidl_generator_py"
+msgstr "rosidl_generator_py"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:680
+msgid ""
+"Until Crystal an array (fixed size) or sequence (dynamic size, optionally "
+"with an upper boundary) field in a message was stored as a ``list`` in "
+"Python. As of Dashing the Python type for arrays / sequences of numeric "
+"values has been changed:"
+msgstr ""
+"Jusqu'à Crystal, un tableau (taille fixe) ou un champ de séquence (taille "
+"dynamique, éventuellement avec une limite supérieure) dans un message était "
+"stocké sous forme de ``liste`` en Python. Depuis Dashing, le type Python "
+"pour les tableaux/séquences de valeurs numériques a été modifié :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:683
+msgid ""
+"an array of numeric values is stored as a ``numpy.ndarray`` (the ``dtype`` "
+"is chosen to match the type of the numeric value)"
+msgstr ""
+"un tableau de valeurs numériques est stocké sous la forme d'un "
+"``numpy.ndarray`` (le ``dtype`` est choisi pour correspondre au type de la "
+"valeur numérique)"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:684
+msgid ""
+"a sequence of numeric values is stored as an ``array.array`` (the "
+"``typename`` is chosen to match the type of the numeric value)"
+msgstr ""
+"une séquence de valeurs numériques est stockée sous la forme d'un "
+"``array.array`` (le ``typename`` est choisi pour correspondre au type de la "
+"valeur numérique)"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:686
+msgid ""
+"As before an array / sequence of non-numeric types is still represented as a"
+" ``list`` in Python."
+msgstr ""
+"Comme auparavant, un tableau/séquence de types non numériques est toujours "
+"représenté sous la forme d'une ``liste`` en Python."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:688
+msgid "This change brings a number of benefits:"
+msgstr "Ce changement apporte plusieurs avantages :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:690
+msgid ""
+"The new data structures ensure that each item in the array / sequence "
+"complies with the value range restrictions of the numeric type."
+msgstr ""
+"Les nouvelles structures de données garantissent que chaque élément du "
+"tableau/séquence est conforme aux restrictions de plage de valeurs du type "
+"numérique."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:691
+msgid ""
+"The numeric values can be stored more efficiently in memory which avoid the "
+"overhead of Python objects for each item."
+msgstr ""
+"Les valeurs numériques peuvent être stockées plus efficacement en mémoire, "
+"ce qui évite la surcharge d'objets Python pour chaque élément."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:692
+msgid ""
+"The memory layout of both data structures allows to read and write all items"
+" of the array / sequence in a single operation which makes the conversion "
+"from and to Python significantly faster / more efficient."
+msgstr ""
+"La disposition de la mémoire des deux structures de données permet de lire "
+"et d'écrire tous les éléments du tableau/de la séquence en une seule "
+"opération, ce qui rend la conversion de et vers Python beaucoup plus "
+"rapide/plus efficace."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:695
+msgid "launch"
+msgstr "lancement"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:697
+msgid ""
+"The ``launch_testing`` package caught up with the ``launch`` package "
+"redesign done in Bouncy Bolson. The legacy Python API, already moved into "
+"the ``launch.legacy`` submodule, has thus been deprecated and removed."
+msgstr ""
+"Le paquet ``launch_testing`` a rattrapé la refonte du paquet ``launch`` "
+"faite dans Bouncy Bolson. L'ancienne API Python, déjà déplacée dans le sous-"
+"module ``launch.legacy``, a donc été dépréciée et supprimée."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:700
+msgid ""
+"See ``launch`` `examples "
+"<https://github.com/ros2/launch/tree/dashing/launch/examples>`__ and "
+"`documentation <https://github.com/ros2/launch/tree/dashing/launch/doc>`__ "
+"for reference on how to use its new API."
+msgstr ""
+"Voir ``launch`` `exemples "
+"<https://github.com/ros2/launch/tree/dashing/launch/examples>`__ et "
+"`documentation <https://github.com/ros2/launch/tree/dashing /launch/doc>`__ "
+"pour référence sur la façon d'utiliser sa nouvelle API."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:702
+msgid ""
+"See `demos tests <https://github.com/ros2/demos>`__ for reference on how to "
+"use the new ``launch_testing`` API."
+msgstr ""
+"Voir `demos tests <https://github.com/ros2/demos>`__ pour savoir comment "
+"utiliser la nouvelle API ``launch_testing``."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:705
+msgid "rmw"
+msgstr "rmw"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:707
+msgid "Changes since the `Crystal Clemmys <Release-Crystal-Clemmys>` release:"
+msgstr ""
+"Changements depuis la version `Crystal Clemmys <Release-Crystal-Clemmys>` :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:709
+msgid "New API in ``rmw``, a fini function for ``rmw_context_t``:"
+msgstr "Nouvelle API dans ``rmw``, une fonction fini pour ``rmw_context_t`` :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:711
+msgid ""
+"`rmw_context_fini "
+"<https://github.com/ros2/rmw/blob/c518842f6f82910482470b40c221c268d30691bd/rmw/include/rmw/init.h#L111-L136>`_"
+msgstr ""
+"`rmw_context_fini "
+"<https://github.com/ros2/rmw/blob/c518842f6f82910482470b40c221c268d30691bd/rmw/include/rmw/init.h#L111-L136>`_"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:713
+msgid ""
+"Modification of ``rmw``, now passes ``rmw_context_t`` to "
+"``rmw_create_wait_set``:"
+msgstr ""
+"Modification de ``rmw``, passe maintenant ``rmw_context_t`` à "
+"``rmw_create_wait_set`` :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:715
+msgid ""
+"`rmw_create_wait_set "
+"<https://github.com/ros2/rmw/blob/c518842f6f82910482470b40c221c268d30691bd/rmw/include/rmw/rmw.h#L522-L543>`_"
+msgstr ""
+"`rmw_create_wait_set "
+"<https://github.com/ros2/rmw/blob/c518842f6f82910482470b40c221c268d30691bd/rmw/include/rmw/rmw.h#L522-L543>`_"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:717
+msgid ""
+"New APIs in ``rmw`` for preallocating space for published and subscribed "
+"messages:"
+msgstr ""
+"Nouvelles API dans ``rmw`` pour préallouer de l'espace pour les messages "
+"publiés et abonnés :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:719
+msgid ""
+"`rmw_init_publisher_allocation "
+"<https://github.com/ros2/rmw/blob/dc7b2f49f1f961d6cf2c173adc54736451be8938/rmw/include/rmw/rmw.h#L262>`_"
+msgstr ""
+"`rmw_init_publisher_allocation "
+"<https://github.com/ros2/rmw/blob/dc7b2f49f1f961d6cf2c173adc54736451be8938/rmw/include/rmw/rmw.h#L262>`_"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:720
+msgid ""
+"`rmw_fini_publisher_allocation "
+"<https://github.com/ros2/rmw/blob/dc7b2f49f1f961d6cf2c173adc54736451be8938/rmw/include/rmw/rmw.h#L279>`_"
+msgstr ""
+"`rmw_fini_publisher_allocation "
+"<https://github.com/ros2/rmw/blob/dc7b2f49f1f961d6cf2c173adc54736451be8938/rmw/include/rmw/rmw.h#L279>`_"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:721
+msgid ""
+"`rmw_init_subscription_allocation "
+"<https://github.com/ros2/rmw/blob/dc7b2f49f1f961d6cf2c173adc54736451be8938/rmw/include/rmw/rmw.h#L489>`_"
+msgstr ""
+"`rmw_init_subscription_allocation "
+"<https://github.com/ros2/rmw/blob/dc7b2f49f1f961d6cf2c173adc54736451be8938/rmw/include/rmw/rmw.h#L489>`_"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:722
+msgid ""
+"`rmw_fini_subscription_allocation "
+"<https://github.com/ros2/rmw/blob/dc7b2f49f1f961d6cf2c173adc54736451be8938/rmw/include/rmw/rmw.h#L506>`_"
+msgstr ""
+"`rmw_fini_subscription_allocation "
+"<https://github.com/ros2/rmw/blob/dc7b2f49f1f961d6cf2c173adc54736451be8938/rmw/include/rmw/rmw.h#L506>`_"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:723
+msgid ""
+"`rmw_serialized_message_size "
+"<https://github.com/ros2/rmw/blob/dc7b2f49f1f961d6cf2c173adc54736451be8938/rmw/include/rmw/rmw.h#L395>`_"
+msgstr ""
+"`rmw_serialized_message_size "
+"<https://github.com/ros2/rmw/blob/dc7b2f49f1f961d6cf2c173adc54736451be8938/rmw/include/rmw/rmw.h#L395>`_"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:725
+msgid ""
+"Modification of ``rmw``, now passes ``rmw_publisher_allocation_t`` or "
+"``rmw_subscription_allocation_t`` to ``rmw_publish`` and ``rmw_take``, "
+"respectively. Note that this argument can be ``NULL`` or ``nullptr``, which "
+"keeps existing Crystal behavior."
+msgstr ""
+"Modification de ``rmw``, passe maintenant ``rmw_publisher_allocation_t`` ou "
+"``rmw_subscription_allocation_t`` à ``rmw_publish`` et ``rmw_take``, "
+"respectivement. Notez que cet argument peut être ``NULL`` ou ``nullptr``, ce"
+" qui conserve le comportement existant de Crystal."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:728
+msgid ""
+"`rmw_publish "
+"<https://github.com/ros2/rmw/blob/dc7b2f49f1f961d6cf2c173adc54736451be8938/rmw/include/rmw/rmw.h#L310>`_"
+msgstr ""
+"`rmw_publier "
+"<https://github.com/ros2/rmw/blob/dc7b2f49f1f961d6cf2c173adc54736451be8938/rmw/include/rmw/rmw.h#L310>`_"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:729
+msgid ""
+"`rmw_take "
+"<https://github.com/ros2/rmw/blob/dc7b2f49f1f961d6cf2c173adc54736451be8938/rmw/include/rmw/rmw.h#L556>`_"
+msgstr ""
+"`rmw_take "
+"<https://github.com/ros2/rmw/blob/dc7b2f49f1f961d6cf2c173adc54736451be8938/rmw/include/rmw/rmw.h#L556>`_"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:731
+msgid ""
+"Type names returned by ``rmw_get_*_names_and_types*`` functions should have "
+"a fully-qualified namespace. For example, instead of "
+"``rcl_interfaces/Parameter`` and ``rcl_interfaces/GetParameters``, the "
+"returned type names should be ``rcl_interface/msg/Parameter`` and "
+"``rcl_interfaces/srv/GetParameters``."
+msgstr ""
+"Les noms de type renvoyés par les fonctions ``rmw_get_*_names_and_types*`` "
+"doivent avoir un espace de noms complet. Par exemple, au lieu de "
+"``rcl_interfaces/Parameter`` et ``rcl_interfaces/GetParameters``, les noms "
+"de type retournés devraient être ``rcl_interface/msg/Parameter`` et "
+"``rcl_interfaces/srv/GetParameters``."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:735
+msgid "actions"
+msgstr "Actions"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:737
+msgid "Changes to ``rclcpp_action::Client`` signatures:"
+msgstr "Modifications apportées aux signatures ``rclcpp_action::Client`` :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:739
+msgid ""
+"The signature of `rclcpp_action::Client::async_send_goal "
+"<https://github.com/ros2/rclcpp/blob/ef41059a751702274667e2164182c062b47c453d/rclcpp_action/include/rclcpp_action/client.hpp#L343>`_"
+" has changed. Now users can optionally provide callback functions for the "
+"**goal response** and the **result** using the new `SendGoalOptions "
+"<https://github.com/ros2/rclcpp/blob/ef41059a751702274667e2164182c062b47c453d/rclcpp_action/include/rclcpp_action/client.hpp#L276>`_"
+" struct. The goal response callback is called when an action server accepts "
+"or rejects the goal and the result callback is called when the result for "
+"the goal is received. Optional callbacks were also added to "
+"`rclcpp_action::Client::async_cancel_goal "
+"<https://github.com/ros2/rclcpp/blob/ef41059a751702274667e2164182c062b47c453d/rclcpp_action/include/rclcpp_action/client.hpp#L432-L434>`_"
+" and `rclcpp_action::Client::async_get_result "
+"<https://github.com/ros2/rclcpp/blob/ef41059a751702274667e2164182c062b47c453d/rclcpp_action/include/rclcpp_action/client.hpp#L399-L401>`_."
+msgstr ""
+"La signature de `rclcpp_action::Client::async_send_goal "
+"<https://github.com/ros2/rclcpp/blob/ef41059a751702274667e2164182c062b47c453d/rclcpp_action/include/rclcpp_action/client.hpp#L343>`_"
+" a changé. Désormais, les utilisateurs peuvent éventuellement fournir des "
+"fonctions de rappel pour la **réponse de l'objectif** et le **résultat** à "
+"l'aide des nouvelles `SendGoalOptions "
+"<https://github.com/ros2/rclcpp/blob/ef41059a751702274667e2164182c062b47c453d/rclcpp_action/include/rclcpp_action/"
+" client.hpp#L276>`_ structure. Le rappel de réponse d'objectif est appelé "
+"lorsqu'un serveur d'action accepte ou rejette l'objectif et le rappel de "
+"résultat est appelé lorsque le résultat de l'objectif est reçu. Des rappels "
+"facultatifs ont également été ajoutés à "
+"`rclcpp_action::Client::async_cancel_goal "
+"<https://github.com/ros2/rclcpp/blob/ef41059a751702274667e2164182c062b47c453d/rclcpp_action/include/rclcpp_action/client.hpp#L432-L434>`clpp_action/client.hpp#L432-L434>`_"
+" et `r ::Client::async_get_result "
+"<https://github.com/ros2/rclcpp/blob/ef41059a751702274667e2164182c062b47c453d/rclcpp_action/include/rclcpp_action/client.hpp#L399-L401>`_."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:746
+msgid "Changes to goal transition names:"
+msgstr "Modifications apportées aux noms de transition d'objectif :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:748
+msgid ""
+"The names of goal state transitions have been refactored to reflect the "
+"design documention. This affects ``rcl_action``, ``rclcpp_action``, and "
+"``rclpy``. Here is a list of the event name changes (*Old name -> New "
+"name*):"
+msgstr ""
+"Les noms des transitions d'état d'objectif ont été refactorisés pour "
+"refléter la documentation de conception. Cela affecte ``rcl_action``, "
+"``rclcpp_action`` et ``rclpy``. Voici une liste des changements de nom "
+"d'événement (*Ancien nom -> Nouveau nom*) :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:752
+msgid "GOAL_EVENT_CANCEL -> GOAL_EVENT_CANCEL_GOAL"
+msgstr "GOAL_EVENT_CANCEL -> GOAL_EVENT_CANCEL_GOAL"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:753
+msgid "GOAL_EVENT_SET_SUCCEEDED -> GOAL_EVENT_SUCCEED"
+msgstr "OBJECTIF_EVENT_SET_SUCCEED -> OBJECTIF_EVENT_SUCCEED"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:754
+msgid "GOAL_EVENT_SET_ABORTED -> GOAL_EVENT_ABORT"
+msgstr "GOAL_EVENT_SET_ABORTED -> GOAL_EVENT_ABORT"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:755
+msgid "GOAL_EVENT_SET_CANCELED -> GOAL_EVENT_CANCELED"
+msgstr "GOAL_EVENT_SET_CANCELED -> GOAL_EVENT_CANCELED"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:757
+msgid "Changes to ``CancelGoal.srv``:"
+msgstr "Modifications apportées à ``CancelGoal.srv`` :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:759
+msgid ""
+"A ``return_code`` field was added to the response message of the "
+"``CancelGoal`` service. This is to better communicate a reason for a failed "
+"service call. See the `pull request "
+"<https://github.com/ros2/rcl_interfaces/pull/76>`_ and connected issue for "
+"details."
+msgstr ""
+"Un champ ``return_code`` a été ajouté au message de réponse du service "
+"``CancelGoal``. Il s'agit de mieux communiquer la raison d'un appel de "
+"service ayant échoué. Voir la `demande d'extraction "
+"<https://github.com/ros2/rcl_interfaces/pull/76>`_ et le problème connexe "
+"pour plus de détails."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:764
+msgid "rviz"
+msgstr "voir"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:766
+msgid ""
+"Plugins should use fully qualified type names otherwise a warning will be "
+"logged. For `example "
+"<https://github.com/ros2/rviz/blob/dfceae319d49546f1e4ad39689853c18fef0001e/rviz_default_plugins/plugins_description.xml#L13>`_,"
+" use the type ``sensor_msgs/msg/Image`` instead of ``sensor_msgs/Image``. "
+"See `PR introducing this change <https://github.com/ros2/rviz/pull/387>`_ "
+"for more details."
+msgstr ""
+"Les plugins doivent utiliser des noms de type complets, sinon un "
+"avertissement sera enregistré. Par `exemple "
+"<https://github.com/ros2/rviz/blob/dfceae319d49546f1e4ad39689853c18fef0001e/rviz_default_plugins/plugins_description.xml#L13>`_,"
+" utilisez le type ``sensor_msgs/msg/Image`` au lieu de ``sensor_msgs/Image "
+"``. Voir `PR présentant ce changement "
+"<https://github.com/ros2/rviz/pull/387>`_ pour plus de détails."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:771
+msgid "Known Issues"
+msgstr "Problèmes connus"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:773
+msgid ""
+"`[ros2/rclcpp#715] <https://github.com/ros2/rclcpp/issues/715>`_ There is an"
+" inconsistency in the way that parameter YAML files are loaded between "
+"standalone ROS 2 nodes and composed ROS 2 nodes. Currently available "
+"workarounds are noted in an `issue comment "
+"<https://github.com/ros2/rclcpp/issues/715#issuecomment-497392626>`_"
+msgstr ""
+"`[ros2/rclcpp#715] <https://github.com/ros2/rclcpp/issues/715>`_ Il existe "
+"une incohérence dans la manière dont les fichiers YAML de paramètres sont "
+"chargés entre les nœuds ROS 2 autonomes et les nœuds ROS 2 composés . Les "
+"solutions de contournement actuellement disponibles sont notées dans un "
+"`commentaire de problème "
+"<https://github.com/ros2/rclcpp/issues/715#issuecomment-497392626>`_"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:775
+msgid ""
+"`[ros2/rclpy#360] <https://github.com/ros2/rclpy/issues/360>`_ rclpy nodes "
+"ignore ``ctrl-c`` when using OpenSplice on Windows."
+msgstr ""
+"`[ros2/rclpy#360] <https://github.com/ros2/rclpy/issues/360>`_ les nœuds "
+"rclpy ignorent ``ctrl-c`` lors de l'utilisation d'OpenSplice sous Windows."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:776
+msgid ""
+"`[ros2/rosidl_typesupport_opensplice#30] "
+"<https://github.com/ros2/rosidl_typesupport_opensplice/issues/30>`_ There is"
+" a bug preventing nesting a message inside of a service or action definition"
+" with the same name when using OpenSplice."
+msgstr ""
+"`[ros2/rosidl_typesupport_opensplice#30] "
+"<https://github.com/ros2/rosidl_typesupport_opensplice/issues/30>`_ Un bogue"
+" empêche l'imbrication d'un message dans une définition de service ou "
+"d'action portant le même nom lors de l'utilisation d'OpenSplice."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:777
+msgid ""
+"`[ros2/rclcpp#781] <https://github.com/ros2/rclcpp/pull/781>`_ Calling "
+"``get_parameter``/``list_parameter`` from within "
+"``on_set_parameter_callback`` causes a deadlock on Dashing.  This is fixed "
+"for Eloquent, but is an ABI break so has not been backported to Dashing."
+msgstr ""
+"`[ros2/rclcpp#781] <https://github.com/ros2/rclcpp/pull/781>`_ Appeler "
+"``get_parameter``/``list_parameter`` depuis ``on_set_parameter_callback`` "
+"provoque un blocage sur Fringant. Ceci est corrigé pour Eloquent, mais il "
+"s'agit d'une rupture ABI et n'a donc pas été rétroporté vers Dashing."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:778
+msgid ""
+"`[ros2/rclcpp#912] <https://github.com/ros2/rclcpp/issues/912>`_ Inter-"
+"process communication forces a message copy when intra-process communication"
+" takes place between an ``std::unique_ptr`` publisher and a single "
+"``std::unique_ptr`` subscription (published ``std::unique_ptr`` is "
+"internally being promoted to an ``std::shared_ptr``)."
+msgstr ""
+"`[ros2/rclcpp#912] <https://github.com/ros2/rclcpp/issues/912>`_ La "
+"communication inter-processus force une copie de message lorsqu'une "
+"communication intra-processus a lieu entre un ``std::unique_ptr `` éditeur "
+"et un seul abonnement ``std::unique_ptr`` (le ``std::unique_ptr`` publié est"
+" promu en interne vers un ``std::shared_ptr``)."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:779
+msgid ""
+"`[ros2/rosbag2#125] <https://github.com/ros2/rosbag2/issues/125>`_ Topics "
+"with unreliable QOS are not recorded."
+msgstr ""
+"`[ros2/rosbag2#125] <https://github.com/ros2/rosbag2/issues/125>`_ Les "
+"sujets avec un QOS non fiable ne sont pas enregistrés."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:780
+msgid ""
+"`[ros2/rclcpp#715] <https://github.com/ros2/rclcpp/issues/715>`_ Composable "
+"nodes cannot receive parameters via remapping. Supplying parameters to "
+"composable nodes can be accomplished using the methods described in `[this "
+"comment] "
+"<https://github.com/ros2/rclcpp/issues/715#issuecomment-497392626>`_."
+msgstr ""
+"`[ros2/rclcpp#715] <https://github.com/ros2/rclcpp/issues/715>`_ Les nœuds "
+"composables ne peuvent pas recevoir de paramètres via le remappage. La "
+"fourniture de paramètres aux nœuds composables peut être effectuée à l'aide "
+"des méthodes décrites dans `[ce commentaire] "
+"<https://github.com/ros2/rclcpp/issues/715#issuecomment-497392626>`_."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:781
+msgid ""
+"`[ros2/rclcpp#893] <https://github.com/ros2/rclcpp/issues/893>`_ "
+"``rclcpp::Context`` is not destroyed because of a reference cycle with "
+"``rclcpp::GraphListener``. This causes a memory leak. A fix has not been "
+"backported because of the risk of breaking ABI."
+msgstr ""
+"`[ros2/rclcpp#893] <https://github.com/ros2/rclcpp/issues/893>`_ "
+"``rclcpp::Context`` n'est pas détruit à cause d'un cycle de référence avec "
+"``rclcpp::GraphListener ``. Cela provoque une fuite de mémoire. Un correctif"
+" n'a pas été rétroporté en raison du risque de casser l'ABI."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:784
+msgid "Timeline before the release"
+msgstr "Chronologie avant la sortie"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:786
+msgid "A few milestones leading up to the release:"
+msgstr "Quelques étapes menant à la sortie :"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:790
+msgid "Mon. Apr 8th (alpha)"
+msgstr "Mon. Apr 8th (alpha)"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:789
+msgid ""
+"First releases of core packages available. Testing can happen from now on "
+"(some features might not have landed yet)."
+msgstr ""
+"Premières versions des packages de base disponibles. Les tests peuvent avoir"
+" lieu à partir de maintenant (certaines fonctionnalités n'ont peut-être pas "
+"encore été ajoutées)."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:793
+msgid "Thu. May 2nd"
+msgstr "avec. peut et"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:793
+msgid "API freeze for core packages"
+msgstr "Gel de l'API pour les packages de base"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:797
+msgid "Mon. May 6th (beta)"
+msgstr "Lun. 6 mai (bêta)"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:796
+msgid ""
+"Updated releases of core packages available. Additional testing of the "
+"latest features."
+msgstr ""
+"Versions mises à jour des packages de base disponibles. Tests "
+"supplémentaires des dernières fonctionnalités."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:802
+msgid "Thu. May 16th"
+msgstr "Jeu. 16 mai"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:800
+msgid ""
+"Feature freeze. Only bug fix releases should be made after this point. New "
+"packages can be released independently."
+msgstr ""
+"Gel des fonctionnalités. Seules les versions de correctifs de bogues doivent"
+" être effectuées après ce point. De nouveaux packages peuvent être publiés "
+"indépendamment."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:805
+msgid "Mon. May 20th (release candidate)"
+msgstr "Lun. 20 mai (release candidate)"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:805
+msgid "Updated releases of core packages available."
+msgstr "Versions mises à jour des packages de base disponibles."
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:808
+msgid "Wed. May 29th"
+msgstr "Épouser. 29 mai"
+
+#: ../../source/Releases/Release-Dashing-Diademata.rst:808
+msgid ""
+"Freeze rosdistro. No PRs for Dashing on the `rosdistro` repo will be merged "
+"(reopens after the release announcement)."
+msgstr ""
+"Geler rosdistro. Aucun PR pour Dashing sur le repo `rosdistro` ne sera "
+"fusionné (réouverture après l'annonce de la sortie)."

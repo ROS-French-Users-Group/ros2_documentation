@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-07 07:01:57.225165\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Releases/Release-Rolling-Ridley.rst:2
+msgid "Rolling Ridley (``rolling``)"
+msgstr "Rouler Ridley (``rouler``)"
+
+#: ../../source/Releases/Release-Rolling-Ridley.rst:6
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/Releases/Release-Rolling-Ridley.rst:8
+msgid "*Rolling Ridley* is a rolling development release of ROS 2."
+msgstr "*Rolling Ridley* est une version de développement continu de ROS 2."
+
+#: ../../source/Releases/Release-Rolling-Ridley.rst:12
+msgid ""
+"Rolling Ridley is continuously updated and is subject to in-place updates "
+"which will at times include breaking changes. It is used for ROS 2 "
+"development and by maintainers who want their packages released and ready "
+"for the next stable distribution. We recommend that most users of ROS 2 use "
+"the latest `stable distribution <latest_release>`."
+msgstr ""
+"Rolling Ridley est continuellement mis à jour et fait l'objet de mises à "
+"jour sur place qui incluront parfois des changements de rupture. Il est "
+"utilisé pour le développement de ROS 2 et par les responsables qui "
+"souhaitent que leurs packages soient publiés et prêts pour la prochaine "
+"distribution stable. Nous recommandons à la plupart des utilisateurs de ROS "
+"2 d'utiliser la dernière `distribution stable <latest_release>`."
+
+#: ../../source/Releases/Release-Rolling-Ridley.rst:16
+msgid ""
+"For more information see `REP-2002 "
+"<https://www.ros.org/reps/rep-2002.html>`_"
+msgstr ""
+"Pour plus d'informations, voir `REP-2002 "
+"<https://www.ros.org/reps/rep-2002.html>`_"
+
+#: ../../source/Releases/Release-Rolling-Ridley.rst:19
+msgid "Currently Supported Platforms"
+msgstr "Plates-formes actuellement prises en charge"
+
+#: ../../source/Releases/Release-Rolling-Ridley.rst:21
+msgid "Rolling Ridley is currently supported on the following platforms:"
+msgstr ""
+"Rolling Ridley est actuellement pris en charge sur les plates-formes "
+"suivantes :"
+
+#: ../../source/Releases/Release-Rolling-Ridley.rst:23
+msgid "Tier 1 platforms:"
+msgstr "Plateformes de niveau 1 :"
+
+#: ../../source/Releases/Release-Rolling-Ridley.rst:25
+msgid "Ubuntu 22.04 (Jammy): ``amd64`` and ``arm64``"
+msgstr "Ubuntu 22.04 (Jammy) : ``amd64`` et ``arm64``"
+
+#: ../../source/Releases/Release-Rolling-Ridley.rst:26
+msgid "Windows 10 (Visual Studio 2019)"
+msgstr "Windows 10 (Visual Studio 2019)"
+
+#: ../../source/Releases/Release-Rolling-Ridley.rst:28
+msgid "Tier 3 platforms:"
+msgstr "Plateformes de niveau 3 :"
+
+#: ../../source/Releases/Release-Rolling-Ridley.rst:30
+msgid "Debian Buster (10): ``amd64``, ``arm64`` and ``arm32``"
+msgstr "Debian Buster (10) : ``amd64``, ``arm64`` et ``arm32``"
+
+#: ../../source/Releases/Release-Rolling-Ridley.rst:31
+msgid "Mac macOS 10.14 (Mojave)"
+msgstr "Mac macOS 10.14 (Mojave)"
+
+#: ../../source/Releases/Release-Rolling-Ridley.rst:32
+msgid "OpenEmbedded Thud (2.6) / webOS OSE: ``arm32`` and ``x86``"
+msgstr "OpenEmbedded Thud (2.6) / webOS OSE : ``arm32`` et ``x86``"
+
+#: ../../source/Releases/Release-Rolling-Ridley.rst:35
+msgid "Installation"
+msgstr "Installation"
+
+#: ../../source/Releases/Release-Rolling-Ridley.rst:37
+msgid "`Install Rolling Ridley <../../Installation>`"
+msgstr "`Installer Rolling Ridley <../../Installation>`"
+
+#: ../../source/Releases/Release-Rolling-Ridley.rst:40
+msgid "New features and changes in this release"
+msgstr "Nouvelles fonctionnalités et modifications de cette version"
+
+#: ../../source/Releases/Release-Rolling-Ridley.rst:42
+msgid ""
+"Rolling Ridley is an ongoing development distribution. Changes between the "
+"current stable release and the upcoming one can be found on the page for the"
+" `upcoming release <upcoming-release>`."
+msgstr ""
+"Rolling Ridley est une distribution en développement continu. Les "
+"changements entre la version stable actuelle et la prochaine peuvent être "
+"trouvés sur la page de la `version à venir <upcoming-release>`."

@@ -1,0 +1,116 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 12:03:10.956519\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Intermediate/Testing/Python.rst:4
+msgid "Writing Basic Tests with Python"
+msgstr "Écrire des tests de base avec Python"
+
+#: ../../source/Tutorials/Intermediate/Testing/Python.rst:6
+msgid ""
+"Starting point: we'll assume you have a :ref:`basic ament_python "
+"package<CreatePkg>` set up already and you want to add some tests to it."
+msgstr ""
+"Point de départ : nous supposerons que vous avez déjà configuré "
+"un :ref:`basic ament_python package<CreatePkg>` et que vous souhaitez y "
+"ajouter des tests."
+
+#: ../../source/Tutorials/Intermediate/Testing/Python.rst:8
+msgid ""
+"If you are using ament_cmake_python, refer to the the "
+":doc:`ament_cmake_python docs<../../../How-To-Guides/Ament-CMake-Python-"
+"Documentation>` for how to make tests dicoverable. The test contents and "
+"invocation with ``colcon`` remain the same."
+msgstr ""
+"Si vous utilisez ament_cmake_python, reportez-vous à la "
+":doc:`ament_cmake_python docs<../../../How-To-Guides/Ament-CMake-Python-"
+"Documentation>` pour savoir comment rendre les tests détectables. Le contenu"
+" du test et l'invocation avec ``colcon`` restent les mêmes."
+
+#: ../../source/Tutorials/Intermediate/Testing/Python.rst:12
+msgid "Package Setup"
+msgstr "Configuration du paquet"
+
+#: ../../source/Tutorials/Intermediate/Testing/Python.rst:15
+msgid "setup.py"
+msgstr "setup.py"
+
+#: ../../source/Tutorials/Intermediate/Testing/Python.rst:17
+msgid ""
+"Your ``setup.py`` must a test dependency on ``pytest`` within the call to "
+"``setup(...)``:"
+msgstr ""
+"Votre ``setup.py`` doit avoir une dépendance de test sur ``pytest`` dans "
+"l'appel à ``setup(...)`` :"
+
+#: ../../source/Tutorials/Intermediate/Testing/Python.rst:24
+msgid "Test Files and Folders"
+msgstr "Fichiers et dossiers de test"
+
+#: ../../source/Tutorials/Intermediate/Testing/Python.rst:26
+msgid ""
+"Your test code needs to go in a folder named ``tests`` in the root of your "
+"package."
+msgstr ""
+"Votre code de test doit aller dans un dossier nommé ``tests`` à la racine de"
+" votre package."
+
+#: ../../source/Tutorials/Intermediate/Testing/Python.rst:28
+msgid ""
+"Any file that contains tests that you want to run must have the pattern "
+"``test_FOO.py`` where ``FOO`` can be replaced with anything."
+msgstr ""
+"Tout fichier contenant des tests que vous souhaitez exécuter doit avoir le "
+"modèle ``test_FOO.py`` où ``FOO`` peut être remplacé par n'importe quoi."
+
+#: ../../source/Tutorials/Intermediate/Testing/Python.rst:31
+msgid "Example package layout:"
+msgstr "Exemple de mise en page du package :"
+
+#: ../../source/Tutorials/Intermediate/Testing/Python.rst:49
+msgid "Test Contents"
+msgstr "Contenu des tests"
+
+#: ../../source/Tutorials/Intermediate/Testing/Python.rst:51
+msgid ""
+"You can now write tests to your heart's content. There are `plenty of "
+"resources on pytest <https://docs.pytest.org>`__, but in short, you can "
+"write functions with the ``test_`` prefix and include whatever assert "
+"statements you'd like."
+msgstr ""
+"Vous pouvez maintenant écrire des tests à votre guise. Il y a `beaucoup de "
+"ressources sur pytest <https://docs.pytest.org>`__, mais en bref, vous "
+"pouvez écrire des fonctions avec le préfixe ``test_`` et inclure les "
+"déclarations assert que vous souhaitez."
+
+#: ../../source/Tutorials/Intermediate/Testing/Python.rst:60
+msgid "Special Commands"
+msgstr "Commandes spéciales"
+
+#: ../../source/Tutorials/Intermediate/Testing/Python.rst:62
+msgid ""
+"Beyond the :doc:`standard colcon testing commands <CLI>` you can also "
+"specify arguments to the ``pytest`` framework from the command line with the"
+" ``--pytest-args`` flag. For example, you can specify the name of the "
+"function to run with"
+msgstr ""
+"Au-delà des :doc:`commandes standard de test colcon <CLI>`, vous pouvez "
+"également spécifier des arguments au framework ``pytest`` à partir de la "
+"ligne de commande avec le drapeau ``--pytest-args``. Par exemple, vous "
+"pouvez spécifier le nom de la fonction à exécuter avec"

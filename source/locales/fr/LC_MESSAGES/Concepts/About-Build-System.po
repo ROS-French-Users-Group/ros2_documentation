@@ -1,0 +1,505 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 14:06:57.121686\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Concepts/About-Build-System.rst:2
+msgid "About the build system"
+msgstr "À propos du système de construction"
+
+#: ../../source/Concepts/About-Build-System.rst:6
+msgid ""
+"Under everything is the build system. Iterating on ``catkin`` from ROS 1 we "
+"have created a set of |packages| under the moniker ``ament``. Some of the "
+"reasons for changing the name to ``ament`` are that we wanted it to not "
+"collide with ``catkin`` (in case we want mix them at some point) and to "
+"prevent confusion with existing ``catkin`` documentation. ``ament``'s "
+"primary responsibility is to make it easier to develop and maintain ROS 2 "
+"core |packages|. However, this responsibility extends to any user who is "
+"willing to make use of our build system conventions and tools. Additionally "
+"it should make |packages| conventional, such that developers should be able "
+"to pick up any ``ament`` based |package| and make some assumptions about how"
+" it works, how to introspect it, and how to build or use it."
+msgstr ""
+"Sous tout se trouve le système de construction. En itérant sur ``catkin`` à "
+"partir de ROS 1, nous avons créé un ensemble de |packages| sous le surnom "
+"``ament``. Certaines des raisons pour changer le nom en ``ament`` sont que "
+"nous voulions qu'il n'entre pas en collision avec ``catkin`` (au cas où nous"
+" voudrions les mélanger à un moment donné) et pour éviter toute confusion "
+"avec ``catkin`` existant Documentation. La principale responsabilité de "
+"``ament`` est de faciliter le développement et la maintenance des noyaux "
+"|packages| de ROS 2. Cependant, cette responsabilité s'étend à tout "
+"utilisateur qui souhaite utiliser nos conventions et outils de système de "
+"construction. De plus, il devrait faire des |packages| conventionnel, de "
+"sorte que les développeurs devraient être capables de choisir n'importe quel"
+" |package| basé sur ``ament`` et faites des hypothèses sur son "
+"fonctionnement, comment l'introspecter et comment le construire ou "
+"l'utiliser."
+
+#: ../../source/Concepts/About-Build-System.rst:13
+msgid ""
+"``ament`` consists of a few important repositories which are all in the "
+"``ament`` |GitHub|_ organization:"
+msgstr ""
+"``ament`` se compose de quelques dépôts importants qui sont tous dans "
+"l'organisation ``ament`` |GitHub|_ :"
+
+#: ../../source/Concepts/About-Build-System.rst:20
+msgid "The ``ament_package`` Package"
+msgstr "Le paquet ``ament_package``"
+
+#: ../../source/Concepts/About-Build-System.rst:22
+msgid ""
+"Located on |GitHub|_ at `ament/ament_package "
+"<https://github.com/ament/ament_package>`_, this repository contains a "
+"single :term:`ament Python package` that provides various utilities for "
+"|ament packages|, e.g. templates for environment hooks."
+msgstr ""
+"Situé sur |GitHub|_ à `ament/ament_package "
+"<https://github.com/ament/ament_package>`_, ce référentiel contient un seul "
+":term:`ament Python package` qui fournit divers utilitaires pour |ament "
+"packages|, par exemple. modèles pour les crochets d'environnement."
+
+#: ../../source/Concepts/About-Build-System.rst:24
+msgid ""
+"All |ament packages| must contain a single :term:`package.xml` file at the "
+"root of the package regardless of their underlying build system. The "
+":term:`package.xml` \"manifest\" file contains information that is required "
+"in order to process and operate on a |package|. This |package| information "
+"includes things like the |package|'s name, which is globally unique, and the"
+" package's dependencies. The :term:`package.xml` file also serves as the "
+"marker file which indicates the location of the |package| on the file "
+"system."
+msgstr ""
+"Tous les forfaits |ament| doit contenir un seul fichier :term:`package.xml` "
+"à la racine du paquet, quel que soit son système de construction sous-"
+"jacent. Le fichier \"manifest\" :term:`package.xml` contient les "
+"informations requises pour traiter et opérer sur un |package|. Ce |forfait| "
+"Les informations incluent des éléments tels que le nom du |package|, qui est"
+" unique au monde, et les dépendances du package. Le fichier "
+":term:`package.xml` sert également de fichier marqueur qui indique "
+"l'emplacement du |package| sur le système de fichiers."
+
+#: ../../source/Concepts/About-Build-System.rst:29
+msgid ""
+"Parsing of the :term:`package.xml` files is provided by ``catkin_pkg`` (as "
+"in ROS 1), while functionality to locate |packages| by searching the file "
+"system for these :term:`package.xml` files is provided by build tools such "
+"as ``colcon``."
+msgstr ""
+"L'analyse des fichiers :term:`package.xml` est fournie par ``catkin_pkg`` "
+"(comme dans ROS 1), tandis que la fonctionnalité permettant de localiser "
+"|packages| en recherchant dans le système de fichiers ces fichiers "
+":term:`package.xml` est fourni par des outils de construction tels que "
+"``colcon``."
+
+#: ../../source/Concepts/About-Build-System.rst:32
+msgid "package.xml"
+msgstr "package.xml"
+
+#: ../../source/Concepts/About-Build-System.rst:34
+msgid ""
+"Package manifest file which marks the root of a :term:`package` and contains"
+" meta information about the :term:`package` including its name, version, "
+"description, maintainer, license, dependencies, and more. The contents of "
+"the manifest are in machine readable XML format and the contents are "
+"described in the |REPs| `127 <http://www.ros.org/reps/rep-0127.html>`_ and "
+"`140 <http://www.ros.org/reps/rep-0140.html>`_, with the possibility of "
+"further modifications in future |REPs|."
+msgstr ""
+"Fichier manifeste de package qui marque la racine d'un :term:`package` et "
+"contient des méta-informations sur le :term:`package`, notamment son nom, sa"
+" version, sa description, son responsable, sa licence, ses dépendances, etc."
+" Le contenu du manifeste est au format XML lisible par machine et le contenu"
+" est décrit dans les |REPs| `127 <http://www.ros.org/reps/rep-0127.html>`_ "
+"et `140 <http://www.ros.org/reps/rep-0140.html>`_, avec le possibilité de "
+"modifications ultérieures dans les futurs |REPs|."
+
+#: ../../source/Concepts/About-Build-System.rst:37
+msgid ""
+"So anytime some |package| is referred to as an :term:`ament package`, it "
+"means that it is a single unit of software (source code, build files, tests,"
+" documentation, and other resources) which is described using a "
+":term:`package.xml` manifest file."
+msgstr ""
+"Donc, à tout moment, un |package| est appelé :term:`ament package`, cela "
+"signifie qu'il s'agit d'une seule unité de logiciel (code source, fichiers "
+"de construction, tests, documentation et autres ressources) qui est décrite "
+"à l'aide d'un :term:`package.xml ` fichier manifeste."
+
+#: ../../source/Concepts/About-Build-System.rst:40
+msgid "ament package"
+msgstr "forfait actuel"
+
+#: ../../source/Concepts/About-Build-System.rst:42
+msgid ""
+"Any |package| which contains a :term:`package.xml` and follows the packaging"
+" guidelines of ``ament``, regardless of the underlying build system."
+msgstr ""
+"Tout |forfait| qui contient un :term:`package.xml` et suit les directives "
+"d'empaquetage de ``ament``, quel que soit le système de construction sous-"
+"jacent."
+
+#: ../../source/Concepts/About-Build-System.rst:44
+msgid ""
+"Since the term :term:`ament package` is build system agnostic, there can be "
+"different kinds of |ament packages|, e.g. :term:`ament CMake package`, "
+":term:`ament Python package`, etc."
+msgstr ""
+"Étant donné que le terme :term:`paquet d'ament` est indépendant du système "
+"de construction, il peut y avoir différents types de |paquets d'ament|, par "
+"ex. :term:`ament CMake package`, :term:`ament Python package`, etc."
+
+#: ../../source/Concepts/About-Build-System.rst:46
+msgid ""
+"Here is a list of common package types that you might run into in this "
+"software stack:"
+msgstr ""
+"Voici une liste des types de packages courants que vous pourriez rencontrer "
+"dans cette pile logicielle :"
+
+#: ../../source/Concepts/About-Build-System.rst:49
+msgid "CMake package"
+msgstr "Paquet CMake"
+
+#: ../../source/Concepts/About-Build-System.rst:51
+msgid ""
+"Any |package| containing a plain CMake project and a :term:`package.xml` "
+"manifest file."
+msgstr ""
+"Tout |forfait| contenant un projet CMake simple et un fichier manifeste "
+":term:`package.xml`."
+
+#: ../../source/Concepts/About-Build-System.rst:52
+msgid "ament CMake package"
+msgstr "ament CMake package"
+
+#: ../../source/Concepts/About-Build-System.rst:54
+msgid ""
+"A :term:`CMake package` that also follows the ``ament`` packaging "
+"guidelines."
+msgstr ""
+"Un :term:`paquet CMake` qui suit également les directives de conditionnement"
+" de ``ament``."
+
+#: ../../source/Concepts/About-Build-System.rst:55
+msgid "Python package"
+msgstr "Paquet Python"
+
+#: ../../source/Concepts/About-Build-System.rst:57
+msgid ""
+"Any |package| containing a `setuptools "
+"<https://pypi.org/project/setuptools/>`_ based Python project and a "
+":term:`package.xml` manifest file."
+msgstr ""
+"Tout |forfait| contenant un projet Python basé sur `setuptools "
+"<https://pypi.org/project/setuptools/>`_ et un fichier manifeste "
+":term:`package.xml`."
+
+#: ../../source/Concepts/About-Build-System.rst:58
+msgid "ament Python package"
+msgstr "actuellement package Python"
+
+#: ../../source/Concepts/About-Build-System.rst:60
+msgid ""
+"A :term:`Python package` that also follows the ``ament`` packaging "
+"guidelines."
+msgstr ""
+"Un :term:`paquet Python` qui suit également les directives de "
+"conditionnement de ``ament``."
+
+#: ../../source/Concepts/About-Build-System.rst:63
+msgid "The ``ament_cmake`` Repository"
+msgstr "Le référentiel ``ament_cmake``"
+
+#: ../../source/Concepts/About-Build-System.rst:65
+msgid ""
+"Located on |GitHub|_ at `ament/ament_cmake "
+"<https://github.com/ament/ament_cmake>`_, this repository contains many "
+"\"ament CMake\" and pure CMake packages which provide the infrastructure in "
+"CMake that is required to create \"ament CMake\" packages. In this context "
+"\"ament CMake\" packages means: ``ament`` packages that are built using "
+"CMake. So the |packages| in this repository provide the necessary CMake "
+"functions/macros and CMake Modules to facilitate creating more \"ament "
+"CMake\" (or ``ament_cmake``) packages. Packages of this type are identified "
+"with the ``<build_type>ament_cmake</build_type>`` tag in the ``<export>`` "
+"tag of the :term:`package.xml` file."
+msgstr ""
+"Situé sur |GitHub|_ à `ament/ament_cmake "
+"<https://github.com/ament/ament_cmake>`_, ce référentiel contient de "
+"nombreux packages \"ament CMake\" et CMake purs qui fournissent "
+"l'infrastructure dans CMake nécessaire pour créer packages \"ament CMake\". "
+"Dans ce contexte, les packages \"ament CMake\" signifient : les packages "
+"``ament`` construits à l'aide de CMake. Alors les |paquets| dans ce "
+"référentiel, fournissez les fonctions/macros CMake nécessaires et les "
+"modules CMake pour faciliter la création de plusieurs packages \"ament "
+"CMake\" (ou ``ament_cmake``). Les packages de ce type sont identifiés par la"
+" balise ``<build_type>ament_cmake</build_type>`` dans la balise ``<export>``"
+" du fichier :term:`package.xml`."
+
+#: ../../source/Concepts/About-Build-System.rst:70
+msgid ""
+"The |packages| in this repository are extremely modular, but there is a "
+"single \"bottleneck\" |package| called ``ament_cmake``. Anyone can depend on"
+" the ``ament_cmake`` |package| to get all of the aggregate functionality of "
+"the |packages| in this repository. Here a list of the |packages| in the "
+"repository along with a short description:"
+msgstr ""
+"Les |forfaits| dans ce référentiel sont extrêmement modulaires, mais il "
+"existe un seul \"goulot d'étranglement\" |package| appelé ``ament_cmake``. "
+"N'importe qui peut dépendre du |package| ``ament_cmake`` pour obtenir toutes"
+" les fonctionnalités agrégées des |packages| dans ce référentiel. Voici une "
+"liste des |packages| dans le référentiel avec une courte description :"
+
+#: ../../source/Concepts/About-Build-System.rst:74
+msgid "``ament_cmake``"
+msgstr "``ament_cmake''"
+
+#: ../../source/Concepts/About-Build-System.rst:76
+msgid ""
+"aggregates all other |packages| in this repository, users need only to "
+"depend on this"
+msgstr ""
+"agrège tous les autres |packages| dans ce référentiel, les utilisateurs "
+"n'ont qu'à dépendre de ce"
+
+#: ../../source/Concepts/About-Build-System.rst:78
+msgid "``ament_cmake_auto``"
+msgstr "``ament_cmake_auto``"
+
+#: ../../source/Concepts/About-Build-System.rst:80
+msgid ""
+"provides convenience CMake functions which automatically handle a lot of the"
+" tedious parts of writing a |package|'s ``CMakeLists.txt`` file"
+msgstr ""
+"fournit des fonctions CMake pratiques qui gèrent automatiquement une grande "
+"partie des parties fastidieuses de l'écriture du fichier ``CMakeLists.txt`` "
+"d'un |package|"
+
+#: ../../source/Concepts/About-Build-System.rst:82
+msgid "``ament_cmake_core``"
+msgstr "``ament_cmake_core``"
+
+#: ../../source/Concepts/About-Build-System.rst:84
+msgid ""
+"provides all built-in core concepts for ``ament``, e.g. environment hooks, "
+"resource indexing, symbolic linking install and others"
+msgstr ""
+"fournit tous les concepts de base intégrés pour ``ament``, par ex. crochets "
+"d'environnement, indexation des ressources, installation de liens "
+"symboliques et autres"
+
+#: ../../source/Concepts/About-Build-System.rst:86
+msgid "``ament_cmake_gmock``"
+msgstr "``ament_cmake_gmock``"
+
+#: ../../source/Concepts/About-Build-System.rst:88
+msgid "adds convenience functions for making gmock based unit tests"
+msgstr ""
+"ajoute des fonctions pratiques pour effectuer des tests unitaires basés sur "
+"gmock"
+
+#: ../../source/Concepts/About-Build-System.rst:90
+msgid "``ament_cmake_gtest``"
+msgstr "``ament_cmake_gtest''"
+
+#: ../../source/Concepts/About-Build-System.rst:92
+msgid "adds convenience functions for making gtest based automated tests"
+msgstr ""
+"ajoute des fonctions pratiques pour effectuer des tests automatisés basés "
+"sur gtest"
+
+#: ../../source/Concepts/About-Build-System.rst:94
+msgid "``ament_cmake_nose``"
+msgstr "``ament_cmake_nose``"
+
+#: ../../source/Concepts/About-Build-System.rst:96
+msgid ""
+"adds convenience functions for making nosetests based python automated tests"
+msgstr ""
+"ajoute des fonctions pratiques pour effectuer des tests automatisés en "
+"python basés sur nosestests"
+
+#: ../../source/Concepts/About-Build-System.rst:98
+msgid "``ament_cmake_python``"
+msgstr "``ament_cmake_python''"
+
+#: ../../source/Concepts/About-Build-System.rst:100
+msgid "provides CMake functions for |packages| that contain Python code"
+msgstr "fournit des fonctions CMake pour |packages| contenant du code Python"
+
+#: ../../source/Concepts/About-Build-System.rst:101
+msgid ""
+"see the :doc:`ament_cmake_python user documentation <../How-To-Guides/Ament-"
+"CMake-Python-Documentation>`"
+msgstr ""
+"voir la :doc:`ament_cmake_python documentation utilisateur <../How-To-"
+"Guides/Ament-CMake-Python-Documentation>`"
+
+#: ../../source/Concepts/About-Build-System.rst:103
+msgid "``ament_cmake_test``"
+msgstr "``ament_cmake_test``"
+
+#: ../../source/Concepts/About-Build-System.rst:105
+msgid ""
+"aggregates different kinds of tests, e.g. gtest and nosetests, under a "
+"single target using `CTest "
+"<https://cmake.org/Wiki/CMake/Testing_With_CTest>`_"
+msgstr ""
+"regroupe différents types de tests, par ex. gtest et nosetests, sous une "
+"seule cible en utilisant `CTest "
+"<https://cmake.org/Wiki/CMake/Testing_With_CTest>`_"
+
+#: ../../source/Concepts/About-Build-System.rst:107
+msgid ""
+"The ``ament_cmake_core`` |package| contains a lot of the CMake "
+"infrastructure that makes it possible to cleanly pass information between "
+"|packages| using conventional interfaces. This makes the |packages| have "
+"more decoupled build interfaces with other |packages|, promoting their reuse"
+" and encouraging conventions in the build systems of different |packages|. "
+"For instance it provides a standard way to pass include directories, "
+"libraries, definitions, and dependencies between |packages| so that "
+"consumers of this information can access this information in a conventional "
+"way."
+msgstr ""
+"Le |paquet| ``ament_cmake_core`` contient une grande partie de "
+"l'infrastructure CMake qui permet de transmettre proprement des informations"
+" entre |packages| à l'aide d'interfaces classiques. Cela rend les |paquets| "
+"ont des interfaces de construction plus découplées avec d'autres |packages|,"
+" favorisant leur réutilisation et encourageant les conventions dans les "
+"systèmes de construction de différents |packages|. Par exemple, il fournit "
+"un moyen standard de transmettre des répertoires d'inclusion, des "
+"bibliothèques, des définitions et des dépendances entre |packages| afin que "
+"les consommateurs de ces informations puissent accéder à ces informations de"
+" manière conventionnelle."
+
+#: ../../source/Concepts/About-Build-System.rst:111
+msgid ""
+"The ``ament_cmake_core`` |package| also provides features of the ``ament`` "
+"build system like symbolic link installation, which allows you to "
+"symbolically link files from either the source space or the build space into"
+" the install space rather than copying them. This allows you to install once"
+" and then edit non-generated resources like Python code and configuration "
+"files without having to rerun the install step for them to take effect. This"
+" feature essentially replaces the \"devel space\" from ``catkin`` because it"
+" has most of the advantages with few of the complications or drawbacks."
+msgstr ""
+"Le |paquet| ``ament_cmake_core`` fournit également des fonctionnalités du "
+"système de construction ``ament`` comme l'installation de liens symboliques,"
+" qui vous permet de lier symboliquement des fichiers depuis l'espace source "
+"ou l'espace de construction dans l'espace d'installation plutôt que de les "
+"copier. Cela vous permet d'installer une fois, puis de modifier les "
+"ressources non générées telles que le code Python et les fichiers de "
+"configuration sans avoir à réexécuter l'étape d'installation pour qu'elles "
+"prennent effet. Cette fonctionnalité remplace essentiellement \"l'espace de "
+"développement\" de ``catkin`` car elle présente la plupart des avantages "
+"avec peu de complications ou d'inconvénients."
+
+#: ../../source/Concepts/About-Build-System.rst:115
+msgid ""
+"Another feature provided by ``ament_cmake_core`` is the |package| resource "
+"indexing which is a way for |packages| to indicate that they contain a "
+"resource of some type. The design of this feature makes it much more "
+"efficient to answer simple questions like what |packages| are in this prefix"
+" (e.g. ``/usr/local``) because it only requires that you list the files in a"
+" single possible location under that prefix. You can read more about this "
+"feature in the `design docs "
+"<https://github.com/ament/ament_cmake/blob/rolling/ament_cmake_core/doc/resource_index.md>`_"
+" for the resource index."
+msgstr ""
+"Une autre fonctionnalité fournie par ``ament_cmake_core`` est le |package| "
+"l'indexation des ressources qui est un moyen pour les |packages| pour "
+"indiquer qu'ils contiennent une ressource d'un certain type. La conception "
+"de cette fonctionnalité la rend beaucoup plus efficace pour répondre à des "
+"questions simples comme quels |packages| sont dans ce préfixe (par exemple "
+"``/usr/local``) car il vous suffit de répertorier les fichiers dans un seul "
+"emplacement possible sous ce préfixe. Vous pouvez en savoir plus sur cette "
+"fonctionnalité dans les `documents de conception "
+"<https://github.com/ament/ament_cmake/blob/rolling/ament_cmake_core/doc/resource_index.md>`_"
+" pour l'index des ressources."
+
+#: ../../source/Concepts/About-Build-System.rst:119
+msgid ""
+"Like ``catkin``, ``ament_cmake_core`` also provides environment setup files "
+"and |package| specific environment hooks. The environment setup files, often"
+" named something like ``setup.bash``, are a place for |package| developers "
+"to define changes to the environment that are needed to utilize their "
+"|package|. The developers are able to do this using an \"environment hook\" "
+"which is basically an arbitrary bit of shell code that can set or modify "
+"environment variables, define shell functions, setup auto-completion rules, "
+"etc... This feature is how, for example, ROS 1 set the ``ROS_DISTRO`` "
+"environment variable without ``catkin`` knowing anything about the ROS "
+"distribution."
+msgstr ""
+"Comme ``catkin``, ``ament_cmake_core`` fournit également des fichiers de "
+"configuration d'environnement et |package| crochets d'environnement "
+"spécifiques. Les fichiers de configuration de l'environnement, souvent "
+"nommés quelque chose comme ``setup.bash``, sont un emplacement pour "
+"|package| aux développeurs de définir les changements d'environnement "
+"nécessaires pour utiliser leur |package|. Les développeurs peuvent le faire "
+"en utilisant un \"hook d'environnement\" qui est essentiellement un morceau "
+"arbitraire de code shell qui peut définir ou modifier des variables "
+"d'environnement, définir des fonctions shell, configurer des règles d'auto-"
+"complétion, etc. Cette fonctionnalité est comment, pour Par exemple, ROS 1 "
+"définit la variable d'environnement ``ROS_DISTRO`` sans que ``catkin`` sache"
+" quoi que ce soit sur la distribution ROS."
+
+#: ../../source/Concepts/About-Build-System.rst:125
+msgid "The ``ament_lint`` Repository"
+msgstr "Le dépôt ``ament_lint''"
+
+#: ../../source/Concepts/About-Build-System.rst:127
+msgid ""
+"Located on |GitHub|_ at `ament/ament_lint "
+"<https://github.com/ament/ament_lint>`_, this repository provides several "
+"|packages| which provide linting and testing services in a convenient and "
+"consistent manner. Currently there are |packages| to support C++ style "
+"linting using ``uncrustify``, static C++ code checks using ``cppcheck``, "
+"checking for copyright in source code, Python style linting using ``pep8``, "
+"and other things. The list of helper packages will likely grow in the "
+"future."
+msgstr ""
+"Situé sur |GitHub|_ à `ament/ament_lint "
+"<https://github.com/ament/ament_lint>`_, ce référentiel fournit plusieurs "
+"|packages| qui fournissent des services de peluchage et de test de manière "
+"pratique et cohérente. Actuellement, il y a des |packages| pour prendre en "
+"charge le linting de style C++ en utilisant ``uncrustify``, les "
+"vérifications de code C++ statiques en utilisant ``cppcheck``, la "
+"vérification des droits d'auteur dans le code source, le linting de style "
+"Python en utilisant ``pep8``, et d'autres choses. La liste des packages "
+"d'assistance s'allongera probablement à l'avenir."
+
+#: ../../source/Concepts/About-Build-System.rst:132
+msgid "Build tools"
+msgstr "Construire des outils"
+
+#: ../../source/Concepts/About-Build-System.rst:134
+msgid ""
+"A build tool performs the task of building a workspace of packages together "
+"at once with a single invocation. For ROS 2 releases up to Ardent, the build"
+" tool providing this functionality is called ``ament_tools``. As of ROS 2 "
+"Bouncy, ``ament_tools`` has been superseded by ``colcon``, as described in "
+"`the universal build tool article "
+"<http://design.ros2.org/articles/build_tool.html>`_."
+msgstr ""
+"Un outil de génération effectue la tâche de créer un espace de travail de "
+"packages en même temps avec une seule invocation. Pour les versions ROS 2 "
+"jusqu'à Ardent, l'outil de construction fournissant cette fonctionnalité "
+"s'appelle ``ament_tools``. Depuis ROS 2 Bouncy, ``ament_tools`` a été "
+"remplacé par ``colcon``, comme décrit dans `the universal build tool article"
+" <http://design.ros2.org/articles/build_tool.html>`_."

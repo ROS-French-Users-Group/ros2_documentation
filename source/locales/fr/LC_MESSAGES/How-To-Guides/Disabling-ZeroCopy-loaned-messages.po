@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 17:21:50.917196\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/How-To-Guides/Disabling-ZeroCopy-loaned-messages.rst:4
+msgid "Disabling Zero Copy Loaned Messages"
+msgstr "Désactivation des messages prêtés sans copie"
+
+#: ../../source/How-To-Guides/Disabling-ZeroCopy-loaned-messages.rst:8
+msgid "Contents"
+msgstr "Contenu"
+
+#: ../../source/How-To-Guides/Disabling-ZeroCopy-loaned-messages.rst:10
+msgid ""
+"See the `Loaned Messages "
+"<https://design.ros2.org/articles/zero_copy.html>`__ article for details on "
+"how loaned messages work."
+msgstr ""
+"Voir l'article `Messages prêtés "
+"<https://design.ros2.org/articles/zero_copy.html>`__ pour plus de détails "
+"sur le fonctionnement des messages prêtés."
+
+#: ../../source/How-To-Guides/Disabling-ZeroCopy-loaned-messages.rst:13
+msgid "How to disable Loaned Messages"
+msgstr "Comment désactiver les messages prêtés"
+
+#: ../../source/How-To-Guides/Disabling-ZeroCopy-loaned-messages.rst:15
+msgid ""
+"By default, *Loaned Messages* will try to borrow the memory from underlying "
+"middleware if it supports *Loaned Messages*. The "
+"``ROS_DISABLE_LOANED_MESSAGES`` environment variable can be used to disable "
+"*Loaned Messages*, and fallback to normal publisher and subscription "
+"behavior, without any code changes or middleware configuration. You can set "
+"the environment variable with the following command:"
+msgstr ""
+"Par défaut, *Loaned Messages* essaiera d'emprunter la mémoire du middleware "
+"sous-jacent s'il prend en charge *Loaned Messages*. La variable "
+"d'environnement ``ROS_DISABLE_LOANED_MESSAGES`` peut être utilisée pour "
+"désactiver * Messages prêtés * et revenir au comportement normal de "
+"l'éditeur et de l'abonnement, sans aucune modification du code ni "
+"configuration du middleware. Vous pouvez définir la variable d'environnement"
+" avec la commande suivante :"
+
+#: ../../source/How-To-Guides/Disabling-ZeroCopy-loaned-messages.rst:21
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../source/How-To-Guides/Disabling-ZeroCopy-loaned-messages.rst:27
+#: ../../source/How-To-Guides/Disabling-ZeroCopy-loaned-messages.rst:39
+msgid ""
+"To maintain this setting between shell sessions, you can add the command to "
+"your shell startup script:"
+msgstr ""
+"Pour conserver ce paramètre entre les sessions shell, vous pouvez ajouter la"
+" commande à votre script de démarrage shell :"
+
+#: ../../source/How-To-Guides/Disabling-ZeroCopy-loaned-messages.rst:33
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../source/How-To-Guides/Disabling-ZeroCopy-loaned-messages.rst:45
+msgid "Windows"
+msgstr "les fenêtres"
+
+#: ../../source/How-To-Guides/Disabling-ZeroCopy-loaned-messages.rst:51
+msgid "If you want to make this permanent between shell sessions, also run:"
+msgstr ""
+"Si vous souhaitez rendre cela permanent entre les sessions shell, exécutez "
+"également :"

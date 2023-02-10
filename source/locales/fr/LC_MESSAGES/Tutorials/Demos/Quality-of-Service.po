@@ -1,0 +1,291 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 12:05:17.337747\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:7
+msgid "Using quality-of-service settings for lossy networks"
+msgstr ""
+"Utilisation des paramètres de qualité de service pour les réseaux avec perte"
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:11
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:14
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:16
+msgid ""
+"Please read the documentation page `about QoS settings "
+"<../../Concepts/About-Quality-of-Service-Settings>` for background "
+"information on available support in ROS 2."
+msgstr ""
+"Veuillez lire la page de documentation `à propos des paramètres QoS "
+"<../../Concepts/About-Quality-of-Service-Settings>` pour obtenir des "
+"informations générales sur la prise en charge disponible dans ROS 2."
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:18
+msgid ""
+"In this demo, we will spawn a node that publishes a camera image and another"
+" that subscribes to the image and shows it on the screen. We will then "
+"simulate a lossy network connection between them and show how different "
+"quality of service settings handle the bad link."
+msgstr ""
+"Dans cette démo, nous allons générer un nœud qui publie une image de caméra "
+"et un autre qui s'abonne à l'image et l'affiche à l'écran. Nous simulerons "
+"ensuite une connexion réseau avec perte entre eux et montrerons comment "
+"différents paramètres de qualité de service gèrent le mauvais lien."
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:23
+msgid "Prerequisites"
+msgstr "Conditions préalables"
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:24
+msgid ""
+"This tutorial assumes you have a :doc:`working ROS 2 installation "
+"<../../Installation>` and OpenCV. See the `OpenCV documentation "
+"<http://docs.opencv.org/doc/tutorials/introduction/table_of_content_introduction/table_of_content_introduction.html#table-"
+"of-content-introduction>`__ for its installation instructions. You will also"
+" need the ROS package ``image_tools``."
+msgstr ""
+"Ce didacticiel suppose que vous disposez d'une :doc:`installation ROS 2 "
+"fonctionnelle <../../Installation>` et d'OpenCV. Voir la `documentation "
+"OpenCV "
+"<http://docs.opencv.org/doc/tutorials/introduction/table_of_content_introduction/table_of_content_introduction.html#table-"
+"of-content-introduction>`__ pour ses instructions d'installation. Vous aurez"
+" également besoin du package ROS ``image_tools``."
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:30
+msgid "Linux Binaries"
+msgstr "Binaires Linux"
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:36
+msgid "From Source"
+msgstr "De la source"
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:45
+msgid "Run the demo"
+msgstr "Exécutez la démo"
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:47
+msgid ""
+"Before running the demo, make sure you have a working webcam connected to "
+"your computer."
+msgstr ""
+"Avant d'exécuter la démo, assurez-vous d'avoir une webcam fonctionnelle "
+"connectée à votre ordinateur."
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:49
+msgid "Once you've installed ROS 2, source your setup file:"
+msgstr ""
+"Une fois que vous avez installé ROS 2, sourcez votre fichier "
+"d'installation :"
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:53
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:59
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:65
+msgid "Windows"
+msgstr "les fenêtres"
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:71
+msgid "Then run:"
+msgstr "Exécutez ensuite :"
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:77
+msgid ""
+"Nothing will happen yet. ``showimage`` is a subscriber node that is waiting "
+"for a publisher on the ``image`` topic."
+msgstr ""
+"Rien ne se passera encore. ``showimage`` est un nœud abonné qui attend un "
+"éditeur sur le sujet ``image``."
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:80
+msgid ""
+"Note: you have to close the ``showimage`` process with ``Ctrl-C`` later. You"
+" can't just close the window."
+msgstr ""
+"Remarque : vous devez fermer le processus ``showimage`` avec ``Ctrl-C`` plus"
+" tard. Vous ne pouvez pas simplement fermer la fenêtre."
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:83
+msgid ""
+"In a separate terminal, source the install file and run the publisher node:"
+msgstr ""
+"Dans un terminal séparé, sourcez le fichier d'installation et exécutez le "
+"nœud de l'éditeur :"
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:89
+msgid ""
+"This will publish an image from your webcam. In case you don't have a camera"
+" attached to your computer, there is a commandline option which publishes "
+"predefined images."
+msgstr ""
+"Cela publiera une image de votre webcam. Si vous n'avez pas d'appareil photo"
+" connecté à votre ordinateur, il existe une option de ligne de commande qui "
+"publie des images prédéfinies."
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:98
+msgid "In this window, you'll see terminal output:"
+msgstr "Dans cette fenêtre, vous verrez la sortie du terminal :"
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:107
+msgid ""
+"A window will pop up with the title \"view\" showing your camera feed. In "
+"the first window, you'll see output from the subscriber:"
+msgstr ""
+"Une fenêtre apparaîtra avec le titre \"vue\" montrant le flux de votre "
+"caméra. Dans la première fenêtre, vous verrez la sortie de l'abonné :"
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:119
+msgid ""
+"macOS users: If these examples do not work or you receive an error like "
+"``ddsi_conn_write failed -1`` then you'll need to increase your system wide "
+"UDP packet size:"
+msgstr ""
+"Utilisateurs macOS : si ces exemples ne fonctionnent pas ou si vous recevez "
+"une erreur telle que ``ddsi_conn_write failed -1``, vous devrez augmenter la"
+" taille des paquets UDP à l'échelle de votre système :"
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:126
+msgid ""
+"These changes will not persist a reboot. If you want the changes to persist,"
+" add these lines to ``/etc/sysctl.conf`` (create the file if it doesn't "
+"exist already):"
+msgstr ""
+"Ces modifications ne persisteront pas après un redémarrage. Si vous "
+"souhaitez que les modifications persistent, ajoutez ces lignes à "
+"``/etc/sysctl.conf`` (créez le fichier s'il n'existe pas déjà) :"
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:134
+msgid "Command line options"
+msgstr "Options de ligne de commande"
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:136
+msgid "In one of your terminals, add a -h flag to the original command:"
+msgstr ""
+"Dans l'un de vos terminaux, ajoutez un indicateur -h à la commande "
+"d'origine :"
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:146
+msgid "Add network traffic"
+msgstr "Ajouter du trafic réseau"
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:150
+msgid ""
+"This section of the demo won't work on RTI's Connext DDS. When running "
+"multiple nodes in the same host, the RTI Connext DDS implementation uses "
+"shared memory along with the loopback interface. Degrading the loopback "
+"interface throughput won't affect shared memory, thus traffic between the "
+"two nodes won't be affected."
+msgstr ""
+"Cette section de la démo ne fonctionnera pas sur Connext DDS de RTI. Lors de"
+" l'exécution de plusieurs nœuds dans le même hôte, l'implémentation RTI "
+"Connext DDS utilise la mémoire partagée avec l'interface de bouclage. La "
+"dégradation du débit de l'interface de bouclage n'affectera pas la mémoire "
+"partagée, ainsi le trafic entre les deux nœuds ne sera pas affecté."
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:156
+msgid "This next section is Linux-specific."
+msgstr "Cette section suivante est spécifique à Linux."
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:158
+msgid ""
+"However, for macOS and Windows you can achieve a similar effect with the "
+"utilities \"Network Link Conditioner\" (part of the xcode tool suite) and "
+"\"Clumsy\" (http://jagt.github.io/clumsy/index.html), respectively, but they"
+" will not be covered in this tutorial."
+msgstr ""
+"Cependant, pour macOS et Windows, vous pouvez obtenir un effet similaire "
+"avec les utilitaires \"Network Link Conditioner\" (partie de la suite "
+"d'outils xcode) et \"Clumsy\" (http://jagt.github.io/clumsy/index.html), "
+"respectivement, mais ils ne seront pas couverts dans ce tutoriel."
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:160
+msgid ""
+"We are going to use the Linux network traffic control utility, ``tc`` "
+"(http://linux.die.net/man/8/tc)."
+msgstr ""
+"Nous allons utiliser l'utilitaire Linux de contrôle du trafic réseau, ``tc``"
+" (http://linux.die.net/man/8/tc)."
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:166
+msgid ""
+"This magical incantation will simulate 5% packet loss over the local "
+"loopback device. If you use a higher resolution of the images (e.g. ``--ros-"
+"args -p width:=640 -p height:=480``) you might want to try a lower packet "
+"loss rate (e.g. ``1%``)."
+msgstr ""
+"Cette incantation magique simulera une perte de paquets de 5 % sur le "
+"périphérique de bouclage local. Si vous utilisez une résolution plus élevée "
+"des images (par exemple, ``--ros-args -p width:=640 -p height:=480``), vous "
+"voudrez peut-être essayer un taux de perte de paquets inférieur (par "
+"exemple, ``1%` `)."
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:169
+msgid ""
+"Next we start the ``cam2image`` and ``showimage``, and we'll soon notice "
+"that both programs seem to have slowed down the rate at which images are "
+"transmitted. This is caused by the behavior of the default QoS settings. "
+"Enforcing reliability on a lossy channel means that the publisher (in this "
+"case, ``cam2image``) will resend the network packets until it receives "
+"acknowledgement from the consumer (i.e. ``showimage``)."
+msgstr ""
+"Ensuite, nous lançons ``cam2image`` et ``showimage``, et nous remarquerons "
+"bientôt que les deux programmes semblent avoir ralenti la vitesse à laquelle"
+" les images sont transmises. Cela est dû au comportement des paramètres QoS "
+"par défaut. L'application de la fiabilité sur un canal avec perte signifie "
+"que l'éditeur (dans ce cas, ``cam2image``) renverra les paquets réseau "
+"jusqu'à ce qu'il reçoive l'accusé de réception du consommateur (c'est-à-dire"
+" ``showimage``)."
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:173
+msgid ""
+"Let's now try running both programs, but with more suitable settings. First "
+"of all, we'll use the ``-p reliability:=best_effort`` option to enable best "
+"effort communication. The publisher will now just attempt to deliver the "
+"network packets, and don't expect acknowledgement from the consumer. We see "
+"now that some of the frames on the ``showimage`` side were dropped, so the "
+"frame numbers in the shell running ``showimage`` won't be consecutive "
+"anymore:"
+msgstr ""
+"Essayons maintenant d'exécuter les deux programmes, mais avec des paramètres"
+" plus appropriés. Tout d'abord, nous allons utiliser l'option ``-p "
+"fiabilité:=best_effort`` pour activer la communication au mieux. L'éditeur "
+"va maintenant tenter de livrer les paquets réseau et ne s'attend pas à un "
+"accusé de réception de la part du consommateur. Nous voyons maintenant que "
+"certaines des images du côté ``showimage`` ont été supprimées, donc les "
+"numéros d'image dans le shell exécutant ``showimage`` ne seront plus "
+"consécutifs :"
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:None
+msgid "Best effort image transfer"
+msgstr "Transfert d'image au mieux"
+
+#: ../../source/Tutorials/Demos/Quality-of-Service.rst:184
+msgid "When you're done, remember to delete the queueing discipline:"
+msgstr ""
+"Lorsque vous avez terminé, n'oubliez pas de supprimer la discipline de file "
+"d'attente :"

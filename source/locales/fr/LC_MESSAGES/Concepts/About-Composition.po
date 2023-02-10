@@ -1,0 +1,239 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 14:06:28.227605\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Concepts/About-Composition.rst:2
+msgid "About Composition"
+msgstr "À propos de la composition"
+
+#: ../../source/Concepts/About-Composition.rst:6
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/Concepts/About-Composition.rst:9
+msgid "ROS 1 - Nodes vs. Nodelets"
+msgstr "ROS 1 - Nœuds vs. Nodelets"
+
+#: ../../source/Concepts/About-Composition.rst:11
+msgid ""
+"In ROS 1 you can write your code either as a `ROS node "
+"<https://wiki.ros.org/Nodes>`__ or as a `ROS nodelet "
+"<https://wiki.ros.org/nodelet>`__. ROS 1 nodes are compiled into "
+"executables. ROS 1 nodelets on the other hand are compiled into a shared "
+"library which is then loaded at runtime by a container process."
+msgstr ""
+"Dans ROS 1, vous pouvez écrire votre code soit en tant que `nœud ROS "
+"<https://wiki.ros.org/Nodes>`__ soit en tant que `nodelet ROS "
+"<https://wiki.ros.org/nodelet>`__ . Les nœuds ROS 1 sont compilés en "
+"exécutables. Les nodelets ROS 1, quant à eux, sont compilés dans une "
+"bibliothèque partagée qui est ensuite chargée au moment de l'exécution par "
+"un processus de conteneur."
+
+#: ../../source/Concepts/About-Composition.rst:16
+msgid "ROS 2 - Unified API"
+msgstr "ROS 2 - API unifiée"
+
+#: ../../source/Concepts/About-Composition.rst:18
+msgid ""
+"In ROS 2 the recommended way of writing your code is similar to a nodelet - "
+"we call it a ``Component``. This makes it easy to add common concepts to "
+"existing code, like a `life cycle "
+"<https://design.ros2.org/articles/node_lifecycle.html>`__. The biggest "
+"drawback of different APIs is avoided in ROS 2 since both approaches use the"
+" same API in ROS 2."
+msgstr ""
+"Dans ROS 2, la manière recommandée d'écrire votre code est similaire à un "
+"nodelet - nous l'appelons un ``Component``. Cela facilite l'ajout de "
+"concepts communs au code existant, comme un `cycle de vie "
+"<https://design.ros2.org/articles/node_lifecycle.html>`__. Le plus gros "
+"inconvénient des différentes API est évité dans ROS 2 puisque les deux "
+"approches utilisent la même API dans ROS 2."
+
+#: ../../source/Concepts/About-Composition.rst:24
+msgid ""
+"It is still possible to use the node-like style of \"writing your own main\""
+" but for the common case it is not recommended."
+msgstr ""
+"Il est toujours possible d'utiliser le style de type nœud de \"écrire votre "
+"propre main\", mais pour le cas courant, il n'est pas recommandé."
+
+#: ../../source/Concepts/About-Composition.rst:27
+msgid ""
+"By making the process layout a deploy-time decision the user can choose "
+"between:"
+msgstr ""
+"En faisant de la disposition du processus une décision au moment du "
+"déploiement, l'utilisateur peut choisir entre :"
+
+#: ../../source/Concepts/About-Composition.rst:30
+msgid ""
+"running multiple nodes in separate processes with the benefits of "
+"process/fault isolation as well as easier debugging of individual nodes and"
+msgstr ""
+"exécuter plusieurs nœuds dans des processus séparés avec les avantages de "
+"l'isolation des processus/défauts ainsi qu'un débogage plus facile des nœuds"
+" individuels et"
+
+#: ../../source/Concepts/About-Composition.rst:31
+msgid ""
+"running multiple nodes in a single process with the lower overhead and "
+"optionally more efficient communication (see :doc:`Intra Process "
+"Communication <../Tutorials/Demos/Intra-Process-Communication>`)."
+msgstr ""
+"exécutant plusieurs nœuds dans un seul processus avec une surcharge moindre "
+"et éventuellement une communication plus efficace (voir :doc:`Intra Process "
+"Communication <../Tutorials/Demos/Intra-Process-Communication>`)."
+
+#: ../../source/Concepts/About-Composition.rst:33
+msgid ""
+"Additionally ``ros2 launch`` can be used to automate these actions through "
+"specialized launch actions."
+msgstr ""
+"De plus, ``ros2 launch`` peut être utilisé pour automatiser ces actions "
+"grâce à des actions de lancement spécialisées."
+
+#: ../../source/Concepts/About-Composition.rst:37
+msgid "Writing a Component"
+msgstr "Ecrire un composant"
+
+#: ../../source/Concepts/About-Composition.rst:39
+msgid ""
+"Since a component is only built into a shared library it doesn't have a "
+"``main`` function (see `Talker source code "
+"<https://github.com/ros2/demos/blob/rolling/composition/src/talker_component.cpp>`__)."
+" A component is commonly a subclass of ``rclcpp::Node``. Since it is not in "
+"control of the thread it shouldn't perform any long running or blocking "
+"tasks in its constructor. Instead it can use timers to get periodic "
+"notification. Additionally it can create publishers, subscribers, servers, "
+"and clients."
+msgstr ""
+"Puisqu'un composant n'est intégré qu'à une bibliothèque partagée, il n'a pas"
+" de fonction ``main`` (voir `Talker source code "
+"<https://github.com/ros2/demos/blob/rolling/composition/src/talker_component"
+" .cpp>`__). Un composant est généralement une sous-classe de "
+"``rclcpp::Node``. Puisqu'il ne contrôle pas le thread, il ne devrait pas "
+"effectuer de tâches longues ou bloquantes dans son constructeur. Au lieu de "
+"cela, il peut utiliser des minuteries pour obtenir une notification "
+"périodique. De plus, il peut créer des éditeurs, des abonnés, des serveurs "
+"et des clients."
+
+#: ../../source/Concepts/About-Composition.rst:45
+msgid ""
+"An important aspect of making such a class a component is that the class "
+"registers itself using macros from the package ``rclcpp_components`` (see "
+"the last line in the source code). This makes the component discoverable "
+"when its library is being loaded into a running process - it acts as kind of"
+" an entry point."
+msgstr ""
+"Un aspect important de la transformation d'une telle classe en composant est"
+" que la classe s'enregistre elle-même à l'aide des macros du package "
+"``rclcpp_components`` (voir la dernière ligne du code source). Cela rend le "
+"composant détectable lorsque sa bibliothèque est chargée dans un processus "
+"en cours d'exécution - il agit comme une sorte de point d'entrée."
+
+#: ../../source/Concepts/About-Composition.rst:48
+msgid ""
+"Additionally, once a component is created, it must be registered with the "
+"index to be discoverable by the tooling."
+msgstr ""
+"De plus, une fois qu'un composant est créé, il doit être enregistré auprès "
+"de l'index pour pouvoir être découvert par les outils."
+
+#: ../../source/Concepts/About-Composition.rst:60
+msgid ""
+"In order for the component_container to be able to find desired components, "
+"it must be executed or launched from a shell that has sourced the "
+"corresponding workspace."
+msgstr ""
+"Pour que le component_container puisse trouver les composants souhaités, il "
+"doit être exécuté ou lancé à partir d'un shell qui a sourcé l'espace de "
+"travail correspondant."
+
+#: ../../source/Concepts/About-Composition.rst:65
+msgid "Using Components"
+msgstr "Utiliser des composants"
+
+#: ../../source/Concepts/About-Composition.rst:67
+msgid ""
+"The `composition <https://github.com/ros2/demos/tree/rolling/composition>`__"
+" package contains a couple of different approaches on how to use components."
+" The three most common ones are:"
+msgstr ""
+"Le package `composition "
+"<https://github.com/ros2/demos/tree/rolling/composition>`__ contient "
+"plusieurs approches différentes sur la façon d'utiliser les composants. Les "
+"trois plus courants sont :"
+
+#: ../../source/Concepts/About-Composition.rst:71
+msgid ""
+"Start a (`generic container process "
+"<https://github.com/ros2/rclcpp/blob/rolling/rclcpp_components/src/component_container.cpp>`__)"
+" and call the ROS service `load_node "
+"<https://github.com/ros2/rcl_interfaces/blob/rolling/composition_interfaces/srv/LoadNode.srv>`__"
+" offered by the container. The ROS service will then load the component "
+"specified by the passed package name and library name and start executing it"
+" within the running process. Instead of calling the ROS service "
+"programmatically you can also use a `command line tool "
+"<https://github.com/ros2/ros2cli/tree/rolling/ros2component>`__ to invoke "
+"the ROS service with the passed command line arguments"
+msgstr ""
+"Démarrez un (`processus de conteneur générique "
+"<https://github.com/ros2/rclcpp/blob/rolling/rclcpp_components/src/component_container.cpp>`__)"
+" et appelez le service ROS `load_node <https://github.com "
+"/ros2/rcl_interfaces/blob/rolling/composition_interfaces/srv/LoadNode.srv>`__"
+" offert par le conteneur. Le service ROS chargera alors le composant "
+"spécifié par le nom de package et le nom de bibliothèque passés et "
+"commencera à l'exécuter dans le processus en cours d'exécution. Au lieu "
+"d'appeler le service ROS par programmation, vous pouvez également utiliser "
+"un `outil de ligne de commande "
+"<https://github.com/ros2/ros2cli/tree/rolling/ros2component>`__ pour appeler"
+" le service ROS avec les arguments de ligne de commande passés"
+
+#: ../../source/Concepts/About-Composition.rst:74
+msgid ""
+"Create a `custom executable "
+"<https://github.com/ros2/demos/blob/rolling/composition/src/manual_composition.cpp>`__"
+" containing multiple nodes which are known at compile time. This approach "
+"requires that each component has a header file (which is not strictly needed"
+" for the first case)."
+msgstr ""
+"Créez un `exécutable personnalisé "
+"<https://github.com/ros2/demos/blob/rolling/composition/src/manual_composition.cpp>`__"
+" contenant plusieurs nœuds connus au moment de la compilation. Cette "
+"approche nécessite que chaque composant ait un fichier d'en-tête (ce qui "
+"n'est pas strictement nécessaire pour le premier cas)."
+
+#: ../../source/Concepts/About-Composition.rst:76
+msgid ""
+"Create a launch file and use ``ros2 launch`` to create a container process "
+"with multiple components loaded."
+msgstr ""
+"Créez un fichier de lancement et utilisez ``ros2 launch`` pour créer un "
+"processus de conteneur avec plusieurs composants chargés."
+
+#: ../../source/Concepts/About-Composition.rst:79
+msgid "Practical application"
+msgstr "Application pratique"
+
+#: ../../source/Concepts/About-Composition.rst:81
+msgid ""
+"Try the :doc:`Composition demos <../Tutorials/Intermediate/Composition>`."
+msgstr ""
+"Essayez les :doc:`démos de composition "
+"<../Tutorials/Intermediate/Composition>`."

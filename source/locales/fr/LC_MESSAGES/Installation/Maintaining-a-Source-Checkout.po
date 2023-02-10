@@ -1,0 +1,153 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 17:34:43.479170\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:4
+msgid "Maintain source checkout"
+msgstr "Maintenir la vérification de la source"
+
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:17
+msgid ""
+"If you have installed ROS 2 from source, there may have been changes made to"
+" the source code since the time that you checked it out. To keep your source"
+" checkout up to date, you will have to periodically update your "
+"``ros2.repos`` file, download the latest sources, and rebuild your "
+"workspace."
+msgstr ""
+"Si vous avez installé ROS 2 à partir de la source, des modifications ont "
+"peut-être été apportées au code source depuis le moment où vous l'avez "
+"extrait. Pour garder votre extraction de source à jour, vous devrez "
+"périodiquement mettre à jour votre fichier ``ros2.repos``, télécharger les "
+"dernières sources et reconstruire votre espace de travail."
+
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:21
+msgid "Update your repository list"
+msgstr "Mettre à jour votre liste de référentiels"
+
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:23
+msgid ""
+"Each ROS 2 release includes a ``ros2.repos`` file that contains the list of "
+"repositories and their version for that release."
+msgstr ""
+"Chaque version de ROS 2 inclut un fichier ``ros2.repos`` qui contient la "
+"liste des référentiels et leur version pour cette version."
+
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:27
+msgid "Latest ROS 2 Rolling branches"
+msgstr "Dernières agences ROS 2 Rolling"
+
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:29
+msgid ""
+"If you wish to checkout the latest code for ROS 2 Rolling, you can get the "
+"relevant repository list by running:"
+msgstr ""
+"Si vous souhaitez vérifier le dernier code pour ROS 2 Rolling, vous pouvez "
+"obtenir la liste des référentiels pertinents en exécutant :"
+
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:33
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:80
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:123
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:41
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:87
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:130
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:49
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:94
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:137
+msgid "Windows"
+msgstr "les fenêtres"
+
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:63
+msgid "Update your repositories"
+msgstr "Mettez à jour vos référentiels"
+
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:65
+msgid ""
+"You will notice that in the `ros2.repos "
+"<https://raw.githubusercontent.com/ros2/ros2/rolling/ros2.repos>`__ file, "
+"each repository has a ``version`` associated with it that points to a "
+"particular commit hash, tag, or branch name. It is possible that these "
+"versions refer to new tags/branches that your local copy of the repositories"
+" will not recognize as they are out-of-date. Because of this, you should "
+"update the repositories that you have already checked out with the following"
+" command:"
+msgstr ""
+"Vous remarquerez que dans le fichier `ros2.repos "
+"<https://raw.githubusercontent.com/ros2/ros2/rolling/ros2.repos>`__, chaque "
+"référentiel est associé à une ``version`` qui pointe vers un hachage de "
+"validation, une balise ou un nom de branche particulier. Il est possible que"
+" ces versions fassent référence à de nouvelles balises/branches que votre "
+"copie locale des référentiels ne reconnaîtra pas car elles sont obsolètes. "
+"Pour cette raison, vous devez mettre à jour les référentiels que vous avez "
+"déjà extraits avec la commande suivante :"
+
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:74
+msgid "Download the new source code"
+msgstr "Télécharger le nouveau code source"
+
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:76
+msgid ""
+"You should now be able to download the sources associated with the new "
+"repository list with:"
+msgstr ""
+"Vous devriez maintenant pouvoir télécharger les sources associées à la "
+"nouvelle liste de dépôts avec :"
+
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:107
+msgid "Rebuild your workspace"
+msgstr "Reconstruisez votre espace de travail"
+
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:109
+msgid ""
+"Now that the workspace is up to date with the latest sources, remove your "
+"previous install and rebuild your workspace with, for example:"
+msgstr ""
+"Maintenant que l'espace de travail est à jour avec les dernières sources, "
+"supprimez votre installation précédente et reconstruisez votre espace de "
+"travail avec, par exemple :"
+
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:116
+msgid "Inspect your source checkout"
+msgstr "Inspectez votre caisse de source"
+
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:118
+msgid ""
+"During your development you may have deviated from the original state of "
+"your workspace from when you imported the repository list. If you wish to "
+"know the versions of the set of repositories in your workspace, you can "
+"export the information using the following command:"
+msgstr ""
+"Au cours de votre développement, vous avez peut-être dévié de l'état "
+"d'origine de votre espace de travail au moment où vous avez importé la liste"
+" des référentiels. Si vous souhaitez connaître les versions de l'ensemble "
+"des dépôts de votre espace de travail, vous pouvez exporter les informations"
+" à l'aide de la commande suivante :"
+
+#: ../../source/Installation/Maintaining-a-Source-Checkout.rst:144
+msgid ""
+"This ``my_ros2.repos`` file can then be shared with others so that they can "
+"reproduce the state of the repositories in your workspace."
+msgstr ""
+"Ce fichier ``my_ros2.repos`` peut ensuite être partagé avec d'autres afin "
+"qu'ils puissent reproduire l'état des dépôts dans votre espace de travail."

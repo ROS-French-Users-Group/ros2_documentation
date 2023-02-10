@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 14:07:52.265913\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Concepts/About-Cross-Compilation.rst:2
+msgid "About Cross-compilation"
+msgstr "À propos de la compilation croisée"
+
+#: ../../source/Concepts/About-Cross-Compilation.rst:5
+msgid "Overview"
+msgstr "Aperçu"
+
+#: ../../source/Concepts/About-Cross-Compilation.rst:10
+msgid ""
+"Open Robotics provides pre-built ROS 2 packages for multiple platforms, but "
+"a number of developers still rely on `cross-compilation "
+"<https://en.wikipedia.org/wiki/Cross_compiler>`__ for different reasons such"
+" as:"
+msgstr ""
+"Open Robotics fournit des packages ROS 2 pré-construits pour plusieurs "
+"plates-formes, mais un certain nombre de développeurs s'appuient toujours "
+"sur la `compilation croisée "
+"<https://en.wikipedia.org/wiki/Cross_compiler>`__ pour différentes raisons "
+"telles que :"
+
+#: ../../source/Concepts/About-Cross-Compilation.rst:8
+msgid "The development machine does not match the target system."
+msgstr "La machine de développement ne correspond pas au système cible."
+
+#: ../../source/Concepts/About-Cross-Compilation.rst:9
+msgid ""
+"Tuning the build for specific core architecture (e.g. setting "
+"-mcpu=cortex-a53 -mfpu=neon-fp-armv8 when building for Raspberry Pi3)."
+msgstr ""
+"Réglage de la construction pour une architecture de base spécifique (par "
+"exemple, réglage -mcpu=cortex-a53 -mfpu=neon-fp-armv8 lors de la "
+"construction pour Raspberry Pi3)."
+
+#: ../../source/Concepts/About-Cross-Compilation.rst:10
+msgid ""
+"Targeting a different file systems other than the ones supported by the pre-"
+"built images released by Open Robotics."
+msgstr ""
+"Cibler des systèmes de fichiers différents de ceux pris en charge par les "
+"images pré-construites publiées par Open Robotics."
+
+#: ../../source/Concepts/About-Cross-Compilation.rst:13
+msgid "How does it work ?"
+msgstr "Comment ça marche ?"
+
+#: ../../source/Concepts/About-Cross-Compilation.rst:15
+msgid ""
+"Cross-compiling simple software (e.g. no dependencies on external libraries)"
+" is relatively simple and only requiring a cross-compiler toolchain to be "
+"used instead of the native toolchain."
+msgstr ""
+"La compilation croisée de logiciels simples (par exemple, sans dépendances à"
+" des bibliothèques externes) est relativement simple et ne nécessite qu'une "
+"chaîne d'outils de compilateur croisé à utiliser à la place de la chaîne "
+"d'outils native."
+
+#: ../../source/Concepts/About-Cross-Compilation.rst:17
+msgid ""
+"There are a number of factors which make this process more complex: - The "
+"software being built must support the target architecture. Architecture "
+"specific code must be properly isolated and enabled during the build "
+"according to the target architecture. Examples include assembly code. - All "
+"dependencies (e.g. libraries) must be present, either as pre-built packages "
+"or also cross-compiled before the target software using them is cross-"
+"compiled. - When building software stacks (as opposed to standalone "
+"software) using build tools (e.g. colcon), it is expected that the build "
+"tool provides a mechanism to allow the developer to enable cross-compilation"
+" on the underlying build system used by each piece of software in the stack."
+msgstr ""
+"Plusieurs facteurs rendent ce processus plus complexe : - Le logiciel en "
+"cours de construction doit prendre en charge l'architecture cible. Le code "
+"spécifique à l'architecture doit être correctement isolé et activé lors de "
+"la génération en fonction de l'architecture cible. Les exemples incluent le "
+"code assembleur. - Toutes les dépendances (par exemple, les bibliothèques) "
+"doivent être présentes, soit sous forme de packages pré-construits, soit "
+"également compilées de manière croisée avant que le logiciel cible qui les "
+"utilise ne soit compilé de manière croisée. - Lors de la construction de "
+"piles de logiciels (par opposition à des logiciels autonomes) à l'aide "
+"d'outils de construction (par exemple, colcon), on s'attend à ce que l'outil"
+" de construction fournisse un mécanisme permettant au développeur d'activer "
+"la compilation croisée sur le système de construction sous-jacent utilisé "
+"par chaque morceau de logiciel dans la pile."
+
+#: ../../source/Concepts/About-Cross-Compilation.rst:23
+msgid "Cross-compiling ROS 2"
+msgstr "Cross-compilation ROS 2"
+
+#: ../../source/Concepts/About-Cross-Compilation.rst:25
+msgid ""
+"The ROS 2 cross-compile tool is under shared ownership of Open Robotics and "
+"ROS Tooling Working Group. It is a Python script that compiles ROS 2 source "
+"files for supported target architectures using an emulator in a docker "
+"container. Detailed design of the tool can be found on `ROS 2 design "
+"<https://design.ros2.org/articles/cc_build_tools.html>`__. Instructions to "
+"use the tool are in the `cross_compile package <https://github.com/ros-"
+"tooling/cross_compile>`__."
+msgstr ""
+"L'outil de compilation croisée ROS 2 est sous la propriété partagée d'Open "
+"Robotics et du groupe de travail ROS Tooling. Il s'agit d'un script Python "
+"qui compile les fichiers source ROS 2 pour les architectures cibles prises "
+"en charge à l'aide d'un émulateur dans un conteneur Docker. La conception "
+"détaillée de l'outil peut être trouvée sur `ROS 2 design "
+"<https://design.ros2.org/articles/cc_build_tools.html>`__. Les instructions "
+"d'utilisation de l'outil se trouvent dans le `package cross_compile "
+"<https://github.com/ros-tooling/cross_compile>`__."
+
+#: ../../source/Concepts/About-Cross-Compilation.rst:30
+msgid ""
+"If you are using an older version, please follow the :doc:`cross-compilation"
+" guide <../How-To-Guides/Cross-compilation>`."
+msgstr ""
+"Si vous utilisez une version plus ancienne, veuillez suivre le :doc:`guide "
+"de compilation croisée <../How-To-Guides/Cross-compilation>`."

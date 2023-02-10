@@ -1,0 +1,295 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 12:05:41.838610\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:6
+msgid "Creating a content filtering subscription"
+msgstr "Création d'un abonnement au filtrage de contenu"
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:8
+msgid "**Goal:** Create a content filtering subscription."
+msgstr "**Objectif :** Créer un abonnement au filtrage de contenu."
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:10
+msgid "**Tutorial level:** Advanced"
+msgstr "**Niveau du didacticiel :** Avancé"
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:12
+msgid "**Time:** 15 minutes"
+msgstr "**Durée :** 15 minutes"
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:16
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:19
+msgid "Overview"
+msgstr "Aperçu"
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:21
+msgid ""
+"ROS 2 applications typically consist of topics to transmit data from "
+"publishers to subscriptions. Basically, subscriptions receive all published "
+"data from publishers on the topic. But sometimes, a subscription might be "
+"interested in only a subset of the data which is being sent by publishers. A"
+" content filtering subscription allows to receive only the data of interest "
+"for the application."
+msgstr ""
+"Les applications ROS 2 consistent généralement en des sujets pour "
+"transmettre des données des éditeurs aux abonnements. Fondamentalement, les "
+"abonnements reçoivent toutes les données publiées des éditeurs sur le sujet."
+" Mais parfois, un abonnement peut ne s'intéresser qu'à un sous-ensemble des "
+"données envoyées par les éditeurs. Un abonnement de filtrage de contenu "
+"permet de recevoir uniquement les données d'intérêt pour l'application."
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:26
+msgid ""
+"In this demo, we'll be highlighting how to create a content filtering "
+"subscription and how they work."
+msgstr ""
+"Dans cette démo, nous expliquerons comment créer un abonnement de filtrage "
+"de contenu et comment ils fonctionnent."
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:29
+msgid "RMW Support"
+msgstr "Assistance RMW"
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:31
+msgid "Content filtering subscriptions require RMW implementation support."
+msgstr ""
+"Les abonnements au filtrage de contenu nécessitent la prise en charge de la "
+"mise en œuvre de RMW."
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:33
+msgid "Content-Filtering-Subscription Support Status"
+msgstr "Statut de prise en charge du filtrage de contenu et de l'abonnement"
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:36
+msgid "rmw_fastrtps"
+msgstr "rmw_fastrtps"
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:37
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:39
+msgid "supported"
+msgstr "prise en charge"
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:38
+msgid "rmw_connextdds"
+msgstr "rmw_connextdds"
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:40
+msgid "rmw_cyclonedds"
+msgstr "rmw_cyclonedds"
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:41
+msgid "not supported"
+msgstr "non supporté"
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:43
+msgid ""
+"Currently all RMW implementations that support content filtering "
+"subscriptions are `DDS <https://www.omg.org/omg-dds-portal/>`__ based. That "
+"means that the supported filtering expressions and parameters are also "
+"dependent on `DDS <https://www.omg.org/omg-dds-portal/>`__, you can refer to"
+" `DDS specification <https://www.omg.org/spec/DDS/1.4/PDF>`__ ``Annex B - "
+"Syntax for Queries and Filters`` for details."
+msgstr ""
+"Actuellement, toutes les implémentations RMW qui prennent en charge les "
+"abonnements au filtrage de contenu sont basées sur `DDS "
+"<https://www.omg.org/omg-dds-portal/>`__. Cela signifie que les expressions "
+"et paramètres de filtrage pris en charge dépendent également de `DDS "
+"<https://www.omg.org/omg-dds-portal/>`__, vous pouvez vous référer à la "
+"`spécification DDS <https://www. omg.org/spec/DDS/1.4/PDF>`__ ``Annexe B - "
+"Syntaxe pour les requêtes et les filtres`` pour plus de détails."
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:47
+msgid "Installing the demo"
+msgstr "Installation de la démo"
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:49
+msgid ""
+"See the :doc:`installation instructions <../../Installation>` for details on"
+" installing ROS 2."
+msgstr ""
+"Consultez les :doc:`instructions d'installation <../../Installation>` pour "
+"plus de détails sur l'installation de ROS 2."
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:51
+msgid ""
+"If you've installed ROS 2 from packages, ensure that you have ``ros-rolling-"
+"demo-nodes-cpp`` installed. If you downloaded the archive or built ROS 2 "
+"from source, it will already be part of the installation."
+msgstr ""
+"Si vous avez installé ROS 2 à partir de packages, assurez-vous que ``ros-"
+"rolling-demo-nodes-cpp`` est installé. Si vous avez téléchargé l'archive ou "
+"construit ROS 2 à partir de la source, cela fera déjà partie de "
+"l'installation."
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:55
+msgid "Temperature filtering demo"
+msgstr "Démo de filtrage de température"
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:57
+msgid ""
+"This demo shows how a content filtering subscription can be used to only "
+"receive temperature values that are out of the acceptable temperature range,"
+" detecting emergencies. The content filtering subscription filters out the "
+"uninteresting temperature data, so that the subscription callback is not "
+"issued."
+msgstr ""
+"Cette démo montre comment un abonnement de filtrage de contenu peut être "
+"utilisé pour ne recevoir que des valeurs de température qui sont hors de la "
+"plage de température acceptable, en détectant les urgences. L'abonnement de "
+"filtrage de contenu filtre les données de température inintéressantes, de "
+"sorte que le rappel d'abonnement n'est pas émis."
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:60
+msgid "ContentFilteringPublisher:"
+msgstr "Éditeur de filtrage de contenu :"
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:62
+msgid ""
+"https://github.com/ros2/demos/blob/rolling/demo_nodes_cpp/src/topics/content_filtering_publisher.cpp"
+msgstr ""
+"https://github.com/ros2/demos/blob/rolling/demo_nodes_cpp/src/topics/content_filtering_publisher.cpp"
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:130
+msgid ""
+"The content filter is defined in the subscription side, publishers don't "
+"need to be configured in any special way to allow content filtering. The "
+"``ContentFilteringPublisher`` node publishes simulated temperature data "
+"starting from -100.0 and ending at 150.0 with a step size of 10.0 every "
+"second."
+msgstr ""
+"Le filtre de contenu est défini du côté de l'abonnement, les éditeurs n'ont "
+"pas besoin d'être configurés de manière particulière pour autoriser le "
+"filtrage de contenu. Le nœud ``ContentFilteringPublisher`` publie des "
+"données de température simulées à partir de -100,0 et se terminant à 150,0 "
+"avec une taille de pas de 10,0 chaque seconde."
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:133
+msgid ""
+"We can run the demo by running the ``ros2 run demo_nodes_cpp "
+"content_filtering_publisher`` executable (don't forget to source the setup "
+"file first):"
+msgstr ""
+"Nous pouvons exécuter la démo en exécutant l'exécutable ``ros2 run "
+"demo_nodes_cpp content_filtering_publisher`` (n'oubliez pas de sourcer le "
+"fichier d'installation en premier) :"
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:169
+msgid "ContentFilteringSubscriber:"
+msgstr "Abonné FiltrageContenu :"
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:171
+msgid ""
+"https://github.com/ros2/demos/blob/rolling/demo_nodes_cpp/src/topics/content_filtering_subscriber.cpp"
+msgstr ""
+"https://github.com/ros2/demos/blob/rolling/demo_nodes_cpp/src/topics/content_filtering_subscriber.cpp"
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:241
+msgid ""
+"To enable content filtering, applications can set the filtering expression "
+"and the expression parameters in ``SubscriptionOptions``. The application "
+"can also check if content filtering is enabled on the subscription."
+msgstr ""
+"Pour activer le filtrage de contenu, les applications peuvent définir "
+"l'expression de filtrage et les paramètres d'expression dans "
+"``SubscriptionOptions``. L'application peut également vérifier si le "
+"filtrage de contenu est activé sur l'abonnement."
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:244
+msgid ""
+"In this demo, the ``ContentFilteringSubscriber`` node creates a content "
+"filtering subscription that receives a message only if the temperature value"
+" is less than -30.0 or greater than 100.0."
+msgstr ""
+"Dans cette démo, le nœud ``ContentFilteringSubscriber`` crée un abonnement "
+"de filtrage de contenu qui reçoit un message uniquement si la valeur de "
+"température est inférieure à -30,0 ou supérieure à 100,0."
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:246
+msgid ""
+"As commented before, content filtering subscription support depends on the "
+"RMW implementation. Applications can use the ``is_cft_enabled`` method to "
+"check if content filtering is actually enabled on the subscription."
+msgstr ""
+"Comme indiqué précédemment, la prise en charge de l'abonnement au filtrage "
+"de contenu dépend de l'implémentation RMW. Les applications peuvent utiliser"
+" la méthode ``is_cft_enabled`` pour vérifier si le filtrage de contenu est "
+"réellement activé sur l'abonnement."
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:249
+msgid "To test content filtering subscription, let's run it:"
+msgstr "Pour tester l'abonnement au filtrage de contenu, exécutons-le :"
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:275
+msgid ""
+"You should see a message showing the content filtering options used and logs"
+" for each message received only if the temperature value is less than -30.0 "
+"or greater than 100.0."
+msgstr ""
+"Vous devriez voir un message indiquant les options de filtrage de contenu "
+"utilisées et les journaux pour chaque message reçu uniquement si la valeur "
+"de température est inférieure à -30,0 ou supérieure à 100,0."
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:277
+msgid ""
+"If content filtering is not supported by the RMW implementation, the "
+"subscription will still be created without content filtering enabled. We can"
+" try that by executing ``RMW_IMPLEMENTATION=rmw_cyclonedds_cpp ros2 run "
+"demo_nodes_cpp content_filtering_publisher``."
+msgstr ""
+"Si le filtrage de contenu n'est pas pris en charge par l'implémentation RMW,"
+" l'abonnement sera toujours créé sans le filtrage de contenu activé. Nous "
+"pouvons essayer cela en exécutant ``RMW_IMPLEMENTATION=rmw_cyclonedds_cpp "
+"ros2 run demo_nodes_cpp content_filtering_publisher``."
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:302
+msgid ""
+"You can see the message ``Content filter is not enabled`` because underlying"
+" RMW implementation does not support the feature, but the demo still "
+"successfully creates the normal subscription to receive all temperature "
+"data."
+msgstr ""
+"Vous pouvez voir le message ``Le filtre de contenu n'est pas activé`` car "
+"l'implémentation RMW sous-jacente ne prend pas en charge la fonctionnalité, "
+"mais la démo crée toujours avec succès l'abonnement normal pour recevoir "
+"toutes les données de température."
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:305
+msgid "Related content"
+msgstr "Contenu connexe"
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:307
+msgid ""
+"`content filtering examples "
+"<https://github.com/ros2/examples/blob/rolling/rclcpp/topics/minimal_subscriber/content_filtering.cpp>`__"
+" that covers all interfaces for content filtering subscription."
+msgstr ""
+"`Exemples de filtrage de contenu "
+"<https://github.com/ros2/examples/blob/rolling/rclcpp/topics/minimal_subscriber/content_filtering.cpp>`__"
+" qui couvre toutes les interfaces pour l'abonnement au filtrage de contenu."
+
+#: ../../source/Tutorials/Demos/Content-Filtering-Subscription.rst:308
+msgid ""
+"`content filtering design PR <https://github.com/ros2/design/pull/282>`__"
+msgstr ""
+"`conception de filtrage de contenu PR "
+"<https://github.com/ros2/design/pull/282>`__"

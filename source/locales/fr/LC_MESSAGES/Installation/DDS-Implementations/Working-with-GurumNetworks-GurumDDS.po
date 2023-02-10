@@ -1,0 +1,164 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 17:02:17.880171\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:6
+msgid "GurumNetworks GurumDDS"
+msgstr "GurumNetworks GurumDDS"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:8
+msgid ""
+"rmw_gurumdds is a implementation of the ROS middleware interface using "
+"GurumNetworks GurumDDS. More information about GurumDDS is available on our "
+"website: https://gurum.cc/index_eng"
+msgstr ""
+"rmw_gurumdds est une implémentation de l'interface middleware ROS utilisant "
+"GurumNetworks GurumDDS. Plus d'informations sur GurumDDS sont disponibles "
+"sur notre site Web : https://gurum.cc/index_eng"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:13
+msgid "Prerequisites"
+msgstr "Conditions préalables"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:15
+msgid ""
+"The following description assumes that you have completed the 'Environment "
+"setup' process from the :doc:`Installing ROS 2 via Debian Packages "
+"<../Ubuntu-Install-Debians>` or from the :doc:`Building ROS 2 on Ubuntu "
+"Linux <../Alternatives/Ubuntu-Development-Setup>`."
+msgstr ""
+"La description suivante suppose que vous avez terminé le processus de "
+"'Configuration de l'environnement' à partir du :doc:`Installing ROS 2 via "
+"Debian Packages <../Ubuntu-Install-Debians>` ou du :doc:`Building ROS 2 on "
+"Ubuntu Linux <../Alternatives/Ubuntu-Development-Setup>`."
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:19
+msgid ""
+"rmw_gurumdds requires version of GurumDDS-2.7.x. Debian packages of GurumDDS"
+" is provided in the ROS 2 apt repositories on linux. Windows binary "
+"installer of GurumDDS will be supported soon."
+msgstr ""
+"rmw_gurumdds nécessite la version de GurumDDS-2.7.x. Les packages Debian de "
+"GurumDDS sont fournis dans les dépôts ROS 2 apt sous Linux. Le programme "
+"d'installation binaire Windows de GurumDDS sera bientôt pris en charge."
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:23
+msgid ""
+"GurumDDS requires a license. See the next page: "
+"https://gurum.cc/free_trial_eng.html After getting a license, move it to the"
+" following location."
+msgstr ""
+"GurumDDS nécessite une licence. Voir la page suivante : "
+"https://gurum.cc/free_trial_eng.html Après avoir obtenu une licence, "
+"déplacez-la à l'emplacement suivant."
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:27
+msgid "DDS Version"
+msgstr "Version SDD"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:27
+msgid "License Location"
+msgstr "Emplacement de la licence"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:29
+msgid "<= 2.7.2860"
+msgstr "<= 2.7.2860"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:29
+msgid "/etc/flame"
+msgstr "/etc/flamme"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:30
+msgid ">= 2.7.2861"
+msgstr ">= 2.7.2861"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:30
+msgid "/etc/gurumnet"
+msgstr "/etc/gurumnet"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:35
+msgid "Install packages"
+msgstr "Installer des packages"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:37
+msgid ""
+"The easiest way is to install from ROS 2 apt repository. When ros-rolling-"
+"rmw-gurumdds-cpp is installed, gurumdds-2.7 is also installed."
+msgstr ""
+"Le moyen le plus simple consiste à installer à partir du référentiel ROS 2 "
+"apt. Lorsque ros-rolling-rmw-gurumdds-cpp est installé, gurumdds-2.7 est "
+"également installé."
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:45
+msgid "Build from source code"
+msgstr "Construire à partir du code source"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:47
+msgid "Building from source code is also another way to install."
+msgstr ""
+"Construire à partir du code source est également une autre façon "
+"d'installer."
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:49
+msgid ""
+"First, clone rosidl_typesupport_gurumdds and rmw_gurumdds in the ROS 2 "
+"workspace source directory."
+msgstr ""
+"Tout d'abord, clonez rosidl_typesupport_gurumdds et rmw_gurumdds dans le "
+"répertoire source de l'espace de travail ROS 2."
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:57
+msgid "Then, install necessary packages for GurumDDS."
+msgstr "Ensuite, installez les packages nécessaires pour GurumDDS."
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:64
+msgid "Finally, run colcon build."
+msgstr "Enfin, lancez colcon build."
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:71
+msgid "Switch to rmw_gurumdds"
+msgstr "Passer à rmw_gurumdds"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:73
+msgid ""
+"Switch from other rmw to rmw_gurumdds by specifying the environment "
+"variable."
+msgstr ""
+"Passez d'un autre rmw à rmw_gurumdds en spécifiant la variable "
+"d'environnement."
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:79
+msgid ""
+"See also: :doc:`Working with multiple RMW implementations <../../How-To-"
+"Guides/Working-with-multiple-RMW-implementations>`"
+msgstr ""
+"Voir aussi : :doc:`Travailler avec plusieurs implémentations RMW <../../How-"
+"To-Guides/Working-with-multiple-RMW-implementations>`"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:82
+msgid "Run the talker and listener"
+msgstr "Exécutez le locuteur et l'auditeur"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst:84
+msgid ""
+"Now run ``talker`` and ``listener`` to test GurumDDS. Don't forget to set up"
+" environment by setup script."
+msgstr ""
+"Lancez maintenant ``talker`` et ``listener`` pour tester GurumDDS. N'oubliez"
+" pas de configurer l'environnement par le script de configuration."

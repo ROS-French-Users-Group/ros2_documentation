@@ -1,0 +1,758 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 14:06:11.376477\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:6
+msgid "About Quality of Service settings"
+msgstr "À propos des paramètres de qualité de service"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:10
+msgid "Overview"
+msgstr "Aperçu"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:12
+msgid ""
+"ROS 2 offers a rich variety of Quality of Service (QoS) policies that allow "
+"you to tune communication between nodes. With the right set of Quality of "
+"Service policies, ROS 2 can be as reliable as TCP or as best-effort as UDP, "
+"with many, many possible states in between. Unlike ROS 1, which primarily "
+"only supported TCP, ROS 2 benefits from the flexibility of the underlying "
+"DDS transport in environments with lossy wireless networks where a “best "
+"effort” policy would be more suitable, or in real-time computing systems "
+"where the right Quality of Service profile is needed to meet deadlines."
+msgstr ""
+"ROS 2 offre une grande variété de politiques de qualité de service (QoS) qui"
+" vous permettent d'ajuster la communication entre les nœuds. Avec le bon "
+"ensemble de politiques de qualité de service, ROS 2 peut être aussi fiable "
+"que TCP ou aussi efficace qu'UDP, avec de très nombreux états possibles "
+"entre les deux. Contrairement à ROS 1, qui ne prenait principalement en "
+"charge que TCP, ROS 2 bénéficie de la flexibilité du transport DDS sous-"
+"jacent dans des environnements avec des réseaux sans fil avec perte où une "
+"politique de « meilleur effort » serait plus appropriée, ou dans des "
+"systèmes informatiques en temps réel où la bonne qualité du profil de "
+"service est nécessaire pour respecter les délais."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:16
+msgid ""
+"A set of QoS “policies” combine to form a QoS “profile”. Given the "
+"complexity of choosing the correct QoS policies for a given scenario, ROS 2 "
+"provides a set of predefined QoS profiles for common use cases (e.g. sensor "
+"data). At the same time, developers are given the flexibility to control "
+"specific policies of the QoS profiles."
+msgstr ""
+"Un ensemble de « politiques » QoS se combinent pour former un « profil » "
+"QoS. Compte tenu de la complexité du choix des politiques QoS correctes pour"
+" un scénario donné, ROS 2 fournit un ensemble de profils QoS prédéfinis pour"
+" les cas d'utilisation courants (par exemple, les données de capteur). Dans "
+"le même temps, les développeurs ont la possibilité de contrôler des "
+"politiques spécifiques des profils QoS."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:20
+msgid ""
+"QoS profiles can be specified for publishers, subscriptions, service servers"
+" and clients. A QoS profile can be applied independently to each instance of"
+" the aforementioned entities, but if different profiles are used, it is "
+"possible that they will be incompatible, preventing the delivery of "
+"messages."
+msgstr ""
+"Des profils QoS peuvent être spécifiés pour les éditeurs, les abonnements, "
+"les serveurs de service et les clients. Un profil QoS peut être appliqué "
+"indépendamment à chaque instance des entités susmentionnées, mais si "
+"différents profils sont utilisés, il est possible qu'ils soient "
+"incompatibles, empêchant la livraison des messages."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:25
+msgid "QoS policies"
+msgstr "Politiques de qualité de service"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:27
+msgid ""
+"The base QoS profile currently includes settings for the following policies:"
+msgstr ""
+"Le profil QoS de base inclut actuellement des paramètres pour les stratégies"
+" suivantes :"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:29
+msgid "History"
+msgstr "Histoire"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:31
+msgid ""
+"*Keep last*: only store up to N samples, configurable via the queue depth "
+"option."
+msgstr ""
+"*Keep last* : ne stocke que jusqu'à N échantillons, configurable via "
+"l'option de profondeur de file d'attente."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:32
+msgid ""
+"*Keep all*: store all samples, subject to the configured resource limits of "
+"the underlying middleware."
+msgstr ""
+"*Tout conserver* : stocke tous les échantillons, sous réserve des limites de"
+" ressources configurées du middleware sous-jacent."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:34
+msgid "Depth"
+msgstr "Profondeur"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:36
+msgid ""
+"*Queue size*: only honored if the “history” policy was set to “keep last”."
+msgstr ""
+"*Taille de la file d'attente* : honoré uniquement si la politique "
+"\"historique\" a été définie sur \"conserver en dernier\"."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:38
+msgid "Reliability"
+msgstr "Fiabilité"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:40
+msgid ""
+"*Best effort*: attempt to deliver samples, but may lose them if the network "
+"is not robust."
+msgstr ""
+"*Meilleur effort* : tentative de livraison d'échantillons, mais risque de "
+"les perdre si le réseau n'est pas robuste."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:41
+msgid ""
+"*Reliable*: guarantee that samples are delivered, may retry multiple times."
+msgstr ""
+"*Fiable* : garantit que les échantillons sont livrés, peut réessayer "
+"plusieurs fois."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:43
+msgid "Durability"
+msgstr "Durabilité"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:45
+msgid ""
+"*Transient local*: the publisher becomes responsible for persisting samples "
+"for “late-joining” subscriptions."
+msgstr ""
+"*Transient local* : l'éditeur devient responsable de la persistance des "
+"échantillons pour les abonnements \"tardifs\"."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:46
+msgid "*Volatile*: no attempt is made to persist samples."
+msgstr ""
+"*Volatile* : aucune tentative n'est effectuée pour conserver les "
+"échantillons."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:48
+msgid "Deadline"
+msgstr "Date limite"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:50
+msgid ""
+"*Duration*: the expected maximum amount of time between subsequent messages "
+"being published to a topic"
+msgstr ""
+"*Durée* : la durée maximale prévue entre les messages suivants publiés sur "
+"un sujet"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:52
+msgid "Lifespan"
+msgstr "Durée de vie"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:54
+msgid ""
+"*Duration*: the maximum amount of time between the publishing and the "
+"reception of a message without the message being considered stale or expired"
+" (expired messages are silently dropped and are effectively never received)."
+msgstr ""
+"*Durée* : la durée maximale entre la publication et la réception d'un "
+"message sans que le message soit considéré comme obsolète ou expiré (les "
+"messages expirés sont supprimés silencieusement et ne sont effectivement "
+"jamais reçus)."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:56
+msgid "Liveliness"
+msgstr "Vivacité"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:58
+msgid ""
+"*Automatic*: the system will consider all of the node’s publishers to be "
+"alive for another “lease duration” when any one of its publishers has "
+"published a message."
+msgstr ""
+"*Automatique* : le système considérera que tous les éditeurs du nœud sont "
+"actifs pour une autre \"durée de bail\" lorsque l'un de ses éditeurs a "
+"publié un message."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:59
+msgid ""
+"*Manual by topic*: the system will consider the publisher to be alive for "
+"another “lease duration” if it manually asserts that it is still alive (via "
+"a call to the publisher API)."
+msgstr ""
+"*Manuel par sujet* : le système considérera que l'éditeur est en vie pour "
+"une autre \"durée de bail\" s'il affirme manuellement qu'il est toujours en "
+"vie (via un appel à l'API de l'éditeur)."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:61
+msgid "Lease Duration"
+msgstr "Durée du bail"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:63
+msgid ""
+"*Duration*: the maximum period of time a publisher has to indicate that it "
+"is alive before the system considers it to have lost liveliness (losing "
+"liveliness could be an indication of a failure)."
+msgstr ""
+"*Durée* : la période maximale pendant laquelle un éditeur doit indiquer "
+"qu'il est actif avant que le système ne considère qu'il a perdu de "
+"l'activité (la perte de l'activité peut être le signe d'un échec)."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:65
+msgid ""
+"For each of the policies that is not a duration, there is also the option of"
+" “system default”, which uses the default of the underlying middleware. For "
+"each of the policies that is a duration, there also exists a “default” "
+"option that means the duration is unspecified, which the underlying "
+"middleware will usually interpret as an infinitely long duration."
+msgstr ""
+"Pour chacune des politiques qui n'est pas une durée, il y a aussi l'option «"
+" système par défaut », qui utilise la valeur par défaut du middleware sous-"
+"jacent. Pour chacune des politiques qui est une durée, il existe également "
+"une option \"par défaut\" qui signifie que la durée n'est pas spécifiée, ce "
+"que le middleware sous-jacent interprétera généralement comme une durée "
+"infiniment longue."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:69
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:265
+msgid "Comparison to ROS 1"
+msgstr "Comparaison avec ROS 1"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:71
+msgid ""
+"The “history” and “depth” policies in ROS 2 combine to provide functionality"
+" akin to the queue size in ROS 1."
+msgstr ""
+"Les politiques \"historique\" et \"profondeur\" dans ROS 2 se combinent pour"
+" fournir des fonctionnalités similaires à la taille de la file d'attente "
+"dans ROS 1."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:73
+msgid ""
+"The “reliability” policy in ROS 2 is akin to the use of either UDPROS (only "
+"in ``roscpp``) for “best effort”, or TCPROS (ROS 1 default) for “reliable”. "
+"Note however that even the reliable policy in ROS 2 is implemented using "
+"UDP, which allows for multicasting if appropriate."
+msgstr ""
+"La politique de « fiabilité » dans ROS 2 s'apparente à l'utilisation soit de"
+" UDPROS (uniquement dans ``roscpp``) pour « meilleur effort », soit de "
+"TCPROS (par défaut ROS 1) pour « fiable ». Notez cependant que même la "
+"politique fiable dans ROS 2 est implémentée à l'aide d'UDP, ce qui permet la"
+" multidiffusion si nécessaire."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:76
+msgid ""
+"The “durability” policy “transient local”, combined with any depth, provides"
+" functionality similar to that of “latching” publishers. The remaining "
+"policies in ROS 2 are not akin to anything that is available in ROS 1, "
+"meaning that ROS 2 is more featureful than ROS 1 in this respect. It is "
+"possible that in the future, even more QoS policies will be available in ROS"
+" 2."
+msgstr ""
+"La politique de \"durabilité\" \"transitoire locale\", combinée à toute "
+"profondeur, offre une fonctionnalité similaire à celle des éditeurs \"à "
+"verrouillage\". Les politiques restantes dans ROS 2 ne s'apparentent à rien "
+"de ce qui est disponible dans ROS 1, ce qui signifie que ROS 2 est plus "
+"complet que ROS 1 à cet égard. Il est possible qu'à l'avenir, encore plus de"
+" politiques QoS soient disponibles dans ROS 2."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:82
+msgid "QoS profiles"
+msgstr "Profils de qualité de service"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:84
+msgid ""
+"Profiles allow developers to focus on their applications without worrying "
+"about every QoS setting possible. A QoS profile defines a set of policies "
+"that are expected to go well together for a particular use case."
+msgstr ""
+"Les profils permettent aux développeurs de se concentrer sur leurs "
+"applications sans se soucier de tous les paramètres QoS possibles. Un profil"
+" QoS définit un ensemble de politiques censées aller bien ensemble pour un "
+"cas d'utilisation particulier."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:87
+msgid "The currently defined QoS profiles are:"
+msgstr "Les profils QoS actuellement définis sont :"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:89
+msgid "Default QoS settings for publishers and subscriptions"
+msgstr "Paramètres QoS par défaut pour les éditeurs et les abonnements"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:91
+msgid ""
+"In order to make the transition from ROS 1 to ROS 2 easier, exercising a "
+"similar network behavior is desirable. By default, publishers and "
+"subscriptions in ROS 2 have “keep last” for history with a queue size of 10,"
+" “reliable” for reliability, “volatile” for durability, and “system default”"
+" for liveliness. Deadline, lifespan, and lease durations are also all set to"
+" “default”."
+msgstr ""
+"Afin de faciliter la transition de ROS 1 à ROS 2, il est souhaitable "
+"d'exercer un comportement de réseau similaire. Par défaut, les éditeurs et "
+"les abonnements dans ROS 2 ont \"conserver en dernier\" pour l'historique "
+"avec une taille de file d'attente de 10, \"fiable\" pour la fiabilité, "
+"\"volatile\" pour la durabilité et \"système par défaut\" pour la vivacité. "
+"La date limite, la durée de vie et la durée des baux sont également définies"
+" sur \"par défaut\"."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:95
+msgid "Services"
+msgstr "Prestations de service"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:97
+msgid ""
+"In the same vein as publishers and subscriptions, services are reliable. It "
+"is especially important for services to use volatile durability, as "
+"otherwise service servers that re-start may receive outdated requests. While"
+" the client is protected from receiving multiple responses, the server is "
+"not protected from side-effects of receiving the outdated requests."
+msgstr ""
+"Dans la même veine que les éditeurs et les abonnements, les services sont "
+"fiables. Il est particulièrement important que les services utilisent une "
+"durabilité volatile, sinon les serveurs de service qui redémarrent peuvent "
+"recevoir des demandes obsolètes. Alors que le client est protégé contre la "
+"réception de plusieurs réponses, le serveur n'est pas protégé contre les "
+"effets secondaires de la réception des demandes obsolètes."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:101
+msgid "Sensor data"
+msgstr "Données du capteur"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:103
+msgid ""
+"For sensor data, in most cases it’s more important to receive readings in a "
+"timely fashion, rather than ensuring that all of them arrive. That is, "
+"developers want the latest samples as soon as they are captured, at the "
+"expense of maybe losing some. For that reason the sensor data profile uses "
+"best effort reliability and a smaller queue size."
+msgstr ""
+"Pour les données des capteurs, dans la plupart des cas, il est plus "
+"important de recevoir les lectures en temps opportun, plutôt que de "
+"s'assurer qu'elles arrivent toutes. Autrement dit, les développeurs veulent "
+"les derniers échantillons dès qu'ils sont capturés, au risque d'en perdre "
+"peut-être certains. Pour cette raison, le profil de données du capteur "
+"utilise la fiabilité du meilleur effort et une taille de file d'attente plus"
+" petite."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:107
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:109
+msgid ""
+"Parameters in ROS 2 are based on services, and as such have a similar "
+"profile. The difference is that parameters use a much larger queue depth so "
+"that requests do not get lost when, for example, the parameter client is "
+"unable to reach the parameter service server."
+msgstr ""
+"Les paramètres dans ROS 2 sont basés sur les services et, en tant que tels, "
+"ont un profil similaire. La différence est que les paramètres utilisent une "
+"profondeur de file d'attente beaucoup plus grande afin que les demandes ne "
+"soient pas perdues lorsque, par exemple, le client de paramètres est "
+"incapable d'atteindre le serveur de service de paramètres."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:112
+msgid "System default"
+msgstr "Défaut du système"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:114
+msgid ""
+"This uses the RMW implementation’s default values for all of the policies. "
+"Different RMW implementations may have different defaults."
+msgstr ""
+"Cela utilise les valeurs par défaut de l'implémentation RMW pour toutes les "
+"stratégies. Différentes implémentations RMW peuvent avoir des valeurs par "
+"défaut différentes."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:117
+msgid ""
+"`Click here "
+"<https://github.com/ros2/rmw/blob/rolling/rmw/include/rmw/qos_profiles.h>`__"
+" for the specific policies in use for the above profiles. The settings in "
+"these profiles are subject to further tweaks, based on the feedback from the"
+" community."
+msgstr ""
+"`Cliquez ici "
+"<https://github.com/ros2/rmw/blob/rolling/rmw/include/rmw/qos_profiles.h>`__"
+" pour les politiques spécifiques utilisées pour les profils ci-dessus. Les "
+"paramètres de ces profils sont sujets à d'autres ajustements, en fonction "
+"des commentaires de la communauté."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:122
+msgid "QoS compatibilities"
+msgstr "Compatibilités QoS"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:124
+msgid ""
+"**Note:** This section refers to publishers and subscriptions but the "
+"content applies to service servers and clients in the same manner."
+msgstr ""
+"**Remarque :** Cette section fait référence aux éditeurs et aux abonnements,"
+" mais le contenu s'applique aux serveurs de service et aux clients de la "
+"même manière."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:126
+msgid ""
+"QoS profiles may be configured for publishers and subscriptions "
+"independently. A connection between a publisher and a subscription is only "
+"made if the pair has compatible QoS profiles."
+msgstr ""
+"Les profils QoS peuvent être configurés indépendamment pour les éditeurs et "
+"les abonnements. Une connexion entre un éditeur et un abonnement n'est "
+"établie que si la paire a des profils QoS compatibles."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:129
+msgid ""
+"QoS profile compatibility is determined based on a “Request vs Offered” "
+"model. Subscriptions *request* a QoS profile that is the “minimum quality” "
+"that it is willing to accept, and publishers *offer* a QoS profile that is "
+"the “maximum quality” that it is able to provide. Connections are only made "
+"if every policy of the requested QoS profile is not more stringent than that"
+" of the offered QoS profile. Multiple subscriptions can be connected to a "
+"single publisher simultaneously even if their requested QoS profiles are "
+"different. The compatibility between a publisher and a subscription is "
+"unaffected by the presence of other publishers and subscriptions."
+msgstr ""
+"La compatibilité du profil QoS est déterminée sur la base d'un modèle "
+"\"Demande vs Offert\". Les abonnements *demandent* un profil QoS qui est la "
+"\"qualité minimale\" qu'ils sont prêts à accepter, et les éditeurs *offrent*"
+" un profil QoS qui est la \"qualité maximale\" qu'ils sont capables de "
+"fournir. Les connexions ne sont établies que si chaque politique du profil "
+"QoS demandé n'est pas plus stricte que celle du profil QoS proposé. "
+"Plusieurs abonnements peuvent être connectés simultanément à un seul éditeur"
+" même si leurs profils QoS demandés sont différents. La compatibilité entre "
+"un éditeur et un abonnement n'est pas affectée par la présence d'autres "
+"éditeurs et abonnements."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:135
+msgid ""
+"The following tables show the compatibility of the different policy settings"
+" and the result:"
+msgstr ""
+"Les tableaux suivants montrent la compatibilité des différents paramètres de"
+" stratégie et le résultat :"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:137
+msgid "*Compatibility of reliability QoS policies:*"
+msgstr "*Compatibilité des politiques de QoS de fiabilité :*"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:142
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:163
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:186
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:213
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:236
+msgid "Publisher"
+msgstr "Éditeur"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:143
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:164
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:187
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:214
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:237
+msgid "Subscription"
+msgstr "Abonnement"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:144
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:165
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:188
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:215
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:238
+msgid "Compatible"
+msgstr "Compatibles"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:145
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:146
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:148
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:152
+msgid "Best effort"
+msgstr "Meilleur effort"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:147
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:153
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:156
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:168
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:174
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:177
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:191
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:197
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:200
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:203
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:218
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:224
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:227
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:241
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:247
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:250
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:253
+msgid "Yes"
+msgstr "Oui"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:149
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:151
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:154
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:155
+msgid "Reliable"
+msgstr "Fiable"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:150
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:171
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:194
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:206
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:221
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:244
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:256
+msgid "No"
+msgstr "Non"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:158
+msgid "*Compatibility of durability QoS policies:*"
+msgstr "*Compatibilité des politiques QoS de durabilité :*"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:166
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:167
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:169
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:173
+msgid "Volatile"
+msgstr "Volatil"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:170
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:172
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:175
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:176
+msgid "Transient local"
+msgstr "Transitoire locale"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:179
+msgid "*Compatibility of deadline QoS policies:*"
+msgstr "*Compatibilité des politiques de qualité de service des délais :*"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:181
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:231
+msgid "Assume *x* and *y* are arbitrary valid duration values."
+msgstr ""
+"Supposons que *x* et *y* sont des valeurs de durée valides arbitraires."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:189
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:190
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:192
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:196
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:239
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:240
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:242
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:246
+msgid "Default"
+msgstr "Défaut"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:193
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:195
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:198
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:199
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:201
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:204
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:243
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:245
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:248
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:249
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:251
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:254
+msgid "*x*"
+msgstr "*X*"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:202
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:252
+msgid "*y* (where *y* > *x*)"
+msgstr "*y* (où *y* > *x*)"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:205
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:255
+msgid "*y* (where *y* < *x*)"
+msgstr "*y* (où *y* < *x*)"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:208
+msgid "*Compatibility of liveliness QoS policies:*"
+msgstr "*Compatibilité des politiques QoS de vivacité :*"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:216
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:217
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:219
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:223
+msgid "Automatic"
+msgstr "Automatique"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:220
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:222
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:225
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:226
+msgid "Manual by topic"
+msgstr "Manuel par sujet"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:229
+msgid "*Compatibility of lease duration QoS policies:*"
+msgstr "*Compatibilité des politiques QoS de durée de location :*"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:258
+msgid ""
+"In order for a connection to be made, all of the policies that affect "
+"compatibility must be compatible. For example, even if a requested and "
+"offered QoS profile pair has compatible reliability QoS policies, but they "
+"have incompatible durability QoS policies, a connection will still not be "
+"made."
+msgstr ""
+"Pour qu'une connexion soit établie, toutes les stratégies qui affectent la "
+"compatibilité doivent être compatibles. Par exemple, même si une paire de "
+"profils QoS demandée et offerte a des politiques QoS de fiabilité "
+"compatibles, mais qu'elles ont des politiques QoS de durabilité "
+"incompatibles, une connexion ne sera toujours pas établie."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:261
+msgid ""
+"When connections are not made, no messages will be passed between the "
+"publisher and subscription. There are mechanisms to detect this situation, "
+"which will be covered in a later section."
+msgstr ""
+"Lorsque les connexions ne sont pas établies, aucun message ne sera transmis "
+"entre l'éditeur et l'abonnement. Il existe des mécanismes pour détecter "
+"cette situation, qui seront couverts dans une section ultérieure."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:267
+msgid ""
+"Historically in ROS 1, any publisher and subscriber with the same message "
+"type on the same topic would be connected. The possibility of incompatible "
+"requested and offered QoS profiles is something new to be aware of when "
+"using ROS 2."
+msgstr ""
+"Historiquement, dans ROS 1, tout éditeur et abonné avec le même type de "
+"message sur le même sujet serait connecté. La possibilité de profils QoS "
+"demandés et proposés incompatibles est quelque chose de nouveau à prendre en"
+" compte lors de l'utilisation de ROS 2."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:272
+msgid "QoS events"
+msgstr "Événements de qualité de service"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:274
+msgid ""
+"Some QoS policies have possible events related to them. Developers may "
+"provide each publisher and subscription with callback functions that are "
+"triggered by these QoS events and handle them in a way they see fit, similar"
+" to how messages received on a topic are handled."
+msgstr ""
+"Certaines stratégies de QoS ont des événements possibles qui leur sont "
+"associés. Les développeurs peuvent fournir à chaque éditeur et abonnement "
+"des fonctions de rappel déclenchées par ces événements QoS et les gérer "
+"comme ils l'entendent, de la même manière que les messages reçus sur un "
+"sujet sont traités."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:277
+msgid ""
+"Developers may subscribe to the following QoS events that are associated "
+"with a publisher:"
+msgstr ""
+"Les développeurs peuvent s'abonner aux événements QoS suivants associés à un"
+" éditeur :"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:279
+msgid "Offered deadline missed"
+msgstr "Délai proposé manqué"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:281
+msgid ""
+"The publisher has not published a message within the expected duration that "
+"was set out by the deadline QoS policy."
+msgstr ""
+"L'éditeur n'a pas publié de message dans le délai prévu défini par la "
+"politique de qualité de service des délais."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:283
+msgid "Liveliness lost"
+msgstr "La vivacité a perdu"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:285
+msgid ""
+"The publisher has failed to indicate its liveliness within the lease "
+"duration."
+msgstr "L'éditeur a omis d'indiquer sa vivacité dans la durée du bail."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:287
+msgid "Offered incompatible QoS"
+msgstr "Qualité de service incompatible offerte"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:289
+msgid ""
+"The publisher has encountered a subscription on the same topic that is "
+"requesting a QoS profile that the offered QoS profile cannot satisfy, "
+"resulting in no connection between the publisher and that subscription."
+msgstr ""
+"L'éditeur a rencontré un abonnement sur le même sujet qui demande un profil "
+"QoS que le profil QoS proposé ne peut pas satisfaire, ce qui entraîne "
+"l'absence de connexion entre l'éditeur et cet abonnement."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:291
+msgid ""
+"Developers may subscribe to the following QoS events that are associated "
+"with a subscription:"
+msgstr ""
+"Les développeurs peuvent s'abonner aux événements QoS suivants associés à un"
+" abonnement :"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:293
+msgid "Requested deadline missed"
+msgstr "Délai demandé dépassé"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:295
+msgid ""
+"The subscription has not received a message within the expected duration "
+"that was set out by the deadline QoS policy."
+msgstr ""
+"L'abonnement n'a pas reçu de message dans le délai prévu défini par la "
+"politique QoS d'échéance."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:297
+msgid "Liveliness changed"
+msgstr "La vivacité a changé"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:299
+msgid ""
+"The subscription has noticed that one or more publishers on the subscribed "
+"topic has failed to indicate their liveliness within the lease duration."
+msgstr ""
+"L'abonnement a remarqué qu'un ou plusieurs éditeurs sur le sujet abonné "
+"n'ont pas indiqué leur activité pendant la durée du bail."
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:301
+msgid "Requested incompatible QoS"
+msgstr "QoS incompatible demandée"
+
+#: ../../source/Concepts/About-Quality-of-Service-Settings.rst:303
+msgid ""
+"The subscription has encountered a publisher on the same topic that is "
+"offering a QoS profile that does not satisfy the requested QoS profile, "
+"resulting in no connection between the subscription and that publisher."
+msgstr ""
+"L'abonnement a rencontré un éditeur sur le même sujet qui propose un profil "
+"QoS qui ne satisfait pas le profil QoS demandé, ce qui entraîne l'absence de"
+" connexion entre l'abonnement et cet éditeur."

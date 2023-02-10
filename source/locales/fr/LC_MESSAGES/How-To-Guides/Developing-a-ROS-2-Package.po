@@ -1,0 +1,163 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 17:22:38.575943\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:8
+msgid "Developing a ROS 2 package"
+msgstr "Développement d'un package ROS 2"
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:12
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:14
+msgid ""
+"This tutorial will teach you how to create your first ROS 2 application. It "
+"is intended for developers who want to learn how to create custom packages "
+"in ROS 2, not for people who want to use ROS 2 with its existing packages."
+msgstr ""
+"Ce tutoriel vous apprendra comment créer votre première application ROS 2. "
+"Il est destiné aux développeurs qui souhaitent apprendre à créer des "
+"packages personnalisés dans ROS 2, et non aux personnes souhaitant utiliser "
+"ROS 2 avec ses packages existants."
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:18
+msgid "Prerequisites"
+msgstr "Conditions préalables"
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:20
+msgid ":doc:`Install ROS <../../Installation>`"
+msgstr ":doc:`Installer ROS <../../Installation>`"
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:22
+msgid ""
+"`Install colcon "
+"<https://colcon.readthedocs.io/en/released/user/installation.html>`__"
+msgstr ""
+"`Installer colcon "
+"<https://colcon.readthedocs.io/en/released/user/installation.html>`__"
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:24
+msgid "Setup your workspace by sourcing your ROS 2 installation."
+msgstr ""
+"Configurez votre espace de travail en vous procurant votre installation ROS "
+"2."
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:27
+msgid "Creating a package"
+msgstr "Création d'un paquet"
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:29
+msgid "All ROS 2 packages begin by running the command"
+msgstr "Tous les packages ROS 2 commencent par exécuter la commande"
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:35
+msgid "in your workspace (usually ``~/ros2_ws/src``)."
+msgstr "dans votre espace de travail (généralement ``~/ros2_ws/src``)."
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:37
+msgid "To create a package for a specific client library:"
+msgstr "Pour créer un package pour une bibliothèque cliente spécifique :"
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:41
+msgid "C++"
+msgstr "C++"
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:47
+msgid "Python"
+msgstr "Python"
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:53
+msgid ""
+"You can then update the ``package.xml`` with your package info such as "
+"dependencies, descriptions, and authorship."
+msgstr ""
+"Vous pouvez ensuite mettre à jour le ``package.xml`` avec les informations "
+"de votre package telles que les dépendances, les descriptions et la "
+"paternité."
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:56
+msgid "C++ Packages"
+msgstr "Paquets C++"
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:58
+msgid "You will mostly use the ``add_executable()`` CMake macro along with"
+msgstr ""
+"Vous utiliserez principalement la macro CMake ``add_executable()`` avec"
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:64
+msgid "to create executable nodes and link dependencies."
+msgstr "pour créer des nœuds exécutables et des dépendances de liens."
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:66
+msgid ""
+"To install your launch files and nodes, you can use the ``install()`` macro "
+"placed towards the end of the file but before the ``ament_package()`` macro."
+msgstr ""
+"Pour installer vos fichiers de lancement et nœuds, vous pouvez utiliser la "
+"macro ``install()`` placée vers la fin du fichier mais avant la macro "
+"``ament_package()``."
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:68
+msgid "An example for launch files and nodes:"
+msgstr "Un exemple pour les fichiers de lancement et les nœuds :"
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:85
+msgid "Python Packages"
+msgstr "Paquets Python"
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:87
+msgid ""
+"ROS 2 follows Python's standard module distribution process that uses "
+"``setuptools``. For Python packages, the ``setup.py`` file complements a C++"
+" package's ``CMakeLists.txt``. More details on distribution can be found in "
+"the `official documentation "
+"<https://docs.python.org/3/distributing/index.html#distributing-index>`_."
+msgstr ""
+"ROS 2 suit le processus de distribution de module standard de Python qui "
+"utilise ``setuptools``. Pour les packages Python, le fichier ``setup.py`` "
+"complète le ``CMakeLists.txt`` d'un package C++. Plus de détails sur la "
+"distribution peuvent être trouvés dans la `documentation officielle "
+"<https://docs.python.org/3/distributing/index.html#distributing-index>`_."
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:91
+msgid ""
+"In your ROS 2 package, you should have a ``setup.cfg`` file which looks "
+"like:"
+msgstr ""
+"Dans votre package ROS 2, vous devriez avoir un fichier ``setup.cfg`` qui "
+"ressemble à :"
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:100
+msgid "and a ``setup.py`` file that looks like:"
+msgstr "et un fichier ``setup.py`` qui ressemble à :"
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:151
+msgid "Combined C++ and Python Packages"
+msgstr "Packages combinés C++ et Python"
+
+#: ../../source/How-To-Guides/Developing-a-ROS-2-Package.rst:153
+msgid ""
+"When writing a package with both C++ and Python code, the ``setup.py`` file "
+"and ``setup.cfg`` file are not used. Instead, use :doc:`ament_cmake_python "
+"<./Ament-CMake-Python-Documentation>`."
+msgstr ""
+"Lors de l'écriture d'un paquet avec du code C++ et Python, les fichiers "
+"``setup.py`` et ``setup.cfg`` ne sont pas utilisés. À la place, utilisez "
+":doc:`ament_cmake_python <./Ament-CMake-Python-Documentation>`."

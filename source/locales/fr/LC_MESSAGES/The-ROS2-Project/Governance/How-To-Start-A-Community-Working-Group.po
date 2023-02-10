@@ -1,0 +1,277 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 16:31:57.941478\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:6
+msgid "How to Start a Community Working Group"
+msgstr "Comment démarrer un groupe de travail communautaire"
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:13
+msgid ""
+"A ROS working group is a great way to get a bunch of like minded people "
+"together to make regular progress towards a shared goal. So what are the "
+"steps to making a working group?"
+msgstr ""
+"Un groupe de travail ROS est un excellent moyen de rassembler un groupe de "
+"personnes partageant les mêmes idées pour progresser régulièrement vers un "
+"objectif commun. Alors, quelles sont les étapes pour créer un groupe de "
+"travail ?"
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:17
+msgid ""
+"First try to find a couple of like-minded individuals who are willing to "
+"regularly commit their time to a particular area of ROS development. We "
+"suggest having at minimum three people who can help orchestrate the working "
+"group."
+msgstr ""
+"Essayez d'abord de trouver quelques personnes partageant les mêmes idées qui"
+" sont prêtes à consacrer régulièrement leur temps à un domaine particulier "
+"du développement de ROS. Nous suggérons d'avoir au moins trois personnes qui"
+" peuvent aider à orchestrer le groupe de travail."
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:22
+msgid ""
+"Draft up a one page summary of your working group. This summary should "
+"broadly cover what topics you would like to cover and what goals you would "
+"like to accomplish. Take a look at the other working groups and make sure "
+"that you don’t overlap too much."
+msgstr ""
+"Rédigez un résumé d'une page de votre groupe de travail. Ce résumé doit "
+"couvrir de manière générale les sujets que vous souhaitez aborder et les "
+"objectifs que vous souhaitez atteindre. Jetez un œil aux autres groupes de "
+"travail et assurez-vous de ne pas trop vous chevaucher."
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:27
+msgid ""
+"Once you have your ideas roughly distilled take it to the ROS community to "
+"find more like minded members. We generally recommend making a post on `ROS "
+"discourse <https://discourse.ros.org>`__ on the general channel with the "
+"title “Proposal for ROS X Working Group”. Include your summary and your "
+"current collaborators. You should use this thread to:"
+msgstr ""
+"Une fois que vous avez grossièrement distillé vos idées, apportez-les à la "
+"communauté ROS pour trouver d'autres membres partageant les mêmes idées. "
+"Nous recommandons généralement de publier un message sur le `discours ROS "
+"<https://discourse.ros.org>`__ sur la chaîne générale avec le titre "
+"\"Proposition pour le groupe de travail ROS X\". Incluez votre résumé et vos"
+" collaborateurs actuels. Vous devriez utiliser ce fil pour :"
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:33
+msgid "Finalize the subjects covered by your working group."
+msgstr "Finalisez les sujets traités par votre groupe de travail."
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:34
+msgid "Recruit members for your working group."
+msgstr "Recrutez des membres pour votre groupe de travail."
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:35
+msgid "Set the agenda for your first couple of working group meetings."
+msgstr ""
+"Établissez l'ordre du jour de vos deux premières réunions de groupe de "
+"travail."
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:36
+msgid ""
+"Pick a regular time for your working group meetings (we find that early in "
+"the morning PST, generally works for most of the world).  At this point you "
+"should also make a discourse tag (you use these when you make your post.  We"
+" suggest something like: “wg-<topic>”."
+msgstr ""
+"Choisissez une heure régulière pour vos réunions de groupe de travail (nous "
+"constatons que tôt le matin PST, fonctionne généralement pour la plupart des"
+" pays du monde). À ce stade, vous devez également créer une balise de "
+"discours (vous les utilisez lorsque vous rédigez votre message. Nous "
+"suggérons quelque chose comme : \"wg-<topic>\"."
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:41
+msgid ""
+"Once you have recruited your working group members you’ll have some leg work"
+" to do. At this point you should have a list of working group members. "
+"Create a google group by going to Google groups "
+"(https://groups.google.com/my-groups) and adding your members. This mailing "
+"list should be named ``<dashed-name>-working-group-"
+"invites@googlegroups.com``. It should be setup such that:"
+msgstr ""
+"Une fois que vous aurez recruté les membres de votre groupe de travail, vous"
+" aurez du travail à faire. À ce stade, vous devriez avoir une liste des "
+"membres du groupe de travail. Créez un groupe Google en accédant aux groupes"
+" Google (https://groups.google.com/my-groups) et en ajoutant vos membres. "
+"Cette liste de diffusion doit être nommée ``<dashed-name>-working-group-"
+"invites@googlegroups.com``. Il doit être configuré de telle sorte que :"
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:48
+msgid "Anyone can join"
+msgstr "Tout le monde peut joindre"
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:49
+msgid "No one can post (aka only owners)"
+msgstr "Personne ne peut publier (c'est-à-dire uniquement les propriétaires)"
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:50
+msgid "Anyone can view members"
+msgstr "Tout le monde peut voir les membres"
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:52
+msgid ""
+"The mailing list will be used to distribute the invitations only, any "
+"communications should use `ROS discourse <https://discourse.ros.org>`__ with"
+" the working group's tag. Please add tfoote@osrfoundation.org as an owner of"
+" the mailing list to help with administration."
+msgstr ""
+"La liste de diffusion sera utilisée pour distribuer les invitations "
+"uniquement, toute communication doit utiliser `ROS discourse "
+"<https://discourse.ros.org>`__ avec le tag du groupe de travail. Veuillez "
+"ajouter tfoote@osrfoundation.org en tant que propriétaire de la liste de "
+"diffusion pour aider à l'administration."
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:55
+msgid ""
+"Now that you have an e-mail group you can associate that group with the ROS "
+"events calendar. The calendar is where you will schedule your working group "
+"meetings. To join the calendar, send an e-mail request to Kat "
+"(kat@openrobotics.org) or Tully (tfoote@openrobotics.org)."
+msgstr ""
+"Maintenant que vous avez un groupe de messagerie, vous pouvez associer ce "
+"groupe au calendrier des événements ROS. Le calendrier est l'endroit où vous"
+" planifierez les réunions de votre groupe de travail. Pour rejoindre le "
+"calendrier, envoyez une demande par e-mail à Kat (kat@openrobotics.org) ou "
+"Tully (tfoote@openrobotics.org)."
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:60
+msgid ""
+"To formalize your group you need to create a working group charter and a git"
+" repository to keep your documents and code. We have a working group "
+"template that can be found `here "
+"<https://github.com/ros2/tsc_working_group_governance_template>`_. Anyone in"
+" the group can host the template or you can request that your group be added"
+" to the Open Robotics / OSRF organization. The decision is up to the working"
+" group."
+msgstr ""
+"Pour formaliser votre groupe, vous devez créer une charte de groupe de "
+"travail et un référentiel git pour conserver vos documents et votre code. "
+"Nous avons un modèle de groupe de travail qui peut être trouvé `ici "
+"<https://github.com/ros2/tsc_working_group_governance_template>`_. N'importe"
+" qui dans le groupe peut héberger le modèle ou vous pouvez demander que "
+"votre groupe soit ajouté à l'organisation Open Robotics / OSRF. La décision "
+"appartient au groupe de travail."
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:67
+msgid ""
+"Now that you have a working group charter, e-mail group, and source "
+"repository, you can add all of that information to the :doc:`ROS 2 project "
+"governance website <../Governance>` by sending a pull request to "
+"https://github.com/ros2/ros2_documentation."
+msgstr ""
+"Maintenant que vous avez une charte de groupe de travail, un groupe de "
+"messagerie et un référentiel source, vous pouvez ajouter toutes ces "
+"informations au :doc:`site Web de gouvernance du projet ROS 2 "
+"<../Governance>` en envoyant une demande d'extraction à https "
+"://github.com/ros2/ros2_documentation."
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:71
+msgid ""
+"Now it is time to schedule your first official working group meeting! We "
+"recommend announcing the meeting on ROS Discourse approximately one week "
+"before the meeting date. Please include the following in your an "
+"announcement:"
+msgstr ""
+"Il est maintenant temps de planifier votre première réunion officielle du "
+"groupe de travail ! Nous recommandons d'annoncer la réunion sur ROS "
+"Discourse environ une semaine avant la date de la réunion. Veuillez inclure "
+"les éléments suivants dans votre annonce :"
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:75
+msgid "An agenda for the meeting."
+msgstr "Un ordre du jour pour la réunion."
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:76
+msgid ""
+"The date and time for the meeting (protip: discourse has a date/time feature"
+" that can auto adjust for each user’s timezone)."
+msgstr ""
+"La date et l'heure de la réunion (protip : le discours a une fonction de "
+"date/heure qui peut s'ajuster automatiquement au fuseau horaire de chaque "
+"utilisateur)."
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:78
+msgid ""
+"URLs / Links / Contact Info for the meeting. Open Robotics uses Google "
+"Hangouts, but you can use whatever technology you would like."
+msgstr ""
+"URL / Liens / Informations de contact pour la réunion. Open Robotics utilise"
+" Google Hangouts, mais vous pouvez utiliser la technologie de votre choix."
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:81
+msgid ""
+"When you schedule your meeting, create an event on the ROS Calendar and "
+"invite the Google group so that anyone interested can sign up for automatic "
+"invitations."
+msgstr ""
+"Lorsque vous planifiez votre réunion, créez un événement sur le calendrier "
+"ROS et invitez le groupe Google afin que toute personne intéressée puisse "
+"s'inscrire aux invitations automatiques."
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:83
+msgid "Have your meetings! Regularly!"
+msgstr "Faites vos réunions ! Régulièrement!"
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:85
+msgid ""
+"Since we are a global community it can help to record your meetings. If you "
+"have an invited lecture we highly recommend recording it for the benefit of "
+"the whole community. Make sure the group / lecturer consents to being "
+"recorded, and it is wise to do a test run before the event."
+msgstr ""
+"Puisque nous sommes une communauté mondiale, il peut être utile "
+"d'enregistrer vos réunions. Si vous avez une conférence invitée, nous vous "
+"recommandons fortement de l'enregistrer pour le bénéfice de toute la "
+"communauté. Assurez-vous que le groupe / conférencier consent à être "
+"enregistré, et il est sage de faire un test avant l'événement."
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:90
+msgid ""
+"On Linux SimpleScreenRecorder works well but you may need to iterate to find"
+" the best combination of video conferencing platform, screen recorder, and "
+"settings."
+msgstr ""
+"Sur Linux, SimpleScreenRecorder fonctionne bien, mais vous devrez peut-être "
+"itérer pour trouver la meilleure combinaison de plate-forme de "
+"visioconférence, d'enregistreur d'écran et de paramètres."
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:94
+msgid ""
+"Once your meeting is over, find somewhere online to save the video. Feel "
+"free to use your own Youtube channel to post the video; alternatively Open "
+"Robotics can host the video on their Vimeo account by sending a download "
+"link to kat@openrobotics.org."
+msgstr ""
+"Une fois votre réunion terminée, trouvez un endroit en ligne pour "
+"enregistrer la vidéo. N'hésitez pas à utiliser votre propre chaîne Youtube "
+"pour publier la vidéo ; Open Robotics peut également héberger la vidéo sur "
+"son compte Vimeo en envoyant un lien de téléchargement à "
+"kat@openrobotics.org."
+
+#: ../../source/The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.rst:99
+msgid ""
+"Make sure to take notes! You should nominate a scribe or note taker who "
+"summarizes the meeting and posts the results of the meeting to discourse."
+msgstr ""
+"Assurez-vous de prendre des notes! Vous devez nommer un scribe ou un preneur"
+" de notes qui résume la réunion et affiche les résultats de la réunion dans "
+"le discours."

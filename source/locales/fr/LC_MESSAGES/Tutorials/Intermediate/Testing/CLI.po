@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 12:03:02.067900\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Intermediate/Testing/CLI.rst:4
+msgid "Running Tests in ROS 2 from the Command Line"
+msgstr "Exécution de tests dans ROS 2 à partir de la ligne de commande"
+
+#: ../../source/Tutorials/Intermediate/Testing/CLI.rst:7
+msgid "Build and run your tests"
+msgstr "Créez et exécutez vos tests"
+
+#: ../../source/Tutorials/Intermediate/Testing/CLI.rst:9
+msgid ""
+"To compile and run the tests, simply run the `test "
+"<https://colcon.readthedocs.io/en/released/reference/verb/test.html>`__ verb"
+" from ``colcon``."
+msgstr ""
+"Pour compiler et exécuter les tests, exécutez simplement le verbe `test "
+"<https://colcon.readthedocs.io/en/released/reference/verb/test.html>`__ de "
+"``colcon``."
+
+#: ../../source/Tutorials/Intermediate/Testing/CLI.rst:15
+msgid ""
+"(where ``package_selection_args`` are optional package selection arguments "
+"for ``colcon`` to limit which packages are built and run)"
+msgstr ""
+"(où ``package_selection_args`` sont des arguments de sélection de packages "
+"facultatifs pour ``colcon`` afin de limiter les packages construits et "
+"exécutés)"
+
+#: ../../source/Tutorials/Intermediate/Testing/CLI.rst:18
+msgid "Examine Test Results"
+msgstr "Examiner les résultats des tests"
+
+#: ../../source/Tutorials/Intermediate/Testing/CLI.rst:20
+msgid ""
+"To see the results, simply run the `test-result "
+"<https://colcon.readthedocs.io/en/released/reference/verb/test-"
+"result.html>`__ verb from ``colcon``."
+msgstr ""
+"Pour voir les résultats, exécutez simplement le `test-result "
+"<https://colcon.readthedocs.io/en/released/reference/verb/test-"
+"result.html>`__ verb from ``colcon``."

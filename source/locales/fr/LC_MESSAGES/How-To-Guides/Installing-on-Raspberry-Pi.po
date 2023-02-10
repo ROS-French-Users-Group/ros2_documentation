@@ -1,0 +1,176 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 17:22:01.388650\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/How-To-Guides/Installing-on-Raspberry-Pi.rst:2
+msgid "ROS 2 on Raspberry Pi"
+msgstr "ROS 2 sur Raspberry Pi"
+
+#: ../../source/How-To-Guides/Installing-on-Raspberry-Pi.rst:4
+msgid ""
+"ROS 2 is supported on both 32 bit (arm32) and 64 bit (arm64) ARM processors."
+" However, you can see `here <https://www.ros.org/reps/rep-2000.html>`__ that"
+" arm64 receives Tier 1 support, while arm32 is Tier 3. Tier 1 support means "
+"distribution specific packages and binary archives are available, while Tier"
+" 3 requires the user to compile ROS 2 from source."
+msgstr ""
+"ROS 2 est pris en charge sur les processeurs ARM 32 bits (arm32) et 64 bits "
+"(arm64). Cependant, vous pouvez voir `ici "
+"<https://www.ros.org/reps/rep-2000.html>`__ qu'arm64 reçoit un support de "
+"niveau 1, tandis qu'arm32 est de niveau 3. Le support de niveau 1 signifie "
+"des packages et des binaires spécifiques à la distribution des archives sont"
+" disponibles, tandis que le niveau 3 oblige l'utilisateur à compiler ROS 2 à"
+" partir de la source."
+
+#: ../../source/How-To-Guides/Installing-on-Raspberry-Pi.rst:8
+msgid ""
+"The fastest and simplest way to use ROS 2 is to use a Tier 1 supported "
+"configuration."
+msgstr ""
+"Le moyen le plus rapide et le plus simple d'utiliser ROS 2 consiste à "
+"utiliser une configuration prise en charge par le niveau 1."
+
+#: ../../source/How-To-Guides/Installing-on-Raspberry-Pi.rst:10
+msgid ""
+"This would mean either installing 64 bit Ubuntu on to the Raspberry Pi, or "
+"using the 64 bit version of Raspberry Pi OS and running ROS 2 in Docker."
+msgstr ""
+"Cela signifierait soit installer Ubuntu 64 bits sur le Raspberry Pi, soit "
+"utiliser la version 64 bits du système d'exploitation Raspberry Pi et "
+"exécuter ROS 2 dans Docker."
+
+#: ../../source/How-To-Guides/Installing-on-Raspberry-Pi.rst:13
+msgid "Ubuntu Linux on Raspberry Pi with binary ROS 2 install"
+msgstr "Ubuntu Linux sur Raspberry Pi avec installation binaire ROS 2"
+
+#: ../../source/How-To-Guides/Installing-on-Raspberry-Pi.rst:15
+msgid ""
+"Ubuntu for Raspberry Pi is available `here "
+"<https://ubuntu.com/download/raspberry-pi>`__."
+msgstr ""
+"Ubuntu pour Raspberry Pi est disponible `ici "
+"<https://ubuntu.com/download/raspberry-pi>`__."
+
+#: ../../source/How-To-Guides/Installing-on-Raspberry-Pi.rst:17
+msgid ""
+"Make sure to confirm that you have selected the correct version as described"
+" in `REP-2000 <https://www.ros.org/reps/rep-2000.html>`__."
+msgstr ""
+"Assurez-vous de confirmer que vous avez sélectionné la bonne version, comme "
+"décrit dans `REP-2000 <https://www.ros.org/reps/rep-2000.html>`__."
+
+#: ../../source/How-To-Guides/Installing-on-Raspberry-Pi.rst:19
+msgid ""
+"You can now install ROS 2 using the normal binary installation instructions "
+"for Ubuntu Linux."
+msgstr ""
+"Vous pouvez maintenant installer ROS 2 en utilisant les instructions "
+"d'installation binaires normales pour Ubuntu Linux."
+
+#: ../../source/How-To-Guides/Installing-on-Raspberry-Pi.rst:22
+msgid "Raspberry Pi OS with ROS 2 in docker"
+msgstr "Raspberry Pi OS avec ROS 2 dans le menu fixe"
+
+#: ../../source/How-To-Guides/Installing-on-Raspberry-Pi.rst:24
+msgid ""
+"Raspberry Pi OS 64 bit version is `available here "
+"<https://www.raspberrypi.com/software/operating-systems/>`__."
+msgstr ""
+"La version Raspberry Pi OS 64 bits est `disponible ici "
+"<https://www.raspberrypi.com/software/operating-systems/>`__."
+
+#: ../../source/How-To-Guides/Installing-on-Raspberry-Pi.rst:26
+msgid ""
+"Raspberry Pi OS is based on Debian which receives Tier 3 support, but it can"
+" run Ubuntu docker containers for Tier 1 support."
+msgstr ""
+"Raspberry Pi OS est basé sur Debian qui reçoit une prise en charge de niveau"
+" 3, mais il peut exécuter des conteneurs Docker Ubuntu pour une prise en "
+"charge de niveau 1."
+
+#: ../../source/How-To-Guides/Installing-on-Raspberry-Pi.rst:28
+msgid ""
+"After flashing the OS, `install Docker "
+"<https://docs.docker.com/engine/install/debian/#install-using-the-"
+"convenience-script>`__."
+msgstr ""
+"Après avoir flashé le système d'exploitation, `installez Docker "
+"<https://docs.docker.com/engine/install/debian/#install-using-the-"
+"convenience-script>`__."
+
+#: ../../source/How-To-Guides/Installing-on-Raspberry-Pi.rst:30
+msgid ""
+"The official OSRF ROS 2 Docker container definitions can be found `here "
+"<https://github.com/osrf/docker_images/>`__."
+msgstr ""
+"Les définitions officielles du conteneur OSRF ROS 2 Docker peuvent être "
+"trouvées `ici <https://github.com/osrf/docker_images/>`__."
+
+#: ../../source/How-To-Guides/Installing-on-Raspberry-Pi.rst:32
+msgid ""
+"You may choose from ros-core, ros-base, or ros-desktop. See `here "
+"<https://www.ros.org/reps/rep-2001.html>`__ for more information on these "
+"variants."
+msgstr ""
+"Vous pouvez choisir entre ros-core, ros-base ou ros-desktop. Voir `ici "
+"<https://www.ros.org/reps/rep-2001.html>`__ pour plus d'informations sur ces"
+" variantes."
+
+#: ../../source/How-To-Guides/Installing-on-Raspberry-Pi.rst:34
+msgid ""
+"Clone the `docker_images git repo <https://github.com/osrf/docker_images>`__"
+" onto the Raspberry Pi, change in to the directory linked above, then to the"
+" directory with your preferred variant."
+msgstr ""
+"Clonez le `docker_images git repo <https://github.com/osrf/docker_images>`__"
+" sur le Raspberry Pi, accédez au répertoire lié ci-dessus, puis au "
+"répertoire avec votre variante préférée."
+
+#: ../../source/How-To-Guides/Installing-on-Raspberry-Pi.rst:36
+msgid "Inside of the directory, build the container with:"
+msgstr "À l'intérieur du répertoire, créez le conteneur avec :"
+
+#: ../../source/How-To-Guides/Installing-on-Raspberry-Pi.rst:42
+msgid ""
+"On a supported system it will only take a minute or two to build the docker "
+"containers, as the source code is already built in to binaries."
+msgstr ""
+"Sur un système pris en charge, la création des conteneurs Docker ne prendra "
+"qu'une minute ou deux, car le code source est déjà intégré aux fichiers "
+"binaires."
+
+#: ../../source/How-To-Guides/Installing-on-Raspberry-Pi.rst:45
+msgid "Pre-built Docker container"
+msgstr "Conteneur Docker pré-construit"
+
+#: ../../source/How-To-Guides/Installing-on-Raspberry-Pi.rst:47
+msgid ""
+"A pre-built container for the desktop variant is available as well, which "
+"only requires a docker pull command."
+msgstr ""
+"Un conteneur pré-construit pour la variante de bureau est également "
+"disponible, qui ne nécessite qu'une commande docker pull."
+
+#: ../../source/How-To-Guides/Installing-on-Raspberry-Pi.rst:49
+msgid ""
+"See :doc:`this page <Run-2-nodes-in-single-or-separate-docker-containers>` "
+"for more information."
+msgstr ""
+"Voir :doc:`cette page <Run-2-nodes-in-single-or-separate-docker-containers>`"
+" pour plus d'informations."

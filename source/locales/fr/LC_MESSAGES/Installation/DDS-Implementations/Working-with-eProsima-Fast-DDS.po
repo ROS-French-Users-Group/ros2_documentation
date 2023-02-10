@@ -1,0 +1,107 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 17:02:15.028283\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.rst:2
+msgid "eProsima Fast DDS"
+msgstr "DDS rapide eProsima"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.rst:4
+msgid ""
+"eProsima Fast DDS is a complete open-source DDS implementation for real time"
+" embedded architectures and operating systems. See also: "
+"https://www.eprosima.com/index.php/products-all/eprosima-fast-dds"
+msgstr ""
+"eProsima Fast DDS est une implémentation DDS open source complète pour les "
+"architectures embarquées et les systèmes d'exploitation en temps réel. Voir "
+"aussi : https://www.eprosima.com/index.php/products-all/eprosima-fast-dds"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.rst:9
+msgid "Prerequisites"
+msgstr "Conditions préalables"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.rst:11
+msgid ""
+"Have `rosdep installed  <https://wiki.ros.org/rosdep#Installing_rosdep>`__"
+msgstr ""
+"Avoir `rosdep installé <https://wiki.ros.org/rosdep#Installing_rosdep>`__"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.rst:14
+msgid "Install packages"
+msgstr "Installer des packages"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.rst:16
+msgid "The easiest way is to install from ROS 2 apt repository."
+msgstr ""
+"Le moyen le plus simple consiste à installer à partir du référentiel ROS 2 "
+"apt."
+
+#: ../../source/Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.rst:23
+msgid "Build from source code"
+msgstr "Construire à partir du code source"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.rst:25
+msgid "Building from source code is also another way to install."
+msgstr ""
+"Construire à partir du code source est également une autre façon "
+"d'installer."
+
+#: ../../source/Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.rst:27
+msgid ""
+"First, clone Fast DDS and rmw_fastrtps in the ROS 2 workspace source "
+"directory."
+msgstr ""
+"Tout d'abord, clonez Fast DDS et rmw_fastrtps dans le répertoire source de "
+"l'espace de travail ROS 2."
+
+#: ../../source/Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.rst:35
+msgid "Then, install necessary packages for Fast DDS."
+msgstr "Ensuite, installez les packages nécessaires pour Fast DDS."
+
+#: ../../source/Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.rst:42
+msgid "Finally, run colcon build."
+msgstr "Enfin, lancez colcon build."
+
+#: ../../source/Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.rst:49
+msgid "Switch to rmw_fastrtps"
+msgstr "Passer à rmw_fastrtps"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.rst:51
+msgid ""
+"The eProsima Fast DDS RMW can be selected by specifying the environment "
+"variable:"
+msgstr ""
+"L'eProsima Fast DDS RMW peut être sélectionné en spécifiant la variable "
+"d'environnement :"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.rst:57
+msgid ""
+"See also: :doc:`Working with multiple RMW implementations <../../How-To-"
+"Guides/Working-with-multiple-RMW-implementations>`"
+msgstr ""
+"Voir aussi : :doc:`Travailler avec plusieurs implémentations RMW <../../How-"
+"To-Guides/Working-with-multiple-RMW-implementations>`"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.rst:60
+msgid "Run the talker and listener"
+msgstr "Exécutez le locuteur et l'auditeur"
+
+#: ../../source/Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.rst:62
+msgid "Now run ``talker`` and ``listener`` to test Fast DDS."
+msgstr "Lancez maintenant ``talker`` et ``listener`` pour tester Fast DDS."

@@ -1,0 +1,725 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-07 07:19:03.772581\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:2
+msgid "Eloquent Elusor (``eloquent``)"
+msgstr "Eloquent Elusor (``éloquent'')"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:6
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:8
+msgid "*Eloquent Elusor* is the fifth release of ROS 2."
+msgstr "*Eloquent Elusor* est la cinquième version de ROS 2."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:11
+msgid "Supported Platforms"
+msgstr "Plates-formes prises en charge"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:13
+msgid "Eloquent Elusor is primarily supported on the following platforms:"
+msgstr ""
+"Eloquent Elusor est principalement pris en charge sur les plates-formes "
+"suivantes :"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:15
+msgid "Tier 1 platforms:"
+msgstr "Plateformes de niveau 1 :"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:17
+msgid "Ubuntu 18.04 (Bionic): ``amd64`` and ``arm64``"
+msgstr "Ubuntu 18.04 (Bionic) : ``amd64`` et ``arm64``"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:18
+msgid "Mac macOS 10.14 (Mojave)"
+msgstr "Mac macOS 10.14 (Mojave)"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:19
+msgid "Windows 10 (Visual Studio 2019)"
+msgstr "Windows 10 (Visual Studio 2019)"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:21
+msgid "Tier 2 platforms:"
+msgstr "Plateformes de niveau 2 :"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:23
+msgid "Ubuntu 18.04 (Bionic): ``arm32``"
+msgstr "Ubuntu 18.04 (Bionic) : ``arm32``"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:25
+msgid "Tier 3 platforms:"
+msgstr "Plateformes de niveau 3 :"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:27
+msgid "Debian Stretch (9): ``amd64``, ``arm64`` and ``arm32``"
+msgstr "Debian Stretch (9) : ``amd64``, ``arm64`` et ``arm32``"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:28
+msgid "OpenEmbedded Thud (2.6) / webOS OSE: ``arm32`` and ``x86``"
+msgstr "OpenEmbedded Thud (2.6) / webOS OSE : ``arm32`` et ``x86``"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:30
+msgid ""
+"For more information about RMW implementations, compiler / interpreter "
+"versions, and system dependency versions see `REP 2000 "
+"<https://www.ros.org/reps/rep-2000.html>`__."
+msgstr ""
+"Pour plus d'informations sur les implémentations RMW, les versions du "
+"compilateur/interpréteur et les versions des dépendances système, consultez "
+"`REP 2000 <https://www.ros.org/reps/rep-2000.html>`__."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:33
+msgid "Installation"
+msgstr "Installation"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:35
+msgid "`Install Eloquent Elusor <../../eloquent/Installation.html>`__"
+msgstr "`Installer Eloquent Elusor <../../eloquent/Installation.html>`__"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:38
+msgid "New features in this ROS 2 release"
+msgstr "Nouvelles fonctionnalités de cette version de ROS 2"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:40
+msgid "A few features and improvements we would like to highlight:"
+msgstr ""
+"Quelques fonctionnalités et améliorations que nous aimerions souligner :"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:42
+msgid ""
+"`Support for markup-based launch files (XML/YAML) "
+"<https://github.com/ros2/launch/pull/226>`__"
+msgstr ""
+"`Prise en charge des fichiers de lancement basés sur le balisage (XML/YAML) "
+"<https://github.com/ros2/launch/pull/226>`__"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:43
+msgid ""
+"`Improved launch-based testing "
+"<https://github.com/ros2/ros2/issues/739#issuecomment-555743540>`__"
+msgstr ""
+"`Tests basés sur le lancement améliorés "
+"<https://github.com/ros2/ros2/issues/739#issuecomment-555743540>`__"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:44
+msgid ""
+"`Passing key-value parameters on CLI "
+"<https://github.com/ros2/design/pull/245>`__"
+msgstr ""
+"`Passage de paramètres clé-valeur sur CLI "
+"<https://github.com/ros2/design/pull/245>`__"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:45
+msgid ""
+"`Support stream logging macros <https://github.com/ros2/rclcpp/pull/926>`__"
+msgstr ""
+"`Prise en charge des macros de journalisation de flux "
+"<https://github.com/ros2/rclcpp/pull/926>`__"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:46
+msgid ""
+"`Per-node logging <https://github.com/ros2/ros2/issues/789>`__ - All "
+"stdout/stderr output from nodes are logged in ~/.ros"
+msgstr ""
+"`Journalisation par nœud <https://github.com/ros2/ros2/issues/789>`__ - "
+"Toutes les sorties stdout/stderr des nœuds sont consignées dans ~/.ros"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:47
+msgid ""
+"`ros2doctor <https://index.ros.org/doc/ros2/Tutorials/Getting-Started-With-"
+"Ros2doctor/>`__"
+msgstr ""
+"`ros2doctor <https://index.ros.org/doc/ros2/Tutorials/Getting-Started-With-"
+"Ros2doctor/>`__"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:48
+msgid ""
+"`Improved performance of sourcing setup files "
+"<https://github.com/ros2/ros2/issues/764>`__"
+msgstr ""
+"`Amélioration des performances des fichiers de configuration de sourcing "
+"<https://github.com/ros2/ros2/issues/764>`__"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:49
+msgid ""
+"rviz: `interactive markers <https://github.com/ros2/rviz/pull/457>`__, "
+"`torque ring <https://github.com/ros2/rviz/pull/396>`__, `tf message filters"
+" <https://github.com/ros2/rviz/pull/375>`__"
+msgstr ""
+"rviz : `marqueurs interactifs <https://github.com/ros2/rviz/pull/457>`__, "
+"`torque ring <https://github.com/ros2/rviz/pull/396>`__, `tf filtres de "
+"messages <https://github.com/ros2/rviz/pull/375>`__"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:50
+msgid ""
+"rqt: `parameter plugin <https://github.com/ros-"
+"visualization/rqt_reconfigure/pull/31>`__, `tf tree plugin "
+"<https://github.com/ros-visualization/rqt_tf_tree/pull/13>`__, `robot "
+"steering plugin <https://github.com/ros-"
+"visualization/rqt_robot_steering/pull/7>`__ (also backported to Dashing)"
+msgstr ""
+"rqt : `plugin de paramètres <https://github.com/ros-"
+"visualization/rqt_reconfigure/pull/31>`__, `tf tree plugin "
+"<https://github.com/ros-visualization/rqt_tf_tree/pull/13> `__, `plugin de "
+"direction de robot <https://github.com/ros-"
+"visualization/rqt_robot_steering/pull/7>`__ (également rétroporté vers "
+"Dashing)"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:51
+msgid ""
+"`turtlesim <https://github.com/ros/ros_tutorials/pull/53>`__ (also "
+"backported to Dashing)"
+msgstr ""
+"`turtlesim <https://github.com/ros/ros_tutorials/pull/53>`__ (également "
+"rétroporté vers Dashing)"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:52
+msgid "RMW implementations:"
+msgstr "Implémentations RMW :"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:54
+msgid ""
+"`API to loan message for zero copy "
+"<https://github.com/ros2/design/pull/256>`__, used by `rmw_iceoryx "
+"<https://github.com/ros2/rmw_iceoryx>`__"
+msgstr ""
+"`API pour prêter un message pour zéro copie "
+"<https://github.com/ros2/design/pull/256>`__, utilisé par `rmw_iceoryx "
+"<https://github.com/ros2/rmw_iceoryx>`__"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:55
+msgid ""
+"`Fast RTPS 1.9.3 "
+"<https://github.com/ros2/ros2/issues/734#issuecomment-518018479>`__"
+msgstr ""
+"`RTPS rapide 1.9.3 "
+"<https://github.com/ros2/ros2/issues/734#issuecomment-518018479>`__"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:56
+msgid ""
+"New Tier-2 implementation: `rmw_cyclonedds "
+"<https://github.com/ros2/rmw_cyclonedds>`__ (also backported to Dashing)"
+msgstr ""
+"Nouvelle implémentation de niveau 2 : `rmw_cyclonedds "
+"<https://github.com/ros2/rmw_cyclonedds>`__ (également rétroporté vers "
+"Dashing)"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:58
+msgid ""
+"Environment variable `ROS_LOCALHOST_ONLY "
+"<https://github.com/ros2/ros2/issues/798>`__ to limit communication to "
+"localhost"
+msgstr ""
+"Variable d'environnement `ROS_LOCALHOST_ONLY "
+"<https://github.com/ros2/ros2/issues/798>`__ pour limiter la communication à"
+" localhost"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:59
+msgid "MacOS Mojave Support"
+msgstr "Prise en charge de MacOS Mojave"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:60
+msgid ""
+"`Tracing instrumentation <https://github.com/ros2/ros2/pull/748>`__ for rcl "
+"and rclcpp"
+msgstr ""
+"`Tracing instrumentation <https://github.com/ros2/ros2/pull/748>`__ pour rcl"
+" et rclcpp"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:63
+msgid ""
+"During the development the `Eloquent meta ticket "
+"<https://github.com/ros2/ros2/issues/734>`__ on GitHub contains an up-to-"
+"date state of the ongoing high level tasks as well as references specific "
+"tickets with more details."
+msgstr ""
+"Au cours du développement, le `meta ticket Eloquent "
+"<https://github.com/ros2/ros2/issues/734>`__ sur GitHub contient un état à "
+"jour des tâches de haut niveau en cours ainsi que des références de tickets "
+"spécifiques avec plus de détails."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:66
+msgid "Changes since the Dashing release"
+msgstr "Changements depuis la sortie de Dashing"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:69
+msgid "geometry_msgs"
+msgstr "geometry_msgs"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:71
+msgid ""
+"The ``geometry_msgs/msg/Quaternion.msg`` interface now default initializes "
+"to a valid quaternion, with the following values:"
+msgstr ""
+"L'interface ``geometry_msgs/msg/Quaternion.msg`` s'initialise désormais par "
+"défaut sur un quaternion valide, avec les valeurs suivantes :"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:73
+msgid ""
+"x = 0 \\\\\n"
+"y = 0 \\\\\n"
+"z = 0 \\\\\n"
+"w = 1"
+msgstr ""
+"x = 0 \\\\\n"
+"y = 0 \\\\\n"
+"z = 0 \\\\\n"
+"w = 1"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:80
+msgid ""
+"Here is the pull request for more detail: "
+"`https://github.com/ros2/common_interfaces/pull/74 "
+"<https://github.com/ros2/common_interfaces/pull/74>`_"
+msgstr ""
+"Voici la demande d'extraction pour plus de détails : "
+"`https://github.com/ros2/common_interfaces/pull/74 "
+"<https://github.com/ros2/common_interfaces/pull/74>`_"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:82
+msgid ""
+"Static transform broadcasters and listeners now use QoS durability "
+"``transient_local`` on the ``/tf_static`` topic. Similar to the latched "
+"setting in ROS 1, static transforms only need to be published once. New "
+"listeners will receive transforms from all static broadcasters that are "
+"alive and have published before. All publishers must be updated to use this "
+"durability setting or their messages won't be received by transform "
+"listeners. See this pull request for more detail: "
+"`https://github.com/ros2/geometry2/pull/160 "
+"<https://github.com/ros2/geometry2/pull/160>`_"
+msgstr ""
+"Les diffuseurs et les écouteurs de transformation statique utilisent "
+"désormais la durabilité QoS ``transient_local`` sur le sujet ``/tf_static``."
+" Semblable au paramètre verrouillé dans ROS 1, les transformations statiques"
+" ne doivent être publiées qu'une seule fois. Les nouveaux auditeurs "
+"recevront des transformations de tous les diffuseurs statiques qui sont "
+"actifs et ont publié auparavant. Tous les éditeurs doivent être mis à jour "
+"pour utiliser ce paramètre de durabilité, sinon leurs messages ne seront pas"
+" reçus par les écouteurs de transformation. Voir cette pull request pour "
+"plus de détails : `https://github.com/ros2/geometry2/pull/160 "
+"<https://github.com/ros2/geometry2/pull/160>`_"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:89
+msgid "rclcpp"
+msgstr "RCLCP"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:92
+msgid "API Break with ``get_actual_qos()``"
+msgstr "Rupture d'API avec ``get_actual_qos()``"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:94
+msgid ""
+"Introduced in Dashing, the ``get_actual_qos()`` method on the "
+"``PublisherBase`` and ``SubscriptionBase`` previously returned an rmw type, "
+"``rmw_qos_profile_t``, but that made it awkward to reuse with the creation "
+"of other entities. Therefore it was updated to return a ``rclcpp::QoS`` "
+"instead."
+msgstr ""
+"Introduite dans Dashing, la méthode ``get_actual_qos()`` sur "
+"``PublisherBase`` et ``SubscriptionBase`` renvoyait auparavant un type rmw, "
+"``rmw_qos_profile_t``, mais cela rendait difficile la réutilisation avec la "
+"création d'autres entités. Par conséquent, il a été mis à jour pour renvoyer"
+" un ``rclcpp::QoS`` à la place."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:97
+msgid ""
+"Existing code will need to use the ``rclcpp::QoS::get_rmw_qos_profile()`` "
+"method if the rmw profile is still required. For example:"
+msgstr ""
+"Le code existant devra utiliser la méthode "
+"``rclcpp::QoS::get_rmw_qos_profile()`` si le profil rmw est toujours requis."
+" Par exemple:"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:109
+msgid ""
+"The rationale for breaking this directly rather than doing a tick-tock is "
+"that it is a new function and is expected to be used infrequently by users. "
+"Also, since only the return type is changing, adding a new function with a "
+"different would be to only way to do a deprecation cycle and "
+"``get_actual_qos()`` is the most appropriate name, so we would be forced to "
+"pick a less obvious name for the method."
+msgstr ""
+"La raison pour casser cela directement plutôt que de faire un tic-tac est "
+"qu'il s'agit d'une nouvelle fonction et que les utilisateurs s'attendent à "
+"ce qu'elle soit rarement utilisée. De plus, puisque seul le type de retour "
+"change, l'ajout d'une nouvelle fonction avec un autre serait le seul moyen "
+"de faire un cycle de dépréciation et ``get_actual_qos()`` est le nom le plus"
+" approprié, nous serions donc obligés de choisir un moins nom évident pour "
+"la méthode."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:113
+msgid "API Break with Publisher and Subscription Classes"
+msgstr "Rupture d'API avec les classes d'éditeur et d'abonnement"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:115
+msgid ""
+"In an effort to streamline the construction of Publishers and Subscriptions,"
+" the API of the constructors were changed."
+msgstr ""
+"Dans un effort pour rationaliser la construction des éditeurs et des "
+"abonnements, l'API des constructeurs a été modifiée."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:117
+msgid ""
+"It would be impossible to support a deprecation cycle, because the old "
+"signature takes an rcl type and the new one takes the ``NodeBaseInterface`` "
+"type so that it can get additional information it now needs, and there's no "
+"way to get the additional information needed from just the rcl type. The new"
+" signature could possibly be backported if that would help contributors, but"
+" since the publishers and subscriptions are almost always created using the "
+"factory functions or some other higher level API, we do not expect this to "
+"be a problem for most users."
+msgstr ""
+"Il serait impossible de prendre en charge un cycle de dépréciation, car "
+"l'ancienne signature prend un type rcl et la nouvelle prend le type "
+"``NodeBaseInterface`` afin qu'elle puisse obtenir les informations "
+"supplémentaires dont elle a maintenant besoin, et il n'y a aucun moyen "
+"d'obtenir les informations supplémentaires nécessaire à partir du type rcl "
+"uniquement. La nouvelle signature pourrait éventuellement être rétroportée "
+"si cela aidait les contributeurs, mais comme les éditeurs et les abonnements"
+" sont presque toujours créés à l'aide des fonctions d'usine ou d'une autre "
+"API de niveau supérieur, nous ne nous attendons pas à ce que cela pose un "
+"problème pour la plupart des utilisateurs."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:120
+msgid ""
+"Please see the original pr for more detail and comment there if this causes "
+"issues:"
+msgstr ""
+"Veuillez consulter le pr original pour plus de détails et commenter si cela "
+"pose des problèmes :"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:122
+msgid ""
+"`https://github.com/ros2/rclcpp/pull/867 "
+"<https://github.com/ros2/rclcpp/pull/867>`_"
+msgstr ""
+"`https://github.com/ros2/rclcpp/pull/867 "
+"<https://github.com/ros2/rclcpp/pull/867>`_"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:125
+msgid ""
+"Compiler warning about unused result of ``add_on_set_parameters_callback``"
+msgstr ""
+"Avertissement du compilateur concernant le résultat inutilisé de "
+"``add_on_set_parameters_callback``"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:127
+msgid "*Since Eloquent Patch Release 2 (2020-12-04)*"
+msgstr "*Depuis la version 2 du patch Eloquent (2020-12-04)*"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:129
+msgid ""
+"Users should retain the  handle returned by "
+"``rclcpp::Node::add_on_set_parameters_callback``, otherwise their callback "
+"may be unregistered. A warning has been added to help identify bugs where "
+"the returned handle is not used."
+msgstr ""
+"Les utilisateurs doivent conserver le descripteur renvoyé par "
+"``rclcpp::Node::add_on_set_parameters_callback``, sinon leur rappel peut "
+"être désenregistré. Un avertissement a été ajouté pour aider à identifier "
+"les bogues où la poignée retournée n'est pas utilisée."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:132
+msgid ""
+"`https://github.com/ros2/rclcpp/pull/1243 "
+"<https://github.com/ros2/rclcpp/pull/1243>`_"
+msgstr ""
+"`https://github.com/ros2/rclcpp/pull/1243 "
+"<https://github.com/ros2/rclcpp/pull/1243>`_"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:135
+msgid "rmw"
+msgstr "rmw"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:138
+msgid "API Break Due to Addition of Publisher and Subscription Options"
+msgstr ""
+"Rupture de l'API en raison de l'ajout d'options d'éditeur et d'abonnement"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:140
+msgid ""
+"The ``rmw_create_publisher()`` method had a new argument added of type "
+"``const rmw_publisher_options_t *``. This new structure holds options "
+"(beyond the typesupport, topic name, and QoS) for new publishers."
+msgstr ""
+"La méthode ``rmw_create_publisher()`` a un nouvel argument ajouté de type "
+"``const rmw_publisher_options_t *``. Cette nouvelle structure contient des "
+"options (au-delà de la prise en charge du type, du nom du sujet et de la "
+"qualité de service) pour les nouveaux éditeurs."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:143
+msgid ""
+"The ``rmw_create_subscription()`` method had one argument removed, ``bool "
+"ignore_local_publications``, and replaced by the new options of type ``const"
+" rmw_subscription_options_t *``. The ``ignore_local_publications`` option "
+"was moved into the new ``rmw_subscription_options_t`` type."
+msgstr ""
+"La méthode ``rmw_create_subscription()`` avait un argument supprimé, ``bool "
+"ignore_local_publications``, et remplacé par les nouvelles options de type "
+"``const rmw_subscription_options_t *``. L'option "
+"``ignore_local_publications`` a été déplacée dans le nouveau type "
+"``rmw_subscription_options_t``."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:146
+msgid ""
+"In both cases the new argument, which are pointers, may never be null, and "
+"so the rmw implementations should check to make sure the options are not "
+"null. Additionally, the options should be copied into the corresponding rmw "
+"structure."
+msgstr ""
+"Dans les deux cas, les nouveaux arguments, qui sont des pointeurs, ne "
+"peuvent jamais être nuls, et les implémentations de rmw doivent donc "
+"vérifier que les options ne sont pas nulles. De plus, les options doivent "
+"être copiées dans la structure rmw correspondante."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:149
+msgid ""
+"See this pull request, and the associated pull requests for more details:"
+msgstr ""
+"Consultez cette demande d'extraction et les demandes d'extraction associées "
+"pour plus de détails :"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:151
+msgid ""
+"`https://github.com/ros2/rmw/pull/187 "
+"<https://github.com/ros2/rmw/pull/187>`_"
+msgstr ""
+"`https://github.com/ros2/rmw/pull/187 "
+"<https://github.com/ros2/rmw/pull/187>`_"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:154
+msgid "ros2cli"
+msgstr "Votre gagne-pain"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:157
+msgid "ros2msg and ros2srv deprecated"
+msgstr "ros2msg et ros2srv obsolètes"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:159
+msgid ""
+"The CLI tools ``ros2msg`` and ``ros2srv`` are deprecated. They have been "
+"replaced by the tool ``ros2interface``, which also supports action and IDL "
+"interfaces. You can run ``ros2 interface --help`` for usage."
+msgstr ""
+"Les outils CLI ``ros2msg`` et ``ros2srv`` sont obsolètes. Ils ont été "
+"remplacés par l'outil ``ros2interface``, qui prend également en charge les "
+"interfaces d'action et IDL. Vous pouvez exécuter ``ros2 interface --help`` "
+"pour l'utilisation."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:164
+msgid "ros2node"
+msgstr "Parce que c'est s2"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:166
+msgid ""
+"Service clients have been added to ros2node info. As part of that change the"
+" Python function ``ros2node.api.get_service_info`` has been renamed to "
+"``ros2node.api.get_service_server_info``."
+msgstr ""
+"Les clients de service ont été ajoutés aux informations de ros2node. Dans le"
+" cadre de ce changement, la fonction Python "
+"``ros2node.api.get_service_info`` a été renommée "
+"``ros2node.api.get_service_server_info``."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:171
+msgid "rviz"
+msgstr "voir"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:174
+msgid "Renamed '2D Nav Goal' tool"
+msgstr "Outil renommé \"Objectif de navigation 2D\""
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:176
+msgid ""
+"The tool was renamed to '2D Goal Pose' and the default topic was changed "
+"from ``/move_base_simple/goal`` to ``/goal_pose``."
+msgstr ""
+"L'outil a été renommé '2D Goal Pose' et le sujet par défaut a été changé de "
+"``/move_base_simple/goal`` à ``/goal_pose``."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:178
+msgid "Here is the related pull request:"
+msgstr "Voici la pull request associée :"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:180
+msgid ""
+"`https://github.com/ros2/rviz/pull/455 "
+"<https://github.com/ros2/rviz/pull/455>`_"
+msgstr ""
+"`https://github.com/ros2/rviz/pull/455 "
+"<https://github.com/ros2/rviz/pull/455>`_"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:183
+msgid "TF2 Buffer"
+msgstr "Tampon TF2"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:185
+msgid "TF2 buffers now have to be given a timer interface."
+msgstr ""
+"Les tampons TF2 doivent maintenant être dotés d'une interface de "
+"temporisation."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:187
+msgid "If a timer interface is not given, an exception will be thrown."
+msgstr ""
+"Si une interface de minuterie n'est pas donnée, une exception sera levée."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:189
+msgid "For example:"
+msgstr "Par exemple:"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:203
+msgid "rcl"
+msgstr "RCL"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:206
+msgid "ROS command line argument changes"
+msgstr "Modifications des arguments de la ligne de commande ROS"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:208
+msgid ""
+"To cope with an increasingly complex interface, with a now extended set of "
+"configuration options, ROS CLI syntax has been changed. As an example, a "
+"command line using Dashing syntax like:"
+msgstr ""
+"Pour faire face à une interface de plus en plus complexe, avec un ensemble "
+"désormais étendu d'options de configuration, la syntaxe ROS CLI a été "
+"modifiée. Par exemple, une ligne de commande utilisant la syntaxe Dashing "
+"comme :"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:215
+msgid "is written using Eloquent (and onwards) syntax as:"
+msgstr "est écrit en utilisant la syntaxe Eloquent (et au-delà) comme suit :"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:221
+msgid ""
+"This explicit syntax affords new features, like single parameter assignment "
+"``--param name:=value``. For further reference and rationale, check the `ROS"
+" command line arguments design document "
+"<https://design.ros2.org/articles/ros_command_line_arguments.html>`__."
+msgstr ""
+"Cette syntaxe explicite offre de nouvelles fonctionnalités, comme "
+"l'affectation d'un seul paramètre ``--param name:=value``. Pour plus de "
+"référence et de justification, consultez le `document de conception des "
+"arguments de ligne de commande ROS "
+"<https://design.ros2.org/articles/ros_command_line_arguments.html>`__."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:226
+msgid ""
+"Former syntax has been deprecated and is due for removal in the next "
+"release."
+msgstr ""
+"L'ancienne syntaxe est obsolète et doit être supprimée dans la prochaine "
+"version."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:229
+msgid "Known Issues"
+msgstr "Problèmes connus"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:231
+msgid ""
+"`[ros2/rosidl#402] <https://github.com/ros2/rosidl/issues/402>`_ "
+"``find_package(PCL)`` interferes with ROS interface generation. Workaround: "
+"invoke ``find_package(PCL)`` *after* ``rosidl_generate_interfaces()``."
+msgstr ""
+"`[ros2/rosidl#402] <https://github.com/ros2/rosidl/issues/402>`_ "
+"``find_package(PCL)`` interfère avec la génération de l'interface ROS. "
+"Solution : appelez ``find_package(PCL)`` *après* "
+"``rosidl_generate_interfaces()``."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:233
+msgid ""
+"`[ros2/rclcpp#893] <https://github.com/ros2/rclcpp/issues/893>`_ "
+"``rclcpp::Context`` is not destroyed because of a reference cycle with "
+"``rclcpp::GraphListener``. This causes a memory leak. A fix has not been "
+"backported because of the risk of breaking ABI."
+msgstr ""
+"`[ros2/rclcpp#893] <https://github.com/ros2/rclcpp/issues/893>`_ "
+"``rclcpp::Context`` n'est pas détruit à cause d'un cycle de référence avec "
+"``rclcpp::GraphListener ``. Cela provoque une fuite de mémoire. Un correctif"
+" n'a pas été rétroporté en raison du risque de casser l'ABI."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:236
+msgid "Timeline before the release"
+msgstr "Chronologie avant la sortie"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:238
+msgid "A few milestones leading up to the release:"
+msgstr "Quelques étapes menant à la sortie :"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:242
+msgid "Mon. Sep 30th (alpha)"
+msgstr "Mon. Sep 30th (alpha)"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:241
+msgid ""
+"First releases of core packages available. Testing can happen from now on "
+"(some features might not have landed yet)."
+msgstr ""
+"Premières versions des packages de base disponibles. Les tests peuvent avoir"
+" lieu à partir de maintenant (certaines fonctionnalités n'ont peut-être pas "
+"encore été ajoutées)."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:247
+msgid "Fri. Oct 18th"
+msgstr "Ven. 18 octobre"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:245
+msgid ""
+"API and feature freeze for core packages Only bug fix releases should be "
+"made after this point. New packages can be released independently."
+msgstr ""
+"Gel de l'API et des fonctionnalités pour les packages principaux Seules les "
+"versions de correctifs de bogues doivent être effectuées après ce point. De "
+"nouveaux packages peuvent être publiés indépendamment."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:251
+msgid "Thu. Oct 24th (beta)"
+msgstr "Jeu. 24 octobre (bêta)"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:250
+msgid ""
+"Updated releases of core packages available. Additional testing of the "
+"latest features."
+msgstr ""
+"Versions mises à jour des packages de base disponibles. Tests "
+"supplémentaires des dernières fonctionnalités."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:254
+msgid "Wed. Nov 13th (release candidate)"
+msgstr "Épouser. 13 novembre (version candidate)"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:254
+msgid "Updated releases of core packages available."
+msgstr "Versions mises à jour des packages de base disponibles."
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:257
+msgid "Tue. Nov 19th"
+msgstr "Tue. Nov 19th"
+
+#: ../../source/Releases/Release-Eloquent-Elusor.rst:257
+msgid ""
+"Freeze rosdistro. No PRs for Eloquent on the `rosdistro` repo will be merged"
+" (reopens after the release announcement)."
+msgstr ""
+"Geler rosdistro. Aucun PR pour Eloquent sur le repo `rosdistro` ne sera "
+"fusionné (réouverture après l'annonce de la sortie)."

@@ -1,0 +1,427 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 16:31:39.078153\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:9
+msgid "ROS Build Farms"
+msgstr "Fermes de construction ROS"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:13
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:15
+msgid ""
+"The ROS build farms are an important infrastructure to support the ROS "
+"ecosystem, provided and maintained by `Open Robotics`_. They provide "
+"building of source and binary packages, continuous integration, testing, and"
+" analysis for ROS 1 and ROS 2 packages. There are two hosted instance for "
+"open source packages:"
+msgstr ""
+"Les fermes de construction ROS sont une infrastructure importante pour "
+"soutenir l'écosystème ROS, fourni et maintenu par `Open Robotics`_. Ils "
+"fournissent la construction de packages source et binaires, l'intégration "
+"continue, les tests et l'analyse pour les packages ROS 1 et ROS 2. Il existe"
+" deux instances hébergées pour les packages open source :"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:20
+msgid "https://build.ros.org/ for ROS 1 packages"
+msgstr "https://build.ros.org/ pour les packages ROS 1"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:21
+msgid "https://build.ros2.org/ for ROS 2 packages"
+msgstr "https://build.ros2.org/ pour les packages ROS 2"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:23
+msgid ""
+"If you are going to use any of the provided infrastructure please consider "
+"signing up for the `build farm discussion forum "
+"<http://discourse.ros.org/c/buildfarm>`__ in order to receive notifications,"
+" e.g., about any upcoming changes."
+msgstr ""
+"Si vous envisagez d'utiliser l'une des infrastructures fournies, veuillez "
+"envisager de vous inscrire au `forum de discussion de build farm "
+"<http://discourse.ros.org/c/buildfarm>`__ afin de recevoir des "
+"notifications, par exemple, à propos de tout changements."
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:29
+msgid "Jobs and Deployment"
+msgstr "Emplois et déploiement"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:31
+msgid ""
+"The ROS build farms perform several different jobs. For each job type you "
+"will find a detailed description of what they do and how they work:"
+msgstr ""
+"Les fermes de construction ROS effectuent plusieurs tâches différentes. Pour"
+" chaque type d'emploi, vous trouverez une description détaillée de ce qu'ils"
+" font et de leur fonctionnement :"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:34
+msgid "`release jobs`_ generate binary packages, e.g., debian packages"
+msgstr ""
+"`release jobs`_ génère des packages binaires, par exemple, des packages "
+"debian"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:35
+msgid ""
+"`devel jobs`_ build and test ROS packages within a single repository on a "
+"polling basis"
+msgstr ""
+"`devel jobs`_ construit et teste des packages ROS dans un référentiel unique"
+" sur la base d'une interrogation"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:36
+msgid ""
+"`pull_request jobs`_ build and test ROS packages within a single repository "
+"triggered by webhooks"
+msgstr ""
+"`pull_request jobs`_ créez et testez des packages ROS dans un référentiel "
+"unique déclenché par des webhooks"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:37
+msgid ""
+"`CI jobs`_ build and test ROS packages across repositories with the option "
+"of using artifacts from other CI jobs to speed up the build"
+msgstr ""
+"Les `tâches CI`_ créent et testent des packages ROS sur plusieurs "
+"référentiels avec la possibilité d'utiliser des artefacts d'autres tâches CI"
+" pour accélérer la construction"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:39
+msgid ""
+"`doc jobs`_ generate the API documentation of packages and extract "
+"information from the manifests"
+msgstr ""
+"`doc jobs`_ génère la documentation de l'API des packages et extrait les "
+"informations des manifestes"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:40
+msgid ""
+"`miscellaneous jobs`_ perform maintenance tasks and generate informational "
+"data to visualize the status of the build farm and its generated artifacts"
+msgstr ""
+"`divers travaux`_ effectuent des tâches de maintenance et génèrent des "
+"données d'information pour visualiser l'état de la ferme de construction et "
+"ses artefacts générés"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:44
+msgid "Creation and Deployment"
+msgstr "Création et déploiement"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:46
+msgid ""
+"The above jobs are created and deployed when packages are bloomed_, i.e. "
+"released for ROS 1 or ROS 2. Once blooming is successful and a package is "
+"incorporated in one of the ROS distributions (via pull request to "
+"rosdistro_), the according jobs will be spawned. The names of the jobs "
+"encode their type and purpose: [1]_"
+msgstr ""
+"Les travaux ci-dessus sont créés et déployés lorsque les packages sont "
+"bloomed_, c'est-à-dire publiés pour ROS 1 ou ROS 2. Une fois que le blooming"
+" est réussi et qu'un package est incorporé dans l'une des distributions ROS "
+"(via une demande d'extraction à rosdistro_), les travaux correspondants "
+"seront générés . Les noms des tâches encodent leur type et leur objectif : "
+"[1]_"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:52
+msgid "release jobs:"
+msgstr "travaux de libération :"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:54
+msgid ""
+"``{distro}src_{platf}__{package}__{platform}__source`` build source packages"
+" of releases"
+msgstr ""
+"``{distro}src_{platf}__{package}__{platform}__source`` construit les "
+"packages source des versions"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:55
+msgid ""
+"``{distro}bin_{platf}__{package}__{platform}__binary`` build binary packages"
+" of releases"
+msgstr ""
+"``{distro}bin _{platform}__{package}__{platform}__ binary`` construit les "
+"packages binaires des versions"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:57
+msgid ""
+"For instance, the binary packaging job of rclcpp on ROS 2 Humble (running on"
+" Ubuntu Jammy amd64) is named "
+"``Hbin_uJ64__rclcpp__ubuntu_focal_amd64__binary``."
+msgstr ""
+"Par exemple, le travail d'empaquetage binaire de rclcpp sur ROS 2 Humble "
+"(fonctionnant sur Ubuntu Jammy amd64) est nommé "
+"``Hbin_uJ64__rclcpp__ubuntu_focal_amd64__binary``."
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:59
+msgid "devel jobs:"
+msgstr "métiers de développement :"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:61
+msgid ""
+"``{distro}dev__{package}__{platform}`` perform a CI build for the releasing "
+"branch"
+msgstr ""
+"``{distro}dev__{package}__{platform}`` effectue une construction CI pour la "
+"branche de publication"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:63
+msgid "pull_request jobs"
+msgstr "travaux pull_request"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:65
+msgid ""
+"``{distro}pr__{package}__{platform}`` perform a CI build for a pull request"
+msgstr ""
+"``{distro}pr__{package}__{platform}`` effectue une construction CI pour une "
+"demande d'extraction"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:67
+msgid ""
+"For instance, the PR job for rclcpp on ROS 2 Humble (running on Ubuntu Jammy"
+" amd64) is named ``Hpr__rclcpp__ubuntu_jammy_amd64``."
+msgstr ""
+"Par exemple, le travail PR pour rclcpp sur ROS 2 Humble (fonctionnant sur "
+"Ubuntu Jammy amd64) est nommé ``Hpr__rclcpp__ubuntu_jammy_amd64``."
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:70
+msgid "Execution"
+msgstr "Exécution"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:72
+msgid "Execution of the jobs depends on the type of the job:"
+msgstr "L'exécution des travaux dépend du type de travail :"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:74
+msgid ""
+"`devel jobs`_ will be triggered every time a commit is done to the "
+"respective branch polling based on a configured frequency."
+msgstr ""
+"`devel jobs`_ sera déclenché chaque fois qu'un commit est effectué sur la "
+"branche respective en fonction d'une fréquence configurée."
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:75
+msgid ""
+"`pull_request jobs`_ will be triggered by webhooks from respective pull "
+"request of the upstream [2]_ repository"
+msgstr ""
+"`pull_request jobs`_ seront déclenchés par des webhooks à partir de la "
+"demande d'extraction respective du dépôt en amont [2]_"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:76
+msgid ""
+"`release jobs`_ will be triggered once every time a new package version is "
+"released, i.e. a new rosdistro_ pull request was accepted for this package. "
+"The source jobs are triggered by a version change in the rosdistro "
+"distribution file, the binary jobs are triggered by their source "
+"counterpart."
+msgstr ""
+"`release jobs`_ sera déclenché une fois chaque fois qu'une nouvelle version "
+"de package est publiée, c'est-à-dire qu'une nouvelle demande d'extraction "
+"rosdistro_ a été acceptée pour ce package. Les travaux source sont "
+"déclenchés par un changement de version dans le fichier de distribution "
+"rosdistro, les travaux binaires sont déclenchés par leur homologue source."
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:82
+msgid "Frequency Asked Questions (FAQ) and Troubleshooting"
+msgstr "Questions fréquemment posées (FAQ) et dépannage"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:84
+msgid "**I get Jenkins mails from failing build farm jobs. What do I do?**"
+msgstr ""
+"** Je reçois des e-mails Jenkins suite à l'échec de travaux de construction "
+"de ferme. Que fais-je?**"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:86
+msgid ""
+"Go to the job that raised the issue. You find the link on top of the Jenkins"
+" email. Once you followed the link to the build job, click *Console Output* "
+"on the left, then click *Full Log*. This will give you the full console "
+"output of the failing build. Try to find the top-most error as it is usually"
+" the most important and other errors might be follow-ups."
+msgstr ""
+"Allez à l'emploi qui a soulevé le problème. Vous trouverez le lien en haut "
+"de l'e-mail de Jenkins. Une fois que vous avez suivi le lien vers la tâche "
+"de build, cliquez sur *Console Output* sur la gauche, puis cliquez sur *Full"
+" Log*. Cela vous donnera la sortie complète de la console de la version "
+"défaillante. Essayez de trouver l'erreur la plus importante car c'est "
+"généralement la plus importante et les autres erreurs peuvent être des "
+"suivis."
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:91
+msgid ""
+"The bottom of the email might read ``'apt-src build [...]' failed. This is "
+"usually because of an error building the package.`` This usually hints at "
+"missing dependencies, see 2."
+msgstr ""
+"Le bas de l'e-mail peut indiquer ``'apt-src build [...]' failed. Cela est "
+"généralement dû à une erreur lors de la construction du paquet.`` Cela "
+"indique généralement des dépendances manquantes, voir 2."
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:94
+msgid "**I seem to be missing a dependency, how do I find out which one?**"
+msgstr ""
+"**Il semble qu'il me manque une dépendance, comment puis-je savoir "
+"laquelle ?**"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:96
+msgid ""
+"You basically have two options, a. is easier but may take several "
+"iterations, b. is more elaborate and gives you the full insight as well as "
+"local debugging."
+msgstr ""
+"Vous avez essentiellement deux options, a. est plus facile mais peut prendre"
+" plusieurs itérations, b. est plus élaboré et vous donne un aperçu complet "
+"ainsi qu'un débogage local."
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:99
+msgid ""
+"Inspect the release job that raised the issue (see 1.) and localize the "
+"cmake dependency issue. To do so, browse to the cmake section, e.g., "
+"navigate to the *build binarydeb* section through the menu on the left in "
+"case of a ubuntu/debian build job. The *CMake Error* will typically hint at "
+"a dependency required by the cmake configuration but missing in the `package"
+" manifest`_. Once you have fixed the dependency in the manifest, do a new "
+"release of your package and wait for feedback from the build farms or..."
+msgstr ""
+"Inspectez la tâche de publication qui a soulevé le problème (voir 1.) et "
+"localisez le problème de dépendance cmake. Pour ce faire, accédez à la "
+"section cmake, par exemple, accédez à la section *build binarydeb* via le "
+"menu de gauche dans le cas d'une tâche de construction ubuntu/debian. "
+"L'*Erreur CMake* indiquera généralement une dépendance requise par la "
+"configuration cmake mais manquante dans le `package manifest`_. Une fois que"
+" vous avez corrigé la dépendance dans le manifeste, effectuez une nouvelle "
+"version de votre package et attendez les commentaires des fermes de "
+"construction ou..."
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:105
+msgid ""
+"To get the full insight and faster, local debugging, you can `run the "
+"release jobs locally`_. This allows to iterate the manifest locally until "
+"all dependencies are fixed."
+msgstr ""
+"Pour obtenir un aperçu complet et un débogage local plus rapide, vous pouvez"
+" `exécuter les tâches de publication localement`_. Cela permet d'itérer le "
+"manifeste localement jusqu'à ce que toutes les dépendances soient corrigées."
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:108
+msgid ""
+"**Why do release jobs fail when devel jobs / my github actions / my local "
+"builds succeed?**"
+msgstr ""
+"**Pourquoi les tâches de publication échouent-elles lorsque les tâches de "
+"développement/mes actions github/mes builds locaux réussissent ?**"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:110
+msgid ""
+"There are several potential reasons for this. First, release jobs build "
+"against a minimal ROS installation to check if all dependencies are properly"
+" declared in the `package manifest`_. Devel jobs / github actions / local "
+"builds may be performed in an environment that has the dependencies already "
+"installed, therefore does not notice dependency issues. Second, they might "
+"build different versions of the source code. While devel jobs / github "
+"actions / local builds usually build the latest version from the *upstream* "
+"[2]_ repository, `release jobs`_ build the source code of the latest "
+"release, i.e. the source code in the respective *upstream* branches of the "
+"*release* repository [3]_."
+msgstr ""
+"Il y a plusieurs raisons potentielles à cela. Tout d'abord, publiez les "
+"travaux construits sur une installation ROS minimale pour vérifier si toutes"
+" les dépendances sont correctement déclarées dans le `package manifest`_. "
+"Les tâches de développement/actions github/constructions locales peuvent "
+"être effectuées dans un environnement où les dépendances sont déjà "
+"installées, donc ne remarquent pas les problèmes de dépendance. "
+"Deuxièmement, ils peuvent créer différentes versions du code source. Alors "
+"que les tâches de développement/actions github/constructions locales "
+"construisent généralement la dernière version à partir du référentiel "
+"*upstream* [2]_, les `release jobs`_ construisent le code source de la "
+"dernière version, c'est-à-dire le code source dans les branches *upstream* "
+"respectives du référentiel *release* [3]_."
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:121
+msgid "Further Reading"
+msgstr "Lectures complémentaires"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:123
+msgid ""
+"The following links provide more details and insights into the build farms:"
+msgstr ""
+"Les liens suivants fournissent plus de détails et d'informations sur les "
+"batteries de build :"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:125
+msgid ""
+"https://github.com/ros-"
+"infrastructure/ros_buildfarm/blob/master/doc/index.rst - General "
+"documentation of the build farm infrastructure and the generated build jobs"
+msgstr ""
+"https://github.com/ros-"
+"infrastructure/ros_buildfarm/blob/master/doc/index.rst - Documentation "
+"générale de l'infrastructure de la ferme de build et des travaux de build "
+"générés"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:127
+msgid ""
+"http://wiki.ros.org/regression_tests#Setting_up_Your_Computer_for_Prerelease"
+msgstr ""
+"http://wiki.ros.org/regression_tests#Setting_up_Your_Computer_for_Prerelease"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:128
+msgid ""
+"http://wiki.ros.org/buildfarm - ROS wiki entry for the ROS 1 build farm "
+"(partially *outdated*)"
+msgstr ""
+"http://wiki.ros.org/buildfarm - Entrée wiki ROS pour la ferme de "
+"construction ROS 1 (partiellement * obsolète *)"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:129
+msgid ""
+"https://github.com/ros-infrastructure/cookbook-ros-buildfarm - Installs and "
+"configures ROS build farm machines"
+msgstr ""
+"https://github.com/ros-infrastructure/cookbook-ros-buildfarm - Installe et "
+"configure les machines de ferme de build ROS"
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:133
+msgid ""
+"``{distro}`` is the first letter of the ROS distribution, ``{platform}`` "
+"(``{platf}``) names the platform the package is built for (and its short "
+"code), and ``{package}`` is the name of the ROS package being built."
+msgstr ""
+"``{distro}`` est la première lettre de la distribution ROS, ``{platform}`` "
+"(``{platf}``) nomme la plate-forme pour laquelle le paquet est construit (et"
+" son code court), et `` {package}`` est le nom du package ROS en cours de "
+"construction."
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:136
+msgid ""
+"The *upstream* repository is the repository containing the original source "
+"code of the respective ROS 1 / ROS 2 package."
+msgstr ""
+"Le référentiel *upstream* est le référentiel contenant le code source "
+"d'origine du package ROS 1 / ROS 2 respectif."
+
+#: ../../source/The-ROS2-Project/Contributing/Build-Farms.rst:138
+msgid ""
+"The *release* repository is the repository that ROS 2 infrastructure uses "
+"for releasing packages, see https://github.com/ros2-gbp/."
+msgstr ""
+"Le référentiel *release* est le référentiel que l'infrastructure ROS 2 "
+"utilise pour publier les packages, voir https://github.com/ros2-gbp/."

@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 17:02:20.626899\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Installation/DDS-Implementations/Install-Connext-University-Eval.rst:2
+msgid "RTI Connext DDS"
+msgstr "RTI Connect DDS"
+
+#: ../../source/Installation/DDS-Implementations/Install-Connext-University-Eval.rst:4
+msgid ""
+"A libraries-only version of RTI Connext DDS 6.0.1 may be installed per the "
+":doc:`installation instructions <../../Installation>` for Debian/Ubuntu "
+"Linux (amd64) platforms only, under a `non-commercial license "
+"<https://www.rti.com/ncl>`__."
+msgstr ""
+"Une version bibliothèques uniquement de RTI Connext DDS 6.0.1 peut être "
+"installée selon les :doc:`instructions d'installation <../../Installation>` "
+"pour les plates-formes Debian/Ubuntu Linux (amd64) uniquement, sous une "
+"licence `non commerciale licence <https://www.rti.com/ncl>`__."
+
+#: ../../source/Installation/DDS-Implementations/Install-Connext-University-Eval.rst:7
+msgid ""
+"A full-suite installation of RTI Connext DDS is available for many "
+"additional platforms, for universities, evaluation, or purchase. This "
+"installation includes diagnostic tools, layered services, and security.  See"
+" below for installation details."
+msgstr ""
+"Une installation complète de RTI Connext DDS est disponible pour de "
+"nombreuses plates-formes supplémentaires, pour les universités, l'évaluation"
+" ou l'achat. Cette installation comprend des outils de diagnostic, des "
+"services en couches et la sécurité. Voir ci-dessous pour les détails "
+"d'installation."
+
+#: ../../source/Installation/DDS-Implementations/Install-Connext-University-Eval.rst:11
+msgid "RTI University Program"
+msgstr "Programme universitaire RTI"
+
+#: ../../source/Installation/DDS-Implementations/Install-Connext-University-Eval.rst:13
+msgid ""
+"University researchers and classroom users may be eligible for a free "
+"academic license through the `RTI University Program "
+"<https://www.rti.com/free-trial/university-program>`__. This includes a one-"
+"year (renewable) license to the unabridged version of Connext DDS Secure, "
+"which includes diagnostic tools and layered services. The university license"
+" application can be found `here <https://www.rti.com/free-trial/university-"
+"program>`__."
+msgstr ""
+"Les chercheurs universitaires et les utilisateurs de salles de classe "
+"peuvent être éligibles à une licence académique gratuite via le `Programme "
+"universitaire RTI <https://www.rti.com/free-trial/university-program>`__. "
+"Cela inclut une licence d'un an (renouvelable) pour la version intégrale de "
+"Connext DDS Secure, qui comprend des outils de diagnostic et des services en"
+" couches. La demande de licence universitaire peut être trouvée `ici "
+"<https://www.rti.com/free-trial/university-program>`__."
+
+#: ../../source/Installation/DDS-Implementations/Install-Connext-University-Eval.rst:19
+msgid "RTI Connext DDS Evaluation"
+msgstr "Évaluation RTI Connext DDS"
+
+#: ../../source/Installation/DDS-Implementations/Install-Connext-University-Eval.rst:25
+msgid "To install RTI Connext DDS **version 6.0.1** Evalution:"
+msgstr "Pour installer RTI Connext DDS **version 6.0.1** Évaluation :"
+
+#: ../../source/Installation/DDS-Implementations/Install-Connext-University-Eval.rst:22
+msgid ""
+"Visit the `RTI Free Trial (6.0.1) site <https://www.rti.com/free-trial>`__."
+msgstr ""
+"Visitez le site `RTI Free Trial (6.0.1) <https://www.rti.com/free-trial>`__."
+
+#: ../../source/Installation/DDS-Implementations/Install-Connext-University-Eval.rst:23
+msgid "Download the version(s) to match your environment."
+msgstr "Téléchargez la ou les versions correspondant à votre environnement."
+
+#: ../../source/Installation/DDS-Implementations/Install-Connext-University-Eval.rst:24
+msgid "Contact license@rti.com for an evaluation license."
+msgstr "Contactez license@rti.com pour une licence d'évaluation."
+
+#: ../../source/Installation/DDS-Implementations/Install-Connext-University-Eval.rst:25
+msgid ""
+"Install RTI Connext 6.0.1 by running the installation program.  When "
+"finished, it will run the RTI Launcher."
+msgstr ""
+"Installez RTI Connext 6.0.1 en exécutant le programme d'installation. Une "
+"fois terminé, il exécutera le lanceur RTI."
+
+#: ../../source/Installation/DDS-Implementations/Install-Connext-University-Eval.rst:26
+msgid ""
+"Use the RTI Launcher to install the license file (rti_license.dat) if "
+"needed.  The launcher may also be used to launch the diagnostic tools and "
+"services."
+msgstr ""
+"Utilisez le lanceur RTI pour installer le fichier de licence "
+"(rti_license.dat) si nécessaire. Le lanceur peut également être utilisé pour"
+" lancer les outils et services de diagnostic."

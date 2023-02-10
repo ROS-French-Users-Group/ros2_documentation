@@ -1,0 +1,95 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 17:22:40.797842\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/How-To-Guides/Parameters-YAML-files-migration-guide.rst:9
+msgid "Migrating YAML parameter files from ROS 1 to ROS 2"
+msgstr "Migration des fichiers de paramètres YAML de ROS 1 vers ROS 2"
+
+#: ../../source/How-To-Guides/Parameters-YAML-files-migration-guide.rst:11
+msgid "This guide describes how to adapt ROS 1 parameters files for ROS 2."
+msgstr ""
+"Ce guide décrit comment adapter les fichiers de paramètres ROS 1 pour ROS 2."
+
+#: ../../source/How-To-Guides/Parameters-YAML-files-migration-guide.rst:14
+msgid "YAML file example"
+msgstr "Exemple de fichier YAML"
+
+#: ../../source/How-To-Guides/Parameters-YAML-files-migration-guide.rst:16
+msgid ""
+"YAML is used to write parameters files in both ROS 1 and ROS 2. The main "
+"difference in ROS 2 is that node names must be used to address parameters. "
+"In addition to the fully qualified node name, we use the key "
+"\"ros__parameters\" to signal the start of parameters for the node."
+msgstr ""
+"YAML est utilisé pour écrire des fichiers de paramètres dans ROS 1 et ROS 2."
+" La principale différence dans ROS 2 est que les noms de nœud doivent être "
+"utilisés pour adresser les paramètres. En plus du nom de nœud complet, nous "
+"utilisons la clé \"ros__parameters\" pour signaler le début des paramètres "
+"du nœud."
+
+#: ../../source/How-To-Guides/Parameters-YAML-files-migration-guide.rst:21
+msgid "For example, here is a parameters file in ROS 1:"
+msgstr "Par exemple, voici un fichier de paramètres dans ROS 1 :"
+
+#: ../../source/How-To-Guides/Parameters-YAML-files-migration-guide.rst:30
+msgid ""
+"Let's assume that the first two parameters are for a node named "
+"``/lidar_ns/lidar_node_name``, the next parameter is for a node named "
+"``/imu``, and the last parameter we want to set on both nodes."
+msgstr ""
+"Supposons que les deux premiers paramètres sont pour un nœud nommé "
+"``/lidar_ns/lidar_node_name``, le paramètre suivant est pour un nœud nommé "
+"``/imu``, et le dernier paramètre que nous voulons définir sur les deux "
+"nœuds."
+
+#: ../../source/How-To-Guides/Parameters-YAML-files-migration-guide.rst:32
+msgid "We would construct our ROS 2 parameters file as follows:"
+msgstr "Nous construirions notre fichier de paramètres ROS 2 comme suit :"
+
+#: ../../source/How-To-Guides/Parameters-YAML-files-migration-guide.rst:48
+msgid ""
+"Note the use of wildcards (``/**``) to indicate that the parameter ``debug``"
+" should be set on any node in any namespace."
+msgstr ""
+"Notez l'utilisation de caractères génériques (``/**``) pour indiquer que le "
+"paramètre ``debug`` doit être défini sur n'importe quel nœud dans n'importe "
+"quel espace de noms."
+
+#: ../../source/How-To-Guides/Parameters-YAML-files-migration-guide.rst:51
+msgid "Feature parity"
+msgstr "Parité des fonctionnalités"
+
+#: ../../source/How-To-Guides/Parameters-YAML-files-migration-guide.rst:53
+msgid "Some features of ROS 1 parameters files do not exist in ROS 2:"
+msgstr ""
+"Certaines fonctionnalités des fichiers de paramètres ROS 1 n'existent pas "
+"dans ROS 2 :"
+
+#: ../../source/How-To-Guides/Parameters-YAML-files-migration-guide.rst:55
+msgid ""
+"Mixed types in a list is not supported yet (`related issue "
+"<https://github.com/ros2/rcl/issues/463>`_)"
+msgstr ""
+"Les types mixtes dans une liste ne sont pas encore pris en charge (`problème"
+" connexe <https://github.com/ros2/rcl/issues/463>`_)"
+
+#: ../../source/How-To-Guides/Parameters-YAML-files-migration-guide.rst:56
+msgid "``deg`` and ``rad`` substitutions are not supported"
+msgstr "Les substitutions ``deg`` et ``rad`` ne sont pas prises en charge"

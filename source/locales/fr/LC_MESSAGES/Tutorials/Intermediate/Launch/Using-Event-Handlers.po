@@ -1,0 +1,303 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 12:02:59.947636\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:7
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:39
+msgid "Using event handlers"
+msgstr "Utilisation des gestionnaires d'événements"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:9
+msgid "**Goal:** Learn about event handlers in ROS 2 launch files"
+msgstr ""
+"**Objectif :** En savoir plus sur les gestionnaires d'événements dans les "
+"fichiers de lancement de ROS 2"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:11
+msgid "**Tutorial level:** Intermediate"
+msgstr "**Niveau du didacticiel :** Intermédiaire"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:13
+msgid "**Time:** 15 minutes"
+msgstr "**Durée :** 15 minutes"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:17
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:20
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:22
+msgid ""
+"Launch in ROS 2 is a system that executes and manages user-defined "
+"processes. It is responsible for monitoring the state of processes it "
+"launched, as well as reporting and reacting to changes in the state of those"
+" processes. These changes are called events and can be handled by "
+"registering an event handler with the launch system. Event handlers can be "
+"registered for specific events and can be useful for monitoring the state of"
+" processes. Additionally, they can be used to define a complex set of rules "
+"which can be used to dynamically modify the launch file."
+msgstr ""
+"Le lancement dans ROS 2 est un système qui exécute et gère des processus "
+"définis par l'utilisateur. Il est chargé de surveiller l'état des processus "
+"qu'il a lancés, ainsi que de signaler et de réagir aux changements d'état de"
+" ces processus. Ces modifications sont appelées événements et peuvent être "
+"gérées en enregistrant un gestionnaire d'événements auprès du système de "
+"lancement. Les gestionnaires d'événements peuvent être enregistrés pour des "
+"événements spécifiques et peuvent être utiles pour surveiller l'état des "
+"processus. De plus, ils peuvent être utilisés pour définir un ensemble "
+"complexe de règles qui peuvent être utilisées pour modifier dynamiquement le"
+" fichier de lancement."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:28
+msgid ""
+"This tutorial shows usage examples of event handlers in ROS 2 launch files."
+msgstr ""
+"Ce didacticiel montre des exemples d'utilisation de gestionnaires "
+"d'événements dans les fichiers de lancement ROS 2."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:31
+msgid "Prerequisites"
+msgstr "Conditions préalables"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:33
+msgid ""
+"This tutorial uses the :doc:`turtlesim <../../Beginner-CLI-"
+"Tools/Introducing-Turtlesim/Introducing-Turtlesim>` package. This tutorial "
+"also assumes you have :doc:`created a new package <../../Beginner-Client-"
+"Libraries/Creating-Your-First-ROS2-Package>` of build type ``ament_python`` "
+"called ``launch_tutorial``."
+msgstr ""
+"Ce tutoriel utilise le package :doc:`turtlesim <../../Beginner-CLI-"
+"Tools/Introducing-Turtlesim/Introducing-Turtlesim>`. Ce didacticiel suppose "
+"également que vous avez :doc:`créé un nouveau package <../../Beginner-"
+"Client-Libraries/Creating-Your-First-ROS2-Package>` de type de construction "
+"``ament_python`` appelé ``launch_tutorial ``."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:36
+msgid ""
+"This tutorial extends the code shown in the :doc:`Using substitutions in "
+"launch files <./Using-Substitutions>` tutorial."
+msgstr ""
+"Ce didacticiel étend le code présenté dans le didacticiel :doc:`Using "
+"substitutions in launch files <./Using-Substitutions>`."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:42
+msgid "1 Event handlers example launch file"
+msgstr "1 Exemple de fichier de lancement de gestionnaires d'événements"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:44
+msgid ""
+"Create a new file called ``example_event_handlers.launch.py`` file in the "
+"``launch`` folder of the ``launch_tutorial`` package."
+msgstr ""
+"Créez un nouveau fichier nommé ``example_event_handlers.launch.py`` dans le "
+"dossier ``launch`` du package ``launch_tutorial``."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:183
+msgid ""
+"``RegisterEventHandler`` actions for the ``OnProcessStart``, "
+"``OnProcessIO``, ``OnExecutionComplete``, ``OnProcessExit``, and "
+"``OnShutdown`` events were defined in the launch description."
+msgstr ""
+"Les actions ``RegisterEventHandler`` pour les événements ``OnProcessStart``,"
+" ``OnProcessIO``, ``OnExecutionComplete``, ``OnProcessExit`` et "
+"``OnShutdown`` ont été définies dans la description de lancement."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:185
+msgid ""
+"The ``OnProcessStart`` event handler is used to register a callback function"
+" that is executed when the turtlesim node starts. It logs a message to the "
+"console and executes the ``spawn_turtle`` action when the turtlesim node "
+"starts."
+msgstr ""
+"Le gestionnaire d'événements ``OnProcessStart`` est utilisé pour enregistrer"
+" une fonction de rappel qui est exécutée lorsque le nœud turtlesim démarre. "
+"Il enregistre un message sur la console et exécute l'action ``spawn_turtle``"
+" lorsque le nœud turtlesim démarre."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:200
+msgid ""
+"The ``OnProcessIO`` event handler is used to register a callback function "
+"that is executed when the ``spawn_turtle`` action writes to its standard "
+"output. It logs the result of the spawn request."
+msgstr ""
+"Le gestionnaire d'événements ``OnProcessIO`` est utilisé pour enregistrer "
+"une fonction de rappel qui est exécutée lorsque l'action ``spawn_turtle`` "
+"écrit sur sa sortie standard. Il enregistre le résultat de la demande de "
+"spawn."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:215
+msgid ""
+"The ``OnExecutionComplete`` event handler is used to register a callback "
+"function that is executed when the ``spawn_turtle`` action completes. It "
+"logs a message to the console and executes the ``change_background_r`` and "
+"``change_background_r_conditioned`` actions when the spawn action completes."
+msgstr ""
+"Le gestionnaire d'événements ``OnExecutionComplete`` est utilisé pour "
+"enregistrer une fonction de rappel qui est exécutée lorsque l'action "
+"``spawn_turtle`` se termine. Il consigne un message dans la console et "
+"exécute les actions ``change_background_r`` et "
+"``change_background_r_conditioned`` lorsque l'action spawn est terminée."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:234
+msgid ""
+"The ``OnProcessExit`` event handler is used to register a callback function "
+"that is executed when the turtlesim node exits. It logs a message to the "
+"console and executes the ``EmitEvent`` action to emit a ``Shutdown`` event "
+"when the turtlesim node exits. It means that the launch process will "
+"shutdown when the turtlesim window is closed."
+msgstr ""
+"Le gestionnaire d'événements ``OnProcessExit`` est utilisé pour enregistrer "
+"une fonction de rappel qui est exécutée lorsque le nœud turtlesim se "
+"termine. Il enregistre un message sur la console et exécute l'action "
+"``EmitEvent`` pour émettre un événement ``Shutdown`` lorsque le nœud "
+"turtlesim se termine. Cela signifie que le processus de lancement s'arrêtera"
+" lorsque la fenêtre turtlesim sera fermée."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:252
+msgid ""
+"Finally, the ``OnShutdown`` event handler is used to register a callback "
+"function that is executed when the launch file is asked to shutdown. It logs"
+" a message to the console why the launch file is asked to shutdown. It logs "
+"the message with a reason for shutdown like the closure of turtlesim window "
+"or ``ctrl-c`` signal made by the user."
+msgstr ""
+"Enfin, le gestionnaire d'événements ``OnShutdown`` est utilisé pour "
+"enregistrer une fonction de rappel qui est exécutée lorsque le fichier de "
+"lancement est invité à s'arrêter. Il enregistre un message sur la console "
+"expliquant pourquoi le fichier de lancement est invité à s'arrêter. Il "
+"enregistre le message avec une raison d'arrêt comme la fermeture de la "
+"fenêtre turtlesim ou le signal ``ctrl-c`` effectué par l'utilisateur."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:268
+msgid "Build the package"
+msgstr "Construire le paquet"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:270
+msgid "Go to the root of the workspace, and build the package:"
+msgstr "Accédez à la racine de l'espace de travail et créez le package :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:276
+msgid "Also remember to source the workspace after building."
+msgstr ""
+"N'oubliez pas non plus de sourcer l'espace de travail après la construction."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:279
+msgid "Launching example"
+msgstr "Exemple de lancement"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:281
+msgid ""
+"Now you can launch the ``example_event_handlers.launch.py`` file using the "
+"``ros2 launch`` command."
+msgstr ""
+"Vous pouvez maintenant lancer le fichier "
+"``example_event_handlers.launch.py`` en utilisant la commande ``ros2 "
+"launch``."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:287
+msgid "This will do the following:"
+msgstr "Cela fera ce qui suit :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:289
+msgid "Start a turtlesim node with a blue background"
+msgstr "Démarrer un nœud turtlesim avec un fond bleu"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:290
+msgid "Spawn the second turtle"
+msgstr "Faire apparaître la deuxième tortue"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:291
+msgid "Change the color to purple"
+msgstr "Changer la couleur en violet"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:292
+msgid ""
+"Change the color to pink after two seconds if the provided ``background_r`` "
+"argument is ``200`` and ``use_provided_red`` argument is ``True``"
+msgstr ""
+"Changez la couleur en rose après deux secondes si l'argument "
+"``background_r`` fourni est ``200`` et l'argument ``use_provided_red`` est "
+"``True``"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:293
+msgid "Shutdown the launch file when the turtlesim window is closed"
+msgstr ""
+"Arrêter le fichier de lancement lorsque la fenêtre turtlesim est fermée"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:295
+msgid "Additionally, it will log messages to the console when:"
+msgstr "De plus, il consignera les messages dans la console lorsque :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:297
+msgid "The turtlesim node starts"
+msgstr "Le noeud turtlesim démarre"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:298
+msgid "The spawn action is executed"
+msgstr "L'action spawn est exécutée"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:299
+msgid "The ``change_background_r`` action is executed"
+msgstr "L'action ``change_background_r`` est exécutée"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:300
+msgid "The ``change_background_r_conditioned`` action is executed"
+msgstr "L'action ``change_background_r_conditioned`` est exécutée"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:301
+msgid "The turtlesim node exits"
+msgstr "Le noeud turtlesim se ferme"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:302
+msgid "The launch process is asked to shutdown."
+msgstr "Le processus de lancement est invité à s'arrêter."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:305
+msgid "Documentation"
+msgstr "Documentation"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:307
+msgid ""
+"`The launch documentation "
+"<https://github.com/ros2/launch/blob/rolling/launch/doc/source/architecture.rst>`_"
+" provides detailed information about available event handlers."
+msgstr ""
+"`La documentation de lancement "
+"<https://github.com/ros2/launch/blob/rolling/launch/doc/source/architecture.rst>`_"
+" fournit des informations détaillées sur les gestionnaires d'événements "
+"disponibles."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:310
+msgid "Summary"
+msgstr "Résumé"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-Event-Handlers.rst:312
+msgid ""
+"In this tutorial, you learned about using event handlers in launch files. "
+"You learned about their syntax and usage examples to define a complex set of"
+" rules to dynamically modify launch files."
+msgstr ""
+"Dans ce didacticiel, vous avez appris à utiliser des gestionnaires "
+"d'événements dans les fichiers de lancement. Vous avez découvert leur "
+"syntaxe et des exemples d'utilisation pour définir un ensemble complexe de "
+"règles permettant de modifier dynamiquement les fichiers de lancement."

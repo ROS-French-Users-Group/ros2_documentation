@@ -1,0 +1,249 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 12:01:46.002289\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:8
+msgid "Building a movable robot model"
+msgstr "Construire un modèle de robot mobile"
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:10
+msgid "**Goal:** Learn how to define movable joints in URDF."
+msgstr "**Objectif :** Apprendre à définir des liaisons mobiles dans URDF."
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:12
+msgid "**Tutorial level:** Intermediate"
+msgstr "**Niveau du didacticiel :** Intermédiaire"
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:14
+msgid "**Time:** 10 minutes"
+msgstr "**Durée :** 10 minutes"
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:18
+msgid "Contents"
+msgstr "Contenu"
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:20
+msgid ""
+"In this tutorial, we’re going to revise the R2D2 model we made in the "
+":doc:`previous tutorial <./Building-a-Visual-Robot-Model-with-URDF-from-"
+"Scratch>` so that it has movable joints. In the previous model, all of the "
+"joints were fixed. Now we’ll explore three other important types of joints: "
+"continuous, revolute and prismatic."
+msgstr ""
+"Dans ce tutoriel, nous allons réviser le modèle R2D2 que nous avons créé "
+"dans le :doc:`tutoriel précédent <./Building-a-Visual-Robot-Model-with-URDF-"
+"from-Scratch>` afin qu'il soit mobile les articulations. Dans le modèle "
+"précédent, tous les joints étaient fixes. Nous allons maintenant explorer "
+"trois autres types importants d'articulations : continue, rotoïde et "
+"prismatique."
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:24
+msgid ""
+"Make sure you have installed all prerequisites before continuing. See the "
+":doc:`previous tutorial <./Building-a-Visual-Robot-Model-with-URDF-from-"
+"Scratch>` for information on what is required."
+msgstr ""
+"Assurez-vous d'avoir installé tous les prérequis avant de continuer. "
+"Consultez le :doc:`tutoriel précédent <./Building-a-Visual-Robot-Model-with-"
+"URDF-from-Scratch>` pour plus d'informations sur ce qui est requis."
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:27
+msgid ""
+"Again, all of the robot models mentioned in this tutorial can be found in "
+"the `urdf_tutorial <https://index.ros.org/p/urdf_tutorial>`_ package."
+msgstr ""
+"Encore une fois, tous les modèles de robots mentionnés dans ce didacticiel "
+"se trouvent dans le package `urdf_tutorial "
+"<https://index.ros.org/p/urdf_tutorial>`_."
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:29
+msgid ""
+"`Here is the new urdf "
+"<https://github.com/ros/urdf_tutorial/blob/ros2/urdf/06-flexible.urdf>`_ "
+"with flexible joints. You can compare it to the previous version to see "
+"everything that has changed, but we’re just going to focus on three example "
+"joints."
+msgstr ""
+"`Voici le nouvel urdf "
+"<https://github.com/ros/urdf_tutorial/blob/ros2/urdf/06-flexible.urdf>`_ "
+"avec des joints flexibles. Vous pouvez le comparer à la version précédente "
+"pour voir tout ce qui a changé, mais nous allons nous concentrer sur trois "
+"exemples de joints."
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:32
+msgid ""
+"To visualize and control this model, run the same command as the last "
+"tutorial:"
+msgstr ""
+"Pour visualiser et contrôler ce modèle, exécutez la même commande que le "
+"dernier tutoriel :"
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:38
+msgid ""
+"However now this will also pop up a GUI that allows you to control the "
+"values of all the non-fixed joints. Play with the model some and see how it "
+"moves. Then, we can take a look at how we accomplished this."
+msgstr ""
+"Cependant, cela affichera également une interface graphique qui vous "
+"permettra de contrôler les valeurs de tous les joints non fixes. Jouez avec "
+"le modèle et voyez comment il bouge. Ensuite, nous pouvons jeter un œil à la"
+" façon dont nous avons accompli cela."
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:None
+msgid "Screenshot of Flexible Model"
+msgstr "Capture d'écran du modèle flexible"
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:47
+msgid "The Head"
+msgstr "La tête"
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:58
+msgid ""
+"The connection between the body and the head is a continuous joint, meaning "
+"that it can take on any angle from negative infinity to positive infinity. "
+"The wheels are also modeled like this, so that they can roll in both "
+"directions forever."
+msgstr ""
+"La connexion entre le corps et la tête est une articulation continue, ce qui"
+" signifie qu'elle peut prendre n'importe quel angle de l'infini négatif à "
+"l'infini positif. Les roues sont également modélisées comme ceci, de sorte "
+"qu'elles puissent rouler dans les deux sens pour toujours."
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:61
+msgid ""
+"The only additional information we have to add is the axis of rotation, here"
+" specified by an xyz triplet, which specifies a vector around which the head"
+" will rotate. Since we want it to go around the z axis, we specify the "
+"vector \"0 0 1\"."
+msgstr ""
+"La seule information supplémentaire que nous devons ajouter est l'axe de "
+"rotation, ici spécifié par un triplet xyz, qui spécifie un vecteur autour "
+"duquel la tête va tourner. Puisque nous voulons qu'il tourne autour de l'axe"
+" z, nous spécifions le vecteur \"0 0 1\"."
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:65
+msgid "The Gripper"
+msgstr "La pince"
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:77
+msgid ""
+"Both the right and the left gripper joints are modeled as revolute joints. "
+"This means that they rotate in the same way that the continuous joints do, "
+"but they have strict limits. Hence, we must include the limit tag specifying"
+" the upper and lower limits of the joint (in radians). We also must specify "
+"a maximum velocity and effort for this joint but the actual values don't "
+"matter for our purposes here."
+msgstr ""
+"Les articulations droite et gauche du préhenseur sont modélisées comme des "
+"articulations rotoïdes. Cela signifie qu'ils tournent de la même manière que"
+" les joints continus, mais ils ont des limites strictes. Par conséquent, "
+"nous devons inclure la balise limit spécifiant les limites supérieure et "
+"inférieure du joint (en radians). Nous devons également spécifier une "
+"vitesse et un effort maximum pour cette articulation, mais les valeurs "
+"réelles n'ont pas d'importance pour nos besoins ici."
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:83
+msgid "The Gripper Arm"
+msgstr "Le bras de préhension"
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:94
+msgid ""
+"The gripper arm is a different kind of joint, namely a prismatic joint. This"
+" means that it moves along an axis, not around it. This translational "
+"movement is what allows our robot model to extend and retract its gripper "
+"arm."
+msgstr ""
+"Le bras de préhension est un autre type d'articulation, à savoir une "
+"articulation prismatique. Cela signifie qu'il se déplace le long d'un axe, "
+"pas autour de lui. Ce mouvement de translation est ce qui permet à notre "
+"modèle de robot d'étendre et de rétracter son bras de préhension."
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:98
+msgid ""
+"The limits of the prismatic arm are specified in the same way as a revolute "
+"joint, except that the units are meters, not radians."
+msgstr ""
+"Les limites du bras prismatique sont spécifiées de la même manière qu'une "
+"articulation rotoïde, sauf que les unités sont des mètres et non des "
+"radians."
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:101
+msgid "Other Types of Joints"
+msgstr "Autres types d'articulations"
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:103
+msgid ""
+"There are two other kinds of joints that move around in space. Whereas the "
+"prismatic joint can only move along one dimension, a planar joint can move "
+"around in a plane, or two dimensions. Furthermore, a floating joint is "
+"unconstrained, and can move around in any of the three dimensions. These "
+"joints cannot be specified by just one number, and therefore aren’t included"
+" in this tutorial."
+msgstr ""
+"Il existe deux autres types d'articulations qui se déplacent dans l'espace. "
+"Alors que l'articulation prismatique ne peut se déplacer que dans une "
+"dimension, une articulation plane peut se déplacer dans un plan ou dans deux"
+" dimensions. De plus, un joint flottant n'est pas contraint et peut se "
+"déplacer dans n'importe laquelle des trois dimensions. Ces articulations ne "
+"peuvent pas être spécifiées par un seul numéro et ne sont donc pas incluses "
+"dans ce didacticiel."
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:109
+msgid "Specifying the Pose"
+msgstr "Spécification de la pose"
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:111
+msgid ""
+"As you move the sliders around in the GUI, the model moves in Rviz. How is "
+"this done? First the `GUI "
+"<https://index.ros.org/p/joint_state_publisher_gui>`_ parses the URDF and "
+"finds all the non-fixed joints and their limits. Then, it uses the values of"
+" the sliders to publish `sensor_msgs/msg/JointState "
+"<https://github.com/ros2/common_interfaces/blob/eloquent/sensor_msgs/msg/JointState.msg>`_"
+" messages. Those are then used by `robot_state_publisher "
+"<https://index.ros.org/p/robot_state_publisher>`_ to calculate all of "
+"transforms between the different parts. The resulting transform tree is then"
+" used to display all of the shapes in Rviz."
+msgstr ""
+"Lorsque vous déplacez les curseurs dans l'interface graphique, le modèle se "
+"déplace dans Rviz. Comment est-ce fait? Tout d'abord, le `GUI "
+"<https://index.ros.org/p/joint_state_publisher_gui>`_ analyse l'URDF et "
+"trouve tous les joints non fixes et leurs limites. Ensuite, il utilise les "
+"valeurs des curseurs pour publier les messages `sensor_msgs/msg/JointState "
+"<https://github.com/ros2/common_interfaces/blob/eloquent/sensor_msgs/msg/JointState.msg>`_."
+" Ceux-ci sont ensuite utilisés par `robot_state_publisher "
+"<https://index.ros.org/p/robot_state_publisher>`_ pour calculer toutes les "
+"transformations entre les différentes parties. L'arbre de transformation "
+"résultant est ensuite utilisé pour afficher toutes les formes dans Rviz."
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:118
+msgid "Next steps"
+msgstr "Prochaines étapes"
+
+#: ../../source/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.rst:120
+msgid ""
+"Now that you have a visibly functional model, you can :doc:`add in some "
+"physical properties <./Adding-Physical-and-Collision-Properties-to-a-URDF-"
+"Model>`, or :doc:`start using xacro to simplify your code <./Using-Xacro-to-"
+"Clean-Up-a-URDF-File>`."
+msgstr ""
+"Maintenant que vous avez un modèle visiblement fonctionnel, vous pouvez "
+":doc:`ajouter quelques propriétés physiques <./Adding-Physical-and-"
+"Collision-Properties-to-a-URDF-Model>`, ou :doc:`commencer à utiliser xacro "
+"pour simplifier votre code <./Using-Xacro-to-Clean-Up-a-URDF-File>`."

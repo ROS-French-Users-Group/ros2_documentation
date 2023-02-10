@@ -1,0 +1,646 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 12:02:39.421591\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:9
+msgid "Managing large projects"
+msgstr "Gestion de grands projets"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:11
+msgid ""
+"**Goal:** Learn best practices of managing large projects using ROS 2 launch"
+" files."
+msgstr ""
+"**Objectif :** Apprendre les meilleures pratiques de gestion de grands "
+"projets à l'aide des fichiers de lancement ROS 2."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:13
+msgid "**Tutorial level:** Intermediate"
+msgstr "**Niveau du didacticiel :** Intermédiaire"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:15
+msgid "**Time:** 20 minutes"
+msgstr "**Durée :** 20 minutes"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:19
+msgid "Contents"
+msgstr "Contenu"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:22
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:24
+msgid ""
+"This tutorial describes some tips for writing launch files for large "
+"projects. The focus is on how to structure launch files so they may be "
+"reused as much as possible in different situations. Additionally, it covers "
+"usage examples of different ROS 2 launch tools, like parameters, YAML files,"
+" remappings, namespaces, default arguments, and RViz configs."
+msgstr ""
+"Ce didacticiel décrit quelques conseils pour écrire des fichiers de "
+"lancement pour des projets volumineux. L'accent est mis sur la façon de "
+"structurer les fichiers de lancement afin qu'ils puissent être réutilisés "
+"autant que possible dans différentes situations. En outre, il couvre des "
+"exemples d'utilisation de différents outils de lancement ROS 2, tels que les"
+" paramètres, les fichiers YAML, les remappages, les espaces de noms, les "
+"arguments par défaut et les configurations RViz."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:29
+msgid "Prerequisites"
+msgstr "Conditions préalables"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:31
+msgid ""
+"This tutorial uses the :doc:`turtlesim <../../Beginner-CLI-"
+"Tools/Introducing-Turtlesim/Introducing-Turtlesim>` and :doc:`turtle_tf2_py "
+"<../Tf2/Introduction-To-Tf2>` packages. This tutorial also assumes you have "
+":doc:`created a new package <../../Beginner-Client-Libraries/Creating-Your-"
+"First-ROS2-Package>` of build type ``ament_python`` called "
+"``launch_tutorial``."
+msgstr ""
+"Ce tutoriel utilise :doc:`turtlesim <../../Beginner-CLI-Tools/Introducing-"
+"Turtlesim/Introducing-Turtlesim>` et :doc:`turtle_tf2_py "
+"<../Tf2/Introduction-To-Tf2>` paquets. Ce didacticiel suppose également que "
+"vous avez :doc:`créé un nouveau package <../../Beginner-Client-"
+"Libraries/Creating-Your-First-ROS2-Package>` de type de construction "
+"``ament_python`` appelé ``launch_tutorial ``."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:35
+msgid "Introduction"
+msgstr "Introduction"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:37
+msgid ""
+"Large applications on a robot typically involve several interconnected "
+"nodes, each of which can have many parameters. Simulation of multiple "
+"turtles in the turtle simulator can serve as a good example. The turtle "
+"simulation consists of multiple turtle nodes, the world configuration, and "
+"the TF broadcaster and listener nodes. Between all of the nodes, there are a"
+" large number of ROS parameters that affect the behavior and appearance of "
+"these nodes. ROS 2 launch files allow us to start all nodes and set "
+"corresponding parameters in one place. By the end of a tutorial, you will "
+"build the ``launch_turtlesim.launch.py`` launch file in the "
+"``launch_tutorial`` package. This launch file will bring up different nodes "
+"responsible for the simulation of two turtlesim simulations, starting TF "
+"broadcasters and listener, loading parameters, and launching an RViz "
+"configuration. In this tutorial, we'll go over this launch file and all "
+"related features used."
+msgstr ""
+"Les grandes applications sur un robot impliquent généralement plusieurs "
+"nœuds interconnectés, chacun pouvant avoir de nombreux paramètres. La "
+"simulation de plusieurs tortues dans le simulateur de tortues peut servir de"
+" bon exemple. La simulation de tortue se compose de plusieurs nœuds de "
+"tortue, de la configuration mondiale et des nœuds de diffusion et d'écoute "
+"TF. Entre tous les nœuds, il existe un grand nombre de paramètres ROS qui "
+"affectent le comportement et l'apparence de ces nœuds. Les fichiers de "
+"lancement ROS 2 nous permettent de démarrer tous les nœuds et de définir les"
+" paramètres correspondants en un seul endroit. À la fin d'un didacticiel, "
+"vous construirez le fichier de lancement ``launch_turtlesim.launch.py`` dans"
+" le package ``launch_tutorial``. Ce fichier de lancement fera apparaître "
+"différents nœuds responsables de la simulation de deux simulations "
+"turtlesim, du démarrage des diffuseurs et de l'écouteur TF, du chargement "
+"des paramètres et du lancement d'une configuration RViz. Dans ce "
+"didacticiel, nous allons passer en revue ce fichier de lancement et toutes "
+"les fonctionnalités associées utilisées."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:47
+msgid "Writing launch files"
+msgstr "Ecriture des fichiers de lancement"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:50
+msgid "1 Top-level organization"
+msgstr "1 Organisation au plus haut niveau"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:52
+msgid ""
+"One of the aims in the process of writing launch files should be making them"
+" as reusable as possible. This could be done by clustering related nodes and"
+" configurations into separate launch files. Afterwards, a top-level launch "
+"file dedicated to a specific configuration could be written. This would "
+"allow moving between identical robots to be done without changing the launch"
+" files at all. Even a change such as moving from a real robot to a simulated"
+" one can be done with only a few changes."
+msgstr ""
+"L'un des objectifs du processus d'écriture des fichiers de lancement devrait"
+" être de les rendre aussi réutilisables que possible. Cela peut être fait en"
+" regroupant les nœuds et les configurations associés dans des fichiers de "
+"lancement distincts. Ensuite, un fichier de lancement de niveau supérieur "
+"dédié à une configuration spécifique pourrait être écrit. Cela permettrait "
+"de se déplacer entre des robots identiques sans modifier du tout les "
+"fichiers de lancement. Même un changement tel que le passage d'un robot réel"
+" à un robot simulé peut être effectué avec seulement quelques changements."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:58
+msgid ""
+"We will now go over the top-level launch file structure that makes this "
+"possible. Firstly, we will create a launch file that will call separate "
+"launch files. To do this, let's create a ``launch_turtlesim.launch.py`` file"
+" in the ``/launch`` folder of our ``launch_tutorial`` package."
+msgstr ""
+"Nous allons maintenant passer en revue la structure de fichier de lancement "
+"de niveau supérieur qui rend cela possible. Tout d'abord, nous allons créer "
+"un fichier de lancement qui appellera des fichiers de lancement séparés. "
+"Pour ce faire, créons un fichier ``launch_turtlesim.launch.py`` dans le "
+"dossier ``/launch`` de notre package ``launch_tutorial``."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:115
+msgid ""
+"This launch file includes a set of other launch files. Each of these "
+"included launch files contains nodes, parameters, and possibly, nested "
+"includes, which pertain to one part of the system. To be exact, we launch "
+"two turtlesim simulation worlds, TF broadcaster, TF listener, mimic, fixed "
+"frame broadcaster, and RViz nodes."
+msgstr ""
+"Ce fichier de lancement inclut un ensemble d'autres fichiers de lancement. "
+"Chacun de ces fichiers de lancement inclus contient des nœuds, des "
+"paramètres et éventuellement des inclusions imbriquées, qui se rapportent à "
+"une partie du système. Pour être exact, nous lançons deux mondes de "
+"simulation turtlesim, un diffuseur TF, un écouteur TF, un synoptique, un "
+"diffuseur à cadre fixe et des nœuds RViz."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:119
+msgid ""
+"Design Tip: Top-level launch files should be short, consist of includes to "
+"other files corresponding to subcomponents of the application, and commonly "
+"changed parameters."
+msgstr ""
+"Conseil de conception : les fichiers de lancement de niveau supérieur "
+"doivent être courts, se composer d'inclusions dans d'autres fichiers "
+"correspondant aux sous-composants de l'application et des paramètres "
+"couramment modifiés."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:121
+msgid ""
+"Writing launch files in the following manner makes it easy to swap out one "
+"piece of the system, as we'll see later. However, there are cases when some "
+"nodes or launch files have to be launched separately due to performance and "
+"usage reasons."
+msgstr ""
+"L'écriture des fichiers de lancement de la manière suivante facilite "
+"l'échange d'un élément du système, comme nous le verrons plus tard. "
+"Cependant, il existe des cas où certains nœuds ou fichiers de lancement "
+"doivent être lancés séparément pour des raisons de performances et "
+"d'utilisation."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:124
+msgid ""
+"Design tip: Be aware of the tradeoffs when deciding how many top-level "
+"launch files your application requires."
+msgstr ""
+"Conseil de conception : Soyez conscient des compromis lorsque vous décidez "
+"du nombre de fichiers de lancement de niveau supérieur dont votre "
+"application a besoin."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:127
+msgid "2 Parameters"
+msgstr "2 paramètres"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:130
+msgid "2.1 Setting parameters in the launch file"
+msgstr "2.1 Réglage des paramètres dans le fichier de lancement"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:132
+msgid ""
+"We will begin by writing a launch file that will start our first turtlesim "
+"simulation. First, create a new file called ``turtlesim_world_1.launch.py``."
+msgstr ""
+"Nous allons commencer par écrire un fichier de lancement qui lancera notre "
+"première simulation turtlesim. Tout d'abord, créez un nouveau fichier appelé"
+" ``turtlesim_world_1.launch.py``."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:171
+msgid ""
+"This launch file starts the ``turtlesim_node`` node, which starts the "
+"turtlesim simulation, with simulation configuration parameters that are "
+"defined and passed to the nodes."
+msgstr ""
+"Ce fichier de lancement démarre le nœud ``turtlesim_node``, qui démarre la "
+"simulation turtlesim, avec les paramètres de configuration de la simulation "
+"qui sont définis et transmis aux nœuds."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:174
+msgid "2.2 Loading parameters from YAML file"
+msgstr "2.2 Chargement des paramètres depuis le fichier YAML"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:176
+msgid ""
+"In the second launch, we will start a second turtlesim simulation with a "
+"different configuration. Now create a ``turtlesim_world_2.launch.py`` file."
+msgstr ""
+"Lors du second lancement, nous lancerons une seconde simulation turtlesim "
+"avec une configuration différente. Créez maintenant un fichier "
+"``turtlesim_world_2.launch.py``."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:206
+msgid ""
+"This launch file will launch the same ``turtlesim_node`` with parameter "
+"values that are loaded directly from the YAML configuration file. Defining "
+"arguments and parameters in YAML files make it easy to store and load a "
+"large number of variables. In addition, YAML files can be easily exported "
+"from the current ``ros2 param`` list. To learn how to do that, refer to the "
+":doc:`Understand parameters <../../Beginner-CLI-Tools/Understanding-"
+"ROS2-Parameters/Understanding-ROS2-Parameters>` tutorial."
+msgstr ""
+"Ce fichier de lancement lancera le même ``turtlesim_node`` avec des valeurs "
+"de paramètres chargées directement depuis le fichier de configuration YAML. "
+"La définition d'arguments et de paramètres dans les fichiers YAML facilite "
+"le stockage et le chargement d'un grand nombre de variables. De plus, les "
+"fichiers YAML peuvent être facilement exportés à partir de la liste actuelle"
+" ``ros2 param``. Pour savoir comment procéder, reportez-vous au didacticiel "
+":doc:`Understand parameters <../../Beginner-CLI-Tools/Understanding-"
+"ROS2-Parameters/Understanding-ROS2-Parameters>`."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:211
+msgid ""
+"Let's now create a configuration file, ``turtlesim.yaml``, in the "
+"``/config`` folder of our package, which will be loaded by our launch file."
+msgstr ""
+"Créons maintenant un fichier de configuration, ``turtlesim.yaml``, dans le "
+"dossier ``/config`` de notre package, qui sera chargé par notre fichier de "
+"lancement."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:221
+msgid ""
+"If we now start the ``turtlesim_world_2.launch.py`` launch file, we will "
+"start the ``turtlesim_node`` with preconfigured background colors."
+msgstr ""
+"Si nous démarrons maintenant le fichier de lancement "
+"``turtlesim_world_2.launch.py``, nous lancerons le ``turtlesim_node`` avec "
+"des couleurs d'arrière-plan préconfigurées."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:223
+msgid ""
+"To learn more about using parameters and using YAML files, take a look at "
+"the :doc:`Understand parameters <../../Beginner-CLI-Tools/Understanding-"
+"ROS2-Parameters/Understanding-ROS2-Parameters>` tutorial."
+msgstr ""
+"Pour en savoir plus sur l'utilisation des paramètres et l'utilisation des "
+"fichiers YAML, consultez le didacticiel :doc:`Understand parameters "
+"<../../Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-"
+"ROS2-Parameters>`."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:226
+msgid "2.3 Using wildcards in YAML files"
+msgstr "2.3 Utilisation de caractères génériques dans les fichiers YAML"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:228
+msgid ""
+"There are cases when we want to set the same parameters in more than one "
+"node. These nodes could have different namespaces or names but still have "
+"the same parameters. Defining separate YAML files that explicitly define "
+"namespaces and node names is not efficient. A solution is to use wildcard "
+"characters, which act as substitutions for unknown characters in a text "
+"value, to apply parameters to several different nodes."
+msgstr ""
+"Il y a des cas où nous voulons définir les mêmes paramètres dans plusieurs "
+"nœuds. Ces nœuds peuvent avoir des espaces de noms ou des noms différents "
+"mais avoir toujours les mêmes paramètres. La définition de fichiers YAML "
+"distincts qui définissent explicitement les espaces de noms et les noms de "
+"nœuds n'est pas efficace. Une solution consiste à utiliser des caractères "
+"génériques, qui remplacent les caractères inconnus dans une valeur de texte,"
+" pour appliquer des paramètres à plusieurs nœuds différents."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:233
+msgid ""
+"Now let's create a new ``turtlesim_world_3.launch.py`` file similar to "
+"``turtlesim_world_2.launch.py`` to include one more ``turtlesim_node`` node."
+msgstr ""
+"Créons maintenant un nouveau fichier ``turtlesim_world_3.launch.py`` "
+"similaire à ``turtlesim_world_2.launch.py`` pour inclure un autre nœud "
+"``turtlesim_node``."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:246
+msgid ""
+"Loading the same YAML file, however, will not affect the appearance of the "
+"third turtlesim world. The reason is that its parameters are stored under "
+"another namespace as shown below:"
+msgstr ""
+"Cependant, le chargement du même fichier YAML n'affectera pas l'apparence du"
+" troisième monde turtlesim. La raison en est que ses paramètres sont stockés"
+" sous un autre espace de noms, comme indiqué ci-dessous :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:256
+msgid ""
+"Therefore, instead of creating a new configuration for the same node that "
+"use the same parameters, we can use wildcards syntax. ``/**`` will assign "
+"all the parameters in every node, despite differences in node names and "
+"namespaces."
+msgstr ""
+"Par conséquent, au lieu de créer une nouvelle configuration pour le même "
+"nœud qui utilise les mêmes paramètres, nous pouvons utiliser la syntaxe des "
+"caractères génériques. ``/**`` attribuera tous les paramètres à chaque nœud,"
+" malgré les différences de noms de nœuds et d'espaces de noms."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:259
+msgid ""
+"We will now update the ``turtlesim.yaml``, in the ``/config`` folder in the "
+"following manner:"
+msgstr ""
+"Nous allons maintenant mettre à jour le ``turtlesim.yaml``, dans le dossier "
+"``/config`` de la manière suivante :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:269
+msgid ""
+"Now include the ``turtlesim_world_3.launch.py`` launch description in our "
+"main launch file. Using that configuration file in our launch descriptions "
+"will assign ``background_b``, ``background_g``, and ``background_r`` "
+"parameters to specified values in ``turtlesim3/sim`` and ``turtlesim2/sim`` "
+"nodes."
+msgstr ""
+"Incluez maintenant la description de lancement "
+"``turtlesim_world_3.launch.py`` dans notre fichier de lancement principal. "
+"L'utilisation de ce fichier de configuration dans nos descriptions de "
+"lancement affectera les paramètres ``background_b``, ``background_g`` et "
+"``background_r`` aux valeurs spécifiées dans les nœuds ``turtlesim3/sim`` et"
+" ``turtlesim2/sim``."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:273
+msgid "3 Namespaces"
+msgstr "3 espaces de noms"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:275
+msgid ""
+"As you may have noticed, we have defined the namespace for the turlesim "
+"world in the ``turtlesim_world_2.launch.py`` file. Unique namespaces allow "
+"the system to start two similar nodes without node name or topic name "
+"conflicts."
+msgstr ""
+"Comme vous l'avez peut-être remarqué, nous avons défini l'espace de noms "
+"pour le monde turlesim dans le fichier ``turtlesim_world_2.launch.py``. Les "
+"espaces de noms uniques permettent au système de démarrer deux nœuds "
+"similaires sans conflit de nom de nœud ou de nom de rubrique."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:282
+msgid ""
+"However, if the launch file contains a large number of nodes, defining "
+"namespaces for each of them can become tedious. To solve that issue, the "
+"``PushROSNamespace`` action can be used to define the global namespace for "
+"each launch file description. Every nested node will inherit that namespace "
+"automatically."
+msgstr ""
+"Cependant, si le fichier de lancement contient un grand nombre de nœuds, "
+"définir des espaces de noms pour chacun d'eux peut devenir fastidieux. Pour "
+"résoudre ce problème, l'action ``PushROSNamespace`` peut être utilisée pour "
+"définir l'espace de noms global pour chaque description de fichier de "
+"lancement. Chaque nœud imbriqué héritera automatiquement de cet espace de "
+"noms."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:286
+msgid ""
+"To do that, firstly, we need to remove the ``namespace='turtlesim2'`` line "
+"from the ``turtlesim_world_2.launch.py`` file. Afterwards, we need to update"
+" the ``launch_turtlesim.launch.py`` to include the following lines:"
+msgstr ""
+"Pour ce faire, nous devons d'abord supprimer la ligne "
+"``namespace='turtlesim2'`` du fichier ``turtlesim_world_2.launch.py``. "
+"Ensuite, nous devons mettre à jour le ``launch_turtlesim.launch.py`` pour "
+"inclure les lignes suivantes :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:307
+msgid ""
+"Finally, we replace the ``turtlesim_world_2`` to "
+"``turtlesim_world_2_with_namespace`` in the ``return LaunchDescription`` "
+"statement. As a result, each node in the ``turtlesim_world_2.launch.py`` "
+"launch description will have a ``turtlesim2`` namespace."
+msgstr ""
+"Enfin, nous remplaçons ``turtlesim_world_2`` par "
+"``turtlesim_world_2_with_namespace`` dans l'instruction ``return "
+"LaunchDescription``. Par conséquent, chaque nœud dans la description de "
+"lancement ``turtlesim_world_2.launch.py`` aura un espace de noms "
+"``turtlesim2``."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:311
+msgid "4 Reusing nodes"
+msgstr "4 Réutiliser les nœuds"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:313
+msgid "Now create a ``broadcaster_listener.launch.py`` file."
+msgstr "Créez maintenant un fichier ``broadcaster_listener.launch.py``."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:357
+msgid ""
+"In this file, we have declared the ``target_frame`` launch argument with a "
+"default value of ``turtle1``. The default value means that the launch file "
+"can receive an argument to forward to its nodes, or in case the argument is "
+"not provided, it will pass the default value to its nodes."
+msgstr ""
+"Dans ce fichier, nous avons déclaré l'argument de lancement ``target_frame``"
+" avec une valeur par défaut de ``turtle1``. La valeur par défaut signifie "
+"que le fichier de lancement peut recevoir un argument à transmettre à ses "
+"nœuds, ou si l'argument n'est pas fourni, il transmettra la valeur par "
+"défaut à ses nœuds."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:360
+msgid ""
+"Afterwards, we use the ``turtle_tf2_broadcaster`` node two times using "
+"different names and parameters during launch. This allows us to duplicate "
+"the same node without conflicts."
+msgstr ""
+"Ensuite, nous utilisons le nœud ``turtle_tf2_broadcaster`` deux fois en "
+"utilisant des noms et des paramètres différents lors du lancement. Cela nous"
+" permet de dupliquer le même nœud sans conflits."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:363
+msgid ""
+"We also start a ``turtle_tf2_listener`` node and set its ``target_frame`` "
+"parameter that we declared and acquired above."
+msgstr ""
+"Nous démarrons également un nœud ``turtle_tf2_listener`` et définissons son "
+"paramètre ``target_frame`` que nous avons déclaré et acquis ci-dessus."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:366
+msgid "5 Parameter overrides"
+msgstr "5 Remplacements de paramètres"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:368
+msgid ""
+"Recall that we called the ``broadcaster_listener.launch.py`` file in our "
+"top-level launch file. In addition to that, we have passed it "
+"``target_frame`` launch argument as shown below:"
+msgstr ""
+"Rappelez-vous que nous avons appelé le fichier "
+"``broadcaster_listener.launch.py`` dans notre fichier de lancement de niveau"
+" supérieur. En plus de cela, nous lui avons passé l'argument de lancement "
+"``target_frame`` comme indiqué ci-dessous :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:380
+msgid ""
+"This syntax allows us to change the default goal target frame to "
+"``carrot1``. If you would like ``turtle2`` to follow ``turtle1`` instead of "
+"the ``carrot1``, just remove the line that defines ``launch_arguments``. "
+"This will assign ``target_frame`` its default value, which is ``turtle1``."
+msgstr ""
+"Cette syntaxe nous permet de changer le cadre cible de l'objectif par défaut"
+" en ``carrot1``. Si vous souhaitez que ``turtle2`` suive ``turtle1`` au lieu"
+" de ``carrot1``, supprimez simplement la ligne qui définit "
+"``launch_arguments``. Cela affectera à ``target_frame`` sa valeur par "
+"défaut, qui est ``turtle1``."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:385
+msgid "6 Remapping"
+msgstr "6 Remappage"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:387
+msgid "Now create a ``mimic.launch.py`` file."
+msgstr "Créez maintenant un fichier ``mimic.launch.py``."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:408
+msgid ""
+"This launch file will start the ``mimic`` node, which will give commands to "
+"one turtlesim to follow the other. The node is designed to receive the "
+"target pose on the topic ``/input/pose``. In our case, we want to remap the "
+"target pose from ``/turtle2/pose`` topic. Finally, we remap the "
+"``/output/cmd_vel`` topic to ``/turtlesim2/turtle1/cmd_vel``. This way "
+"``turtle1`` in our ``turtlesim2`` simulation world will follow ``turtle2`` "
+"in our initial turtlesim world."
+msgstr ""
+"Ce fichier de lancement démarrera le nœud ``mimic``, qui donnera des "
+"commandes à une tortue pour qu'elle suive l'autre. Le nœud est conçu pour "
+"recevoir la pose cible sur le sujet ``/input/pose``. Dans notre cas, nous "
+"voulons remapper la pose cible du sujet ``/turtle2/pose``. Enfin, nous "
+"remappons le sujet ``/output/cmd_vel`` à ``/turtlesim2/turtle1/cmd_vel``. De"
+" cette façon, ``turtle1`` dans notre monde de simulation ``turtlesim2`` "
+"suivra ``turtle2`` dans notre monde initial de simulation de tortues."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:415
+msgid "7 Config files"
+msgstr "7 fichiers de configuration"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:417
+msgid "Let's now create a file called ``turtlesim_rviz.launch.py``."
+msgstr "Créons maintenant un fichier appelé ``turtlesim_rviz.launch.py``."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:445
+msgid ""
+"This launch file will start the RViz with the configuration file defined in "
+"the ``turtle_tf2_py`` package. This RViz configuration will set the world "
+"frame, enable TF visualization, and start RViz with a top-down view."
+msgstr ""
+"Ce fichier de lancement démarrera le RViz avec le fichier de configuration "
+"défini dans le package ``turtle_tf2_py``. Cette configuration RViz définira "
+"le cadre mondial, activera la visualisation TF et démarrera RViz avec une "
+"vue descendante."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:449
+msgid "8 Environment Variables"
+msgstr "8 variables d'environnement"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:451
+msgid ""
+"Let's now create the last launch file called ``fixed_broadcaster.launch.py``"
+" in our package."
+msgstr ""
+"Créons maintenant le dernier fichier de lancement appelé "
+"``fixed_broadcaster.launch.py`` dans notre package."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:475
+msgid ""
+"This launch file shows the way environment variables can be called inside "
+"the launch files. Environment variables can be used to define or push "
+"namespaces for distinguishing nodes on different computers or robots."
+msgstr ""
+"Ce fichier de lancement montre comment les variables d'environnement peuvent"
+" être appelées dans les fichiers de lancement. Les variables d'environnement"
+" peuvent être utilisées pour définir ou pousser des espaces de noms pour "
+"distinguer les nœuds sur différents ordinateurs ou robots."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:479
+msgid "Running launch files"
+msgstr "Exécution des fichiers de lancement"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:482
+msgid "1 Update setup.py"
+msgstr "1 Mettre à jour setup.py"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:484
+msgid ""
+"Open ``setup.py`` and add the following lines so that the launch files from "
+"the ``launch/`` folder and configuration file from the ``config/`` would be "
+"installed. The ``data_files`` field should now look like this:"
+msgstr ""
+"Ouvrez ``setup.py`` et ajoutez les lignes suivantes afin que les fichiers de"
+" lancement du dossier ``launch/`` et le fichier de configuration de "
+"``config/`` soient installés. Le champ ``data_files`` devrait maintenant "
+"ressembler à ceci :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:498
+msgid "2 Build and run"
+msgstr "2 Construire et exécuter"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:500
+msgid ""
+"To finally see the result of our code, build the package and launch the top-"
+"level launch file using the following command:"
+msgstr ""
+"Pour enfin voir le résultat de notre code, construisez le package et lancez "
+"le fichier de lancement de niveau supérieur à l'aide de la commande "
+"suivante :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:506
+msgid ""
+"You will now see the two turtlesim simulations started. There are two "
+"turtles in the first one and one in the second one. In the first simulation,"
+" ``turtle2`` is spawned in the bottom-left part of the world. Its aim is to "
+"reach the ``carrot1`` frame which is five meters away on the x-axis relative"
+" to the ``turtle1`` frame."
+msgstr ""
+"Vous verrez maintenant les deux simulations de turtlesim démarrer. Il y a "
+"deux tortues dans le premier et une dans le second. Dans la première "
+"simulation, ``turtle2`` apparaît dans la partie inférieure gauche du monde. "
+"Son but est d'atteindre le repère ``carrot1`` qui est à cinq mètres de "
+"distance sur l'axe des abscisses par rapport au repère ``turtle1``."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:511
+msgid ""
+"The ``turtlesim2/turtle1`` in the second is designed to mimic the behavior "
+"of the ``turtle2``."
+msgstr ""
+"Le ``turtlesim2/turtle1`` dans le second est conçu pour imiter le "
+"comportement du ``turtle2``."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:513
+msgid "If you want to control the ``turtle1``, run the teleop node."
+msgstr "Si vous voulez contrôler la ``turtle1``, lancez le nœud teleop."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:519
+msgid "As a result, you will see a similar picture:"
+msgstr "En conséquence, vous verrez une image similaire :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:523
+msgid ""
+"In addition to that, the RViz should have started. It will show all turtle "
+"frames relative to the ``world`` frame, whose origin is at the bottom-left "
+"corner."
+msgstr ""
+"En plus de cela, le RViz aurait dû démarrer. Il affichera tous les cadres de"
+" tortues par rapport au cadre ``world``, dont l'origine se trouve dans le "
+"coin inférieur gauche."
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:529
+msgid "Summary"
+msgstr "Résumé"
+
+#: ../../source/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.rst:531
+msgid ""
+"In this tutorial, you learned about various tips and practices of managing "
+"large projects using ROS 2 launch files."
+msgstr ""
+"Dans ce didacticiel, vous avez découvert divers conseils et pratiques de "
+"gestion de projets volumineux à l'aide de fichiers de lancement ROS 2."

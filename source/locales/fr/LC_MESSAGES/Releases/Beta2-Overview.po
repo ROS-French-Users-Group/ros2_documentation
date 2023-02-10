@@ -1,0 +1,336 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-07 07:18:01.085688\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Releases/Beta2-Overview.rst:6
+msgid "Beta 2 (``r2b2``)"
+msgstr "Bêta 2 (``r2b2``)"
+
+#: ../../source/Releases/Beta2-Overview.rst:10
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/Releases/Beta2-Overview.rst:13
+msgid "Supported Platforms"
+msgstr "Plates-formes prises en charge"
+
+#: ../../source/Releases/Beta2-Overview.rst:15
+msgid ""
+"We support ROS 2 Beta 2 on three platforms: Ubuntu 16.04 (Xenial), macOS "
+"10.12 (Sierra), and Windows 10. We provide both binary packages and "
+"instructions for how to compile from source for all 3 platforms (see "
+"`install instructions <../../Installation>` as well as `documentation "
+"<https://docs.ros2.org/beta2/>`__)."
+msgstr ""
+"Nous prenons en charge ROS 2 Beta 2 sur trois plates-formes : Ubuntu 16.04 "
+"(Xenial), macOS 10.12 (Sierra) et Windows 10. Nous fournissons à la fois des"
+" packages binaires et des instructions sur la façon de compiler à partir de "
+"la source pour les 3 plates-formes (voir `instructions d'installation <. "
+"./../Installation>` ainsi que la `documentation "
+"<https://docs.ros2.org/beta2/>`__)."
+
+#: ../../source/Releases/Beta2-Overview.rst:19
+msgid "Features"
+msgstr "Caractéristiques"
+
+#: ../../source/Releases/Beta2-Overview.rst:22
+msgid "Improvements since Beta 1 release"
+msgstr "Améliorations depuis la version bêta 1"
+
+#: ../../source/Releases/Beta2-Overview.rst:24
+msgid ""
+"DDS_Security support (aka SROS2, see `sros2 "
+"<https://github.com/ros2/sros2>`__)"
+msgstr ""
+"Prise en charge de DDS_Security (alias SROS2, voir `sros2 "
+"<https://github.com/ros2/sros2>`__)"
+
+#: ../../source/Releases/Beta2-Overview.rst:25
+msgid "Debian packages for Ubuntu Xenial"
+msgstr "Paquets Debian pour Ubuntu Xenial"
+
+#: ../../source/Releases/Beta2-Overview.rst:26
+msgid ""
+"Typesupport has been redesigned so that you only build a single executable "
+"and can choose one of the available RMW implementations by setting an "
+"environment variable (see `documentation <../../How-To-Guides/Working-with-"
+"multiple-RMW-implementations>`)."
+msgstr ""
+"Typesupport a été repensé afin que vous ne construisiez qu'un seul "
+"exécutable et que vous puissiez choisir l'une des implémentations RMW "
+"disponibles en définissant une variable d'environnement (voir `documentation"
+" <../../How-To-Guides/Working-with-multiple-RMW -implémentations>`)."
+
+#: ../../source/Releases/Beta2-Overview.rst:27
+msgid ""
+"Namespace support for nodes and topics (see `design article "
+"<https://design.ros2.org/articles/topic_and_service_names.html>`__, see "
+"known issues below)."
+msgstr ""
+"Prise en charge des espaces de noms pour les nœuds et les rubriques (voir "
+"`article de conception "
+"<https://design.ros2.org/articles/topic_and_service_names.html>`__, voir les"
+" problèmes connus ci-dessous)."
+
+#: ../../source/Releases/Beta2-Overview.rst:28
+msgid ""
+"A set of command-line tools using the extensible ``ros2`` command (see "
+"`conceptual article <../../Concepts/About-Command-Line-Tools>`)."
+msgstr ""
+"Un ensemble d'outils en ligne de commande utilisant la commande extensible "
+"``ros2`` (voir `article conceptuel <../../Concepts/About-Command-Line-"
+"Tools>`)."
+
+#: ../../source/Releases/Beta2-Overview.rst:29
+msgid ""
+"A set of macros for logging messages in C / C++ (see API docs of `rcutils "
+"<https://docs.ros2.org/beta2/api/rcutils/index.html>`__)."
+msgstr ""
+"Un ensemble de macros pour la journalisation des messages en C/C++ (voir les"
+" docs API de `rcutils "
+"<https://docs.ros2.org/beta2/api/rcutils/index.html>`__)."
+
+#: ../../source/Releases/Beta2-Overview.rst:32
+msgid "New demo application"
+msgstr "Nouvelle application de démonstration"
+
+#: ../../source/Releases/Beta2-Overview.rst:34
+msgid ""
+"`Turtlebot 2 demos <https://github.com/ros2/turtlebot2_demo>`__ using the "
+"following repositories that have been (partially) converted to ROS 2 (Linux "
+"only):"
+msgstr ""
+"`Turtlebot 2 démos <https://github.com/ros2/turtlebot2_demo>`__ en utilisant"
+" les référentiels suivants qui ont été (partiellement) convertis en ROS 2 "
+"(Linux uniquement) :"
+
+#: ../../source/Releases/Beta2-Overview.rst:36
+msgid "`ros_astra_camera <https://github.com/ros2/ros_astra_camera.git>`__"
+msgstr "`ros_astra_camera <https://github.com/ros2/ros_astra_camera.git>`__"
+
+#: ../../source/Releases/Beta2-Overview.rst:37
+msgid ""
+"`depthimage_to_laserscan "
+"<https://github.com/ros2/depthimage_to_laserscan.git>`__"
+msgstr ""
+"`depthimage_to_laserscan "
+"<https://github.com/ros2/depthimage_to_laserscan.git>`__"
+
+#: ../../source/Releases/Beta2-Overview.rst:38
+msgid "`pcl_conversions <https://github.com/ros2/pcl_conversions.git>`__"
+msgstr "`pcl_conversions <https://github.com/ros2/pcl_conversions.git>`__"
+
+#: ../../source/Releases/Beta2-Overview.rst:39
+msgid "`cartographer <https://github.com/ros2/cartographer.git>`__"
+msgstr "`cartographe <https://github.com/ros2/cartographer.git>`__"
+
+#: ../../source/Releases/Beta2-Overview.rst:40
+msgid "`cartographer_ros <https://github.com/ros2/cartographer_ros.git>`__"
+msgstr "`cartographer_ros <https://github.com/ros2/cartographer_ros.git>`__"
+
+#: ../../source/Releases/Beta2-Overview.rst:41
+msgid "`ceres-solver <https://github.com/ros2/ceres-solver.git>`__"
+msgstr "`ceres-solver <https://github.com/ros2/ceres-solver.git>`__"
+
+#: ../../source/Releases/Beta2-Overview.rst:42
+msgid "`navigation <https://github.com/ros2/navigation.git>`__"
+msgstr "`navigation <https://github.com/ros2/navigation.git>`__"
+
+#: ../../source/Releases/Beta2-Overview.rst:43
+msgid ""
+"`teleop_twist_keyboard "
+"<https://github.com/ros2/teleop_twist_keyboard.git>`__"
+msgstr ""
+"`teleop_twist_keyboard "
+"<https://github.com/ros2/teleop_twist_keyboard.git>`__"
+
+#: ../../source/Releases/Beta2-Overview.rst:44
+msgid "`joystick_drivers <https://github.com/ros2/joystick_drivers.git>`__"
+msgstr "`joystick_drivers <https://github.com/ros2/joystick_drivers.git>`__"
+
+#: ../../source/Releases/Beta2-Overview.rst:45
+msgid "`teleop_twist_joy <https://github.com/ros2/teleop_twist_joy.git>`__"
+msgstr "`teleop_twist_joy <https://github.com/ros2/teleop_twist_joy.git>`__"
+
+#: ../../source/Releases/Beta2-Overview.rst:47
+msgid "`Dummy_robot demo <../Tutorials/Demos/dummy-robot-demo>`:"
+msgstr "`Démo dummy_robot <../Tutorials/Demos/dummy-robot-demo>` :"
+
+#: ../../source/Releases/Beta2-Overview.rst:49
+msgid "`robot_model <https://github.com/ros2/robot_model>`__"
+msgstr "`robot_model <https://github.com/ros2/robot_model>`__"
+
+#: ../../source/Releases/Beta2-Overview.rst:50
+msgid ""
+"`robot_state_publisher <https://github.com/ros2/robot_state_publisher>`__"
+msgstr ""
+"`robot_state_publisher <https://github.com/ros2/robot_state_publisher>`__"
+
+#: ../../source/Releases/Beta2-Overview.rst:53
+msgid "Selected features from previous Alpha/Beta releases"
+msgstr "Fonctionnalités sélectionnées des versions alpha/bêta précédentes"
+
+#: ../../source/Releases/Beta2-Overview.rst:55
+msgid "For the complete list, see `earlier release notes <../index>`."
+msgstr ""
+"Pour la liste complète, voir `notes de version antérieures <../index>`."
+
+#: ../../source/Releases/Beta2-Overview.rst:58
+msgid ""
+"C++ and Python implementations of ROS 2 client libraries including APIs for:"
+msgstr ""
+"Implémentations C++ et Python des bibliothèques clientes ROS 2, y compris "
+"les API pour :"
+
+#: ../../source/Releases/Beta2-Overview.rst:60
+msgid "Publishing and subscribing to ROS topics"
+msgstr "Publication et abonnement aux rubriques ROS"
+
+#: ../../source/Releases/Beta2-Overview.rst:61
+msgid ""
+"Requesting and replying ROS services (synchronous (C++ only) and "
+"asynchronous)"
+msgstr ""
+"Demander et répondre aux services ROS (synchrone (C++ uniquement) et "
+"asynchrone)"
+
+#: ../../source/Releases/Beta2-Overview.rst:62
+msgid ""
+"Getting and setting ROS parameters (C++ only, synchronous and asynchronous)"
+msgstr ""
+"Obtenir et définir les paramètres ROS (C++ uniquement, synchrone et "
+"asynchrone)"
+
+#: ../../source/Releases/Beta2-Overview.rst:63
+msgid "Timer callbacks"
+msgstr "Rappels de minuterie"
+
+#: ../../source/Releases/Beta2-Overview.rst:65
+msgid "Support for interoperability between multiple DDS/RTPS implementations"
+msgstr ""
+"Prise en charge de l'interopérabilité entre plusieurs implémentations "
+"DDS/RTPS"
+
+#: ../../source/Releases/Beta2-Overview.rst:67
+msgid ""
+"eProsima Fast RTPS is our default implementation, and is included in the "
+"binary packages"
+msgstr ""
+"eProsima Fast RTPS est notre implémentation par défaut et est inclus dans "
+"les packages binaires"
+
+#: ../../source/Releases/Beta2-Overview.rst:68
+msgid "RTI Connext is supported: build from source to try it out"
+msgstr ""
+"RTI Connext est pris en charge : créez à partir de la source pour l'essayer"
+
+#: ../../source/Releases/Beta2-Overview.rst:69
+msgid ""
+"We initially supported PrismTech OpenSplice but support for it is currently "
+"on hold"
+msgstr ""
+"Nous avons initialement pris en charge PrismTech OpenSplice, mais sa prise "
+"en charge est actuellement suspendue"
+
+#: ../../source/Releases/Beta2-Overview.rst:71
+msgid "A graph API for network events"
+msgstr "Une API graphique pour les événements réseau"
+
+#: ../../source/Releases/Beta2-Overview.rst:72
+msgid "Distributed discovery"
+msgstr "Découverte distribuée"
+
+#: ../../source/Releases/Beta2-Overview.rst:73
+msgid ""
+"Realtime safe code paths for publish and subscribe with compatible DDS "
+"implementation (only Connext at the moment)"
+msgstr ""
+"Chemins de code sécurisés en temps réel pour la publication et l'abonnement "
+"avec une implémentation DDS compatible (uniquement Connext pour le moment)"
+
+#: ../../source/Releases/Beta2-Overview.rst:75
+msgid "Support for custom allocators"
+msgstr "Prise en charge des répartiteurs personnalisés"
+
+#: ../../source/Releases/Beta2-Overview.rst:77
+msgid "ROS 1 <-> ROS 2 dynamic bridge node"
+msgstr "Nœud de pont dynamique ROS 1 <-> ROS 2"
+
+#: ../../source/Releases/Beta2-Overview.rst:78
+msgid "Executor threading model (C++ only)"
+msgstr "Modèle de thread d'exécuteur (C++ uniquement)"
+
+#: ../../source/Releases/Beta2-Overview.rst:79
+msgid "Component model to compose nodes at compile / link / runtime"
+msgstr ""
+"Modèle de composant pour composer des nœuds à la compilation / au lien / à "
+"l'exécution"
+
+#: ../../source/Releases/Beta2-Overview.rst:80
+msgid "Managed component using a standard lifecycle"
+msgstr "Composant géré à l'aide d'un cycle de vie standard"
+
+#: ../../source/Releases/Beta2-Overview.rst:81
+msgid "Extended ``.msg`` format with new features:"
+msgstr "Format ``.msg`` étendu avec de nouvelles fonctionnalités :"
+
+#: ../../source/Releases/Beta2-Overview.rst:83
+msgid "Bounded arrays"
+msgstr "Tableaux bornés"
+
+#: ../../source/Releases/Beta2-Overview.rst:84
+msgid "Default values"
+msgstr "Les valeurs par défaut"
+
+#: ../../source/Releases/Beta2-Overview.rst:87
+msgid "Known issues"
+msgstr "Problèmes connus"
+
+#: ../../source/Releases/Beta2-Overview.rst:89
+msgid ""
+"We’re tracking issues in various repositories, but the main entry point is "
+"the `ros2/ros2 issue tracker <https://github.com/ros2/ros2/issues>`__"
+msgstr ""
+"Nous suivons les problèmes dans divers référentiels, mais le principal point"
+" d'entrée est le `ros2/ros2 issue tracker "
+"<https://github.com/ros2/ros2/issues>`__"
+
+#: ../../source/Releases/Beta2-Overview.rst:90
+msgid ""
+"We’d like to highlight a `known issue "
+"<https://github.com/ros2/rmw_connext/issues/234>`__ that we are looking into"
+" which doesn't allow two topics with the same base name but different "
+"namespaces to have a different type when using ``rmw_connext_cpp``."
+msgstr ""
+"Nous aimerions souligner un `problème connu "
+"<https://github.com/ros2/rmw_connext/issues/234>`__ que nous examinons et "
+"qui n'autorise pas deux sujets avec le même nom de base mais des espaces de "
+"noms différents à avoir un type différent lors de l'utilisation de "
+"``rmw_connext_cpp``."
+
+#: ../../source/Releases/Beta2-Overview.rst:91
+msgid ""
+"Services with long responses are not working with Fast-RTPS. The fix, while "
+"not being part of beta2, is available upstream so you can work around this "
+"issue by building from source using Fast-RTPS master branch."
+msgstr ""
+"Les services avec de longues réponses ne fonctionnent pas avec Fast-RTPS. Le"
+" correctif, bien qu'il ne fasse pas partie de la version bêta 2, est "
+"disponible en amont afin que vous puissiez contourner ce problème en créant "
+"à partir de la source à l'aide de la branche principale Fast-RTPS."

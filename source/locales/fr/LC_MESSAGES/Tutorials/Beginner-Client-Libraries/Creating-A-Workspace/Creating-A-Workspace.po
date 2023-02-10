@@ -1,0 +1,653 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 11:54:37.976036\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:8
+msgid "Creating a workspace"
+msgstr "Créer un espace de travail"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:10
+msgid ""
+"**Goal:** Create a workspace and learn how to set up an overlay for "
+"development and testing."
+msgstr ""
+"**Objectif :** Créer un espace de travail et apprendre à configurer une "
+"superposition pour le développement et les tests."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:12
+msgid "**Tutorial level:** Beginner"
+msgstr "**Niveau du tutoriel :** Débutant"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:14
+msgid "**Time:** 20 minutes"
+msgstr "**Durée :** 20 minutes"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:18
+msgid "Contents"
+msgstr "Contenu"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:21
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:23
+msgid ""
+"A workspace is a directory containing ROS 2 packages. Before using ROS 2, "
+"it’s necessary to source your ROS 2 installation workspace in the terminal "
+"you plan to work in. This makes ROS 2’s packages available for you to use in"
+" that terminal."
+msgstr ""
+"Un espace de travail est un répertoire contenant des packages ROS 2. Avant "
+"d'utiliser ROS 2, il est nécessaire de sourcer votre espace de travail "
+"d'installation de ROS 2 dans le terminal dans lequel vous prévoyez de "
+"travailler. Cela rend les packages de ROS 2 disponibles pour que vous "
+"puissiez les utiliser dans ce terminal."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:27
+msgid ""
+"You also have the option of sourcing an “overlay” – a secondary workspace "
+"where you can add new packages without interfering with the existing ROS 2 "
+"workspace that you're extending, or “underlay”. Your underlay must contain "
+"the dependencies of all the packages in your overlay. Packages in your "
+"overlay will override packages in the underlay. It's also possible to have "
+"several layers of underlays and overlays, with each successive overlay using"
+" the packages of its parent underlays."
+msgstr ""
+"Vous avez également la possibilité de créer une \"superposition\" - un "
+"espace de travail secondaire dans lequel vous pouvez ajouter de nouveaux "
+"packages sans interférer avec l'espace de travail ROS 2 existant que vous "
+"étendez, ou \"sous-couche\". Votre sous-couche doit contenir les dépendances"
+" de tous les packages de votre superposition. Les packages de votre "
+"superposition remplaceront les packages de la sous-couche. Il est également "
+"possible d'avoir plusieurs couches de sous-couches et de superpositions, "
+"chaque superposition successive utilisant les packages de ses sous-couches "
+"parentes."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:34
+msgid "Prerequisites"
+msgstr "Conditions préalables"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:36
+msgid ":doc:`ROS 2 installation <../../../Installation>`"
+msgstr ":doc:`Installation de ROS 2 <../../../Installation>`"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:37
+msgid ":doc:`colcon installation <../Colcon-Tutorial>`"
+msgstr ":doc:`installation colcon <../Tutoriel-Colcon>`"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:38
+msgid ""
+"`git installation <https://git-scm.com/book/en/v2/Getting-Started-"
+"Installing-Git>`__"
+msgstr ""
+"`git installation <https://git-scm.com/book/en/v2/Getting-Started-"
+"Installing-Git>`__"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:39
+msgid ""
+":doc:`turtlesim installation <../../Beginner-CLI-Tools/Introducing-"
+"Turtlesim/Introducing-Turtlesim>`"
+msgstr ""
+":doc:`Installation de Turtlesim <../../Beginner-CLI-Tools/Introducing-"
+"Turtlesim/Introducing-Turtlesim>`"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:40
+msgid "Have :doc:`rosdep installed <../../Intermediate/Rosdep>`"
+msgstr "Avoir :doc:`rosdep installé <../../Intermediate/Rosdep>`"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:41
+msgid ""
+"Understanding of basic terminal commands (`here’s a guide for Linux "
+"<http://www.ee.surrey.ac.uk/Teaching/Unix/>`__)"
+msgstr ""
+"Compréhension des commandes de terminal de base (`voici un guide pour Linux "
+"<http://www.ee.surrey.ac.uk/Teaching/Unix/>`__)"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:42
+msgid "Text editor of your choice"
+msgstr "Editeur de texte de votre choix"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:45
+msgid "Tasks"
+msgstr "Tâches"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:48
+msgid "1 Source ROS 2 environment"
+msgstr "1 Environnement source ROS 2"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:50
+msgid ""
+"Your main ROS 2 installation will be your underlay for this tutorial. (Keep "
+"in mind that an underlay does not necessarily have to be the main ROS 2 "
+"installation.)"
+msgstr ""
+"Votre installation principale de ROS 2 sera votre sous-couche pour ce "
+"didacticiel. (Gardez à l'esprit qu'une sous-couche ne doit pas "
+"nécessairement être l'installation principale de ROS 2.)"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:53
+msgid ""
+"Depending on how you installed ROS 2 (from source or binaries), and which "
+"platform you’re on, your exact source command will vary:"
+msgstr ""
+"Selon la façon dont vous avez installé ROS 2 (à partir de la source ou des "
+"binaires) et la plate-forme sur laquelle vous vous trouvez, votre commande "
+"source exacte variera :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:57
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:90
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:154
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:190
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:245
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:269
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:291
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:63
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:97
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:162
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:196
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:251
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:275
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:297
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:69
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:104
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:166
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:202
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:257
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:281
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:303
+msgid "Windows"
+msgstr "les fenêtres"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:71
+msgid ""
+"Remember to use a ``x64 Native Tools Command Prompt for VS 2019`` for "
+"executing the following commands, as we are going to build a workspace."
+msgstr ""
+"N'oubliez pas d'utiliser une ``invite de commande x64 Native Tools pour VS "
+"2019`` pour exécuter les commandes suivantes, car nous allons créer un "
+"espace de travail."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:77
+msgid ""
+"Consult the :doc:`installation guide <../../../Installation>` you followed "
+"if these commands don’t work for you."
+msgstr ""
+"Consultez le :doc:`guide d'installation <../../../Installation>` que vous "
+"avez suivi si ces commandes ne fonctionnent pas pour vous."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:82
+msgid "2 Create a new directory"
+msgstr "2 Créer un nouveau répertoire"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:84
+msgid ""
+"Best practice is to create a new directory for every new workspace. The name"
+" doesn’t matter, but it is helpful to have it indicate the purpose of the "
+"workspace. Let’s choose the directory name ``ros2_ws``, for “development "
+"workspace”:"
+msgstr ""
+"La meilleure pratique consiste à créer un nouveau répertoire pour chaque "
+"nouvel espace de travail. Le nom n'a pas d'importance, mais il est utile "
+"qu'il indique le but de l'espace de travail. Choisissons le nom du "
+"répertoire ``ros2_ws``, pour \"development workspace\":"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:112
+msgid ""
+"Another best practice is to put any packages in your workspace into the "
+"``src`` directory. The above code creates a ``src`` directory inside "
+"``ros2_ws`` and then navigates into it."
+msgstr ""
+"Une autre bonne pratique consiste à placer tous les packages de votre espace"
+" de travail dans le répertoire ``src``. Le code ci-dessus crée un répertoire"
+" ``src`` à l'intérieur de ``ros2_ws`` puis navigue dedans."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:117
+msgid "3 Clone a sample repo"
+msgstr "3 Cloner un exemple de dépôt"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:119
+msgid "Ensure you’re still in the ``ros2_ws/src`` directory before you clone."
+msgstr ""
+"Assurez-vous que vous êtes toujours dans le répertoire ``ros2_ws/src`` avant"
+" de cloner."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:121
+msgid ""
+"In the rest of the beginner developer tutorials, you will create your own "
+"packages, but for now you will practice putting a workspace together using "
+"existing packages."
+msgstr ""
+"Dans le reste des didacticiels pour développeurs débutants, vous créerez vos"
+" propres packages, mais pour l'instant, vous vous entraînerez à assembler un"
+" espace de travail à l'aide de packages existants."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:123
+msgid ""
+"The existing packages you will use are from the ``ros_tutorials`` repository"
+" (repo). If you went through the \"Beginner: CLI Tools\" tutorials, you'll "
+"be familiar with ``turtlesim``, one of the packages in this repo."
+msgstr ""
+"Les packages existants que vous utiliserez proviennent du dépôt "
+"``ros_tutorials`` (repo). Si vous avez suivi les didacticiels \"Débutant : "
+"Outils CLI\", vous serez familiarisé avec ``turtlesim``, l'un des packages "
+"de ce référentiel."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:126
+msgid ""
+"You can see the repo `on GitHub <https://github.com/ros/ros_tutorials/>`__."
+msgstr ""
+"Vous pouvez voir le dépôt `sur GitHub "
+"<https://github.com/ros/ros_tutorials/>`__."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:128
+msgid ""
+"Notice the “Branch” drop down list to the left above the directories list. "
+"When you clone this repo, add the ``-b`` argument followed by the branch "
+"that corresponds with your ROS 2 distro."
+msgstr ""
+"Remarquez la liste déroulante \"Branche\" à gauche au-dessus de la liste des"
+" répertoires. Lorsque vous clonez ce dépôt, ajoutez l'argument ``-b`` suivi "
+"de la branche qui correspond à votre distribution ROS 2."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:131
+msgid ""
+"In the ``ros2_ws/src`` directory, run the following command for the distro "
+"you're using:"
+msgstr ""
+"Dans le répertoire ``ros2_ws/src``, exécutez la commande suivante pour la "
+"distribution que vous utilisez :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:137
+msgid ""
+"Now ``ros_tutorials`` is cloned in your workspace.  The ``ros_tutorials`` "
+"repository contains the ``turtlesim`` package, which we'll use in the rest "
+"of this tutorial.  The other packages in this repository are not built "
+"because they contain a ``COLCON_IGNORE`` file."
+msgstr ""
+"Maintenant ``ros_tutorials`` est cloné dans votre espace de travail. Le "
+"dépôt ``ros_tutorials`` contient le paquet ``turtlesim``, que nous "
+"utiliserons dans le reste de ce tutoriel. Les autres packages de ce dépôt ne"
+" sont pas compilés car ils contiennent un fichier ``COLCON_IGNORE``."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:139
+msgid ""
+"Now you have populated your workspace with a sample package, but it isn’t a "
+"fully-functional workspace yet. You need to resolve dependencies and build "
+"the workspace first."
+msgstr ""
+"Vous avez maintenant rempli votre espace de travail avec un exemple de "
+"package, mais ce n'est pas encore un espace de travail entièrement "
+"fonctionnel. Vous devez d'abord résoudre les dépendances et créer l'espace "
+"de travail."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:144
+msgid "4 Resolve dependencies"
+msgstr "4 Résoudre les dépendances"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:146
+msgid ""
+"Before building the workspace, you need to resolve package dependencies. You"
+" may have all the dependencies already, but best practice is to check for "
+"dependencies every time you clone. You wouldn’t want a build to fail after a"
+" long wait because of missing dependencies."
+msgstr ""
+"Avant de créer l'espace de travail, vous devez résoudre les dépendances de "
+"package. Vous avez peut-être déjà toutes les dépendances, mais la meilleure "
+"pratique consiste à vérifier les dépendances à chaque fois que vous clonez. "
+"Vous ne voudriez pas qu'une construction échoue après une longue attente à "
+"cause de dépendances manquantes."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:150
+msgid ""
+"From the root of your workspace (``ros2_ws``), run the following command:"
+msgstr ""
+"Depuis la racine de votre espace de travail (``ros2_ws``), exécutez la "
+"commande suivante :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:164
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:168
+msgid ""
+"rosdep only runs on Linux, so you can skip ahead to section \"5 Build the "
+"workspace with colcon\"."
+msgstr ""
+"rosdep ne fonctionne que sur Linux, vous pouvez donc passer directement à la"
+" section \"5 Construire l'espace de travail avec colcon\"."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:170
+msgid ""
+"If you installed ROS 2 on Linux from source or the \"fat\" archive, you will"
+" need to use the rosdep command from their installation instructions. Here "
+"are the :ref:`from-source rosdep section <linux-development-setup-install-"
+"dependencies-using-rosdep>` and the :ref:`\"fat\" archive rosdep section "
+"<linux-install-binary-install-missing-dependencies>`."
+msgstr ""
+"Si vous avez installé ROS 2 sur Linux à partir de la source ou de l'archive "
+"\"fat\", vous devrez utiliser la commande rosdep à partir de leurs "
+"instructions d'installation. Voici la section :ref:`from-source rosdep "
+"<linux-development-setup-install-dependencies-using-rosdep>` et la "
+"section :ref:`\"fat\" archive rosdep <linux-install-binary-install-missing "
+"-dépendances>`."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:173
+msgid "If you already have all your dependencies, the console will return:"
+msgstr "Si vous avez déjà toutes vos dépendances, la console renverra :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:179
+msgid ""
+"Packages declare their dependencies in the package.xml file (you will learn "
+"more about packages in the next tutorial). This command walks through those "
+"declarations and installs the ones that are missing. You can learn more "
+"about ``rosdep`` in another tutorial (coming soon)."
+msgstr ""
+"Les packages déclarent leurs dépendances dans le fichier package.xml (vous "
+"en apprendrez plus sur les packages dans le prochain tutoriel). Cette "
+"commande parcourt ces déclarations et installe celles qui manquent. Vous "
+"pouvez en savoir plus sur ``rosdep`` dans un autre tutoriel (à venir)."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:184
+msgid "5 Build the workspace with colcon"
+msgstr "5 Construire l'espace de travail avec colcon"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:186
+msgid ""
+"From the root of your workspace (``ros2_ws``), you can now build your "
+"packages using the command:"
+msgstr ""
+"Depuis la racine de votre espace de travail (``ros2_ws``), vous pouvez "
+"désormais construire vos packages à l'aide de la commande :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:208
+msgid ""
+"Windows doesn’t allow long paths, so ``merge-install`` will combine all the "
+"paths into the ``install`` directory."
+msgstr ""
+"Windows n'autorise pas les longs chemins, donc ``merge-install`` combinera "
+"tous les chemins dans le répertoire ``install``."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:210
+msgid "The console will return the following message:"
+msgstr "La console renverra le message suivant :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:220
+msgid "Other useful arguments for ``colcon build``:"
+msgstr "Autres arguments utiles pour ``colcon build`` :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:222
+msgid ""
+"``--packages-up-to`` builds the package you want, plus all its dependencies,"
+" but not the whole workspace (saves time)"
+msgstr ""
+"``--packages-up-to`` construit le paquet que vous voulez, ainsi que toutes "
+"ses dépendances, mais pas tout l'espace de travail (gain de temps)"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:223
+msgid ""
+"``--symlink-install`` saves you from having to rebuild every time you tweak "
+"python scripts"
+msgstr ""
+"``--symlink-install`` vous évite d'avoir à reconstruire chaque fois que vous"
+" modifiez des scripts python"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:224
+msgid ""
+"``--event-handlers console_direct+`` shows console output while building "
+"(can otherwise be found in the ``log`` directory)"
+msgstr ""
+"``--event-handlers console_direct+`` affiche la sortie de la console lors de"
+" la construction (sinon elle peut être trouvée dans le répertoire ``log``)"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:226
+msgid ""
+"Once the build is finished, enter ``ls`` in the workspace root "
+"(``~/ros2_ws``) and you will see that colcon has created new directories:"
+msgstr ""
+"Une fois le build terminé, entrez ``ls`` à la racine de l'espace de travail "
+"(``~/ros2_ws``) et vous verrez que colcon a créé de nouveaux répertoires :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:232
+msgid ""
+"The ``install`` directory is where your workspace’s setup files are, which "
+"you can use to source your overlay."
+msgstr ""
+"Le répertoire ``install`` est l'endroit où se trouvent les fichiers de "
+"configuration de votre espace de travail, que vous pouvez utiliser pour "
+"sourcer votre superposition."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:236
+msgid "6 Source the overlay"
+msgstr "6 Sourcez la superposition"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:238
+msgid ""
+"Before sourcing the overlay, it is very important that you open a new "
+"terminal, separate from the one where you built the workspace. Sourcing an "
+"overlay in the same terminal where you built, or likewise building where an "
+"overlay is sourced, may create complex issues."
+msgstr ""
+"Avant de sourcer l'overlay, il est très important que vous ouvriez un "
+"nouveau terminal, distinct de celui où vous avez construit l'espace de "
+"travail. L'approvisionnement d'une superposition dans le même terminal où "
+"vous avez construit, ou de même la construction où une superposition est "
+"sourcée, peut créer des problèmes complexes."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:241
+msgid ""
+"In the new terminal, source your main ROS 2 environment as the “underlay”, "
+"so you can build the overlay “on top of” it:"
+msgstr ""
+"Dans le nouveau terminal, sourcez votre environnement ROS 2 principal en "
+"tant que « sous-couche », afin que vous puissiez créer la superposition "
+"« au-dessus » :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:259
+msgid ""
+"In this case you can use a normal command prompt, as we are not going to "
+"build any workspace in this terminal."
+msgstr ""
+"Dans ce cas, vous pouvez utiliser une invite de commande normale, car nous "
+"n'allons pas créer d'espace de travail dans ce terminal."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:265
+msgid "Go into the root of your workspace:"
+msgstr "Allez à la racine de votre espace de travail :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:287
+msgid "In the root, source your overlay:"
+msgstr "Dans la racine, sourcez votre overlay :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:311
+msgid ""
+"Sourcing the ``local_setup`` of the overlay will only add the packages "
+"available in the overlay to your environment. ``setup`` sources the overlay "
+"as well as the underlay it was created in, allowing you to utilize both "
+"workspaces."
+msgstr ""
+"Sourcer le ``local_setup`` de l'overlay n'ajoutera que les packages "
+"disponibles dans l'overlay à votre environnement. ``setup`` source la "
+"superposition ainsi que la sous-couche dans laquelle elle a été créée, vous "
+"permettant d'utiliser les deux espaces de travail."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:314
+msgid ""
+"So, sourcing your main ROS 2 installation's ``setup`` and then the "
+"``ros2_ws`` overlay's ``local_setup``, like you just did, is the same as "
+"just sourcing ``ros2_ws``'s ``setup``, because that includes the environment"
+" of the underlay it was created in."
+msgstr ""
+"Donc, sourcer le ``setup`` de votre installation principale de ROS 2, puis "
+"le ``local_setup`` de la superposition ``ros2_ws``, comme vous venez de le "
+"faire, revient au même que de simplement sourcer le ``setup` de ``ros2_ws`` "
+"`, car cela inclut l'environnement de la sous-couche dans laquelle il a été "
+"créé."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:317
+msgid "Now you can run the ``turtlesim`` package from the overlay:"
+msgstr ""
+"Vous pouvez maintenant exécuter le package ``turtlesim`` à partir de "
+"l'overlay :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:323
+msgid ""
+"But how can you tell that this is the overlay turtlesim running, and not "
+"your main installation's turtlesim?"
+msgstr ""
+"Mais comment pouvez-vous dire que c'est le turtlesim de superposition en "
+"cours d'exécution, et non le turtlesim de votre installation principale ?"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:325
+msgid "Let’s modify turtlesim in the overlay so you can see the effects:"
+msgstr ""
+"Modifions turtlesim dans la superposition pour que vous puissiez voir les "
+"effets :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:327
+msgid ""
+"You can modify and rebuild packages in the overlay separately from the "
+"underlay."
+msgstr ""
+"Vous pouvez modifier et reconstruire les packages dans la superposition "
+"séparément de la sous-couche."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:328
+msgid "The overlay takes precedence over the underlay."
+msgstr "La superposition a priorité sur la sous-couche."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:332
+msgid "7 Modify the overlay"
+msgstr "7 Modifier la superposition"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:334
+msgid ""
+"You can modify ``turtlesim`` in your overlay by editing the title bar on the"
+" turtlesim window. To do this, locate the ``turtle_frame.cpp`` file in "
+"``~/ros2_ws/src/ros_tutorials/turtlesim/src``. Open ``turtle_frame.cpp`` "
+"with your preferred text editor."
+msgstr ""
+"Vous pouvez modifier ``turtlesim`` dans votre superposition en éditant la "
+"barre de titre de la fenêtre turtlesim. Pour ce faire, localisez le fichier "
+"``turtle_frame.cpp`` dans ``~/ros2_ws/src/ros_tutorials/turtlesim/src``. "
+"Ouvrez ``turtle_frame.cpp`` avec votre éditeur de texte préféré."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:338
+msgid ""
+"On line 52 you will see the function ``setWindowTitle(\"TurtleSim\");``. "
+"Change the value ``”TurtleSim”`` to ``”MyTurtleSim”``, and save the file."
+msgstr ""
+"À la ligne 52, vous verrez la fonction ``setWindowTitle(\"TurtleSim\");``. "
+"Remplacez la valeur ``”TurtleSim”`` par ``”MyTurtleSim”`` et enregistrez le "
+"fichier."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:341
+msgid ""
+"Return to first terminal where you ran ``colcon build`` earlier and run it "
+"again."
+msgstr ""
+"Revenez au premier terminal où vous avez exécuté ``colcon build`` plus tôt "
+"et exécutez-le à nouveau."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:343
+msgid ""
+"Return to the second terminal (where the overlay is sourced) and run "
+"turtlesim again:"
+msgstr ""
+"Revenez au deuxième terminal (d'où provient la superposition) et exécutez à "
+"nouveau turtlesim :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:349
+msgid ""
+"You will see the title bar on the turtlesim window now says “MyTurtleSim”."
+msgstr ""
+"Vous verrez que la barre de titre sur la fenêtre de turtlesim indique "
+"maintenant \"MyTurtleSim\"."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:353
+msgid ""
+"Even though your main ROS 2 environment was sourced in this terminal "
+"earlier, the overlay of your ``ros2_ws`` environment takes precedence over "
+"the contents of the underlay."
+msgstr ""
+"Même si votre environnement ROS 2 principal provenait précédemment de ce "
+"terminal, la superposition de votre environnement ``ros2_ws`` a priorité sur"
+" le contenu de la sous-couche."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:355
+msgid ""
+"To see that your underlay is still intact, open a brand new terminal and "
+"source only your ROS 2 installation. Run turtlesim again:"
+msgstr ""
+"Pour voir que votre sous-couche est toujours intacte, ouvrez un tout nouveau"
+" terminal et sourcez uniquement votre installation ROS 2. Exécutez à nouveau"
+" turtlesim :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:364
+msgid ""
+"You can see that modifications in the overlay did not actually affect "
+"anything in the underlay."
+msgstr ""
+"Vous pouvez voir que les modifications apportées à la superposition n'ont en"
+" fait rien affecté à la sous-couche."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:368
+msgid "Summary"
+msgstr "Résumé"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:369
+msgid ""
+"In this tutorial, you sourced your main ROS 2 distro install as your "
+"underlay, and created an overlay by cloning and building packages in a new "
+"workspace. The overlay gets prepended to the path, and takes precedence over"
+" the underlay, as you saw with your modified turtlesim."
+msgstr ""
+"Dans ce didacticiel, vous avez sélectionné votre installation principale de "
+"distribution ROS 2 comme sous-couche et créé une superposition en clonant et"
+" en créant des packages dans un nouvel espace de travail. La superposition "
+"est ajoutée au chemin et a priorité sur la sous-couche, comme vous l'avez vu"
+" avec votre tortue modifiée."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:372
+msgid ""
+"Using overlays is recommended for working on a small number of packages, so "
+"you don’t have to put everything in the same workspace and rebuild a huge "
+"workspace on every iteration."
+msgstr ""
+"L'utilisation de superpositions est recommandée pour travailler sur un petit"
+" nombre de packages, vous n'avez donc pas besoin de tout mettre dans le même"
+" espace de travail et de reconstruire un immense espace de travail à chaque "
+"itération."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:375
+msgid "Next steps"
+msgstr "Prochaines étapes"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.rst:377
+msgid ""
+"Now that you understand the details behind creating, building and sourcing "
+"your own workspace, you can learn how to :doc:`create your own packages "
+"<../Creating-Your-First-ROS2-Package>`."
+msgstr ""
+"Maintenant que vous comprenez les détails de la création, de la construction"
+" et de l'approvisionnement de votre propre espace de travail, vous pouvez "
+"apprendre à :doc:`créer vos propres packages <../Creating-Your-First-"
+"ROS2-Package>`."

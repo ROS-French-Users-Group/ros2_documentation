@@ -1,0 +1,232 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 12:00:29.770645\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:8
+msgid "Using time (C++)"
+msgstr "Utilisation du temps (C++)"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:10
+msgid ""
+"**Goal:** Learn how to get a transform at a specific time and wait for a "
+"transform to be available on the tf2 tree using ``lookupTransform()`` "
+"function."
+msgstr ""
+"**Objectif :** Apprendre à obtenir une transformation à un moment précis et "
+"attendre qu'une transformation soit disponible sur l'arborescence tf2 à "
+"l'aide de la fonction ``lookupTransform()``."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:12
+msgid "**Tutorial level:** Intermediate"
+msgstr "**Niveau du didacticiel :** Intermédiaire"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:14
+msgid "**Time:** 10 minutes"
+msgstr "**Durée :** 10 minutes"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:18
+msgid "Contents"
+msgstr "Contenu"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:21
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:23
+msgid ""
+"In previous tutorials, we recreated the turtle demo by writing a :doc:`tf2 "
+"broadcaster <Writing-A-Tf2-Broadcaster-Cpp>` and a :doc:`tf2 listener "
+"<Writing-A-Tf2-Listener-Cpp>`. We also learned how to :doc:`add a new frame "
+"to the transformation tree <./Adding-A-Frame-Cpp>` and learned how tf2 keeps"
+" track of a tree of coordinate frames. This tree changes over time, and tf2 "
+"stores a time snapshot for every transform (for up to 10 seconds by "
+"default). Until now we used the ``lookupTransform()`` function to get access"
+" to the latest available transforms in that tf2 tree, without knowing at "
+"what time that transform was recorded. This tutorial will teach you how to "
+"get a transform at a specific time."
+msgstr ""
+"Dans les tutoriels précédents, nous avons recréé la démo de la tortue en "
+"écrivant un :doc:`tf2 broadcaster <Writing-A-Tf2-Broadcaster-Cpp>` et un "
+":doc:`tf2 listener <Writing-A-Tf2-Listener-Cpp>` . Nous avons également "
+"appris à :doc:`ajouter un nouveau cadre à l'arbre de transformation "
+"<./Adding-A-Frame-Cpp>` et appris comment tf2 garde la trace d'un arbre de "
+"cadres de coordonnées. Cette arborescence change au fil du temps et tf2 "
+"stocke un instantané de temps pour chaque transformation (jusqu'à 10 "
+"secondes par défaut). Jusqu'à présent, nous utilisions la fonction "
+"``lookupTransform()`` pour accéder aux dernières transformations disponibles"
+" dans cet arbre tf2, sans savoir à quelle heure cette transformation a été "
+"enregistrée. Ce tutoriel vous apprendra comment obtenir une transformation à"
+" un moment précis."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:30
+msgid "Tasks"
+msgstr "Tâches"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:33
+msgid "1 tf2 and time"
+msgstr "1 tf2 et le temps"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:35
+msgid ""
+"So let's go back to where we ended in the :doc:`adding a frame tutorial "
+"<./Adding-A-Frame-Cpp>`. Go to ``learning_tf2_cpp`` package. Open "
+"``turtle_tf2_listener.cpp`` and take a look at the ``lookupTransform()`` "
+"call:"
+msgstr ""
+"Revenons donc là où nous nous sommes arrêtés dans le :doc:`tutoriel sur "
+"l'ajout d'un cadre <./Adding-A-Frame-Cpp>`. Accédez au package "
+"``learning_tf2_cpp``. Ouvrez ``turtle_tf2_listener.cpp`` et regardez l'appel"
+" ``lookupTransform()`` :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:46
+msgid ""
+"You can see that we specified a time equal to 0 by calling "
+"``tf2::TimePointZero``."
+msgstr ""
+"Vous pouvez voir que nous avons spécifié un temps égal à 0 en appelant "
+"``tf2::TimePointZero``."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:50
+msgid ""
+"The ``tf2`` package has it's own time type ``tf2::TimePoint``, which is "
+"different from ``rclcpp::Time``. Many APIs in the package ``tf2_ros`` "
+"automatically convert between ``rclcpp::Time`` and ``tf2::TimePoint``."
+msgstr ""
+"Le paquet ``tf2`` a son propre type de temps ``tf2::TimePoint``, qui est "
+"différent de ``rclcpp::Time``. De nombreuses API du package ``tf2_ros`` "
+"convertissent automatiquement entre ``rclcpp::Time`` et ``tf2::TimePoint``."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:53
+msgid ""
+"``rclcpp::Time(0, 0, this->get_clock()->get_clock_type())`` could have been "
+"used here, but it would have been converted to ``tf2::TimePointZero`` "
+"anyways."
+msgstr ""
+"``rclcpp::Time(0, 0, this->get_clock()->get_clock_type())`` aurait pu être "
+"utilisé ici, mais il aurait été converti en ``tf2::TimePointZero`` de toute "
+"façon."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:55
+msgid ""
+"For tf2, time 0 means \"the latest available\" transform in the buffer. Now,"
+" change this line to get the transform at the current time, "
+"``this->get_clock()->now()``:"
+msgstr ""
+"Pour tf2, le temps 0 signifie \"la dernière transformation disponible\" dans"
+" le tampon. Maintenant, modifiez cette ligne pour obtenir la transformation "
+"à l'heure actuelle, ``this->get_clock()->now()`` :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:66
+msgid "Now try to run the launch file."
+msgstr "Essayez maintenant d'exécuter le fichier de lancement."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:72
+msgid "You will notice that it fails and outputs something similar to this:"
+msgstr ""
+"Vous remarquerez qu'il échoue et produit quelque chose de similaire à ceci :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:80
+msgid ""
+"It tells you that the frame does not exist or that the data is in the "
+"future."
+msgstr ""
+"Il vous indique que la trame n'existe pas ou que les données sont dans le "
+"futur."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:82
+msgid ""
+"To understand why is this happening we need to understand how buffers work. "
+"Firstly, each listener has a buffer where it stores all the coordinate "
+"transforms coming from the different tf2 broadcasters. Secondly, when a "
+"broadcaster sends out a transform, it takes some time before that transform "
+"gets into the buffer (usually a couple of milliseconds). As a result, when "
+"you request a frame transform at time \"now\", you should wait a few "
+"milliseconds for that information to arrive."
+msgstr ""
+"Pour comprendre pourquoi cela se produit, nous devons comprendre comment "
+"fonctionnent les tampons. Tout d'abord, chaque écouteur dispose d'un buffer "
+"où il stocke toutes les transformées de coordonnées provenant des différents"
+" diffuseurs tf2. Deuxièmement, lorsqu'un diffuseur envoie une "
+"transformation, il faut un certain temps avant que cette transformation "
+"n'entre dans la mémoire tampon (généralement quelques millisecondes). Par "
+"conséquent, lorsque vous demandez une transformation de trame à l'heure "
+"\"maintenant\", vous devez attendre quelques millisecondes pour que ces "
+"informations arrivent."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:88
+msgid "2 Wait for transforms"
+msgstr "2 Attendez les transformations"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:90
+msgid ""
+"tf2 provides a nice tool that will wait until a transform becomes available."
+" You use this by adding a timeout parameter to ``lookupTransform()``. To fix"
+" this, edit your code as shown below (add the last timeout parameter):"
+msgstr ""
+"tf2 fournit un bel outil qui attendra qu'une transformation soit disponible."
+" Vous l'utilisez en ajoutant un paramètre de délai d'attente à "
+"``lookupTransform()``. Pour résoudre ce problème, modifiez votre code comme "
+"indiqué ci-dessous (ajoutez le dernier paramètre de délai d'attente) :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:103
+msgid ""
+"The ``lookupTransform()`` can take four arguments, where the last one is an "
+"optional timeout. It will block for up to that duration waiting for it to "
+"timeout."
+msgstr ""
+"Le ``lookupTransform()`` peut prendre quatre arguments, le dernier étant un "
+"délai d'attente facultatif. Il bloquera jusqu'à cette durée en attendant "
+"qu'il expire."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:107
+msgid "3 Checking the results"
+msgstr "3 Vérification des résultats"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:109
+msgid "You can now run the launch file."
+msgstr "Vous pouvez maintenant exécuter le fichier de lancement."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:115
+msgid ""
+"You should notice that ``lookupTransform()`` will actually block until the "
+"transform between the two turtles becomes available (this will usually take "
+"a few milliseconds). Once the timeout has been reached (fifty milliseconds "
+"in this case), an exception will be raised only if the transform is still "
+"not available."
+msgstr ""
+"Vous devriez remarquer que ``lookupTransform()`` se bloquera jusqu'à ce que "
+"la transformation entre les deux tortues soit disponible (cela prendra "
+"généralement quelques millisecondes). Une fois le délai d'attente atteint "
+"(cinquante millisecondes dans ce cas), une exception sera levée uniquement "
+"si la transformation n'est toujours pas disponible."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:119
+msgid "Summary"
+msgstr "Résumé"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.rst:121
+msgid ""
+"In this tutorial, you learned how to acquire a transform at a specific "
+"timestamp and how to wait for a transform to be available on the tf2 tree "
+"when using the ``lookupTransform()`` function."
+msgstr ""
+"Dans ce didacticiel, vous avez appris à acquérir une transformation à un "
+"horodatage spécifique et à attendre qu'une transformation soit disponible "
+"sur l'arborescence tf2 lors de l'utilisation de la fonction "
+"``lookupTransform()``."

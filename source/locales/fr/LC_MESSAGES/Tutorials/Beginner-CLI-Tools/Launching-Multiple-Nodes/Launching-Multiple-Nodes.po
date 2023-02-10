@@ -1,0 +1,227 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 11:50:19.895574\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:8
+msgid "Launching nodes"
+msgstr "Nœuds de lancement"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:10
+msgid "**Goal:** Use a command line tool to launch multiple nodes at once."
+msgstr ""
+"**Objectif :** utiliser un outil de ligne de commande pour lancer plusieurs "
+"nœuds à la fois."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:12
+msgid "**Tutorial Level:** Beginner"
+msgstr "**Niveau du didacticiel :** Débutant"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:14
+msgid "**Time:** 5 minutes"
+msgstr "**Durée :** 5 minutes"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:18
+msgid "Contents"
+msgstr "Contenu"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:21
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:23
+msgid ""
+"In most of the introductory tutorials, you have been opening new terminals "
+"for every new node you run. As you create more complex systems with more and"
+" more nodes running simultaneously, opening terminals and reentering "
+"configuration details becomes tedious."
+msgstr ""
+"Dans la plupart des didacticiels d'introduction, vous avez ouvert de "
+"nouveaux terminaux pour chaque nouveau nœud que vous exécutez. Au fur et à "
+"mesure que vous créez des systèmes plus complexes avec de plus en plus de "
+"nœuds fonctionnant simultanément, l'ouverture de terminaux et la ressaisie "
+"des détails de configuration deviennent fastidieuses."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:26
+msgid ""
+"Launch files allow you to start up and configure a number of executables "
+"containing ROS 2 nodes simultaneously."
+msgstr ""
+"Les fichiers de lancement vous permettent de démarrer et de configurer "
+"simultanément plusieurs exécutables contenant des nœuds ROS 2."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:28
+msgid ""
+"Running a single launch file with the ``ros2 launch`` command will start up "
+"your entire system - all nodes and their configurations - at once."
+msgstr ""
+"L'exécution d'un seul fichier de lancement avec la commande ``ros2 launch`` "
+"démarrera tout votre système - tous les nœuds et leurs configurations - en "
+"une seule fois."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:31
+msgid "Prerequisites"
+msgstr "Conditions préalables"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:33
+msgid ""
+"Before starting these tutorials, install ROS 2 by following the instructions"
+" on the ROS 2 :doc:`../../../Installation/` page."
+msgstr ""
+"Avant de commencer ces didacticiels, installez ROS 2 en suivant les "
+"instructions de la page ROS 2 :doc:`../../../Installation/`."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:35
+msgid ""
+"The commands used in this tutorial assume you followed the binary packages "
+"installation guide for your operating system (Debian packages for Linux). "
+"You can still follow along if you built from source, but the path to your "
+"setup files will likely be different. You also won't be able to use the "
+"``sudo apt install ros-<distro>-<package>`` command (used frequently in the "
+"beginner level tutorials) if you install from source."
+msgstr ""
+"Les commandes utilisées dans ce didacticiel supposent que vous avez suivi le"
+" guide d'installation des packages binaires pour votre système "
+"d'exploitation (packages Debian pour Linux). Vous pouvez toujours suivre si "
+"vous avez construit à partir de la source, mais le chemin d'accès à vos "
+"fichiers d'installation sera probablement différent. Vous ne pourrez pas non"
+" plus utiliser la commande ``sudo apt install ros-<distro>-<package>`` "
+"(utilisée fréquemment dans les didacticiels de niveau débutant) si vous "
+"installez à partir des sources."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:39
+msgid ""
+"If you are using Linux and are not already familiar with the shell, `this "
+"tutorial <http://www.ee.surrey.ac.uk/Teaching/Unix/>`__ will help."
+msgstr ""
+"Si vous utilisez Linux et que vous n'êtes pas déjà familiarisé avec le "
+"shell, `ce tutoriel <http://www.ee.surrey.ac.uk/Teaching/Unix/>`__ vous "
+"aidera."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:42
+msgid "Tasks"
+msgstr "Tâches"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:45
+msgid "Running a Launch File"
+msgstr "Exécution d'un fichier de lancement"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:47
+msgid "Open a new terminal and run:"
+msgstr "Ouvrez un nouveau terminal et exécutez :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:53
+msgid "This command will run the following launch file:"
+msgstr "Cette commande exécutera le fichier de lancement suivant :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:72
+msgid ""
+"The launch file above is written in Python, but you can also use XML and "
+"YAML to create launch files. You can see a comparison of these different ROS"
+" 2 launch formats in :doc:`../../../How-To-Guides/Launch-file-different-"
+"formats`."
+msgstr ""
+"Le fichier de lancement ci-dessus est écrit en Python, mais vous pouvez "
+"également utiliser XML et YAML pour créer des fichiers de lancement. Vous "
+"pouvez voir une comparaison de ces différents formats de lancement de ROS 2 "
+"dans :doc:`../../../How-To-Guides/Launch-file-different-formats`."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:75
+msgid "This will run two turtlesim nodes:"
+msgstr "Cela exécutera deux nœuds turtlesim :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:79
+msgid ""
+"For now, don't worry about the contents of this launch file. You can find "
+"more information on ROS 2 launch in the :doc:`ROS 2 launch tutorials "
+"<../../Intermediate/Launch/Launch-Main>`."
+msgstr ""
+"Pour l'instant, ne vous inquiétez pas du contenu de ce fichier de lancement."
+" Vous pouvez trouver plus d'informations sur le lancement de ROS 2 dans les "
+":doc:`Tutoriels de lancement de ROS 2 <../../Intermediate/Launch/Launch-"
+"Main>`."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:83
+msgid "(Optional) Control the Turtlesim Nodes"
+msgstr "(Facultatif) Contrôlez les nœuds Turtlesim"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:85
+msgid ""
+"Now that these nodes are running, you can control them like any other ROS 2 "
+"nodes. For example, you can make the turtles drive in opposite directions by"
+" opening up two additional terminals and running the following commands:"
+msgstr ""
+"Maintenant que ces nœuds fonctionnent, vous pouvez les contrôler comme "
+"n'importe quel autre nœud ROS 2. Par exemple, vous pouvez faire rouler les "
+"tortues dans des directions opposées en ouvrant deux terminaux "
+"supplémentaires et en exécutant les commandes suivantes :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:88
+msgid "In the second terminal:"
+msgstr "Dans la seconde borne :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:94
+msgid "In the third terminal:"
+msgstr "Dans le troisième terminal :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:100
+msgid ""
+"After running these commands, you should see something like the following:"
+msgstr ""
+"Après avoir exécuté ces commandes, vous devriez voir quelque chose comme "
+"ceci :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:105
+msgid "Summary"
+msgstr "Résumé"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:107
+msgid ""
+"The significance of what you've done so far is that you've run two turtlesim"
+" nodes with one command. Once you learn to write your own launch files, "
+"you'll be able to run multiple nodes - and setup their configuration - in a "
+"similar way, with the ``ros2 launch`` command."
+msgstr ""
+"L'importance de ce que vous avez fait jusqu'à présent est que vous avez "
+"exécuté deux nœuds turtlesim avec une seule commande. Une fois que vous "
+"aurez appris à écrire vos propres fichiers de lancement, vous pourrez "
+"exécuter plusieurs nœuds - et configurer leur configuration - de la même "
+"manière, avec la commande ``ros2 launch``."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:110
+msgid ""
+"For more tutorials on ROS 2 launch files, see the :doc:`main launch file "
+"tutorial page<../../Intermediate/Launch/Launch-Main>`."
+msgstr ""
+"Pour plus de didacticiels sur les fichiers de lancement de ROS 2, consultez "
+"la :doc:`page principale du didacticiel sur le fichier de "
+"lancement<../../Intermediate/Launch/Launch-Main>`."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:113
+msgid "Next steps"
+msgstr "Prochaines étapes"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.rst:115
+msgid ""
+"In the next tutorial, :doc:`../Recording-And-Playing-Back-Data/Recording-"
+"And-Playing-Back-Data`, you'll learn about another helpful tool, "
+"``ros2bag``."
+msgstr ""
+"Dans le prochain didacticiel, :doc:`../Recording-And-Playing-Back-"
+"Data/Recording-And-Playing-Back-Data`, vous découvrirez un autre outil "
+"utile, ``ros2bag``."

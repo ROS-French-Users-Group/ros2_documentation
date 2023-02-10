@@ -1,0 +1,488 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 12:04:06.542202\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:7
+msgid "Composing multiple nodes in a single process"
+msgstr "Composer plusieurs nœuds en un seul processus"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:11
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:13
+msgid "**Goal:** Compose multiple nodes into a single process."
+msgstr "**Objectif :** Composez plusieurs nœuds en un seul processus."
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:15
+msgid "**Tutorial level:** Intermediate"
+msgstr "**Niveau du didacticiel :** Intermédiaire"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:17
+msgid "**Time:** 20 minutes"
+msgstr "**Durée :** 20 minutes"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:20
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:22
+msgid "See the :doc:`conceptual article <../../Concepts/About-Composition>`."
+msgstr "Voir :doc:`article conceptuel <../../Concepts/About-Composition>`."
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:25
+msgid "Run the demos"
+msgstr "Exécutez les démos"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:27
+msgid ""
+"The demos use executables from `rclcpp_components "
+"<https://github.com/ros2/rclcpp/tree/rolling/rclcpp_components>`__, "
+"`ros2component "
+"<https://github.com/ros2/ros2cli/tree/rolling/ros2component>`__, and  "
+"`composition <https://github.com/ros2/demos/tree/rolling/composition>`__ "
+"packages, and can be run with the following commands."
+msgstr ""
+"Les démos utilisent des exécutables de `rclcpp_components "
+"<https://github.com/ros2/rclcpp/tree/rolling/rclcpp_components>`__, "
+"`ros2component <https://github.com/ros2/ros2cli/tree/rolling/ros2component> "
+"`__ et `composition "
+"<https://github.com/ros2/demos/tree/rolling/composition>`__ packages, et "
+"peuvent être exécutés avec les commandes suivantes."
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:31
+msgid "Discover available components"
+msgstr "Découvrez les composants disponibles"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:33
+msgid ""
+"To see what components are registered and available in the workspace, "
+"execute the following in a shell:"
+msgstr ""
+"Pour voir quels composants sont enregistrés et disponibles dans l'espace de "
+"travail, exécutez ce qui suit dans un shell :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:39
+msgid "The terminal will return the list of all available components:"
+msgstr "Le terminal renverra la liste de tous les composants disponibles :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:54
+msgid ""
+"Run-time composition using ROS services with a publisher and subscriber"
+msgstr ""
+"Composition d'exécution à l'aide des services ROS avec un éditeur et un "
+"abonné"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:56
+#: ../../source/Tutorials/Intermediate/Composition.rst:213
+#: ../../source/Tutorials/Intermediate/Composition.rst:279
+msgid "In the first shell, start the component container:"
+msgstr "Dans le premier shell, démarrez le conteneur de composants :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:62
+msgid ""
+"Open the second shell and verify that the container is running via ``ros2`` "
+"command line tools:"
+msgstr ""
+"Ouvrez le deuxième shell et vérifiez que le conteneur s'exécute via les "
+"outils de ligne de commande ``ros2`` :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:68
+#: ../../source/Tutorials/Intermediate/Composition.rst:225
+msgid "You should see a name of the component:"
+msgstr "Vous devriez voir un nom du composant :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:74
+msgid ""
+"In the second shell load the talker component (see `talker "
+"<https://github.com/ros2/demos/blob/rolling/composition/src/talker_component.cpp>`__"
+" source code):"
+msgstr ""
+"Dans le second shell, chargez le composant talker (voir `talker "
+"<https://github.com/ros2/demos/blob/rolling/composition/src/talker_component.cpp>`__"
+" code source) :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:80
+msgid ""
+"The command will return the unique ID of the loaded component as well as the"
+" node name:"
+msgstr ""
+"La commande renverra l'ID unique du composant chargé ainsi que le nom du "
+"nœud :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:86
+msgid ""
+"Now the first shell should show a message that the component was loaded as "
+"well as repeated message for publishing a message."
+msgstr ""
+"Maintenant, le premier shell doit afficher un message indiquant que le "
+"composant a été chargé ainsi qu'un message répété pour la publication d'un "
+"message."
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:88
+msgid ""
+"Run another command in the second shell to load the listener component (see "
+"`listener "
+"<https://github.com/ros2/demos/blob/rolling/composition/src/listener_component.cpp>`__"
+" source code):"
+msgstr ""
+"Exécutez une autre commande dans le deuxième shell pour charger le composant"
+" d'écouteur (voir `listener "
+"<https://github.com/ros2/demos/blob/rolling/composition/src/listener_component.cpp>`__"
+" code source) :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:94
+msgid "Terminal will return:"
+msgstr "Le terminal renverra :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:100
+msgid ""
+"The ``ros2`` command line utility can now be used to inspect the state of "
+"the container:"
+msgstr ""
+"L'utilitaire de ligne de commande ``ros2`` peut maintenant être utilisé pour"
+" inspecter l'état du conteneur :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:106
+msgid "You will see the following result:"
+msgstr "Vous verrez le résultat suivant :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:114
+msgid ""
+"Now the first shell should show repeated output for each received message."
+msgstr ""
+"Maintenant, le premier shell doit afficher une sortie répétée pour chaque "
+"message reçu."
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:117
+msgid "Run-time composition using ROS services with a server and client"
+msgstr ""
+"Composition d'exécution à l'aide des services ROS avec un serveur et un "
+"client"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:119
+msgid "The example with a server and a client is very similar."
+msgstr "L'exemple avec un serveur et un client est très similaire."
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:121
+msgid "In the first shell:"
+msgstr "Dans la première coque :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:127
+msgid ""
+"In the second shell (see `server "
+"<https://github.com/ros2/demos/blob/rolling/composition/src/server_component.cpp>`__"
+" and `client "
+"<https://github.com/ros2/demos/blob/rolling/composition/src/client_component.cpp>`__"
+" source code):"
+msgstr ""
+"Dans le second shell (voir `server "
+"<https://github.com/ros2/demos/blob/rolling/composition/src/server_component.cpp>`__"
+" et `client <https://github.com/ros2/demos "
+"/blob/rolling/composition/src/client_component.cpp>`__ code source) :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:134
+msgid ""
+"In this case the client sends a request to the server, the server processes "
+"the request and replies with a response, and the client prints the received "
+"response."
+msgstr ""
+"Dans ce cas, le client envoie une demande au serveur, le serveur traite la "
+"demande et répond avec une réponse, et le client imprime la réponse reçue."
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:137
+msgid "Compile-time composition using ROS services"
+msgstr "Composition au moment de la compilation à l'aide des services ROS"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:139
+msgid ""
+"This demos shows that the same shared libraries can be reused to compile a "
+"single executable running multiple components. The executable contains all "
+"four components from above: talker and listener as well as server and "
+"client."
+msgstr ""
+"Cette démo montre que les mêmes bibliothèques partagées peuvent être "
+"réutilisées pour compiler un seul exécutable exécutant plusieurs composants."
+" L'exécutable contient les quatre composants ci-dessus : locuteur et "
+"écouteur ainsi que serveur et client."
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:142
+msgid ""
+"In the shell call (see `source code "
+"<https://github.com/ros2/demos/blob/rolling/composition/src/manual_composition.cpp>`__):"
+msgstr ""
+"Dans l'appel du shell (voir `code source "
+"<https://github.com/ros2/demos/blob/rolling/composition/src/manual_composition.cpp>`__) :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:148
+msgid ""
+"This should show repeated messages from both pairs, the talker and the "
+"listener as well as the server and the client."
+msgstr ""
+"Cela devrait montrer des messages répétés des deux paires, le locuteur et "
+"l'auditeur ainsi que le serveur et le client."
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:152
+msgid ""
+"Manually-composed components will not be reflected in the ``ros2 component "
+"list`` command line tool output."
+msgstr ""
+"Les composants composés manuellement ne seront pas reflétés dans la sortie "
+"de l'outil de ligne de commande ``ros2 component list``."
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:155
+msgid "Run-time composition using dlopen"
+msgstr "Composition d'exécution à l'aide de dlopen"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:157
+msgid ""
+"This demo presents an alternative to run-time composition by creating a "
+"generic container process and explicitly passing the libraries to load "
+"without using ROS interfaces. The process will open each library and create "
+"one instance of each \"rclcpp::Node\" class in the library `source code "
+"<https://github.com/ros2/demos/blob/rolling/composition/src/dlopen_composition.cpp>`__)."
+msgstr ""
+"Cette démo présente une alternative à la composition d'exécution en créant "
+"un processus de conteneur générique et en passant explicitement les "
+"bibliothèques à charger sans utiliser les interfaces ROS. Le processus "
+"ouvrira chaque bibliothèque et créera une instance de chaque classe \"rclcpp"
+" :: Node\" dans le code source de la bibliothèque "
+"<https://github.com/ros2/demos/blob/rolling/composition/src/dlopen_composition.cpp>"
+" `__)."
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:162
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:168
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:174
+msgid "Windows"
+msgstr "les fenêtres"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:180
+msgid "to get the path to where composition is installed. Then call"
+msgstr ""
+"pour obtenir le chemin d'accès à l'emplacement d'installation de la "
+"composition. Alors appelez"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:186
+msgid ""
+"Now the shell should show repeated output for each sent and received "
+"message."
+msgstr ""
+"Maintenant, le shell doit afficher une sortie répétée pour chaque message "
+"envoyé et reçu."
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:190
+msgid ""
+"dlopen-composed components will not be reflected in the ``ros2 component "
+"list`` command line tool output."
+msgstr ""
+"Les composants composés par dlopen ne seront pas reflétés dans la sortie de "
+"l'outil de ligne de commande ``ros2 component list``."
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:194
+msgid "Composition using launch actions"
+msgstr "Composition à l'aide d'actions de lancement"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:196
+msgid ""
+"While the command line tools are useful for debugging and diagnosing "
+"component configurations, it is frequently more convenient to start a set of"
+" components at the same time. To automate this action, we can use the "
+"functionality in ``ros2 launch``."
+msgstr ""
+"Bien que les outils de ligne de commande soient utiles pour le débogage et "
+"le diagnostic des configurations de composants, il est souvent plus pratique"
+" de démarrer un ensemble de composants en même temps. Pour automatiser cette"
+" action, nous pouvons utiliser la fonctionnalité de ``ros2 launch``."
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:205
+msgid "Advanced Topics"
+msgstr "Sujets avancés"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:207
+msgid ""
+"Now that we have seen the basic operation of components, we can discuss a "
+"few more advanced topics."
+msgstr ""
+"Maintenant que nous avons vu le fonctionnement de base des composants, nous "
+"pouvons aborder quelques sujets plus avancés."
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:211
+msgid "Unloading components"
+msgstr "Déchargement des composants"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:219
+msgid "Verify that the container is running via ``ros2`` command line tools:"
+msgstr ""
+"Vérifiez que le conteneur s'exécute via les outils de ligne de commande "
+"``ros2`` :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:231
+msgid ""
+"In the second shell load both the talker and listener as we have before:"
+msgstr ""
+"Dans le deuxième shell, chargez à la fois le locuteur et l'auditeur comme "
+"nous l'avons fait auparavant :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:238
+msgid "Use the unique ID to unload the node from the component container."
+msgstr ""
+"Utilisez l'ID unique pour décharger le nœud du conteneur de composants."
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:244
+msgid "The terminal should return:"
+msgstr "Le terminal doit renvoyer :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:251
+msgid ""
+"In the first shell, verify that the repeated messages from talker and "
+"listener have stopped."
+msgstr ""
+"Dans le premier shell, vérifiez que les messages répétés du locuteur et de "
+"l'auditeur se sont arrêtés."
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:255
+msgid "Remapping container name and namespace"
+msgstr "Remappage du nom du conteneur et de l'espace de noms"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:257
+msgid ""
+"The component manager name and namespace can be remapped via standard "
+"command line arguments:"
+msgstr ""
+"Le nom et l'espace de noms du gestionnaire de composants peuvent être "
+"remappés via des arguments de ligne de commande standard :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:263
+msgid ""
+"In a second shell, components can be loaded by using the updated container "
+"name:"
+msgstr ""
+"Dans un deuxième shell, les composants peuvent être chargés en utilisant le "
+"nom de conteneur mis à jour :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:271
+#: ../../source/Tutorials/Intermediate/Composition.rst:323
+msgid "Namespace remappings of the container do not affect loaded components."
+msgstr ""
+"Les remappages d'espace de noms du conteneur n'affectent pas les composants "
+"chargés."
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:275
+msgid "Remap component names and namespaces"
+msgstr "Remapper les noms de composants et les espaces de noms"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:277
+msgid ""
+"Component names and namespaces may be adjusted via arguments to the load "
+"command."
+msgstr ""
+"Les noms de composants et les espaces de noms peuvent être ajustés via des "
+"arguments à la commande load."
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:286
+msgid "Some examples of how to remap names and namespaces."
+msgstr "Quelques exemples de remappage de noms et d'espaces de noms."
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:288
+msgid "Remap node name:"
+msgstr "Remapper le nom du nœud :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:294
+msgid "Remap namespace:"
+msgstr "Remapper l'espace de noms :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:300
+msgid "Remap both:"
+msgstr "Remappez les deux :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:306
+msgid "Now use ``ros2`` command line utility:"
+msgstr "Utilisez maintenant l'utilitaire de ligne de commande ``ros2`` :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:312
+msgid "In the console you should see corresponding entries:"
+msgstr "Dans la console, vous devriez voir les entrées correspondantes :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:326
+msgid "Passing parameter values into components"
+msgstr "Passer des valeurs de paramètres dans des composants"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:328
+msgid ""
+"The ``ros2 component load`` command-line supports passing arbitrary "
+"parameters to the node as it is constructed. This functionality can be used "
+"as follows:"
+msgstr ""
+"La ligne de commande ``ros2 component load`` prend en charge la transmission"
+" de paramètres arbitraires au nœud lors de sa construction. Cette "
+"fonctionnalité peut être utilisée comme suit :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:336
+msgid "Passing additional arguments into components"
+msgstr "Passer des arguments supplémentaires dans les composants"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:338
+msgid ""
+"The ``ros2 component load`` command-line supports passing particular options"
+" to the component manager for use when constructing the node. As of now, the"
+" only command-line option that is supported is to instantiate a node using "
+"intra-process communication. This functionality can be used as follows:"
+msgstr ""
+"La ligne de commande ``ros2 component load`` prend en charge la transmission"
+" d'options particulières au gestionnaire de composants à utiliser lors de la"
+" construction du nœud. À l'heure actuelle, la seule option de ligne de "
+"commande prise en charge consiste à instancier un nœud à l'aide de la "
+"communication intra-processus. Cette fonctionnalité peut être utilisée comme"
+" suit :"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:347
+msgid "Composable nodes as shared libraries"
+msgstr "Nœuds composables en tant que bibliothèques partagées"
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:349
+msgid ""
+"If you want to export a composable node as a shared library from a package "
+"and use that node in another package that does link-time composition, add "
+"code to the CMake file which imports the actual targets in downstream "
+"packages."
+msgstr ""
+"Si vous souhaitez exporter un nœud composable en tant que bibliothèque "
+"partagée à partir d'un package et utiliser ce nœud dans un autre package qui"
+" effectue la composition au moment de la liaison, ajoutez du code au fichier"
+" CMake qui importe les cibles réelles dans les packages en aval."
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:351
+msgid "Then install the generated file and export the generated file."
+msgstr "Installez ensuite le fichier généré et exportez le fichier généré."
+
+#: ../../source/Tutorials/Intermediate/Composition.rst:353
+msgid ""
+"A practical example can be seen here: `ROS Discourse - Ament best practice "
+"for sharing libraries <https://discourse.ros.org/t/ament-best-practice-for-"
+"sharing-libraries/3602>`__"
+msgstr ""
+"Un exemple pratique peut être vu ici : `ROS Discourse - Ament best practice "
+"for sharing library <https://discourse.ros.org/t/ament-best-practice-for-"
+"sharing-libraries/3602>`__"

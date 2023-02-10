@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 17:22:08.369145\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.rst:8
+msgid "Running ROS 2 nodes in Docker [community-contributed]"
+msgstr "Exécution de nœuds ROS 2 dans Docker [contribution de la communauté]"
+
+#: ../../source/How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.rst:11
+msgid "Run two nodes in a single docker container"
+msgstr "Exécutez deux nœuds dans un seul conteneur docker"
+
+#: ../../source/How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.rst:13
+msgid "Pull the ROS docker image with tag \"rolling-desktop\"."
+msgstr "Extrayez l'image du docker ROS avec la balise \"rolling-desktop\"."
+
+#: ../../source/How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.rst:20
+msgid "Run the image in a container in interactive mode."
+msgstr "Exécutez l'image dans un conteneur en mode interactif."
+
+#: ../../source/How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.rst:28
+msgid "Your best friend is the ``ros2`` command line help now."
+msgstr ""
+"Votre meilleur ami est maintenant l'aide en ligne de commande de ``ros2``."
+
+#: ../../source/How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.rst:35
+msgid "E.g. list all installed packages."
+msgstr "Par exemple. répertorier tous les packages installés."
+
+#: ../../source/How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.rst:43
+msgid "E.g. list all executables:"
+msgstr "Par exemple. liste tous les exécutables :"
+
+#: ../../source/How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.rst:51
+msgid ""
+"Run a minimal example of 2 C++ nodes (1 topic subscriber ``listener``, 1 "
+"topic publisher ``talker``) from the package ``demo_nodes_cpp`` in this "
+"container:"
+msgstr ""
+"Exécutez un exemple minimal de 2 nœuds C++ (1 abonné à la rubrique "
+"``listener``, 1 éditeur de rubrique ``talker``) à partir du package "
+"``demo_nodes_cpp`` dans ce conteneur :"
+
+#: ../../source/How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.rst:59
+msgid "Run two nodes in two separate docker containers"
+msgstr "Exécutez deux nœuds dans deux conteneurs Docker distincts"
+
+#: ../../source/How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.rst:61
+msgid ""
+"Open a terminal. Run the image in a container in interactive mode and launch"
+" a topic publisher (executable ``talker`` from the package "
+"``demo_nodes_cpp``) with ``ros2 run``:"
+msgstr ""
+"Ouvrez un terminal. Exécutez l'image dans un conteneur en mode interactif et"
+" lancez un éditeur de rubrique (exécutable ``talker`` du package "
+"``demo_nodes_cpp``) avec ``ros2 run`` :"
+
+#: ../../source/How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.rst:67
+msgid ""
+"Open a second terminal. Run the image in a container in interactive mode and"
+" launch a topic subscriber (executable ``listener`` from the package "
+"``demo_nodes_cpp``)  with ``ros2 run``:"
+msgstr ""
+"Ouvrez un deuxième terminal. Exécutez l'image dans un conteneur en mode "
+"interactif et lancez un abonné au sujet (exécutable ``listener`` du package "
+"``demo_nodes_cpp``) avec ``ros2 run`` :"
+
+#: ../../source/How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.rst:73
+msgid ""
+"As an alternative to the command line invocation, you can create a ``docker-"
+"compose.yml`` file (here version 2) with the following (minimal) content:"
+msgstr ""
+"Comme alternative à l'appel en ligne de commande, vous pouvez créer un "
+"fichier ``docker-compose.yml`` (ici la version 2) avec le contenu (minimal) "
+"suivant :"
+
+#: ../../source/How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.rst:89
+msgid ""
+"To run the containers call ``docker-compose up`` in the same directory. You "
+"can close the containers with ``Ctrl+C``."
+msgstr ""
+"Pour exécuter les conteneurs, appelez ``docker-compose up`` dans le même "
+"répertoire. Vous pouvez fermer les conteneurs avec ``Ctrl+C``."

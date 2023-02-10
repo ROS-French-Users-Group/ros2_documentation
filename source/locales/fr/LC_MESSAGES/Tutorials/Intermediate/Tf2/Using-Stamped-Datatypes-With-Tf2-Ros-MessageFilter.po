@@ -1,0 +1,480 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 12:00:58.081321\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:8
+msgid "Using stamped datatypes with ``tf2_ros::MessageFilter``"
+msgstr ""
+"Utiliser des types de données tamponnés avec ``tf2_ros::MessageFilter``"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:10
+msgid ""
+"**Goal:** Learn how to use ``tf2_ros::MessageFilter`` to process stamped "
+"datatypes."
+msgstr ""
+"**Objectif :** Apprendre à utiliser ``tf2_ros::MessageFilter`` pour traiter "
+"les types de données tamponnés."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:12
+msgid "**Tutorial level:** Intermediate"
+msgstr "**Niveau du didacticiel :** Intermédiaire"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:14
+msgid "**Time:** 10 minutes"
+msgstr "**Durée :** 10 minutes"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:18
+msgid "Contents"
+msgstr "Contenu"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:21
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:23
+msgid ""
+"This tutorial explains how to use sensor data with tf2. Some real-world "
+"examples of sensor data are:"
+msgstr ""
+"Ce tutoriel explique comment utiliser les données du capteur avec tf2. Voici"
+" quelques exemples concrets de données de capteurs :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:26
+msgid "cameras, both mono and stereo"
+msgstr "caméras, mono et stéréo"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:28
+msgid "laser scans"
+msgstr "balayages laser"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:30
+msgid ""
+"Suppose that a new turtle named ``turtle3`` is created and it doesn't have "
+"good odometry, but there is an overhead camera tracking its position and "
+"publishing it as a ``PointStamped`` message in relation to the ``world`` "
+"frame."
+msgstr ""
+"Supposons qu'une nouvelle tortue nommée ``turtle3`` est créée et qu'elle n'a"
+" pas une bonne odométrie, mais qu'il y a une caméra aérienne qui suit sa "
+"position et la publie comme un message ``PointStamped`` en relation avec le "
+"``monde` `cadre."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:32
+msgid "``turtle1`` wants to know where ``turtle3`` is compared to itself."
+msgstr "``turtle1`` veut savoir où ``turtle3`` est comparé à lui-même."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:34
+msgid ""
+"To do this ``turtle1`` must listen to the topic where ``turtle3``'s pose is "
+"being published, wait until transforms into the desired frame are ready, and"
+" then do its operations. To make this easier the ``tf2_ros::MessageFilter`` "
+"is very useful. The ``tf2_ros::MessageFilter`` will take a subscription to "
+"any ROS 2 message with a header and cache it until it is possible to "
+"transform it into the target frame."
+msgstr ""
+"Pour ce faire, ``turtle1`` doit écouter le sujet où la pose de ``turtle3`` "
+"est publiée, attendre que les transformations dans le cadre souhaité soient "
+"prêtes, puis effectuer ses opérations. Pour rendre cela plus facile, le "
+"``tf2_ros::MessageFilter`` est très utile. Le ``tf2_ros::MessageFilter`` "
+"prendra un abonnement à n'importe quel message ROS 2 avec un en-tête et le "
+"mettra en cache jusqu'à ce qu'il soit possible de le transformer en trame "
+"cible."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:39
+msgid "Tasks"
+msgstr "Tâches"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:42
+msgid "1 Write the broadcaster node of PointStamped messages"
+msgstr "1 Écrire le nœud diffuseur des messages PointStamped"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:44
+msgid ""
+"For this tutorial we will set up a demo application which has a node (in "
+"Python) to broadcast the ``PointStamped`` position messages of ``turtle3``."
+msgstr ""
+"Pour ce tutoriel, nous allons configurer une application de démonstration "
+"qui a un nœud (en Python) pour diffuser les messages de position "
+"``PointStamped`` de ``turtle3``."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:46
+msgid "First, let's create the source file."
+msgstr "Commençons par créer le fichier source."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:48
+msgid ""
+"Go to the ``learning_tf2_py`` :doc:`package <./Writing-A-Tf2-Static-"
+"Broadcaster-Py>` we created in the previous tutorial. Inside the "
+"``src/learning_tf2_py/learning_tf2_py`` directory download the example "
+"sensor message broadcaster code by entering the following command:"
+msgstr ""
+"Accédez au ``learning_tf2_py`` :doc:`package <./Writing-A-Tf2-Static-"
+"Broadcaster-Py>` que nous avons créé dans le tutoriel précédent. Dans le "
+"répertoire ``src/learning_tf2_py/learning_tf2_py``, téléchargez l'exemple de"
+" code de diffuseur de message de capteur en entrant la commande suivante :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:53
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:278
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:296
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:325
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:598
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:616
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:638
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:59
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:284
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:302
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:331
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:604
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:622
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:644
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:65
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:288
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:308
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:337
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:608
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:628
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:650
+msgid "Windows"
+msgstr "les fenêtres"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:67
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:339
+msgid "In a Windows command line prompt:"
+msgstr "Dans une invite de ligne de commande Windows :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:73
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:345
+msgid "Or in powershell:"
+msgstr "Ou en powershell :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:79
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:351
+msgid "Open the file using your preferred text editor."
+msgstr "Ouvrez le fichier à l'aide de votre éditeur de texte préféré."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:169
+msgid "1.1 Examine the code"
+msgstr "1.1 Examiner le code"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:171
+msgid ""
+"Now let's take a look at the code. First, in the ``on_timer`` callback "
+"function, we spawn the ``turtle3`` by asynchronously calling the ``Spawn`` "
+"service of ``turtlesim``, and initialize its position at (4, 2, 0), when the"
+" turtle spawning service is ready."
+msgstr ""
+"Voyons maintenant le code. Tout d'abord, dans la fonction de rappel "
+"``on_timer``, nous générons la ``turtle3`` en appelant de manière asynchrone"
+" le service ``Spawn`` de ``turtlesim``, et initialisons sa position à (4, 2,"
+" 0), lorsque le service de ponte des tortues est prêt."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:186
+msgid ""
+"Afterward, the node publishes the topic ``turtle3/cmd_vel``, topic "
+"``turtle3/turtle_point_stamped``, and subscribes to topic ``turtle3/pose`` "
+"and runs callback function ``handle_turtle_pose`` on every incoming message."
+msgstr ""
+"Ensuite, le nœud publie le sujet ``turtle3/cmd_vel``, le sujet "
+"``turtle3/turtle_point_stamped``, et s'abonne au sujet ``turtle3/pose`` et "
+"exécute la fonction de rappel ``handle_turtle_pose`` sur chaque message "
+"entrant."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:194
+msgid ""
+"Finally, in the callback function ``handle_turtle_pose``, we initialize the "
+"``Twist`` messages of ``turtle3`` and publish them, which will make the "
+"``turtle3`` move along a circle. Then we fill up the ``PointStamped`` "
+"messages of ``turtle3`` with incoming ``Pose`` messages and publish them."
+msgstr ""
+"Enfin, dans la fonction de rappel ``handle_turtle_pose``, nous initialisons "
+"les messages ``Twist`` de ``turtle3`` et les publions, ce qui fera déplacer "
+"la ``turtle3`` le long d'un cercle. Ensuite, nous remplissons les messages "
+"``PointStamped`` de ``turtle3`` avec des messages ``Pose`` entrants et les "
+"publions."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:213
+msgid "1.2 Write the launch file"
+msgstr "1.2 Écrire le fichier de lancement"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:215
+msgid ""
+"In order to run this demo, we need to create a launch file "
+"``turtle_tf2_sensor_message.launch.py`` in the ``launch`` subdirectory of "
+"package ``learning_tf2_py``:"
+msgstr ""
+"Afin d'exécuter cette démo, nous devons créer un fichier de lancement "
+"``turtle_tf2_sensor_message.launch.py`` dans le sous-répertoire ``launch`` "
+"du package ``learning_tf2_py`` :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:261
+msgid "1.3 Add an entry point"
+msgstr "1.3 Ajouter un point d'entrée"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:263
+msgid ""
+"To allow the ``ros2 run`` command to run your node, you must add the entry "
+"point to ``setup.py`` (located in the ``src/learning_tf2_py`` directory)."
+msgstr ""
+"Pour permettre à la commande ``ros2 run`` d'exécuter votre nœud, vous devez "
+"ajouter le point d'entrée à ``setup.py`` (situé dans le répertoire "
+"``src/learning_tf2_py``)."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:265
+msgid "Add the following line between the ``'console_scripts':`` brackets:"
+msgstr "Ajoutez la ligne suivante entre les crochets ``'console_scripts':`` :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:272
+msgid "1.4 Build"
+msgstr "1.4 Construire"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:274
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:594
+msgid ""
+"Run ``rosdep`` in the root of your workspace to check for missing "
+"dependencies."
+msgstr ""
+"Exécutez ``rosdep`` à la racine de votre espace de travail pour vérifier les"
+" dépendances manquantes."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:286
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:290
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:606
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:610
+msgid ""
+"rosdep only runs on Linux, so you will need to install ``geometry_msgs`` and"
+" ``turtlesim`` dependencies yourself"
+msgstr ""
+"rosdep ne fonctionne que sous Linux, vous devrez donc installer vous-même "
+"les dépendances ``geometry_msgs`` et ``turtlesim``"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:292
+msgid "And then we can build the package:"
+msgstr "Et puis nous pouvons construire le package :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:316
+msgid "2 Writing the message filter/listener node"
+msgstr "2 Ecriture du nœud filtre/écouteur de messages"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:318
+msgid ""
+"Now, to get the streaming ``PointStamped`` data of ``turtle3`` in the frame "
+"of ``turtle1`` reliably, we will create the source file of the message "
+"filter/listener node."
+msgstr ""
+"Maintenant, pour obtenir les données de flux ``PointStamped`` de ``turtle3``"
+" dans le cadre de ``turtle1`` de manière fiable, nous allons créer le "
+"fichier source du nœud filtre/écouteur de messages."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:320
+msgid ""
+"Go to the ``learning_tf2_cpp`` :doc:`package <./Writing-A-Tf2-Static-"
+"Broadcaster-Cpp>` we created in the previous tutorial. Inside the "
+"``src/learning_tf2_cpp/src`` directory download file "
+"``turtle_tf2_message_filter.cpp`` by entering the following command:"
+msgstr ""
+"Accédez au ``learning_tf2_cpp`` :doc:`package <./Writing-A-Tf2-Static-"
+"Broadcaster-Cpp>` que nous avons créé dans le tutoriel précédent. Dans le "
+"répertoire ``src/learning_tf2_cpp/src``, téléchargez le fichier "
+"``turtle_tf2_message_filter.cpp`` en saisissant la commande suivante :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:438
+msgid "2.1 Examine the code"
+msgstr "2.1 Examiner le code"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:440
+msgid ""
+"First, you must include the ``tf2_ros::MessageFilter`` headers from the "
+"``tf2_ros`` package, as well as the previously used ``tf2`` and ``ros2`` "
+"related headers."
+msgstr ""
+"Tout d'abord, vous devez inclure les en-têtes ``tf2_ros::MessageFilter`` du "
+"paquet ``tf2_ros``, ainsi que les en-têtes associés ``tf2`` et ``ros2`` "
+"précédemment utilisés."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:458
+msgid ""
+"Second, there needs to be persistent instances of ``tf2_ros::Buffer``, "
+"``tf2_ros::TransformListener`` and ``tf2_ros::MessageFilter``."
+msgstr ""
+"Deuxièmement, il doit y avoir des instances persistantes de "
+"``tf2_ros::Buffer``, ``tf2_ros::TransformListener`` et "
+"``tf2_ros::MessageFilter``."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:469
+msgid ""
+"Third, the ROS 2 ``message_filters::Subscriber`` must be initialized with "
+"the topic. And the ``tf2_ros::MessageFilter`` must be initialized with that "
+"``Subscriber`` object. The other arguments of note in the ``MessageFilter`` "
+"constructor are the ``target_frame`` and the callback function. The target "
+"frame is the frame into which it will make sure ``canTransform`` will "
+"succeed. And the callback function is the function that will be called when "
+"the data is ready."
+msgstr ""
+"Troisièmement, le ``message_filters::Subscriber`` de ROS 2 doit être "
+"initialisé avec le sujet. Et le ``tf2_ros::MessageFilter`` doit être "
+"initialisé avec cet objet ``Subscriber``. Les autres arguments à noter dans "
+"le constructeur ``MessageFilter`` sont le ``target_frame`` et la fonction de"
+" rappel. Le cadre cible est le cadre dans lequel il s'assurera que "
+"``canTransform`` réussira. Et la fonction de rappel est la fonction qui sera"
+" appelée lorsque les données seront prêtes."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:504
+msgid ""
+"And last, the callback method will call ``tf2_buffer_->transform`` when the "
+"data is ready and print output to the console."
+msgstr ""
+"Et enfin, la méthode de rappel appellera ``tf2_buffer_->transform`` lorsque "
+"les données seront prêtes et imprimeront la sortie sur la console."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:528
+msgid "2.2 Add dependencies"
+msgstr "2.2 Ajouter des dépendances"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:530
+msgid ""
+"Before building the package ``learning_tf2_cpp``, please add two another "
+"dependencies in the ``package.xml`` file of this package:"
+msgstr ""
+"Avant de construire le package ``learning_tf2_cpp``, veuillez ajouter deux "
+"autres dépendances dans le fichier ``package.xml`` de ce package :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:538
+msgid "2.3 CMakeLists.txt"
+msgstr "2.3 CMakeLists.txt"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:540
+msgid ""
+"And in the ``CMakeLists.txt`` file, add two lines below the existing "
+"dependencies:"
+msgstr ""
+"Et dans le fichier ``CMakeLists.txt``, ajoutez deux lignes sous les "
+"dépendances existantes :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:547
+msgid "The lines below will deal with differences between ROS distributions:"
+msgstr ""
+"Les lignes ci-dessous traiteront des différences entre les distributions "
+"ROS :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:564
+msgid ""
+"After that, add the executable and name it ``turtle_tf2_message_filter``, "
+"which you'll use later with ``ros2 run``."
+msgstr ""
+"Après cela, ajoutez l'exécutable et nommez-le ``turtle_tf2_message_filter``,"
+" que vous utiliserez plus tard avec ``ros2 run``."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:583
+msgid ""
+"Finally, add the ``install(TARGETS…)`` section (below other existing nodes) "
+"so ``ros2 run`` can find your executable:"
+msgstr ""
+"Enfin, ajoutez la section ``install(TARGETS…)`` (sous les autres nœuds "
+"existants) afin que ``ros2 run`` puisse trouver votre exécutable :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:592
+msgid "2.4 Build"
+msgstr "2.4 Construire"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:612
+msgid ""
+"Now open a new terminal, navigate to the root of your workspace, and rebuild"
+" the package with command:"
+msgstr ""
+"Ouvrez maintenant un nouveau terminal, accédez à la racine de votre espace "
+"de travail et reconstruisez le package avec la commande :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:634
+msgid ""
+"Open a new terminal, navigate to the root of your workspace, and source the "
+"setup files:"
+msgstr ""
+"Ouvrez un nouveau terminal, accédez à la racine de votre espace de travail "
+"et sourcez les fichiers de configuration :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:661
+msgid "3 Run"
+msgstr "3 Courir"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:663
+msgid ""
+"First we need to run several nodes (including the broadcaster node of "
+"PointStamped messages) by launching the launch file "
+"``turtle_tf2_sensor_message.launch.py``:"
+msgstr ""
+"Nous devons d'abord exécuter plusieurs nœuds (dont le nœud diffuseur des "
+"messages PointStamped) en lançant le fichier de lancement "
+"``turtle_tf2_sensor_message.launch.py`` :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:669
+msgid ""
+"This will bring up the ``turtlesim`` window with two turtles, where "
+"``turtle3`` is moving along a circle, while ``turtle1`` isn't moving at "
+"first. But you can run the ``turtle_teleop_key`` node in another terminal to"
+" drive ``turtle1`` to move:"
+msgstr ""
+"Cela fera apparaître la fenêtre ``turtlesim`` avec deux tortues, où "
+"``turtle3`` se déplace le long d'un cercle, tandis que ``turtle1`` ne bouge "
+"pas au début. Mais vous pouvez exécuter le nœud ``turtle_teleop_key`` dans "
+"un autre terminal pour amener ``turtle1`` à se déplacer :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:678
+msgid "Now if you echo the topic ``turtle3/turtle_point_stamped``:"
+msgstr ""
+"Maintenant, si vous faites écho au sujet ``turtle3/turtle_point_stamped`` :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:684
+msgid "Then there will be output like this:"
+msgstr "Ensuite, il y aura une sortie comme celle-ci :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:719
+msgid ""
+"When the demo is running, open another terminal and run the message "
+"filter/listener node:"
+msgstr ""
+"Lorsque la démo est en cours d'exécution, ouvrez un autre terminal et "
+"exécutez le nœud de filtre/écouteur de messages :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:725
+msgid "If it's running correctly you should see streaming data like this:"
+msgstr ""
+"S'il fonctionne correctement, vous devriez voir des flux de données comme "
+"celui-ci :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:739
+msgid "Summary"
+msgstr "Résumé"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.rst:741
+msgid ""
+"In this tutorial you learned how to use sensor data/messages in tf2. "
+"Specifically speaking, you learned how to publish ``PointStamped`` messages "
+"on a topic, and how to listen to the topic and transform the frame of "
+"``PointStamped`` messages with ``tf2_ros::MessageFilter``."
+msgstr ""
+"Dans ce didacticiel, vous avez appris à utiliser les données/messages des "
+"capteurs dans tf2. Plus précisément, vous avez appris à publier des messages"
+" ``PointStamped`` sur un sujet, et à écouter le sujet et à transformer le "
+"cadre des messages ``PointStamped`` avec ``tf2_ros::MessageFilter``."

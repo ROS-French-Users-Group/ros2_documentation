@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 17:21:49.515931\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/How-To-Guides/Topics-Services-Actions.rst:4
+msgid "Topics vs Services vs Actions"
+msgstr "Sujets vs Services vs Actions"
+
+#: ../../source/How-To-Guides/Topics-Services-Actions.rst:8
+msgid "Contents"
+msgstr "Contenu"
+
+#: ../../source/How-To-Guides/Topics-Services-Actions.rst:10
+msgid ""
+"When designing a system there are three primary styles of interfaces. The "
+"specifications for the content is in the :doc:`Interfaces Overview "
+"<../Concepts/About-ROS-Interfaces>`. This is written to provide the reader "
+"with guidelines about when to use each type of interface."
+msgstr ""
+"Lors de la conception d'un système, il existe trois principaux styles "
+"d'interfaces. Les spécifications du contenu se trouvent dans :doc:`Aperçu "
+"des interfaces <../Concepts/About-ROS-Interfaces>`. Ceci est écrit pour "
+"fournir au lecteur des directives sur le moment d'utilisation de chaque type"
+" d'interface."
+
+#: ../../source/How-To-Guides/Topics-Services-Actions.rst:15
+msgid "Topics"
+msgstr "Les sujets"
+
+#: ../../source/How-To-Guides/Topics-Services-Actions.rst:17
+msgid ""
+"Should be used for continuous data streams (sensor data, robot state, ...)."
+msgstr ""
+"Doit être utilisé pour les flux de données continus (données de capteur, "
+"état du robot, ...)."
+
+#: ../../source/How-To-Guides/Topics-Services-Actions.rst:18
+msgid ""
+"Are for continuous data flow. Data might be published and subscribed at any "
+"time independent of any senders/receivers. Many to many connection. "
+"Callbacks receive data once it is available. The publisher decides when data"
+" is sent."
+msgstr ""
+"Sont pour un flux de données continu. Les données peuvent être publiées et "
+"souscrites à tout moment, indépendamment de tout expéditeur/destinataire. "
+"Connexion plusieurs à plusieurs. Les rappels reçoivent les données dès "
+"qu'elles sont disponibles. L'éditeur décide quand les données sont envoyées."
+
+#: ../../source/How-To-Guides/Topics-Services-Actions.rst:21
+msgid "Services"
+msgstr "Prestations de service"
+
+#: ../../source/How-To-Guides/Topics-Services-Actions.rst:23
+msgid ""
+"Should be used for remote procedure calls that terminate quickly, e.g. for "
+"querying the state of a node or doing a quick calculation such as IK. They "
+"should never be used for longer running processes, in particular processes "
+"that might be required to preempt if exceptional situations occur and they "
+"should never change or depend on state to avoid unwanted side effects for "
+"other nodes."
+msgstr ""
+"Doit être utilisé pour les appels de procédure à distance qui se terminent "
+"rapidement, par ex. pour interroger l'état d'un nœud ou effectuer un calcul "
+"rapide tel que IK. Ils ne doivent jamais être utilisés pour des processus "
+"d'exécution plus longs, en particulier les processus qui pourraient être "
+"nécessaires pour anticiper si des situations exceptionnelles se produisent "
+"et ils ne doivent jamais changer ou dépendre de l'état pour éviter des "
+"effets secondaires indésirables pour d'autres nœuds."
+
+#: ../../source/How-To-Guides/Topics-Services-Actions.rst:24
+msgid ""
+"Simple blocking call. Mostly used for comparably fast tasks as requesting "
+"specific data. Semantically for processing requests."
+msgstr ""
+"Appel bloquant simple. Principalement utilisé pour des tâches relativement "
+"rapides comme la demande de données spécifiques. Sémantiquement pour le "
+"traitement des requêtes."
+
+#: ../../source/How-To-Guides/Topics-Services-Actions.rst:27
+msgid "Actions"
+msgstr "Actions"
+
+#: ../../source/How-To-Guides/Topics-Services-Actions.rst:29
+msgid ""
+"Should be used for any discrete behavior that moves a robot or that runs for"
+" a longer time but provides feedback during execution."
+msgstr ""
+"Doit être utilisé pour tout comportement discret qui déplace un robot ou qui"
+" s'exécute pendant une durée plus longue mais qui fournit une rétroaction "
+"pendant l'exécution."
+
+#: ../../source/How-To-Guides/Topics-Services-Actions.rst:30
+msgid ""
+"The most important property of actions is that they can be preempted and "
+"preemption should always be implemented cleanly by action servers."
+msgstr ""
+"La propriété la plus importante des actions est qu'elles peuvent être "
+"préemptées et la préemption doit toujours être implémentée proprement par "
+"les serveurs d'action."
+
+#: ../../source/How-To-Guides/Topics-Services-Actions.rst:31
+msgid ""
+"Actions can keep state for the lifetime of a goal, i.e. if executing two "
+"action goals in parallel on the same server, for each client a separate "
+"state instance can be kept since the goal is uniquely identified by its id."
+msgstr ""
+"Les actions peuvent conserver l'état pendant toute la durée de vie d'un "
+"objectif, c'est-à-dire que si vous exécutez deux objectifs d'action en "
+"parallèle sur le même serveur, pour chaque client, une instance d'état "
+"distincte peut être conservée puisque l'objectif est identifié de manière "
+"unique par son identifiant."
+
+#: ../../source/How-To-Guides/Topics-Services-Actions.rst:32
+msgid ""
+"Slow perception routines which take several seconds to terminate or "
+"initiating a lower-level control mode are good use cases for actions."
+msgstr ""
+"Les routines de perception lente qui prennent plusieurs secondes pour se "
+"terminer ou initier un mode de contrôle de niveau inférieur sont de bons cas"
+" d'utilisation pour les actions."
+
+#: ../../source/How-To-Guides/Topics-Services-Actions.rst:33
+msgid ""
+"More complex non-blocking background processing. Used for longer tasks like "
+"execution of robot actions. Semantically for real-world actions."
+msgstr ""
+"Traitement en arrière-plan non bloquant plus complexe. Utilisé pour des "
+"tâches plus longues comme l'exécution d'actions de robot. Sémantiquement "
+"pour les actions du monde réel."

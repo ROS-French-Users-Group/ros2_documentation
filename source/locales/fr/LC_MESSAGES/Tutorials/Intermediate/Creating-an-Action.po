@@ -1,0 +1,296 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 12:04:26.351727\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:8
+msgid "Creating an action"
+msgstr "Créer une action"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:10
+msgid "**Goal:** Define an action in a ROS 2 package."
+msgstr "**Objectif :** Définir une action dans un package ROS 2."
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:12
+msgid "**Tutorial level:** Intermediate"
+msgstr "**Niveau du didacticiel :** Intermédiaire"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:14
+msgid "**Time:** 5 minutes"
+msgstr "**Durée :** 5 minutes"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:18
+msgid "Contents"
+msgstr "Contenu"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:21
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:23
+msgid ""
+"You learned about actions previously in the :doc:`../Beginner-CLI-"
+"Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions` tutorial. Like "
+"the other communication types and their respective interfaces (topics/msg "
+"and services/srv), you can also custom-define actions in your packages. This"
+" tutorial shows you how to define and build an action that you can use with "
+"the action server and action client you will write in the next tutorial."
+msgstr ""
+"Vous avez appris les actions précédemment dans le didacticiel "
+":doc:`../Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-"
+"ROS2-Actions`. Comme les autres types de communication et leurs interfaces "
+"respectives (topics/msg et services/srv), vous pouvez également définir des "
+"actions personnalisées dans vos packages. Ce didacticiel vous montre comment"
+" définir et créer une action que vous pouvez utiliser avec le serveur "
+"d'action et le client d'action que vous écrirez dans le prochain "
+"didacticiel."
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:30
+msgid "Prerequisites"
+msgstr "Conditions préalables"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:32
+msgid ""
+"You should have :doc:`ROS 2 <../../Installation>` and `colcon "
+"<https://colcon.readthedocs.org>`__ installed."
+msgstr ""
+"Vous devriez avoir :doc:`ROS 2 <../../Installation>` et `colcon "
+"<https://colcon.readthedocs.org>`__ installés."
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:34
+msgid ""
+"Set up a :doc:`workspace <../Beginner-Client-Libraries/Creating-A-"
+"Workspace/Creating-A-Workspace>` and create a package named "
+"``action_tutorials_interfaces``:"
+msgstr ""
+"Configurez un :doc:`workspace <../Beginner-Client-Libraries/Creating-A-"
+"Workspace/Creating-A-Workspace>` et créez un package nommé "
+"``action_tutorials_interfaces`` :"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:36
+msgid ""
+"(Remember to :doc:`source your ROS 2 installation <../Beginner-CLI-"
+"Tools/Configuring-ROS2-Environment>` first.)"
+msgstr ""
+"(N'oubliez pas de :doc:`sourcer votre installation ROS 2 <../Beginner-CLI-"
+"Tools/Configuring-ROS2-Environment>` en premier.)"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:40
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:94
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:48
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:101
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:56
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:108
+msgid "Windows"
+msgstr "les fenêtres"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:65
+msgid "Tasks"
+msgstr "Tâches"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:68
+msgid "1 Defining an action"
+msgstr "1 Définir une action"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:70
+msgid "Actions are defined in ``.action`` files of the form:"
+msgstr "Les actions sont définies dans des fichiers ``.action`` de la forme :"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:80
+msgid ""
+"An action definition is made up of three message definitions separated by "
+"``---``."
+msgstr ""
+"Une définition d'action est composée de trois définitions de message "
+"séparées par ``---``."
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:82
+msgid ""
+"A *request* message is sent from an action client to an action server "
+"initiating a new goal."
+msgstr ""
+"Un message *request* est envoyé d'un client d'action à un serveur d'action "
+"initiant un nouvel objectif."
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:83
+msgid ""
+"A *result* message is sent from an action server to an action client when a "
+"goal is done."
+msgstr ""
+"Un message *result* est envoyé d'un serveur d'action à un client d'action "
+"lorsqu'un objectif est atteint."
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:84
+msgid ""
+"*Feedback* messages are periodically sent from an action server to an action"
+" client with updates about a goal."
+msgstr ""
+"Des messages *Feedback* sont périodiquement envoyés d'un serveur d'action à "
+"un client d'action avec des mises à jour sur un objectif."
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:86
+msgid "An instance of an action is typically referred to as a *goal*."
+msgstr "Une instance d'action est généralement appelée *objectif*."
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:88
+msgid ""
+"Say we want to define a new action \"Fibonacci\" for computing the "
+"`Fibonacci sequence <https://en.wikipedia.org/wiki/Fibonacci_number>`__."
+msgstr ""
+"Disons que nous voulons définir une nouvelle action \"Fibonacci\" pour "
+"calculer la `suite de Fibonacci "
+"<https://en.wikipedia.org/wiki/Fibonacci_number>`__."
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:90
+msgid ""
+"Create an ``action`` directory in our ROS 2 package "
+"``action_tutorials_interfaces``:"
+msgstr ""
+"Créez un répertoire ``action`` dans notre package ROS 2 "
+"``action_tutorials_interfaces`` :"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:115
+msgid ""
+"Within the ``action`` directory, create a file called ``Fibonacci.action`` "
+"with the following contents:"
+msgstr ""
+"Dans le répertoire ``action``, créez un fichier appelé ``Fibonacci.action`` "
+"avec le contenu suivant :"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:125
+msgid ""
+"The goal request is the ``order`` of the Fibonacci sequence we want to "
+"compute, the result is the final ``sequence``, and the feedback is the "
+"``partial_sequence`` computed so far."
+msgstr ""
+"La demande d'objectif est l'``ordre`` de la séquence de Fibonacci que nous "
+"voulons calculer, le résultat est la ``séquence`` finale et le retour est la"
+" ``séquence_partielle`` calculée jusqu'à présent."
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:128
+msgid "2 Building an action"
+msgstr "2 Construire une action"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:130
+msgid ""
+"Before we can use the new Fibonacci action type in our code, we must pass "
+"the definition to the rosidl code generation pipeline."
+msgstr ""
+"Avant de pouvoir utiliser le nouveau type d'action Fibonacci dans notre "
+"code, nous devons transmettre la définition au pipeline de génération de "
+"code rosidl."
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:132
+msgid ""
+"This is accomplished by adding the following lines to our ``CMakeLists.txt``"
+" before the ``ament_package()`` line, in the "
+"``action_tutorials_interfaces``:"
+msgstr ""
+"Ceci est accompli en ajoutant les lignes suivantes à notre "
+"``CMakeLists.txt`` avant la ligne ``ament_package()``, dans "
+"``action_tutorials_interfaces`` :"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:142
+msgid "We should also add the required dependencies to our ``package.xml``:"
+msgstr ""
+"Nous devrions également ajouter les dépendances requises à notre "
+"``package.xml`` :"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:150
+msgid ""
+"We should now be able to build the package containing the ``Fibonacci`` "
+"action definition:"
+msgstr ""
+"Nous devrions maintenant pouvoir construire le package contenant la "
+"définition de l'action ``Fibonacci`` :"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:159
+msgid "We're done!"
+msgstr "Avaient fini!"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:161
+msgid ""
+"By convention, action types will be prefixed by their package name and the "
+"word ``action``. So when we want to refer to our new action, it will have "
+"the full name ``action_tutorials_interfaces/action/Fibonacci``."
+msgstr ""
+"Par convention, les types d'action seront préfixés par leur nom de package "
+"et le mot ``action``. Ainsi, lorsque nous voulons faire référence à notre "
+"nouvelle action, elle aura le nom complet "
+"``action_tutorials_interfaces/action/Fibonacci``."
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:164
+msgid ""
+"We can check that our action built successfully with the command line tool:"
+msgstr ""
+"Nous pouvons vérifier que notre action a bien été construite avec l'outil de"
+" ligne de commande :"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:176
+msgid "You should see the Fibonacci action definition printed to the screen."
+msgstr ""
+"Vous devriez voir la définition de l'action de Fibonacci imprimée à l'écran."
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:179
+msgid "Summary"
+msgstr "Résumé"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:181
+msgid ""
+"In this tutorial, you learned the structure of an action definition. You "
+"also learned how to correctly build a new action interface using "
+"``CMakeLists.txt`` and ``package.xml``, and how to verify a successful "
+"build."
+msgstr ""
+"Dans ce didacticiel, vous avez appris la structure d'une définition "
+"d'action. Vous avez également appris comment construire correctement une "
+"nouvelle interface d'action en utilisant ``CMakeLists.txt`` et "
+"``package.xml``, et comment vérifier une construction réussie."
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:186
+msgid "Next steps"
+msgstr "Prochaines étapes"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:188
+msgid ""
+"Next, let's utilize your newly defined action interface by creating an "
+"action service and client (in :doc:`Python <Writing-an-Action-Server-"
+"Client/Py>` or :doc:`C++ <Writing-an-Action-Server-Client/Cpp>`)."
+msgstr ""
+"Ensuite, utilisons votre interface d'action nouvellement définie en créant "
+"un service d'action et un client (dans :doc:`Python <Writing-an-Action-"
+"Server-Client/Py>` ou :doc:`C++ <Writing-an-Action- Serveur-Client/Cpp>`)."
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:191
+msgid "Related content"
+msgstr "Contenu connexe"
+
+#: ../../source/Tutorials/Intermediate/Creating-an-Action.rst:193
+msgid ""
+"For more detailed information about ROS actions, please refer to the `design"
+" article <http://design.ros2.org/articles/actions.html>`__."
+msgstr ""
+"Pour des informations plus détaillées sur les actions ROS, veuillez vous "
+"référer à l'`article de conception "
+"<http://design.ros2.org/articles/actions.html>`__."

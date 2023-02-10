@@ -1,0 +1,290 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-07 07:18:37.910278\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Releases/Beta3-Overview.rst:6
+msgid "Beta 3 (``r2b3``)"
+msgstr "Bêta 3 (``r2b3``)"
+
+#: ../../source/Releases/Beta3-Overview.rst:10
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/Releases/Beta3-Overview.rst:13
+msgid "Supported Platforms"
+msgstr "Plates-formes prises en charge"
+
+#: ../../source/Releases/Beta3-Overview.rst:15
+msgid ""
+"We support ROS 2 Beta 3 on three platforms: Ubuntu 16.04 (Xenial), macOS "
+"10.12 (Sierra), and Windows 10. We provide both binary packages and "
+"instructions for how to compile from source for all 3 platforms (see "
+"`install instructions <../../Installation>` as well as `documentation "
+"<https://docs.ros2.org/beta3/>`__)."
+msgstr ""
+"Nous prenons en charge ROS 2 Beta 3 sur trois plates-formes : Ubuntu 16.04 "
+"(Xenial), macOS 10.12 (Sierra) et Windows 10. Nous fournissons à la fois des"
+" packages binaires et des instructions sur la façon de compiler à partir de "
+"la source pour les 3 plates-formes (voir `instructions d'installation <. "
+"./../Installation>` ainsi que la `documentation "
+"<https://docs.ros2.org/beta3/>`__)."
+
+#: ../../source/Releases/Beta3-Overview.rst:19
+msgid "Features"
+msgstr "Caractéristiques"
+
+#: ../../source/Releases/Beta3-Overview.rst:22
+msgid "Improvements since Beta 2 release"
+msgstr "Améliorations depuis la version bêta 2"
+
+#: ../../source/Releases/Beta3-Overview.rst:24
+msgid ""
+"Execution model in Python, many fixes to memory management in Python C "
+"extension"
+msgstr ""
+"Modèle d'exécution en Python, nombreux correctifs pour la gestion de la "
+"mémoire dans l'extension Python C"
+
+#: ../../source/Releases/Beta3-Overview.rst:25
+msgid ""
+"Experimental rewrite of `ros_control "
+"<https://github.com/ros2/ros2_control>`__"
+msgstr ""
+"Réécriture expérimentale de `ros_control "
+"<https://github.com/ros2/ros2_control>`__"
+
+#: ../../source/Releases/Beta3-Overview.rst:26
+msgid ""
+"Exposure of DDS implementation-specific symbols to users (for Fast RTPS and "
+"Connext) (see `example "
+"<https://github.com/ros2/demos/blob/6363be2efe2fea799d92bc22a66e776b2ca9c5d0/demo_nodes_cpp_native/src/talker.cpp>`__)"
+msgstr ""
+"Exposition des symboles spécifiques à l'implémentation DDS aux utilisateurs "
+"(pour Fast RTPS et Connext) (voir `exemple "
+"<https://github.com/ros2/demos/blob/6363be2efe2fea799d92bc22a66e776b2ca9c5d0/demo_nodes_cpp_native/src/talker.cpp>`__)"
+
+#: ../../source/Releases/Beta3-Overview.rst:27
+msgid ""
+"Logging `API "
+"<https://github.com/ros2/rclpy/blob/1ef2924ef8e154c0553edf0fdba4840b08b728f8/rclpy/rclpy/logging.py>`__"
+" in Python"
+msgstr ""
+"Journalisation `API "
+"<https://github.com/ros2/rclpy/blob/1ef2924ef8e154c0553edf0fdba4840b08b728f8/rclpy/rclpy/logging.py>`__"
+" en Python"
+
+#: ../../source/Releases/Beta3-Overview.rst:28
+msgid "Fixed several memory leaks and race conditions in various packages"
+msgstr ""
+"Correction de plusieurs fuites de mémoire et conditions de course dans "
+"divers packages"
+
+#: ../../source/Releases/Beta3-Overview.rst:29
+msgid ""
+"Readded support for OpenSplice (on Linux and Windows atm) provided by "
+"PrismTech"
+msgstr ""
+"Reprise du support pour OpenSplice (sur Linux et Windows atm) fourni par "
+"PrismTech"
+
+#: ../../source/Releases/Beta3-Overview.rst:30
+msgid "Use bloom (without patches) to make ROS 2 releases"
+msgstr "Utilisez bloom (sans correctifs) pour créer des versions ROS 2"
+
+#: ../../source/Releases/Beta3-Overview.rst:33
+msgid "New demo application"
+msgstr "Nouvelle application de démonstration"
+
+#: ../../source/Releases/Beta3-Overview.rst:35
+msgid "`HSR demo <https://github.com/ruffsl/hsr_demo>`__"
+msgstr "`Démo HSR <https://github.com/ruffsl/hsr_demo>`__"
+
+#: ../../source/Releases/Beta3-Overview.rst:37
+msgid "Remote control a HSR robot using a ROS 2 joystick controller"
+msgstr ""
+"Contrôlez à distance un robot HSR à l'aide d'un contrôleur de joystick ROS 2"
+
+#: ../../source/Releases/Beta3-Overview.rst:38
+msgid ""
+"Running the ``ros1_bridge`` in a Docker container on the HSR (since the "
+"robot is running ROS 1 on Ubuntu Trusty)"
+msgstr ""
+"Exécution du ``ros1_bridge`` dans un conteneur Docker sur le HSR (puisque le"
+" robot exécute ROS 1 sur Ubuntu Trusty)"
+
+#: ../../source/Releases/Beta3-Overview.rst:39
+msgid ""
+"Run a ROS 2 development version of `rviz <https://github.com/ros2/rviz>`__ "
+"to visualize sensor data from the robot etc. (see `video "
+"<https://vimeo.com/237016358>`__)"
+msgstr ""
+"Exécutez une version de développement ROS 2 de `rviz "
+"<https://github.com/ros2/rviz>`__ pour visualiser les données des capteurs "
+"du robot, etc. (voir `video <https://vimeo.com/237016358>`__ )"
+
+#: ../../source/Releases/Beta3-Overview.rst:42
+msgid "Selected features from previous Alpha/Beta releases"
+msgstr "Fonctionnalités sélectionnées des versions alpha/bêta précédentes"
+
+#: ../../source/Releases/Beta3-Overview.rst:44
+msgid "For the complete list, see `earlier release notes <../index>`."
+msgstr ""
+"Pour la liste complète, voir `notes de version antérieures <../index>`."
+
+#: ../../source/Releases/Beta3-Overview.rst:46
+msgid ""
+"C++ and Python implementations of ROS 2 client libraries including APIs for:"
+msgstr ""
+"Implémentations C++ et Python des bibliothèques clientes ROS 2, y compris "
+"les API pour :"
+
+#: ../../source/Releases/Beta3-Overview.rst:48
+msgid "Publishing and subscribing to ROS topics"
+msgstr "Publication et abonnement aux rubriques ROS"
+
+#: ../../source/Releases/Beta3-Overview.rst:49
+msgid ""
+"Requesting and replying ROS services (synchronous (C++ only) and "
+"asynchronous)"
+msgstr ""
+"Demander et répondre aux services ROS (synchrone (C++ uniquement) et "
+"asynchrone)"
+
+#: ../../source/Releases/Beta3-Overview.rst:50
+msgid ""
+"Getting and setting ROS parameters (C++ only, synchronous and asynchronous)"
+msgstr ""
+"Obtenir et définir les paramètres ROS (C++ uniquement, synchrone et "
+"asynchrone)"
+
+#: ../../source/Releases/Beta3-Overview.rst:51
+msgid "Timer callbacks"
+msgstr "Rappels de minuterie"
+
+#: ../../source/Releases/Beta3-Overview.rst:53
+msgid "Support for interoperability between multiple DDS/RTPS implementations"
+msgstr ""
+"Prise en charge de l'interopérabilité entre plusieurs implémentations "
+"DDS/RTPS"
+
+#: ../../source/Releases/Beta3-Overview.rst:55
+msgid ""
+"eProsima Fast RTPS is our default implementation, and is included in the "
+"binary packages"
+msgstr ""
+"eProsima Fast RTPS est notre implémentation par défaut et est inclus dans "
+"les packages binaires"
+
+#: ../../source/Releases/Beta3-Overview.rst:56
+msgid "RTI Connext is supported: build from source to try it out"
+msgstr ""
+"RTI Connext est pris en charge : créez à partir de la source pour l'essayer"
+
+#: ../../source/Releases/Beta3-Overview.rst:57
+msgid "PrismTech OpenSplice: see limitations below"
+msgstr "PrismTech OpenSplice : voir les limitations ci-dessous"
+
+#: ../../source/Releases/Beta3-Overview.rst:59
+msgid "A graph API for network events"
+msgstr "Une API graphique pour les événements réseau"
+
+#: ../../source/Releases/Beta3-Overview.rst:60
+msgid "Distributed discovery"
+msgstr "Découverte distribuée"
+
+#: ../../source/Releases/Beta3-Overview.rst:61
+msgid ""
+"Realtime safe code paths for publish and subscribe with compatible DDS "
+"implementation (only Connext at the moment)"
+msgstr ""
+"Chemins de code sécurisés en temps réel pour la publication et l'abonnement "
+"avec une implémentation DDS compatible (uniquement Connext pour le moment)"
+
+#: ../../source/Releases/Beta3-Overview.rst:63
+msgid "Support for custom allocators"
+msgstr "Prise en charge des répartiteurs personnalisés"
+
+#: ../../source/Releases/Beta3-Overview.rst:65
+msgid "ROS 1 <-> ROS 2 dynamic bridge node"
+msgstr "Nœud de pont dynamique ROS 1 <-> ROS 2"
+
+#: ../../source/Releases/Beta3-Overview.rst:66
+msgid "Executor threading model (C++ and Python)"
+msgstr "Modèle de thread d'exécuteur (C++ et Python)"
+
+#: ../../source/Releases/Beta3-Overview.rst:67
+msgid "Component model to compose nodes at compile / link / runtime"
+msgstr ""
+"Modèle de composant pour composer des nœuds à la compilation / au lien / à "
+"l'exécution"
+
+#: ../../source/Releases/Beta3-Overview.rst:68
+msgid "Managed component using a standard lifecycle"
+msgstr "Composant géré à l'aide d'un cycle de vie standard"
+
+#: ../../source/Releases/Beta3-Overview.rst:69
+msgid "Extended ``.msg`` format with new features:"
+msgstr "Format ``.msg`` étendu avec de nouvelles fonctionnalités :"
+
+#: ../../source/Releases/Beta3-Overview.rst:71
+msgid "Bounded arrays"
+msgstr "Tableaux bornés"
+
+#: ../../source/Releases/Beta3-Overview.rst:72
+msgid "Default values"
+msgstr "Les valeurs par défaut"
+
+#: ../../source/Releases/Beta3-Overview.rst:75
+msgid "Known issues"
+msgstr "Problèmes connus"
+
+#: ../../source/Releases/Beta3-Overview.rst:77
+msgid ""
+"On Windows Python launch files might hang when trying to abort using "
+"``Ctrl-C`` (see `issue <https://github.com/ros2/launch/issues/64>`__). In "
+"order to continue using the shell which is blocked by the hanging command "
+"you might want to end the hanging Python process using the process monitor."
+msgstr ""
+"Sous Windows, les fichiers de lancement Python peuvent se bloquer lors d'une"
+" tentative d'abandon à l'aide de ``Ctrl-C`` (voir `issue "
+"<https://github.com/ros2/launch/issues/64>`__). Afin de continuer à utiliser"
+" le shell qui est bloqué par la commande de suspension, vous souhaiterez "
+"peut-être mettre fin au processus Python de suspension à l'aide du moniteur "
+"de processus."
+
+#: ../../source/Releases/Beta3-Overview.rst:78
+msgid ""
+"OpenSplice support is currently not available for MacOS. Also `access to "
+"native handles <https://github.com/ros2/rmw_opensplice/issues/182>`__ is not"
+" yet implemented."
+msgstr ""
+"La prise en charge d'OpenSplice n'est actuellement pas disponible pour "
+"MacOS. De plus, `l'accès aux poignées natives "
+"<https://github.com/ros2/rmw_opensplice/issues/182>`__ n'est pas encore "
+"implémenté."
+
+#: ../../source/Releases/Beta3-Overview.rst:79
+msgid ""
+"Using Connext it is currently not allowed for two topics with the same base "
+"name but different namespaces to have a different type (see `issue "
+"<https://github.com/ros2/rmw_connext/issues/234>`__)."
+msgstr ""
+"En utilisant Connext, il n'est actuellement pas autorisé que deux sujets "
+"avec le même nom de base mais des espaces de noms différents aient un type "
+"différent (voir `issue <https://github.com/ros2/rmw_connext/issues/234>`__)."

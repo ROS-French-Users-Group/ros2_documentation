@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 17:02:38.330659\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/How-To-Guides/Releasing/Releasing-a-Package.rst:9
+msgid "Releasing a Package"
+msgstr "Libérer un paquet"
+
+#: ../../source/How-To-Guides/Releasing/Releasing-a-Package.rst:19
+msgid ""
+"**Releasing a package makes your package available on the public ROS 2 "
+"buildfarm.** This will:"
+msgstr ""
+"** La publication d'un package rend votre package disponible sur la ferme de"
+" construction ROS 2 publique. ** Cela :"
+
+#: ../../source/How-To-Guides/Releasing/Releasing-a-Package.rst:22
+msgid ""
+"Make your package available to be installed via package managers (eg. "
+"``apt`` on Ubuntu) for all supported Linux platforms in a ROS distribution "
+"as described in `REP 2000 <https://ros.org/reps/rep-2000.html>`_."
+msgstr ""
+"Rendez votre package disponible pour être installé via des gestionnaires de "
+"packages (par exemple, ``apt`` sur Ubuntu) pour toutes les plates-formes "
+"Linux prises en charge dans une distribution ROS, comme décrit dans `REP "
+"2000 <https://ros.org/reps/rep-2000 .html>`_."
+
+#: ../../source/How-To-Guides/Releasing/Releasing-a-Package.rst:23
+msgid "Allow your package to have API documentation automatically generated."
+msgstr ""
+"Autorisez votre package à générer automatiquement la documentation de l'API."
+
+#: ../../source/How-To-Guides/Releasing/Releasing-a-Package.rst:24
+msgid "Make your package part of the `ROS Index <https://index.ros.org>`_."
+msgstr "Intégrez votre package au `ROS Index <https://index.ros.org>`_."
+
+#: ../../source/How-To-Guides/Releasing/Releasing-a-Package.rst:25
+msgid ""
+"(Optionally) Allow you to have automatic CI run for pull requests in your "
+"repository."
+msgstr ""
+"(Facultatif) Vous permet d'exécuter automatiquement le CI pour les demandes "
+"d'extraction dans votre référentiel."
+
+#: ../../source/How-To-Guides/Releasing/Releasing-a-Package.rst:27
+msgid "**Follow one of the guides below to get your package released:**"
+msgstr "**Suivez l'un des guides ci-dessous pour obtenir votre package :**"
+
+#: ../../source/How-To-Guides/Releasing/Releasing-a-Package.rst:29
+msgid ""
+":doc:`First Time Release <First-Time-Release>` - if this is the first "
+"release for the package"
+msgstr ""
+":doc:`First Time Release <First-Time-Release>` - s'il s'agit de la première "
+"version du paquet"
+
+#: ../../source/How-To-Guides/Releasing/Releasing-a-Package.rst:30
+msgid ""
+":doc:`Subsequent Releases <Subsequent-Releases>` - if you are releasing a "
+"new version of a package that has already been released"
+msgstr ""
+":doc:`Subsequent Releases <Subsequent-Releases>` - si vous publiez une "
+"nouvelle version d'un paquet qui a déjà été publié"
+
+#: ../../source/How-To-Guides/Releasing/Releasing-a-Package.rst:32
+msgid ""
+"After successfully following the instructions, your package will be released"
+" into the ROS ecosystem on the next distro synchronization!"
+msgstr ""
+"Après avoir suivi avec succès les instructions, votre package sera publié "
+"dans l'écosystème ROS lors de la prochaine synchronisation de distribution !"

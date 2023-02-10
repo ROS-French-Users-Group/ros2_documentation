@@ -1,0 +1,515 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 17:21:03.149896\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:2
+msgid "Visualizing ROS 2 data with Foxglove Studio"
+msgstr "Visualiser les données ROS 2 avec Foxglove Studio"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:4
+msgid ""
+"`Foxglove Studio <https://foxglove.dev/studio>`__ is an open source "
+"visualization and debugging tool for your robotics data."
+msgstr ""
+"`Foxglove Studio <https://foxglove.dev/studio>`__ est un outil de "
+"visualisation et de débogage open source pour vos données robotiques."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:6
+msgid ""
+"It is available in a variety of ways to make development as convenient as "
+"possible – it can be run as a standalone desktop app, accessed via your "
+"browser, or even self-hosted on your own domain."
+msgstr ""
+"Il est disponible de différentes manières pour rendre le développement aussi"
+" pratique que possible - il peut être exécuté comme une application de "
+"bureau autonome, accessible via votre navigateur ou même auto-hébergé sur "
+"votre propre domaine."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:8
+msgid ""
+"View the source code on `GitHub <https://www.github.com/foxglove/studio>`__."
+msgstr ""
+"Affichez le code source sur `GitHub "
+"<https://www.github.com/foxglove/studio>`__."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:11
+msgid "Installation"
+msgstr "Installation"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:13
+msgid ""
+"To use the web app, simply open Google Chrome and navigate to "
+"`studio.foxglove.dev <https://studio.foxglove.dev>`__."
+msgstr ""
+"Pour utiliser l'application Web, ouvrez simplement Google Chrome et accédez "
+"à `studio.foxglove.dev <https://studio.foxglove.dev>`__."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:15
+msgid ""
+"To use the desktop app for Linux, macOS, or Windows, download it directly "
+"from the `Foxglove Studio website <https://foxglove.dev/download>`__."
+msgstr ""
+"Pour utiliser l'application de bureau pour Linux, macOS ou Windows, "
+"téléchargez-la directement depuis le `site Web de Foxglove Studio "
+"<https://foxglove.dev/download>`__."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:18
+msgid "Connect to a data source"
+msgstr "Se connecter à une source de données"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:20
+msgid ""
+"On opening Foxglove Studio, you will see a dialog with a list of `all "
+"possible data sources <https://foxglove.dev/docs/studio/connection/data-"
+"sources>`__."
+msgstr ""
+"Lors de l'ouverture de Foxglove Studio, vous verrez une boîte de dialogue "
+"avec une liste de `toutes les sources de données possibles "
+"<https://foxglove.dev/docs/studio/connection/data-sources>`__."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:22
+msgid ""
+"To connect to your ROS 2 stack, click \"Open connection\", select the "
+"\"Rosbridge (ROS 1 & 2)\" tab, and configure your \"WebSocket URL\"."
+msgstr ""
+"Pour vous connecter à votre pile ROS 2, cliquez sur \"Ouvrir une "
+"connexion\", sélectionnez l'onglet \"Rosbridge (ROS 1 & 2)\", et configurez "
+"votre \"URL WebSocket\"."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:24
+msgid ""
+"You could also drag-and-drop any local ROS 2 ``.db3`` files directly into "
+"the application to load them for playback."
+msgstr ""
+"Vous pouvez également glisser-déposer n'importe quel fichier local ROS 2 "
+"``.db3`` directement dans l'application pour les charger pour la lecture."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:28
+msgid ""
+"In order to `load custom message definitions in your ROS 2 files "
+"<https://github.com/ros2/rosbag2/issues/782>`__, try converting them to the "
+"`MCAP file format <https://mcap.dev>`__."
+msgstr ""
+"Afin de `charger des définitions de messages personnalisés dans vos fichiers"
+" ROS 2 <https://github.com/ros2/rosbag2/issues/782>`__, essayez de les "
+"convertir au `format de fichier MCAP <https://mcap.dev >`__."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:30
+msgid ""
+"Check out the `Foxglove Studio docs "
+"<https://foxglove.dev/docs/studio/connection/native>`__ for more detailed "
+"instructions."
+msgstr ""
+"Consultez la `docs Foxglove Studio "
+"<https://foxglove.dev/docs/studio/connection/native>`__ pour des "
+"instructions plus détaillées."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:33
+msgid "Building layouts with panels"
+msgstr "Plans de construction avec panneaux"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:35
+msgid ""
+"`Panels <https://foxglove.dev/docs/studio/panels/introduction>`__ are "
+"modular visualization interfaces that can be configured and arranged into "
+"Studio `layouts <https://foxglove.dev/docs/studio/layouts>`__. You can also "
+"save your layouts for future use, for your own personal reference or with "
+"your larger robotics team."
+msgstr ""
+"Les `Panels <https://foxglove.dev/docs/studio/panels/introduction>`__ sont "
+"des interfaces de visualisation modulaires qui peuvent être configurées et "
+"organisées dans Studio `layouts <https://foxglove.dev/docs/studio/layouts> "
+"`__. Vous pouvez également enregistrer vos mises en page pour une "
+"utilisation future, pour votre propre référence personnelle ou avec votre "
+"plus grande équipe de robotique."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:38
+msgid "Find the full list of available panels in the sidebar's \"Add panel\" tab."
+msgstr ""
+"Retrouvez la liste complète des panneaux disponibles dans l'onglet \"Ajouter"
+" un panneau\" de la barre latérale."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:40
+msgid "We've highlighted some particularly useful ones below:"
+msgstr ""
+"Nous en avons souligné quelques-uns particulièrement utiles ci-dessous :"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:43
+msgid "1 3D: Display visualization markers in a 3D scene"
+msgstr "1 3D : Afficher les marqueurs de visualisation dans une scène 3D"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:45
+msgid ""
+"Publish marker messages to add primitive shapes (arrows, spheres, etc.) and "
+"more complex visualizations (occupancy grids, point clouds, etc.) to your 3D"
+" panel's scene."
+msgstr ""
+"Publiez des messages marqueurs pour ajouter des formes primitives (flèches, "
+"sphères, etc.) et des visualisations plus complexes (grilles d'occupation, "
+"nuages ​​de points, etc.) à la scène de votre panneau 3D."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:47
+msgid ""
+"Choose the topics you want to display via the topic picker on the left, and "
+"configure each topic's visualization settings in the \"Edit topic settings\""
+" menu."
+msgstr ""
+"Choisissez les sujets que vous souhaitez afficher via le sélecteur de sujet "
+"sur la gauche, et configurez les paramètres de visualisation de chaque sujet"
+" dans le menu \"Modifier les paramètres du sujet\"."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:None
+msgid "Foxglove Studio's 3D panel"
+msgstr "Panneau 3D de Foxglove Studio"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:53
+msgid ""
+"Reference the `docs <https://foxglove.dev/docs/studio/panels/3d>`__ for a "
+"full list of `supported message types "
+"<https://foxglove.dev/docs/studio/panels/3d#supported-messages>`__ and some "
+"useful `user interactions <https://foxglove.dev/docs/studio/panels/3d#user-"
+"interactions>`__."
+msgstr ""
+"Référencez les `docs <https://foxglove.dev/docs/studio/panels/3d>`__ pour "
+"une liste complète des `types de messages pris en charge "
+"<https://foxglove.dev/docs/studio/panels/3d#supported -messages>`__ et "
+"quelques `interactions utilisateur utiles "
+"<https://foxglove.dev/docs/studio/panels/3d#user-interactions>`__."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:56
+msgid "2 Diagnostics: Filter and sort diagnostics messages"
+msgstr "2 Diagnostics : filtrer et trier les messages de diagnostic"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:58
+msgid ""
+"Display the status of seen nodes (i.e. stale, error, warn, or OK) from "
+"topics with a ``diagnostic_msgs/msg/DiagnosticArray`` datatype in a running "
+"feed, and display the diagnostics data for a given "
+"``diagnostic_name/hardware_id``."
+msgstr ""
+"Afficher l'état des nœuds vus (c'est-à-dire obsolète, erreur, avertissement "
+"ou OK) à partir de sujets avec un type de données "
+"``diagnostic_msgs/msg/DiagnosticArray`` dans un flux en cours d'exécution, "
+"et afficher les données de diagnostic pour un ``diagnostic_name/hardware_id`"
+" donné `."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:None
+msgid "Foxglove Studio's Diagnostics panel"
+msgstr "Panneau de diagnostic de Foxglove Studio"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:64
+msgid ""
+"Reference the `docs <https://foxglove.dev/docs/studio/panels/diagnostics>`__"
+" for more details."
+msgstr ""
+"Référez-vous à la `docs "
+"<https://foxglove.dev/docs/studio/panels/diagnostics>`__ pour plus de "
+"détails."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:67
+msgid "3 Image: View camera feed images"
+msgstr "3 Image : Afficher les images du flux de la caméra"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:69
+msgid ""
+"Select a ``sensor_msgs/msg/Image`` or ``sensor_msgs/msg/CompressedImage`` "
+"topic to display."
+msgstr ""
+"Sélectionnez un sujet ``sensor_msgs/msg/Image`` ou "
+"``sensor_msgs/msg/CompressedImage`` à afficher."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:None
+msgid "Foxglove Studio's Image panel"
+msgstr "Panneau Image de Foxglove Studio"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:75
+msgid ""
+"Reference the `docs <https://foxglove.dev/docs/studio/panels/image>`__ for "
+"more details."
+msgstr ""
+"Référez-vous à la `docs <https://foxglove.dev/docs/studio/panels/image>`__ "
+"pour plus de détails."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:78
+msgid "4 Log: View log messages"
+msgstr "4 Journal : afficher les messages du journal"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:80
+msgid ""
+"To view ``rcl_interfaces/msg/Log`` messages live, use the desktop app to "
+"`connect <https://foxglove.dev/docs/studio/connection/native>`__ to your "
+"running ROS stack. To view ``rcl_interfaces/msg/Log`` messages from a pre-"
+"recorded data file, you can drag-and-drop your file into either the `web "
+"<https://studio.foxglove.dev>`__ or desktop app."
+msgstr ""
+"Pour afficher les messages ``rcl_interfaces/msg/Log`` en direct, utilisez "
+"l'application de bureau pour `connecter "
+"<https://foxglove.dev/docs/studio/connection/native>`__ à votre pile ROS en "
+"cours d'exécution. Pour afficher les messages ``rcl_interfaces/msg/Log`` à "
+"partir d'un fichier de données préenregistré, vous pouvez glisser-déposer "
+"votre fichier dans l'application `web <https://studio.foxglove.dev>`__ ou de"
+" bureau ."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:83
+msgid ""
+"Next, add a `Log <https://foxglove.dev/docs/studio/panels/log>`__ panel to "
+"your layout. If you've connected to your ROS stack correctly, you should now"
+" see a list of your log messages, with the ability to filter them by node "
+"name or severity level."
+msgstr ""
+"Ensuite, ajoutez un panneau `Log "
+"<https://foxglove.dev/docs/studio/panels/log>`__ à votre mise en page. Si "
+"vous vous êtes correctement connecté à votre pile ROS, vous devriez "
+"maintenant voir une liste de vos messages de journal, avec la possibilité de"
+" les filtrer par nom de nœud ou niveau de gravité."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:86
+msgid ""
+"Reference the `docs <https://foxglove.dev/docs/studio/panels/log>`__ for "
+"more details."
+msgstr ""
+"Référez-vous à la `docs <https://foxglove.dev/docs/studio/panels/log>`__ "
+"pour plus de détails."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:89
+msgid "5 Plot: Plot arbitrary values over time"
+msgstr "5 Tracé : tracer des valeurs arbitraires dans le temps"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:91
+msgid ""
+"Plot arbitrary values from your topics' message paths over playback time."
+msgstr ""
+"Tracez des valeurs arbitraires à partir des chemins de message de vos sujets"
+" sur la durée de lecture."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:93
+msgid ""
+"Specify the topic values you want to plot along the y-axis. For the x-axis, "
+"choose between plotting the y-axis value's timestamp, element index, or "
+"another custom topic message path."
+msgstr ""
+"Spécifiez les valeurs de sujet que vous souhaitez tracer le long de l'axe y."
+" Pour l'axe des x, choisissez entre tracer l'horodatage de la valeur de "
+"l'axe des y, l'index d'élément ou un autre chemin de message de sujet "
+"personnalisé."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:None
+msgid "Foxglove Studio's Plot panel"
+msgstr "Panneau de tracé de Foxglove Studio"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:100
+msgid ""
+"Reference the `docs <https://foxglove.dev/docs/studio/panels/plot>`__ for "
+"more details."
+msgstr ""
+"Référez-vous à la `docs <https://foxglove.dev/docs/studio/panels/plot>`__ "
+"pour plus de détails."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:103
+msgid "6 Raw Messages: View incoming topic messages"
+msgstr "6 Messages bruts : afficher les messages de sujet entrants"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:105
+msgid ""
+"Display incoming topic data in an easy-to-read collapsible JSON tree format."
+msgstr ""
+"Affichez les données de rubrique entrantes dans un format d'arborescence "
+"JSON facile à lire."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:None
+msgid "Foxglove Studio's Raw Messages panel"
+msgstr "Panneau Messages bruts de Foxglove Studio"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:111
+msgid ""
+"Reference the `docs <https://foxglove.dev/docs/studio/panels/raw-"
+"messages>`__ for more details."
+msgstr ""
+"Référez-vous à la `docs <https://foxglove.dev/docs/studio/panels/raw-"
+"messages>`__ pour plus de détails."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:114
+msgid "7 Teleop: Teleoperate your robot"
+msgstr "7 Teleop : Télé-opérez votre robot"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:116
+msgid ""
+"Teleoperate your physical robot by publishing ``geometry_msgs/msg/Twist`` "
+"messages on a given topic back to your live ROS stack."
+msgstr ""
+"Télé-opérez votre robot physique en publiant des messages "
+"``geometry_msgs/msg/Twist`` sur un sujet donné dans votre pile ROS en "
+"direct."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:None
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:None
+msgid "Foxglove Studio's URDF Viewer panel"
+msgstr "Panneau de visualisation URDF de Foxglove Studio"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:122
+msgid ""
+"Reference the `docs <https://foxglove.dev/docs/studio/panels/teleop>`__ for "
+"more details."
+msgstr ""
+"Référez-vous à la `docs <https://foxglove.dev/docs/studio/panels/teleop>`__ "
+"pour plus de détails."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:125
+msgid "8 URDF Viewer: View and manipulate your URDF model"
+msgstr "8 URDF Viewer : affichez et manipulez votre modèle URDF"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:127
+msgid ""
+"To visualize and control your robot model in Foxglove Studio, open the web "
+"or desktop application and add a `URDF Viewer "
+"<https://foxglove.dev/docs/studio/panels/urdf-viewer>`__ panel to your "
+"layout. Then, drag and drop your URDF file into that panel to visualize your"
+" robot model."
+msgstr ""
+"Pour visualiser et contrôler votre modèle de robot dans Foxglove Studio, "
+"ouvrez l'application Web ou de bureau et ajoutez un panneau `URDF Viewer "
+"<https://foxglove.dev/docs/studio/panels/urdf-viewer>`__ à votre mise en "
+"page. Ensuite, faites glisser et déposez votre fichier URDF dans ce panneau "
+"pour visualiser votre modèle de robot."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:134
+msgid ""
+"Select any topic publishing a ``JointState`` message to update the "
+"visualization based on the published joint states (defaults to "
+"``/joint_states``)."
+msgstr ""
+"Sélectionnez n'importe quel sujet publiant un message ``JointState`` pour "
+"mettre à jour la visualisation en fonction des états conjoints publiés (par "
+"défaut, ``/joint_states``)."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:136
+msgid ""
+"Toggle to \"Manual joint control\" to set joint positions using the provided"
+" controls."
+msgstr ""
+"Basculez sur \"Contrôle manuel des articulations\" pour définir les "
+"positions des articulations à l'aide des commandes fournies."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:None
+msgid "Foxglove Studio's URDF Viewer panel with editable joint positions"
+msgstr ""
+"Panneau de visualisation URDF de Foxglove Studio avec positions "
+"d'articulation modifiables"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:142
+msgid ""
+"Reference the `docs <https://foxglove.dev/docs/studio/panels/urdf-viewer>`__"
+" for more details."
+msgstr ""
+"Référez-vous à la `docs <https://foxglove.dev/docs/studio/panels/urdf-"
+"viewer>`__ pour plus de détails."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:145
+msgid "Other basic actions"
+msgstr "Autres actions de base"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:148
+msgid "1 View your ROS graph"
+msgstr "1 Affichez votre graphique ROS"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:150
+msgid ""
+"`Using the desktop app <https://foxglove.dev/download>`__, `connect "
+"<https://foxglove.dev/docs/studio/connection/native>`__ to your running ROS "
+"stack. Next, add a `Topic Graph "
+"<https://foxglove.dev/docs/studio/panels/topic-graph>`__ panel to your "
+"layout. If you've connected to your ROS stack correctly, you should now see "
+"a computational graph of your ROS nodes, topics, and services in that panel."
+" Use the controls on the right side of the panel to select which topics to "
+"display or to toggle services."
+msgstr ""
+"`À l'aide de l'application de bureau <https://foxglove.dev/download>`__, "
+"`connectez <https://foxglove.dev/docs/studio/connection/native>`__ à votre "
+"pile ROS en cours d'exécution. Ensuite, ajoutez un panneau `Topic Graph "
+"<https://foxglove.dev/docs/studio/panels/topic-graph>`__ à votre mise en "
+"page. Si vous vous êtes correctement connecté à votre pile ROS, vous devriez"
+" maintenant voir un graphique de calcul de vos nœuds, sujets et services ROS"
+" dans ce panneau. Utilisez les commandes sur le côté droit du panneau pour "
+"sélectionner les rubriques à afficher ou pour basculer entre les services."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:156
+msgid "2 View and edit your ROS params"
+msgstr "2 Affichez et modifiez vos paramètres ROS"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:158
+msgid ""
+"`Using the desktop app <https://foxglove.dev/download>`__, `connect "
+"<https://foxglove.dev/docs/studio/connection/native>`__ to your running ROS "
+"stack. Next, add a `Parameters "
+"<https://foxglove.dev/docs/studio/panels/parameters>`__ panel to your "
+"layout. If you've connected to your ROS stack correctly, you should now see "
+"a live view of your current ``rosparams``. You can edit these parameter "
+"values to publish ``rosparam`` updates back to your ROS stack."
+msgstr ""
+"`À l'aide de l'application de bureau <https://foxglove.dev/download>`__, "
+"`connectez <https://foxglove.dev/docs/studio/connection/native>`__ à votre "
+"pile ROS en cours d'exécution. Ensuite, ajoutez un panneau `Parameters "
+"<https://foxglove.dev/docs/studio/panels/parameters>`__ à votre mise en "
+"page. Si vous vous êtes correctement connecté à votre pile ROS, vous devriez"
+" maintenant voir une vue en direct de vos ``rosparams`` actuels. Vous pouvez"
+" modifier ces valeurs de paramètres pour publier les mises à jour de "
+"``rosparam`` dans votre pile ROS."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:164
+msgid "3 Publish messages back to your live ROS stack"
+msgstr "3 Publiez les messages sur votre pile ROS en direct"
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:166
+msgid ""
+"`Using the desktop app <https://foxglove.dev/download>`__, `connect "
+"<https://foxglove.dev/docs/studio/connection/native>`__ to your running ROS "
+"stack. Next, add a `Publish "
+"<https://foxglove.dev/docs/studio/panels/publish>`__ panel to your layout."
+msgstr ""
+"`À l'aide de l'application de bureau <https://foxglove.dev/download>`__, "
+"`connectez <https://foxglove.dev/docs/studio/connection/native>`__ à votre "
+"pile ROS en cours d'exécution. Ensuite, ajoutez un panneau `Publier "
+"<https://foxglove.dev/docs/studio/panels/publish>`__ à votre mise en page."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:169
+msgid ""
+"Specify the topic you want to publish on to infer its datatype and populate "
+"the text field with a JSON message template."
+msgstr ""
+"Spécifiez le sujet sur lequel vous souhaitez publier pour déduire son type "
+"de données et remplissez le champ de texte avec un modèle de message JSON."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:171
+msgid ""
+"Selecting a datatype in the dropdown of common ROS datatypes will also "
+"populate the text field with a JSON message template."
+msgstr ""
+"La sélection d'un type de données dans la liste déroulante des types de "
+"données ROS courants remplira également le champ de texte avec un modèle de "
+"message JSON."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:173
+msgid "Edit the template to customize your message before hitting \"Publish\"."
+msgstr ""
+"Modifiez le modèle pour personnaliser votre message avant de cliquer sur "
+"\"Publier\"."
+
+#: ../../source/How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.rst:None
+msgid "Foxglove Studio's Publish panel"
+msgstr "Panneau de publication de Foxglove Studio"

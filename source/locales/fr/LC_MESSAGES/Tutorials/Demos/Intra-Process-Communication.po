@@ -1,0 +1,533 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 12:05:09.214683\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:7
+msgid "Setting up efficient intra-process communication"
+msgstr "Mettre en place une communication intra-process efficace"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:11
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:14
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:16
+msgid ""
+"ROS applications typically consist of a composition of individual \"nodes\" "
+"which perform narrow tasks and are decoupled from other parts of the system."
+" This promotes fault isolation, faster development, modularity, and code "
+"reuse, but it often comes at the cost of performance. After ROS 1 was "
+"initially developed, the need for efficient composition of nodes became "
+"obvious and Nodelets were developed. In ROS 2 we aim to improve on the "
+"design of Nodelets by addressing some fundamental problems that required "
+"restructuring of nodes."
+msgstr ""
+"Les applications ROS consistent généralement en une composition de \"nœuds\""
+" individuels qui effectuent des tâches étroites et sont découplés des autres"
+" parties du système. Cela favorise l'isolation des pannes, un développement "
+"plus rapide, la modularité et la réutilisation du code, mais cela se fait "
+"souvent au détriment des performances. Après le développement initial de ROS"
+" 1, le besoin d'une composition efficace des nœuds est devenu évident et des"
+" Nodelets ont été développés. Dans ROS 2, nous visons à améliorer la "
+"conception des Nodelets en résolvant certains problèmes fondamentaux "
+"nécessitant une restructuration des nœuds."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:21
+msgid ""
+"In this demo we'll be highlighting how nodes can be composed manually, by "
+"defining the nodes separately but combining them in different process "
+"layouts without changing the node's code or limiting its abilities."
+msgstr ""
+"Dans cette démo, nous mettrons en évidence la manière dont les nœuds peuvent"
+" être composés manuellement, en définissant les nœuds séparément mais en les"
+" combinant dans différentes dispositions de processus sans modifier le code "
+"du nœud ni limiter ses capacités."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:24
+msgid "Installing the demos"
+msgstr "Installation des démos"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:26
+msgid ""
+"See the :doc:`installation instructions <../../Installation>` for details on"
+" installing ROS 2."
+msgstr ""
+"Consultez les :doc:`instructions d'installation <../../Installation>` pour "
+"plus de détails sur l'installation de ROS 2."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:28
+msgid ""
+"If you've installed ROS 2 from packages, ensure that you have ``ros-rolling-"
+"intra-process-demo`` installed. If you downloaded the archive or built ROS 2"
+" from source, it will already be part of the installation."
+msgstr ""
+"Si vous avez installé ROS 2 à partir de packages, assurez-vous que ``ros-"
+"rolling-intra-process-demo`` est installé. Si vous avez téléchargé l'archive"
+" ou construit ROS 2 à partir de la source, cela fera déjà partie de "
+"l'installation."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:32
+msgid "Running and understanding the demos"
+msgstr "Exécution et compréhension des démos"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:34
+msgid ""
+"There are a few different demos: some are toy problems designed to highlight"
+" features of the intra process communications functionality and some are end"
+" to end examples which use OpenCV and demonstrate the ability to recombine "
+"nodes into different configurations."
+msgstr ""
+"Il existe quelques démos différentes : certaines sont des problèmes de "
+"jouets conçus pour mettre en évidence les fonctionnalités de la "
+"fonctionnalité de communication intra-processus et d'autres sont des "
+"exemples de bout en bout qui utilisent OpenCV et démontrent la capacité de "
+"recombiner des nœuds dans différentes configurations."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:37
+msgid "The two node pipeline demo"
+msgstr "La démonstration du pipeline à deux nœuds"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:39
+msgid ""
+"This demo is designed to show that the intra process publish/subscribe "
+"connection can result in zero-copy transport of messages when publishing and"
+" subscribing with ``std::unique_ptr``\\ s."
+msgstr ""
+"Cette démonstration est conçue pour montrer que la connexion de "
+"publication/abonnement intra-processus peut entraîner un transport sans "
+"copie des messages lors de la publication et de l'abonnement avec "
+"``std::unique_ptr``\\ s."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:41
+msgid "First let's take a look at the source:"
+msgstr "Voyons d'abord la source :"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:43
+msgid ""
+"https://github.com/ros2/demos/blob/rolling/intra_process_demo/src/two_node_pipeline/two_node_pipeline.cpp"
+msgstr ""
+"https://github.com/ros2/demos/blob/rolling/intra_process_demo/src/two_node_pipeline/two_node_pipeline.cpp"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:127
+msgid ""
+"As you can see by looking at the ``main`` function, we have a producer and a"
+" consumer node, we add them to a single threaded executor, and then call "
+"spin."
+msgstr ""
+"Comme vous pouvez le voir en regardant la fonction ``main``, nous avons un "
+"nœud producteur et un nœud consommateur, nous les ajoutons à un seul "
+"exécuteur fileté, puis nous appelons spin."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:129
+msgid ""
+"If you look at the \"producer\" node's implementation in the ``Producer`` "
+"struct, you can see that we have created a publisher which publishes on the "
+"\"number\" topic and a timer which periodically creates a new message, "
+"prints out its address in memory and its content's value and then publishes "
+"it."
+msgstr ""
+"Si vous regardez l'implémentation du nœud \"producteur\" dans la structure "
+"``Producteur``, vous pouvez voir que nous avons créé un éditeur qui publie "
+"sur le sujet \"numéro\" et un minuteur qui crée périodiquement un nouveau "
+"message, imprime son adresse en mémoire et la valeur de son contenu, puis le"
+" publie."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:131
+msgid ""
+"The \"consumer\" node is a bit simpler, you can see its implementation in "
+"the ``Consumer`` struct, as it only subscribes to the \"number\" topic and "
+"prints the address and value of the message it receives."
+msgstr ""
+"Le nœud \"consumer\" est un peu plus simple, vous pouvez voir son "
+"implémentation dans la structure ``Consumer``, car il ne s'abonne qu'au "
+"sujet \"number\" et imprime l'adresse et la valeur du message qu'il reçoit."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:133
+msgid ""
+"The expectation is that the producer will print out an address and value and"
+" the consumer will print out a matching address and value. This demonstrates"
+" that intra process communication is indeed working and unnecessary copies "
+"are avoided, at least for simple graphs."
+msgstr ""
+"On s'attend à ce que le producteur imprime une adresse et une valeur et que "
+"le consommateur imprime une adresse et une valeur correspondantes. Cela "
+"démontre que la communication intra-processus fonctionne bien et que les "
+"copies inutiles sont évitées, du moins pour les graphes simples."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:136
+msgid ""
+"Let's run the demo by executing ``ros2 run intra_process_demo "
+"two_node_pipeline`` executable (don't forget to source the setup file "
+"first):"
+msgstr ""
+"Lançons la démo en exécutant l'exécutable ``ros2 run intra_process_demo "
+"two_node_pipeline`` (n'oubliez pas de sourcer d'abord le fichier de "
+"configuration) :"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:154
+msgid ""
+"One thing you'll notice is that the messages tick along at about one per "
+"second. This is because we told the timer to fire at about once per second."
+msgstr ""
+"Une chose que vous remarquerez est que les messages défilent à environ un "
+"par seconde. C'est parce que nous avons dit au chronomètre de tirer environ "
+"une fois par seconde."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:157
+msgid ""
+"Also you may have noticed that the first message (with value ``0``) does not"
+" have a corresponding \"Received message ...\" line. This is because "
+"publish/subscribe is \"best effort\" and we do not have any \"latching\" "
+"like behavior enabled. This means that if the publisher publishes a message "
+"before the subscription has been established, the subscription will not "
+"receive that message. This race condition can result in the first few "
+"messages being lost. In this case, since they only come once per second, "
+"usually only the first message is lost."
+msgstr ""
+"De plus, vous avez peut-être remarqué que le premier message (avec la valeur"
+" ``0``) n'a pas de ligne \"Message reçu ...\" correspondante. En effet, la "
+"publication/l'abonnement est \"le meilleur effort\" et nous n'avons aucun "
+"comportement de type \"verrouillage\" activé. Cela signifie que si l'éditeur"
+" publie un message avant que l'abonnement ne soit établi, l'abonnement ne "
+"recevra pas ce message. Cette condition de concurrence peut entraîner la "
+"perte des premiers messages. Dans ce cas, comme ils ne viennent qu'une fois "
+"par seconde, généralement seul le premier message est perdu."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:163
+msgid ""
+"Finally, you can see that \"Published message...\" and \"Received message "
+"...\" lines with the same value also have the same address. This shows that "
+"the address of the message being received is the same as the one that was "
+"published and that it is not a copy. This is because we're publishing and "
+"subscribing with ``std::unique_ptr``\\ s which allow ownership of a message "
+"to be moved around the system safely. You can also publish and subscribe "
+"with ``const &`` and ``std::shared_ptr``, but zero-copy will not occur in "
+"that case."
+msgstr ""
+"Enfin, vous pouvez voir que les lignes \"Message publié...\" et \"Message "
+"reçu...\" de même valeur ont également la même adresse. Cela montre que "
+"l'adresse du message reçu est la même que celle qui a été publiée et qu'il "
+"ne s'agit pas d'une copie. C'est parce que nous publions et nous abonnons "
+"avec ``std::unique_ptr``\\ s qui permettent de déplacer la propriété d'un "
+"message dans le système en toute sécurité. Vous pouvez également publier et "
+"vous abonner avec ``const &`` et ``std::shared_ptr``, mais la copie zéro ne "
+"se produira pas dans ce cas."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:169
+msgid "The cyclic pipeline demo"
+msgstr "La démo du pipeline cyclique"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:171
+msgid ""
+"This demo is similar to the previous one, but instead of the producer "
+"creating a new message for each iteration, this demo only ever uses one "
+"message instance. This is achieved by creating a cycle in the graph and "
+"\"kicking off\" communication by externally making one of the nodes publish "
+"before spinning the executor:"
+msgstr ""
+"Cette démo est similaire à la précédente, mais au lieu que le producteur "
+"crée un nouveau message pour chaque itération, cette démo n'utilise qu'une "
+"seule instance de message. Ceci est réalisé en créant un cycle dans le "
+"graphe et en \"lançant\" la communication en faisant publier en externe l'un"
+" des nœuds avant de faire tourner l'exécuteur :"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:174
+msgid ""
+"https://github.com/ros2/demos/blob/rolling/intra_process_demo/src/cyclic_pipeline/cyclic_pipeline.cpp"
+msgstr ""
+"https://github.com/ros2/demos/blob/rolling/intra_process_demo/src/cyclic_pipeline/cyclic_pipeline.cpp"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:256
+msgid ""
+"Unlike the previous demo, this demo uses only one Node, instantiated twice "
+"with different names and configurations. The graph ends up being ``pipe1`` "
+"-> ``pipe2`` -> ``pipe1`` ... in a loop."
+msgstr ""
+"Contrairement à la démo précédente, cette démo utilise un seul nœud, "
+"instancié deux fois avec des noms et des configurations différents. Le "
+"graphique finit par être ``pipe1`` -> ``pipe2`` -> ``pipe1`` ... dans une "
+"boucle."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:259
+msgid ""
+"The line ``pipe1->pub->publish(msg);`` kicks the process off, but from then "
+"on the messages are passed back and forth between the nodes by each one "
+"calling publish within its own subscription callback."
+msgstr ""
+"La ligne ``pipe1->pub->publish(msg);`` lance le processus, mais à partir de "
+"là, les messages sont transmis entre les nœuds par chacun appelant la "
+"publication dans son propre rappel d'abonnement."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:261
+msgid ""
+"The expectation here is that the nodes pass the message back and forth, once"
+" a second, incrementing the value of the message each time. Because the "
+"message is being published and subscribed to as a ``unique_ptr`` the same "
+"message created at the beginning is continuously used."
+msgstr ""
+"L'attente ici est que les nœuds transmettent le message dans les deux sens, "
+"une fois par seconde, en incrémentant la valeur du message à chaque fois. "
+"Comme le message est publié et souscrit en tant que ``unique_ptr``, le même "
+"message créé au début est utilisé en permanence."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:264
+msgid "To test those expectations, let's run it:"
+msgstr "Pour tester ces attentes, exécutons-le :"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:294
+msgid ""
+"You should see ever increasing numbers on each iteration, starting with "
+"42... because 42, and the whole time it reuses the same message, as "
+"demonstrated by the pointer addresses which do not change, which avoids "
+"unnecessary copies."
+msgstr ""
+"Vous devriez voir des nombres toujours croissants à chaque itération, en "
+"commençant par 42... car 42, et tout le temps ça réutilise le même message, "
+"comme en témoignent les adresses des pointeurs qui ne changent pas, ce qui "
+"évite les copies inutiles."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:297
+msgid "The image pipeline demo"
+msgstr "La démonstration du pipeline d'images"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:299
+msgid ""
+"In this demo we'll use OpenCV to capture, annotate, and then view images."
+msgstr ""
+"Dans cette démo, nous utiliserons OpenCV pour capturer, annoter, puis "
+"afficher des images."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:303
+msgid ""
+"If you are on macOS and these examples do not work or you receive an error "
+"like ``ddsi_conn_write failed -1``, then you'll need to increase your system"
+" wide UDP packet size:"
+msgstr ""
+"Si vous êtes sur macOS et que ces exemples ne fonctionnent pas ou que vous "
+"recevez une erreur telle que ``ddsi_conn_write failed -1``, vous devrez "
+"alors augmenter la taille des paquets UDP à l'échelle de votre système :"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:310
+msgid "These changes will not persist after a reboot."
+msgstr "Ces modifications ne persisteront pas après un redémarrage."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:313
+msgid "Simple pipeline"
+msgstr "Conduite simplifiée"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:315
+msgid ""
+"First we'll have a pipeline of three nodes, arranged as such: "
+"``camera_node`` -> ``watermark_node`` -> ``image_view_node``"
+msgstr ""
+"Nous aurons d'abord un pipeline de trois nœuds, organisés comme tels : "
+"``camera_node`` -> ``watermark_node`` -> ``image_view_node``"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:317
+msgid ""
+"The ``camera_node`` reads from camera device ``0`` on your computer, writes "
+"some information on the image and publishes it. The ``watermark_node`` "
+"subscribes to the output of the ``camera_node`` and adds more text before "
+"publishing it too. Finally, the ``image_view_node`` subscribes to the output"
+" of the ``watermark_node``, writes more text to the image and then "
+"visualizes it with ``cv::imshow``."
+msgstr ""
+"Le ``camera_node`` lit à partir de l'appareil photo ``0`` sur votre "
+"ordinateur, écrit des informations sur l'image et les publie. Le "
+"``watermark_node`` s'abonne à la sortie du ``camera_node`` et ajoute plus de"
+" texte avant de le publier également. Enfin, le ``image_view_node`` s'abonne"
+" à la sortie du ``watermark_node``, écrit plus de texte sur l'image puis le "
+"visualise avec ``cv::imshow``."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:321
+msgid ""
+"In each node the address of the message which is being sent, or which has "
+"been received, or both, is written to the image. The watermark and image "
+"view nodes are designed to modify the image without copying it and so the "
+"addresses imprinted on the image should all be the same as long as the nodes"
+" are in the same process and the graph remains organized in a pipeline as "
+"sketched above."
+msgstr ""
+"Dans chaque nœud, l'adresse du message qui est envoyé, ou qui a été reçu, ou"
+" les deux, est écrite dans l'image. Les nœuds de filigrane et de vue d'image"
+" sont conçus pour modifier l'image sans la copier et donc les adresses "
+"imprimées sur l'image doivent toutes être les mêmes tant que les nœuds sont "
+"dans le même processus et que le graphique reste organisé dans un pipeline "
+"comme esquissé ci-dessus."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:326
+msgid ""
+"On some systems (we've seen it happen on Linux), the address printed to the "
+"screen might not change. This is because the same unique pointer is being "
+"reused. In this situation, the pipeline is still running."
+msgstr ""
+"Sur certains systèmes (nous l'avons vu sur Linux), l'adresse imprimée à "
+"l'écran peut ne pas changer. C'est parce que le même pointeur unique est "
+"réutilisé. Dans cette situation, le pipeline est toujours en cours "
+"d'exécution."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:329
+msgid "Let's run the demo by executing the following executable:"
+msgstr "Lançons la démo en exécutant l'exécutable suivant :"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:335
+msgid "You should see something like this:"
+msgstr "Vous devriez voir quelque chose comme ceci :"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:341
+msgid ""
+"You can pause the rendering of the image by pressing the spacebar and you "
+"can resume by pressing the spacebar again. You can also press ``q`` or "
+"``ESC`` to exit."
+msgstr ""
+"Vous pouvez interrompre le rendu de l'image en appuyant sur la barre "
+"d'espace et vous pouvez reprendre en appuyant à nouveau sur la barre "
+"d'espace. Vous pouvez également appuyer sur ``q`` ou ``ESC`` pour quitter."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:344
+msgid ""
+"If you pause the image viewer, you should be able to compare the addresses "
+"written on the image and see that they are the same."
+msgstr ""
+"Si vous mettez en pause la visionneuse d'images, vous devriez pouvoir "
+"comparer les adresses écrites sur l'image et voir qu'elles sont identiques."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:347
+msgid "Pipeline with two image viewers"
+msgstr "Pipeline avec deux visionneuses d'images"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:349
+msgid ""
+"Now let's look at an example just like the one above, except it has two "
+"image view nodes. All the nodes are still in the same process, but now two "
+"image view windows should show up. (Note for macOS users: your image view "
+"windows might be on top of each other). Let's run it with the command:"
+msgstr ""
+"Regardons maintenant un exemple comme celui ci-dessus, sauf qu'il a deux "
+"nœuds de vue d'image. Tous les nœuds sont toujours dans le même processus, "
+"mais maintenant deux fenêtres d'affichage d'image devraient apparaître. "
+"(Remarque pour les utilisateurs de macOS : vos fenêtres d'affichage d'image "
+"peuvent se superposer). Exécutons-le avec la commande :"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:361
+msgid ""
+"Just like the last example, you can pause the rendering with the spacebar "
+"and continue by pressing the spacebar a second time. You can stop the "
+"updating to inspect the pointers written to the screen."
+msgstr ""
+"Tout comme le dernier exemple, vous pouvez interrompre le rendu avec la "
+"barre d'espace et continuer en appuyant une seconde fois sur la barre "
+"d'espace. Vous pouvez arrêter la mise à jour pour inspecter les pointeurs "
+"écrits à l'écran."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:363
+msgid ""
+"As you can see in the example image above, we have one image with all of the"
+" pointers the same and then another image with the same pointers as the "
+"first image for the first two entries, but the last pointer on the second "
+"image is different. To understand why this is happening consider the graph's"
+" topology:"
+msgstr ""
+"Comme vous pouvez le voir dans l'exemple d'image ci-dessus, nous avons une "
+"image avec tous les pointeurs identiques, puis une autre image avec les "
+"mêmes pointeurs que la première image pour les deux premières entrées, mais "
+"le dernier pointeur sur la deuxième image est différent. Pour comprendre "
+"pourquoi cela se produit, considérez la topologie du graphique :"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:370
+msgid ""
+"The link between the ``camera_node`` and the ``watermark_node`` can use the "
+"same pointer without copying because there is only one intra process "
+"subscription to which the message should be delivered. But for the link "
+"between the ``watermark_node`` and the two image view nodes the relationship"
+" is one to many, so if the image view nodes were using ``unique_ptr`` "
+"callbacks then it would be impossible to deliver the ownership of the same "
+"pointer to both. It can be, however, delivered to one of them. Which one "
+"would get the original pointer is not defined, but instead is simply the "
+"last to be delivered."
+msgstr ""
+"Le lien entre le ``camera_node`` et le ``watermark_node`` peut utiliser le "
+"même pointeur sans copier car il n'y a qu'un seul abonnement intra-processus"
+" auquel le message doit être livré. Mais pour le lien entre le "
+"``watermark_node`` et les deux nœuds de vue d'image, la relation est un à "
+"plusieurs, donc si les nœuds de vue d'image utilisaient des rappels "
+"``unique_ptr``, il serait alors impossible de livrer la propriété du même "
+"pointeur vers les deux. Il peut cependant être livré à l'un d'entre eux. "
+"Celui qui obtiendrait le pointeur d'origine n'est pas défini, mais est "
+"simplement le dernier à être livré."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:372
+msgid ""
+"Note that the image view nodes are not subscribed with ``unique_ptr`` "
+"callbacks. Instead they are subscribed with ``const shared_ptr``\\ s. This "
+"means the system deliveres the same ``shared_ptr`` to both callbacks. When "
+"the first intraprocess subscription is handled, the internally stored "
+"``unique_ptr`` is promoted to a ``shared_ptr``. Each of the callbacks will "
+"receive shared ownership of the same message."
+msgstr ""
+"Notez que les nœuds de vue d'image ne sont pas abonnés aux rappels "
+"``unique_ptr``. Au lieu de cela, ils sont abonnés avec ``const "
+"shared_ptr``\\ s. Cela signifie que le système délivre le même "
+"``shared_ptr`` aux deux rappels. Lorsque le premier abonnement "
+"intraprocessus est géré, le ``unique_ptr`` stocké en interne est promu en "
+"``shared_ptr``. Chacun des rappels recevra la propriété partagée du même "
+"message."
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:375
+msgid "Pipeline with interprocess viewer"
+msgstr "Pipeline avec visualiseur interprocessus"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:377
+msgid ""
+"One other important thing to get right is to avoid interruption of the intra"
+" process zero-copy behavior when interprocess subscriptions are made. To "
+"test this we can run the first image pipeline demo, "
+"``image_pipeline_all_in_one``, and then run an instance of the stand alone "
+"``image_view_node`` (don't forget to prefix them with ``ros2 run "
+"intra_process_demo`` in the terminal). This will look something like this:"
+msgstr ""
+"Une autre chose importante à faire est d'éviter l'interruption du "
+"comportement de copie zéro intra-processus lorsque des abonnements inter-"
+"processus sont effectués. Pour tester cela, nous pouvons exécuter la "
+"première démo de pipeline d'images, ``image_pipeline_all_in_one``, puis "
+"exécuter une instance du seul ``image_view_node`` (n'oubliez pas de les "
+"préfixer avec ``ros2 run intra_process_demo`` dans le Terminal). Cela "
+"ressemblera à ceci :"
+
+#: ../../source/Tutorials/Demos/Intra-Process-Communication.rst:383
+msgid ""
+"It's hard to pause both images at the same time so the images may not line "
+"up, but the important thing to notice is that the "
+"``image_pipeline_all_in_one`` image view shows the same address for each "
+"step. This means that the intra process zero-copy is preserved even when an "
+"external view is subscribed as well. You can also see that the interprocess "
+"image view has different process IDs for the first two lines of text and the"
+" process ID of the standalone image viewer in the third line of text."
+msgstr ""
+"Il est difficile de mettre en pause les deux images en même temps afin que "
+"les images ne soient pas alignées, mais la chose importante à noter est que "
+"la vue d'image ``image_pipeline_all_in_one`` affiche la même adresse pour "
+"chaque étape. Cela signifie que la copie zéro intra-processus est conservée "
+"même lorsqu'une vue externe est également souscrite. Vous pouvez également "
+"voir que la vue d'image interprocessus a des ID de processus différents pour"
+" les deux premières lignes de texte et l'ID de processus de la visionneuse "
+"d'images autonome dans la troisième ligne de texte."

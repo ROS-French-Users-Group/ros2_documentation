@@ -1,0 +1,445 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 12:00:37.916941\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:8
+msgid "Adding a frame (Python)"
+msgstr "Ajouter un cadre (Python)"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:10
+msgid "**Goal:** Learn how to to add an extra frame to tf2."
+msgstr "**Objectif :** Apprenez à ajouter une image supplémentaire à tf2."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:12
+msgid "**Tutorial level:** Intermediate"
+msgstr "**Niveau du didacticiel :** Intermédiaire"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:14
+msgid "**Time:** 15 minutes"
+msgstr "**Durée :** 15 minutes"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:18
+msgid "Contents"
+msgstr "Contenu"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:21
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:23
+msgid ""
+"In previous tutorials, we recreated the turtle demo by writing a :doc:`tf2 "
+"broadcaster <./Writing-A-Tf2-Broadcaster-Py>` and a :doc:`tf2 listener "
+"<./Writing-A-Tf2-Listener-Py>`. This tutorial will teach you how to add "
+"extra fixed and dynamic frames to the transformation tree. In fact, adding a"
+" frame in tf2 is very similar to creating the tf2 broadcaster, but this "
+"example will show you some additional features of tf2."
+msgstr ""
+"Dans les tutoriels précédents, nous avons recréé la démo de la tortue en "
+"écrivant un :doc:`tf2 broadcaster <./Writing-A-Tf2-Broadcaster-Py>` et un "
+":doc:`tf2 listener <./Writing-A-Tf2-Listener -Py>`. Ce didacticiel vous "
+"apprendra comment ajouter des cadres fixes et dynamiques supplémentaires à "
+"l'arbre de transformation. En fait, l'ajout d'un cadre dans tf2 est très "
+"similaire à la création du diffuseur tf2, mais cet exemple vous montrera "
+"quelques fonctionnalités supplémentaires de tf2."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:27
+msgid ""
+"For many tasks related to transformations, it is easier to think inside a "
+"local frame. For example, it is easiest to reason about laser scan "
+"measurements in a frame at the center of the laser scanner. tf2 allows you "
+"to define a local frame for each sensor, link, or joint in your system. When"
+" transforming from one frame to another, tf2 will take care of all the "
+"hidden intermediate frame transformations that are introduced."
+msgstr ""
+"Pour de nombreuses tâches liées aux transformations, il est plus facile de "
+"penser à l'intérieur d'un cadre local. Par exemple, il est plus facile de "
+"raisonner sur les mesures de balayage laser dans un cadre au centre du "
+"scanner laser. tf2 vous permet de définir une trame locale pour chaque "
+"capteur, lien ou joint de votre système. Lors de la transformation d'une "
+"image à une autre, tf2 s'occupera de toutes les transformations d'images "
+"intermédiaires cachées qui sont introduites."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:33
+msgid "tf2 tree"
+msgstr "arbre tf2"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:35
+msgid ""
+"tf2 builds up a tree structure of frames and, thus, does not allow a closed "
+"loop in the frame structure. This means that a frame only has one single "
+"parent, but it can have multiple children. Currently, our tf2 tree contains "
+"three frames: ``world``, ``turtle1`` and ``turtle2``. The two turtle frames "
+"are children of the ``world`` frame. If we want to add a new frame to tf2, "
+"one of the three existing frames needs to be the parent frame, and the new "
+"one will become its child frame."
+msgstr ""
+"tf2 construit une structure arborescente de trames et, par conséquent, ne "
+"permet pas une boucle fermée dans la structure de trame. Cela signifie qu'un"
+" cadre n'a qu'un seul parent, mais qu'il peut avoir plusieurs enfants. "
+"Actuellement, notre arborescence tf2 contient trois cadres : ``world``, "
+"``turtle1`` et ``turtle2``. Les deux cadres tortues sont des enfants du "
+"cadre ``monde``. Si nous voulons ajouter un nouveau cadre à tf2, l'un des "
+"trois cadres existants doit être le cadre parent, et le nouveau deviendra "
+"son cadre enfant."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:44
+msgid "Tasks"
+msgstr "Tâches"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:47
+msgid "1 Write the fixed frame broadcaster"
+msgstr "1 Écrivez le diffuseur à cadre fixe"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:49
+msgid ""
+"In our turtle example, we'll add a new frame ``carrot1``, which will be the "
+"child of the ``turtle1``. This frame will serve as the goal for the second "
+"turtle."
+msgstr ""
+"Dans notre exemple de tortue, nous allons ajouter un nouveau cadre "
+"``carrot1``, qui sera l'enfant de ``turtle1``. Ce cadre servira de but pour "
+"la deuxième tortue."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:52
+msgid ""
+"Let's first create the source files. Go to the ``learning_tf2_py`` package "
+"we created in the previous tutorials. Download the fixed frame broadcaster "
+"code by entering the following command:"
+msgstr ""
+"Commençons par créer les fichiers source. Accédez au package "
+"``learning_tf2_py`` que nous avons créé dans les tutoriels précédents. "
+"Téléchargez le code du diffuseur à cadre fixe en saisissant la commande "
+"suivante :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:57
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:217
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:235
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:257
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:328
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:471
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:489
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:511
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:63
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:223
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:241
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:263
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:334
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:477
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:495
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:517
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:69
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:227
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:247
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:269
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:340
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:481
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:501
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:523
+msgid "Windows"
+msgstr "les fenêtres"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:71
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:342
+msgid "In a Windows command line prompt:"
+msgstr "Dans une invite de ligne de commande Windows :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:77
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:348
+msgid "Or in powershell:"
+msgstr "Ou en powershell :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:83
+msgid "Now open the file called ``fixed_frame_tf2_broadcaster.py``."
+msgstr ""
+"Ouvrez maintenant le fichier appelé ``fixed_frame_tf2_broadcaster.py``."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:129
+msgid ""
+"The code is very similar to the tf2 broadcaster tutorial example and the "
+"only difference is that the transform here does not change over time."
+msgstr ""
+"Le code est très similaire à l'exemple du didacticiel du diffuseur tf2 et la"
+" seule différence est que la transformation ici ne change pas avec le temps."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:132
+msgid "1.1 Examine the code"
+msgstr "1.1 Examiner le code"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:134
+msgid ""
+"Let's take a look at the key lines in this piece of code. Here we create a "
+"new transform, from the parent ``turtle1`` to the new child ``carrot1``. The"
+" ``carrot1`` frame is 2 meters offset in y axis in terms of the ``turtle1`` "
+"frame."
+msgstr ""
+"Examinons les lignes clés de ce morceau de code. Ici, nous créons une "
+"nouvelle transformation, du parent ``turtle1`` au nouvel enfant ``carrot1``."
+" Le cadre ``carrot1`` est décalé de 2 mètres sur l'axe y par rapport au "
+"cadre ``turtle1``."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:150
+msgid "1.2 Add an entry point"
+msgstr "1.2 Ajouter un point d'entrée"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:152
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:420
+msgid ""
+"To allow the ``ros2 run`` command to run your node, you must add the entry "
+"point to ``setup.py`` (located in the ``src/learning_tf2_py`` directory)."
+msgstr ""
+"Pour permettre à la commande ``ros2 run`` d'exécuter votre nœud, vous devez "
+"ajouter le point d'entrée à ``setup.py`` (situé dans le répertoire "
+"``src/learning_tf2_py``)."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:155
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:423
+msgid ""
+"Finally, add the following line between the ``'console_scripts':`` brackets:"
+msgstr ""
+"Enfin, ajoutez la ligne suivante entre les crochets ``'console_scripts':`` :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:162
+msgid "1.3 Write the launch file"
+msgstr "1.3 Écrire le fichier de lancement"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:164
+msgid ""
+"Now let's create a launch file for this example. With your text editor, "
+"create a new file called ``launch/turtle_tf2_fixed_frame_demo.launch.py``, "
+"and add the following lines:"
+msgstr ""
+"Créons maintenant un fichier de lancement pour cet exemple. Avec votre "
+"éditeur de texte, créez un nouveau fichier appelé "
+"``launch/turtle_tf2_fixed_frame_demo.launch.py``, et ajoutez les lignes "
+"suivantes :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:197
+msgid ""
+"This launch file imports the required packages and then creates a "
+"``demo_nodes`` variable that will store nodes that we created in the "
+"previous tutorial's launch file."
+msgstr ""
+"Ce fichier de lancement importe les packages requis, puis crée une variable "
+"``demo_nodes`` qui stockera les nœuds que nous avons créés dans le fichier "
+"de lancement du didacticiel précédent."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:199
+msgid ""
+"The last part of the code will add our fixed ``carrot1`` frame to the "
+"turtlesim world using our ``fixed_frame_tf2_broadcaster`` node."
+msgstr ""
+"La dernière partie du code ajoutera notre cadre fixe ``carrot1`` au monde "
+"turtlesim en utilisant notre nœud ``fixed_frame_tf2_broadcaster``."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:211
+msgid "1.4 Build"
+msgstr "1.4 Construire"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:213
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:467
+msgid ""
+"Run ``rosdep`` in the root of your workspace to check for missing "
+"dependencies."
+msgstr ""
+"Exécutez ``rosdep`` à la racine de votre espace de travail pour vérifier les"
+" dépendances manquantes."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:225
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:229
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:479
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:483
+msgid ""
+"rosdep only runs on Linux, so you will need to install ``geometry_msgs`` and"
+" ``turtlesim`` dependencies yourself"
+msgstr ""
+"rosdep ne fonctionne que sous Linux, vous devrez donc installer vous-même "
+"les dépendances ``geometry_msgs`` et ``turtlesim``"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:231
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:485
+msgid "Still in the root of your workspace, build your package:"
+msgstr ""
+"Toujours à la racine de votre espace de travail, construisez votre package :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:253
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:507
+msgid ""
+"Open a new terminal, navigate to the root of your workspace, and source the "
+"setup files:"
+msgstr ""
+"Ouvrez un nouveau terminal, accédez à la racine de votre espace de travail "
+"et sourcez les fichiers de configuration :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:280
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:534
+msgid "1.5 Run"
+msgstr "1.5 Exécuter"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:282
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:536
+msgid "Now you are ready to run the launch file:"
+msgstr "Vous êtes maintenant prêt à exécuter le fichier de lancement :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:288
+msgid ""
+"You should notice that the new ``carrot1`` frame appeared in the "
+"transformation tree."
+msgstr ""
+"Vous devriez remarquer que le nouveau cadre ``carrot1`` est apparu dans "
+"l'arbre de transformation."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:292
+msgid ""
+"If you drive the first turtle around, you should notice that the behavior "
+"didn't change from the previous tutorial, even though we added a new frame. "
+"That's because adding an extra frame does not affect the other frames and "
+"our listener is still using the previously defined frames."
+msgstr ""
+"Si vous conduisez la première tortue, vous devriez remarquer que le "
+"comportement n'a pas changé par rapport au didacticiel précédent, même si "
+"nous avons ajouté une nouvelle image. En effet, l'ajout d'une image "
+"supplémentaire n'affecte pas les autres images et notre écouteur utilise "
+"toujours les images définies précédemment."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:295
+msgid ""
+"Therefore if we want our second turtle to follow the carrot instead of the "
+"first turtle, we need to change value of the ``target_frame``. This can be "
+"done two ways. One way is to pass the ``target_frame`` argument to the "
+"launch file directly from the console:"
+msgstr ""
+"Par conséquent, si nous voulons que notre deuxième tortue suive la carotte "
+"au lieu de la première tortue, nous devons changer la valeur de "
+"``target_frame``. Cela peut être fait de deux façons. Une façon consiste à "
+"passer l'argument ``target_frame`` au fichier de lancement directement "
+"depuis la console :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:303
+msgid ""
+"The second way is to update the launch file. To do so, open the "
+"``turtle_tf2_fixed_frame_demo.launch.py`` file, and add the "
+"``'target_frame': 'carrot1'`` parameter via ``launch_arguments`` argument."
+msgstr ""
+"La deuxième méthode consiste à mettre à jour le fichier de lancement. Pour "
+"ce faire, ouvrez le fichier ``turtle_tf2_fixed_frame_demo.launch.py`` et "
+"ajoutez le paramètre ``'target_frame': 'carrot1'`` via l'argument "
+"``launch_arguments``."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:314
+msgid ""
+"Now just rebuild the package, restart the "
+"``turtle_tf2_fixed_frame_demo.launch.py``, and you'll see the second turtle "
+"following the carrot instead of the first turtle!"
+msgstr ""
+"Maintenant, reconstruisez simplement le paquet, redémarrez "
+"``turtle_tf2_fixed_frame_demo.launch.py``, et vous verrez la deuxième tortue"
+" suivre la carotte au lieu de la première tortue !"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:319
+msgid "2 Write the dynamic frame broadcaster"
+msgstr "2 Écrire le diffuseur de trame dynamique"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:321
+msgid ""
+"The extra frame we published in this tutorial is a fixed frame that doesn't "
+"change over time in relation to the parent frame. However, if you want to "
+"publish a moving frame you can code the broadcaster to change the frame over"
+" time. Let's change our ``carrot1`` frame so that it changes relative to "
+"``turtle1`` frame over time. Now download the dynamic frame broadcaster code"
+" by entering the following command:"
+msgstr ""
+"Le cadre supplémentaire que nous avons publié dans ce didacticiel est un "
+"cadre fixe qui ne change pas dans le temps par rapport au cadre parent. "
+"Cependant, si vous souhaitez publier une image mobile, vous pouvez coder le "
+"diffuseur pour modifier l'image au fil du temps. Modifions notre cadre "
+"``carrot1`` pour qu'il change par rapport au cadre ``turtle1`` au fil du "
+"temps. Téléchargez maintenant le code du diffuseur de trames dynamiques en "
+"saisissant la commande suivante :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:354
+msgid "Now open the file called ``dynamic_frame_tf2_broadcaster.py``:"
+msgstr ""
+"Ouvrez maintenant le fichier appelé ``dynamic_frame_tf2_broadcaster.py`` :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:405
+msgid "2.1 Examine the code"
+msgstr "2.1 Examiner le code"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:407
+msgid ""
+"Instead of a fixed definition of our x and y offsets, we are using the "
+"``sin()`` and ``cos()`` functions on the current time so that the offset of "
+"``carrot1`` is constantly changing."
+msgstr ""
+"Au lieu d'une définition fixe de nos décalages x et y, nous utilisons les "
+"fonctions ``sin()`` et ``cos()`` sur l'heure actuelle afin que le décalage "
+"de ``carrot1`` change constamment."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:418
+msgid "2.2 Add an entry point"
+msgstr "2.2 Ajouter un point d'entrée"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:430
+msgid "2.3 Write the launch file"
+msgstr "2.3 Écrire le fichier de lancement"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:432
+msgid ""
+"To test this code, create a new launch file "
+"``launch/turtle_tf2_dynamic_frame_demo.launch.py`` and paste the following "
+"code:"
+msgstr ""
+"Pour tester ce code, créez un nouveau fichier de lancement "
+"``launch/turtle_tf2_dynamic_frame_demo.launch.py`` et collez le code "
+"suivant :"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:465
+msgid "2.4 Build"
+msgstr "2.4 Construire"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:542
+msgid ""
+"You should see that the second turtle is following the carrot's position "
+"that is constantly changing."
+msgstr ""
+"Vous devriez voir que la deuxième tortue suit la position de la carotte qui "
+"change constamment."
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:547
+msgid "Summary"
+msgstr "Résumé"
+
+#: ../../source/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.rst:549
+msgid ""
+"In this tutorial, you learned about the tf2 transformation tree, its "
+"structure, and its features. You also learned that it is easiest to think "
+"inside a local frame, and learned to add extra fixed and dynamic frames for "
+"that local frame."
+msgstr ""
+"Dans ce didacticiel, vous avez découvert l'arbre de transformation tf2, sa "
+"structure et ses fonctionnalités. Vous avez également appris qu'il est plus "
+"facile de penser à l'intérieur d'un cadre local et appris à ajouter des "
+"cadres fixes et dynamiques supplémentaires pour ce cadre local."

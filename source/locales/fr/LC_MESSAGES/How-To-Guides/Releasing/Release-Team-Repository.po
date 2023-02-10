@@ -1,0 +1,263 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 17:02:37.403652\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/How-To-Guides/Releasing/Release-Team-Repository.rst:2
+msgid "Release Team / Repository"
+msgstr "Équipe de publication / Référentiel"
+
+#: ../../source/How-To-Guides/Releasing/Release-Team-Repository.rst:6
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/How-To-Guides/Releasing/Release-Team-Repository.rst:8
+msgid ""
+"This page explains the recommended method of hosting your release "
+"repositories on `ros2-gbp <https://github.com/ros2-gbp>`_."
+msgstr ""
+"Cette page explique la méthode recommandée pour héberger vos dépôts de "
+"version sur `ros2-gbp <https://github.com/ros2-gbp>`_."
+
+#: ../../source/How-To-Guides/Releasing/Release-Team-Repository.rst:11
+msgid "What is ROS 2 GBP?"
+msgstr "Qu'est-ce que le ROS 2 GBP ?"
+
+#: ../../source/How-To-Guides/Releasing/Release-Team-Repository.rst:13
+msgid ""
+"`ros2-gbp <https://github.com/ros2-gbp>`_ is a GitHub organization that "
+"hosts the release repositories for ROS packages. It also maintains a list of"
+" release teams, the list of members per release team and the list of release"
+" repositories maintained by the release teams in "
+"https://github.com/ros2-gbp/ros2-gbp-github-org. Interactions with ros2-gbp-"
+"github-org are done through raising GitHub issues. It is recommended that "
+"you request to join a release team and set up a release repository early as "
+"it can take some time for the ros2-gbp maintainers to respond to your "
+"requests."
+msgstr ""
+"`ros2-gbp <https://github.com/ros2-gbp>`_ est une organisation GitHub qui "
+"héberge les dépôts de version pour les packages ROS. Il maintient également "
+"une liste des équipes de publication, la liste des membres par équipe de "
+"publication et la liste des référentiels de publication maintenus par les "
+"équipes de publication sur https://github.com/ros2-gbp/ros2-gbp-github-org. "
+"Les interactions avec ros2-gbp-github-org se font en soulevant des problèmes"
+" GitHub. Il est recommandé de demander à rejoindre une équipe de publication"
+" et de mettre en place un référentiel de publication tôt car cela peut "
+"prendre un certain temps pour que les responsables de ros2-gbp répondent à "
+"vos demandes."
+
+#: ../../source/How-To-Guides/Releasing/Release-Team-Repository.rst:21
+msgid "What is a release team?"
+msgstr "Qu'est-ce qu'une équipe de publication ?"
+
+#: ../../source/How-To-Guides/Releasing/Release-Team-Repository.rst:23
+msgid ""
+"A release team is a `GitHub team "
+"<https://docs.github.com/en/organizations/organizing-members-into-"
+"teams/about-teams>`_ that consists of a group of people who are responsible "
+"for the release process of one or more repositories. Release teams are often"
+" made up of an organization, a working group, or even an individual, and are"
+" named after the team or group that they represent. The list of release "
+"teams and their associated release repositories are maintained at `ros2-gbp-"
+"github-org <https://github.com/ros2-gbp/ros2-gbp-github-org>`_."
+msgstr ""
+"Une équipe de publication est une `équipe GitHub "
+"<https://docs.github.com/en/organizations/organizing-members-into-"
+"teams/about-teams>`_ composée d'un groupe de personnes responsables de la "
+"publication processus d'un ou plusieurs référentiels. Les équipes de "
+"publication sont souvent constituées d'une organisation, d'un groupe de "
+"travail ou même d'un individu, et portent le nom de l'équipe ou du groupe "
+"qu'elles représentent. La liste des équipes de publication et leurs "
+"référentiels de publication associés sont conservés sur `ros2-gbp-github-org"
+" <https://github.com/ros2-gbp/ros2-gbp-github-org>`_."
+
+#: ../../source/How-To-Guides/Releasing/Release-Team-Repository.rst:27
+msgid ""
+"**You must be a part of the release team that you are planning on releasing "
+"the project for.** If you intend to release the repository under an existing"
+" team, follow :ref:`Join a release team <join-a-release-team>`. If you "
+"intend to start a new team, follow :ref:`Start a new release team <start-a-"
+"new-release-team>`."
+msgstr ""
+"**Vous devez faire partie de l'équipe de publication pour laquelle vous "
+"prévoyez de publier le projet.** Si vous avez l'intention de publier le "
+"référentiel sous une équipe existante, suivez :ref:`Rejoindre une équipe de "
+"publication <join-a-release -équipe>`. Si vous avez l'intention de démarrer "
+"une nouvelle équipe, suivez :ref:`Démarrer une nouvelle équipe de "
+"publication <start-a-new-release-team>`."
+
+#: ../../source/How-To-Guides/Releasing/Release-Team-Repository.rst:34
+msgid "Join a release team"
+msgstr "Rejoignez une équipe de publication"
+
+#: ../../source/How-To-Guides/Releasing/Release-Team-Repository.rst:36
+msgid ""
+"Fill the `Update Release Team Membership issue "
+"<https://github.com/ros2-gbp/ros2-gbp-github-"
+"org/issues/new?assignees=&labels=&template=update_release_team_membership.md&title=Update+release+team+membership>`_"
+" issue template if a release team already exists for your project but you "
+"are not part of it."
+msgstr ""
+"Remplissez le problème d'adhésion à l'équipe de mise à jour "
+"<https://github.com/ros2-gbp/ros2-gbp-github-"
+"org/issues/new?assignees=&labels=&template=update_release_team_membership.md&title=Update+release+team+membership"
+" >`_ modèle de problème si une équipe de publication existe déjà pour votre "
+"projet mais que vous n'en faites pas partie."
+
+#: ../../source/How-To-Guides/Releasing/Release-Team-Repository.rst:42
+msgid "Start a new release team"
+msgstr "Démarrer une nouvelle équipe de publication"
+
+#: ../../source/How-To-Guides/Releasing/Release-Team-Repository.rst:44
+msgid ""
+"Fill the `New Release Team issue <https://github.com/ros2-gbp/ros2-gbp-"
+"github-"
+"org/issues/new?assignees=&labels=&template=new_release_team.md&title=Add+release+team>`_"
+" issue template if no release team exists for your project yet, request for "
+"a new release team to be created."
+msgstr ""
+"Remplissez le `New Release Team issue <https://github.com/ros2-gbp/ros2-gbp-"
+"github-"
+"org/issues/new?assignees=&labels=&template=new_release_team.md&title=Add+release+team>`_"
+" modèle de problème s'il n'existe pas encore d'équipe de publication pour "
+"votre projet, demandez la création d'une nouvelle équipe de publication."
+
+#: ../../source/How-To-Guides/Releasing/Release-Team-Repository.rst:50
+msgid "What is a release repository?"
+msgstr "Qu'est-ce qu'un dépôt de version ?"
+
+#: ../../source/How-To-Guides/Releasing/Release-Team-Repository.rst:52
+msgid "A release repository is a repository that"
+msgstr "Un référentiel de version est un référentiel qui"
+
+#: ../../source/How-To-Guides/Releasing/Release-Team-Repository.rst:54
+msgid ""
+"stores files generated from the release process, for the ROS buildfarm to "
+"use"
+msgstr ""
+"stocke les fichiers générés à partir du processus de publication, pour que "
+"le buildfarm ROS les utilise"
+
+#: ../../source/How-To-Guides/Releasing/Release-Team-Repository.rst:55
+msgid ""
+"caches configurations from the release process to simplify subsequent "
+"releases of the repository in the future"
+msgstr ""
+"met en cache les configurations du processus de publication pour simplifier "
+"les versions ultérieures du référentiel à l'avenir"
+
+#: ../../source/How-To-Guides/Releasing/Release-Team-Repository.rst:57
+msgid ""
+"Having a release repository separate from your source code repository is a "
+"requirement for making a release in ROS 2."
+msgstr ""
+"Disposer d'un référentiel de versions distinct de votre référentiel de code "
+"source est une condition préalable à la création d'une version dans ROS 2."
+
+#: ../../source/How-To-Guides/Releasing/Release-Team-Repository.rst:62
+msgid "Create a new release repository"
+msgstr "Créer un nouveau référentiel de version"
+
+#: ../../source/How-To-Guides/Releasing/Release-Team-Repository.rst:64
+msgid ""
+"If your repository is new to the ROS community, you should first open a pull"
+" request on `ros/rosdistro <https://github.com/ros/rosdistro>`_ adding a "
+"``source`` entry for your repository. The review process for the rosdistro "
+"database will ensure your repository and packages conform to the `REP 144 "
+"package naming conventions <https://www.ros.org/reps/rep-0144.html>`_ and "
+"other requirements before release. Once your package name has been approved "
+"and merged, fill in the `Add New Release Repositories issue "
+"<https://github.com/ros2-gbp/ros2-gbp-github-"
+"org/issues/new?assignees=&labels=&template=new_release_repository.md&title=Add+new+release+repositories>`_"
+" issue template if you don't have a release repo for your project yet."
+msgstr ""
+"Si votre référentiel est nouveau dans la communauté ROS, vous devez d'abord "
+"ouvrir une demande d'extraction sur `ros/rosdistro "
+"<https://github.com/ros/rosdistro>`_ en ajoutant une entrée ``source`` pour "
+"votre référentiel. Le processus de révision de la base de données rosdistro "
+"garantira que votre référentiel et vos packages sont conformes aux "
+"`conventions de dénomination des packages REP 144 "
+"<https://www.ros.org/reps/rep-0144.html>`_ et aux autres exigences avant la "
+"publication. Une fois le nom de votre package approuvé et fusionné, "
+"remplissez le problème `Add New Release Repositories "
+"<https://github.com/ros2-gbp/ros2-gbp-github-"
+"org/issues/new?assignees=&labels=&template= "
+"new_release_repository.md&title=Add+new+release+repositories>`_ modèle de "
+"problème si vous n'avez pas encore de dépôt de version pour votre projet."
+
+#: ../../source/How-To-Guides/Releasing/Release-Team-Repository.rst:70
+msgid "What if my existing release repo isn't on ros2-gbp?"
+msgstr ""
+"Que se passe-t-il si mon dépôt de version existant n'est pas sur ros2-gbp ?"
+
+#: ../../source/How-To-Guides/Releasing/Release-Team-Repository.rst:72
+msgid ""
+"Packages released before ros2-gbp existed may have their release "
+"repositories hosted elsewhere. It is now strongly recommended for release "
+"repositories to live in this dedicated GitHub organization. If you are "
+"porting a ROS 1 package to ROS 2 and planning on releasing your packages "
+"into ROS 2 for the first time, follow standard procedure to request for a "
+"new release repository for your ROS 2 releases. If you have previously "
+"released your packages for ROS 2, when raising the `Add New Release "
+"Repositories issue <https://github.com/ros2-gbp/ros2-gbp-github-"
+"org/issues/new?assignees=&labels=&template=new_release_repository.md&title=Add+new+release+repositories>`_,"
+" **specify your current release repository url**, and follow standard "
+"procedure for the rest."
+msgstr ""
+"Les packages publiés avant l'existence de ros2-gbp peuvent avoir leurs "
+"référentiels de publication hébergés ailleurs. Il est maintenant fortement "
+"recommandé que les référentiels de version vivent dans cette organisation "
+"GitHub dédiée. Si vous transférez un package ROS 1 vers ROS 2 et prévoyez de"
+" publier vos packages dans ROS 2 pour la première fois, suivez la procédure "
+"standard pour demander un nouveau référentiel de versions pour vos versions "
+"ROS 2. Si vous avez déjà publié vos packages pour ROS 2, lorsque vous "
+"soulevez le problème `Add New Release Repositories "
+"<https://github.com/ros2-gbp/ros2-gbp-github-"
+"org/issues/new?assignees=&labels=&template "
+"=new_release_repository.md&title=Add+new+release+repositories>`_, "
+"**spécifiez l'URL de votre référentiel de version actuel** et suivez la "
+"procédure standard pour le reste."
+
+#: ../../source/How-To-Guides/Releasing/Release-Team-Repository.rst:79
+msgid ""
+"Release repositories hosted elsewhere are still supported for stable "
+"distributions if you are not planning to release the repository into "
+"Rolling. Since stable distributions created from Rolling will start with "
+"release repositories in the ros2-gbp organization it is recommend that you "
+"use the ros2-gbp release repositories for all ROS 2 distributions to avoid "
+"fragmenting the release information."
+msgstr ""
+"Les référentiels de publication hébergés ailleurs sont toujours pris en "
+"charge pour les distributions stables si vous ne prévoyez pas de publier le "
+"référentiel dans Rolling. Étant donné que les distributions stables créées à"
+" partir de Rolling commenceront par des référentiels de version dans "
+"l'organisation ros2-gbp, il est recommandé d'utiliser les référentiels de "
+"version ros2-gbp pour toutes les distributions ROS 2 afin d'éviter de "
+"fragmenter les informations de version."
+
+#: ../../source/How-To-Guides/Releasing/Release-Team-Repository.rst:82
+msgid ""
+"A ros2-gbp release repository may become a hard requirement in the future "
+"and maintaining a single release repository for all ROS 2 distributions "
+"simplifies the maintenance of releases for both the Rolling distribution "
+"maintainers and package maintainers."
+msgstr ""
+"Un référentiel de versions ros2-gbp peut devenir une exigence absolue à "
+"l'avenir et le maintien d'un référentiel de versions unique pour toutes les "
+"distributions ROS 2 simplifie la maintenance des versions pour les "
+"responsables de la distribution Rolling et les responsables des packages."

@@ -1,0 +1,656 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 17:34:57.939484\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Installation/Windows-Install-Binary.rst:2
+msgid "Windows (binary)"
+msgstr "Windows (binaire)"
+
+#: ../../source/Installation/Windows-Install-Binary.rst:6
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/Installation/Windows-Install-Binary.rst:8
+msgid ""
+"This page explains how to install ROS 2 on Windows from a pre-built binary "
+"package."
+msgstr ""
+"Cette page explique comment installer ROS 2 sur Windows à partir d'un "
+"package binaire pré-construit."
+
+#: ../../source/Installation/Windows-Install-Binary.rst:12
+msgid ""
+"The pre-built binary does not include all ROS 2 packages. All packages in "
+"the `ROS base variant <https://ros.org/reps/rep-2001.html#ros-base>`_ are "
+"included, and only a subset of packages in the `ROS desktop variant "
+"<https://ros.org/reps/rep-2001.html#desktop-variants>`_ are included. The "
+"exact list of packages are described by the repositories listed in `this "
+"ros2.repos file <https://github.com/ros2/ros2/blob/rolling/ros2.repos>`_."
+msgstr ""
+"Le binaire pré-construit n'inclut pas tous les packages ROS 2. Tous les "
+"packages de la `variante de base ROS "
+"<https://ros.org/reps/rep-2001.html#ros-base>`_ sont inclus, et seul un "
+"sous-ensemble de packages de la `variante de bureau ROS <https:/ "
+"/ros.org/reps/rep-2001.html#desktop-variants>`_ sont inclus. La liste exacte"
+" des packages est décrite par les référentiels répertoriés dans `ce fichier "
+"ros2.repos <https://github.com/ros2/ros2/blob/rolling/ros2.repos>`_."
+
+#: ../../source/Installation/Windows-Install-Binary.rst:17
+msgid "System requirements"
+msgstr "Configuration requise"
+
+#: ../../source/Installation/Windows-Install-Binary.rst:19
+msgid "Only Windows 10 is supported."
+msgstr "Seul Windows 10 est pris en charge."
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:2
+msgid "Installing prerequisites"
+msgstr "Installation des prérequis"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:5
+msgid "Install Chocolatey"
+msgstr "Installer Chocolatey"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:7
+msgid ""
+"Chocolatey is a package manager for Windows, install it by following their "
+"installation instructions:"
+msgstr ""
+"Chocolatey est un gestionnaire de paquets pour Windows, installez-le en "
+"suivant leurs instructions d'installation :"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:9
+msgid "https://chocolatey.org/"
+msgstr "https://chocolatey.org/"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:11
+msgid "You'll use Chocolatey to install some other developer tools."
+msgstr ""
+"Vous utiliserez Chocolatey pour installer d'autres outils de développement."
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:14
+msgid "Install Python"
+msgstr "Installer Python"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:16
+msgid ""
+"Open a Command Prompt and type the following to install Python via "
+"Chocolatey:"
+msgstr ""
+"Ouvrez une invite de commande et tapez ce qui suit pour installer Python via"
+" Chocolatey :"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:23
+msgid "Install Visual C++ Redistributables"
+msgstr "Install Visual C++ Redistributables"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:25
+msgid ""
+"Open a Command Prompt and type the following to install them via Chocolatey:"
+msgstr ""
+"Ouvrez une invite de commande et tapez ce qui suit pour les installer via "
+"Chocolatey :"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:32
+msgid "Install OpenSSL"
+msgstr "Installer OpenSSL"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:34
+msgid ""
+"Download the *Win64 OpenSSL v1.1.1n* OpenSSL installer from `this page "
+"<https://slproweb.com/products/Win32OpenSSL.html>`__. Scroll to the bottom "
+"of the page and download *Win64 OpenSSL v1.1.1n*. Don't download the Win32 "
+"or Light versions, or the v3.X.Y installers."
+msgstr ""
+"Téléchargez le programme d'installation OpenSSL *Win64 OpenSSL v1.1.1n* à "
+"partir de `cette page <https://slproweb.com/products/Win32OpenSSL.html>`__. "
+"Faites défiler vers le bas de la page et téléchargez *Win64 OpenSSL "
+"v1.1.1n*. Ne téléchargez pas les versions Win32 ou Light, ni les programmes "
+"d'installation v3.X.Y."
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:38
+msgid ""
+"Run the installer with default parameters, as the following commands assume "
+"you used the default installation directory."
+msgstr ""
+"Exécutez le programme d'installation avec les paramètres par défaut, car les"
+" commandes suivantes supposent que vous avez utilisé le répertoire "
+"d'installation par défaut."
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:40
+msgid "This command sets an environment variable that persists over sessions:"
+msgstr ""
+"Cette commande définit une variable d'environnement qui persiste au fil des "
+"sessions :"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:46
+msgid ""
+"You will need to append the OpenSSL-Win64 bin folder to your PATH. You can "
+"do this by clicking the Windows icon, typing \"Environment Variables\", then"
+" clicking on \"Edit the system environment variables\". In the resulting "
+"dialog, click \"Environment Variables\", then click \"Path\" on the bottom "
+"pane, finally click \"Edit\" and add the path below."
+msgstr ""
+"Vous devrez ajouter le dossier bin OpenSSL-Win64 à votre PATH. Vous pouvez "
+"le faire en cliquant sur l'icône Windows, en tapant \"Variables "
+"d'environnement\", puis en cliquant sur \"Modifier les variables "
+"d'environnement système\". Dans la boîte de dialogue résultante, cliquez sur"
+" \"Variables d'environnement\", puis cliquez sur \"Chemin\" dans le volet "
+"inférieur, enfin cliquez sur \"Modifier\" et ajoutez le chemin ci-dessous."
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:50
+msgid "``C:\\Program Files\\OpenSSL-Win64\\bin\\``"
+msgstr "``C:\\Program Files\\OpenSSL-Win64\\bin\\``"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:53
+msgid "Install Visual Studio"
+msgstr "Installer Visual Studio"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:55
+msgid "Install Visual Studio 2019."
+msgstr "Installez Visual Studio 2019."
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:57
+msgid ""
+"If you already have a paid version of Visual Studio 2019 (Professional, "
+"Enterprise), skip this step."
+msgstr ""
+"Si vous disposez déjà d'une version payante de Visual Studio 2019 "
+"(Professional, Enterprise), ignorez cette étape."
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:59
+msgid ""
+"Microsoft provides a free of charge version of Visual Studio 2019, named "
+"Community, which can be used to build applications that use ROS 2. `You can "
+"download the installer directly through this link. "
+"<https://visualstudio.microsoft.com/thank-you-downloading-visual-"
+"studio/?sku=Community&rel=16&src=myvs&utm_medium=microsoft&utm_source=my.visualstudio.com&utm_campaign=download&utm_content=vs+community+2019>`_"
+msgstr ""
+"Microsoft fournit une version gratuite de Visual Studio 2019, nommée "
+"Community, qui peut être utilisée pour créer des applications utilisant ROS "
+"2. `Vous pouvez télécharger le programme d'installation directement via ce "
+"lien. <https://visualstudio.microsoft.com/thank-you-downloading-visual-"
+"studio/?sku=Community&rel=16&src=myvs&utm_medium=microsoft&utm_source=my.visualstudio.com&utm_campaign=download&utm_content=vs+community+2019>`_"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:62
+msgid "Make sure that the Visual C++ features are installed."
+msgstr "Assurez-vous que les fonctionnalités Visual C++ sont installées."
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:64
+msgid ""
+"An easy way to make sure they're installed is to select the ``Desktop "
+"development with C++`` workflow during the install."
+msgstr ""
+"Un moyen simple de s'assurer qu'ils sont installés est de sélectionner le "
+"flux de travail ``Développement de bureau avec C++`` lors de l'installation."
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:68
+msgid ""
+"Make sure that no C++ CMake tools are installed by unselecting them in the "
+"list of components to be installed."
+msgstr ""
+"Assurez-vous qu'aucun outil C++ CMake n'est installé en les désélectionnant "
+"dans la liste des composants à installer."
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:71
+msgid "Install OpenCV"
+msgstr "Installer OpenCV"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:73
+msgid "Some of the examples require OpenCV to be installed."
+msgstr "Certains exemples nécessitent l'installation d'OpenCV."
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:75
+msgid ""
+"You can download a precompiled version of OpenCV 3.4.6 from "
+"https://github.com/ros2/ros2/releases/download/opencv-"
+"archives/opencv-3.4.6-vc16.VS2019.zip ."
+msgstr ""
+"Vous pouvez télécharger une version précompilée d'OpenCV 3.4.6 à partir de "
+"https://github.com/ros2/ros2/releases/download/opencv-"
+"archives/opencv-3.4.6-vc16.VS2019.zip ."
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:77
+msgid ""
+"Assuming you unpacked it to ``C:\\opencv``, type the following on a Command "
+"Prompt (requires Admin privileges):"
+msgstr ""
+"En supposant que vous l'avez décompressé dans ``C:\\opencv``, tapez ce qui "
+"suit sur une invite de commande (nécessite des privilèges "
+"d'administrateur) :"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:83
+msgid ""
+"Since you are using a precompiled ROS version, we have to tell it where to "
+"find the OpenCV libraries. You have to extend the ``PATH`` variable to "
+"``C:\\opencv\\x64\\vc16\\bin``."
+msgstr ""
+"Puisque vous utilisez une version ROS précompilée, nous devons lui indiquer "
+"où trouver les bibliothèques OpenCV. Vous devez étendre la variable ``PATH``"
+" à ``C:\\opencv\\x64\\vc16\\bin``."
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:87
+msgid "Install dependencies"
+msgstr "Installer les dépendances"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:89
+msgid ""
+"There are a few dependencies not available in the Chocolatey package "
+"database. In order to ease the manual installation process, we provide the "
+"necessary Chocolatey packages."
+msgstr ""
+"Il existe quelques dépendances non disponibles dans la base de données du "
+"package Chocolatey. Afin de faciliter le processus d'installation manuelle, "
+"nous fournissons les packages Chocolatey nécessaires."
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:92
+msgid "As some chocolatey packages rely on it, we start by installing CMake"
+msgstr ""
+"Comme certains packages chocolatés en dépendent, nous commençons par "
+"installer CMake"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:98
+msgid ""
+"You will need to append the CMake bin folder ``C:\\Program "
+"Files\\CMake\\bin`` to your PATH."
+msgstr ""
+"Vous devrez ajouter le dossier CMake bin ``C:\\Program Files\\CMake\\bin`` à"
+" votre PATH."
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:100
+msgid ""
+"Please download these packages from `this <https://github.com/ros2/choco-"
+"packages/releases/latest>`__ GitHub repository."
+msgstr ""
+"Veuillez télécharger ces packages depuis `ce <https://github.com/ros2/choco-"
+"packages/releases/latest>`__ référentiel GitHub."
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:102
+msgid "asio.1.12.1.nupkg"
+msgstr "install.1.12.1.nupkg"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:103
+msgid "bullet.3.17.nupkg"
+msgstr "puce.3.17.nupkg"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:104
+msgid "cunit.2.1.3.nupkg"
+msgstr "cunit.2.1.3.nupkg"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:105
+msgid "eigen-3.3.4.nupkg"
+msgstr "propre-3.3.4.nupkg"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:106
+msgid "tinyxml-usestl.2.6.2.nupkg"
+msgstr "tinyxml-usestl.2.6.2.nupkg"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:107
+msgid "tinyxml2.6.0.0.nupkg"
+msgstr "tinyxml2.6.0.0.nupkg"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:109
+msgid ""
+"Once these packages are downloaded, open an administrative shell and execute"
+" the following command:"
+msgstr ""
+"Une fois ces packages téléchargés, ouvrez un shell d'administration et "
+"exécutez la commande suivante :"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:115
+msgid ""
+"Please replace ``<PATH\\TO\\DOWNLOADS>`` with the folder you downloaded the "
+"packages to."
+msgstr ""
+"Veuillez remplacer ``<PATH\\TO\\DOWNLOADS>`` par le dossier dans lequel vous"
+" avez téléchargé les packages."
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:117
+msgid "First upgrade pip and setuptools:"
+msgstr "Premier pip de mise à niveau et setuptools :"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:123
+msgid "Now install some additional python dependencies:"
+msgstr "Installez maintenant quelques dépendances Python supplémentaires :"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:130
+msgid "Install Qt5"
+msgstr "Installer Qt5"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:132
+msgid ""
+"Download the `5.12.X offline installer <https://www.qt.io/offline-"
+"installers>`_ from Qt's website. Run the installer. Make sure to select the "
+"``MSVC 2017 64-bit`` component under the ``Qt`` -> ``Qt 5.12.12`` tree."
+msgstr ""
+"Téléchargez le `5.12.X offline installer <https://www.qt.io/offline-"
+"installers>`_ depuis le site Web de Qt. Exécutez le programme "
+"d'installation. Assurez-vous de sélectionner le composant ``MSVC 2017 "
+"64-bit`` sous l'arborescence ``Qt`` -> ``Qt 5.12.12``."
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:136
+msgid ""
+"Finally, in an administrator ``cmd.exe`` window set these environment "
+"variables. The commands below assume you installed it to the default "
+"location of ``C:\\Qt``."
+msgstr ""
+"Enfin, dans une fenêtre administrateur ``cmd.exe``, définissez ces variables"
+" d'environnement. Les commandes ci-dessous supposent que vous l'avez "
+"installé à l'emplacement par défaut de ``C:\\Qt``."
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:147
+msgid ""
+"This path might change based on the installed MSVC version, the directory Qt"
+" was installed to, and the version of Qt installed."
+msgstr ""
+"Ce chemin peut changer en fonction de la version de MSVC installée, du "
+"répertoire dans lequel Qt a été installé et de la version de Qt installée."
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:150
+msgid "RQt dependencies"
+msgstr "Dépendances RQt"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:152
+msgid ""
+"To run rqt_graph you need to `download "
+"<https://graphviz.gitlab.io/_pages/Download/Download_windows.html>`__ and "
+"install `Graphviz <https://graphviz.gitlab.io/>`__. The installer will ask "
+"if to add graphviz to PATH, choose to either add it to the current user or "
+"all users."
+msgstr ""
+"Pour exécuter rqt_graph, vous devez `télécharger "
+"<https://graphviz.gitlab.io/_pages/Download/Download_windows.html>`__ et "
+"installer `Graphviz <https://graphviz.gitlab.io/>`__. Le programme "
+"d'installation vous demandera si vous souhaitez ajouter graphviz à PATH, "
+"choisissez de l'ajouter à l'utilisateur actuel ou à tous les utilisateurs."
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:156
+msgid "Install additional DDS implementations (optional)"
+msgstr "Installer des implémentations DDS supplémentaires (facultatif)"
+
+#: ../../source/Installation/_Windows-Install-Prerequisites.rst:158
+msgid ""
+"If you would like to use another DDS or RTPS vendor besides the default, "
+"Fast DDS, you can find instructions `here </Installation/DDS-"
+"Implementations>`_."
+msgstr ""
+"Si vous souhaitez utiliser un autre fournisseur DDS ou RTPS en plus du Fast "
+"DDS par défaut, vous pouvez trouver des instructions `ici "
+"</Installation/DDS-Implementations>`_."
+
+#: ../../source/Installation/Windows-Install-Binary.rst:26
+msgid "Downloading ROS 2"
+msgstr "Téléchargement de ROS 2"
+
+#: ../../source/Installation/Windows-Install-Binary.rst:28
+msgid ""
+"Binary releases of Rolling Ridley are not provided. Instead you may download"
+" nightly :ref:`prerelease binaries <Prerelease_binaries>`."
+msgstr ""
+"Les versions binaires de Rolling Ridley ne sont pas fournies. Au lieu de "
+"cela, vous pouvez télécharger tous les soirs :ref:`binaries prerelease "
+"<Prerelease_binaries>`."
+
+#: ../../source/Installation/Windows-Install-Binary.rst:31
+msgid ""
+"Download the latest package for Windows, e.g., ``ros2-package-windows-"
+"AMD64.zip``."
+msgstr ""
+"Téléchargez le dernier package pour Windows, par exemple, ``ros2-package-"
+"windows-AMD64.zip``."
+
+#: ../../source/Installation/Windows-Install-Binary.rst:35
+msgid ""
+"There may be more than one binary download option which might cause the file"
+" name to differ."
+msgstr ""
+"Il peut y avoir plus d'une option de téléchargement binaire qui peut "
+"entraîner une différence de nom de fichier."
+
+#: ../../source/Installation/Windows-Install-Binary.rst:39
+msgid ""
+"To install debug libraries for ROS 2, see `Extra Stuff for Debug`_. Then "
+"continue on with downloading ``ros2-package-windows-debug-AMD64.zip``."
+msgstr ""
+"Pour installer des bibliothèques de débogage pour ROS 2, voir `Extra Stuff "
+"for Debug`_. Continuez ensuite en téléchargeant ``ros2-package-windows-"
+"debug-AMD64.zip``."
+
+#: ../../source/Installation/Windows-Install-Binary.rst:42
+msgid "Unpack the zip file somewhere (we'll assume ``C:\\dev\\ros2_rolling``\\ )."
+msgstr ""
+"Décompressez le fichier zip quelque part (nous supposerons "
+"``C:\\dev\\ros2_rolling``\\ )."
+
+#: ../../source/Installation/Windows-Install-Binary.rst:45
+#: ../../source/Installation/Windows-Install-Binary.rst:149
+msgid "Environment setup"
+msgstr "Configuration de l'environnement"
+
+#: ../../source/Installation/Windows-Install-Binary.rst:47
+msgid ""
+"Start a command shell and source the ROS 2 setup file to set up the "
+"workspace:"
+msgstr ""
+"Démarrez un shell de commande et sourcez le fichier de configuration ROS 2 "
+"pour configurer l'espace de travail :"
+
+#: ../../source/Installation/Windows-Install-Binary.rst:53
+msgid ""
+"It is normal that the previous command, if nothing else went wrong, outputs "
+"\"The system cannot find the path specified.\" exactly once."
+msgstr ""
+"Il est normal que la commande précédente, si rien d'autre ne s'est mal "
+"passé, affiche \"Le système ne peut pas trouver le chemin spécifié\". "
+"exactement une fois."
+
+#: ../../source/Installation/Windows-Install-Binary.rst:56
+msgid "Try some examples"
+msgstr "Essayez quelques exemples"
+
+#: ../../source/Installation/Windows-Install-Binary.rst:58
+msgid ""
+"In a command shell, set up the ROS 2 environment as described above and then"
+" run a C++ ``talker``\\ :"
+msgstr ""
+"Dans un shell de commande, configurez l'environnement ROS 2 comme décrit ci-"
+"dessus, puis exécutez un ``talker``\\ C++ :"
+
+#: ../../source/Installation/Windows-Install-Binary.rst:64
+msgid "Start another command shell and run a Python ``listener``\\ :"
+msgstr ""
+"Démarrez un autre shell de commande et exécutez un Python ``listener``\\ :"
+
+#: ../../source/Installation/Windows-Install-Binary.rst:70
+msgid ""
+"You should see the ``talker`` saying that it's ``Publishing`` messages and "
+"the ``listener`` saying ``I heard`` those messages. This verifies both the "
+"C++ and Python APIs are working properly. Hooray!"
+msgstr ""
+"Vous devriez voir le ``locuteur`` dire qu'il ``publie`` des messages et le "
+"``auditeur`` dire ``J'ai entendu`` ces messages. Cela vérifie que les API "
+"C++ et Python fonctionnent correctement. Hourra !"
+
+#: ../../source/Installation/Windows-Install-Binary.rst:76
+msgid "Next steps after installing"
+msgstr "Prochaines étapes après l'installation"
+
+#: ../../source/Installation/Windows-Install-Binary.rst:77
+msgid ""
+"Continue with the :doc:`tutorials and demos <../../Tutorials>` to configure "
+"your environment, create your own workspace and packages, and learn ROS 2 "
+"core concepts."
+msgstr ""
+"Continuez avec les :doc:`tutoriels et démos <../../Tutoriels>` pour "
+"configurer votre environnement, créer votre propre espace de travail et vos "
+"packages, et apprendre les concepts de base de ROS 2."
+
+#: ../../source/Installation/Windows-Install-Binary.rst:80
+msgid "Additional RMW implementations (optional)"
+msgstr "Implémentations RMW supplémentaires (facultatif)"
+
+#: ../../source/Installation/Windows-Install-Binary.rst:81
+msgid ""
+"The default middleware that ROS 2 uses is ``Fast DDS``, but the middleware "
+"(RMW) can be replaced at runtime. See the :doc:`guide <../How-To-"
+"Guides/Working-with-multiple-RMW-implementations>` on how to work with "
+"multiple RMWs."
+msgstr ""
+"Le middleware par défaut utilisé par ROS 2 est ``Fast DDS``, mais le "
+"middleware (RMW) peut être remplacé au moment de l'exécution. Consultez le "
+":doc:`guide <../How-To-Guides/Working-with-multiple-RMW-implementations>` "
+"pour savoir comment travailler avec plusieurs RMW."
+
+#: ../../source/Installation/Windows-Install-Binary.rst:85
+msgid "Troubleshooting"
+msgstr "Dépannage"
+
+#: ../../source/Installation/Windows-Install-Binary.rst:87
+msgid ""
+"Troubleshooting techniques can be found :ref:`here <windows-"
+"troubleshooting>`."
+msgstr ""
+"Les techniques de dépannage peuvent être trouvées :ref:`ici <windows-"
+"troubleshooting>`."
+
+#: ../../source/Installation/Windows-Install-Binary.rst:90
+#: ../../source/Installation/Windows-Install-Binary.rst:168
+msgid "Uninstall"
+msgstr "Désinstaller"
+
+#: ../../source/Installation/Windows-Install-Binary.rst:92
+msgid ""
+"If you installed your workspace with colcon as instructed above, "
+"\"uninstalling\" could be just a matter of opening a new terminal and not "
+"sourcing the workspace's ``setup`` file. This way, your environment will "
+"behave as though there is no Rolling install on your system."
+msgstr ""
+"Si vous avez installé votre espace de travail avec colcon comme indiqué ci-"
+"dessus, la \"désinstallation\" pourrait consister simplement à ouvrir un "
+"nouveau terminal et à ne pas rechercher le fichier ``setup`` de l'espace de "
+"travail. De cette façon, votre environnement se comportera comme s'il n'y "
+"avait pas d'installation progressive sur votre système."
+
+#: ../../source/Installation/Windows-Install-Binary.rst:95
+msgid ""
+"If you're also trying to free up space, you can delete the entire workspace "
+"directory with:"
+msgstr ""
+"Si vous essayez également de libérer de l'espace, vous pouvez supprimer tout"
+" le répertoire de l'espace de travail avec :"
+
+#: ../../source/Installation/Windows-Install-Binary.rst:102
+msgid "Extra Stuff for Debug"
+msgstr "Trucs supplémentaires pour le débogage"
+
+#: ../../source/Installation/Windows-Install-Binary.rst:104
+msgid ""
+"To download the ROS 2 debug libraries you'll need to download "
+"``ros2-rolling-*-windows-debug-AMD64.zip``. Please note that debug libraries"
+" require some more additional configuration/setup to work as given below."
+msgstr ""
+"Pour télécharger les bibliothèques de débogage de ROS 2, vous devez "
+"télécharger ``ros2-rolling-*-windows-debug-AMD64.zip``. Veuillez noter que "
+"les bibliothèques de débogage nécessitent une configuration/configuration "
+"supplémentaire pour fonctionner comme indiqué ci-dessous."
+
+#: ../../source/Installation/Windows-Install-Binary.rst:107
+msgid ""
+"Python installation may require modification to enable debugging symbols and"
+" debug binaries:"
+msgstr ""
+"L'installation de Python peut nécessiter une modification pour activer les "
+"symboles de débogage et les binaires de débogage :"
+
+#: ../../source/Installation/Windows-Install-Binary.rst:109
+msgid "Search in windows **Search Bar** and open **Apps and Features**."
+msgstr ""
+"Effectuez une recherche dans la **Barre de recherche** de Windows et ouvrez "
+"**Applications et fonctionnalités**."
+
+#: ../../source/Installation/Windows-Install-Binary.rst:110
+msgid "Search for the installed Python version."
+msgstr "Recherchez la version Python installée."
+
+#: ../../source/Installation/Windows-Install-Binary.rst:112
+msgid "Click Modify."
+msgstr "Cliquez sur Modifier."
+
+#: ../../source/Installation/Windows-Install-Binary.rst:117
+msgid "Click Next to go to **Advanced Options**."
+msgstr "Cliquez sur Suivant pour accéder aux **Options avancées**."
+
+#: ../../source/Installation/Windows-Install-Binary.rst:122
+msgid ""
+"Make sure **Download debugging symbols** and **Download debug binaries** are"
+" checked."
+msgstr ""
+"Assurez-vous que **Télécharger les symboles de débogage** et **Télécharger "
+"les fichiers binaires de débogage** sont cochés."
+
+#: ../../source/Installation/Windows-Install-Binary.rst:127
+msgid "Click Install."
+msgstr "Cliquez sur Installer."
+
+#: ../../source/Installation/Windows-Install-Binary.rst:130
+msgid "(Alternative) ROS 2 Build Installation from aka.ms/ros"
+msgstr "(Alternative) Installation de ROS 2 Build à partir de aka.ms/ros"
+
+#: ../../source/Installation/Windows-Install-Binary.rst:132
+msgid ""
+"https://aka.ms/ros project hosts ROS 2 builds against the release snapshots."
+" This section explains how to install ROS 2 from this channel."
+msgstr ""
+"Le projet https://aka.ms/ros héberge les builds ROS 2 par rapport aux "
+"instantanés de version. Cette section explique comment installer ROS 2 à "
+"partir de ce canal."
+
+#: ../../source/Installation/Windows-Install-Binary.rst:136
+msgid "Install ROS 2 builds"
+msgstr "Installer les versions ROS 2"
+
+#: ../../source/Installation/Windows-Install-Binary.rst:138
+msgid "In an administrative command prompt, run the following commands."
+msgstr ""
+"Dans une invite de commandes d'administration, exécutez les commandes "
+"suivantes."
+
+#: ../../source/Installation/Windows-Install-Binary.rst:151
+msgid ""
+"Start an administrative command prompt and source the ROS 2 setup file to "
+"set up the workspace:"
+msgstr ""
+"Démarrez une invite de commande administrative et sourcez le fichier de "
+"configuration ROS 2 pour configurer l'espace de travail :"
+
+#: ../../source/Installation/Windows-Install-Binary.rst:158
+msgid "Stay up-to-date"
+msgstr "Tiens-toi à jour"
+
+#: ../../source/Installation/Windows-Install-Binary.rst:160
+msgid "To keep up-to-date with the latest builds, run:"
+msgstr "Pour vous tenir au courant des dernières versions, exécutez :"
+
+#: ../../source/Installation/Windows-Install-Binary.rst:170
+msgid ""
+"If you want to completely remove the environment downloaded above, run this "
+"command:"
+msgstr ""
+"Si vous souhaitez supprimer complètement l'environnement téléchargé ci-"
+"dessus, exécutez cette commande :"

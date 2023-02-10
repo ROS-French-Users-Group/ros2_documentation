@@ -1,0 +1,217 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 17:22:53.903844\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/How-To-Guides/Node-arguments.rst:8
+msgid "Passing ROS arguments to nodes via the command-line"
+msgstr "Passer des arguments ROS aux nœuds via la ligne de commande"
+
+#: ../../source/How-To-Guides/Node-arguments.rst:13
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/How-To-Guides/Node-arguments.rst:15
+msgid ""
+"All ROS nodes take a set of arguments that allow various properties to be "
+"reconfigured. Examples include configuring the name/namespace of the node, "
+"topic/service names used, and parameters on the node. All ROS-specific "
+"arguments have to be specified after a ``--ros-args`` flag:"
+msgstr ""
+"Tous les nœuds ROS prennent un ensemble d'arguments qui permettent de "
+"reconfigurer diverses propriétés. Les exemples incluent la configuration du "
+"nom/espace de noms du nœud, les noms de sujet/service utilisés et les "
+"paramètres sur le nœud. Tous les arguments spécifiques à ROS doivent être "
+"spécifiés après un drapeau ``--ros-args`` :"
+
+#: ../../source/How-To-Guides/Node-arguments.rst:25
+msgid ""
+"For more details, see `this design doc "
+"<https://design.ros2.org/articles/ros_command_line_arguments.html>`__."
+msgstr ""
+"Pour plus de détails, voir `ce document de conception "
+"<https://design.ros2.org/articles/ros_command_line_arguments.html>`__."
+
+#: ../../source/How-To-Guides/Node-arguments.rst:28
+msgid "Name remapping"
+msgstr "Remappage du nom"
+
+#: ../../source/How-To-Guides/Node-arguments.rst:30
+msgid ""
+"Names within a node (e.g. topics/services) can be remapped using the syntax "
+"``-r <old name>:=<new name>``. The name/namespace of the node itself can be "
+"remapped using ``-r __node:=<new node name>`` and ``-r __ns:=<new node "
+"namespace>``."
+msgstr ""
+"Les noms au sein d'un nœud (par exemple, les sujets/services) peuvent être "
+"remappés en utilisant la syntaxe ``-r <ancien nom>:=<nouveau nom>``. Le "
+"nom/espace de noms du nœud lui-même peut être remappé en utilisant ``-r "
+"__node:=<nouveau nom de nœud>`` et ``-r __ns:=<nouvel espace de noms de "
+"nœud>``."
+
+#: ../../source/How-To-Guides/Node-arguments.rst:34
+msgid ""
+"Note that these remappings are \"static\" remappings, in that they apply for"
+" the lifetime of the node. \"Dynamic\" remapping of names after nodes have "
+"been started is not yet supported."
+msgstr ""
+"Notez que ces remappages sont des remappages \"statiques\", en ce sens "
+"qu'ils s'appliquent pendant toute la durée de vie du nœud. Le remappage "
+"\"dynamique\" des noms après le démarrage des nœuds n'est pas encore pris en"
+" charge."
+
+#: ../../source/How-To-Guides/Node-arguments.rst:37
+msgid ""
+"See `this design doc "
+"<https://design.ros2.org/articles/static_remapping.html>`__ for more details"
+" on remapping arguments (not all functionality is available yet)."
+msgstr ""
+"Voir `cette documentation de conception "
+"<https://design.ros2.org/articles/static_remapping.html>`__ pour plus de "
+"détails sur les arguments de remappage (toutes les fonctionnalités ne sont "
+"pas encore disponibles)."
+
+#: ../../source/How-To-Guides/Node-arguments.rst:40
+msgid "Example"
+msgstr "Exemple"
+
+#: ../../source/How-To-Guides/Node-arguments.rst:42
+msgid ""
+"The following invocation will cause the ``talker`` node to be started under "
+"the node name ``my_talker``, publishing on the topic named ``my_topic`` "
+"instead of the default of ``chatter``. The namespace, which must start with "
+"a forward slash, is set to ``/demo``, which means that topics are created in"
+" that namespace (``/demo/my_topic``), as opposed to globally "
+"(``/my_topic``)."
+msgstr ""
+"L'invocation suivante entraînera le démarrage du nœud ``talker`` sous le nom"
+" de nœud ``my_talker``, en publiant sur le sujet nommé ``my_topic`` au lieu "
+"de la valeur par défaut de ``chatter``. L'espace de noms, qui doit commencer"
+" par une barre oblique, est défini sur ``/demo``, ce qui signifie que les "
+"sujets sont créés dans cet espace de noms (``/demo/my_topic``), par "
+"opposition à globalement (``/my_topic ``)."
+
+#: ../../source/How-To-Guides/Node-arguments.rst:50
+msgid "Passing remapping arguments to specific nodes"
+msgstr "Passer des arguments de remappage à des nœuds spécifiques"
+
+#: ../../source/How-To-Guides/Node-arguments.rst:52
+msgid ""
+"If multiple nodes are being run within a single process (e.g. using "
+":doc:`Composition <../Concepts/About-Composition>`), remapping arguments can"
+" be passed to a specific node using its name as a prefix. For example, the "
+"following will pass the remapping arguments to the specified nodes:"
+msgstr ""
+"Si plusieurs nœuds sont exécutés dans un même processus (par exemple, en "
+"utilisant :doc:`Composition <../Concepts/About-Composition>`), les arguments"
+" de remappage peuvent être passés à un nœud spécifique en utilisant son nom "
+"comme préfixe. Par exemple, ce qui suit transmettra les arguments de "
+"remappage aux nœuds spécifiés :"
+
+#: ../../source/How-To-Guides/Node-arguments.rst:60
+msgid ""
+"The following example will both change the node name and remap a topic (node"
+" and namespace changes are always applied *before* topic remapping):"
+msgstr ""
+"L'exemple suivant modifiera à la fois le nom du nœud et remappera un sujet "
+"(les changements de nœud et d'espace de noms sont toujours appliqués *avant*"
+" le remappage du sujet) :"
+
+#: ../../source/How-To-Guides/Node-arguments.rst:68
+msgid "Logger configuration"
+msgstr "Configuration de l'enregistreur"
+
+#: ../../source/How-To-Guides/Node-arguments.rst:70
+msgid ""
+"See ``--log-level`` argument usage in :doc:`the logging page "
+"<../Tutorials/Demos/Logging-and-logger-configuration>`."
+msgstr ""
+"Voir l'utilisation de l'argument ``--log-level`` dans :doc:`la page de "
+"journalisation <../Tutorials/Demos/Logging-and-logger-configuration>`."
+
+#: ../../source/How-To-Guides/Node-arguments.rst:73
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: ../../source/How-To-Guides/Node-arguments.rst:78
+msgid "Setting parameters directly from the command line"
+msgstr "Réglage des paramètres directement depuis la ligne de commande"
+
+#: ../../source/How-To-Guides/Node-arguments.rst:80
+msgid ""
+"You can set parameters directly from the command line using the following "
+"syntax:"
+msgstr ""
+"Vous pouvez définir les paramètres directement depuis la ligne de commande "
+"en utilisant la syntaxe suivante :"
+
+#: ../../source/How-To-Guides/Node-arguments.rst:86
+msgid "As an example, you can run:"
+msgstr "Par exemple, vous pouvez exécuter :"
+
+#: ../../source/How-To-Guides/Node-arguments.rst:92
+#: ../../source/How-To-Guides/Node-arguments.rst:135
+msgid "Other nodes will be able to retrieve the parameter values, e.g.:"
+msgstr ""
+"D'autres nœuds pourront récupérer les valeurs des paramètres, par exemple :"
+
+#: ../../source/How-To-Guides/Node-arguments.rst:108
+msgid "Setting parameters from YAML files"
+msgstr "Définition des paramètres à partir de fichiers YAML"
+
+#: ../../source/How-To-Guides/Node-arguments.rst:110
+msgid "Parameters can be set from the command-line in the form of yaml files."
+msgstr ""
+"Les paramètres peuvent être définis à partir de la ligne de commande sous la"
+" forme de fichiers yaml."
+
+#: ../../source/How-To-Guides/Node-arguments.rst:112
+msgid ""
+"`See here "
+"<https://github.com/ros2/rcl/tree/rolling/rcl_yaml_param_parser>`__ for "
+"examples of the yaml file syntax."
+msgstr ""
+"`Voir ici "
+"<https://github.com/ros2/rcl/tree/rolling/rcl_yaml_param_parser>`__ pour des"
+" exemples de la syntaxe du fichier yaml."
+
+#: ../../source/How-To-Guides/Node-arguments.rst:114
+msgid "As an example, save the following as ``demo_params.yaml``:"
+msgstr "Par exemple, enregistrez ce qui suit sous ``demo_params.yaml`` :"
+
+#: ../../source/How-To-Guides/Node-arguments.rst:126
+msgid ""
+"Then either declare the parameters within your node with "
+"``declare_parameter``  or ``declare_parameters`` (see `documentation "
+"<https://docs.ros2.org/foxy/api/rclcpp/classrclcpp_1_1Node.html#a095ea977b26e7464d9371efea5f36c42>`__"
+" for function signatures), or `set the node to automatically declare "
+"parameters "
+"<https://docs.ros2.org/foxy/api/rclcpp/classrclcpp_1_1NodeOptions.html#a094ceb7af7c9b358ec007a4b8e14d40d>`__"
+" if they were passed in via a command line override."
+msgstr ""
+"Ensuite, déclarez les paramètres dans votre nœud avec ``declare_parameter`` "
+"ou ``declare_parameters`` (voir `documentation "
+"<https://docs.ros2.org/foxy/api/rclcpp/classrclcpp_1_1Node.html#a095ea977b26e7464d9371efea5f36c42>`__"
+" pour signatures de fonction), ou `configurer le nœud pour qu'il déclare "
+"automatiquement les paramètres "
+"<https://docs.ros2.org/foxy/api/rclcpp/classrclcpp_1_1NodeOptions.html#a094ceb7af7c9b358ec007a4b8e14d40d>`__"
+" s'ils ont été transmis via un remplacement de ligne de commande."
+
+#: ../../source/How-To-Guides/Node-arguments.rst:128
+msgid "Then run the following:"
+msgstr "Exécutez ensuite ce qui suit :"

@@ -1,0 +1,316 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-09 11:55:39.081861\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:6
+msgid "Ubuntu (binary)"
+msgstr "gratuit (binaire)"
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:10
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:12
+msgid ""
+"This page explains how to install ROS 2 on Ubuntu Linux from a pre-built "
+"binary package."
+msgstr ""
+"Cette page explique comment installer ROS 2 sur Ubuntu Linux à partir d'un "
+"paquet binaire pré-construit."
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:16
+msgid ""
+"The pre-built binary does not include all ROS 2 packages. All packages in "
+"the `ROS base variant <https://ros.org/reps/rep-2001.html#ros-base>`_ are "
+"included, and only a subset of packages in the `ROS desktop variant "
+"<https://ros.org/reps/rep-2001.html#desktop-variants>`_ are included. The "
+"exact list of packages are described by the repositories listed in `this "
+"ros2.repos file <https://github.com/ros2/ros2/blob/rolling/ros2.repos>`_."
+msgstr ""
+"Le binaire pré-construit n'inclut pas tous les packages ROS 2. Tous les "
+"packages de la `variante de base ROS "
+"<https://ros.org/reps/rep-2001.html#ros-base>`_ sont inclus, et seul un "
+"sous-ensemble de packages de la `variante de bureau ROS <https:/ "
+"/ros.org/reps/rep-2001.html#desktop-variants>`_ sont inclus. La liste exacte"
+" des packages est décrite par les référentiels répertoriés dans `ce fichier "
+"ros2.repos <https://github.com/ros2/ros2/blob/rolling/ros2.repos>`_."
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:20
+msgid ""
+"There are also :doc:`Debian packages <../Ubuntu-Install-Debians>` available."
+msgstr ""
+"Des :doc:`paquets Debian <../Ubuntu-Install-Debians>` sont également "
+"disponibles."
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:23
+msgid "System Requirements"
+msgstr "Configuration requise"
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:25
+msgid ""
+"We currently support Ubuntu Linux Jammy (22.04) 64-bit x86 and 64-bit ARM. "
+"The Rolling Ridley distribution will change target platforms from time to "
+"time as new platforms are selected for development. Most people will want to"
+" use a stable ROS distribution."
+msgstr ""
+"Nous prenons actuellement en charge Ubuntu Linux Jammy (22.04) 64 bits x86 "
+"et ARM 64 bits. La distribution Rolling Ridley changera de plate-forme cible"
+" de temps à autre à mesure que de nouvelles plates-formes seront "
+"sélectionnées pour le développement. La plupart des gens voudront utiliser "
+"une distribution ROS stable."
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:30
+msgid "Add the ROS 2 apt repository"
+msgstr "Ajouter le référentiel ROS 2 apt"
+
+#: ../../source/Installation/_Apt-Repositories.rst:1
+msgid "You will need to add the ROS 2 apt repository to your system."
+msgstr "Vous devrez ajouter le référentiel ROS 2 apt à votre système."
+
+#: ../../source/Installation/_Apt-Repositories.rst:3
+msgid ""
+"First ensure that the `Ubuntu Universe repository "
+"<https://help.ubuntu.com/community/Repositories/Ubuntu>`_ is enabled."
+msgstr ""
+"Assurez-vous d'abord que le `référentiel Ubuntu Universe "
+"<https://help.ubuntu.com/community/Repositories/Ubuntu>`_ est activé."
+
+#: ../../source/Installation/_Apt-Repositories.rst:10
+msgid "Now add the ROS 2 GPG key with apt."
+msgstr "Ajoutez maintenant la clé ROS 2 GPG avec apt."
+
+#: ../../source/Installation/_Apt-Repositories.rst:17
+msgid "Then add the repository to your sources list."
+msgstr "Ajoutez ensuite le référentiel à votre liste de sources."
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:35
+msgid "Downloading ROS 2"
+msgstr "Téléchargement de ROS 2"
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:37
+msgid ""
+"Binary releases of Rolling Ridley are not provided. Instead you may download"
+" nightly :ref:`prerelease binaries <Prerelease_binaries>`."
+msgstr ""
+"Les versions binaires de Rolling Ridley ne sont pas fournies. Au lieu de "
+"cela, vous pouvez télécharger tous les soirs :ref:`binaries prerelease "
+"<Prerelease_binaries>`."
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:40
+msgid ""
+"Download the latest package for Ubuntu; let's assume that it ends up at "
+"``~/Downloads/ros2-package-linux-x86_64.tar.bz2``."
+msgstr ""
+"Téléchargez le dernier package pour Ubuntu ; supposons qu'il se retrouve "
+"dans ``~/Downloads/ros2-package-linux-x86_64.tar.bz2``."
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:42
+msgid ""
+"Note: there may be more than one binary download option which might cause "
+"the file name to differ."
+msgstr ""
+"Remarque : il peut y avoir plus d'une option de téléchargement binaire qui "
+"peut entraîner une différence de nom de fichier."
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:45
+msgid "Unpack it:"
+msgstr "Déballez-le :"
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:54
+msgid "Installing and initializing rosdep"
+msgstr "Installation et initialisation de rosdep"
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:66
+msgid "Installing the missing dependencies"
+msgstr "Installer les dépendances manquantes"
+
+#: ../../source/Installation/_Apt-Upgrade-Admonition.rst:1
+msgid ""
+"ROS 2 packages are built on frequently updated Ubuntu systems. It is always "
+"recommended that you ensure your system is up to date before installing new "
+"packages."
+msgstr ""
+"Les packages ROS 2 sont construits sur des systèmes Ubuntu fréquemment mis à"
+" jour. Il est toujours recommandé de vous assurer que votre système est à "
+"jour avant d'installer de nouveaux packages."
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:70
+msgid "Set your rosdistro according to the release you downloaded."
+msgstr ""
+"Réglez votre rosdistro en fonction de la version que vous avez téléchargée."
+
+#: ../../source/Installation/_rosdep_Linux_Mint.rst:1
+msgid ""
+"**Note**: If you're using a distribution that is based on Ubuntu (like Linux"
+" Mint) but does not identify itself as such, you'll get an error message "
+"like ``Unsupported OS [mint]``. In this case append ``--os=ubuntu:jammy`` to"
+" the above command."
+msgstr ""
+"**Remarque** : Si vous utilisez une distribution basée sur Ubuntu (comme "
+"Linux Mint) mais qui ne s'identifie pas comme telle, vous obtiendrez un "
+"message d'erreur du type ``Unsupported OS [mint]``. Dans ce cas, ajoutez "
+"``--os=ubuntu:jammy`` à la commande ci-dessus."
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:79
+msgid "Install development tools (optional)"
+msgstr "Installer les outils de développement (facultatif)"
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:81
+msgid ""
+"If you are going to build ROS packages or otherwise do development, you can "
+"also install the development tools:"
+msgstr ""
+"Si vous envisagez de créer des packages ROS ou de faire du développement, "
+"vous pouvez également installer les outils de développement :"
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:88
+msgid "Install additional DDS implementations (optional)"
+msgstr "Installer des implémentations DDS supplémentaires (facultatif)"
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:90
+msgid ""
+"If you would like to use another DDS or RTPS vendor besides the default, you"
+" can find instructions :doc:`here <../DDS-Implementations>`."
+msgstr ""
+"Si vous souhaitez utiliser un autre fournisseur DDS ou RTPS en plus du "
+"fournisseur par défaut, vous pouvez trouver des instructions :doc:`ici "
+"<../DDS-Implementations>`."
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:93
+msgid "Environment setup"
+msgstr "Configuration de l'environnement"
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:96
+msgid "Source the setup script"
+msgstr "Source du script d'installation"
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:98
+msgid "Set up your environment by sourcing the following file."
+msgstr "Configurez votre environnement en vous procurant le fichier suivant."
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:107
+msgid "Try some examples"
+msgstr "Essayez quelques exemples"
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:109
+msgid "In one terminal, source the setup file and then run a C++ ``talker``:"
+msgstr ""
+"Dans un terminal, sourcez le fichier de configuration, puis exécutez un "
+"``talker`` C++ :"
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:116
+msgid ""
+"In another terminal source the setup file and then run a Python "
+"``listener``:"
+msgstr ""
+"Dans un autre terminal, sourcez le fichier de configuration, puis exécutez "
+"un Python ``listener`` :"
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:123
+msgid ""
+"You should see the ``talker`` saying that it's ``Publishing`` messages and "
+"the ``listener`` saying ``I heard`` those messages. This verifies both the "
+"C++ and Python APIs are working properly. Hooray!"
+msgstr ""
+"Vous devriez voir le ``locuteur`` dire qu'il ``publie`` des messages et le "
+"``auditeur`` dire ``J'ai entendu`` ces messages. Cela vérifie que les API "
+"C++ et Python fonctionnent correctement. Hourra !"
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:128
+msgid "Next steps after installing"
+msgstr "Prochaines étapes après l'installation"
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:129
+msgid ""
+"Continue with the :doc:`tutorials and demos <../../Tutorials>` to configure "
+"your environment, create your own workspace and packages, and learn ROS 2 "
+"core concepts."
+msgstr ""
+"Continuez avec les :doc:`tutoriels et démos <../../Tutoriels>` pour "
+"configurer votre environnement, créer votre propre espace de travail et vos "
+"packages, et apprendre les concepts de base de ROS 2."
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:132
+msgid "Using the ROS 1 bridge"
+msgstr "Utilisation du pont ROS 1"
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:133
+msgid ""
+"The ROS 1 bridge can connect topics from ROS 1 to ROS 2 and vice-versa. See "
+"the dedicated `documentation "
+"<https://github.com/ros2/ros1_bridge/blob/master/README.md>`__ on how to "
+"build and use the ROS 1 bridge."
+msgstr ""
+"Le pont ROS 1 peut connecter des sujets de ROS 1 à ROS 2 et vice-versa. Voir"
+" la `documentation dédiée "
+"<https://github.com/ros2/ros1_bridge/blob/master/README.md>`__ sur la façon "
+"de construire et d'utiliser le pont ROS 1."
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:136
+msgid "Additional RMW implementations (optional)"
+msgstr "Implémentations RMW supplémentaires (facultatif)"
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:137
+msgid ""
+"The default middleware that ROS 2 uses is ``Fast DDS``, but the middleware "
+"(RMW) can be replaced at runtime. See the :doc:`guide <../../How-To-"
+"Guides/Working-with-multiple-RMW-implementations>` on how to work with "
+"multiple RMWs."
+msgstr ""
+"Le middleware par défaut utilisé par ROS 2 est ``Fast DDS``, mais le "
+"middleware (RMW) peut être remplacé au moment de l'exécution. Consultez le "
+":doc:`guide <../../How-To-Guides/Working-with-multiple-RMW-implementations>`"
+" pour savoir comment travailler avec plusieurs RMW."
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:141
+msgid "Troubleshooting"
+msgstr "Dépannage"
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:143
+msgid ""
+"Troubleshooting techniques can be found :doc:`here <../../How-To-"
+"Guides/Installation-Troubleshooting>`."
+msgstr ""
+"Les techniques de dépannage peuvent être trouvées :doc:`ici <../../How-To-"
+"Guides/Installation-Troubleshooting>`."
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:146
+msgid "Uninstall"
+msgstr "Désinstaller"
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:148
+msgid ""
+"If you installed your workspace with colcon as instructed above, "
+"\"uninstalling\" could be just a matter of opening a new terminal and not "
+"sourcing the workspace's ``setup`` file. This way, your environment will "
+"behave as though there is no Rolling install on your system."
+msgstr ""
+"Si vous avez installé votre espace de travail avec colcon comme indiqué ci-"
+"dessus, la \"désinstallation\" pourrait consister simplement à ouvrir un "
+"nouveau terminal et à ne pas rechercher le fichier ``setup`` de l'espace de "
+"travail. De cette façon, votre environnement se comportera comme s'il n'y "
+"avait pas d'installation progressive sur votre système."
+
+#: ../../source/Installation/Alternatives/Ubuntu-Install-Binary.rst:151
+msgid ""
+"If you're also trying to free up space, you can delete the entire workspace "
+"directory with:"
+msgstr ""
+"Si vous essayez également de libérer de l'espace, vous pouvez supprimer tout"
+" le répertoire de l'espace de travail avec :"

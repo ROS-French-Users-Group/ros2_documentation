@@ -1,0 +1,318 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 17:02:28.254283\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/How-To-Guides/Releasing/Subsequent-Releases.rst:2
+msgid "Subsequent Releases"
+msgstr "Versions ultérieures"
+
+#: ../../source/How-To-Guides/Releasing/Subsequent-Releases.rst:4
+msgid ""
+"This guide explains how to release new versions of ROS packages that have "
+"already been released before."
+msgstr ""
+"Ce guide explique comment publier de nouvelles versions de packages ROS qui "
+"ont déjà été publiés auparavant."
+
+#: ../../source/How-To-Guides/Releasing/Subsequent-Releases.rst:8
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/How-To-Guides/Releasing/Subsequent-Releases.rst:11
+msgid "Be part of the release team"
+msgstr "Faire partie de l'équipe de publication"
+
+#: ../../source/How-To-Guides/Releasing/Subsequent-Releases.rst:13
+msgid ""
+"If you are not part of the release team that has write access to the release"
+" repository, follow :ref:`Join a release team <join-a-release-team>`."
+msgstr ""
+"Si vous ne faites pas partie de l'équipe de publication qui a un accès en "
+"écriture au référentiel de publication, suivez :ref:`Rejoignez une équipe de"
+" publication <join-a-release-team>`."
+
+#: ../../source/How-To-Guides/Releasing/Subsequent-Releases.rst:16
+msgid "Install dependencies"
+msgstr "Installer les dépendances"
+
+#: ../../source/How-To-Guides/Releasing/_Install-Dependencies.rst:1
+msgid ""
+"Install tools that you will use in the upcoming steps according to your "
+"platform:"
+msgstr ""
+"Installez les outils que vous utiliserez dans les prochaines étapes en "
+"fonction de votre plateforme :"
+
+#: ../../source/How-To-Guides/Releasing/_Install-Dependencies.rst:5
+msgid "Debian (eg. Ubuntu)"
+msgstr "Debian (par exemple Ubuntu)"
+
+#: ../../source/How-To-Guides/Releasing/_Install-Dependencies.rst:11
+msgid "RPM (eg. RHEL)"
+msgstr "RPM (ex. RHEL)"
+
+#: ../../source/How-To-Guides/Releasing/_Install-Dependencies.rst:17
+msgid "Other"
+msgstr "Autre"
+
+#: ../../source/How-To-Guides/Releasing/Subsequent-Releases.rst:21
+msgid "Set up a Personal Access Token"
+msgstr "Configurer un jeton d'accès personnel"
+
+#: ../../source/How-To-Guides/Releasing/_Personal-Access-Token.rst:3
+msgid ""
+"If the file ``~/.config/bloom`` exists on your computer, it is likely that "
+"you have done this before so you should skip this section."
+msgstr ""
+"Si le fichier ``~/.config/bloom`` existe sur votre ordinateur, il est "
+"probable que vous l'ayez déjà fait auparavant, vous devriez donc ignorer "
+"cette section."
+
+#: ../../source/How-To-Guides/Releasing/_Personal-Access-Token.rst:5
+msgid ""
+"During the release process, multiple HTTPS Git operations will be performed "
+"that require password authentication. To avoid being repeatedly asked for a "
+"password, a `Personal Access Token (PAT) "
+"<https://docs.github.com/en/authentication/keeping-your-account-and-data-"
+"secure/creating-a-personal-access-token>`_ will be set up. If you have "
+"multi-factor authentication setup on your GitHub account, you **must** setup"
+" a Personal Access Token."
+msgstr ""
+"Au cours du processus de publication, plusieurs opérations HTTPS Git seront "
+"effectuées qui nécessitent une authentification par mot de passe. Pour "
+"éviter qu'on vous demande à plusieurs reprises un mot de passe, un `Personal"
+" Access Token (PAT) <https://docs.github.com/en/authentication/keeping-your-"
+"account-and-data-secure/creating-a-personal- access-token>`_ sera configuré."
+" Si vous avez configuré l'authentification multifacteur sur votre compte "
+"GitHub, vous **devez** configurer un jeton d'accès personnel."
+
+#: ../../source/How-To-Guides/Releasing/_Personal-Access-Token.rst:9
+msgid "Create a Personal Access Token by:"
+msgstr "Créez un jeton d'accès personnel en :"
+
+#: ../../source/How-To-Guides/Releasing/_Personal-Access-Token.rst:11
+msgid ""
+"Log in to GitHub and go to `Personal access tokens "
+"<https://github.com/settings/tokens>`_."
+msgstr ""
+"Connectez-vous à GitHub et accédez à `Jetons d'accès personnels "
+"<https://github.com/settings/tokens>`_."
+
+#: ../../source/How-To-Guides/Releasing/_Personal-Access-Token.rst:12
+msgid "Click the **Generate new token** button."
+msgstr "Cliquez sur le bouton **Générer un nouveau jeton**."
+
+#: ../../source/How-To-Guides/Releasing/_Personal-Access-Token.rst:13
+msgid "Set **Note** to something like ``Bloom token``."
+msgstr "Définissez **Remarque** sur quelque chose comme ``Bloom token``."
+
+#: ../../source/How-To-Guides/Releasing/_Personal-Access-Token.rst:14
+msgid "Set **Expiration** to **No expiration**."
+msgstr "Définissez **Expiration** sur **Aucune expiration**."
+
+#: ../../source/How-To-Guides/Releasing/_Personal-Access-Token.rst:15
+msgid "Tick the ``public_repo`` and ``workflow`` checkboxes."
+msgstr "Cochez les cases ``public_repo`` et ``workflow``."
+
+#: ../../source/How-To-Guides/Releasing/_Personal-Access-Token.rst:16
+msgid "Click the **Generate token** button."
+msgstr "Cliquez sur le bouton **Générer un jeton**."
+
+#: ../../source/How-To-Guides/Releasing/_Personal-Access-Token.rst:18
+msgid ""
+"After you have created the token, you will end up back at the *Personal "
+"access tokens* page. **Copy the alphanumeric token** that is highlighted in "
+"green."
+msgstr ""
+"Après avoir créé le jeton, vous vous retrouverez sur la page *Jetons d'accès"
+" personnels*. **Copiez le jeton alphanumérique** surligné en vert."
+
+#: ../../source/How-To-Guides/Releasing/_Personal-Access-Token.rst:21
+msgid ""
+"Save your GitHub username and PAT to a new file called ``~/.config/bloom``, "
+"with the format below:"
+msgstr ""
+"Enregistrez votre nom d'utilisateur GitHub et votre PAT dans un nouveau "
+"fichier appelé ``~/.config/bloom``, au format ci-dessous :"
+
+#: ../../source/How-To-Guides/Releasing/Subsequent-Releases.rst:26
+msgid "Ensure repositories are up-to-date"
+msgstr "Assurez-vous que les référentiels sont à jour"
+
+#: ../../source/How-To-Guides/Releasing/_Ensure-Repositories-Are-Up-To-Date.rst:1
+msgid "Make sure that:"
+msgstr "Sois sûr que:"
+
+#: ../../source/How-To-Guides/Releasing/_Ensure-Repositories-Are-Up-To-Date.rst:3
+msgid "Your repository is hosted on a remote such as GitHub."
+msgstr "Votre référentiel est hébergé sur une télécommande telle que GitHub."
+
+#: ../../source/How-To-Guides/Releasing/_Ensure-Repositories-Are-Up-To-Date.rst:4
+msgid ""
+"You have a clone of the repository on your computer and are on the right "
+"branch."
+msgstr ""
+"Vous avez un clone du référentiel sur votre ordinateur et vous êtes sur la "
+"bonne branche."
+
+#: ../../source/How-To-Guides/Releasing/_Ensure-Repositories-Are-Up-To-Date.rst:5
+msgid "Both the remote repository and your clone are up-to-date."
+msgstr "Le référentiel distant et votre clone sont à jour."
+
+#: ../../source/How-To-Guides/Releasing/Subsequent-Releases.rst:31
+msgid "Updating Changelog"
+msgstr "Mise à jour du journal des modifications"
+
+#: ../../source/How-To-Guides/Releasing/Subsequent-Releases.rst:33
+msgid ""
+"For your users and for the developers, keep the changelog concise and up to "
+"date."
+msgstr ""
+"Pour vos utilisateurs et pour les développeurs, gardez le changelog concis "
+"et à jour."
+
+#: ../../source/How-To-Guides/Releasing/_Clean-Up-Changelog.rst:1
+msgid ""
+"Open all ``CHANGELOG.rst`` files in an editor. You will see that "
+"``catkin_generate_changelog`` has auto-generated a forthcoming section with "
+"notes from commit messages:"
+msgstr ""
+"Ouvrez tous les fichiers ``CHANGELOG.rst`` dans un éditeur. Vous verrez que "
+"``catkin_generate_changelog`` a généré automatiquement une section à venir "
+"avec des notes de messages de validation :"
+
+#: ../../source/How-To-Guides/Releasing/_Clean-Up-Changelog.rst:15
+msgid ""
+"Clean up the list of commit messages to concisely convey the notable changes"
+" that have been made to the packages since the last release, and **commit "
+"all the CHANGELOG.rst files.** Do not modify the ``Forthcoming`` header."
+msgstr ""
+"Nettoyez la liste des messages de validation pour transmettre de manière "
+"concise les changements notables qui ont été apportés aux packages depuis la"
+" dernière version, et **commettez tous les fichiers CHANGELOG.rst.** Ne "
+"modifiez pas l'en-tête ``Forthcoming``."
+
+#: ../../source/How-To-Guides/Releasing/Subsequent-Releases.rst:42
+msgid "Bump the package version"
+msgstr "Bump la version du package"
+
+#: ../../source/How-To-Guides/Releasing/_Bump-Package-Version.rst:1
+msgid ""
+"Every release of the package must have a unique version number higher than "
+"the previous release. Run:"
+msgstr ""
+"Chaque version du package doit avoir un numéro de version unique supérieur à"
+" celui de la version précédente. Courir:"
+
+#: ../../source/How-To-Guides/Releasing/_Bump-Package-Version.rst:8
+msgid "which performs the following:"
+msgstr "qui effectue les opérations suivantes :"
+
+#: ../../source/How-To-Guides/Releasing/_Bump-Package-Version.rst:10
+msgid "increases the package version in ``package.xml``"
+msgstr "augmente la version du paquet dans ``package.xml``"
+
+#: ../../source/How-To-Guides/Releasing/_Bump-Package-Version.rst:11
+msgid ""
+"replaces the heading ``Forthcoming`` with ``version (date)`` (eg. ``0.0.1 "
+"(2022-01-08)``) in ``CHANGELOG.rst``"
+msgstr ""
+"remplace le titre ``À venir`` par ``version (date)`` (ex. ``0.0.1 "
+"(2022-01-08)``) dans ``CHANGELOG.rst``"
+
+#: ../../source/How-To-Guides/Releasing/_Bump-Package-Version.rst:12
+msgid "commits those changes"
+msgstr "valide ces changements"
+
+#: ../../source/How-To-Guides/Releasing/_Bump-Package-Version.rst:13
+msgid "creates a tag (eg. ``0.0.1``)"
+msgstr "crée une balise (ex. ``0.0.1``)"
+
+#: ../../source/How-To-Guides/Releasing/_Bump-Package-Version.rst:14
+msgid "pushes the changes and the tag to your remote repository"
+msgstr "pousse les modifications et la balise vers votre référentiel distant"
+
+#: ../../source/How-To-Guides/Releasing/_Bump-Package-Version.rst:18
+msgid ""
+"By default the patch version of the package is incremented, such as from "
+"``0.0.0`` to ``0.0.1``. To increment the minor or major version instead, run"
+" ``catkin_prepare_release --bump minor`` or ``catkin_prepare_release --bump "
+"major``. For more details, see ``catkin_prepare_release --help``."
+msgstr ""
+"Par défaut, la version du correctif du paquet est incrémentée, par exemple "
+"de ``0.0.0`` à ``0.0.1``. Pour incrémenter la version mineure ou majeure à "
+"la place, exécutez ``catkin_prepare_release --bump minor`` ou "
+"``catkin_prepare_release --bump major``. Pour plus de détails, voir "
+"``catkin_prepare_release --help``."
+
+#: ../../source/How-To-Guides/Releasing/Subsequent-Releases.rst:47
+msgid "Bloom Release"
+msgstr "Libération de la floraison"
+
+#: ../../source/How-To-Guides/Releasing/Subsequent-Releases.rst:49
+msgid ""
+"Run the following command, replacing ``my_repo`` with the name of your "
+"repository with the packages:"
+msgstr ""
+"Exécutez la commande suivante en remplaçant ``my_repo`` par le nom de votre "
+"référentiel avec les packages :"
+
+#: ../../source/How-To-Guides/Releasing/Subsequent-Releases.rst:55
+msgid ""
+"Bloom will automatically create a pull request for you against `rosdistro "
+"<https://github.com/ros/rosdistro>`_."
+msgstr ""
+"Bloom créera automatiquement une pull request pour vous contre `rosdistro "
+"<https://github.com/ros/rosdistro>`_."
+
+#: ../../source/How-To-Guides/Releasing/Subsequent-Releases.rst:58
+msgid "Next Steps"
+msgstr "Prochaines étapes"
+
+#: ../../source/How-To-Guides/Releasing/_Next-Steps.rst:1
+msgid ""
+"Once your pull request has been submitted, usually within one or two days, "
+"one of the maintainers of rosdistro will review and merge your Pull Request."
+" If your package build is successful, in 24-48 hours your packages will "
+"become available in the **ros-testing** repository, where you can :doc:`test"
+" your pre-release binaries <../../../Installation/Testing>`."
+msgstr ""
+"Une fois votre demande de tirage soumise, généralement dans un délai d'un ou"
+" deux jours, l'un des responsables de rosdistro examinera et fusionnera "
+"votre demande de tirage. Si la construction de votre package réussit, vos "
+"packages seront disponibles dans les 24 à 48 heures dans le référentiel "
+"**ros-testing**, où vous pourrez :doc:`tester vos binaires de pré-version "
+"<../../.. /Installation/Tests>`."
+
+#: ../../source/How-To-Guides/Releasing/_Next-Steps.rst:4
+msgid ""
+"Approximately every two to four weeks, the distribution's release manager "
+"manually synchronizes the contents of ros-testing into the main ROS "
+"repository. This is when your packages actually become available to the rest"
+" of the ROS community. To get updates on when the next synchronization "
+"(sync) is coming, subscribe to the `Packaging and Release Management "
+"Category on ROS Discourse <https://discourse.ros.org/c/release/16>`_."
+msgstr ""
+"Environ toutes les deux à quatre semaines, le gestionnaire de publication de"
+" la distribution synchronise manuellement le contenu de ros-testing dans le "
+"référentiel ROS principal. C'est à ce moment que vos packages deviennent "
+"réellement disponibles pour le reste de la communauté ROS. Pour obtenir des "
+"mises à jour sur la date de la prochaine synchronisation (sync), abonnez-"
+"vous à la catégorie `Packaging and Release Management Category on ROS "
+"Discourse <https://discourse.ros.org/c/release/16>`_."

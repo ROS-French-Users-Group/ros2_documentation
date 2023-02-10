@@ -1,0 +1,593 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 14:08:16.964201\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:8
+msgid "About ROS 2 interfaces"
+msgstr "À propos des interfaces ROS 2"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:11
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:14
+msgid "1. Background"
+msgstr "1. Origines"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:16
+msgid ""
+"ROS applications typically communicate through interfaces of one of three "
+"types: messages, services and actions. ROS 2 uses a simplified description "
+"language, the interface definition language (IDL), to describe these "
+"interfaces. This description makes it easy for ROS tools to automatically "
+"generate source code for the interface type in several target languages."
+msgstr ""
+"Les applications ROS communiquent généralement via des interfaces de l'un "
+"des trois types suivants : messages, services et actions. ROS 2 utilise un "
+"langage de description simplifié, le langage de définition d'interface "
+"(IDL), pour décrire ces interfaces. Cette description permet aux outils ROS "
+"de générer automatiquement le code source pour le type d'interface dans "
+"plusieurs langages cibles."
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:20
+msgid "In this document we will describe the supported types."
+msgstr "Dans ce document, nous décrirons les types pris en charge."
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:22
+msgid ""
+"msg: ``.msg`` files are simple text files that describe the fields of a ROS "
+"message. They are used to generate source code for messages in different "
+"languages."
+msgstr ""
+"msg : les fichiers ``.msg`` sont de simples fichiers texte qui décrivent les"
+" champs d'un message ROS. Ils sont utilisés pour générer le code source des "
+"messages dans différentes langues."
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:23
+msgid ""
+"srv: ``.srv`` files describe a service. They are composed of two parts: a "
+"request and a response. The request and response are message declarations."
+msgstr ""
+"srv : les fichiers ``.srv`` décrivent un service. Ils sont composés de deux "
+"parties : une requête et une réponse. La requête et la réponse sont des "
+"déclarations de message."
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:24
+msgid ""
+"action: ``.action`` files describe actions. They are composed of three "
+"parts: a goal, a result, and feedback. Each part is a message declaration "
+"itself."
+msgstr ""
+"action : les fichiers ``.action`` décrivent les actions. Ils sont composés "
+"de trois parties : un objectif, un résultat et des commentaires. Chaque "
+"partie est une déclaration de message elle-même."
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:29
+msgid "2. Message description specification"
+msgstr "2. Spécification de la description des messages"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:31
+msgid ""
+"Messages are described and defined in ``.msg`` files in the ``msg/`` "
+"directory of a ROS package. ``.msg`` files are composed of two parts: fields"
+" and constants."
+msgstr ""
+"Les messages sont décrits et définis dans des fichiers ``.msg`` dans le "
+"répertoire ``msg/`` d'un package ROS. Les fichiers ``.msg`` sont composés de"
+" deux parties : des champs et des constantes."
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:35
+msgid "2.1 Fields"
+msgstr "2.1 Champs"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:37
+msgid "Each field consists of a type and a name, separated by a space, i.e:"
+msgstr ""
+"Chaque champ est composé d'un type et d'un nom, séparés par un espace, "
+"c'est-à-dire :"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:45
+#: ../../source/Concepts/About-ROS-Interfaces.rst:193
+#: ../../source/Concepts/About-ROS-Interfaces.rst:217
+msgid "For example:"
+msgstr "Par example:"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:53
+msgid "2.1.1 Field types"
+msgstr "2.1.1 Types de champs"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:55
+msgid "Field types can be:"
+msgstr "Les types de champs peuvent être :"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:58
+msgid "a built-in-type"
+msgstr "un type intégré"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:59
+msgid ""
+"names of Message descriptions defined on their own, such as "
+"\"geometry_msgs/PoseStamped\""
+msgstr ""
+"noms des descriptions de message définis par eux-mêmes, tels que "
+"\"geometry_msgs/PoseStamped\""
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:61
+msgid "*Built-in-types currently supported:*"
+msgstr "*Types intégrés actuellement pris en charge :*"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:66
+#: ../../source/Concepts/About-ROS-Interfaces.rst:137
+msgid "Type name"
+msgstr "Tapez le nom"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:67
+#: ../../source/Concepts/About-ROS-Interfaces.rst:138
+msgid ""
+"`C++ <https://design.ros2.org/articles/generated_interfaces_cpp.html>`__"
+msgstr ""
+"`C++ <https://design.ros2.org/articles/generated_interfaces_cpp.html>`__"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:68
+#: ../../source/Concepts/About-ROS-Interfaces.rst:139
+msgid ""
+"`Python "
+"<https://design.ros2.org/articles/generated_interfaces_python.html>`__"
+msgstr ""
+"`Python "
+"<https://design.ros2.org/articles/generated_interfaces_python.html>`__"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:69
+#: ../../source/Concepts/About-ROS-Interfaces.rst:140
+msgid "`DDS type <https://design.ros2.org/articles/mapping_dds_types.html>`__"
+msgstr ""
+"`Type DDS <https://design.ros2.org/articles/mapping_dds_types.html>`__"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:70
+#: ../../source/Concepts/About-ROS-Interfaces.rst:71
+msgid "bool"
+msgstr "bourdonner"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:72
+msgid "builtins.bool"
+msgstr "builtins.bool"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:73
+msgid "boolean"
+msgstr "booléen"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:74
+msgid "byte"
+msgstr "octet"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:75
+#: ../../source/Concepts/About-ROS-Interfaces.rst:95
+msgid "uint8_t"
+msgstr "uint8_t"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:76
+msgid "builtins.bytes*"
+msgstr "builtins.octets*"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:77
+#: ../../source/Concepts/About-ROS-Interfaces.rst:93
+#: ../../source/Concepts/About-ROS-Interfaces.rst:97
+msgid "octet"
+msgstr "octuor"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:78
+#: ../../source/Concepts/About-ROS-Interfaces.rst:79
+#: ../../source/Concepts/About-ROS-Interfaces.rst:81
+msgid "char"
+msgstr "carboniser"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:80
+#: ../../source/Concepts/About-ROS-Interfaces.rst:155
+msgid "builtins.str*"
+msgstr "builtins.str*"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:82
+msgid "float32"
+msgstr "float32"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:83
+#: ../../source/Concepts/About-ROS-Interfaces.rst:85
+msgid "float"
+msgstr "flotter"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:84
+#: ../../source/Concepts/About-ROS-Interfaces.rst:88
+msgid "builtins.float*"
+msgstr "builtins.float*"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:86
+msgid "float64"
+msgstr "float64"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:87
+#: ../../source/Concepts/About-ROS-Interfaces.rst:89
+msgid "double"
+msgstr "double"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:90
+msgid "int8"
+msgstr "vous8"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:91
+msgid "int8_t"
+msgstr "int8_t"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:92
+#: ../../source/Concepts/About-ROS-Interfaces.rst:96
+#: ../../source/Concepts/About-ROS-Interfaces.rst:100
+#: ../../source/Concepts/About-ROS-Interfaces.rst:104
+#: ../../source/Concepts/About-ROS-Interfaces.rst:108
+#: ../../source/Concepts/About-ROS-Interfaces.rst:112
+#: ../../source/Concepts/About-ROS-Interfaces.rst:116
+#: ../../source/Concepts/About-ROS-Interfaces.rst:120
+msgid "builtins.int*"
+msgstr "builtins.int*"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:94
+msgid "uint8"
+msgstr "win8"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:98
+msgid "int16"
+msgstr "int16"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:99
+msgid "int16_t"
+msgstr "int16_t"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:101
+msgid "short"
+msgstr "court"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:102
+msgid "uint16"
+msgstr "uint16"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:103
+msgid "uint16_t"
+msgstr "uint16_t"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:105
+msgid "unsigned short"
+msgstr "court non signé"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:106
+msgid "int32"
+msgstr "Se remettre"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:107
+msgid "int32_t"
+msgstr "int32_t"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:109
+msgid "long"
+msgstr "longue"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:110
+msgid "uint32"
+msgstr "se remettre"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:111
+msgid "uint32_t"
+msgstr "uint32_t"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:113
+msgid "unsigned long"
+msgstr "long non signé"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:114
+msgid "int64"
+msgstr "int64"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:115
+msgid "int64_t"
+msgstr "int64_t"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:117
+msgid "long long"
+msgstr "longtemps longtemps"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:118
+msgid "uint64"
+msgstr "gagner t64"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:119
+msgid "uint64_t"
+msgstr "uint64_t"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:121
+msgid "unsigned long long"
+msgstr "non signé long long"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:122
+#: ../../source/Concepts/About-ROS-Interfaces.rst:125
+#: ../../source/Concepts/About-ROS-Interfaces.rst:156
+msgid "string"
+msgstr "chaîne"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:123
+#: ../../source/Concepts/About-ROS-Interfaces.rst:154
+msgid "std::string"
+msgstr "std ::chaîne"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:124
+#: ../../source/Concepts/About-ROS-Interfaces.rst:128
+msgid "builtins.str"
+msgstr "builtins.str"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:126
+#: ../../source/Concepts/About-ROS-Interfaces.rst:129
+msgid "wstring"
+msgstr "ficelle"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:127
+msgid "std::u16string"
+msgstr "std :: chaîne u16"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:132
+msgid "*Every built-in-type can be used to define arrays:*"
+msgstr "*Chaque type intégré peut être utilisé pour définir des tableaux :*"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:141
+msgid "static array"
+msgstr "tableau statique"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:142
+msgid "std::array<T, N>"
+msgstr "std::array<T, N>"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:143
+#: ../../source/Concepts/About-ROS-Interfaces.rst:151
+msgid "builtins.list*"
+msgstr "builtins.list*"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:144
+msgid "T[N]"
+msgstr "T[N]"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:145
+msgid "unbounded dynamic array"
+msgstr "tableau dynamique illimité"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:146
+msgid "std::vector"
+msgstr "std :: vecteur"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:147
+msgid "builtins.list"
+msgstr "builtins.list"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:148
+msgid "sequence"
+msgstr "séquence"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:149
+msgid "bounded dynamic array"
+msgstr "tableau dynamique borné"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:150
+msgid "custom_class<T, N>"
+msgstr "classe_personnalisée<T, N>"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:152
+msgid "sequence<T, N>"
+msgstr "séquence<T, N>"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:153
+msgid "bounded string"
+msgstr "chaîne délimitée"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:159
+msgid ""
+"All types that are more permissive than their ROS definition enforce the ROS"
+" constraints in range and length by software"
+msgstr ""
+"Tous les types qui sont plus permissifs que leur définition ROS appliquent "
+"les contraintes ROS de plage et de longueur par logiciel"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:161
+msgid "*Example of message definition using arrays and bounded types:*"
+msgstr ""
+"*Exemple de définition de message utilisant des tableaux et des types "
+"bornés :*"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:177
+msgid "2.1.2 Field names"
+msgstr "2.1.2 Noms de champs"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:179
+msgid ""
+"Field names must be lowercase alphanumeric characters with underscores for "
+"separating words. They must start with an alphabetic character, they must "
+"not end with an underscore and never have two consecutive underscores."
+msgstr ""
+"Les noms de champ doivent être des caractères alphanumériques minuscules "
+"avec des traits de soulignement pour séparer les mots. Ils doivent commencer"
+" par un caractère alphabétique, ils ne doivent pas se terminer par un trait "
+"de soulignement et ne doivent jamais avoir deux traits de soulignement "
+"consécutifs."
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:182
+msgid "2.1.3 Field default value"
+msgstr "2.1.3 Valeur par défaut du champ"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:184
+msgid ""
+"Default values can be set to any field in the message type. Currently "
+"default values are not supported for string arrays and complex types (i.e. "
+"types not present in the built-in-types table above, that applies to all "
+"nested messages)"
+msgstr ""
+"Les valeurs par défaut peuvent être définies sur n'importe quel champ du "
+"type de message. Actuellement, les valeurs par défaut ne sont pas prises en "
+"charge pour les tableaux de chaînes et les types complexes (c'est-à-dire les"
+" types non présents dans le tableau des types intégrés ci-dessus, qui "
+"s'applique à tous les messages imbriqués)"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:187
+msgid ""
+"Defining a default value is done by adding a third element to the field "
+"definition line, i.e:"
+msgstr ""
+"La définition d'une valeur par défaut se fait en ajoutant un troisième "
+"élément à la ligne de définition du champ, à savoir :"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:202
+msgid "Note:"
+msgstr "Note:"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:205
+msgid "string values must be defined in single ``'`` or double quotes ``\"``"
+msgstr ""
+"les valeurs de chaîne doivent être définies entre des ``'`` simples ou des "
+"guillemets doubles ``\"``"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:206
+msgid "currently string values are not escaped"
+msgstr "actuellement les valeurs de chaîne ne sont pas échappées"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:209
+msgid "2.2 Constants"
+msgstr "2.2 Constantes"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:211
+msgid ""
+"Each constant definition is like a field description with a default value, "
+"except that this value can never be changed programatically. This value "
+"assignment is indicated by use of an equal '=' sign, e.g."
+msgstr ""
+"Chaque définition de constante est comme une description de champ avec une "
+"valeur par défaut, sauf que cette valeur ne peut jamais être modifiée par "
+"programmation. Cette affectation de valeur est indiquée par l'utilisation "
+"d'un signe égal '=', par ex."
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:228
+msgid "Constants names have to be UPPERCASE"
+msgstr "Les noms des constantes doivent être en MAJUSCULES"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:231
+msgid "3. Service description specification"
+msgstr "3. Spécification de description de service"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:233
+msgid ""
+"Services are described and defined in ``.srv`` files in the ``srv/`` "
+"directory of a ROS package."
+msgstr ""
+"Les services sont décrits et définis dans les fichiers ``.srv`` du "
+"répertoire ``srv/`` d'un package ROS."
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:235
+msgid ""
+"A service description file consists of a request and a response msg type, "
+"separated by '---'. Any two ``.msg`` files concatenated with a '---' are a "
+"legal service description."
+msgstr ""
+"Un fichier de description de service se compose d'une demande et d'un type "
+"de message de réponse, séparés par '---'. Deux fichiers ``.msg`` concaténés "
+"avec un '---' sont une description de service légale."
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:237
+msgid ""
+"Here is a very simple example of a service that takes in a string and "
+"returns a string:"
+msgstr ""
+"Voici un exemple très simple d'un service qui prend une chaîne et renvoie "
+"une chaîne :"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:245
+msgid ""
+"We can of course get much more complicated (if you want to refer to a "
+"message from the same package you must not mention the package name):"
+msgstr ""
+"On peut bien sûr faire beaucoup plus compliqué (si vous voulez faire "
+"référence à un message du même paquet vous ne devez pas mentionner le nom du"
+" paquet) :"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:263
+msgid "You cannot embed another service inside of a service."
+msgstr ""
+"Vous ne pouvez pas intégrer un autre service à l'intérieur d'un service."
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:266
+msgid "4. New features in ROS 2 interfaces"
+msgstr "4. Nouvelles fonctionnalités dans les interfaces ROS 2"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:268
+msgid ""
+"The ROS 2 IDL is closely related to the `ROS 1 IDL "
+"<https://wiki.ros.org/msg>`__. Most existing ROS 1 ``.msg`` and ``.srv`` "
+"files should be usable as-is with ROS 2. Atop ROS 1's existing feature set, "
+"the ROS 2 IDL introduces some new features, namely:"
+msgstr ""
+"Le ROS 2 IDL est étroitement lié au `ROS 1 IDL "
+"<https://wiki.ros.org/msg>`__. La plupart des fichiers ``.msg`` et ``.srv`` "
+"de ROS 1 existants devraient être utilisables tels quels avec ROS 2. Au-"
+"dessus de l'ensemble de fonctionnalités existant de ROS 1, le ROS 2 IDL "
+"introduit de nouvelles fonctionnalités, à savoir :"
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:273
+msgid ""
+"**bounded arrays**: Whereas the ROS 1 IDL allows unbounded arrays (e.g., "
+"``int32[] foo``) and fixed-size arrays (e.g., ``int32[5] bar``), the ROS 2 "
+"IDL further allows bounded arrays (e.g., ``int32[<=5] bat``). There are use "
+"cases in which it's important to be able to place an upper bound on the size"
+" of an array without committing to always using that much space (e.g., in a "
+"real-time system in which you need to preallocate all memory that will be "
+"used during execution)."
+msgstr ""
+"**tableaux délimités** : alors que l'IDL ROS 1 autorise les tableaux "
+"illimités (par exemple, ``int32[] foo``) et les tableaux de taille fixe (par"
+" exemple, ``int32[5] bar``), l'IDL ROS 2 autorise en outre les tableaux "
+"délimités (par exemple, ``int32[<=5] bat``). Il existe des cas d'utilisation"
+" dans lesquels il est important de pouvoir placer une limite supérieure sur "
+"la taille d'un tableau sans s'engager à toujours utiliser autant d'espace "
+"(par exemple, dans un système en temps réel dans lequel vous devez "
+"préallouer toute la mémoire qui sera utilisé lors de l'exécution)."
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:275
+msgid ""
+"**bounded strings**: Whereas the ROS 1 IDL allows unbounded strings (e.g., "
+"``string foo``), the ROS 2 IDL further allows bounded strings (e.g., "
+"``string<=5 bar``)."
+msgstr ""
+"**chaînes délimitées** : alors que l'IDL ROS 1 autorise les chaînes "
+"illimitées (par exemple, ``string foo``), l'IDL ROS 2 autorise également les"
+" chaînes délimitées (par exemple, ``string<=5 bar``)."
+
+#: ../../source/Concepts/About-ROS-Interfaces.rst:276
+msgid ""
+"**default values**: Whereas the ROS 1 IDL allows constant fields (e.g., "
+"``int32 X=123``), the ROS 2 IDL further allows default values to be "
+"specified (e.g., ``int32 X 123``). The default value is used when "
+"constructing a message/service object and can be subsequently overridden by "
+"assigning to the field. You can also specify default values for action "
+"parts."
+msgstr ""
+"**valeurs par défaut** : alors que l'IDL ROS 1 autorise des champs constants"
+" (par exemple, ``int32 X=123``), l'IDL ROS 2 permet en outre de spécifier "
+"des valeurs par défaut (par exemple, ``int32 X 123``) . La valeur par défaut"
+" est utilisée lors de la construction d'un objet message/service et peut "
+"être remplacée par la suite en l'attribuant au champ. Vous pouvez également "
+"spécifier des valeurs par défaut pour les parties d'action."

@@ -1,0 +1,520 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 11:49:11.648337\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:8
+msgid "Using ``turtlesim`` and ``rqt``"
+msgstr "Utiliser ``turtlesim`` et ``rqt``"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:10
+msgid ""
+"**Goal:** Install and use the turtlesim package and rqt tools to prepare for"
+" upcoming tutorials."
+msgstr ""
+"**Objectif :** Installez et utilisez le package turtlesim et les outils rqt "
+"pour vous préparer aux prochains didacticiels."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:12
+msgid "**Tutorial level:** Beginner"
+msgstr "**Niveau du tutoriel :** Débutant"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:14
+msgid "**Time:** 15 minutes"
+msgstr "**Durée :** 15 minutes"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:18
+msgid "Contents"
+msgstr "Contenu"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:21
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:23
+msgid ""
+"Turtlesim is a lightweight simulator for learning ROS 2. It illustrates what"
+" ROS 2 does at the most basic level, to give you an idea of what you will do"
+" with a real robot or robot simulation later on."
+msgstr ""
+"Turtlesim est un simulateur léger pour apprendre ROS 2. Il illustre ce que "
+"fait ROS 2 au niveau le plus élémentaire, pour vous donner une idée de ce "
+"que vous ferez plus tard avec un vrai robot ou une simulation de robot."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:26
+msgid ""
+"rqt is a GUI tool for ROS 2. Everything done in rqt can be done on the "
+"command line, but it provides an easier, more user-friendly way to "
+"manipulate ROS 2 elements."
+msgstr ""
+"rqt est un outil graphique pour ROS 2. Tout ce qui est fait dans rqt peut "
+"être fait sur la ligne de commande, mais il offre un moyen plus simple et "
+"plus convivial de manipuler les éléments ROS 2."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:29
+msgid ""
+"This tutorial touches on core ROS 2 concepts, like the separation of nodes, "
+"topics, and services. All of these concepts will be elaborated on in later "
+"tutorials; for now, you will simply set up the tools and get a feel for "
+"them."
+msgstr ""
+"Ce didacticiel aborde les concepts de base de ROS 2, comme la séparation des"
+" nœuds, des sujets et des services. Tous ces concepts seront développés dans"
+" des tutoriels ultérieurs ; pour l'instant, vous allez simplement configurer"
+" les outils et vous en faire une idée."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:33
+msgid "Prerequisites"
+msgstr "Conditions préalables"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:35
+msgid ""
+"The previous tutorial, :doc:`../Configuring-ROS2-Environment`, will show you"
+" how to set up your environment."
+msgstr ""
+"Le didacticiel précédent, :doc:`../Configuring-ROS2-Environment`, vous "
+"montrera comment configurer votre environnement."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:38
+msgid "Tasks"
+msgstr "Tâches"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:41
+msgid "1 Install turtlesim"
+msgstr "1 Installer tortuesim"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:43
+msgid ""
+"As always, start by sourcing your setup files in a new terminal, as "
+"described in the :doc:`previous tutorial <../Configuring-ROS2-Environment>`."
+msgstr ""
+"Comme toujours, commencez par rechercher vos fichiers d'installation dans un"
+" nouveau terminal, comme décrit dans le :doc:`tutoriel précédent "
+"<../Configuring-ROS2-Environment>`."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:45
+msgid "Install the turtlesim package for your ROS 2 distro:"
+msgstr "Installez le package turtlesim pour votre distribution ROS 2 :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:49
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:57
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:160
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:59
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:63
+msgid ""
+"As long as the archive you installed ROS 2 from contains the "
+"``ros_tutorials`` repository, you should already have turtlesim installed."
+msgstr ""
+"Tant que l'archive à partir de laquelle vous avez installé ROS 2 contient le"
+" référentiel ``ros_tutorials``, vous devriez déjà avoir installé turtlesim."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:61
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:164
+msgid "Windows"
+msgstr "les fenêtres"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:65
+msgid "Check that the package installed:"
+msgstr "Vérifiez que le package installé :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:71
+msgid "The above command should return a list of turtlesim's executables:"
+msgstr ""
+"La commande ci-dessus devrait renvoyer une liste des exécutables de "
+"turtlesim :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:81
+msgid "2 Start turtlesim"
+msgstr "2 Démarrer tortuesim"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:83
+msgid "To start turtlesim, enter the following command in your terminal:"
+msgstr ""
+"Pour démarrer turtlesim, saisissez la commande suivante dans votre "
+"terminal :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:89
+msgid ""
+"The simulator window should appear, with a random turtle in the center."
+msgstr ""
+"La fenêtre du simulateur devrait apparaître, avec une tortue aléatoire au "
+"centre."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:93
+msgid ""
+"In the terminal under the command, you will see messages from the node:"
+msgstr "Dans le terminal sous la commande, vous verrez les messages du nœud :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:101
+msgid ""
+"Here you can see your default turtle’s name is ``turtle1``, and the default "
+"coordinates where it spawns."
+msgstr ""
+"Ici, vous pouvez voir que le nom de votre tortue par défaut est ``turtle1``,"
+" et les coordonnées par défaut où elle apparaît."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:104
+msgid "3 Use turtlesim"
+msgstr "3 Utiliser tortuesim"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:106
+msgid "Open a new terminal and source ROS 2 again."
+msgstr "Ouvrez un nouveau terminal et sourcez à nouveau ROS 2."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:108
+msgid "Now you will run a new node to control the turtle in the first node:"
+msgstr ""
+"Vous allez maintenant exécuter un nouveau nœud pour contrôler la tortue dans"
+" le premier nœud :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:114
+msgid ""
+"At this point you should have three windows open: a terminal running "
+"``turtlesim_node``, a terminal running ``turtle_teleop_key`` and the "
+"turtlesim window. Arrange these windows so that you can see the turtlesim "
+"window, but also have the terminal running ``turtle_teleop_key`` active so "
+"that you can control the turtle in turtlesim."
+msgstr ""
+"À ce stade, vous devriez avoir trois fenêtres ouvertes : un terminal "
+"exécutant ``turtlesim_node``, un terminal exécutant ``turtle_teleop_key`` et"
+" la fenêtre turtlesim. Disposez ces fenêtres de manière à voir la fenêtre de"
+" turtlesim, mais activez également le terminal exécutant "
+"``turtle_teleop_key`` afin que vous puissiez contrôler la tortue dans "
+"turtlesim."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:117
+msgid ""
+"Use the arrow keys on your keyboard to control the turtle. It will move "
+"around the screen, using its attached \"pen\" to draw the path it followed "
+"so far."
+msgstr ""
+"Utilisez les touches fléchées de votre clavier pour contrôler la tortue. Il "
+"se déplacera sur l'écran, en utilisant son \"stylo\" attaché pour tracer le "
+"chemin qu'il a suivi jusqu'à présent."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:122
+msgid ""
+"Pressing an arrow key will only cause the turtle to move a short distance "
+"and then stop. This is because, realistically, you wouldn’t want a robot to "
+"continue carrying on an instruction if, for example, the operator lost the "
+"connection to the robot."
+msgstr ""
+"Si vous appuyez sur une touche fléchée, la tortue ne se déplacera que sur "
+"une courte distance, puis s'arrêtera. En effet, de manière réaliste, vous ne"
+" voudriez pas qu'un robot continue à exécuter une instruction si, par "
+"exemple, l'opérateur perdait la connexion avec le robot."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:125
+msgid ""
+"You can see the nodes and their associated services, topics, and actions "
+"using the ``list`` command:"
+msgstr ""
+"Vous pouvez voir les nœuds et leurs services, sujets et actions associés à "
+"l'aide de la commande ``list`` :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:134
+msgid ""
+"You will learn more about these concepts in the coming tutorials. Since the "
+"goal of this tutorial is only to get a general overview of turtlesim, we "
+"will use rqt (a graphical user interface for ROS 2) to look at services a "
+"little closer."
+msgstr ""
+"Vous en apprendrez plus sur ces concepts dans les prochains tutoriels. Étant"
+" donné que le but de ce didacticiel est uniquement d'obtenir un aperçu "
+"général de turtlesim, nous utiliserons rqt (une interface utilisateur "
+"graphique pour ROS 2) pour examiner les services d'un peu plus près."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:138
+msgid "4 Install rqt"
+msgstr "h Installer"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:140
+msgid "Open a new terminal to install ``rqt`` and its plugins:"
+msgstr "Ouvrez un nouveau terminal pour installer ``rqt`` et ses plugins :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:144
+msgid "Linux (apt 2.0/Ubuntu 20.04 and newer)"
+msgstr "Linux (apt 2.0/Ubuntu 20.04 et plus récent)"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:152
+msgid "Linux (apt 1.x/Ubuntu 18.04 and older)"
+msgstr "Linux (apt 1.x/Ubuntu 18.04 et versions antérieures)"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:162
+msgid ""
+"The standard archive for installing ROS 2 on macOS contains ``rqt`` and its "
+"plugins, so you should already have ``rqt`` installed."
+msgstr ""
+"L'archive standard pour l'installation de ROS 2 sur macOS contient ``rqt`` "
+"et ses plugins, vous devriez donc déjà avoir installé ``rqt``."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:166
+msgid ""
+"The standard archive for installing ROS 2 on Windows contains ``rqt`` and "
+"its plugins, so you should already have ``rqt`` installed."
+msgstr ""
+"L'archive standard pour l'installation de ROS 2 sur Windows contient ``rqt``"
+" et ses plugins, donc vous devriez déjà avoir ``rqt`` installé."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:168
+msgid "To run rqt:"
+msgstr "Il fonctionne :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:175
+msgid "5 Use rqt"
+msgstr "5 Ils économisent"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:177
+msgid ""
+"After running rqt the first time, the window will be blank. No worries; just"
+" select **Plugins** > **Services** > **Service Caller** from the menu bar at"
+" the top."
+msgstr ""
+"Après avoir exécuté rqt la première fois, la fenêtre sera vide. Pas de "
+"soucis; sélectionnez simplement **Plugins** > **Services** > **Service "
+"Caller** dans la barre de menu en haut."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:182
+msgid ""
+"It may take some time for rqt to locate all the plugins itself. If you click"
+" on **Plugins**, but don’t see **Services** or any other options, you should"
+" close rqt, enter the command ``rqt --force-discover`` in your terminal."
+msgstr ""
+"Cela peut prendre un certain temps à rqt pour localiser tous les plugins "
+"lui-même. Si vous cliquez sur **Plugins**, mais ne voyez pas **Services** ou"
+" toute autre option, vous devez fermer rqt, entrez la commande ``rqt "
+"--force-discover`` dans votre terminal."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:187
+msgid ""
+"Use the refresh button to the left of the **Service** dropdown list to "
+"ensure all the services of your turtlesim node are available."
+msgstr ""
+"Utilisez le bouton d'actualisation à gauche de la liste déroulante "
+"**Service** pour vous assurer que tous les services de votre nœud turtlesim "
+"sont disponibles."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:189
+msgid ""
+"Click on the **Service** dropdown list to see turtlesim's services, and "
+"select the ``/spawn`` service."
+msgstr ""
+"Cliquez sur la liste déroulante **Service** pour voir les services de "
+"turtlesim, et sélectionnez le service ``/spawn``."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:192
+msgid "5.1 Try the spawn service"
+msgstr "5.1 Essayez le service de spawn"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:194
+msgid ""
+"Let’s use rqt to call the ``/spawn`` service. You can guess from its name "
+"that ``/spawn`` will create another turtle in the turtlesim window."
+msgstr ""
+"Utilisons rqt pour appeler le service ``/spawn``. Vous pouvez deviner "
+"d'après son nom que ``/spawn`` créera une autre tortue dans la fenêtre "
+"turtlesim."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:197
+msgid ""
+"Give the new turtle a unique name, like ``turtle2`` by double-clicking "
+"between the empty single quotes in the **Expression** column. You can see "
+"that this expression corresponds to the **name** value, and is of type "
+"**string**."
+msgstr ""
+"Donnez à la nouvelle tortue un nom unique, comme ``turtle2`` en double-"
+"cliquant entre les guillemets simples vides dans la colonne **Expression**. "
+"Vous pouvez voir que cette expression correspond à la valeur **name** et est"
+" de type **string**."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:200
+msgid ""
+"Enter new coordinates for the turtle to spawn at, like ``x = 1.0`` and ``y ="
+" 1.0``."
+msgstr ""
+"Entrez de nouvelles coordonnées pour que la tortue apparaisse, comme ``x = "
+"1.0`` et ``y = 1.0``."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:206
+msgid ""
+"If you try to spawn a new turtle with the same name as an existing turtle, "
+"like your default ``turtle1``, you will get an error message in the terminal"
+" running ``turtlesim_node``:"
+msgstr ""
+"Si vous essayez de faire apparaître une nouvelle tortue avec le même nom "
+"qu'une tortue existante, comme votre ``turtle1`` par défaut, vous obtiendrez"
+" un message d'erreur dans le terminal exécutant ``turtlesim_node`` :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:212
+msgid ""
+"To spawn turtle2, you have to call the service by clicking the **Call** "
+"button on the upper right side of the rqt window."
+msgstr ""
+"Pour faire apparaître turtle2, vous devez appeler le service en cliquant sur"
+" le bouton **Appeler** en haut à droite de la fenêtre rqt."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:214
+msgid ""
+"You will see a new turtle (again with a random design) spawn at the "
+"coordinates you input for **x** and **y**."
+msgstr ""
+"Vous verrez une nouvelle tortue (encore une fois avec un design aléatoire) "
+"apparaître aux coordonnées que vous avez saisies pour **x** et **y**."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:216
+msgid ""
+"If you refresh the service list in rqt, you will also see that now there are"
+" services related to the new turtle, ``/turtle2/…``, in addition to "
+"``/turtle1/…``."
+msgstr ""
+"Si vous actualisez la liste des services dans rqt, vous verrez également "
+"qu'il existe désormais des services liés à la nouvelle tortue, "
+"``/turtle2/…``, en plus de ``/turtle1/…``."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:219
+msgid "5.2 Try the set_pen service"
+msgstr "5.2 Essayez le service set_pen"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:221
+msgid "Now let's give turtle1 a unique pen using the ``/set_pen`` service:"
+msgstr ""
+"Donnons maintenant à turtle1 un stylet unique en utilisant le service "
+"``/set_pen`` :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:225
+msgid ""
+"The values for **r**, **g** and **b**, between 0 and 255, will set the color"
+" of the pen turtle1 draws with, and **width** sets the thickness of the "
+"line."
+msgstr ""
+"Les valeurs de **r**, **g** et **b**, entre 0 et 255, définiront la couleur "
+"de la plume que la tortue1 dessine, et **width** définit l'épaisseur de la "
+"ligne."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:227
+msgid ""
+"To have turtle1 draw with a distinct red line, change the value of **r** to "
+"255, and the value of **width** to 5. Don't forget to call the service after"
+" updating the values."
+msgstr ""
+"Pour que turtle1 dessine avec une ligne rouge distincte, changez la valeur "
+"de **r** à 255 et la valeur de **width** à 5. N'oubliez pas d'appeler le "
+"service après avoir mis à jour les valeurs."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:230
+msgid ""
+"If you return to the terminal where ``turtle_teleop_key`` is running and "
+"press the arrow keys, you will see turtle1’s pen has changed."
+msgstr ""
+"Si vous revenez au terminal où ``turtle_teleop_key`` est en cours "
+"d'exécution et appuyez sur les touches fléchées, vous verrez que le stylo de"
+" turtle1 a changé."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:234
+msgid ""
+"You've probably noticed that there's no way to move turtle2. You can "
+"accomplish this by remapping turtle1's ``cmd_vel`` topic onto turtle2."
+msgstr ""
+"Vous avez probablement remarqué qu'il n'y a aucun moyen de déplacer turtle2."
+" Vous pouvez accomplir cela en remappant le sujet ``cmd_vel`` de turtle1 sur"
+" turtle2."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:238
+msgid "6 Remapping"
+msgstr "6 Remappage"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:240
+msgid "In a new terminal, source ROS 2, and run:"
+msgstr "Dans un nouveau terminal, sourcez ROS 2 et exécutez :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:247
+msgid ""
+"Now you can move turtle2 when this terminal is active, and turtle1 when the "
+"other terminal running the ``turtle_teleop_key`` is active."
+msgstr ""
+"Vous pouvez maintenant déplacer la tortue2 lorsque ce terminal est actif, et"
+" la tortue1 lorsque l'autre terminal exécutant la ``turtle_teleop_key`` est "
+"actif."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:252
+msgid "7 Close turtlesim"
+msgstr "7 Fermer tortuesim"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:254
+msgid ""
+"To stop the simulation, you can enter ``Ctrl + C`` in the ``turtlesim_node``"
+" terminal, and ``q`` in the teleop terminal."
+msgstr ""
+"Pour arrêter la simulation, vous pouvez entrer ``Ctrl + C`` dans le terminal"
+" ``turtlesim_node``, et ``q`` dans le terminal teleop."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:257
+msgid "Summary"
+msgstr "Résumé"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:259
+msgid ""
+"Using turtlesim and rqt is a great way to learn the core concepts of ROS 2."
+msgstr ""
+"Utiliser turtlesim et rqt est un excellent moyen d'apprendre les concepts de"
+" base de ROS 2."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:262
+msgid "Next steps"
+msgstr "Prochaines étapes"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:264
+msgid ""
+"Now that you have turtlesim and rqt up and running, and an idea of how they "
+"work, let's dive in to the first core ROS 2 concept with the next tutorial, "
+":doc:`../Understanding-ROS2-Nodes/Understanding-ROS2-Nodes`."
+msgstr ""
+"Maintenant que turtlesim et rqt sont opérationnels et que vous avez une idée"
+" de leur fonctionnement, plongeons-nous dans le premier concept de base de "
+"ROS 2 avec le prochain tutoriel, :doc:`../Understanding-"
+"ROS2-Nodes/Understanding-ROS2 -Nœuds`."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:267
+msgid "Related content"
+msgstr "Contenu connexe"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:269
+msgid ""
+"The turtlesim package can be found in the `ros_tutorials repo "
+"<https://github.com/ros/ros_tutorials/tree/humble/turtlesim>`_. Make sure to"
+" adjust the branch to view the version of turtlesim corresponding to your "
+"installed ROS 2 distro."
+msgstr ""
+"Le package turtlesim se trouve dans le dépôt `ros_tutorials "
+"<https://github.com/ros/ros_tutorials/tree/humble/turtlesim>`_. Assurez-vous"
+" d'ajuster la branche pour afficher la version de turtlesim correspondant à "
+"votre distribution ROS 2 installée."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst:272
+msgid ""
+"`This community contributed video <https://youtu.be/xwT7XWflMdc>`_ "
+"demonstrates many of the items covered in this tutorial."
+msgstr ""
+"`Cette communauté a contribué à la vidéo <https://youtu.be/xwT7XWflMdc>`_ "
+"montre de nombreux éléments couverts dans ce didacticiel."

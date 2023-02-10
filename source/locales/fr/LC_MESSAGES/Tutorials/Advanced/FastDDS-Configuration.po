@@ -1,0 +1,754 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 11:53:51.990404\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:7
+msgid "Unlocking the potential of Fast DDS middleware [community-contributed]"
+msgstr ""
+"Libérer le potentiel du middleware Fast DDS [contribution de la communauté]"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:9
+msgid ""
+"**Goal:** This tutorial will show how to use the extended configuration "
+"capabilities of Fast DDS in ROS 2."
+msgstr ""
+"**Objectif :** Ce didacticiel vous montrera comment utiliser les capacités "
+"de configuration étendues de Fast DDS dans ROS 2."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:11
+msgid "**Tutorial level:** Advanced"
+msgstr "**Niveau du didacticiel :** Avancé"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:13
+msgid "**Time:** 20 minutes"
+msgstr "**Durée :** 20 minutes"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:17
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:20
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:22
+msgid ""
+"The interface between the ROS 2 stack and *Fast DDS* is provided by the ROS "
+"2 middleware implementation `rmw_fastrtps "
+"<https://github.com/ros2/rmw_fastrtps>`_. This implementation is available "
+"in all ROS 2 distributions, both from binaries and from sources."
+msgstr ""
+"L'interface entre la pile ROS 2 et *Fast DDS* est fournie par "
+"l'implémentation du middleware ROS 2 `rmw_fastrtps "
+"<https://github.com/ros2/rmw_fastrtps>`_. Cette implémentation est "
+"disponible dans toutes les distributions ROS 2, à la fois des binaires et "
+"des sources."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:25
+msgid ""
+"ROS 2 RMW only allows for the configuration of certain middleware QoS (see "
+":doc:`ROS 2 QoS policies <../../Concepts/About-Quality-of-Service-"
+"Settings>`). However, ``rmw_fastrtps`` offers extended configuration "
+"capabilities to take full advantage of the features in *Fast DDS*. This "
+"tutorial will guide you through a series of examples explaining how to use "
+"XML files to unlock this extended configuration."
+msgstr ""
+"ROS 2 RMW ne permet que la configuration de certains middleware QoS (voir "
+":doc:`Politiques de QoS ROS 2 <../../Concepts/About-Quality-of-Service-"
+"Settings>`). Cependant, ``rmw_fastrtps`` offre des capacités de "
+"configuration étendues pour tirer pleinement parti des fonctionnalités de "
+"*Fast DDS*. Ce didacticiel vous guidera à travers une série d'exemples "
+"expliquant comment utiliser des fichiers XML pour déverrouiller cette "
+"configuration étendue."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:30
+msgid ""
+"In order to get more information about using *Fast DDS* on ROS 2, please "
+"check the `following documentation <https://fast-"
+"dds.docs.eprosima.com/en/latest/fastdds/ros2/ros2.html>`__."
+msgstr ""
+"Afin d'obtenir plus d'informations sur l'utilisation de *Fast DDS* sur ROS "
+"2, veuillez consulter la `documentation suivante <https://fast-"
+"dds.docs.eprosima.com/en/latest/fastdds/ros2/ros2.html>` __."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:34
+msgid "Prerequisites"
+msgstr "Conditions préalables"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:36
+msgid ""
+"This tutorial assumes that you know how to :doc:`create a package "
+"<../Beginner-Client-Libraries/Creating-Your-First-ROS2-Package>`. It also "
+"assumes you know how to write a :doc:`simple publisher and "
+"subscriber<../Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-"
+"Subscriber>` and a :doc:`simple service and client <../Beginner-Client-"
+"Libraries/Writing-A-Simple-Cpp-Service-And-Client>`. Although the examples "
+"are implemented in C++, the same concepts apply to Python packages."
+msgstr ""
+"Ce didacticiel suppose que vous savez comment :doc:`créer un package "
+"<../Beginner-Client-Libraries/Creating-Your-First-ROS2-Package>`. Cela "
+"suppose également que vous savez écrire un :doc:`simple publisher and "
+"subscriber<../Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-"
+"Subscriber>` et un :doc:`simple service et client <../Beginner-Client-"
+"Libraries/Writing-A-Simple-Cpp-Service-And-Client>`. Bien que les exemples "
+"soient implémentés en C++, les mêmes concepts s'appliquent aux packages "
+"Python."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:42
+msgid "Mixing synchronous and asynchronous publications in the same node"
+msgstr "Mélanger des publications synchrones et asynchrones dans un même nœud"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:44
+msgid ""
+"In this first example, a node with two publishers, one of them with "
+"synchronous publication mode and the other one with asynchronous publication"
+" mode, will be created."
+msgstr ""
+"Dans ce premier exemple, un nœud avec deux éditeurs, l'un avec un mode de "
+"publication synchrone et l'autre avec un mode de publication asynchrone, "
+"sera créé."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:46
+msgid ""
+"``rmw_fastrtps`` uses asynchronous publication mode by default. When the "
+"publisher invokes the write operation, the data is copied into a queue, a "
+"background thread (asynchronous thread) is notified about the addition to "
+"the queue, and control of the thread is returned to the user before the data"
+" is actually sent. The background thread is in charge of consuming the queue"
+" and sending the data to every matched reader."
+msgstr ""
+"``rmw_fastrtps`` utilise le mode de publication asynchrone par défaut. "
+"Lorsque l'éditeur invoque l'opération d'écriture, les données sont copiées "
+"dans une file d'attente, un thread d'arrière-plan (thread asynchrone) est "
+"informé de l'ajout à la file d'attente et le contrôle du thread est rendu à "
+"l'utilisateur avant que les données ne soient réellement envoyées. Le thread"
+" d'arrière-plan est chargé de consommer la file d'attente et d'envoyer les "
+"données à chaque lecteur correspondant."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:51
+msgid ""
+"On the other hand, with synchronous publication mode the data is sent "
+"directly within the context of the user thread. This entails that any "
+"blocking call occurring during the write operation would block the user "
+"thread, thus preventing the application from continuing its operation. "
+"However, this mode typically yields higher throughput rates at lower "
+"latencies, since there is no notification nor context switching between "
+"threads."
+msgstr ""
+"En revanche, avec le mode de publication synchrone, les données sont "
+"envoyées directement dans le contexte du thread utilisateur. Cela implique "
+"que tout appel bloquant survenant pendant l'opération d'écriture bloquerait "
+"le thread utilisateur, empêchant ainsi l'application de continuer son "
+"fonctionnement. Cependant, ce mode donne généralement des débits plus élevés"
+" à des latences plus faibles, car il n'y a pas de notification ni de "
+"changement de contexte entre les threads."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:57
+msgid "Create the node with the publishers"
+msgstr "Créer le nœud avec les éditeurs"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:59
+msgid ""
+"First, create a new package named ``sync_async_node_example_cpp`` on a new "
+"workspace:"
+msgstr ""
+"Tout d'abord, créez un nouveau package nommé ``sync_async_node_example_cpp``"
+" sur un nouvel espace de travail :"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:63
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:267
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:407
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:784
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:71
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:275
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:415
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:792
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:79
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:283
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:423
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:800
+msgid "Windows"
+msgstr "les fenêtres"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:88
+msgid ""
+"Then, add a file named ``src/sync_async_writer.cpp`` to the package, with "
+"the following content. Note that the synchronous publisher will be "
+"publishing on topic ``sync_topic``, while the asynchronous one will be "
+"publishing on topic ``async_topic``."
+msgstr ""
+"Ensuite, ajoutez un fichier nommé ``src/sync_async_writer.cpp`` au package, "
+"avec le contenu suivant. Notez que l'éditeur synchrone publiera sur le sujet"
+" ``sync_topic``, tandis que l'éditeur asynchrone publiera sur le sujet "
+"``async_topic``."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:171
+msgid ""
+"Now open the ``CMakeLists.txt`` file and add a new executable and name it "
+"``SyncAsyncWriter`` so you can run your node using ``ros2 run``:"
+msgstr ""
+"Ouvrez maintenant le fichier ``CMakeLists.txt`` et ajoutez un nouvel "
+"exécutable et nommez-le ``SyncAsyncWriter`` afin que vous puissiez exécuter "
+"votre nœud en utilisant ``ros2 run`` :"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:178
+msgid ""
+"Finally, add the ``install(TARGETS…)`` section so ``ros2 run`` can find your"
+" executable:"
+msgstr ""
+"Enfin, ajoutez la section ``install(TARGETS…)`` pour que ``ros2 run`` puisse"
+" trouver votre exécutable :"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:186
+msgid ""
+"You can clean up your ``CMakeLists.txt`` by removing some unnecessary "
+"sections and comments, so it looks like this:"
+msgstr ""
+"Vous pouvez nettoyer votre ``CMakeLists.txt`` en supprimant certaines "
+"sections et commentaires inutiles, il ressemble donc à ceci :"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:215
+msgid ""
+"If this node is built and run now, both publishers will behave the same, "
+"publishing asynchronously in both topics, because this is the default "
+"publication mode. The default publication mode configuration can be changed "
+"in runtime during the node launching, using an XML file."
+msgstr ""
+"Si ce nœud est créé et exécuté maintenant, les deux éditeurs se comporteront"
+" de la même manière, en publiant de manière asynchrone dans les deux "
+"rubriques, car il s'agit du mode de publication par défaut. La configuration"
+" par défaut du mode de publication peut être modifiée en runtime lors du "
+"lancement du nœud, à l'aide d'un fichier XML."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:219
+msgid "Create the XML file with the profile configuration"
+msgstr "Créer le fichier XML avec la configuration du profil"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:221
+msgid "Create a file with name ``SyncAsync.xml`` and the following content:"
+msgstr ""
+"Créez un fichier avec le nom ``SyncAsync.xml`` et le contenu suivant :"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:255
+msgid ""
+"Note that several publisher profiles are defined. A default profile which is"
+" defined setting the ``is_default_profile`` to ``true``, and two profiles "
+"with names that coincide with those of the previously defined topics: "
+"``sync_topic`` and another one for ``async_topic``. These last two profiles "
+"set the publication mode to ``SYNCHRONOUS`` or ``ASYNCHRONOUS`` accordingly."
+" Note also that all profiles specify a ``historyMemoryPolicy`` value, which "
+"is needed for the example to work, and the reason will be explained later on"
+" this tutorial."
+msgstr ""
+"Notez que plusieurs profils d'éditeurs sont définis. Un profil par défaut "
+"qui est défini en définissant ``is_default_profile`` sur ``true``, et deux "
+"profils avec des noms qui coïncident avec ceux des sujets précédemment "
+"définis : ``sync_topic`` et un autre pour ``async_topic``. Ces deux derniers"
+" profils définissent le mode de publication sur ``SYNCHRONOUS`` ou "
+"``ASYNCHRONOUS`` selon le cas. Notez également que tous les profils "
+"spécifient une valeur ``historyMemoryPolicy``, qui est nécessaire pour que "
+"l'exemple fonctionne, et la raison sera expliquée plus tard dans ce "
+"tutoriel."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:261
+msgid "Execute the publisher node"
+msgstr "Exécuter le nœud de l'éditeur"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:263
+msgid ""
+"You will need to export the following environment variables for the XML to "
+"be loaded:"
+msgstr ""
+"Vous devrez exporter les variables d'environnement suivantes pour que le XML"
+" soit chargé :"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:291
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:431
+msgid "Finally, ensure you have sourced your setup files and run the node:"
+msgstr ""
+"Enfin, assurez-vous d'avoir sourcé vos fichiers de configuration et exécutez"
+" le nœud :"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:298
+msgid ""
+"You should see the publishers sending the data from the publishing node, "
+"like so:"
+msgstr ""
+"Vous devriez voir les éditeurs envoyer les données depuis le nœud de "
+"publication, comme suit :"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:309
+msgid ""
+"Now you have a synchronous publisher and an asynchronous publisher running "
+"inside the same node."
+msgstr ""
+"Vous avez maintenant un éditeur synchrone et un éditeur asynchrone exécutés "
+"dans le même nœud."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:313
+msgid "Create a node with the subscribers"
+msgstr "Créer un nœud avec les abonnés"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:315
+msgid ""
+"Next, a new node with the subscribers that will listen to the ``sync_topic``"
+" and ``async_topic`` publications is going to be created. In a new source "
+"file named ``src/sync_async_reader.cpp`` write the following content:"
+msgstr ""
+"Ensuite, un nouveau nœud avec les abonnés qui écouteront les publications "
+"``sync_topic`` et ``async_topic`` va être créé. Dans un nouveau fichier "
+"source nommé ``src/sync_async_reader.cpp`` écrivez le contenu suivant :"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:372
+msgid ""
+"Open the ``CMakeLists.txt`` file and add a new executable and name it "
+"``SyncAsyncReader`` under the previous ``SyncAsyncWriter``:"
+msgstr ""
+"Ouvrez le fichier ``CMakeLists.txt`` et ajoutez un nouvel exécutable et "
+"nommez-le ``SyncAsyncReader`` sous le précédent ``SyncAsyncWriter`` :"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:385
+msgid "Add the subscriber profiles to the the XML"
+msgstr "Ajouter les profils d'abonnés au XML"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:387
+msgid ""
+"Configuration profiles for the subscribers can be added in the same XML file"
+" ``SyncAsync.xml``. For the moment, only the default profile will be set. "
+"The subscriber profiles will be extended later on. Open the "
+"``SyncAsync.xml`` file and add the following profiles inside the "
+"``<profiles>`` tag:"
+msgstr ""
+"Les profils de configuration des abonnés peuvent être ajoutés dans le même "
+"fichier XML ``SyncAsync.xml``. Pour le moment, seul le profil par défaut "
+"sera défini. Les profils d'abonnés seront étendus ultérieurement. Ouvrez le "
+"fichier ``SyncAsync.xml`` et ajoutez les profils suivants dans la balise "
+"``<profiles>`` :"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:401
+msgid "Execute the subscriber node"
+msgstr "Exécuter le nœud d'abonné"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:403
+msgid ""
+"With the publisher node running in one terminal, open another one and export"
+" the required environment variables for the XML to be loaded:"
+msgstr ""
+"Avec le nœud d'éditeur en cours d'exécution dans un terminal, ouvrez-en un "
+"autre et exportez les variables d'environnement requises pour que le XML "
+"soit chargé :"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:438
+msgid ""
+"You should see the subscribers receiving the data from the publishing node, "
+"like so:"
+msgstr ""
+"Vous devriez voir les abonnés recevoir les données du nœud de publication, "
+"comme suit :"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:451
+msgid "Analysis of the example"
+msgstr "Analyse de l'exemple"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:454
+msgid "Configuration profiles XML"
+msgstr "Profils de configuration XML"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:456
+msgid ""
+"The XML file defines several configurations for publishers and subscribers. "
+"You can have a default publisher configuration profile and several topic-"
+"specific publisher profiles. The only requirement is that all publisher "
+"profiles have a different name and that there is only a single default "
+"profile. The same goes for subscribers."
+msgstr ""
+"Le fichier XML définit plusieurs configurations pour les éditeurs et les "
+"abonnés. Vous pouvez avoir un profil de configuration d'éditeur par défaut "
+"et plusieurs profils d'éditeur spécifiques à un sujet. La seule exigence est"
+" que tous les profils d'éditeur aient un nom différent et qu'il n'y ait "
+"qu'un seul profil par défaut. Il en va de même pour les abonnés."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:461
+msgid ""
+"In order to define a configuration for a specific topic, just name the "
+"profile after the the ROS 2 topic name (like ``/sync_topic`` and "
+"``/async_topic`` in the example), and ``rmw_fastrtps`` will apply this "
+"profile to all publishers and subscribers for that topic. The default "
+"configuration profile is identified by the attribute ``is_default_profile`` "
+"set to ``true``, and acts as a fallback profile when there is no other one "
+"with a name matching the topic name."
+msgstr ""
+"Afin de définir une configuration pour un sujet spécifique, nommez "
+"simplement le profil après le nom du sujet ROS 2 (comme ``/sync_topic`` et "
+"``/async_topic`` dans l'exemple), et ``rmw_fastrtps`` s'appliquera ce profil"
+" à tous les éditeurs et abonnés pour ce sujet. Le profil de configuration "
+"par défaut est identifié par l'attribut ``is_default_profile`` défini sur "
+"``true``, et agit comme un profil de secours lorsqu'il n'y en a pas d'autre "
+"avec un nom correspondant au nom du sujet."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:465
+msgid ""
+"The environment variable ``FASTRTPS_DEFAULT_PROFILES_FILE`` is used to "
+"inform *Fast DDS* the path to the XML file with the configuration profiles "
+"to load."
+msgstr ""
+"La variable d'environnement ``FASTRTPS_DEFAULT_PROFILES_FILE`` est utilisée "
+"pour informer *Fast DDS* du chemin vers le fichier XML avec les profils de "
+"configuration à charger."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:468
+msgid "RMW_FASTRTPS_USE_QOS_FROM_XML"
+msgstr "RMW_FASTRTPS_USE_QOS_FROM_XML"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:470
+msgid ""
+"Among all the configurable attributes, ``rmw_fastrtps`` treats "
+"``publishMode`` and ``historyMemoryPolicy`` differently. By default, these "
+"values are set to ``ASYNCHRONOUS`` and ``PREALLOCATED_WITH_REALLOC`` within "
+"the ``rmw_fastrtps`` implementation, and the values set on the XML file are "
+"ignored. In order to use the values in the XML file, the environment "
+"variable ``RMW_FASTRTPS_USE_QOS_FROM_XML`` must be set to ``1``."
+msgstr ""
+"Parmi tous les attributs configurables, ``rmw_fastrtps`` traite "
+"``publishMode`` et ``historyMemoryPolicy`` différemment. Par défaut, ces "
+"valeurs sont définies sur ``ASYNCHRONOUS`` et ``PREALLOCATED_WITH_REALLOC`` "
+"dans l'implémentation ``rmw_fastrtps``, et les valeurs définies sur le "
+"fichier XML sont ignorées. Afin d'utiliser les valeurs du fichier XML, la "
+"variable d'environnement ``RMW_FASTRTPS_USE_QOS_FROM_XML`` doit être définie"
+" sur ``1``."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:474
+msgid ""
+"However, this entails **another caveat**: If "
+"``RMW_FASTRTPS_USE_QOS_FROM_XML`` is set, but the XML file does not define "
+"``publishMode`` or ``historyMemoryPolicy``, these attributes take the *Fast "
+"DDS* default value instead of the ``rmw_fastrtps`` default value. This is "
+"important, especially for ``historyMemoryPolicy``, because the *Fast DDS* "
+"deafult value is ``PREALLOCATED`` which does not work with ROS2 topic data "
+"types. Therefore, in the example, a valid value for this policy has been "
+"explicitly set (``DYNAMIC``)."
+msgstr ""
+"Cependant, cela implique **une autre mise en garde** : si "
+"``RMW_FASTRTPS_USE_QOS_FROM_XML`` est défini, mais que le fichier XML ne "
+"définit pas ``publishMode`` ou ``historyMemoryPolicy``, ces attributs "
+"prennent la valeur par défaut *Fast DDS* à la place de la valeur par défaut "
+"de ``rmw_fastrtps``. Ceci est important, en particulier pour "
+"``historyMemoryPolicy``, car la valeur par défaut *Fast DDS* est "
+"``PREALLOCATED`` qui ne fonctionne pas avec les types de données de sujet "
+"ROS2. Par conséquent, dans l'exemple, une valeur valide pour cette stratégie"
+" a été explicitement définie (``DYNAMIC``)."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:481
+msgid "Prioritization of rmw_qos_profile_t"
+msgstr "Priorisation de rmw_qos_profile_t"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:483
+msgid ""
+"ROS 2 QoS contained in `rmw_qos_profile_t "
+"<http://docs.ros2.org/latest/api/rmw/structrmw__qos__profile__t.html>`_ are "
+"always honored, unless set to ``*_SYSTEM_DEFAULT``. In that case, XML values"
+" (or *Fast DDS* default values in the absence of XML ones) are applied. This"
+" means that if any QoS in ``rmw_qos_profile_t`` is set to something other "
+"than ``*_SYSTEM_DEFAULT``, the corresponding value in the XML is ignored."
+msgstr ""
+"La qualité de service ROS 2 contenue dans `rmw_qos_profile_t "
+"<http://docs.ros2.org/latest/api/rmw/structrmw__qos__profile__t.html>`_ est "
+"toujours respectée, sauf si elle est définie sur ``*_SYSTEM_DEFAULT``. Dans "
+"ce cas, les valeurs XML (ou les valeurs par défaut *Fast DDS* en l'absence "
+"de XML) sont appliquées. Cela signifie que si une QoS dans "
+"``rmw_qos_profile_t`` est définie sur autre chose que ``*_SYSTEM_DEFAULT``, "
+"la valeur correspondante dans le XML est ignorée."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:489
+msgid "Using other FastDDS capabilities with XML"
+msgstr "Utilisation d'autres fonctionnalités FastDDS avec XML"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:491
+msgid ""
+"Although we have created a node with two publishers with different "
+"configuration, it is not easy to check that they are behaving differently. "
+"Now that the basics of XML profiles have been covered, let us use them to "
+"configure something which has some visual effect on the nodes. Specifically,"
+" a maximum number of matching subscribers on one of the publishers and a "
+"partition definition on the other will be set. Note that these are only very"
+" simple examples among all the configuration attributes that can be tuned on"
+" ``rmw_fastrtps`` through XML files. Please refer to `*Fast DDS* "
+"documentation <https://fast-"
+"dds.docs.eprosima.com/en/latest/fastdds/xml_configuration/xml_configuration.html#xml-"
+"profiles>`__ to  see the whole list of attributes that can be configured "
+"through XML files."
+msgstr ""
+"Bien que nous ayons créé un nœud avec deux éditeurs avec une configuration "
+"différente, il n'est pas facile de vérifier qu'ils se comportent "
+"différemment. Maintenant que les bases des profils XML ont été couvertes, "
+"utilisons-les pour configurer quelque chose qui a un effet visuel sur les "
+"nœuds. Plus précisément, un nombre maximal d'abonnés correspondants sur l'un"
+" des éditeurs et une définition de partition sur l'autre seront définis. "
+"Notez que ce ne sont que des exemples très simples parmi tous les attributs "
+"de configuration qui peuvent être réglés sur ``rmw_fastrtps`` via des "
+"fichiers XML. Veuillez vous référer à `*Fast DDS* documentation "
+"<https://fast-"
+"dds.docs.eprosima.com/en/latest/fastdds/xml_configuration/xml_configuration.html#xml-"
+"profiles>`__ pour voir la liste complète des attributs qui peut être "
+"configuré via des fichiers XML."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:498
+msgid "Limiting the number of matching subscribers"
+msgstr "Limiter le nombre d'abonnés correspondants"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:500
+msgid ""
+"Add a maximum number of matched subscribers to the ``/async_topic`` "
+"publisher profile. It should look like this:"
+msgstr ""
+"Ajoutez un nombre maximum d'abonnés correspondants au profil d'éditeur "
+"``/async_topic``. Ça devrait ressembler à ça:"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:520
+msgid "The number of matching subscribers is being limited to one."
+msgstr "Le nombre d'abonnés correspondants est limité à un."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:522
+msgid ""
+"Now open three terminals and do not forget to source the setup files and to "
+"set the required environment variables. On the first terminal run the "
+"publisher node, and the subscriber node on the other two. You should see "
+"that only the first subscriber node receives the messages from both topics. "
+"The second one could not complete the matching process in the "
+"``/async_topic`` because the publisher prevented it, as it had already "
+"reached its maximum of matched publishers. Consequently, only the messages "
+"from the ``/sync_topic`` are going to be received in this third terminal:"
+msgstr ""
+"Ouvrez maintenant trois terminaux et n'oubliez pas de sourcer les fichiers "
+"d'installation et de définir les variables d'environnement requises. Sur le "
+"premier terminal, exécutez le nœud éditeur et le nœud abonné sur les deux "
+"autres. Vous devriez voir que seul le premier nœud d'abonné reçoit les "
+"messages des deux sujets. Le second n'a pas pu terminer le processus de "
+"correspondance dans le ``/async_topic`` car l'éditeur l'en a empêché, car il"
+" avait déjà atteint son maximum d'éditeurs correspondants. Par conséquent, "
+"seuls les messages du ``/sync_topic`` vont être reçus dans ce troisième "
+"terminal :"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:536
+msgid "Using partitions within the topic"
+msgstr "Utilisation de partitions dans le sujet"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:538
+msgid ""
+"The partitions feature can be used to control which publishers and "
+"subscribers exchange information within the same topic."
+msgstr ""
+"La fonction de partitions peut être utilisée pour contrôler quels éditeurs "
+"et abonnés échangent des informations dans le même sujet."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:540
+msgid ""
+"Partitions introduce a logical entity isolation level concept inside the "
+"physical isolation induced by a Domain ID. For a publisher to communicate "
+"with a subscriber, they have to belong at least to one common partition. "
+"Partitions represent another level to separate publishers and subscribers "
+"beyond domain and topic. Unlike domain and topic, an endpoint can belong to "
+"several partitions at the same time. For certain data to be shared over "
+"different domains or topics, there must be a different publisher for each, "
+"sharing its own history of changes. However, a single publisher can share "
+"the same data sample over different partitions using a single topic data "
+"change, thus reducing network overload."
+msgstr ""
+"Les partitions introduisent un concept de niveau d'isolation d'entité "
+"logique à l'intérieur de l'isolation physique induite par un ID de domaine. "
+"Pour qu'un éditeur puisse communiquer avec un abonné, il doit appartenir au "
+"moins à une partition commune. Les partitions représentent un autre niveau "
+"pour séparer les éditeurs et les abonnés au-delà du domaine et du sujet. "
+"Contrairement au domaine et au sujet, un point de terminaison peut "
+"appartenir à plusieurs partitions en même temps. Pour que certaines données "
+"soient partagées sur différents domaines ou sujets, il doit y avoir un "
+"éditeur différent pour chacun, partageant son propre historique des "
+"modifications. Cependant, un seul éditeur peut partager le même échantillon "
+"de données sur différentes partitions à l'aide d'un seul changement de "
+"données de sujet, réduisant ainsi la surcharge du réseau."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:547
+msgid ""
+"Let us change the ``/sync_topic`` publisher to partition ``part1`` and "
+"create a new ``/sync_topic`` subscriber which uses partition ``part2``. "
+"Their profiles should now look like this:"
+msgstr ""
+"Changeons l'éditeur ``/sync_topic`` pour partitionner ``part1`` et créons un"
+" nouvel abonné ``/sync_topic`` qui utilise la partition ``part2``. Leurs "
+"profils devraient maintenant ressembler à ceci :"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:579
+msgid ""
+"Also be sure to remove the \"default_subscriber\" subscriber profile. Open "
+"two terminals. Do not forget to source the setup files and to set the "
+"required environment variables. On the first terminal run the publisher "
+"node, and the subscriber node on the other one. You should see that only the"
+" ``/async_topic`` messages are reaching the subscriber. The ``/sync_topic`` "
+"subscriber is not receiving the data as it is in a different partition from "
+"the corresponding publisher."
+msgstr ""
+"Assurez-vous également de supprimer le profil d'abonné "
+"\"default_subscriber\". Ouvrez deux terminaux. N'oubliez pas de sourcer les "
+"fichiers d'installation et de définir les variables d'environnement "
+"requises. Sur le premier terminal, exécutez le nœud éditeur et le nœud "
+"abonné sur l'autre. Vous devriez voir que seuls les messages "
+"``/async_topic`` parviennent à l'abonné. L'abonné ``/sync_topic`` ne reçoit "
+"pas les données car elles se trouvent dans une partition différente de "
+"l'éditeur correspondant."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:594
+msgid "Configuring a service and a client"
+msgstr "Configurer un service et un client"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:596
+msgid ""
+"Services and clients have a publisher and a subscriber each, that "
+"communicate through two different topics. For example, for a service named "
+"``ping`` there is:"
+msgstr ""
+"Les services et les clients ont chacun un éditeur et un abonné, qui "
+"communiquent via deux sujets différents. Par exemple, pour un service nommé "
+"``ping`` il y a :"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:599
+msgid "A service subscriber listening to requests on ``/rq/ping``."
+msgstr "Un abonné au service écoutant les requêtes sur ``/rq/ping``."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:600
+msgid "A service publisher sending responses on ``/rr/ping``."
+msgstr "Un éditeur de service envoyant des réponses sur ``/rr/ping``."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:601
+msgid "A client publisher sending requests on ``/rq/ping``."
+msgstr "Un éditeur client envoyant des requêtes sur ``/rq/ping``."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:602
+msgid "A client subscriber listening to responses on ``/rr/ping``."
+msgstr "Un abonné client écoutant les réponses sur ``/rr/ping``."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:604
+msgid ""
+"Although you can use these topic names to set the configuration profiles on "
+"the XML, sometimes you may wish to apply the same profile to all services or"
+" clients on a node. Instead of copying the same profile with all topic names"
+" generated for all services, you can just create a publisher and subscriber "
+"profile pair named ``service``. The same can be done for clients creating a "
+"pair named ``client``."
+msgstr ""
+"Bien que vous puissiez utiliser ces noms de rubrique pour définir les "
+"profils de configuration sur le XML, vous pouvez parfois souhaiter appliquer"
+" le même profil à tous les services ou clients sur un nœud. Au lieu de "
+"copier le même profil avec tous les noms de sujets générés pour tous les "
+"services, vous pouvez simplement créer une paire de profils d'éditeur et "
+"d'abonné nommée ``service``. La même chose peut être faite pour les clients "
+"créant une paire nommée ``client``."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:610
+msgid "Create the nodes with the service and client"
+msgstr "Créer les nœuds avec le service et le client"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:612
+msgid ""
+"Start creating the node with the service. Add a new source file named "
+"``src/ping_service.cpp`` on your package with the following content:"
+msgstr ""
+"Commencez à créer le nœud avec le service. Ajoutez un nouveau fichier source"
+" nommé ``src/ping_service.cpp`` sur votre package avec le contenu suivant :"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:656
+msgid ""
+"Create the client in a file named ``src/ping_client.cpp`` with the following"
+" content:"
+msgstr ""
+"Créez le client dans un fichier nommé ``src/ping_client.cpp`` avec le "
+"contenu suivant :"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:706
+msgid ""
+"Open the ``CMakeLists.txt`` file and add two new executables "
+"``ping_service`` and ``ping_client``:"
+msgstr ""
+"Ouvrez le fichier ``CMakeLists.txt`` et ajoutez deux nouveaux exécutables "
+"``ping_service`` et ``ping_client`` :"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:726
+msgid "Finally, build the package."
+msgstr "Enfin, construisez le package."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:730
+msgid "Create the XML profiles for the service and client"
+msgstr "Créer les profils XML pour le service et le client"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:732
+msgid "Create a file with name ``ping.xml`` with the following content:"
+msgstr "Créez un fichier avec le nom ``ping.xml`` avec le contenu suivant :"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:772
+msgid ""
+"This configuration file sets the publication mode to ``SYNCHRONOUS`` on the "
+"service and to ``ASYNCHRONOUS`` on the client. Note that we are only "
+"defining the publisher profiles for both the service and the client, but "
+"subscriber profiles could be provided too."
+msgstr ""
+"Ce fichier de configuration définit le mode de publication sur "
+"``SYNCHRONOUS`` sur le service et sur ``ASYNCHRONOUS`` sur le client. Notez "
+"que nous ne définissons que les profils d'éditeur pour le service et le "
+"client, mais des profils d'abonnés peuvent également être fournis."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:777
+msgid "Execute the nodes"
+msgstr "Exécuter les nœuds"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:779
+msgid ""
+"Open two terminals and source the setup files on each one. Then set the "
+"required environment variables for the XML to be loaded:"
+msgstr ""
+"Ouvrez deux terminaux et sourcez les fichiers de configuration sur chacun "
+"d'eux. Définissez ensuite les variables d'environnement requises pour le XML"
+" à charger :"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:809
+msgid "On the first terminal run the service node."
+msgstr "Sur le premier terminal, exécutez le nœud de service."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:815
+msgid "You should see the service waiting for requests:"
+msgstr "Vous devriez voir le service en attente de demandes :"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:821
+msgid "On the second terminal, run the client node."
+msgstr "Sur le deuxième terminal, exécutez le nœud client."
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:828
+msgid ""
+"You should see the client sending the request and receiving the response:"
+msgstr ""
+"Vous devriez voir le client envoyer la requête et recevoir la réponse :"
+
+#: ../../source/Tutorials/Advanced/FastDDS-Configuration.rst:835
+msgid "At the same time, the output in the server console has been updated:"
+msgstr ""
+"Dans le même temps, la sortie dans la console du serveur a été mise à jour :"

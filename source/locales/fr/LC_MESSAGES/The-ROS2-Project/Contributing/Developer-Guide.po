@@ -1,0 +1,2667 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 16:29:38.197570\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:7
+msgid "ROS 2 developer guide"
+msgstr "Guide du développeur ROS 2"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:11
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:13
+msgid ""
+"This page defines the practices and policies we employ when developing ROS "
+"2."
+msgstr ""
+"Cette page définit les pratiques et politiques que nous employons lors du "
+"développement de ROS 2."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:16
+msgid "General Principles"
+msgstr "Principes généraux"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:18
+msgid "Some principles are common to all ROS 2 development:"
+msgstr "Certains principes sont communs à tous les développements ROS 2 :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:21
+msgid ""
+"**Shared ownership**: Everybody working on ROS 2 should feel ownership over "
+"all parts of the system. The original author of a chunk of code does not "
+"have any special permission or obligation to control or maintain that chunk "
+"of code. Everyone is free to propose changes anywhere, to handle any type of"
+" ticket, and to review any pull request."
+msgstr ""
+"**Propriété partagée** : toute personne travaillant sur ROS 2 doit se sentir"
+" propriétaire de toutes les parties du système. L'auteur original d'un "
+"morceau de code n'a aucune permission ou obligation spéciale de contrôler ou"
+" de maintenir ce morceau de code. Chacun est libre de proposer des "
+"modifications n'importe où, de gérer n'importe quel type de ticket et "
+"d'examiner n'importe quelle pull request."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:25
+msgid ""
+"**Be willing to work on anything**: As a corollary to shared ownership, "
+"everybody should be willing to take on any available task and contribute to "
+"any aspect of the system."
+msgstr ""
+"**Être prêt à travailler sur n'importe quoi** : en corollaire de la "
+"propriété partagée, tout le monde doit être prêt à assumer n'importe quelle "
+"tâche disponible et à contribuer à n'importe quel aspect du système."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:27
+msgid ""
+"**Ask for help**: If you run into trouble on something, ask your fellow "
+"developers for help, via tickets, comments, or email, as appropriate."
+msgstr ""
+"**Demandez de l'aide** : si vous rencontrez des problèmes avec quelque "
+"chose, demandez de l'aide à vos collègues développeurs, via des tickets, des"
+" commentaires ou des e-mails, selon le cas."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:31
+msgid "Quality Practices"
+msgstr "Pratiques de qualité"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:33
+msgid ""
+"Packages can ascribe to different levels of quality based on the development"
+" practices they adhere to, as per the guidelines in `REP 2004: Package "
+"Quality Categories <https://www.ros.org/reps/rep-2004.html>`_. The "
+"categories are differentiated by their policies on versioning, testing, "
+"documentation, and more."
+msgstr ""
+"Les packages peuvent être attribués à différents niveaux de qualité en "
+"fonction des pratiques de développement auxquelles ils adhèrent, "
+"conformément aux directives de `REP 2004 : Package Quality Categories "
+"<https://www.ros.org/reps/rep-2004.html>`_ . Les catégories se différencient"
+" par leurs politiques en matière de gestion des versions, de test, de "
+"documentation, etc."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:36
+msgid ""
+"The following sections are the specific development rules we follow to "
+"ensure core packages are of the highest quality ('Level 1'). We recommend "
+"all ROS developers strive to adhere to the following policies to ensure "
+"quality across the ROS ecosystem."
+msgstr ""
+"Les sections suivantes sont les règles de développement spécifiques que nous"
+" suivons pour garantir que les packages de base sont de la plus haute "
+"qualité (\"Niveau 1\"). Nous recommandons à tous les développeurs ROS de "
+"s'efforcer de respecter les politiques suivantes pour garantir la qualité "
+"dans l'ensemble de l'écosystème ROS."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:42
+msgid "Versioning"
+msgstr "Gestion des versions"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:44
+msgid ""
+"We will use the `Semantic Versioning guidelines <http://semver.org/>`__ "
+"(``semver``) for versioning."
+msgstr ""
+"Nous utiliserons les `Semantic Versioning guidelines <http://semver.org/>`__"
+" (``semver``) pour la gestion des versions."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:46
+msgid ""
+"We will also adhere to some ROS-specific rules built on top of ``semver's`` "
+"full meaning:"
+msgstr ""
+"Nous respecterons également certaines règles spécifiques à ROS construites "
+"au-dessus de la signification complète de ``semver`` :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:48
+msgid ""
+"Major version increments (i.e. breaking changes) should not be made within a"
+" released ROS distribution."
+msgstr ""
+"Les incréments de version majeurs (c'est-à-dire les changements de rupture) "
+"ne doivent pas être effectués dans une distribution ROS publiée."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:50
+msgid ""
+"Patch (interface-preserving) and minor (non-breaking) version increments do "
+"not break compatibility, so these sorts of changes *are* allowed within a "
+"release."
+msgstr ""
+"Les correctifs (préservant l'interface) et les incréments de version mineurs"
+" (sans rupture) ne rompent pas la compatibilité, donc ces types de "
+"modifications *sont* autorisées dans une version."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:52
+msgid ""
+"Major ROS releases are the best time to release breaking changes. If a core "
+"package needs multiple breaking changes, they should be merged into their "
+"integration branch (e.g. rolling) to allow catching problems in CI quickly, "
+"but released together to reduce the number of major releases for ROS users."
+msgstr ""
+"Les versions majeures de ROS sont le meilleur moment pour publier des "
+"changements de rupture. Si un package de base nécessite plusieurs "
+"changements avec rupture, ils doivent être fusionnés dans leur branche "
+"d'intégration (par exemple, roulement) pour permettre de détecter rapidement"
+" les problèmes dans CI, mais publiés ensemble pour réduire le nombre de "
+"versions majeures pour les utilisateurs de ROS."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:55
+msgid ""
+"Though major increments require a new distribution, a new distribution does "
+"not necessarily require a major bump (if development and release can happen "
+"without breaking API)."
+msgstr ""
+"Bien que les incréments majeurs nécessitent une nouvelle distribution, une "
+"nouvelle distribution ne nécessite pas nécessairement une bosse majeure (si "
+"le développement et la publication peuvent se produire sans casser l'API)."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:57
+msgid ""
+"For compiled code, the ABI is considered part of the public interface. Any "
+"change that requires recompiling dependent code is considered major "
+"(breaking)."
+msgstr ""
+"Pour le code compilé, l'ABI est considérée comme faisant partie de "
+"l'interface publique. Toute modification nécessitant la recompilation du "
+"code dépendant est considérée comme majeure (rupture)."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:60
+msgid ""
+"ABI breaking changes *can* be made in a minor version bump *before* a "
+"distribution release (getting added to the rolling release)."
+msgstr ""
+"Les changements de rupture d'ABI * peuvent * être apportés dans une version "
+"mineure * avant * une version de distribution (ajoutée à la version "
+"continue)."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:62
+msgid ""
+"We enforce API stability for core packages in Dashing and Eloquent even "
+"though their major version components are ``0``, despite `SemVer's "
+"specification <https://semver.org/#spec-item-4>`_ regarding initial "
+"development."
+msgstr ""
+"Nous appliquons la stabilité de l'API pour les packages de base dans Dashing"
+" et Eloquent même si leurs principaux composants de version sont ``0``, "
+"malgré la spécification de `SemVer <https://semver.org/#spec-item-4>`_ "
+"concernant le développement initial."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:64
+msgid ""
+"Subsequently, packages should strive to reach a mature state and increase to"
+" version ``1.0.0`` so to match ``semver's`` specifications."
+msgstr ""
+"Par la suite, les paquets doivent s'efforcer d'atteindre un état mature et "
+"passer à la version ``1.0.0`` afin de correspondre aux spécifications de "
+"``semver``."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:67
+msgid "Caveats"
+msgstr "Mises en garde"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:69
+msgid ""
+"These rules are *best-effort*. In unlikely, extreme cases, it may be "
+"necessary to break API within a major version/distribution. Whether an "
+"unplanned break increments the major or minor version will be assessed on a "
+"case-by-case basis."
+msgstr ""
+"Ces règles sont * au mieux *. Dans des cas extrêmes peu probables, il peut "
+"être nécessaire de casser l'API dans une version/distribution majeure. Le "
+"fait qu'une pause imprévue incrémente la version majeure ou mineure sera "
+"évalué au cas par cas."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:73
+msgid ""
+"For example, consider a situation involving released X-turtle, corresponding"
+" to major version ``1.0.0``, and released Y-turtle, corresponding to major "
+"version ``2.0.0``."
+msgstr ""
+"Par exemple, considérons une situation impliquant une tortue X publiée, "
+"correspondant à la version majeure ``1.0.0``, et une tortue Y publiée, "
+"correspondant à la version majeure ``2.0.0``."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:75
+msgid ""
+"If an API-breaking fix is identified to be absolutely necessary in X-turtle,"
+" bumping to ``2.0.0`` is obviously not an option because ``2.0.0`` already "
+"exists."
+msgstr ""
+"Si un correctif de rupture d'API est identifié comme étant absolument "
+"nécessaire dans X-turtle, le passage à ``2.0.0`` n'est évidemment pas une "
+"option car ``2.0.0`` existe déjà."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:77
+msgid ""
+"The solutions for handling X-turtle's version in such a case, both non-"
+"ideal, are:"
+msgstr ""
+"Les solutions pour gérer la version de X-turtle dans un tel cas, toutes deux"
+" non idéales, sont :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:79
+msgid ""
+"Bumping X-turtle's minor version: non-ideal because it violates SemVer's "
+"principle that breaking changes must bump the major version."
+msgstr ""
+"Version mineure de Bumping X-turtle : non idéale car elle viole le principe "
+"de SemVer selon lequel les changements de rupture doivent remplacer la "
+"version majeure."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:81
+msgid ""
+"Bumping X-turtle's major version past Y-turtle (to ``3.0.0``): non-ideal "
+"because the older distro's version would become higher than the already-"
+"available version of a newer distro, which would invalidate/break version-"
+"specific conditional code."
+msgstr ""
+"Faire passer la version majeure de X-turtle au-delà de Y-turtle (à `` "
+"3.0.0``): non idéal car la version de l'ancienne distribution deviendrait "
+"supérieure à la version déjà disponible d'une distribution plus récente, ce "
+"qui invaliderait / casserait la version- code conditionnel spécifique."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:83
+msgid ""
+"The developer will have to decide which solution to use, or more "
+"importantly, which principle they are willing to break. We cannot suggest "
+"one or the other, but in either case we do require that explicit measures be"
+" taken to communicate the disruption and its explanation to users manually "
+"(beyond just the version increment)."
+msgstr ""
+"Le développeur devra décider quelle solution utiliser ou, plus important "
+"encore, quel principe il est prêt à enfreindre. Nous ne pouvons pas suggérer"
+" l'un ou l'autre, mais dans les deux cas, nous exigeons que des mesures "
+"explicites soient prises pour communiquer manuellement la perturbation et "
+"son explication aux utilisateurs (au-delà de l'incrément de version)."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:86
+msgid ""
+"If there were no Y-turtle, even though the fix would technically just be a "
+"patch, X-turtle would have to bump to ``2.0.0``. This case adheres to "
+"SemVer, but breaks from our own rule that major increments should not be "
+"introduced in a released distribution."
+msgstr ""
+"S'il n'y avait pas de Y-turtle, même si le correctif ne serait techniquement"
+" qu'un patch, X-turtle devrait passer à ``2.0.0``. Ce cas adhère à SemVer, "
+"mais enfreint notre propre règle selon laquelle les incréments majeurs ne "
+"doivent pas être introduits dans une distribution publiée."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:89
+msgid ""
+"This is why we consider the versioning rules *best-effort*. As unlikely as "
+"the examples above are, it is important to accurately define our versioning "
+"system."
+msgstr ""
+"C'est pourquoi nous considérons les règles de versioning *best-effort*. "
+"Aussi improbables que soient les exemples ci-dessus, il est important de "
+"définir avec précision notre système de gestion des versions."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:93
+msgid "Public API declaration"
+msgstr "Déclaration d'API publique"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:95
+msgid ""
+"According to ``semver``, every package must clearly declare a public API. We"
+" will use the \"Public API Declaration\" section of the quality declaration "
+"of a package to declare what symbols are part of the public API."
+msgstr ""
+"Selon ``semver``, chaque paquet doit clairement déclarer une API publique. "
+"Nous utiliserons la section \"Public API Declaration\" de la déclaration de "
+"qualité d'un package pour déclarer quels symboles font partie de l'API "
+"publique."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:98
+msgid ""
+"For most C and C++ packages the declaration is any header that it installs. "
+"However, it is acceptable to define a set of symbols which are considered "
+"private. Avoiding private symbols in headers can help with ABI stability, "
+"but is not required."
+msgstr ""
+"Pour la plupart des packages C et C++, la déclaration est n'importe quel en-"
+"tête qu'il installe. Cependant, il est acceptable de définir un ensemble de "
+"symboles considérés comme privés. Éviter les symboles privés dans les en-"
+"têtes peut aider à la stabilité de l'ABI, mais n'est pas obligatoire."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:102
+msgid ""
+"For other languages like Python, a public API must be explicitly defined, so"
+" that it is clear what symbols can be relied on with respect to the "
+"versioning guidelines. The public API can also be extended to build "
+"artifacts like configuration variables, CMake config files, etc. as well as "
+"executables and command-line options and output. Any elements of the public "
+"API should be clearly stated in the package's documentation. If something "
+"you are using is not explicitly listed as part of the public API in the "
+"package's documentation, then you cannot depend on it not changing between "
+"minor or patch versions."
+msgstr ""
+"Pour d'autres langages comme Python, une API publique doit être "
+"explicitement définie, de sorte qu'il soit clair sur quels symboles on peut "
+"s'appuyer en ce qui concerne les directives de version. L'API publique peut "
+"également être étendue pour créer des artefacts tels que des variables de "
+"configuration, des fichiers de configuration CMake, etc., ainsi que des "
+"exécutables, des options et des sorties de ligne de commande. Tous les "
+"éléments de l'API publique doivent être clairement indiqués dans la "
+"documentation du package. Si quelque chose que vous utilisez n'est pas "
+"explicitement répertorié dans le cadre de l'API publique dans la "
+"documentation du package, vous ne pouvez pas vous attendre à ce qu'il ne "
+"change pas entre les versions mineures ou correctives."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:108
+msgid "Deprecation strategy"
+msgstr "Stratégie d'abandon"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:110
+msgid ""
+"Where possible, we will also use the tick-tock deprecation and migration "
+"strategy for major version increments. New deprecations will come in a new "
+"distribution release, accompanied by compiler warnings expressing that the "
+"functionality is being deprecated. In the next release, the functionality "
+"will be completely removed (no warnings)."
+msgstr ""
+"Dans la mesure du possible, nous utiliserons également la stratégie de "
+"dépréciation et de migration tic-tac pour les incréments de version majeurs."
+" De nouvelles dépréciations viendront dans une nouvelle version de "
+"distribution, accompagnées d'avertissements du compilateur indiquant que la "
+"fonctionnalité est obsolète. Dans la prochaine version, la fonctionnalité "
+"sera complètement supprimée (pas d'avertissement)."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:114
+msgid ""
+"Example of function ``foo`` deprecated and replaced by function ``bar``:"
+msgstr ""
+"Exemple de fonction ``foo`` obsolète et remplacée par la fonction ``bar`` :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:117
+msgid "Version"
+msgstr "Version"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:117
+msgid "API"
+msgstr "API"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:119
+msgid "X-turtle"
+msgstr "X-tortue"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:119
+msgid "void foo();"
+msgstr "void foo();"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:120
+msgid "Y-turtle"
+msgstr "Y-tortue"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:120
+msgid "[[deprecated(\"use bar()\")]] void foo(); <br> void bar();"
+msgstr "[[deprecated(\"use bar()\")]] void foo(); <br> void bar();"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:121
+msgid "Z-turtle"
+msgstr "Z-tortue"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:121
+msgid "void bar();"
+msgstr "barre vide();"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:124
+msgid ""
+"We must not add deprecations after a distribution is released. Deprecations "
+"do not necessarily require a major version bump, though. A deprecation can "
+"be introduced in a minor version bump if the bump happens before the distro "
+"is released (similar to ABI breaking changes)."
+msgstr ""
+"Nous ne devons pas ajouter de dépréciations après la sortie d'une "
+"distribution. Cependant, les dépréciations ne nécessitent pas nécessairement"
+" un changement de version majeur. Une dépréciation peut être introduite dans"
+" un bump de version mineure si le bump se produit avant la sortie de la "
+"distribution (similaire aux changements de rupture d'ABI)."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:128
+msgid ""
+"For example, if X-turtle begins development as ``2.0.0``, a deprecation can "
+"be added in ``2.1.0`` before X-turtle is released."
+msgstr ""
+"Par exemple, si X-turtle commence son développement en tant que ``2.0.0``, "
+"une dépréciation peut être ajoutée dans ``2.1.0`` avant la sortie de "
+"X-turtle."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:130
+msgid ""
+"We will attempt to maintain compatibility across distros as much as "
+"possible. However, like the caveats associated with SemVer, tick-tock or "
+"even deprecation in general may be impossible to completely adhere to in "
+"certain cases."
+msgstr ""
+"Nous essaierons de maintenir autant que possible la compatibilité entre les "
+"distributions. Cependant, comme les mises en garde associées à SemVer, le "
+"tic-tac ou même la dépréciation en général peuvent être impossibles à "
+"respecter complètement dans certains cas."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:134
+msgid "Change control process"
+msgstr "Changer le processus de contrôle"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:136
+msgid "All changes must go through a pull request."
+msgstr "Toutes les modifications doivent passer par une pull request."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:138
+msgid ""
+"We will enforce the `Developer Certificate of Origin (DCO) "
+"<https://developercertificate.org/>`_ on pull requests in ROSCore "
+"repositories."
+msgstr ""
+"Nous appliquerons le `Certificat d'origine du développeur (DCO) "
+"<https://developercertificate.org/>`_ sur les demandes d'extraction dans les"
+" référentiels ROSSore."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:140
+msgid ""
+"It requires all commit messages to contain the ``Signed-off-by`` line with "
+"an email address that matches the commit author."
+msgstr ""
+"Il exige que tous les messages de commit contiennent la ligne ``Signed-off-"
+"by`` avec une adresse e-mail qui correspond à l'auteur du commit."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:142
+msgid ""
+"You can pass ``-s`` / ``--signoff`` to the ``git commit`` invocation or "
+"write the expected message manually (e.g. ``Signed-off-by: Your Name "
+"Developer <your.name@example.com>``)."
+msgstr ""
+"Vous pouvez passer ``-s`` / ``--signoff`` à l'invocation ``git commit`` ou "
+"écrire le message attendu manuellement (par exemple ``Signed-off-by: Your "
+"Name Developer <your.name@ exemple.com>``)."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:144
+msgid ""
+"DCO is *not* required for pull requests that only address whitespace "
+"removal, typo correction, and other `trivial changes "
+"<http://cr.openjdk.java.net/~jrose/draft/trivial-fixes.html>`_."
+msgstr ""
+"DCO n'est *pas* requis pour les demandes d'extraction qui traitent "
+"uniquement de la suppression des espaces blancs, de la correction des fautes"
+" de frappe et d'autres `modifications triviales "
+"<http://cr.openjdk.java.net/~jrose/draft/trivial-fixes.html>`_."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:146
+msgid ""
+"Always run CI jobs for all `tier 1 platforms "
+"<https://www.ros.org/reps/rep-2000.html#support-tiers>`_ for every pull "
+"request and include links to jobs in the pull request. (If you don't have "
+"access to the Jenkins jobs someone will trigger the jobs for you.)"
+msgstr ""
+"Exécutez toujours les travaux CI pour toutes les `plates-formes de niveau 1 "
+"<https://www.ros.org/reps/rep-2000.html#support-tiers>`_ pour chaque demande"
+" d'extraction et incluez des liens vers les travaux dans la demande "
+"d'extraction. (Si vous n'avez pas accès aux travaux Jenkins, quelqu'un les "
+"déclenchera pour vous.)"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:149
+msgid ""
+"A minimum of 1 approval from a fellow developer who did not author the pull "
+"request is required to consider it approved. Approval is required before "
+"merging."
+msgstr ""
+"Un minimum d'une approbation d'un autre développeur qui n'est pas l'auteur "
+"de la demande d'extraction est nécessaire pour la considérer comme "
+"approuvée. L'approbation est requise avant la fusion."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:152
+msgid "Packages may choose to increase this number."
+msgstr "Les forfaits peuvent choisir d'augmenter ce nombre."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:154
+msgid ""
+"Any required changes to documentation (API documentation, feature "
+"documentation, release notes, etc.) must be proposed before merging related "
+"changes."
+msgstr ""
+"Toute modification requise de la documentation (documentation de l'API, "
+"documentation des fonctionnalités, notes de version, etc.) doit être "
+"proposée avant de fusionner les modifications associées."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:157
+msgid "Guidelines for backporting PRs"
+msgstr "Lignes directrices pour le rétroportage des PR"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:159
+msgid "When changing an older version of ROS:"
+msgstr "Lors de la modification d'une ancienne version de ROS :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:161
+msgid ""
+"Make sure the features or fixes are accepted and merged in the rolling "
+"branch before opening a PR to backport the changes to older versions."
+msgstr ""
+"Assurez-vous que les fonctionnalités ou les correctifs sont acceptés et "
+"fusionnés dans la branche roulante avant d'ouvrir un PR pour rétroporter les"
+" modifications vers les anciennes versions."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:162
+msgid ""
+"When backporting to older versions, also consider backporting to any other "
+":doc:`still supported versions <../../Releases>`, even non-LTS versions."
+msgstr ""
+"Lors de la rétroportation vers des versions plus anciennes, envisagez "
+"également de rétroporter vers toute autre :doc:`versions encore prises en "
+"charge <../../Releases>`, même les versions non-LTS."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:163
+msgid ""
+"If you are backporting a single PR in its entirety, title the backport PR "
+"\"[Distro] <name of original PR>\". If backporting a subset of changes from "
+"one or multiple PRs, the title should be \"[Distro] <description of "
+"changes>\"."
+msgstr ""
+"Si vous rétroportez un seul PR dans son intégralité, intitulez le PR "
+"rétroporté \"[Distro] <nom du PR d'origine>\". Si vous rétroportez un sous-"
+"ensemble de modifications d'un ou de plusieurs PR, le titre doit être "
+"\"[Distro] <description des modifications>\"."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:165
+msgid ""
+"Link to all PRs whose changes you're backporting from the description of "
+"your backport PR. In a Dashing backport of a Foxy change, you do not need to"
+" link to the Eloquent backport of the same change."
+msgstr ""
+"Lien vers tous les PR dont vous rétroportez les modifications à partir de la"
+" description de votre PR de rétroportage. Dans un rétroportage Dashing d'un "
+"changement Foxy, vous n'avez pas besoin de créer un lien vers le "
+"rétroportage Eloquent du même changement."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:169
+msgid "Documentation"
+msgstr "Documentation"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:171
+msgid ""
+"All packages should have these documentation elements present in their "
+"README or linked to from their README:"
+msgstr ""
+"Tous les packages doivent avoir ces éléments de documentation présents dans "
+"leur README ou liés à partir de leur README :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:173
+msgid "Description and purpose"
+msgstr "Description et objectif"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:174
+msgid "Definition and description of the public API"
+msgstr "Définition et description de l'API publique"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:175
+msgid "Examples"
+msgstr "Exemples"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:176
+msgid "How to build and install (should reference external tools/workflows)"
+msgstr ""
+"Comment créer et installer (doit faire référence à des outils/flux de "
+"travail externes)"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:177
+msgid "How to build and run tests"
+msgstr "Comment créer et exécuter des tests"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:178
+msgid "How to build documentation"
+msgstr "Comment construire une documentation"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:179
+msgid ""
+"How to develop (useful for describing things like ``python setup.py "
+"develop``)"
+msgstr ""
+"Comment développer (utile pour décrire des choses comme ``python setup.py "
+"develop``)"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:180
+msgid "License and copyright statements"
+msgstr "Déclarations de licence et de copyright"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:182
+msgid ""
+"Each source file must have a license and copyright statement, checked with "
+"an automated linter."
+msgstr ""
+"Chaque fichier source doit avoir une licence et une déclaration de "
+"copyright, vérifiée avec un linter automatisé."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:184
+msgid ""
+"Each package must have a LICENSE file, typically the Apache 2.0 license, "
+"unless the package has an existing permissive license (e.g. rviz uses three-"
+"clause BSD)."
+msgstr ""
+"Chaque paquet doit avoir un fichier LICENSE, généralement la licence Apache "
+"2.0, à moins que le paquet n'ait une licence permissive existante (par "
+"exemple, rviz utilise un BSD à trois clauses)."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:186
+msgid ""
+"Each package should describe itself and its purpose assuming, as much as "
+"possible, that the reader has stumbled onto it without previous knowledge of"
+" ROS or other related projects."
+msgstr ""
+"Chaque package doit se décrire lui-même et son objectif en supposant, autant"
+" que possible, que le lecteur est tombé dessus sans connaissance préalable "
+"de ROS ou d'autres projets connexes."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:188
+msgid ""
+"Each package should define and describe its public API so that there is a "
+"reasonable expectation for users about what is covered by the semantic "
+"versioning policy. Even in C and C++, where the public API can be enforced "
+"by API and ABI checking, it is a good opportunity to describe the layout of "
+"the code and the function of each part of the code."
+msgstr ""
+"Chaque package doit définir et décrire son API publique afin que les "
+"utilisateurs s'attendent raisonnablement à ce qui est couvert par la "
+"politique de version sémantique. Même en C et C++, où l'API publique peut "
+"être appliquée par la vérification de l'API et de l'ABI, c'est une bonne "
+"occasion de décrire la disposition du code et la fonction de chaque partie "
+"du code."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:191
+msgid ""
+"It should be easy to take any package and from that package's documentation "
+"understand how to build, run, build and run tests, and build the "
+"documentation. Obviously we should avoid repeating ourselves for common "
+"workflows, like building a package in a workspace, but the basic workflows "
+"should be either described or referenced."
+msgstr ""
+"Il devrait être facile de prendre n'importe quel package et à partir de la "
+"documentation de ce package, comprendre comment construire, exécuter, "
+"construire et exécuter des tests, et construire la documentation. "
+"Évidemment, nous devons éviter de nous répéter pour les flux de travail "
+"courants, comme la création d'un package dans un espace de travail, mais les"
+" flux de travail de base doivent être décrits ou référencés."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:194
+msgid ""
+"Finally, it should include any documentation for developers. This might "
+"include workflows for testing the code using something like ``python "
+"setup.py develop``, or it might mean describing how to make use of extension"
+" points provided by your package."
+msgstr ""
+"Enfin, il devrait inclure toute documentation destinée aux développeurs. "
+"Cela peut inclure des flux de travail pour tester le code en utilisant "
+"quelque chose comme ``python setup.py develop``, ou cela peut signifier "
+"décrire comment utiliser les points d'extension fournis par votre package."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:197
+msgid "Examples:"
+msgstr "Exemples:"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:199
+msgid "capabilities: https://docs.ros.org/hydro/api/capabilities/html/"
+msgstr "capacités : https://docs.ros.org/hydro/api/capabilities/html/"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:201
+msgid "This one gives an example of docs which describe the public API"
+msgstr "Celui-ci donne un exemple de docs décrivant l'API publique"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:203
+msgid ""
+"catkin_tools: https://catkin-"
+"tools.readthedocs.org/en/latest/development/extending_the_catkin_command.html"
+msgstr ""
+"catkin_tools : https://catkin-"
+"tools.readthedocs.org/en/latest/development/extending_the_catkin_command.html"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:205
+msgid "This is an example of describing an extension point for a package"
+msgstr ""
+"Ceci est un exemple de description d'un point d'extension pour un package"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:207
+msgid "*(API docs are not yet being automatically generated)*"
+msgstr "*(Les documents API ne sont pas encore générés automatiquement)*"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:210
+msgid "Testing"
+msgstr "Essai"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:212
+msgid ""
+"All packages should have some level of :ref:`system, integration, and/or "
+"unit tests.<TestingMain>`"
+msgstr ""
+"Tous les packages doivent avoir un certain niveau de :ref:`tests système, "
+"d'intégration et/ou unitaires.<TestingMain>`"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:214
+msgid ""
+"**Unit tests** should always be in the package which is being tested and "
+"should make use of tools like ``Mock`` to try and test narrow parts of the "
+"code base in constructed scenarios. Unit tests should not bring in test "
+"dependencies that are not testing tools, e.g. gtest, nosetest, pytest, mock,"
+" etc..."
+msgstr ""
+"**Les tests unitaires** doivent toujours se trouver dans le package en cours"
+" de test et doivent utiliser des outils tels que ``Mock`` pour essayer de "
+"tester des parties étroites de la base de code dans des scénarios "
+"construits. Les tests unitaires ne doivent pas introduire de dépendances de "
+"test qui ne sont pas des outils de test, par ex. gtest, nosetest, pytest, "
+"mock, etc..."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:217
+msgid ""
+"**Integration tests** can test interactions between parts of the code or "
+"between parts of the code and the system. They often test software "
+"interfaces in ways that we expect the user to use them. Like Unit tests, "
+"Integration tests should be in the package which is being tested and should "
+"not bring in non-tool test dependencies unless absolutely necessary, i.e. "
+"all non-tool dependencies should only be allowed under extreme scrutiny so "
+"they should be avoided if possible."
+msgstr ""
+"Les **tests d'intégration** peuvent tester les interactions entre des "
+"parties du code ou entre des parties du code et le système. Ils testent "
+"souvent les interfaces logicielles de manière à ce que nous attendions de "
+"l'utilisateur qu'il les utilise. Comme les tests unitaires, les tests "
+"d'intégration doivent être dans le package qui est testé et ne doivent pas "
+"introduire de dépendances de test non liées à l'outil, sauf en cas d'absolue"
+" nécessité, c'est-à-dire que toutes les dépendances non liées à l'outil ne "
+"doivent être autorisées que sous un examen minutieux, elles doivent donc "
+"être évitées si possible."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:221
+msgid ""
+"**System tests** are designed to test end-to-end situations between packages"
+" and should be in their own packages to avoid bloating or coupling packages "
+"and to avoid circular dependencies."
+msgstr ""
+"Les **tests système** sont conçus pour tester des situations de bout en bout"
+" entre les packages et doivent être dans leurs propres packages pour éviter "
+"les packages gonflés ou couplés et pour éviter les dépendances circulaires."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:223
+msgid ""
+"In general minimizing external or cross package test dependencies should be "
+"avoided to prevent circular dependencies and tightly coupled test packages."
+msgstr ""
+"En général, il convient d'éviter de minimiser les dépendances de test "
+"externes ou entre packages pour éviter les dépendances circulaires et les "
+"packages de test étroitement couplés."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:225
+msgid ""
+"All packages should have some unit tests and possibly integration tests, but"
+" the degree to which they should have them is based on the package's quality"
+" category. The following subsections apply to 'Level 1' packages:"
+msgstr ""
+"Tous les packages doivent avoir des tests unitaires et éventuellement des "
+"tests d'intégration, mais le degré auquel ils doivent les avoir est basé sur"
+" la catégorie de qualité du package. Les sous-sections suivantes "
+"s'appliquent aux forfaits de « niveau 1 » :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:229
+msgid "Code coverage"
+msgstr "Couverture de code"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:231
+msgid ""
+"We will provide line coverage, and achieve line coverage above 95%. If a "
+"lower percentage target is justifiable, it must be prominently documented. "
+"We may provide branch coverage, or exclude code from coverage (test code, "
+"debug code, etc.). We require that coverage increase or stay the same before"
+" merging a change, but it may be acceptable to make a change that decreases "
+"code coverage with proper justification (e.g. deleting code that was "
+"previously covered can cause the percentage to drop)."
+msgstr ""
+"Nous fournirons une couverture de ligne et atteindrons une couverture de "
+"ligne supérieure à 95 %. Si un objectif de pourcentage inférieur est "
+"justifiable, il doit être clairement documenté. Nous pouvons fournir une "
+"couverture de branche ou exclure du code de la couverture (code de test, "
+"code de débogage, etc.). Nous exigeons que la couverture augmente ou reste "
+"la même avant de fusionner une modification, mais il peut être acceptable "
+"d'apporter une modification qui diminue la couverture du code avec une "
+"justification appropriée (par exemple, la suppression du code qui était "
+"précédemment couvert peut entraîner une baisse du pourcentage)."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:237
+msgid "Performance"
+msgstr "Performance"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:239
+msgid ""
+"We strongly recommend performance tests, but recognize they don't make sense"
+" for some packages. If there are performance tests, we will choose to either"
+" check each change or before each release or both. We will also require "
+"justification for merging a change or making a release that lowers "
+"performance."
+msgstr ""
+"Nous recommandons fortement les tests de performances, mais reconnaissons "
+"qu'ils n'ont pas de sens pour certains packages. S'il y a des tests de "
+"performance, nous choisirons de vérifier chaque changement ou avant chaque "
+"version ou les deux. Nous aurons également besoin d'une justification pour "
+"fusionner un changement ou faire une version qui réduit les performances."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:244
+msgid "Linters and static analysis"
+msgstr "Linters et analyse statique"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:246
+msgid ""
+"We will use :doc:`ROS code style <Code-Style-Language-Versions>` and enforce"
+" it with linters from `ament_lint_common "
+"<https://github.com/ament/ament_lint/tree/rolling/ament_lint_common/doc/index.rst>`_."
+" All linters/static analysis that are part of ``ament_lint_common`` must be "
+"used."
+msgstr ""
+"Nous allons utiliser :doc:`style de code ROS <Code-Style-Language-Versions>`"
+" et l'appliquer avec les linters de `ament_lint_common "
+"<https://github.com/ament/ament_lint/tree/rolling/ament_lint_common/doc/index"
+" .rst>`_. Tous les linters/analyses statiques qui font partie de "
+"``ament_lint_common`` doivent être utilisés."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:249
+msgid ""
+"The `ament_lint_auto "
+"<https://github.com/ament/ament_lint/blob/rolling/ament_lint_auto/doc/index.rst>`_"
+" documentation provides information on running ``ament_lint_common``."
+msgstr ""
+"La documentation `ament_lint_auto "
+"<https://github.com/ament/ament_lint/blob/rolling/ament_lint_auto/doc/index.rst>`_"
+" fournit des informations sur l'exécution de ``ament_lint_common``."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:252
+msgid "General Practices"
+msgstr "Pratiques générales"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:254
+msgid "Some practices are common to all ROS 2 development."
+msgstr "Certaines pratiques sont communes à tous les développements ROS 2."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:256
+msgid ""
+"These practices don't affect package quality level as described in `REP 2004"
+" <https://www.ros.org/reps/rep-2004.html>`_, but are still highly "
+"recommended for the development process."
+msgstr ""
+"Ces pratiques n'affectent pas le niveau de qualité du package tel que décrit"
+" dans `REP 2004 <https://www.ros.org/reps/rep-2004.html>`_, mais sont "
+"toujours fortement recommandées pour le processus de développement."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:259
+msgid "Issues"
+msgstr "Questions"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:261
+msgid "When filing an issue please make sure to:"
+msgstr "Lorsque vous signalez un problème, assurez-vous de :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:263
+msgid ""
+"Include enough information for another person to understand the issue. In "
+"ROS 2, the following points are needed for narrowing down the cause of an "
+"issue. Testing with as many alternatives in each category as feasible will "
+"be especially helpful."
+msgstr ""
+"Incluez suffisamment d'informations pour qu'une autre personne comprenne le "
+"problème. Dans ROS 2, les points suivants sont nécessaires pour déterminer "
+"la cause d'un problème. Tester avec autant d'alternatives dans chaque "
+"catégorie que possible sera particulièrement utile."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:267
+msgid ""
+"**The operating system and version.** Reasoning: ROS 2 supports multiple "
+"platforms, and some bugs are specific to particular versions of operating "
+"systems/compilers."
+msgstr ""
+"**Le système d'exploitation et la version.** Raisonnement : ROS 2 prend en "
+"charge plusieurs plates-formes, et certains bogues sont spécifiques à des "
+"versions particulières de systèmes d'exploitation/compilateurs."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:269
+msgid ""
+"**The installation method.** Reasoning: Some issues only manifest if ROS 2 "
+"has been installed from \"fat archives\" or from Debians. This can help us "
+"determine if the issue is with the packaging process."
+msgstr ""
+"**La méthode d'installation.** Raisonnement : Certains problèmes ne se "
+"manifestent que si ROS 2 a été installé à partir de « fat archives » ou de "
+"Debians. Cela peut nous aider à déterminer si le problème vient du processus"
+" d'emballage."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:272
+msgid ""
+"**The specific version of ROS 2.** Reasoning: Some bugs may be present in a "
+"particular ROS 2 release and later fixed. It is important to know if your "
+"installation includes these fixes."
+msgstr ""
+"**La version spécifique de ROS 2.** Raisonnement : Certains bogues peuvent "
+"être présents dans une version particulière de ROS 2 et corrigés "
+"ultérieurement. Il est important de savoir si votre installation inclut ces "
+"correctifs."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:275
+msgid ""
+"**The DDS/RMW implementation being used** (see `this page "
+"<../../Concepts/About-Different-Middleware-Vendors>` for how to determine "
+"which one). Reasoning: Communication issues may be specific to the "
+"underlying ROS middleware being used."
+msgstr ""
+"**L'implémentation DDS/RMW utilisée** (voir `cette page "
+"<../../Concepts/About-Different-Middleware-Vendors>` pour savoir comment "
+"déterminer lequel). Raisonnement : les problèmes de communication peuvent "
+"être spécifiques au middleware ROS sous-jacent utilisé."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:277
+msgid ""
+"**The ROS 2 client library being used.** Reasoning: This helps us narrow "
+"down the layer in the stack at which the issue might be."
+msgstr ""
+"**La bibliothèque cliente ROS 2 utilisée.** Raisonnement : Cela nous aide à "
+"réduire la couche de la pile à laquelle le problème pourrait survenir."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:280
+msgid "Include a list of steps to reproduce the issue."
+msgstr "Incluez une liste d'étapes pour reproduire le problème."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:281
+msgid ""
+"In case of a bug consider to provide a `short, self contained, correct "
+"(compilable), example <http://sscce.org/>`__. Issues are much more likely to"
+" be resolved if others can reproduce them easily."
+msgstr ""
+"En cas de bogue, envisagez de fournir un exemple court, autonome et correct "
+"(compilable) <http://sscce.org/>`__. Les problèmes sont beaucoup plus "
+"susceptibles d'être résolus si d'autres peuvent les reproduire facilement."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:284
+msgid "Mention troubleshooting steps that have been tried already, including:"
+msgstr ""
+"Mentionnez les étapes de dépannage qui ont déjà été essayées, notamment :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:286
+msgid ""
+"Upgrading to the latest version of the code, which may include bug fixes "
+"that have not been released yet. See `this section <building-from-source>` "
+"and follow the instructions to get the \"rolling\" branches."
+msgstr ""
+"Mise à niveau vers la dernière version du code, qui peut inclure des "
+"correctifs de bogues qui n'ont pas encore été publiés. Voir `cette section "
+"<building-from-source>` et suivez les instructions pour obtenir les branches"
+" \"rolling\"."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:288
+msgid ""
+"Trying with a different RMW implementation. See `this page <../../How-To-"
+"Guides/Working-with-multiple-RMW-implementations>` for how to do that."
+msgstr ""
+"Essayer avec une autre implémentation RMW. Voir `cette page <../../How-To-"
+"Guides/Working-with-multiple-RMW-implementations>` pour savoir comment "
+"procéder."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:292
+msgid "Branches"
+msgstr "Branches"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:295
+msgid ""
+"These are just guidelines. It is up to the package maintainer to choose "
+"branch names that match their own workflow."
+msgstr ""
+"Ce ne sont que des lignes directrices. Il appartient au responsable du "
+"paquet de choisir des noms de branche qui correspondent à son propre flux de"
+" travail."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:298
+msgid ""
+"It is good practice to have **separate branches** in a package's source "
+"repository for each ROS distribution it is targeting. These branches are "
+"typically named after the distribution they target. For example, a "
+"``humble`` branch for development targeted specifically at the Humble "
+"distribution."
+msgstr ""
+"Il est recommandé d'avoir des **branches séparées** dans le référentiel "
+"source d'un package pour chaque distribution ROS qu'il cible. Ces branches "
+"portent généralement le nom de la distribution qu'elles ciblent. Par "
+"exemple, une branche ``humble`` pour le développement ciblant spécifiquement"
+" la distribution Humble."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:302
+msgid ""
+"Releases are also made from these branches, targeting the appropriate "
+"distribution. Development targeted at a specific ROS distribution can happen"
+" on the appropriate branch. For example: Development commits targeting "
+"``foxy`` are made to the ``foxy`` branch, and package releases for ``foxy`` "
+"are made from that same branch."
+msgstr ""
+"Des sorties sont également faites à partir de ces branches, en ciblant la "
+"distribution appropriée. Le développement ciblé sur une distribution ROS "
+"spécifique peut se produire sur la branche appropriée. Par exemple : les "
+"commits de développement ciblant ``foxy`` sont créés dans la branche "
+"``foxy``, et les versions de package pour ``foxy`` sont créées à partir de "
+"cette même branche."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:307
+msgid ""
+"This requires the package maintainers to perform backports or forwardports "
+"as appropriate to keep all branches up to date with features. The "
+"maintainers must also perform general maintenance (bug fixes, etc.) on all "
+"branches from which package releases are still made."
+msgstr ""
+"Cela nécessite que les responsables du paquet effectuent des backports ou "
+"des forwardports selon les besoins pour maintenir toutes les branches à jour"
+" avec les fonctionnalités. Les mainteneurs doivent également effectuer une "
+"maintenance générale (corrections de bogues, etc.) sur toutes les branches à"
+" partir desquelles des versions de paquets sont encore créées."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:310
+msgid ""
+"For example, if a feature is merged into the Rolling-specific branch (e.g. "
+"``rolling`` or ``main``), and that feature is also appropriate to the Humble"
+" distribution (does not break API, etc.), then it is good practice to "
+"backport the feature to the Humble-specific branch."
+msgstr ""
+"Par exemple, si une fonctionnalité est fusionnée dans la branche spécifique "
+"à Rolling (par exemple, ``rolling`` ou ``main``), et que cette "
+"fonctionnalité est également appropriée à la distribution Humble (ne casse "
+"pas l'API, etc.), alors il est recommandé de rétroporter la fonctionnalité "
+"sur la branche spécifique à Humble."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:313
+msgid ""
+"The maintainers may make releases for those older distributions if there are"
+" new features or bug fixes available."
+msgstr ""
+"Les responsables peuvent créer des versions pour ces distributions plus "
+"anciennes si de nouvelles fonctionnalités ou des corrections de bogues sont "
+"disponibles."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:315
+msgid "**What about** ``main`` **and** ``rolling`` **?**"
+msgstr "**Qu'en est-il de** ``main`` **et** ``rolling`` ** ?**"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:317
+msgid ""
+"``main`` typically targets :doc:`Rolling <../../Releases/Release-Rolling-"
+"Ridley>` (and so, the next unreleased ROS distribution), though the "
+"maintainers may decide to develop and release from a ``rolling`` branch "
+"instead."
+msgstr ""
+"``main`` cible généralement :doc:`Rolling <../../Releases/Release-Rolling-"
+"Ridley>` (et donc, la prochaine distribution ROS inédite), bien que les "
+"mainteneurs puissent décider de développer et de publier à partir d'un "
+"branche ``rolling`` à la place."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:320
+msgid "Pull requests"
+msgstr "Demandes d'extraction"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:322
+msgid ""
+"A pull request should only focus on one change. Separate changes should go "
+"into separate pull requests. See `GitHub's guide to writing the perfect pull"
+" request <https://github.com/blog/1943-how-to-write-the-perfect-pull-"
+"request>`__."
+msgstr ""
+"Une demande d'extraction ne doit se concentrer que sur un seul changement. "
+"Les modifications distinctes doivent être placées dans des demandes "
+"d'extraction distinctes. Voir `GitHub's guide to writing the perfect pull "
+"request <https://github.com/blog/1943-how-to-write-the-perfect-pull-"
+"request>`__."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:326
+msgid ""
+"A patch should be minimal in size and avoid any kind of unnecessary changes."
+msgstr ""
+"Un patch doit être de taille minimale et éviter tout type de modifications "
+"inutiles."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:328
+msgid "A pull request must contain minimum number of meaningful commits."
+msgstr ""
+"Une demande d'extraction doit contenir un nombre minimum de commits "
+"significatifs."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:330
+msgid "You can create new commits while the pull request is under review."
+msgstr ""
+"Vous pouvez créer de nouveaux commits pendant que la demande d'extraction "
+"est en cours d'examen."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:332
+msgid ""
+"Before merging a pull request all changes should be squashed into a small "
+"number of semantic commits to keep the history clear."
+msgstr ""
+"Avant de fusionner une demande d'extraction, toutes les modifications "
+"doivent être écrasées dans un petit nombre de commits sémantiques pour "
+"garder l'historique clair."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:334
+msgid ""
+"But avoid squashing commits while a pull request is under review. Your "
+"reviewers might not notice that you made the change, thereby introducing "
+"potential for confusion. Plus, you're going to squash before merging anyway;"
+" there's no benefit to doing it early."
+msgstr ""
+"Mais évitez d'écraser les commits pendant qu'une pull request est en cours "
+"d'examen. Vos examinateurs pourraient ne pas remarquer que vous avez apporté"
+" la modification, introduisant ainsi un risque de confusion. De plus, vous "
+"allez écraser avant de fusionner de toute façon ; il n'y a aucun avantage à "
+"le faire tôt."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:338
+msgid ""
+"Any developer is welcome to review and approve a pull request (see `General "
+"Principles`_)."
+msgstr ""
+"Tout développeur est invité à examiner et à approuver une demande "
+"d'extraction (voir `Principes généraux`_)."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:340
+msgid ""
+"When you start reviewing a pull request, comment on the pull request so that"
+" other developers know that you're reviewing it."
+msgstr ""
+"Lorsque vous commencez à examiner une demande d'extraction, commentez la "
+"demande d'extraction afin que les autres développeurs sachent que vous "
+"l'examinez."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:342
+msgid ""
+"Pull-request review is not read-only, with the reviewer making comments and "
+"then waiting for the author to address them. As a reviewer, feel free to "
+"make minor improvements (typos, style issues, etc.) in-place. As the opener "
+"of a pull-request, if you are working in a fork, checking the box to `allow "
+"edits from upstream contributors <https://github.com/blog/2247-improving-"
+"collaboration-with-forks>`__ will assist with the aforementioned. As a "
+"reviewer, also feel free to make more substantial improvements, but consider"
+" putting them in a separate branch (either mention the new branch in a "
+"comment, or open another pull request from the new branch to the original "
+"branch)."
+msgstr ""
+"La révision de la demande d'extraction n'est pas en lecture seule, le "
+"réviseur faisant des commentaires et attendant ensuite que l'auteur y "
+"réponde. En tant que réviseur, n'hésitez pas à apporter des améliorations "
+"mineures (fautes de frappe, problèmes de style, etc.) sur place. En tant "
+"qu'ouvreur d'une pull-request, si vous travaillez dans un fork, cochez la "
+"case pour `autoriser les modifications des contributeurs en amont "
+"<https://github.com/blog/2247-improving-collaboration-with-forks>`__ aidera "
+"avec ce qui précède. En tant que réviseur, n'hésitez pas non plus à apporter"
+" des améliorations plus substantielles, mais envisagez de les mettre dans "
+"une branche distincte (soit mentionner la nouvelle branche dans un "
+"commentaire, soit ouvrir une autre pull request de la nouvelle branche vers "
+"la branche d'origine)."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:347
+msgid ""
+"Any developer (the author, the reviewer, or somebody else) can merge any "
+"approved pull request."
+msgstr ""
+"N'importe quel développeur (l'auteur, le réviseur ou quelqu'un d'autre) peut"
+" fusionner n'importe quelle demande d'extraction approuvée."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:350
+msgid "Library versioning"
+msgstr "Gestion des versions de la bibliothèque"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:352
+msgid ""
+"We will version all libraries within a package together. This means that "
+"libraries inherit their version from the package. This keeps library and "
+"package versions from diverging and shares reasoning with the policy of "
+"releasing packages which share a repository together. If you need libraries "
+"to have different versions then consider splitting them into different "
+"packages."
+msgstr ""
+"Nous versionnerons toutes les bibliothèques d'un package ensemble. Cela "
+"signifie que les bibliothèques héritent de leur version du package. Cela "
+"empêche les versions de bibliothèque et de package de diverger et partage le"
+" raisonnement avec la politique de publication de packages qui partagent un "
+"référentiel ensemble. Si vous avez besoin de bibliothèques pour différentes "
+"versions, envisagez de les diviser en différents packages."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:358
+msgid "Development process"
+msgstr "Processus de développement"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:360
+msgid ""
+"The default branch (in most cases the rolling branch) must always build, "
+"pass all tests and compile without warnings. If at any time there is a "
+"regression it is the top priority to restore at least the previous state."
+msgstr ""
+"La branche par défaut (dans la plupart des cas la branche roulante) doit "
+"toujours se construire, réussir tous les tests et compiler sans "
+"avertissement. Si à tout moment il y a une régression, la priorité absolue "
+"est de restaurer au moins l'état précédent."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:362
+msgid "Always build with tests enabled."
+msgstr "Compilez toujours avec les tests activés."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:363
+msgid ""
+"Always run tests locally after changes and before proposing them in a pull "
+"request. Besides using automated tests, also run the modified code path "
+"manually to ensure that the patch works as intended."
+msgstr ""
+"Exécutez toujours les tests localement après les modifications et avant de "
+"les proposer dans une demande d'extraction. En plus d'utiliser des tests "
+"automatisés, exécutez également le chemin de code modifié manuellement pour "
+"vous assurer que le correctif fonctionne comme prévu."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:365
+msgid ""
+"Always run CI jobs for all platforms for every pull request and include "
+"links to the jobs in the pull request."
+msgstr ""
+"Exécutez toujours les travaux CI pour toutes les plates-formes pour chaque "
+"demande d'extraction et incluez des liens vers les travaux dans la demande "
+"d'extraction."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:367
+msgid ""
+"For more details on recommended software development workflow, see `Software"
+" Development Lifecycle`_ section."
+msgstr ""
+"Pour plus de détails sur le workflow de développement logiciel recommandé, "
+"consultez la section `Cycle de vie du développement logiciel`_."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:370
+msgid "Changes to RMW API"
+msgstr "Modifications de l'API RMW"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:372
+msgid ""
+"When updating `RMW API <https://github.com/ros2/rmw>`__, it is required that"
+" RMW implementations for the Tier 1 middleware libraries are updated as "
+"well. For example, a new function ``rmw_foo()`` introduced to the RMW API "
+"must be implemented in the following packages (as of ROS Galactic):"
+msgstr ""
+"Lors de la mise à jour de `RMW API <https://github.com/ros2/rmw>`__, il est "
+"nécessaire que les implémentations RMW pour les bibliothèques middleware de "
+"niveau 1 soient également mises à jour. Par exemple, une nouvelle fonction "
+"``rmw_foo()`` introduite dans l'API RMW doit être implémentée dans les "
+"packages suivants (à partir de ROS Galactic) :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:375
+msgid "`rmw_connextdds <https://github.com/ros2/rmw_connextdds>`__"
+msgstr "`rmw_connextdds <https://github.com/ros2/rmw_connextdds>`__"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:376
+msgid "`rmw_cyclonedds <https://github.com/ros2/rmw_cyclonedds>`__"
+msgstr "`rmw_cyclonedds <https://github.com/ros2/rmw_cyclonedds>`__"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:377
+msgid "`rmw_fastrtps <https://github.com/ros2/rmw_fastrtps>`__"
+msgstr "`rmw_fastrtps <https://github.com/ros2/rmw_fastrtps>`__"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:379
+msgid ""
+"Updates for non-Tier 1 middleware libraries should also be considered if "
+"feasible (e.g. depending on the size of the change). See `REP-2000 "
+"<https://www.ros.org/reps/rep-2000.html>`__ for the list of middleware "
+"libraries and their tiers."
+msgstr ""
+"Les mises à jour pour les bibliothèques middleware non de niveau 1 doivent "
+"également être envisagées si possible (par exemple, en fonction de la taille"
+" du changement). Voir `REP-2000 <https://www.ros.org/reps/rep-2000.html>`__ "
+"pour la liste des bibliothèques middleware et leurs niveaux."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:383
+msgid "Tracking tasks"
+msgstr "Suivi des tâches"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:385
+msgid ""
+"To help organize work on ROS 2, the core ROS 2 development team uses kanban-"
+"style `GitHub project boards <https://github.com/orgs/ros2/projects>`_."
+msgstr ""
+"Pour aider à organiser le travail sur ROS 2, l'équipe de développement "
+"principale de ROS 2 utilise des tableaux de projet GitHub de style kanban "
+"<https://github.com/orgs/ros2/projects>`_."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:387
+msgid ""
+"Not all issues and pull requests are tracked on the project boards, however."
+" A board usually represents an upcoming release or specific project. Tickets"
+" can be browsed on a per-repo basis by browsing the `ROS 2 repositories' "
+"<https://github.com/ros2>`_ individual issue pages."
+msgstr ""
+"Cependant, tous les problèmes et demandes d'extraction ne sont pas suivis "
+"sur les tableaux de projet. Un tableau représente généralement une version à"
+" venir ou un projet spécifique. Les tickets peuvent être consultés sur une "
+"base par dépôt en parcourant les `référentiels ROS 2' "
+"<https://github.com/ros2>`_ pages de problèmes individuels."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:391
+msgid ""
+"The names and purposes of columns in any given ROS 2 project board vary, but"
+" typically follow the same general structure:"
+msgstr ""
+"Les noms et les objectifs des colonnes dans un tableau de projet ROS 2 donné"
+" varient, mais suivent généralement la même structure générale :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:393
+msgid ""
+"**To do**: Issues that are relevant to the project, ready to be assigned"
+msgstr ""
+"**À faire** : problèmes pertinents pour le projet, prêts à être attribués"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:395
+msgid ""
+"**In progress**: Active pull requests on which work is currently in progress"
+msgstr ""
+"**En cours** : demandes d'extraction actives sur lesquelles des travaux sont"
+" actuellement en cours"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:397
+msgid ""
+"**In review**: Pull requests where work is complete and ready for review, "
+"and for those currently under active review"
+msgstr ""
+"**En cours d'examen** : demandes d'extraction pour lesquelles le travail est"
+" terminé et prêt à être examiné, et pour celles qui sont actuellement en "
+"cours d'examen"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:399
+msgid ""
+"**Done**: Pull requests and related issues are merged/closed (for "
+"informational purposes)"
+msgstr ""
+"**Terminé** : les demandes d'extraction et les problèmes associés sont "
+"fusionnés/fermés (à titre informatif)"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:402
+msgid ""
+"To request permission to make changes, simply comment on the tickets you're "
+"interested in. Depending on the complexity, it might be useful to describe "
+"how you plan to address it. We will update the status (if you don't have the"
+" permission) and you can start working on a pull request. If you contribute "
+"regularly we will likely just grant you permission to manage the labels etc."
+" yourself."
+msgstr ""
+"Pour demander l'autorisation d'apporter des modifications, il vous suffit de"
+" commenter les tickets qui vous intéressent. En fonction de la complexité, "
+"il peut être utile de décrire comment vous envisagez de le résoudre. Nous "
+"mettrons à jour le statut (si vous n'en avez pas l'autorisation) et vous "
+"pourrez commencer à travailler sur une pull request. Si vous contribuez "
+"régulièrement, nous vous accorderons probablement simplement la permission "
+"de gérer vous-même les étiquettes, etc."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:408
+msgid "Programming conventions"
+msgstr "Conventions de programmation"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:410
+msgid ""
+"Defensive programming: ensure that assumptions are held as early as "
+"possible. E.g. check every return code and make sure to at least throw an "
+"exception until the case is handled more gracefully."
+msgstr ""
+"Programmation défensive : assurez-vous que les hypothèses sont maintenues le"
+" plus tôt possible. Par exemple. vérifiez chaque code de retour et assurez-"
+"vous de lever au moins une exception jusqu'à ce que le cas soit traité avec "
+"plus de grâce."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:412
+msgid "All error messages must be directed to ``stderr``."
+msgstr "Tous les messages d'erreur doivent être dirigés vers ``stderr``."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:413
+msgid "Declare variables in the narrowest scope possible."
+msgstr "Déclarez les variables dans la portée la plus étroite possible."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:414
+msgid ""
+"Keep group of items (dependencies, imports, includes, etc.) ordered "
+"alphabetically."
+msgstr ""
+"Gardez le groupe d'éléments (dépendances, importations, inclusions, etc.) "
+"classés par ordre alphabétique."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:417
+msgid "C++ specific"
+msgstr "Spécifique C++"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:419
+msgid ""
+"Avoid using direct streaming (``<<``) to ``stdout`` / ``stderr`` to prevent "
+"interleaving between multiple threads."
+msgstr ""
+"Évitez d'utiliser le streaming direct (``<<``) vers ``stdout`` / ``stderr`` "
+"pour empêcher l'entrelacement entre plusieurs threads."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:420
+msgid ""
+"Avoid using references for ``std::shared_ptr`` since that subverts the "
+"reference counting. If the original instance goes out of scope and the "
+"reference is being used it accesses freed memory."
+msgstr ""
+"Évitez d'utiliser des références pour ``std::shared_ptr`` car cela perturbe "
+"le comptage des références. Si l'instance d'origine sort de la portée et que"
+" la référence est utilisée, elle accède à la mémoire libérée."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:424
+msgid "Filesystem layout"
+msgstr "Disposition du système de fichiers"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:426
+msgid ""
+"The filesystem layout of packages and repositories should follow the same "
+"conventions in order to provide a consistent experience for users browsing "
+"our source code."
+msgstr ""
+"La disposition du système de fichiers des packages et des référentiels doit "
+"suivre les mêmes conventions afin de fournir une expérience cohérente aux "
+"utilisateurs parcourant notre code source."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:429
+msgid "Package layout"
+msgstr "Disposition de l'emballage"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:431
+msgid "``src``: contains all C and C++ code"
+msgstr "``src`` : contient tout le code C et C++"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:433
+msgid "Also contains C/C++ headers which are not installed"
+msgstr "Contient également des en-têtes C/C++ qui ne sont pas installés"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:435
+msgid "``include``: contains all C and C++ headers which are installed"
+msgstr "``include`` : contient tous les en-têtes C et C++ qui sont installés"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:437
+msgid ""
+"``<package name>``: for all C and C++ installed headers they should be "
+"folder namespaced by the package name"
+msgstr ""
+"``<nom du package>`` : pour tous les en-têtes installés en C et C++, ils "
+"doivent être placés dans un espace de nom de dossier par le nom du package"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:439
+msgid "``<package_name>``: contains all Python code"
+msgstr "``<package_name>`` : contient tout le code Python"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:440
+msgid "``test``: contains all automated tests and test data"
+msgstr "``test`` : contient tous les tests automatisés et les données de test"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:441
+msgid ""
+"``config``: contains configuration files, e.g. YAML parameters files and "
+"RViz config files"
+msgstr ""
+"``config`` : contient les fichiers de configuration, par ex. Fichiers de "
+"paramètres YAML et fichiers de configuration RViz"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:442
+msgid "``doc``: contains all the documentation"
+msgstr "``doc`` : contient toute la documentation"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:443
+msgid "``launch``: contains all launch files"
+msgstr "``launch`` : contient tous les fichiers de lancement"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:444
+msgid ""
+"``package.xml``: as defined by `REP-0140 "
+"<https://www.ros.org/reps/rep-0140.html>`_ (may be updated for prototyping)"
+msgstr ""
+"``package.xml`` : tel que défini par `REP-0140 "
+"<https://www.ros.org/reps/rep-0140.html>`_ (peut être mis à jour pour le "
+"prototypage)"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:445
+msgid "``CMakeLists.txt``: only ROS packages which use CMake"
+msgstr "``CMakeLists.txt`` : seuls les packages ROS qui utilisent CMake"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:446
+msgid "``setup.py``: only ROS packages which use Python code only"
+msgstr ""
+"``setup.py`` : uniquement les packages ROS qui utilisent uniquement du code "
+"Python"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:447
+msgid ""
+"``README``: can be rendered on GitHub as a landing page for the project"
+msgstr ""
+"``README`` : peut être rendu sur GitHub en tant que page de destination pour"
+" le projet"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:449
+msgid ""
+"This can be as short or detailed as is convenient, but it should at least "
+"link to project documentation"
+msgstr ""
+"Cela peut être aussi court ou détaillé que possible, mais il doit au moins "
+"être lié à la documentation du projet"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:450
+msgid "Consider putting a CI or code coverage tag in this README"
+msgstr ""
+"Envisagez de mettre un CI ou une balise de couverture de code dans ce README"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:451
+msgid "It can also be ``.rst`` or anything else that GitHub supports"
+msgstr ""
+"Il peut également s'agir de ``.rst`` ou de tout autre élément pris en charge"
+" par GitHub"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:453
+msgid "``CONTRIBUTING``: describes the contribution guidelines"
+msgstr "``CONTRIBUTING`` : décrit les directives de contribution"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:455
+msgid ""
+"This might include license implication, e.g. when using the Apache 2 "
+"License."
+msgstr ""
+"Cela peut inclure l'implication de la licence, par ex. lors de l'utilisation"
+" de la licence Apache 2."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:457
+msgid "``LICENSE``: a copy of the license or licenses for this package"
+msgstr "``LICENSE`` : une copie de la licence ou des licences pour ce package"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:458
+msgid ""
+"``CHANGELOG.rst``: `REP-0132 <https://www.ros.org/reps/rep-0132.html>`_ "
+"compliant changelog"
+msgstr ""
+"``CHANGELOG.rst`` : `REP-0132 <https://www.ros.org/reps/rep-0132.html>`_ "
+"journal des modifications conforme"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:461
+msgid "Repository layout"
+msgstr "Disposition du référentiel"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:463
+msgid ""
+"Each package should be in a subfolder which has the same name as the "
+"package. If a repository contains only a single package it can optionally be"
+" in the root of the repository."
+msgstr ""
+"Chaque package doit se trouver dans un sous-dossier portant le même nom que "
+"le package. Si un référentiel ne contient qu'un seul package, il peut "
+"éventuellement se trouver à la racine du référentiel."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:467
+msgid "Developer Workflow"
+msgstr "Flux de travail du développeur"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:469
+msgid ""
+"We track open tickets and active PRs related to upcoming releases and larger"
+" projects using `GitHub project boards "
+"<https://github.com/orgs/ros2/projects>`_."
+msgstr ""
+"Nous suivons les tickets ouverts et les relations publiques actives liées "
+"aux versions à venir et aux projets plus importants à l'aide de `tableaux de"
+" projets GitHub <https://github.com/orgs/ros2/projects>`_."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:471
+msgid "The usual workflow is:"
+msgstr "Le flux de travail habituel est :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:473
+msgid ""
+"Discuss design (GitHub ticket on the appropriate repository, and a design PR"
+" to https://github.com/ros2/design if needed)"
+msgstr ""
+"Discutez de la conception (ticket GitHub sur le référentiel approprié et un "
+"PR de conception à https://github.com/ros2/design si nécessaire)"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:474
+msgid "Write implementation on a feature branch on a fork"
+msgstr "Écrire l'implémentation sur une branche de fonctionnalité sur un fork"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:476
+msgid ""
+"Please check out the `developer guide <Developer-Guide>` for guidelines and "
+"best practices"
+msgstr ""
+"Veuillez consulter le `guide du développeur <Developer-Guide>` pour les "
+"directives et les meilleures pratiques"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:478
+msgid "Write tests"
+msgstr "Rédiger des tests"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:479
+msgid "Enable and run linters"
+msgstr "Activer et exécuter les linters"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:480
+msgid ""
+"Run tests locally using ``colcon test`` (see the :doc:`colcon tutorial "
+"<../../Tutorials/Beginner-Client-Libraries/Colcon-Tutorial>`)"
+msgstr ""
+"Exécutez les tests localement en utilisant ``colcon test`` (voir le "
+":doc:`colcon tutorial <../../Tutorials/Beginner-Client-Libraries/Colcon-"
+"Tutorial>`)"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:481
+msgid ""
+"Once everything builds locally without warnings and all tests are passing, "
+"run CI on your feature branch:"
+msgstr ""
+"Une fois que tout se construit localement sans avertissement et que tous les"
+" tests réussissent, exécutez CI sur votre branche de fonctionnalité :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:483
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:494
+msgid "Go to ci.ros2.org"
+msgstr "Allez sur ci.ros2.org"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:484
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:495
+msgid "Log in (top right corner)"
+msgstr "Connectez-vous (coin supérieur droit)"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:485
+msgid "Click on the ``ci_launcher`` job"
+msgstr "Cliquez sur la tâche ``ci_launcher``"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:486
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:497
+msgid "Click \"Build with Parameters\" (left column)"
+msgstr "Cliquez sur \"Construire avec des paramètres\" (colonne de gauche)"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:487
+msgid "In the first box \"CI_BRANCH_TO_TEST\" enter your feature branch name"
+msgstr ""
+"Dans la première case \"CI_BRANCH_TO_TEST\" entrez le nom de votre branche "
+"de fonctionnalité"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:488
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:499
+msgid "Hit the ``build`` button"
+msgstr "Appuyez sur le bouton ``construire``"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:490
+msgid ""
+"(if you are not a ROS 2 committer, you don't have access to the CI farm. In "
+"that case, ping the reviewer of your PR to run CI for you)"
+msgstr ""
+"(si vous n'êtes pas un committer ROS 2, vous n'avez pas accès à la ferme CI."
+" Dans ce cas, envoyez un ping au réviseur de votre PR pour qu'il exécute CI "
+"pour vous)"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:492
+msgid "If your use case requires running code coverage:"
+msgstr ""
+"Si votre cas d'utilisation nécessite une couverture de code en cours "
+"d'exécution :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:496
+msgid "Click on the ``ci_linux_coverage`` job"
+msgstr "Cliquez sur le travail ``ci_linux_coverage``"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:498
+msgid ""
+"Be sure of leaving \"CI_BUILD_ARGS\" and \"CI_TEST_ARGS\" with the default "
+"values"
+msgstr ""
+"Assurez-vous de laisser \"CI_BUILD_ARGS\" et \"CI_TEST_ARGS\" avec les "
+"valeurs par défaut"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:500
+msgid ""
+"At the end of the document there are instructions on how to :ref:`interpret "
+"the result of the report <read-coverage-report>` and :ref:`calculate the "
+"coverage rate <calculate-coverage-rate>`"
+msgstr ""
+"À la fin du document, il y a des instructions sur la façon de "
+":ref:`interpréter le résultat du rapport <read-coverage-report>` et "
+":ref:`calculer le taux de couverture <calculate-coverage-rate>`"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:502
+msgid ""
+"If the CI job built without warnings, errors and test failures, post the "
+"links of your jobs on your PR or high-level ticket aggregating all your PRs "
+"(see example `here "
+"<https://github.com/ros2/rcl/pull/106#issuecomment-271119200>`__)"
+msgstr ""
+"Si le travail CI construit sans avertissements, erreurs et échecs de test, "
+"postez les liens de vos travaux sur votre PR ou ticket de haut niveau "
+"regroupant tous vos PRs (voir exemple `ici <https://github.com/ros2/rcl/pull"
+" /106#issuecomment-271119200>`__)"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:504
+msgid ""
+"Note that the markdown for these badges is in the console output of the "
+"``ci_launcher`` job"
+msgstr ""
+"Notez que la démarque de ces badges se trouve dans la sortie console du "
+"travail ``ci_launcher``"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:506
+msgid "When the PR has been approved:"
+msgstr "Lorsque le PR a été approuvé :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:508
+msgid ""
+"the person who submitted the PR merges it using \"Squash and Merge\" option "
+"so that we keep a clean history"
+msgstr ""
+"la personne qui a soumis le PR le fusionne en utilisant l'option \"Squash "
+"and Merge\" afin que nous gardions un historique propre"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:510
+msgid ""
+"If the commits deserve to keep separated: squash all the "
+"nitpick/linters/typo ones together and merge the remaining set"
+msgstr ""
+"Si les commits méritent d'être séparés : écrasez tous les "
+"nitpick/linters/typo ensemble et fusionnez l'ensemble restant"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:512
+msgid ""
+"Note: each PR should target a specific feature so Squash and Merge should "
+"make sense 99% of the time"
+msgstr ""
+"Remarque : chaque PR doit cibler une fonctionnalité spécifique afin que "
+"Squash et Merge aient du sens 99 % du temps"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:514
+msgid "Delete the branch once merged"
+msgstr "Supprimer la branche une fois fusionnée"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:517
+msgid "Architectural Development Practices"
+msgstr "Pratiques de développement architectural"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:519
+msgid ""
+"This section describes the ideal lifecycle that should be employed when "
+"making large architectural changes to ROS 2."
+msgstr ""
+"Cette section décrit le cycle de vie idéal qui doit être utilisé lors de "
+"modifications architecturales importantes de ROS 2."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:522
+msgid "Software Development Lifecycle"
+msgstr "Cycle de vie du développement logiciel"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:524
+msgid ""
+"This section describes step-by-step how to plan, design, and implement a new"
+" feature:"
+msgstr ""
+"Cette section décrit étape par étape comment planifier, concevoir et "
+"implémenter une nouvelle fonctionnalité :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:526
+msgid "Task Creation"
+msgstr "Création de tâche"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:527
+msgid "Creating the Design Document"
+msgstr "Création du document de conception"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:528
+msgid "Design Review"
+msgstr "Examen de la conception"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:529
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:606
+msgid "Implementation"
+msgstr "Mise en œuvre"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:530
+msgid "Code Review"
+msgstr "Révision des codes"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:533
+msgid "Task creation"
+msgstr "Création de tâche"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:535
+msgid ""
+"Tasks requiring changes to critical parts of ROS 2 should have design "
+"reviews during early stages of the release cycle. If a design review is "
+"happening in the later stages, the changes will be part of a future release."
+msgstr ""
+"Les tâches nécessitant des modifications des parties critiques de ROS 2 "
+"doivent faire l'objet de revues de conception au cours des premières étapes "
+"du cycle de publication. Si une révision de la conception a lieu dans les "
+"étapes ultérieures, les modifications feront partie d'une future version."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:538
+msgid ""
+"An issue should be created in the appropriate `ros2 repository "
+"<https://github.com/ros2/>`__, clearly describing the task being worked on."
+msgstr ""
+"Un problème doit être créé dans le `dépôt ros2 <https://github.com/ros2/>`__"
+" approprié, décrivant clairement la tâche en cours."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:540
+msgid ""
+"It should have a clear success criteria and highlight the concrete "
+"improvements expected from it."
+msgstr ""
+"Il doit avoir des critères de réussite clairs et mettre en évidence les "
+"améliorations concrètes attendues de celui-ci."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:541
+msgid ""
+"If the feature is targeting a ROS release, ensure this is tracked in the ROS"
+" release ticket (`example <https://github.com/ros2/ros2/issues/607>`__)."
+msgstr ""
+"Si la fonctionnalité cible une version ROS, assurez-vous que cela est suivi "
+"dans le ticket de version ROS (`exemple "
+"<https://github.com/ros2/ros2/issues/607>`__)."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:544
+msgid "Writing the design document"
+msgstr "Rédaction du document de conception"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:546
+msgid ""
+"Design docs must never include confidential information. Whether or not a "
+"design document is required for your change depends on how big the task is."
+msgstr ""
+"Les documents de conception ne doivent jamais inclure d'informations "
+"confidentielles. La nécessité ou non d'un document de conception pour votre "
+"modification dépend de l'ampleur de la tâche."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:549
+msgid "You are making a small change or fixing a bug:"
+msgstr "Vous apportez une petite modification ou corrigez un bogue :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:551
+msgid ""
+"A design document is not required, but an issue should be opened in the "
+"appropriate repository to track the work and avoid duplication of efforts."
+msgstr ""
+"Un document de conception n'est pas requis, mais un problème doit être "
+"ouvert dans le référentiel approprié pour suivre le travail et éviter la "
+"duplication des efforts."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:553
+msgid ""
+"You are implementing a new feature or would like to contribute to OSRF-owned"
+" infrastructure (like Jenkins CI):"
+msgstr ""
+"Vous implémentez une nouvelle fonctionnalité ou souhaitez contribuer à "
+"l'infrastructure appartenant à OSRF (comme Jenkins CI):"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:555
+msgid ""
+"Design doc is required and should be contributed to `ros2/design "
+"<https://github.com/ros2/design/>`__ to be made accessible on "
+"https://design.ros2.org/."
+msgstr ""
+"La documentation de conception est requise et doit être ajoutée à "
+"`ros2/design <https://github.com/ros2/design/>`__ pour être rendue "
+"accessible sur https://design.ros2.org/."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:556
+msgid ""
+"You should fork the repository and submit a pull request detailing the "
+"design."
+msgstr ""
+"Vous devez bifurquer le référentiel et soumettre une demande d'extraction "
+"détaillant la conception."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:558
+msgid ""
+"Mention the related ros2 issue (for example, ``Design doc for task "
+"ros2/ros2#<issue id>``) in the pull request or the commit message. Detailed "
+"instructions are on the `ROS 2 Contribute "
+"<https://design.ros2.org/contribute.html>`__ page. Design comments will be "
+"made directly on the pull request."
+msgstr ""
+"Mentionnez le problème ros2 associé (par exemple, ``Design doc for task "
+"ros2/ros2#<issue id>``) dans la demande d'extraction ou le message de "
+"validation. Des instructions détaillées se trouvent sur la page `ROS 2 "
+"Contribute <https://design.ros2.org/contribute.html>`__. Les commentaires de"
+" conception seront faits directement sur la demande d'extraction."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:562
+msgid ""
+"If the task is planned to be released with a specific version of ROS, this "
+"information should be included in the pull request."
+msgstr ""
+"S'il est prévu que la tâche soit publiée avec une version spécifique de ROS,"
+" ces informations doivent être incluses dans la demande d'extraction."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:565
+msgid "Design document review"
+msgstr "Examen des documents de conception"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:567
+msgid ""
+"Once the design is ready for review, a pull request should be opened and "
+"appropriate reviewers should be assigned. It is recommended to include "
+"project owner(s) - maintainers of all impacted packages (as defined by "
+"``package.xml`` maintainer field, see `REP-140 "
+"<https://www.ros.org/reps/rep-0140.html#maintainer-multiple-but-at-least-"
+"one>`__) - as reviewers."
+msgstr ""
+"Une fois que la conception est prête à être examinée, une demande "
+"d'extraction doit être ouverte et des examinateurs appropriés doivent être "
+"affectés. Il est recommandé d'inclure le(s) propriétaire(s) du projet - "
+"responsables de tous les packages impactés (tel que défini par le champ "
+"responsable ``package.xml``, voir `REP-140 <https://www.ros.org/reps/rep- "
+"0140.html#maintainer-multiple-but-at-least-one>`__) - en tant que réviseurs."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:571
+msgid ""
+"If the design doc is complex or reviewers have conflicting schedules, an "
+"optional design review meeting can be set up. In this case,"
+msgstr ""
+"Si le document de conception est complexe ou si les réviseurs ont des "
+"horaires contradictoires, une réunion facultative de révision de la "
+"conception peut être organisée. Dans ce cas,"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:574
+msgid "**Before the meeting**"
+msgstr "**Avant la réunion**"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:576
+msgid "Send a meeting invite at least one week in advance"
+msgstr "Envoyer une invitation à une réunion au moins une semaine à l'avance"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:577
+msgid "Meeting duration of one hour is recommended"
+msgstr "Une durée de réunion d'une heure est recommandée"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:578
+msgid ""
+"Meeting invite should list all decisions to be made during the review "
+"(decisions requiring package maintainer approval)"
+msgstr ""
+"L'invitation à la réunion doit répertorier toutes les décisions à prendre "
+"lors de l'examen (décisions nécessitant l'approbation du responsable du "
+"paquet)"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:580
+msgid "Meeting required attendees: design pull request reviewers"
+msgstr ""
+"Réunion des participants requis : réviseurs de demandes d'extraction de "
+"conception"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:580
+msgid "Meeting optional attendees: all OSRF engineers, if applicable"
+msgstr ""
+"Réunion des participants facultatifs : tous les ingénieurs OSRF, le cas "
+"échéant"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:582
+msgid "**During the meeting**"
+msgstr "**Pendant la réunion**"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:584
+msgid ""
+"The task owner drives the meeting, presents their ideas and manages "
+"discussions to ensure an agreement is reached on time"
+msgstr ""
+"Le propriétaire de la tâche dirige la réunion, présente ses idées et gère "
+"les discussions pour s'assurer qu'un accord est atteint à temps"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:586
+msgid "**After the meeting**"
+msgstr "**Après la réunion**"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:588
+msgid "The task owner should send back meeting notes to all attendees"
+msgstr ""
+"Le propriétaire de la tâche doit renvoyer les notes de réunion à tous les "
+"participants"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:589
+msgid "If minor issues have been raised about the design:"
+msgstr "Si des problèmes mineurs ont été soulevés concernant la conception :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:591
+msgid ""
+"The task owner should update the design doc pull request based on the "
+"feedback"
+msgstr ""
+"Le propriétaire de la tâche doit mettre à jour la demande d'extraction de "
+"document de conception en fonction des commentaires"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:592
+msgid "Additional review is not required"
+msgstr "Un examen supplémentaire n'est pas nécessaire"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:594
+msgid "If major issues have been raised about the design:"
+msgstr "Si des problèmes majeurs ont été soulevés concernant la conception :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:596
+msgid ""
+"It is acceptable to remove sections for which there is no clear agreement"
+msgstr ""
+"Il est acceptable de supprimer les sections pour lesquelles il n'y a pas "
+"d'accord clair"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:597
+msgid ""
+"The debatable parts of the design can be resubmitted as a separate task in "
+"the future"
+msgstr ""
+"Les parties discutables de la conception peuvent être soumises à nouveau en "
+"tant que tâche distincte à l'avenir"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:598
+msgid ""
+"If removing the debatable parts is not an option, work directly with package"
+" owners to reach an agreement"
+msgstr ""
+"Si la suppression des parties discutables n'est pas une option, travaillez "
+"directement avec les propriétaires de packages pour parvenir à un accord"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:600
+msgid "Once consensus is reached:"
+msgstr "Une fois le consensus atteint :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:602
+msgid ""
+"Ensure the `ros2/design <https://github.com/ros2/design/>`__ pull request "
+"has been merged, if applicable"
+msgstr ""
+"Assurez-vous que la demande d'extraction `ros2/design "
+"<https://github.com/ros2/design/>`__ a été fusionnée, le cas échéant"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:603
+msgid "Update and close the GitHub issue associated with this design task"
+msgstr ""
+"Mettre à jour et fermer le problème GitHub associé à cette tâche de "
+"conception"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:608
+msgid ""
+"Before starting, go through the `Pull requests`_ section for best practices."
+msgstr ""
+"Avant de commencer, consultez la section \"Demandes d'extraction\"_ pour "
+"connaître les meilleures pratiques."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:610
+msgid "For each repo to be modified:"
+msgstr "Pour chaque dépôt à modifier :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:612
+msgid ""
+"Modify the code, go to the next step if finished or at regular intervals to "
+"backup your work."
+msgstr ""
+"Modifiez le code, passez à l'étape suivante si vous avez terminé ou à "
+"intervalles réguliers pour sauvegarder votre travail."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:613
+msgid ""
+"`Self-review <https://git-scm.com/book/en/v2/Git-Tools-Interactive-"
+"Staging>`__ your changes using ``git add -i``."
+msgstr ""
+"`Auto-examen <https://git-scm.com/book/en/v2/Git-Tools-Interactive-"
+"Staging>`__ vos modifications en utilisant ``git add -i``."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:614
+msgid "Create a new signed commit using ``git commit -s``."
+msgstr "Créez un nouveau commit signé en utilisant ``git commit -s``."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:616
+msgid ""
+"A pull request should contain minimal semantically meaningful commits (for "
+"instance, a large number of 1-line commits is not acceptable). Create new "
+"fixup commits while iterating on feedback, or optionally, amend existing "
+"commits using ``git commit --amend`` if you don't want to create a new "
+"commit every time."
+msgstr ""
+"Une demande d'extraction doit contenir un minimum de commits sémantiquement "
+"significatifs (par exemple, un grand nombre de commits d'une ligne n'est pas"
+" acceptable). Créez de nouveaux commits de correction tout en itérant sur "
+"les commentaires, ou éventuellement, modifiez les commits existants en "
+"utilisant ``git commit --amend`` si vous ne voulez pas créer un nouveau "
+"commit à chaque fois."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:618
+msgid ""
+"Each commit must have a properly written, meaningful, commit message. More "
+"instructions `here <https://chris.beams.io/posts/git-commit/>`__."
+msgstr ""
+"Chaque commit doit avoir un message de commit correctement écrit et "
+"significatif. Plus d'instructions `ici <https://chris.beams.io/posts/git-"
+"commit/>`__."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:620
+msgid ""
+"Moving files must be done in a separate commit, otherwise git may fail to "
+"accurately track the file history."
+msgstr ""
+"Le déplacement des fichiers doit être effectué dans un commit séparé, sinon "
+"git risque de ne pas suivre avec précision l'historique des fichiers."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:621
+msgid ""
+"Either the pull request description or the commit message must contain a "
+"reference to the related ros2 issue, so it gets automatically closed when "
+"the pull request is merged. See this `doc "
+"<https://help.github.com/articles/closing-issues-using-keywords/>`__ for "
+"more details."
+msgstr ""
+"Soit la description de la demande d'extraction, soit le message de "
+"validation doit contenir une référence au problème ros2 associé, de sorte "
+"qu'il est automatiquement fermé lorsque la demande d'extraction est "
+"fusionnée. Voir ce `doc <https://help.github.com/articles/closing-issues-"
+"using-keywords/>`__ pour plus de détails."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:623
+msgid "Push the new commits."
+msgstr "Poussez les nouveaux commits."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:626
+msgid "Code review"
+msgstr "Revue de code"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:628
+msgid "Once the change is ready for code review:"
+msgstr "Une fois que le changement est prêt pour la révision du code :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:630
+msgid "Open a pull request for each modified repository."
+msgstr "Ouvrez une demande d'extraction pour chaque référentiel modifié."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:632
+msgid "Remember to follow `Pull requests`_ best practices."
+msgstr ""
+"N'oubliez pas de suivre les meilleures pratiques relatives aux \"demandes "
+"d'extraction\"."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:633
+msgid ""
+"`GitHub <https://hub.github.com/>`__ can be used to create pull requests "
+"from the command-line."
+msgstr ""
+"`GitHub <https://hub.github.com/>`__ peut être utilisé pour créer des "
+"demandes d'extraction à partir de la ligne de commande."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:634
+msgid ""
+"If the task is planned to be released with a specific version of ROS, this "
+"information should be included in each pull request."
+msgstr ""
+"S'il est prévu que la tâche soit publiée avec une version spécifique de ROS,"
+" ces informations doivent être incluses dans chaque demande d'extraction."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:636
+msgid ""
+"Package owners who reviewed the design document should be mentioned in the "
+"pull request."
+msgstr ""
+"Les propriétaires de packages qui ont examiné le document de conception "
+"doivent être mentionnés dans la demande d'extraction."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:637
+msgid ""
+"Code review SLO: although reviewing pull requests is best-effort, it is "
+"helpful to have reviewers comment on pull requests within a week and code "
+"authors to reply back to comments within a week, so there is no loss of "
+"context."
+msgstr ""
+"SLO de révision du code : bien que la révision des demandes d'extraction "
+"soit un effort optimal, il est utile que les réviseurs commentent les "
+"demandes d'extraction dans un délai d'une semaine et que les auteurs de code"
+" répondent aux commentaires dans un délai d'une semaine, afin qu'il n'y ait "
+"pas de perte de contexte."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:640
+msgid ""
+"Iterate on feedback as usual, amend and update the development branch as "
+"needed."
+msgstr ""
+"Itérer sur les commentaires comme d'habitude, modifier et mettre à jour la "
+"branche de développement si nécessaire."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:641
+msgid ""
+"Once the PR is approved, package maintainers will merge the changes in."
+msgstr ""
+"Une fois le PR approuvé, les mainteneurs de paquets fusionneront les "
+"changements dans."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:645
+msgid "Build Farm Introduction"
+msgstr "Construire une introduction à la ferme"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:647
+msgid "The build farm is located at `ci.ros2.org <https://ci.ros2.org/>`__."
+msgstr ""
+"La ferme de construction est située sur `ci.ros2.org "
+"<https://ci.ros2.org/>`__."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:649
+msgid ""
+"Every night we run nightly jobs which build and run all the tests in various"
+" scenarios on various platforms. Additionally, we test all pull requests "
+"against these platforms before merging."
+msgstr ""
+"Chaque nuit, nous exécutons des tâches nocturnes qui construisent et "
+"exécutent tous les tests dans différents scénarios sur différentes plates-"
+"formes. De plus, nous testons toutes les demandes d'extraction sur ces "
+"plates-formes avant de les fusionner."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:652
+msgid ""
+"This is the current set of target platforms and architectures, though it "
+"evolves overtime:"
+msgstr ""
+"Il s'agit de l'ensemble actuel de plates-formes et d'architectures cibles, "
+"bien qu'il évolue au fil du temps :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:655
+msgid "Ubuntu 22.04 Jammy"
+msgstr "Ubuntu 22.04 Jammy"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:657
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:662
+msgid "amd64"
+msgstr "amdshch"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:658
+msgid "aarch64"
+msgstr "aarch64"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:660
+msgid "Windows 10"
+msgstr "Windows 10"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:664
+msgid "There are several categories of jobs on the buildfarm:"
+msgstr "Il existe plusieurs catégories d'emplois sur le buildfarm :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:667
+msgid "manual jobs (triggered manually by developers):"
+msgstr "tâches manuelles (déclenchées manuellement par les développeurs) :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:669
+msgid "ci_linux: build + test the code on Ubuntu Xenial"
+msgstr "ci_linux : compiler + tester le code sur Ubuntu Xenial"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:670
+msgid ""
+"ci_linux-aarch64: build + test the code on Ubuntu Xenial on an ARM 64-bit "
+"machine (aarch64)"
+msgstr ""
+"ci_linux-aarch64 : compilez + testez le code sur Ubuntu Xenial sur une "
+"machine ARM 64 bits (aarch64) ;"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:671
+msgid "ci_linux_coverage: build + test + generation of test coverage"
+msgstr "ci_linux_coverage : build + test + génération de couverture de test"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:672
+msgid "ci_windows: build + test the code on Windows 10"
+msgstr "ci_windows : compiler + tester le code sur Windows 10"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:673
+msgid "ci_launcher: trigger all the jobs listed above"
+msgstr "ci_launcher : déclenche toutes les tâches répertoriées ci-dessus"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:675
+msgid "nightly (run every night):"
+msgstr "nightly (courir tous les soirs):"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:677
+msgid "Debug: build + test the code with CMAKE_BUILD_TYPE=Debug"
+msgstr "Debug : compilez + testez le code avec CMAKE_BUILD_TYPE=Debug"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:679
+msgid "nightly_linux_debug"
+msgstr "nightly_linux_debug"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:680
+msgid "nightly_linux-aarch64_debug"
+msgstr "nightly_linux-aarch64_debug"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:681
+msgid "nightly_win_deb"
+msgstr "nightly_win_deb"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:683
+msgid "Release: build + test the code with CMAKE_BUILD_TYPE=Release"
+msgstr "Release : compiler + tester le code avec CMAKE_BUILD_TYPE=Release"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:685
+msgid "nightly_linux_release"
+msgstr "nightly_linux_release"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:686
+msgid "nightly_linux-aarch64_release"
+msgstr "nightly_linux-aarch64_release"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:687
+msgid "nightly_win_rel"
+msgstr "nightly_win_rel"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:689
+msgid ""
+"Repeated: build then run each test up to 20 times or until failed (aka "
+"flakiness hunter)"
+msgstr ""
+"Répété : construisez puis exécutez chaque test jusqu'à 20 fois ou jusqu'à "
+"l'échec (aka flakiness hunter)"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:691
+msgid "nightly_linux_repeated"
+msgstr "nightly_linux_repeated"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:692
+msgid "nightly_linux-aarch64_repeated"
+msgstr "nightly_linux-aarch64_repeated"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:693
+msgid "nightly_win_rep"
+msgstr "nightly_win_rep"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:695
+msgid "Coverage:"
+msgstr "Couverture:"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:697
+msgid ""
+"nightly_linux_coverage: build + test the code + analyses coverage for c/c++ "
+"and python"
+msgstr ""
+"nightly_linux_coverage : construit + teste le code + analyse la couverture "
+"pour c/c++ et python"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:699
+msgid "results are exported as a cobertura report"
+msgstr "les résultats sont exportés sous forme de rapport cobertura"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:702
+msgid "packaging (run every night; result is bundled into an archive):"
+msgstr ""
+"packaging (exécuté toutes les nuits ; le résultat est regroupé dans une "
+"archive) :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:704
+msgid "packaging_linux"
+msgstr "packaging_linux"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:705
+msgid "packaging_windows"
+msgstr "packaging_windows"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:707
+msgid ""
+"Two additional build farms support the ROS / ROS 2 ecosystem by providing "
+"building of source and binary packages, continuous integration, testing, and"
+" analysis."
+msgstr ""
+"Deux fermes de construction supplémentaires prennent en charge l'écosystème "
+"ROS / ROS 2 en fournissant la construction de packages source et binaires, "
+"l'intégration continue, les tests et l'analyse."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:710
+msgid ""
+"For details, frequently asked questions, and troubleshooting see :doc:`build"
+" farms <Build-Farms>`."
+msgstr ""
+"Pour plus de détails, les questions fréquemment posées et le dépannage, "
+"consultez :doc:`build farms <Build-Farms>`."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:713
+msgid "Note on Coverage runs"
+msgstr "Remarque sur les courses de couverture"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:715
+msgid ""
+"ROS 2 packages are organized in a way that the testing code for a given "
+"package is not only contained within the package, but could also be present "
+"in a different package. In other words: packages can exercise code belonging"
+" to other packages during the testing phase."
+msgstr ""
+"Les packages ROS 2 sont organisés de manière à ce que le code de test d'un "
+"package donné soit non seulement contenu dans le package, mais puisse "
+"également être présent dans un package différent. En d'autres termes : les "
+"packages peuvent exercer du code appartenant à d'autres packages pendant la "
+"phase de test."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:718
+msgid ""
+"To achieve the coverage rate reached by all code available in the ROS 2 core"
+" packages it is recommended to run builds using a fixed set of proposed "
+"repositories. That set is defined in the default parameters of coverage jobs"
+" in Jenkins."
+msgstr ""
+"Pour atteindre le taux de couverture atteint par tout le code disponible "
+"dans les packages de base ROS 2, il est recommandé d'exécuter les builds à "
+"l'aide d'un ensemble fixe de référentiels proposés. Cet ensemble est défini "
+"dans les paramètres par défaut des tâches de couverture dans Jenkins."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:725
+msgid "How to read the coverage rate from the buildfarm report"
+msgstr "Comment lire le taux de couverture à partir du rapport buildfarm"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:727
+msgid "To see the coverage report for a given package:"
+msgstr "Pour voir le rapport de couverture pour un package donné :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:729
+msgid ""
+"When the ``ci_linux_coverage`` build finishes, click on ``Coverage Report``"
+msgstr ""
+"Lorsque la construction de ``ci_linux_coverage`` se termine, cliquez sur "
+"``Rapport de couverture``"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:730
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:758
+msgid "Scroll down to the ``Coverage Breakdown by Package`` table"
+msgstr ""
+"Faites défiler jusqu'au tableau ``Répartition de la couverture par forfait``"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:731
+msgid "In the table, look at the first column called \"Name\""
+msgstr "Dans le tableau, regardez la première colonne intitulée \"Nom\""
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:733
+msgid ""
+"The coverage reports in the buildfarm include all the packages that were "
+"used in the ROS workspace. The coverage report includes different paths "
+"corresponding to the same package:"
+msgstr ""
+"Les rapports de couverture dans la buildfarm incluent tous les packages qui "
+"ont été utilisés dans l'espace de travail ROS. Le rapport de couverture "
+"comprend différents chemins correspondant à un même forfait :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:736
+msgid ""
+"Name entries with the form: ``src.*.<repository_name>.<package_name>.*`` "
+"These correspond to the unit test runs available in a package against its "
+"own source code"
+msgstr ""
+"Nommez les entrées sous la forme : "
+"``src.*.<repository_name>.<package_name>.*`` Celles-ci correspondent aux "
+"exécutions de tests unitaires disponibles dans un package par rapport à son "
+"propre code source"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:738
+msgid ""
+"Name entries with the form: ``build.<repository_name>.<package_name>.*`` "
+"These correspond to the unit test runs available in a package against its "
+"files generated at building or configuring time"
+msgstr ""
+"Nommez les entrées sous la forme : "
+"``build.<repository_name>.<package_name>.*`` Celles-ci correspondent aux "
+"exécutions de tests unitaires disponibles dans un package par rapport à ses "
+"fichiers générés au moment de la construction ou de la configuration"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:740
+msgid ""
+"Name entries with the form: ``install.<package_name>.*`` These correspond to"
+" the system/integration tests coming from testing runs of other packages"
+msgstr ""
+"Nommer les entrées sous la forme : ``install.<package_name>.*`` Elles "
+"correspondent aux tests système/d'intégration provenant des séries de tests "
+"d'autres packages"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:746
+msgid "How to calculate the coverage rate from the buildfarm report"
+msgstr "Comment calculer le taux de couverture à partir du rapport buildfarm"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:748
+msgid "Get the combined unit coverage rate using the automatic script:"
+msgstr ""
+"Obtenez le taux de couverture unitaire combiné à l'aide du script "
+"automatique :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:750
+msgid "From the ci_linux_coverage Jenkins build copy the URL of the build"
+msgstr "Depuis le build ci_linux_coverage Jenkins, copiez l'URL du build"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:751
+msgid ""
+"Download the `get_coverage_ros2_pkg "
+"<https://raw.githubusercontent.com/ros2/ci/master/tools/get_coverage_ros2_pkg.py>`__"
+" script"
+msgstr ""
+"Téléchargez le script `get_coverage_ros2_pkg "
+"<https://raw.githubusercontent.com/ros2/ci/master/tools/get_coverage_ros2_pkg.py>`__"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:752
+msgid ""
+"Execute the script: ``./get_coverage_ros2_pkg.py <jenkins_build_url> "
+"<ros2_package_name>`` (`README "
+"<https://github.com/ros2/ci/blob/master/tools/README.md>`__)"
+msgstr ""
+"Exécutez le script : ``./get_coverage_ros2_pkg.py <jenkins_build_url> "
+"<ros2_package_name>`` (`README "
+"<https://github.com/ros2/ci/blob/master/tools/README.md>`__)"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:753
+msgid ""
+"Grab the results from the \"Combined unit testing\" final line in the output"
+" of the script"
+msgstr ""
+"Récupérez les résultats de la dernière ligne \"Combined unit testing\" dans "
+"la sortie du script"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:755
+msgid ""
+"Alternative: get the combined unit coverage rate from coverage report "
+"(require manual calculation):"
+msgstr ""
+"Alternative : obtenir le taux de couverture unitaire combiné à partir du "
+"rapport de couverture (nécessite un calcul manuel) :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:757
+msgid ""
+"When the ci_linux_coverage build finishes, click on ``Cobertura Coverage "
+"Report``"
+msgstr ""
+"Lorsque la construction de ci_linux_coverage est terminée, cliquez sur "
+"``Cobertura Coverage Report``"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:759
+msgid ""
+"In the table, under the first column \"Name\", look for (where "
+"<package_name> is your package under testing):"
+msgstr ""
+"Dans le tableau, sous la première colonne \"Name\", recherchez (où "
+"<package_name> est votre package en cours de test) :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:761
+msgid ""
+"all the directories under the pattern "
+"``src.*.<repository_name>.<package_name>.*`` grab the two absolute values in"
+" the column \"Lines\"."
+msgstr ""
+"tous les répertoires sous le modèle "
+"``src.*.<repository_name>.<package_name>.*`` saisissez les deux valeurs "
+"absolues dans la colonne \"Lines\"."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:762
+msgid ""
+"all the directories under the pattern ``build/.<repository_name>.*`` grab "
+"the two absolute values in the column \"Lines\"."
+msgstr ""
+"tous les répertoires sous le modèle ``build/.<repository_name>.*`` "
+"récupèrent les deux valeurs absolues dans la colonne \"Lines\"."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:764
+msgid ""
+"With the previous selection: for each cell, the first value is the lines "
+"tested and the second is the total lines of code. Aggregate all rows for "
+"getting the total of the lines tested and the total of lines of code under "
+"test. Divide to get the coverage rate."
+msgstr ""
+"Avec la sélection précédente : pour chaque cellule, la première valeur "
+"correspond aux lignes testées et la seconde au total des lignes de code. "
+"Agrégez toutes les lignes pour obtenir le total des lignes testées et le "
+"total des lignes de code testées. Diviser pour obtenir le taux de "
+"couverture."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:771
+msgid "How to measure coverage locally using lcov (Ubuntu)"
+msgstr "Comment mesurer la couverture localement à l'aide de lcov (Ubuntu)"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:773
+msgid "To measure coverage on your own machine, install ``lcov``."
+msgstr ""
+"Pour mesurer la couverture sur votre propre machine, installez ``lcov``."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:779
+msgid ""
+"The rest of this section assumes you are working from your colcon workspace."
+" Compile in debug with coverage flags. Feel free to use colcon flags to "
+"target specific packages."
+msgstr ""
+"Le reste de cette section suppose que vous travaillez depuis votre espace de"
+" travail colcon. Compiler en débogage avec des drapeaux de couverture. "
+"N'hésitez pas à utiliser les drapeaux colcon pour cibler des packages "
+"spécifiques."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:787
+msgid ""
+"``lcov`` requires an initial baseline, which you can produce with the "
+"following command. Update the output file location for your needs."
+msgstr ""
+"``lcov`` nécessite une ligne de base initiale, que vous pouvez produire avec"
+" la commande suivante. Mettez à jour l'emplacement du fichier de sortie "
+"selon vos besoins."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:794
+msgid ""
+"Run tests for the packages that matter for your coverage measurements. For "
+"example, if measuring ``rclcpp`` also with ``test_rclcpp``"
+msgstr ""
+"Exécutez des tests pour les packages qui comptent pour vos mesures de "
+"couverture. Par exemple, si vous mesurez ``rclcpp`` également avec "
+"``test_rclcpp``"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:801
+msgid ""
+"Capture the lcov results with a similar command this time dropping the "
+"``--initial`` flag."
+msgstr ""
+"Capturez les résultats lcov avec une commande similaire, cette fois en "
+"supprimant le drapeau ``--initial``."
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:807
+msgid "Combine the trace .info files:"
+msgstr "Combinez les fichiers de trace .info :"
+
+#: ../../source/The-ROS2-Project/Contributing/Developer-Guide.rst:813
+msgid "Generate html for easy visualization and annotation of covered lines."
+msgstr ""
+"Générez du HTML pour une visualisation et une annotation faciles des lignes "
+"couvertes."

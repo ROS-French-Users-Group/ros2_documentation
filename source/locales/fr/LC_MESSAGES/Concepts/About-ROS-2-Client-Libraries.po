@@ -1,0 +1,442 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 14:06:37.042146\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:10
+msgid "About ROS 2 client libraries"
+msgstr "À propos des bibliothèques clientes ROS 2"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:13
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:16
+msgid "Overview"
+msgstr "Aperçu"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:18
+msgid ""
+"Client libraries are the APIs that allow users to implement their ROS code. "
+"Using client libraries, users gain access to ROS concepts such as nodes, "
+"topics, services, etc. Client libraries come in a variety of programming "
+"languages so that users may write ROS code in the language that is best-"
+"suited for their application. For example, you might prefer to write "
+"visualization tools in Python because it makes prototyping iterations "
+"faster, while for parts of your system that are concerned with efficiency, "
+"the nodes might be better implemented in C++."
+msgstr ""
+"Les bibliothèques clientes sont les API qui permettent aux utilisateurs "
+"d'implémenter leur code ROS. À l'aide de bibliothèques clientes, les "
+"utilisateurs ont accès aux concepts ROS tels que les nœuds, les sujets, les "
+"services, etc. Les bibliothèques clientes sont disponibles dans une variété "
+"de langages de programmation afin que les utilisateurs puissent écrire du "
+"code ROS dans le langage le mieux adapté à leur application. Par exemple, "
+"vous préférerez peut-être écrire des outils de visualisation en Python car "
+"cela accélère les itérations de prototypage, tandis que pour les parties de "
+"votre système qui sont concernées par l'efficacité, les nœuds pourraient "
+"être mieux implémentés en C++."
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:23
+msgid ""
+"Nodes written using different client libraries are able to share messages "
+"with each other because all client libraries implement code generators that "
+"provide users with the capability to interact with ROS interface files in "
+"the respective language."
+msgstr ""
+"Les nœuds écrits à l'aide de différentes bibliothèques clientes peuvent "
+"partager des messages entre eux car toutes les bibliothèques clientes "
+"implémentent des générateurs de code qui permettent aux utilisateurs "
+"d'interagir avec les fichiers d'interface ROS dans la langue respective."
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:25
+msgid ""
+"In addition to the language-specific communication tools, client libraries "
+"expose to users the core functionality that makes ROS “ROS”. For example, "
+"here is a list of functionality that can typically be accessed through a "
+"client library:"
+msgstr ""
+"En plus des outils de communication spécifiques au langage, les "
+"bibliothèques clientes exposent aux utilisateurs les fonctionnalités de base"
+" qui font de ROS « ROS ». Par exemple, voici une liste de fonctionnalités "
+"généralement accessibles via une bibliothèque client :"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:29
+msgid "Names and namespaces"
+msgstr "Noms et espaces de noms"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:30
+msgid "Time (real or simulated)"
+msgstr "Temps (réel ou simulé)"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:31
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:32
+msgid "Console logging"
+msgstr "Journalisation de la console"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:33
+msgid "Threading model"
+msgstr "Modèle de filetage"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:34
+msgid "Intra-process communication"
+msgstr "Communication intra-processus"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:37
+msgid "Supported client libraries"
+msgstr "Bibliothèques clientes prises en charge"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:39
+msgid ""
+"The C++ client library (``rclcpp``) and the Python client library "
+"(``rclpy``) are both client libraries which utilize common functionality in "
+"the RCL."
+msgstr ""
+"La bibliothèque cliente C++ (``rclcpp``) et la bibliothèque cliente Python "
+"(``rclpy``) sont toutes deux des bibliothèques clientes qui utilisent des "
+"fonctionnalités communes dans la RCL."
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:42
+msgid "The ``rclcpp`` Package"
+msgstr "Le paquet ``rclcpp``"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:44
+msgid ""
+"The ROS Client Library for C++ (``rclcpp``) is the user facing, C++ "
+"idiomatic interface which provides all of the ROS client functionality like "
+"creating nodes, publisher, and subscribers. ``rclcpp`` builds on top of "
+"``rcl`` and the ``rosidl`` |API|, and it is designed to be used with the C++"
+" messages generated by ``rosidl_generator_cpp``."
+msgstr ""
+"La bibliothèque cliente ROS pour C++ (``rclcpp``) est l'interface "
+"idiomatique C++ orientée vers l'utilisateur qui fournit toutes les "
+"fonctionnalités du client ROS telles que la création de nœuds, l'éditeur et "
+"les abonnés. ``rclcpp`` se construit au-dessus de ``rcl`` et de ``rosidl`` "
+"|API|, et il est conçu pour être utilisé avec les messages C++ générés par "
+"``rosidl_generator_cpp``."
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:47
+msgid ""
+"``rclcpp`` makes use of all the features of C++ and C++17 to make the "
+"interface as easy to use as possible, but since it reuses the implementation"
+" in ``rcl`` it is able maintain a consistent behavior with the other client "
+"libraries that use the ``rcl`` |API|."
+msgstr ""
+"``rclcpp`` utilise toutes les fonctionnalités de C++ et C++17 pour rendre "
+"l'interface aussi facile à utiliser que possible, mais puisqu'il réutilise "
+"l'implémentation dans ``rcl``, il est capable de maintenir un comportement "
+"cohérent avec le d'autres bibliothèques clientes qui utilisent l'|API| "
+"``rcl``."
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:49
+msgid ""
+"The ``rclcpp`` repository is located on GitHub at `ros2/rclcpp "
+"<https://github.com/ros2/rclcpp>`_ and contains the |package| ``rclcpp``. "
+"The generated |API| documentation is here:"
+msgstr ""
+"Le référentiel ``rclcpp`` est situé sur GitHub à `ros2/rclcpp "
+"<https://github.com/ros2/rclcpp>`_ et contient le |package| ``rclcpp``. "
+"L'|API| générée la documentation est ici :"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:52
+msgid "`api/rclcpp/index.html <http://docs.ros.org/en/rolling/p/rclcpp>`_"
+msgstr "`api/rclcpp/index.html <http://docs.ros.org/en/rolling/p/rclcpp>`_"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:55
+msgid "The ``rclpy`` Package"
+msgstr "Le paquet ``rclpy``"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:57
+msgid ""
+"The ROS Client Library for Python (``rclpy``) is the Python counterpart to "
+"the C++ client library. Like the C++ client library, ``rclpy`` also builds "
+"on top of the ``rcl`` C API for its implementation. The interface provides "
+"an idiomatic Python experience which uses native Python types and patterns "
+"like lists and context objects, but by using the ``rcl`` |API| in the "
+"implementation it stays consistent with the other client libraries in terms "
+"of feature parity and behavior. In addition to providing Python idiomatic "
+"bindings around the ``rcl`` |API| and Python classes for each message, the "
+"Python client library takes care of the execution model, using "
+"``threading.Thread`` or similar to run the functions in the ``rcl`` |API|."
+msgstr ""
+"La bibliothèque cliente ROS pour Python (``rclpy``) est l'équivalent Python "
+"de la bibliothèque cliente C++. Comme la bibliothèque cliente C++, ``rclpy``"
+" s'appuie également sur l'API C ``rcl`` pour son implémentation. L'interface"
+" fournit une expérience Python idiomatique qui utilise des types et des "
+"modèles Python natifs comme des listes et des objets de contexte, mais en "
+"utilisant l'API ``rcl`` |API| dans l'implémentation, il reste cohérent avec "
+"les autres bibliothèques clientes en termes de parité des fonctionnalités et"
+" de comportement. En plus de fournir des liaisons idiomatiques Python autour"
+" de ``rcl`` |API| et Python pour chaque message, la bibliothèque cliente "
+"Python s'occupe du modèle d'exécution, en utilisant ``threading.Thread`` ou "
+"similaire pour exécuter les fonctions dans ``rcl`` |API|."
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:62
+msgid ""
+"Like C++ it generates custom Python code for each ROS message that the user "
+"interacts with, but unlike C++ it eventually converts the native Python "
+"message object into the C version of the message. All operations happen on "
+"the Python version of the messages until they need to be passed into the "
+"``rcl`` layer, at which point they are converted into the plain C version of"
+" the message so it can be passed into the ``rcl`` C |API|. This is avoided "
+"if possible when communicating between publishers and subscribers in the "
+"same process to cut down on the conversion into and out of Python."
+msgstr ""
+"Comme C++, il génère du code Python personnalisé pour chaque message ROS "
+"avec lequel l'utilisateur interagit, mais contrairement à C++, il convertit "
+"finalement l'objet de message Python natif dans la version C du message. "
+"Toutes les opérations se produisent sur la version Python des messages "
+"jusqu'à ce qu'elles aient besoin d'être passées dans la couche ``rcl``, à "
+"quel point elles sont converties dans la version C ordinaire du message afin"
+" qu'elle puisse être passée dans le ``rcl` ` C |API|. Ceci est évité si "
+"possible lors de la communication entre les éditeurs et les abonnés dans le "
+"même processus pour réduire la conversion vers et depuis Python."
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:66
+msgid ""
+"The ``rclpy`` repository is located on GitHub at `ros2/rclpy "
+"<https://github.com/ros2/rclpy>`_ and contains the |package| ``rclpy``. The "
+"generated |API| documentation is here:"
+msgstr ""
+"Le référentiel ``rclpy`` est situé sur GitHub à `ros2/rclpy "
+"<https://github.com/ros2/rclpy>`_ et contient le |package| ``rclpy``. "
+"L'|API| générée la documentation est ici :"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:69
+msgid ""
+"`api/rclpy/index.html <http://docs.ros2.org/foxy/api/rclpy/index.html>`_"
+msgstr ""
+"`api/rclpy/index.html <http://docs.ros2.org/foxy/api/rclpy/index.html>`_"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:73
+msgid "Community-maintained"
+msgstr "Maintenu par la communauté"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:75
+msgid ""
+"While the C++ and Python client libraries are maintained by the core ROS 2 "
+"team, members of the ROS 2 community maintain additional client libraries:"
+msgstr ""
+"Alors que les bibliothèques clientes C++ et Python sont gérées par l'équipe "
+"principale de ROS 2, les membres de la communauté ROS 2 maintiennent des "
+"bibliothèques clientes supplémentaires :"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:77
+msgid ""
+"`Ada <https://github.com/ada-ros/ada4ros2>`__ Ada binding and tools for ROS "
+"2 - workspace overlay."
+msgstr ""
+"`Ada <https://github.com/ada-ros/ada4ros2>`__ Liaison Ada et outils pour ROS"
+" 2 - superposition d'espace de travail."
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:78
+msgid ""
+"`C <https://github.com/ros2/rclc>`__  ``rclc`` does not put a layer on top "
+"of rcl but complements rcl to make rcl+rclc a feature-complete client "
+"library in C. See `micro.ros.org <https://micro.ros.org/>`__ for tutorials."
+msgstr ""
+"`C <https://github.com/ros2/rclc>`__ ``rclc`` ne place pas de couche au-"
+"dessus de rcl mais complète rcl pour faire de rcl+rclc une bibliothèque "
+"client complète en C. Voir ` micro.ros.org <https://micro.ros.org/>`__ pour "
+"les tutoriels."
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:79
+msgid ""
+"`JVM and Android <https://github.com/ros2-java>`__ Java and Android bindings"
+" for ROS 2."
+msgstr ""
+"`JVM et Android <https://github.com/ros2-java>`__ Liaisons Java et Android "
+"pour ROS 2."
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:80
+msgid ""
+"`_.NET Core, UWP and C# <https://github.com/esteve/ros2_dotnet>`__ This is a"
+" collection of projects (bindings, code generator, examples and more) for "
+"writing ROS 2 applications for .NET Core and .NET Standard."
+msgstr ""
+"`_.NET Core, UWP et C# <https://github.com/esteve/ros2_dotnet>`__ Ceci est "
+"une collection de projets (liaisons, générateur de code, exemples et plus) "
+"pour écrire des applications ROS 2 pour .NET Core et Norme .NET."
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:81
+msgid ""
+"`Node.js <https://www.npmjs.com/package/rclnodejs>`__ rclnodejs is a Node.js"
+" client for the Robot Operating System (ROS 2). It provides a simple and "
+"easy JavaScript API for ROS 2 programming."
+msgstr ""
+"`Node.js <https://www.npmjs.com/package/rclnodejs>`__ rclnodejs est un "
+"client Node.js pour le système d'exploitation Robot (ROS 2). Il fournit une "
+"API JavaScript simple et facile pour la programmation ROS 2."
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:82
+msgid ""
+"`Rust <https://github.com/ros2-rust/ros2_rust>`__ This is a set of projects "
+"(the rclrs client library, code generator, examples and more) that enables "
+"developers to write ROS 2 applications in Rust."
+msgstr ""
+"`Rust <https://github.com/ros2-rust/ros2_rust>`__ Il s'agit d'un ensemble de"
+" projets (la bibliothèque cliente rclrs, le générateur de code, des "
+"exemples, etc.) qui permet aux développeurs d'écrire des applications ROS 2 "
+"dans Rust."
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:84
+msgid "Older, unmaintained client libraries are:"
+msgstr "Les bibliothèques clientes plus anciennes et non maintenues sont :"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:86
+msgid "`C# <https://github.com/firesurfer/rclcs>`__"
+msgstr "`C# <https://github.com/firesurfer/rclcs>`__"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:87
+msgid "`Objective C and iOS <https://github.com/esteve/ros2_objc>`__"
+msgstr "`Objectif C et iOS <https://github.com/esteve/ros2_objc>`__"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:91
+msgid "Common functionality: the RCL"
+msgstr "Fonctionnalité commune : la RCL"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:93
+msgid ""
+"Most of the functionality found in a client library is not specific to the "
+"programming language of the client library. For example, the behavior of "
+"parameters and the logic of namespaces should ideally be the same across all"
+" programming languages. Because of this, rather than implementing the common"
+" functionality from scratch, client libraries make use of a common core ROS "
+"Client Library (RCL) interface that implements logic and behavior of ROS "
+"concepts that is not language-specific. As a result, client libraries only "
+"need to wrap the common functionality in the RCL with foreign function "
+"interfaces. This keeps client libraries thinner and easier to develop. For "
+"this reason the common RCL functionality is exposed with C interfaces as the"
+" C language is typically the easiest language for client libraries to wrap."
+msgstr ""
+"La plupart des fonctionnalités trouvées dans une bibliothèque cliente ne "
+"sont pas spécifiques au langage de programmation de la bibliothèque cliente."
+" Par exemple, le comportement des paramètres et la logique des espaces de "
+"noms devraient idéalement être les mêmes dans tous les langages de "
+"programmation. Pour cette raison, plutôt que d'implémenter la fonctionnalité"
+" commune à partir de zéro, les bibliothèques clientes utilisent une "
+"interface de bibliothèque cliente ROS (RCL) de base commune qui implémente "
+"la logique et le comportement des concepts ROS qui ne sont pas spécifiques "
+"au langage. Par conséquent, les bibliothèques clientes n'ont besoin que "
+"d'encapsuler la fonctionnalité commune dans la RCL avec des interfaces de "
+"fonctions étrangères. Cela permet de garder les bibliothèques clientes plus "
+"fines et plus faciles à développer. Pour cette raison, la fonctionnalité RCL"
+" commune est exposée avec les interfaces C car le langage C est généralement"
+" le langage le plus facile à envelopper pour les bibliothèques clientes."
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:100
+msgid ""
+"In addition to making the client libraries light-weight, an advantage of "
+"having the common core is that the behavior between languages is more "
+"consistent. If any changes are made to the logic/behavior of the "
+"functionality in the core RCL -- namespaces, for example -- all client "
+"libraries that use the RCL will have these changes reflected. Furthermore, "
+"having the common core means that maintaining multiple client libraries "
+"becomes less work when it comes to bug fixes."
+msgstr ""
+"En plus de rendre les bibliothèques clientes légères, un avantage d'avoir le"
+" noyau commun est que le comportement entre les langages est plus cohérent. "
+"Si des modifications sont apportées à la logique/au comportement de la "
+"fonctionnalité dans la RCL principale - les espaces de noms, par exemple - "
+"toutes les bibliothèques clientes qui utilisent la RCL verront ces "
+"modifications reflétées. De plus, avoir le noyau commun signifie que la "
+"maintenance de plusieurs bibliothèques clientes devient moins de travail "
+"lorsqu'il s'agit de corrections de bogues."
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:104
+msgid ""
+"`The API documentation for the RCL can be found here. "
+"<https://docs.ros2.org/latest/api/rcl/>`__"
+msgstr ""
+"`La documentation de l'API pour la RCL peut être trouvée ici. "
+"<https://docs.ros2.org/latest/api/rcl/>`__"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:107
+msgid "Language-specific functionality"
+msgstr "Fonctionnalité spécifique à la langue"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:109
+msgid ""
+"Client library concepts that require language-specific features/properties "
+"are not implemented in the RCL but instead are implemented in each client "
+"library. For example, threading models used by “spin” functions will have "
+"implementations that are specific to the language of the client library."
+msgstr ""
+"Les concepts de bibliothèque client qui nécessitent des "
+"fonctionnalités/propriétés spécifiques à la langue ne sont pas implémentés "
+"dans la RCL mais sont implémentés dans chaque bibliothèque client. Par "
+"exemple, les modèles de threading utilisés par les fonctions \"spin\" auront"
+" des implémentations spécifiques au langage de la bibliothèque cliente."
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:113
+msgid "Demo"
+msgstr "Démo"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:115
+msgid ""
+"For a walkthrough of the message exchange between a publisher using "
+"``rclpy`` and a subscriber using ``rclcpp``\\ , we encourage you to watch "
+"`this ROSCon talk <https://vimeo.com/187696091>`__ starting at 17:25 `(here "
+"are the slides) "
+"<https://roscon.ros.org/2016/presentations/ROSCon%202016%20-%20ROS%202%20Update.pdf>`__."
+msgstr ""
+"Pour une présentation de l'échange de messages entre un éditeur utilisant "
+"``rclpy`` et un abonné utilisant ``rclcpp``\\ , nous vous encourageons à "
+"regarder `cette conférence ROSCon <https://vimeo.com/187696091>`__ à partir "
+"de à 17h25 `(voici les slides) "
+"<https://roscon.ros.org/2016/presentations/ROSCon%202016%20-%20ROS%202%20Update.pdf>`__."
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:118
+msgid "Comparison to ROS 1"
+msgstr "Comparaison avec ROS 1"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:120
+msgid ""
+"In ROS 1, all client libraries are developed \"from the ground up\". This "
+"allows for the ROS 1 Python client library to be implemented purely in "
+"Python, for example, which brings benefits of such as not needing to compile"
+" code. However, naming conventions and behaviors are not always consistent "
+"between client libraries, bug fixes have to be done in multiple places, and "
+"there is a lot of functionality that has only ever been implemented in one "
+"client library (e.g. UDPROS)."
+msgstr ""
+"Dans ROS 1, toutes les bibliothèques clientes sont développées \"à partir de"
+" zéro\". Cela permet à la bibliothèque client Python ROS 1 d'être "
+"implémentée uniquement en Python, par exemple, ce qui présente des avantages"
+" tels que l'absence de compilation de code. Cependant, les conventions de "
+"dénomination et les comportements ne sont pas toujours cohérents entre les "
+"bibliothèques clientes, les corrections de bogues doivent être effectuées à "
+"plusieurs endroits et de nombreuses fonctionnalités n'ont jamais été "
+"implémentées que dans une seule bibliothèque cliente (par exemple, UDPROS)."
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:125
+msgid "Summary"
+msgstr "Résumé"
+
+#: ../../source/Concepts/About-ROS-2-Client-Libraries.rst:127
+msgid ""
+"By utilizing the common core ROS client library, client libraries written in"
+" a variety of programming languages are easier to write and have more "
+"consistent behavior."
+msgstr ""
+"En utilisant la bibliothèque client ROS de base commune, les bibliothèques "
+"client écrites dans une variété de langages de programmation sont plus "
+"faciles à écrire et ont un comportement plus cohérent."

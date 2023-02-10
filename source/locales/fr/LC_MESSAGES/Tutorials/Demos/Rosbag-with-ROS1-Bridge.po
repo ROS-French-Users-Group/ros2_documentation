@@ -1,0 +1,238 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 12:05:54.303637\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:7
+msgid "Recording and playing back data with ``rosbag`` using the ROS 1 bridge"
+msgstr ""
+"Enregistrement et lecture de données avec ``rosbag`` en utilisant le pont "
+"ROS 1"
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:9
+msgid ""
+"This tutorial is a follow up to the *Bridge communication between ROS 1 and "
+"ROS 2* demo as can be found `here "
+"<https://github.com/ros2/ros1_bridge/blob/rolling/README.md>`__, and in the "
+"following it is assumed you have completed that tutorial already."
+msgstr ""
+"Ce didacticiel fait suite à la démonstration * Communication Bridge entre "
+"ROS 1 et ROS 2 *, que vous pouvez trouver `ici "
+"<https://github.com/ros2/ros1_bridge/blob/rolling/README.md>`__, et dans ce "
+"qui suit, il est supposé que vous avez déjà terminé ce didacticiel."
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:11
+msgid ""
+"The ros1_bridge can either be installed from `binary packages "
+"<../../Installation>` or `built from source "
+"<https://github.com/ros2/ros1_bridge/blob/rolling/README.md#building-the-"
+"bridge-from-source>`__; both work for these examples."
+msgstr ""
+"Le ros1_bridge peut être installé à partir de `packages binaires "
+"<../../Installation>` ou `construit à partir de la source "
+"<https://github.com/ros2/ros1_bridge/blob/rolling/README.md#building-the- "
+"pont-depuis-la-source>`__ ; les deux fonctionnent pour ces exemples."
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:13
+msgid ""
+"What follows is a series of additional examples, like that ones that come at"
+" the end of the aforementioned *Bridge communication between ROS 1 and ROS "
+"2* demo."
+msgstr ""
+"Ce qui suit est une série d'exemples supplémentaires, comme ceux qui "
+"viennent à la fin de la démonstration susmentionnée *Communication de pont "
+"entre ROS 1 et ROS 2*."
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:16
+msgid "Recording topic data with rosbag and ROS 1 Bridge"
+msgstr "Enregistrement des données de sujet avec rosbag et ROS 1 Bridge"
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:18
+msgid ""
+"In this example, we'll be using the ``cam2image`` demo program that comes "
+"with ROS 2 and a Python script to emulate a simple turtlebot-like robot's "
+"sensor data so that we can bridge it to ROS 1 and use rosbag to record it."
+msgstr ""
+"Dans cet exemple, nous allons utiliser le programme de démonstration "
+"``cam2image`` fourni avec ROS 2 et un script Python pour émuler les données "
+"d'un capteur de robot de type tortue afin que nous puissions le relier à ROS"
+" 1 et utiliser rosbag pour enregistrer il."
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:20
+msgid "First we'll run a ROS 1 ``roscore`` in a new shell:"
+msgstr ""
+"Nous allons d'abord exécuter un ``roscore`` ROS 1 dans un nouveau shell :"
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:30
+msgid ""
+"Then we'll run the ROS 1 <=> ROS 2 ``dynamic_bridge`` with the ``--bridge-"
+"all-topics`` option (so we can do ``rostopic list`` and see them) in another"
+" shell:"
+msgstr ""
+"Ensuite, nous exécuterons le ``dynamic_bridge`` ROS 1 <=> ROS 2 avec "
+"l'option ``--bridge-all-topics`` (afin que nous puissions faire ``rostopic "
+"list`` et les voir) dans un autre shell :"
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:44
+msgid ""
+"Remember to replace ``<workspace-with-bridge>`` with the path to where you "
+"either extracted the ROS 2 binary or where you built ROS 2 from source."
+msgstr ""
+"N'oubliez pas de remplacer ``<workspace-with-bridge>`` par le chemin d'accès"
+" à l'endroit où vous avez extrait le binaire ROS 2 ou à l'endroit où vous "
+"avez construit ROS 2 à partir de la source."
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:48
+msgid ""
+"Now we can start up the ROS 2 programs that will emulate our turtlebot-like "
+"robot. First we'll run the ``cam2image`` program with the ``-b`` option so "
+"it doesn't require a camera to work:"
+msgstr ""
+"Nous pouvons maintenant démarrer les programmes ROS 2 qui émuleront notre "
+"robot ressemblant à un robot-tortue. Nous allons d'abord exécuter le "
+"programme ``cam2image`` avec l'option ``-b`` pour qu'il ne nécessite pas de "
+"caméra pour fonctionner :"
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:59
+msgid "TODO: use namespaced topic names"
+msgstr "À FAIRE : utiliser des noms de sujet avec espace de noms"
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:61
+msgid ""
+"Then we'll run a simple Python script to emulate the ``odom`` and "
+"``imu_data`` topics from a Kobuki base. I would use the more accurate "
+"``~sensors/imu_data`` topic name for the imu data, but we don't have "
+"namespace support just yet in ROS 2 (it's coming!). Place this script in a "
+"file called ``emulate_kobuki_node.py``:"
+msgstr ""
+"Ensuite, nous exécuterons un simple script Python pour émuler les sujets "
+"``odom`` et ``imu_data`` à partir d'une base Kobuki. J'utiliserais le nom de"
+" sujet plus précis ``~sensors/imu_data`` pour les données imu, mais nous "
+"n'avons pas encore de support d'espace de noms dans ROS 2 (ça arrive !). "
+"Placez ce script dans un fichier appelé ``emulate_kobuki_node.py`` :"
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:106
+msgid "You can run this python script in a new ROS 2 shell:"
+msgstr "Vous pouvez exécuter ce script Python dans un nouveau shell ROS 2 :"
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:118
+msgid ""
+"Now that all the data sources and the dynamic bridge are running, we can "
+"look at the available topics in a new ROS 1 shell:"
+msgstr ""
+"Maintenant que toutes les sources de données et le pont dynamique "
+"fonctionnent, nous pouvons examiner les rubriques disponibles dans un "
+"nouveau shell ROS 1 :"
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:128
+msgid "You should see something like this:"
+msgstr "Vous devriez voir quelque chose comme ceci :"
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:139
+msgid "We can now record this data with ``rosbag record`` in the same shell:"
+msgstr ""
+"Nous pouvons maintenant enregistrer ces données avec ``rosbag record`` dans "
+"le même shell :"
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:146
+msgid ""
+"After a few seconds you can ``Ctrl-c`` the ``rosbag`` command and do an ``ls"
+" -lh`` to see how big the file is, you might see something like this:"
+msgstr ""
+"Après quelques secondes, vous pouvez ``Ctrl-c`` la commande ``rosbag`` et "
+"faire un ``ls -lh`` pour voir la taille du fichier, vous pourriez voir "
+"quelque chose comme ceci :"
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:154
+msgid ""
+"Though the file name will be different for your bag (since it is derived "
+"from the date and time)."
+msgstr ""
+"Bien que le nom du fichier soit différent pour votre sac (puisqu'il est "
+"dérivé de la date et de l'heure)."
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:157
+msgid "Playing back topic data with rosbag and ROS 1 Bridge"
+msgstr "Lecture des données de sujet avec rosbag et ROS 1 Bridge"
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:159
+msgid ""
+"Now that we have a bag file you can use any of the ROS 1 tools to introspect"
+" the bag file, like ``rosbag info <bag file>``, ``rostopic list -b <bag "
+"file>``, or ``rqt_bag <bag file>``. However, we can also playback bag data "
+"into ROS 2 using ``rosbag play`` and the ROS 1 <=> ROS 2 ``dynamic_bridge``."
+msgstr ""
+"Maintenant que nous avons un fichier sac, vous pouvez utiliser n'importe "
+"lequel des outils ROS 1 pour introspecter le fichier sac, comme ``rosbag "
+"info <bag file>``, ``rostopic list -b <bag file>``, ou `` rqt_bag <fichier "
+"sac>``. Cependant, nous pouvons également lire les données du sac dans ROS 2"
+" en utilisant ``rosbag play`` et le ROS 1 <=> ROS 2 ``dynamic_bridge``."
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:162
+msgid ""
+"First close out all the shells you opened for the previous tutorial, "
+"stopping any running programs."
+msgstr ""
+"Fermez d'abord tous les shells que vous avez ouverts pour le didacticiel "
+"précédent, en arrêtant tous les programmes en cours d'exécution."
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:164
+msgid "Then in a new shell start the ``roscore``:"
+msgstr "Ensuite, dans un nouveau shell, lancez le ``roscore`` :"
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:174
+msgid "Then run the ``dynamic_bridge`` in another shell:"
+msgstr "Exécutez ensuite le ``dynamic_bridge`` dans un autre shell :"
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:188
+msgid ""
+"Then play the bag data back with ``rosbag play`` in another new shell, using"
+" the ``--loop`` option so that we don't have to keep restarting it for short"
+" bags:"
+msgstr ""
+"Ensuite, rejouez les données du sac avec ``rosbag play`` dans un autre "
+"nouveau shell, en utilisant l'option ``--loop`` afin que nous n'ayons pas à "
+"le redémarrer pour les sacs courts :"
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:198
+msgid ""
+"Make sure to replace ``path/to/bag_file`` with the path to the bag file you "
+"want to playback."
+msgstr ""
+"Assurez-vous de remplacer ``path/to/bag_file`` par le chemin du fichier bag "
+"que vous souhaitez lire."
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:202
+msgid ""
+"Now that the data is being played back and the bridge is running we can see "
+"the data coming across in ROS 2."
+msgstr ""
+"Maintenant que les données sont lues et que le pont fonctionne, nous pouvons"
+" voir les données arriver dans ROS 2."
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:213
+msgid "You should see something like:"
+msgstr "Vous devriez voir quelque chose comme :"
+
+#: ../../source/Tutorials/Demos/Rosbag-with-ROS1-Bridge.rst:224
+msgid ""
+"You can also see the image being played from the bag by using the "
+"``showimage`` tool:"
+msgstr ""
+"Vous pouvez également voir l'image en cours de lecture depuis le sac en "
+"utilisant l'outil ``showimage`` :"

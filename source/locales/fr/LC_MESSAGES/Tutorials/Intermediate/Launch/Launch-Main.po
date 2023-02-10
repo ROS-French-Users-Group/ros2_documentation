@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 12:02:03.093645\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Intermediate/Launch/Launch-Main.rst:9
+msgid "Launch"
+msgstr "Lancement"
+
+#: ../../source/Tutorials/Intermediate/Launch/Launch-Main.rst:11
+msgid ""
+"ROS 2 Launch files allow you to start up and configure a number of "
+"executables containing ROS 2 nodes simultaneously."
+msgstr ""
+"Les fichiers de lancement ROS 2 vous permettent de démarrer et de configurer"
+" simultanément un certain nombre d'exécutables contenant des nœuds ROS 2."
+
+#: ../../source/Tutorials/Intermediate/Launch/Launch-Main.rst:22
+msgid ":doc:`Creating a launch file <./Creating-Launch-Files>`."
+msgstr ":doc:`Création d'un fichier de lancement <./Creating-Launch-Files>`."
+
+#: ../../source/Tutorials/Intermediate/Launch/Launch-Main.rst:24
+msgid ""
+"Learn how to create a launch file that will start up nodes and their "
+"configurations all at once."
+msgstr ""
+"Apprenez à créer un fichier de lancement qui démarrera les nœuds et leurs "
+"configurations en même temps."
+
+#: ../../source/Tutorials/Intermediate/Launch/Launch-Main.rst:26
+msgid ":doc:`Launching and monitoring multiple nodes <./Launch-system>`."
+msgstr ""
+":doc:`Lancement et surveillance de plusieurs nœuds <./Launch-system>`."
+
+#: ../../source/Tutorials/Intermediate/Launch/Launch-Main.rst:28
+msgid "Get a more advanced overview of how launch files work."
+msgstr ""
+"Obtenez un aperçu plus avancé du fonctionnement des fichiers de lancement."
+
+#: ../../source/Tutorials/Intermediate/Launch/Launch-Main.rst:30
+msgid ":doc:`Using substitutions <./Using-Substitutions>`."
+msgstr ":doc:`Utilisation des substitutions <./Using-Substitutions>`."
+
+#: ../../source/Tutorials/Intermediate/Launch/Launch-Main.rst:32
+msgid ""
+"Use substitutions to provide more flexibility when describing reusable "
+"launch files."
+msgstr ""
+"Utilisez des substitutions pour offrir plus de flexibilité lors de la "
+"description de fichiers de lancement réutilisables."
+
+#: ../../source/Tutorials/Intermediate/Launch/Launch-Main.rst:34
+msgid ":doc:`Using event handlers <./Using-Event-Handlers>`."
+msgstr ""
+":doc:`Utilisation des gestionnaires d'événements <./Using-Event-Handlers>`."
+
+#: ../../source/Tutorials/Intermediate/Launch/Launch-Main.rst:36
+msgid ""
+"Use event handlers to monitor the state of processes or to define a complex "
+"set of rules that can be used to dynamically modify the launch file."
+msgstr ""
+"Utilisez des gestionnaires d'événements pour surveiller l'état des processus"
+" ou pour définir un ensemble complexe de règles pouvant être utilisées pour "
+"modifier dynamiquement le fichier de lancement."
+
+#: ../../source/Tutorials/Intermediate/Launch/Launch-Main.rst:38
+msgid ""
+":doc:`Managing large projects <./Using-ROS2-Launch-For-Large-Projects>`."
+msgstr ""
+":doc:`Gestion de grands projets <./Using-ROS2-Launch-For-Large-Projects>`."
+
+#: ../../source/Tutorials/Intermediate/Launch/Launch-Main.rst:40
+msgid ""
+"Structure launch files for large projects so they may be reused as much as "
+"possible in different situations. See usage examples of different launch "
+"tools like parameters, YAML files, remappings, namespaces, default "
+"arguments, and RViz configs."
+msgstr ""
+"Structurez les fichiers de lancement pour les grands projets afin qu'ils "
+"puissent être réutilisés autant que possible dans différentes situations. "
+"Consultez des exemples d'utilisation de différents outils de lancement tels "
+"que les paramètres, les fichiers YAML, les remappages, les espaces de noms, "
+"les arguments par défaut et les configurations RViz."
+
+#: ../../source/Tutorials/Intermediate/Launch/Launch-Main.rst:45
+msgid ""
+"If you are coming from ROS 1, you can use the :doc:`ROS Launch Migration "
+"guide <../../../How-To-Guides/Launch-files-migration-guide>` to help you "
+"migrate your launch files to ROS 2."
+msgstr ""
+"Si vous venez de ROS 1, vous pouvez utiliser le :doc:`guide de migration de "
+"lancement de ROS <../../../How-To-Guides/Launch-files-migration-guide>` pour"
+" vous aider à migrer votre lancer des fichiers vers ROS 2."

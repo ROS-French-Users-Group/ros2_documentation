@@ -1,0 +1,189 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 18:27:48.877415\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Related-Projects/Intel-ROS2-Projects.rst:6
+msgid "Intel ROS 2 Projects"
+msgstr "Projets Intel ROS 2"
+
+#: ../../source/Related-Projects/Intel-ROS2-Projects.rst:8
+msgid ""
+"Intel® Robotics Open Source Project (Intel® ROS Project) to enable object "
+"detection/location/tracking, people detection, vehicle detection, industry "
+"robot arm grasp point analysis with kinds of Intel technologies and "
+"platforms, including CPU, GPU, `Intel® Movidius™ NCS "
+"<https://www.intel.com/content/www/us/en/developer/tools/neural-compute-"
+"stick/overview.html>`__ optimized deep learning backend, FPGA, `Intel® "
+"RealSense™ <https://www.intel.com/content/www/us/en/architecture-and-"
+"technology/realsense-overview.html>`__ camera, etc."
+msgstr ""
+"Projet Intel® Robotics Open Source (Intel® ROS Project) pour permettre la "
+"détection/localisation/suivi d'objets, la détection de personnes, la "
+"détection de véhicules, l'analyse des points de préhension du bras de robot "
+"de l'industrie avec des types de technologies et de plates-formes Intel, y "
+"compris CPU, GPU, `Intel® Movidius ™ NCS "
+"<https://www.intel.com/content/www/us/en/developer/tools/neural-compute-"
+"stick/overview.html>`__ backend d'apprentissage en profondeur optimisé, "
+"FPGA, `Intel® RealSense™ < "
+"https://www.intel.com/content/www/us/en/architecture-and-"
+"technology/realsense-overview.html>`__ caméra, etc."
+
+#: ../../source/Related-Projects/Intel-ROS2-Projects.rst:11
+msgid "Key Projects"
+msgstr "Projets clés"
+
+#: ../../source/Related-Projects/Intel-ROS2-Projects.rst:13
+msgid ""
+"We are working on below ROS 2 projects and publish source code through "
+"https://github.com/intel/ or ROS 2 GitHub repo gradually."
+msgstr ""
+"Nous travaillons sur les projets ROS 2 ci-dessous et publions "
+"progressivement le code source via https://github.com/intel/ ou ROS 2 GitHub"
+" repo."
+
+#: ../../source/Related-Projects/Intel-ROS2-Projects.rst:15
+msgid ""
+"`ROS2 OpenVINO <https://github.com/intel/ros2_openvino_toolkit>`__: ROS 2 "
+"package for Intel® Visual Inference and Neural Network Optimization Toolkit "
+"to develop multiplatform computer vision solutions."
+msgstr ""
+"`ROS2 OpenVINO <https://github.com/intel/ros2_openvino_toolkit>`__ : package"
+" ROS 2 pour Intel® Visual Inference et Neural Network Optimization Toolkit "
+"pour développer des solutions de vision par ordinateur multiplateformes."
+
+#: ../../source/Related-Projects/Intel-ROS2-Projects.rst:16
+msgid ""
+"`ROS2 RealSense Camera <https://github.com/intel/ros2_intel_realsense>`__: "
+"ROS 2 package for Intel® RealSense™ D400 serial cameras"
+msgstr ""
+"`Caméra ROS2 RealSense <https://github.com/intel/ros2_intel_realsense>`__ : "
+"package ROS 2 pour les caméras série Intel® RealSense™ D400"
+
+#: ../../source/Related-Projects/Intel-ROS2-Projects.rst:17
+msgid ""
+"`ROS2 Movidius NCS <https://github.com/intel/ros2_intel_movidius_ncs>`__: "
+"ROS 2 package for object detection with Intel® Movidius™ Neural Computing "
+"Stick (NCS)."
+msgstr ""
+"`ROS2 Movidius NCS <https://github.com/intel/ros2_intel_movidius_ncs>`__ : "
+"package ROS 2 pour la détection d'objets avec Intel® Movidius™ Neural "
+"Computing Stick (NCS)."
+
+#: ../../source/Related-Projects/Intel-ROS2-Projects.rst:18
+msgid ""
+"`ROS2 Object Messages <https://github.com/intel/ros2_object_msgs>`__: ROS 2 "
+"messages for object."
+msgstr ""
+"`Messages d'objet ROS2 <https://github.com/intel/ros2_object_msgs>`__ : "
+"messages ROS 2 pour l'objet."
+
+#: ../../source/Related-Projects/Intel-ROS2-Projects.rst:19
+msgid ""
+"`ROS2 Object Analytics <https://github.com/intel/ros2_object_analytics>`__: "
+"ROS 2 package for object detection, tracking and 2D/3D localization."
+msgstr ""
+"`ROS2 Object Analytics <https://github.com/intel/ros2_object_analytics>`__ :"
+" package ROS 2 pour la détection, le suivi et la localisation d'objets "
+"2D/3D."
+
+#: ../../source/Related-Projects/Intel-ROS2-Projects.rst:20
+msgid ""
+"`ROS2 Message Filters <https://github.com/ros2/message_filters>`__: ROS 2 "
+"package for message synchronization with time stamp."
+msgstr ""
+"`Filtres de messages ROS2 <https://github.com/ros2/message_filters>`__ : "
+"package ROS 2 pour la synchronisation des messages avec horodatage."
+
+#: ../../source/Related-Projects/Intel-ROS2-Projects.rst:21
+msgid ""
+"`ROS2 CV Bridge <https://github.com/ros-"
+"perception/vision_opencv/tree/ros2/cv_bridge>`__: ROS 2 package to bridge "
+"with openCV."
+msgstr ""
+"`Pont CV ROS2 <https://github.com/ros-"
+"perception/vision_opencv/tree/ros2/cv_bridge>`__ : package ROS 2 pour faire "
+"le pont avec openCV."
+
+#: ../../source/Related-Projects/Intel-ROS2-Projects.rst:22
+msgid ""
+"`ROS2 Object Map <https://github.com/intel/ros2_object_map>`__: ROS 2 "
+"package to mark tag of objects on map when SLAM based on information "
+"provided by ROS 2 object analytics."
+msgstr ""
+"`ROS2 Object Map <https://github.com/intel/ros2_object_map>`__ : package ROS"
+" 2 pour marquer la balise des objets sur la carte en cas de SLAM sur la base"
+" des informations fournies par l'analyse d'objets ROS 2."
+
+#: ../../source/Related-Projects/Intel-ROS2-Projects.rst:23
+msgid ""
+"`ROS2 Moving Object <https://github.com/intel/ros2_moving_object>`__: ROS 2 "
+"package to provide object motion information (like object velocity on x, y, "
+"z axis) based on information provided by ROS 2 object analytics."
+msgstr ""
+"`ROS2 Moving Object <https://github.com/intel/ros2_moving_object>`__ : "
+"package ROS 2 pour fournir des informations sur le mouvement de l'objet "
+"(comme la vitesse de l'objet sur l'axe x, y, z) sur la base des informations"
+" fournies par l'analyse d'objet ROS 2."
+
+#: ../../source/Related-Projects/Intel-ROS2-Projects.rst:24
+msgid ""
+"`ROS2 Grasp Library <https://github.com/intel/ros2_grasp_library>`__: ROS 2 "
+"package for grasp position analysis, and compatible with `MoveIt "
+"<https://github.com/ros-planning/moveit2.git>`__ grasp interfaces."
+msgstr ""
+"`Bibliothèque ROS2 Grasp <https://github.com/intel/ros2_grasp_library>`__ : "
+"package ROS 2 pour l'analyse de la position de préhension et compatible avec"
+" `MoveIt <https://github.com/ros-planning/moveit2.git> `__ saisir les "
+"interfaces."
+
+#: ../../source/Related-Projects/Intel-ROS2-Projects.rst:25
+msgid ""
+"`ROS2 Navigation <https://github.com/ros-planning/navigation2>`__: ROS 2 "
+"package for robot navigation, it's already integrated to ROS 2 Crystal "
+"release."
+msgstr ""
+"`Navigation ROS2 <https://github.com/ros-planning/navigation2>`__ : package "
+"ROS 2 pour la navigation robotique, il est déjà intégré à la version ROS 2 "
+"Crystal."
+
+#: ../../source/Related-Projects/Intel-ROS2-Projects.rst:26
+msgid ""
+"`Intel Robot DevKit (SDK) <https://github.com/intel/robot_devkit>`__: An "
+"open source project which enables developers to easily and efficiently "
+"create, customize, optimize, and deploy a robot software stack to an "
+"Autonomous Mobile Robot (AMR) platform based on the Robot Operating System 2"
+" (ROS 2) framework."
+msgstr ""
+"`Intel Robot DevKit (SDK) <https://github.com/intel/robot_devkit>`__ : un "
+"projet open source qui permet aux développeurs de créer, personnaliser, "
+"optimiser et déployer facilement et efficacement une pile logicielle de "
+"robot sur un mobile autonome Plateforme Robot (AMR) basée sur le framework "
+"Robot Operating System 2 (ROS 2)."
+
+#: ../../source/Related-Projects/Intel-ROS2-Projects.rst:29
+msgid "Reference"
+msgstr "Référence"
+
+#: ../../source/Related-Projects/Intel-ROS2-Projects.rst:31
+msgid ""
+"ROS components at: https://wiki.ros.org/IntelROSProject shows the "
+"relationship among those packages, which also applies to ROS 2."
+msgstr ""
+"Les composants ROS sur : https://wiki.ros.org/IntelROSProject montrent la "
+"relation entre ces packages, qui s'applique également à ROS 2."

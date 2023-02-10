@@ -1,0 +1,509 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 12:04:54.797534\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:7
+msgid "Understanding real-time programming"
+msgstr "Comprendre la programmation temps réel"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:11
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:14
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:16
+msgid ""
+"Real-time computing is a key feature of many robotics systems, particularly "
+"safety- and mission-critical applications such as autonomous vehicles, "
+"spacecrafts, and industrial manufacturing. We are designing and prototyping "
+"ROS 2 with real-time performance constraints in mind, since this is a "
+"requirement that was not considered in the early stages of ROS 1 and it is "
+"now intractable to refactor ROS 1 to be real-time friendly."
+msgstr ""
+"L'informatique en temps réel est une caractéristique clé de nombreux "
+"systèmes robotiques, en particulier des applications critiques pour la "
+"sécurité et la mission telles que les véhicules autonomes, les engins "
+"spatiaux et la fabrication industrielle. Nous concevons et prototypons ROS 2"
+" en gardant à l'esprit les contraintes de performances en temps réel, car il"
+" s'agit d'une exigence qui n'a pas été prise en compte dans les premières "
+"étapes de ROS 1 et il est désormais impossible de refactoriser ROS 1 pour "
+"qu'il soit compatible avec le temps réel."
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:19
+msgid ""
+"`This document "
+"<https://design.ros2.org/articles/realtime_background.html>`__ outlines the "
+"requirements of real-time computing and best practices for software "
+"engineers.  In short:"
+msgstr ""
+"`Ce document <https://design.ros2.org/articles/realtime_background.html>`__ "
+"décrit les exigences de l'informatique en temps réel et les meilleures "
+"pratiques pour les ingénieurs en logiciel. Bref:"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:21
+msgid ""
+"To make a real-time computer system, our real-time loop must update "
+"periodically to meet deadlines. We can only tolerate a small margin of error"
+" on these deadlines (our maximum allowable jitter). To do this, we must "
+"avoid nondeterministic operations in the execution path, things like: "
+"pagefault events, dynamic memory allocation/deallocation, and "
+"synchronization primitives that block indefinitely."
+msgstr ""
+"Pour faire un système informatique en temps réel, notre boucle en temps réel"
+" doit se mettre à jour périodiquement pour respecter les délais. Nous ne "
+"pouvons tolérer qu'une petite marge d'erreur sur ces délais (notre gigue "
+"maximale autorisée). Pour ce faire, nous devons éviter les opérations non "
+"déterministes dans le chemin d'exécution, telles que : les événements de "
+"défaut de page, l'allocation/désallocation dynamique de la mémoire et les "
+"primitives de synchronisation qui bloquent indéfiniment."
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:25
+msgid ""
+"A classic example of a controls problem commonly solved by real-time "
+"computing is balancing an `inverted pendulum "
+"<https://en.wikipedia.org/wiki/Inverted_pendulum>`__. If the controller "
+"blocked for an unexpectedly long amount of time, the pendulum would fall "
+"down or go unstable. But if the controller reliably updates at a rate faster"
+" than the motor controlling the pendulum can operate, the pendulum will "
+"successfully adapt react to sensor data to balance the pendulum."
+msgstr ""
+"Un exemple classique de problème de contrôle couramment résolu par le calcul"
+" en temps réel est l'équilibrage d'un `pendule inversé "
+"<https://en.wikipedia.org/wiki/Inverted_pendulum>`__. Si le contrôleur "
+"bloquait pendant une durée étonnamment longue, le pendule tomberait ou "
+"deviendrait instable. Mais si le contrôleur se met à jour de manière fiable "
+"à un rythme plus rapide que le moteur contrôlant le pendule ne peut "
+"fonctionner, le pendule s'adaptera avec succès aux données du capteur pour "
+"équilibrer le pendule."
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:29
+msgid ""
+"Now that you know everything about real-time computing, let's try a demo!"
+msgstr ""
+"Maintenant que vous savez tout sur l'informatique en temps réel, essayons "
+"une démo !"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:32
+msgid "Install and run the demo"
+msgstr "Installer et exécuter la démo"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:34
+msgid ""
+"The real-time demo was written with Linux operating systems in mind, since "
+"many members of the ROS community doing real-time computing use Xenomai or "
+"RT_PREEMPT as their real-time solutions. Since many of the operations done "
+"in the demo to optimize performance or OS-specific, the demo only builds and"
+" runs on Linux systems. **So, if you are an OSX or Windows user, don't try "
+"this part!**"
+msgstr ""
+"La démo en temps réel a été écrite avec les systèmes d'exploitation Linux à "
+"l'esprit, car de nombreux membres de la communauté ROS faisant de "
+"l'informatique en temps réel utilisent Xenomai ou RT_PREEMPT comme solutions"
+" en temps réel. Comme de nombreuses opérations sont effectuées dans la démo "
+"pour optimiser les performances ou spécifiques au système d'exploitation, la"
+" démo ne se construit et ne s'exécute que sur les systèmes Linux. **Donc, si"
+" vous êtes un utilisateur OSX ou Windows, n'essayez pas cette partie !**"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:38
+msgid ""
+"Also this must be built from source using a the static DDS API. **Currently "
+"the only supported implementation is Connext**."
+msgstr ""
+"Cela doit également être construit à partir de la source à l'aide d'une API "
+"DDS statique. **Actuellement, la seule implémentation prise en charge est "
+"Connext**."
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:40
+msgid ""
+"First, follow the instructions to build ROS 2 :doc:`from source "
+"<../../Installation/Alternatives/Ubuntu-Development-Setup>` using Connext "
+"DDS as the middleware."
+msgstr ""
+"Tout d'abord, suivez les instructions pour compiler ROS 2 :doc:`from source "
+"<../../Installation/Alternatives/Ubuntu-Development-Setup>` en utilisant "
+"Connext DDS comme middleware."
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:43
+msgid "Run the tests"
+msgstr "Exécutez les tests"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:45
+msgid ""
+"**Before you run make sure you have at least 8Gb of RAM free. With the "
+"memory locking, swap will not work anymore.**"
+msgstr ""
+"**Avant de lancer, assurez-vous d'avoir au moins 8 Go de RAM libre. Avec le "
+"verrouillage de la mémoire, le swap ne fonctionnera plus.**"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:47
+msgid "Source your ROS 2 setup.bash."
+msgstr "Sourcez votre setup.bash ROS 2."
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:49
+msgid ""
+"Run the demo binary, and redirect the output. You may want to use ``sudo`` "
+"in case you get permission error:"
+msgstr ""
+"Exécutez le binaire de démonstration et redirigez la sortie. Vous pouvez "
+"utiliser ``sudo`` au cas où vous auriez une erreur d'autorisation :"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:56
+msgid "What the heck just happened?"
+msgstr "Que diable vient-il de se passer ?"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:58
+msgid ""
+"First, even though you redirected stdout, you will see some output to the "
+"console (from stderr):"
+msgstr ""
+"Tout d'abord, même si vous avez redirigé stdout, vous verrez une sortie vers"
+" la console (de stderr) :"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:66
+msgid ""
+"After the initialization stage of the demo program, it will attempt to lock "
+"all cached memory into RAM and prevent future dynamic memory allocations "
+"using ``mlockall``. This is to prevent pagefaults from loading lots of new "
+"memory into RAM. (See `the realtime design article "
+"<https://design.ros2.org/articles/realtime_background.html#memory-"
+"management>`__ for more information.)"
+msgstr ""
+"Après l'étape d'initialisation du programme de démonstration, il tentera de "
+"verrouiller toute la mémoire cache dans la RAM et d'empêcher les futures "
+"allocations de mémoire dynamique à l'aide de ``mlockall``. Cela permet "
+"d'empêcher les défauts de page de charger beaucoup de nouvelle mémoire dans "
+"la RAM. (Voir `l'article sur la conception en temps réel "
+"<https://design.ros2.org/articles/realtime_background.html#memory-"
+"management>`__ pour plus d'informations.)"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:70
+msgid ""
+"The demo will continue on as usual when this occurs. At the bottom of the "
+"output.txt file generated by the demo, you'll see the number of pagefaults "
+"encountered during execution:"
+msgstr ""
+"La démo continuera comme d'habitude lorsque cela se produit. Au bas du "
+"fichier output.txt généré par la démo, vous verrez le nombre de défauts de "
+"page rencontrés lors de l'exécution :"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:79
+msgid "If we want those pagefaults to go away, we'll have to..."
+msgstr ""
+"Si nous voulons que ces défauts de page disparaissent, nous devrons..."
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:82
+msgid "Adjust permissions for memory locking"
+msgstr "Ajuster les autorisations pour le verrouillage de la mémoire"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:84
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:179
+msgid "Add to ``/etc/security/limits.conf`` (as sudo):"
+msgstr "Ajouter à ``/etc/security/limits.conf`` (comme sudo) :"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:90
+msgid ""
+"A limit of ``-1`` is unlimited. If you choose this, you may need to "
+"accompany it with ``ulimit -l unlimited`` after editing the file."
+msgstr ""
+"Une limite de ``-1`` est illimitée. Si vous choisissez cette option, vous "
+"devrez peut-être l'accompagner de ``ulimit -l unlimited`` après avoir "
+"modifié le fichier."
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:93
+msgid ""
+"After saving the file, log out and log back in. Then rerun the "
+"``pendulum_demo`` invocation."
+msgstr ""
+"Après avoir enregistré le fichier, déconnectez-vous et reconnectez-vous. "
+"Ensuite, relancez l'appel ``pendulum_demo``."
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:96
+msgid ""
+"You'll either see zero pagefaults in your output file, or an error saying "
+"that a bad_alloc exception was caught. If this happened, you didn't have "
+"enough free memory available to lock the memory allocated for the process "
+"into RAM. You'll need to install more RAM in your computer to see zero "
+"pagefaults!"
+msgstr ""
+"Vous verrez soit zéro défaut de page dans votre fichier de sortie, soit une "
+"erreur indiquant qu'une exception bad_alloc a été interceptée. Si cela se "
+"produisait, vous n'aviez pas assez de mémoire disponible pour verrouiller la"
+" mémoire allouée au processus dans la RAM. Vous devrez installer plus de RAM"
+" sur votre ordinateur pour voir zéro défaut de page !"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:101
+msgid "Output overview"
+msgstr "Aperçu des sorties"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:103
+msgid "To see more output, we have to run the ``pendulum_logger`` node."
+msgstr ""
+"Pour voir plus de sortie, nous devons exécuter le nœud ``pendulum_logger``."
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:105
+msgid "In one shell with your ``install/setup.bash`` sourced, invoke:"
+msgstr "Dans un shell avec votre source ``install/setup.bash``, appelez :"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:112
+msgid "You should see the output message:"
+msgstr "Vous devriez voir le message de sortie :"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:118
+msgid ""
+"In another shell with setup.bash sourced, invoke ``pendulum_demo`` again."
+msgstr ""
+"Dans un autre shell avec setup.bash, invoquez à nouveau ``pendulum_demo``."
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:120
+msgid ""
+"As soon as this executable starts, you should see the other shell constantly"
+" printing output:"
+msgstr ""
+"Dès que cet exécutable démarre, vous devriez voir l'autre shell imprimer "
+"constamment la sortie :"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:132
+msgid ""
+"The demo is controlling a very simple inverted pendulum simulation. The "
+"pendulum simulation calculates its position in its own thread. A ROS node "
+"simulates a motor encoder sensor for the pendulum and publishes its "
+"position. Another ROS node acts as a simple PID controller and calculates "
+"the next command message."
+msgstr ""
+"La démo contrôle une simulation de pendule inversé très simple. La "
+"simulation du pendule calcule sa position dans son propre fil. Un nœud ROS "
+"simule un capteur d'encodeur moteur pour le pendule et publie sa position. "
+"Un autre nœud ROS agit comme un simple contrôleur PID et calcule le prochain"
+" message de commande."
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:137
+msgid ""
+"The logger node periodically prints out the pendulum's state and the runtime"
+" performance statistics of the demo during its execution phase."
+msgstr ""
+"Le nœud d'enregistrement imprime périodiquement l'état du pendule et les "
+"statistiques de performances d'exécution de la démo pendant sa phase "
+"d'exécution."
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:139
+msgid ""
+"After the ``pendulum_demo`` is finished, you'll have to CTRL-C out of the "
+"logger node to exit."
+msgstr ""
+"Une fois la ``pendulum_demo`` terminée, vous devrez CTRL-C sortir du nœud de"
+" l'enregistreur pour quitter."
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:142
+msgid "Latency"
+msgstr "Latence"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:144
+msgid ""
+"At the ``pendulum_demo`` execution, you'll see the final statistics "
+"collected for the demo:"
+msgstr ""
+"Lors de l'exécution de ``pendulum_demo``, vous verrez les statistiques "
+"finales collectées pour la démo :"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:160
+msgid ""
+"The latency fields show you the minimum, maximum, and average latency of the"
+" update loop in nanoseconds. Here, latency means the amount of time after "
+"the update was expected to occur."
+msgstr ""
+"Les champs de latence vous indiquent la latence minimale, maximale et "
+"moyenne de la boucle de mise à jour en nanosecondes. Ici, la latence "
+"signifie la durée après laquelle la mise à jour était censée se produire."
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:163
+msgid ""
+"The requirements of a real-time system depend on the application, but let's "
+"say in this demo we have a 1kHz (1 millisecond) update loop, and we're "
+"aiming for a maximum allowable latency of 5% of our update period."
+msgstr ""
+"Les exigences d'un système en temps réel dépendent de l'application, mais "
+"disons que dans cette démo, nous avons une boucle de mise à jour de 1 kHz (1"
+" milliseconde) et nous visons une latence maximale autorisée de 5 % de notre"
+" période de mise à jour."
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:165
+msgid ""
+"So, our average latency was really good in this run, but the maximum latency"
+" was unacceptable because it actually exceeded our update loop! What "
+"happened?"
+msgstr ""
+"Ainsi, notre latence moyenne était vraiment bonne dans cette exécution, mais"
+" la latence maximale était inacceptable car elle dépassait en fait notre "
+"boucle de mise à jour ! Ce qui s'est passé?"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:167
+msgid ""
+"We may be suffering from a non-deterministic scheduler. If you're running a "
+"vanilla Linux system and you don't have the RT_PREEMPT kernel installed, you"
+" probably won't be able to meet the real-time goal we set for ourselves, "
+"because the Linux scheduler won't allow you to arbitrarily pre-empt threads "
+"at the user level."
+msgstr ""
+"Nous souffrons peut-être d'un ordonnanceur non déterministe. Si vous "
+"utilisez un système Linux vanille et que le noyau RT_PREEMPT n'est pas "
+"installé, vous ne pourrez probablement pas atteindre l'objectif en temps "
+"réel que nous nous sommes fixé, car le planificateur Linux ne vous permettra"
+" pas de préempter les threads au niveau de l'utilisateur."
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:170
+msgid ""
+"See the `realtime design article "
+"<https://design.ros2.org/articles/realtime_background.html#multithreaded-"
+"programming-and-synchronization>`__ for more information."
+msgstr ""
+"Voir l'article sur la conception en temps réel "
+"<https://design.ros2.org/articles/realtime_background.html#multithreaded-"
+"programming-and-synchronization>`__ pour plus d'informations."
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:172
+msgid ""
+"The demo attempts to set the scheduler and thread priority of the demo to be"
+" suitable for real-time performance. If this operation failed, you'll see an"
+" error message: \"Couldn't set scheduling priority and policy: Operation not"
+" permitted\". You can get slightly better performance by following the "
+"instructions in the next section:"
+msgstr ""
+"La démo tente de définir le planificateur et la priorité des threads de la "
+"démo pour qu'ils soient adaptés aux performances en temps réel. Si cette "
+"opération échoue, un message d'erreur s'affichera : \"Impossible de définir "
+"la priorité et la stratégie de planification : opération non autorisée\". "
+"Vous pouvez obtenir des performances légèrement meilleures en suivant les "
+"instructions de la section suivante :"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:177
+msgid "Setting permissions for the scheduler"
+msgstr "Définition des autorisations pour le planificateur"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:185
+msgid ""
+"The range of the rtprio (real-time priority) field is 0-99. However, do NOT "
+"set the limit to 99 because then your processes could interfere with "
+"important system processes that run at the top priority (e.g. watchdog). "
+"This demo will attempt to run the control loop at priority 98."
+msgstr ""
+"La plage du champ rtprio (priorité en temps réel) est de 0 à 99. Cependant, "
+"ne fixez PAS la limite à 99, car vos processus pourraient alors interférer "
+"avec des processus système importants qui s'exécutent avec la priorité la "
+"plus élevée (par exemple, le chien de garde). Cette démo tentera d'exécuter "
+"la boucle de contrôle à la priorité 98."
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:190
+msgid "Plotting results"
+msgstr "Tracé des résultats"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:192
+msgid ""
+"You can plot the latency and pagefault statistics that are collected in this"
+" demo after the demo runs."
+msgstr ""
+"Vous pouvez tracer les statistiques de latence et de défaut de page "
+"collectées dans cette démo après son exécution."
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:194
+msgid ""
+"Because the code has been instrumented with `rttest "
+"<https://github.com/ros2/rttest>`__, there are useful command line arguments"
+" available:"
+msgstr ""
+"Étant donné que le code a été instrumenté avec `rttest "
+"<https://github.com/ros2/rtest>`__, des arguments de ligne de commande "
+"utiles sont disponibles :"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:197
+msgid "Command"
+msgstr "Commande"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:197
+msgid "Description"
+msgstr "Description"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:197
+msgid "Default value"
+msgstr "Valeur par défaut"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:199
+msgid "-i"
+msgstr "-je"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:199
+msgid "Specify how many iterations to run the real-time loop"
+msgstr ""
+"Spécifiez le nombre d'itérations pour exécuter la boucle en temps réel"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:199
+msgid "1000"
+msgstr "1000"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:201
+msgid "-u"
+msgstr "-dans"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:201
+msgid "Specify the update period with the default unit being microseconds."
+msgstr ""
+"Spécifiez la période de mise à jour avec l'unité par défaut étant les "
+"microsecondes."
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:203
+msgid "Use the suffix \"s\" for seconds, \"ms\" for milliseconds,"
+msgstr "Utilisez le suffixe \"s\" pour les secondes, \"ms\" pour les millisecondes,"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:205
+msgid "\"us\" for microseconds, and \"ns\" for nanoseconds."
+msgstr "\"us\" pour les microsecondes et \"ns\" pour les nanosecondes."
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:201
+msgid "1ms"
+msgstr "1 milliseconde"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:207
+msgid "-f"
+msgstr "-F"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:207
+msgid "Specify the name of the file for writing the collected data."
+msgstr "Indiquez le nom du fichier d'écriture des données collectées."
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:210
+msgid "Run the demo again with a filename to save results:"
+msgstr ""
+"Exécutez à nouveau la démo avec un nom de fichier pour enregistrer les "
+"résultats :"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:216
+msgid "Then run the ``rttest_plot`` script on the resulting file:"
+msgstr "Exécutez ensuite le script ``rtest_plot`` sur le fichier résultant :"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:222
+msgid "This script will produce three files:"
+msgstr "Ce script produira trois fichiers :"
+
+#: ../../source/Tutorials/Demos/Real-Time-Programming.rst:230
+msgid "You can view these plots in an image viewer of your choice."
+msgstr ""
+"Vous pouvez visualiser ces tracés dans une visionneuse d'images de votre "
+"choix."

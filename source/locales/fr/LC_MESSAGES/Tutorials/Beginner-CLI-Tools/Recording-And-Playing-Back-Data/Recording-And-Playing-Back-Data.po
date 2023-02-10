@@ -1,0 +1,501 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-03 19:47+0100\n"
+"PO-Revision-Date: 2023-02-09 11:50:13.211478\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:8
+msgid "Recording and playing back data"
+msgstr "Enregistrement et lecture de données"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:10
+msgid ""
+"**Goal:** Record data published on a topic so you can replay and examine it "
+"any time."
+msgstr ""
+"**Objectif :** Enregistrer les données publiées sur un sujet afin de pouvoir"
+" les relire et les examiner à tout moment."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:12
+msgid "**Tutorial level:** Beginner"
+msgstr "**Niveau du tutoriel :** Débutant"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:14
+msgid "**Time:** 10 minutes"
+msgstr "**Durée :** 10 minutes"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:18
+msgid "Contents"
+msgstr "Contenu"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:21
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:23
+msgid ""
+"``ros2 bag`` is a command line tool for recording data published on topics "
+"in your system. It accumulates the data passed on any number of topics and "
+"saves it in a database. You can then replay the data to reproduce the "
+"results of your tests and experiments. Recording topics is also a great way "
+"to share your work and allow others to recreate it."
+msgstr ""
+"``ros2 bag`` est un outil en ligne de commande pour enregistrer les données "
+"publiées sur les sujets de votre système. Il accumule les données transmises"
+" sur un nombre quelconque de sujets et les enregistre dans une base de "
+"données. Vous pouvez ensuite rejouer les données pour reproduire les "
+"résultats de vos tests et expériences. L'enregistrement de sujets est "
+"également un excellent moyen de partager votre travail et de permettre aux "
+"autres de le recréer."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:30
+msgid "Prerequisites"
+msgstr "Conditions préalables"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:32
+msgid ""
+"You should have ``ros2 bag`` installed as a part of your regular ROS 2 "
+"setup."
+msgstr ""
+"Vous devriez avoir ``ros2 bag`` installé dans le cadre de votre "
+"configuration habituelle de ROS 2."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:34
+msgid ""
+"If you've installed from Debians on Linux and your system doesn’t recognize "
+"the command, install it like so:"
+msgstr ""
+"Si vous avez installé depuis Debians sur Linux et que votre système ne "
+"reconnaît pas la commande, installez-la comme suit :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:41
+msgid ""
+"This tutorial talks about concepts covered in previous tutorials, like "
+":doc:`nodes <../Understanding-ROS2-Nodes/Understanding-ROS2-Nodes>` and "
+":doc:`topics <../Understanding-ROS2-Topics/Understanding-ROS2-Topics>`. It "
+"also uses the :doc:`turtlesim package <../Introducing-Turtlesim/Introducing-"
+"Turtlesim>`."
+msgstr ""
+"Ce didacticiel aborde les concepts abordés dans les didacticiels précédents,"
+" tels que :doc:`nodes <../Understanding-ROS2-Nodes/Understanding-"
+"ROS2-Nodes>` et :doc:`topics <../Understanding-ROS2-Topics/Understanding "
+"-ROS2-Sujets>`. Il utilise également le package :doc:`turtlesim "
+"<../Introducing-Turtlesim/Introducing-Turtlesim>`."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:44
+msgid ""
+"As always, don’t forget to source ROS 2 in :doc:`every new terminal you open"
+" <../Configuring-ROS2-Environment>`."
+msgstr ""
+"Comme toujours, n'oubliez pas de sourcer ROS 2 dans :doc:`chaque nouveau "
+"terminal que vous ouvrez <../Configuring-ROS2-Environment>`."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:48
+msgid "Tasks"
+msgstr "Tâches"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:51
+msgid "1 Setup"
+msgstr "1 Configuration"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:52
+msgid ""
+"You'll be recording your keyboard input in the ``turtlesim`` system to save "
+"and replay later on, so begin by starting up the ``/turtlesim`` and "
+"``/teleop_turtle`` nodes."
+msgstr ""
+"Vous enregistrerez votre entrée au clavier dans le système ``turtlesim`` "
+"pour sauvegarder et rejouer plus tard, alors commencez par démarrer les "
+"nœuds ``/turtlesim`` et ``/teleop_turtle``."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:54
+msgid "Open a new terminal and run:"
+msgstr "Ouvrez un nouveau terminal et exécutez :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:60
+msgid "Open another terminal and run:"
+msgstr "Ouvrez un autre terminal et exécutez :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:66
+msgid ""
+"Let’s also make a new directory to store our saved recordings, just as good "
+"practice:"
+msgstr ""
+"Créons également un nouveau répertoire pour stocker nos enregistrements "
+"sauvegardés, tout comme bonne pratique :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:74
+msgid "2 Choose a topic"
+msgstr "2 Choisissez un sujet"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:76
+msgid ""
+"``ros2 bag`` can only record data from topics that are published on. To see "
+"a list of your system's topics, open a new terminal and run the command:"
+msgstr ""
+"``ros2 bag`` ne peut enregistrer que les données des sujets publiés. Pour "
+"voir une liste des sujets de votre système, ouvrez un nouveau terminal et "
+"exécutez la commande :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:83
+msgid "Which will return:"
+msgstr "Qui reviendra :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:93
+msgid ""
+"In the topics tutorial, you learned that the ``/turtle_teleop`` node "
+"publishes commands on the ``/turtle1/cmd_vel`` topic to make the turtle move"
+" in turtlesim."
+msgstr ""
+"Dans le tutoriel des sujets, vous avez appris que le nœud ``/turtle_teleop``"
+" publie des commandes sur le sujet ``/turtle1/cmd_vel`` pour faire bouger la"
+" tortue dans turtlesim."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:95
+msgid ""
+"To see the data that ``/turtle1/cmd_vel`` is publishing, run the command:"
+msgstr ""
+"Pour voir les données publiées par ``/turtle1/cmd_vel``, exécutez la "
+"commande :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:101
+msgid ""
+"Nothing will show up at first because no data is being published by the "
+"teleop. Return to the terminal where you ran the teleop and select it so "
+"it's active. Use the arrow keys to move the turtle around, and you will see "
+"data being published on the terminal running ``ros2 topic echo``."
+msgstr ""
+"Rien ne s'affichera au début car aucune donnée n'est publiée par le téléop. "
+"Retournez au terminal où vous avez exécuté le téléop et sélectionnez-le pour"
+" qu'il soit actif. Utilisez les touches fléchées pour déplacer la tortue et "
+"vous verrez les données publiées sur le terminal exécutant ``ros2 topic "
+"echo``."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:120
+msgid "3 ros2 bag record"
+msgstr "record de sac 3 ros2"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:123
+msgid "3.1 Recording formats"
+msgstr "3.1 Formats d'enregistrement"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:125
+msgid ""
+"By default, ``ros2 bag record`` will record data files using the `MCAP file "
+"format <https://mcap.dev>`_ (``.mcap``)."
+msgstr ""
+"Par défaut, ``ros2 bag record`` enregistrera les fichiers de données en "
+"utilisant le `format de fichier MCAP <https://mcap.dev>`_ (``.mcap``)."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:127
+msgid ""
+"To record files using the `SQLite3 file format "
+"<https://www.sqlite.org/index.html>`_ (``.db3``), add the ``--storage "
+"sqlite3`` flag (or ``-s sqlite3``) to your ``ros2 bag record`` commands."
+msgstr ""
+"Pour enregistrer des fichiers en utilisant le `format de fichier SQLite3 "
+"<https://www.sqlite.org/index.html>`_ (``.db3``), ajoutez le drapeau "
+"``--storage sqlite3`` (ou `` -s sqlite3``) à vos commandes ``ros2 bag "
+"record``."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:129
+msgid ""
+"For more information on `ROS 2 storage plugin options "
+"<https://github.com/ros2/rosbag2/tree/rolling/#storage-format-plugin-"
+"architecture>`_, check out the following resources:"
+msgstr ""
+"Pour plus d'informations sur les `options du plug-in de stockage ROS 2 "
+"<https://github.com/ros2/rosbag2/tree/rolling/#storage-format-plugin-"
+"architecture>`_, consultez les ressources suivantes :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:131
+msgid ""
+"`MCAP "
+"<https://github.com/ros2/rosbag2/blob/rolling/rosbag2_storage_mcap/README.md#writer-"
+"configuration>`_"
+msgstr ""
+"`MCAP "
+"<https://github.com/ros2/rosbag2/blob/rolling/rosbag2_storage_mcap/README.md#writer-"
+"configuration>`_"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:132
+msgid ""
+"`SQLite3 "
+"<https://github.com/ros2/rosbag2/blob/rolling/rosbag2_storage_sqlite3/README.md#storage-"
+"configuration-file>`_"
+msgstr ""
+"`SQLite3 "
+"<https://github.com/ros2/rosbag2/blob/rolling/rosbag2_storage_sqlite3/README.md#storage-"
+"configuration-file>`_"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:136
+msgid "3.2 Record a single topic"
+msgstr "3.2 Enregistrer un seul sujet"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:138
+msgid "To record the data published to a topic use the command syntax:"
+msgstr ""
+"Pour enregistrer les données publiées dans un sujet, utilisez la syntaxe de "
+"commande :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:144
+msgid ""
+"Before running this command on your chosen topic, open a new terminal and "
+"move into the ``bag_files`` directory you created earlier, because the "
+"rosbag file will save in the directory where you run it."
+msgstr ""
+"Avant d'exécuter cette commande sur le sujet de votre choix, ouvrez un "
+"nouveau terminal et déplacez-vous dans le répertoire ``bag_files`` que vous "
+"avez créé précédemment, car le fichier rosbag sera enregistré dans le "
+"répertoire où vous l'exécutez."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:146
+msgid "Run the command:"
+msgstr "Exécutez la commande :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:152
+msgid ""
+"You will see the following messages in the terminal (the date and time will "
+"be different):"
+msgstr ""
+"Vous verrez les messages suivants dans le terminal (la date et l'heure "
+"seront différentes) :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:161
+msgid ""
+"Now ``ros2 bag`` is recording the data published on the ``/turtle1/cmd_vel``"
+" topic. Return to the teleop terminal and move the turtle around again. The "
+"movements don’t matter, but try to make a recognizable pattern to see when "
+"you replay the data later."
+msgstr ""
+"Maintenant, ``ros2 bag`` enregistre les données publiées sur le sujet "
+"``/turtle1/cmd_vel``. Retournez au terminal téléop et déplacez à nouveau la "
+"tortue. Les mouvements n'ont pas d'importance, mais essayez de créer un "
+"motif reconnaissable pour voir quand vous rejouerez les données plus tard."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:167
+msgid "Press ``Ctrl+C`` to stop recording."
+msgstr "Appuyez sur ``Ctrl+C`` pour arrêter l'enregistrement."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:169
+msgid ""
+"The data will be accumulated in a bag file with a name in the pattern of "
+"``rosbag2_year_month_day-hour_minute_second``"
+msgstr ""
+"Les données seront accumulées dans un fichier bag avec un nom dans le modèle"
+" de ``rosbag2_year_month_day-hour_minute_second``"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:172
+msgid "3.3 Record multiple topics"
+msgstr "3.3 Enregistrer plusieurs sujets"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:174
+msgid ""
+"You can also record multiple topics, as well as change the name of the file "
+"``ros2 bag`` saves to."
+msgstr ""
+"Vous pouvez également enregistrer plusieurs sujets, ainsi que changer le nom"
+" du fichier dans lequel ``ros2 bag`` enregistre."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:176
+msgid "Run the following command:"
+msgstr "Exécutez la commande suivante :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:182
+msgid ""
+"The ``-o`` option allows you to choose a unique name for your bag file. The "
+"following string, in this case ``subset``, is the file name."
+msgstr ""
+"L'option ``-o`` vous permet de choisir un nom unique pour votre fichier bag."
+" La chaîne suivante, dans ce cas ``subset``, est le nom du fichier."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:185
+msgid ""
+"To record more than one topic at a time, simply list each topic separated by"
+" a space."
+msgstr ""
+"Pour enregistrer plus d'un sujet à la fois, listez simplement chaque sujet "
+"séparé par un espace."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:187
+msgid ""
+"You will see the following message, confirming that both topics are being "
+"recorded."
+msgstr ""
+"Vous verrez le message suivant, confirmant que les deux sujets sont en cours"
+" d'enregistrement."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:197
+msgid ""
+"You can move the turtle around and press ``Ctrl+C`` when you’re finished."
+msgstr ""
+"Vous pouvez déplacer la tortue et appuyer sur ``Ctrl+C`` lorsque vous avez "
+"terminé."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:201
+msgid ""
+"There is another option you can add to the command, ``-a``, which records "
+"all the topics on your system."
+msgstr ""
+"Il existe une autre option que vous pouvez ajouter à la commande, ``-a``, "
+"qui enregistre tous les sujets de votre système."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:204
+msgid "4 ros2 bag info"
+msgstr "Informations sur le sac 4 ros2"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:206
+msgid "You can see details about your recording by running:"
+msgstr "Vous pouvez voir les détails de votre enregistrement en exécutant :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:212
+msgid ""
+"Running this command on the ``subset`` bag file will return a list of "
+"information on the file:"
+msgstr ""
+"L'exécution de cette commande sur le fichier bag ``subset`` renverra une "
+"liste d'informations sur le fichier :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:230
+msgid ""
+"To view the individual messages, you would have to open up the database, in "
+"this case sqlite3, to examine it, which is beyond the scope of ROS 2."
+msgstr ""
+"Pour afficher les messages individuels, vous devez ouvrir la base de "
+"données, dans ce cas sqlite3, pour l'examiner, ce qui dépasse le cadre de "
+"ROS 2."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:233
+msgid "5 ros2 bag play"
+msgstr "5 ros2 jeu de sac"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:235
+msgid ""
+"Before replaying the bag file, enter ``Ctrl+C`` in the terminal where the "
+"teleop is running. Then make sure your turtlesim window is visible so you "
+"can see the bag file in action."
+msgstr ""
+"Avant de rejouer le fichier sac, entrez ``Ctrl+C`` dans le terminal où le "
+"teleop est en cours d'exécution. Assurez-vous ensuite que votre fenêtre "
+"turtlesim est visible afin que vous puissiez voir le fichier bag en action."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:238
+msgid "Enter the command:"
+msgstr "Entrez la commande :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:244
+msgid "The terminal will return the message:"
+msgstr "Le terminal renverra le message :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:250
+msgid ""
+"Your turtle will follow the same path you entered while recording (though "
+"not 100% exactly; turtlesim is sensitive to small changes in the system’s "
+"timing)."
+msgstr ""
+"Votre tortue suivra le même chemin que vous avez entré lors de "
+"l'enregistrement (mais pas exactement à 100 % ; turtlesim est sensible aux "
+"petits changements dans la synchronisation du système)."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:254
+msgid ""
+"Because the ``subset`` file recorded the ``/turtle1/pose`` topic, the ``ros2"
+" bag play`` command won’t quit for as long as you had turtlesim running, "
+"even if you weren’t moving."
+msgstr ""
+"Parce que le fichier ``subset`` a enregistré le sujet ``/turtle1/pose``, la "
+"commande ``ros2 bag play`` ne se fermera pas tant que vous aurez turtlesim "
+"en cours d'exécution, même si vous ne bougez pas."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:256
+msgid ""
+"This is because as long as the ``/turtlesim`` node is active, it publishes "
+"data on the  ``/turtle1/pose`` topic at regular intervals. You may have "
+"noticed in the ``ros2 bag info`` example result above that the  "
+"``/turtle1/cmd_vel`` topic’s ``Count`` information was only 9; that’s how "
+"many times we pressed the arrow keys while recording."
+msgstr ""
+"En effet, tant que le nœud ``/turtlesim`` est actif, il publie des données "
+"sur le sujet ``/turtle1/pose`` à intervalles réguliers. Vous avez peut-être "
+"remarqué dans l'exemple de résultat ``ros2 bag info`` ci-dessus que "
+"l'information ``Count`` du sujet ``/turtle1/cmd_vel`` n'était que de 9 ; "
+"c'est le nombre de fois que nous avons appuyé sur les touches fléchées "
+"pendant l'enregistrement."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:259
+msgid ""
+"Notice that ``/turtle1/pose`` has a ``Count`` value of over 3000; while we "
+"were recording, data was published on that topic 3000 times."
+msgstr ""
+"Notez que ``/turtle1/pose`` a une valeur ``Count`` supérieure à 3000 ; "
+"pendant que nous enregistrions, des données ont été publiées sur ce sujet "
+"3000 fois."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:261
+msgid ""
+"To get an idea of how often position data is published, you can run the "
+"command:"
+msgstr ""
+"Pour avoir une idée de la fréquence de publication des données de position, "
+"vous pouvez exécuter la commande :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:268
+msgid "Summary"
+msgstr "Résumé"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:270
+msgid ""
+"You can record data passed on topics in your ROS 2 system using the ``ros2 "
+"bag`` command. Whether you’re sharing your work with others or introspecting"
+" on your own experiments, it’s a great tool to know about."
+msgstr ""
+"Vous pouvez enregistrer les données transmises sur les sujets de votre "
+"système ROS 2 à l'aide de la commande ``ros2 bag``. Que vous partagiez votre"
+" travail avec d'autres ou que vous introspectiez vos propres expériences, "
+"c'est un excellent outil à connaître."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:274
+msgid "Next steps"
+msgstr "Prochaines étapes"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:276
+msgid ""
+"You’ve completed the \"Beginner: CLI Tools\" tutorials! The next step is "
+"tackling the \"Beginner: Client Libraries\" tutorials, starting with "
+":doc:`../../Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-"
+"Workspace`."
+msgstr ""
+"Vous avez terminé les didacticiels \"Débutant : Outils CLI\" ! L'étape "
+"suivante consiste à aborder les didacticiels \"Débutant : Bibliothèques "
+"clientes\", en commençant par :doc:`../../Beginner-Client-"
+"Libraries/Creating-A-Workspace/Creating-A-Workspace`."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:280
+msgid "Related content"
+msgstr "Contenu connexe"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.rst:282
+msgid ""
+"A more thorough explanation of ``ros2 bag`` can be found in the README `here"
+" <https://github.com/ros2/rosbag2>`__. For more information on QoS "
+"compatibility and ``ros2 bag``, see :doc:`../../../How-To-Guides/Overriding-"
+"QoS-Policies-For-Recording-And-Playback`."
+msgstr ""
+"Une explication plus approfondie de ``ros2 bag`` peut être trouvée dans le "
+"README `ici <https://github.com/ros2/rosbag2>`__. Pour plus d'informations "
+"sur la compatibilité QoS et ``ros2 bag``, voir :doc:`../../../How-To-"
+"Guides/Overriding-QoS-Policies-For-Recording-And-Playback`."

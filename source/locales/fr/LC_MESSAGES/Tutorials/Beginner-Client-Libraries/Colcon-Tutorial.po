@@ -1,0 +1,539 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 11:57:42.216654\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:9
+msgid "Using ``colcon`` to build packages"
+msgstr "Utiliser ``colcon`` pour créer des packages"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:13
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:15
+msgid "**Goal:** Build a ROS 2 workspace with ``colcon``."
+msgstr "**Objectif :** Construire un espace de travail ROS 2 avec ``colcon``."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:17
+msgid "**Tutorial level:** Beginner"
+msgstr "**Niveau du tutoriel :** Débutant"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:19
+msgid "**Time:** 20 minutes"
+msgstr "**Durée :** 20 minutes"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:21
+msgid ""
+"This is a brief tutorial on how to create and build a ROS 2 workspace with "
+"``colcon``. It is a practical tutorial and not designed to replace the core "
+"documentation."
+msgstr ""
+"Ceci est un bref tutoriel sur la façon de créer et de construire un espace "
+"de travail ROS 2 avec ``colcon``. Il s'agit d'un didacticiel pratique et non"
+" conçu pour remplacer la documentation de base."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:25
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:27
+msgid ""
+"``colcon`` is an iteration on the ROS build tools ``catkin_make``, "
+"``catkin_make_isolated``, ``catkin_tools`` and ``ament_tools``. For more "
+"information on the design of colcon see `this document "
+"<https://design.ros2.org/articles/build_tool.html>`__."
+msgstr ""
+"``colcon`` est une itération sur les outils de compilation ROS "
+"``catkin_make``, ``catkin_make_isolated``, ``catkin_tools`` et "
+"``ament_tools``. Pour plus d'informations sur la conception de colcon, "
+"consultez `ce document "
+"<https://design.ros2.org/articles/build_tool.html>`__."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:30
+msgid ""
+"The source code can be found in the `colcon GitHub organization "
+"<https://github.com/colcon>`__."
+msgstr ""
+"Le code source se trouve dans l'organisation `colcon GitHub "
+"<https://github.com/colcon>`__."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:33
+msgid "Prerequisites"
+msgstr "Conditions préalables"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:36
+msgid "Install colcon"
+msgstr "Installer Colcon"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:40
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:94
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:171
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:212
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:244
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:311
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:339
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:46
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:101
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:177
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:218
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:250
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:318
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:345
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:52
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:108
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:183
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:224
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:256
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:325
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:351
+msgid "Windows"
+msgstr "les fenêtres"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:60
+msgid "Install ROS 2"
+msgstr "Installer ROS 2"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:62
+msgid "To build the samples, you will need to install ROS 2."
+msgstr "Pour créer les exemples, vous devrez installer ROS 2."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:64
+msgid "Follow the :doc:`installation instructions <../../Installation>`."
+msgstr "Suivez les :doc:`instructions d'installation <../../Installation>`."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:66
+msgid ""
+"If installing from Debian packages, this tutorial requires the :ref:`desktop"
+" installation <linux-install-debians-install-ros-2-packages>`."
+msgstr ""
+"Si vous installez à partir de packages Debian, ce didacticiel nécessite "
+"l':ref:`installation de bureau <linux-install-debian-install-"
+"ros-2-packages>`."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:69
+msgid "Basics"
+msgstr "Bases"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:71
+msgid ""
+"A ROS workspace is a directory with a particular structure. Commonly there "
+"is a ``src`` subdirectory. Inside that subdirectory is where the source code"
+" of ROS packages will be located. Typically the directory starts otherwise "
+"empty."
+msgstr ""
+"Un espace de travail ROS est un répertoire avec une structure particulière. "
+"Généralement, il existe un sous-répertoire ``src``. À l'intérieur de ce "
+"sous-répertoire se trouve le code source des packages ROS. En règle "
+"générale, le répertoire démarre sinon vide."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:76
+msgid ""
+"colcon does out of source builds. By default it will create the following "
+"directories as peers of the ``src`` directory:"
+msgstr ""
+"colcon fait des builds hors source. Par défaut, il créera les répertoires "
+"suivants en tant que pairs du répertoire ``src`` :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:79
+msgid ""
+"The ``build`` directory will be where intermediate files are stored. For "
+"each package a subfolder will be created in which e.g. CMake is being "
+"invoked."
+msgstr ""
+"Le répertoire ``build`` sera l'endroit où les fichiers intermédiaires sont "
+"stockés. Pour chaque package, un sous-dossier sera créé dans lequel, par ex."
+" CMake est appelé."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:81
+msgid ""
+"The ``install`` directory is where each package will be installed to. By "
+"default each package will be installed into a separate subdirectory."
+msgstr ""
+"Le répertoire ``install`` est l'endroit où chaque paquet sera installé. Par "
+"défaut, chaque package sera installé dans un sous-répertoire séparé."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:83
+msgid ""
+"The ``log`` directory contains various logging information about each colcon"
+" invocation."
+msgstr ""
+"Le répertoire ``log`` contient diverses informations de journalisation sur "
+"chaque invocation colcon."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:85
+msgid "Compared to catkin there is no ``devel`` directory."
+msgstr "Contrairement à catkin, il n'y a pas de répertoire ``devel``."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:88
+msgid "Create a workspace"
+msgstr "Créer un espace de travail"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:90
+msgid "First, create a directory (``ros2_ws``) to contain our workspace:"
+msgstr ""
+"Tout d'abord, créez un répertoire (``ros2_ws``) pour contenir notre espace "
+"de travail :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:115
+msgid "At this point the workspace contains a single empty directory ``src``:"
+msgstr ""
+"À ce stade, l'espace de travail contient un seul répertoire vide ``src`` :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:125
+msgid "Add some sources"
+msgstr "Ajouter des sources"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:127
+msgid ""
+"Let's clone the `examples <https://github.com/ros2/examples>`__ repository "
+"into the ``src`` directory of the workspace:"
+msgstr ""
+"Clonons le dépôt `examples <https://github.com/ros2/examples>`__ dans le "
+"répertoire ``src`` de l'espace de travail :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:133
+msgid "Now the workspace should have the source code to the ROS 2 examples:"
+msgstr ""
+"L'espace de travail doit maintenant contenir le code source des exemples "
+"ROS 2 :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:149
+msgid "Source an underlay"
+msgstr "Sourcer une sous-couche"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:151
+msgid ""
+"It is important that we have sourced the environment for an existing ROS 2 "
+"installation that will provide our workspace with the necessary build "
+"dependencies for the example packages. This is achieved by sourcing the "
+"setup script provided by a binary installation or a source installation, ie."
+" another colcon workspace (see :doc:`Installation <../../Installation>`). We"
+" call this environment an **underlay**."
+msgstr ""
+"Il est important que nous ayons trouvé l'environnement pour une installation"
+" ROS 2 existante qui fournira à notre espace de travail les dépendances de "
+"construction nécessaires pour les exemples de packages. Ceci est réalisé en "
+"générant le script de configuration fourni par une installation binaire ou "
+"une installation source, c'est-à-dire. un autre espace de travail colcon "
+"(voir :doc:`Installation <../../Installation>`). Nous appelons cet "
+"environnement une **sous-couche**."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:155
+msgid ""
+"Our workspace, ``ros2_ws``, will be an **overlay** on top of the existing "
+"ROS 2 installation. In general, it is recommended to use an overlay when you"
+" plan to iterate on a small number of packages, rather than putting all of "
+"your packages into the same workspace."
+msgstr ""
+"Notre espace de travail, ``ros2_ws``, sera une **superposition** au-dessus "
+"de l'installation ROS 2 existante. En général, il est recommandé d'utiliser "
+"une superposition lorsque vous prévoyez d'itérer sur un petit nombre de "
+"packages, plutôt que de placer tous vos packages dans le même espace de "
+"travail."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:159
+msgid "Build the workspace"
+msgstr "Construire l'espace de travail"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:163
+msgid ""
+"To build packages on Windows you need to be in a Visual Studio environment, "
+"see :ref:`Building the ROS 2 Code <windows-dev-build-ros2>` for more "
+"details."
+msgstr ""
+"Pour créer des packages sous Windows, vous devez être dans un environnement "
+"Visual Studio, voir :ref:`Construire le code ROS 2 <windows-dev-build-ros2>`"
+" pour plus de détails."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:165
+msgid ""
+"In the root of the workspace, run ``colcon build``. Since build types such "
+"as ``ament_cmake`` do not support the concept of the ``devel`` space and "
+"require the package to be installed, colcon supports the option ``--symlink-"
+"install``. This allows the installed files to be changed by changing the "
+"files in the ``source`` space (e.g. Python files or other not compiled "
+"resourced) for faster iteration."
+msgstr ""
+"A la racine de l'espace de travail, lancez ``colcon build``. Étant donné que"
+" les types de construction tels que ``ament_cmake`` ne prennent pas en "
+"charge le concept de l'espace ``devel`` et nécessitent l'installation du "
+"paquet, colcon prend en charge l'option ``--symlink-install``. Cela permet "
+"de modifier les fichiers installés en modifiant les fichiers dans l'espace "
+"``source`` (par exemple, des fichiers Python ou d'autres ressources non "
+"compilées) pour une itération plus rapide."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:189
+msgid ""
+"Windows doesn’t allow long paths, so ``merge-install`` will combine all the "
+"paths into the ``install`` directory."
+msgstr ""
+"Windows n'autorise pas les longs chemins, donc ``merge-install`` combinera "
+"tous les chemins dans le répertoire ``install``."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:191
+msgid ""
+"After the build is finished, we should see the ``build``, ``install``, and "
+"``log`` directories:"
+msgstr ""
+"Une fois la construction terminée, nous devrions voir les répertoires "
+"``build``, ``install`` et ``log`` :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:206
+msgid "Run tests"
+msgstr "Exécuter des tests"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:208
+msgid "To run tests for the packages we just built, run the following:"
+msgstr ""
+"Pour exécuter des tests pour les packages que nous venons de créer, exécutez"
+" ce qui suit :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:226
+msgid ""
+"Remember to use a ``x64 Native Tools Command Prompt for VS 2019`` for "
+"executing the following command, as we are going to build a workspace."
+msgstr ""
+"N'oubliez pas d'utiliser une ``invite de commande x64 Native Tools pour VS "
+"2019`` pour exécuter la commande suivante, car nous allons créer un espace "
+"de travail."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:232
+msgid ""
+"You also need to specify ``--merge-install`` here since we used it for "
+"building above."
+msgstr ""
+"Vous devez également spécifier ``--merge-install`` ici puisque nous l'avons "
+"utilisé pour la construction ci-dessus."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:235
+msgid "Source the environment"
+msgstr "Sourcer l'environnement"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:237
+msgid ""
+"When colcon has completed building successfully, the output will be in the "
+"``install`` directory. Before you can use any of the installed executables "
+"or libraries, you will need to add them to your path and library paths. "
+"colcon will have generated bash/bat files in the ``install`` directory to "
+"help setup the environment. These files will add all of the required "
+"elements to your path and library paths as well as provide any bash or shell"
+" commands exported by packages."
+msgstr ""
+"Lorsque colcon a terminé la construction avec succès, la sortie sera dans le"
+" répertoire ``install``. Avant de pouvoir utiliser l'un des exécutables ou "
+"bibliothèques installés, vous devez les ajouter à votre chemin et aux "
+"chemins de bibliothèque. colcon aura généré des fichiers bash/bat dans le "
+"répertoire ``install`` pour aider à configurer l'environnement. Ces fichiers"
+" ajouteront tous les éléments requis à votre chemin et aux chemins de "
+"bibliothèque, ainsi que toutes les commandes bash ou shell exportées par les"
+" packages."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:262
+msgid "Or with Powershell:"
+msgstr "Ou avec Powershell :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:269
+msgid "Try a demo"
+msgstr "Essayez une démo"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:271
+msgid ""
+"With the environment sourced we can run executables built by colcon. Let's "
+"run a subscriber node from the examples:"
+msgstr ""
+"Avec l'environnement sourcé, nous pouvons exécuter des exécutables "
+"construits par colcon. Exécutons un nœud d'abonné à partir des exemples :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:278
+msgid ""
+"In another terminal, let's run a publisher node (don't forget to source the "
+"setup script):"
+msgstr ""
+"Dans un autre terminal, lançons un nœud d'éditeur (n'oubliez pas de sourcer "
+"le script de configuration) :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:284
+msgid ""
+"You should see messages from the publisher and subscriber with numbers "
+"incrementing."
+msgstr ""
+"Vous devriez voir les messages de l'éditeur et de l'abonné avec des numéros "
+"incrémentés."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:287
+msgid "Create your own package"
+msgstr "Créez votre propre forfait"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:289
+msgid ""
+"colcon uses the ``package.xml`` specification defined in `REP 149 "
+"<https://www.ros.org/reps/rep-0149.html>`__ (`format 2 "
+"<https://www.ros.org/reps/rep-0140.html>`__ is also supported)."
+msgstr ""
+"colcon utilise la spécification ``package.xml`` définie dans `REP 149 "
+"<https://www.ros.org/reps/rep-0149.html>`__ (`format 2 <https://www.ros. "
+"org/reps/rep-0140.html>`__ est également pris en charge)."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:291
+msgid ""
+"colcon supports multiple build types. The recommended build types are "
+"``ament_cmake`` and ``ament_python``. Also supported are pure ``cmake`` "
+"packages."
+msgstr ""
+"colcon prend en charge plusieurs types de construction. Les types de "
+"construction recommandés sont ``ament_cmake`` et ``ament_python``. Les "
+"packages ``cmake`` purs sont également pris en charge."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:295
+msgid ""
+"An example of an ``ament_python`` build is the `ament_index_python package "
+"<https://github.com/ament/ament_index/tree/rolling/ament_index_python>`__ , "
+"where the setup.py is the primary entry point for building."
+msgstr ""
+"Un exemple de construction ``ament_python`` est le package "
+"`ament_index_python "
+"<https://github.com/ament/ament_index/tree/rolling/ament_index_python>`__ , "
+"où setup.py est le point d'entrée principal pour la construction."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:297
+msgid ""
+"A package such as `demo_nodes_cpp "
+"<https://github.com/ros2/demos/tree/rolling/demo_nodes_cpp>`__ uses the "
+"``ament_cmake`` build type, and uses CMake as the build tool."
+msgstr ""
+"Un package tel que `demo_nodes_cpp "
+"<https://github.com/ros2/demos/tree/rolling/demo_nodes_cpp>`__ utilise le "
+"type de construction ``ament_cmake`` et utilise CMake comme outil de "
+"construction."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:299
+msgid ""
+"For convenience, you can use the tool ``ros2 pkg create`` to create a new "
+"package based on a template."
+msgstr ""
+"Pour plus de commodité, vous pouvez utiliser l'outil ``ros2 pkg create`` "
+"pour créer un nouveau package basé sur un modèle."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:301
+msgid ""
+"For ``catkin`` users, this is the equivalent of ``catkin_create_package``."
+msgstr ""
+"Pour les utilisateurs de ``catkin``, c'est l'équivalent de "
+"``catkin_create_package``."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:304
+msgid "Setup ``colcon_cd``"
+msgstr "Configurer ``colcon_cd``"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:306
+msgid ""
+"The command ``colcon_cd`` allows you to quickly change the current working "
+"directory of your shell to the directory of a package. As an example "
+"``colcon_cd some_ros_package`` would quickly bring you to the directory "
+"``~/ros2_install/src/some_ros_package``."
+msgstr ""
+"La commande ``colcon_cd`` vous permet de changer rapidement le répertoire de"
+" travail courant de votre shell vers le répertoire d'un paquet. Par exemple,"
+" ``colcon_cd some_ros_package`` vous amènerait rapidement au répertoire "
+"``~/ros2_install/src/some_ros_package``."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:327
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:353
+msgid "Not yet available"
+msgstr "Pas encore disponible"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:329
+msgid ""
+"Depending to the way you installed ``colcon_cd`` and where your workspace "
+"is, the instructions above may vary, please refer to `the documentation "
+"<https://colcon.readthedocs.io/en/released/user/installation.html#quick-"
+"directory-changes>`__ for more details. To undo this in Linux and macOS, "
+"locate your system’s shell startup script and remove the appended source and"
+" export commands."
+msgstr ""
+"Selon la manière dont vous avez installé ``colcon_cd`` et où se trouve votre"
+" espace de travail, les instructions ci-dessus peuvent varier, veuillez vous"
+" référer à `la documentation "
+"<https://colcon.readthedocs.io/en/released/user/installation.html# "
+"changements de répertoire rapides>`__ pour plus de détails. Pour annuler "
+"cette opération sous Linux et macOS, localisez le script de démarrage du "
+"shell de votre système et supprimez les commandes source et export ajoutées."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:333
+msgid "Setup ``colcon`` tab completion"
+msgstr "Configuration de l'achèvement de l'onglet ``colcon``"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:335
+msgid ""
+"The command ``colcon`` `supports command completion "
+"<https://colcon.readthedocs.io/en/released/user/installation.html#enable-"
+"completion>`__ for bash and bash-like shells if the ``colcon-argcomplete`` "
+"package is installed."
+msgstr ""
+"La commande ``colcon`` `prend en charge la complétion de commande "
+"<https://colcon.readthedocs.io/en/released/user/installation.html#enable-"
+"completion>`__ pour les shells bash et de type bash si le ``colcon "
+"-argcomplete`` est installé."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:355
+msgid ""
+"Depending to the way you installed ``colcon`` and where your workspace is, "
+"the instructions above may vary, please refer to `the documentation "
+"<https://colcon.readthedocs.io/en/released/user/installation.html>`__ for "
+"more details. To undo this in Linux and macOS, locate your system’s shell "
+"startup script and remove the appended source command."
+msgstr ""
+"Selon la manière dont vous avez installé ``colcon`` et l'endroit où se "
+"trouve votre espace de travail, les instructions ci-dessus peuvent varier, "
+"veuillez vous référer à `la documentation "
+"<https://colcon.readthedocs.io/en/released/user/installation.html> `__ pour "
+"plus de détails. Pour annuler cela sous Linux et macOS, localisez le script "
+"de démarrage du shell de votre système et supprimez la commande source "
+"ajoutée."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:359
+msgid "Tips"
+msgstr "Conseils"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:361
+msgid ""
+"If you do not want to build a specific package place an empty file named "
+"``COLCON_IGNORE`` in the directory and it will not be indexed."
+msgstr ""
+"Si vous ne souhaitez pas construire un package spécifique, placez un fichier"
+" vide nommé ``COLCON_IGNORE`` dans le répertoire et il ne sera pas indexé."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:363
+msgid ""
+"If you want to avoid configuring and building tests in CMake packages you "
+"can pass: ``--cmake-args -DBUILD_TESTING=0``."
+msgstr ""
+"Si vous voulez éviter de configurer et de construire des tests dans les "
+"packages CMake, vous pouvez passer : ``--cmake-args -DBUILD_TESTING=0``."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.rst:365
+msgid "If you want to run a single particular test from a package:"
+msgstr ""
+"Si vous souhaitez exécuter un seul test particulier à partir d'un package :"

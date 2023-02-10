@@ -1,0 +1,545 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 11:49:39.863700\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:8
+msgid "Understanding topics"
+msgstr "Comprendre les sujets"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:10
+msgid ""
+"**Goal:** Use rqt_graph and command line tools to introspect ROS 2 topics."
+msgstr ""
+"**Objectif :** Utiliser rqt_graph et les outils de ligne de commande pour "
+"introspecter les sujets ROS 2."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:12
+msgid "**Tutorial level:** Beginner"
+msgstr "**Niveau du tutoriel :** Débutant"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:14
+msgid "**Time:** 20 minutes"
+msgstr "**Durée :** 20 minutes"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:18
+msgid "Contents"
+msgstr "Contenu"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:21
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:23
+msgid ""
+"ROS 2 breaks complex systems down into many modular nodes. Topics are a "
+"vital element of the ROS graph that act as a bus for nodes to exchange "
+"messages."
+msgstr ""
+"ROS 2 décompose les systèmes complexes en plusieurs nœuds modulaires. Les "
+"sujets sont un élément vital du graphe ROS qui agit comme un bus permettant "
+"aux nœuds d'échanger des messages."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:28
+msgid ""
+"A node may publish data to any number of topics and simultaneously have "
+"subscriptions to any number of topics."
+msgstr ""
+"Un nœud peut publier des données sur n'importe quel nombre de sujets et "
+"avoir simultanément des abonnements à n'importe quel nombre de sujets."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:32
+msgid ""
+"Topics are one of the main ways in which data is moved between nodes and "
+"therefore between different parts of the system."
+msgstr ""
+"Les sujets sont l'un des principaux moyens par lesquels les données sont "
+"déplacées entre les nœuds et donc entre les différentes parties du système."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:36
+msgid "Prerequisites"
+msgstr "Conditions préalables"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:38
+msgid ""
+"The :doc:`previous tutorial <../Understanding-ROS2-Nodes/Understanding-"
+"ROS2-Nodes>` provides some useful background information on nodes that is "
+"built upon here."
+msgstr ""
+"Le :doc:`tutoriel précédent <../Understanding-ROS2-Nodes/Understanding-"
+"ROS2-Nodes>` fournit des informations générales utiles sur les nœuds qui "
+"sont construits ici."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:40
+msgid ""
+"As always, don’t forget to source ROS 2 in :doc:`every new terminal you open"
+" <../Configuring-ROS2-Environment>`."
+msgstr ""
+"Comme toujours, n'oubliez pas de sourcer ROS 2 dans :doc:`chaque nouveau "
+"terminal que vous ouvrez <../Configuring-ROS2-Environment>`."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:43
+msgid "Tasks"
+msgstr "Tâches"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:46
+msgid "1 Setup"
+msgstr "1 Configuration"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:48
+msgid "By now you should be comfortable starting up turtlesim."
+msgstr "À présent, vous devriez être à l'aise pour démarrer turtlesim."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:50
+msgid "Open a new terminal and run:"
+msgstr "Ouvrez un nouveau terminal et exécutez :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:56
+msgid "Open another terminal and run:"
+msgstr "Ouvrez un autre terminal et exécutez :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:62
+msgid ""
+"Recall from the :doc:`previous tutorial <../Understanding-"
+"ROS2-Nodes/Understanding-ROS2-Nodes>` that the names of these nodes are "
+"``/turtlesim`` and ``/teleop_turtle`` by default."
+msgstr ""
+"Rappelez-vous du :doc:`tutoriel précédent <../Understanding-"
+"ROS2-Nodes/Understanding-ROS2-Nodes>` que les noms de ces nœuds sont "
+"``/turtlesim`` et ``/teleop_turtle`` par défaut."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:66
+msgid "2 rqt_graph"
+msgstr "2 rqt_graphe"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:68
+msgid ""
+"Throughout this tutorial, we will use ``rqt_graph`` to visualize the "
+"changing nodes and topics, as well as the connections between them."
+msgstr ""
+"Tout au long de ce didacticiel, nous utiliserons ``rqt_graph`` pour "
+"visualiser les nœuds et les sujets changeants, ainsi que les connexions "
+"entre eux."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:70
+msgid ""
+"The :doc:`turtlesim tutorial <../Introducing-Turtlesim/Introducing-"
+"Turtlesim>` tells you how to install rqt and all its plugins, including "
+"``rqt_graph``."
+msgstr ""
+"Le tutoriel :doc:`turtlesim <../Introducing-Turtlesim/Introducing-"
+"Turtlesim>` vous explique comment installer rqt et tous ses plugins, y "
+"compris ``rqt_graph``."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:72
+msgid "To run rqt_graph, open a new terminal and enter the command:"
+msgstr ""
+"Pour exécuter rqt_graph, ouvrez un nouveau terminal et saisissez la "
+"commande :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:78
+msgid ""
+"You can also open rqt_graph by opening ``rqt`` and selecting **Plugins** > "
+"**Introspection** > **Node Graph**."
+msgstr ""
+"Vous pouvez également ouvrir rqt_graph en ouvrant ``rqt`` et en "
+"sélectionnant **Plugins** > **Introspection** > **Node Graph**."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:82
+msgid ""
+"You should see the above nodes and topic, as well as two actions around the "
+"periphery of the graph (let's ignore those for now). If you hover your mouse"
+" over the topic in the center, you'll see the color highlighting like in the"
+" image above."
+msgstr ""
+"Vous devriez voir les nœuds et le sujet ci-dessus, ainsi que deux actions "
+"autour de la périphérie du graphique (ignorons-les pour l'instant). Si vous "
+"passez votre souris sur le sujet au centre, vous verrez la couleur surlignée"
+" comme dans l'image ci-dessus."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:85
+msgid ""
+"The graph is depicting how the ``/turtlesim`` node and the "
+"``/teleop_turtle`` node are communicating with each other over a topic. The "
+"``/teleop_turtle`` node is publishing data (the keystrokes you enter to move"
+" the turtle around) to the ``/turtle1/cmd_vel`` topic, and the "
+"``/turtlesim`` node is subscribed to that topic to receive the data."
+msgstr ""
+"Le graphique montre comment le nœud ``/turtlesim`` et le nœud "
+"``/teleop_turtle`` communiquent entre eux sur un sujet. Le nœud "
+"``/teleop_turtle`` publie des données (les touches que vous entrez pour "
+"déplacer la tortue) dans le sujet ``/turtle1/cmd_vel``, et le nœud "
+"``/turtlesim`` est abonné à ce sujet pour recevoir les données."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:88
+msgid ""
+"The highlighting feature of rqt_graph is very helpful when examining more "
+"complex systems with many nodes and topics connected in many different ways."
+msgstr ""
+"La fonction de mise en surbrillance de rqt_graph est très utile lors de "
+"l'examen de systèmes plus complexes avec de nombreux nœuds et sujets "
+"connectés de différentes manières."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:90
+msgid ""
+"rqt_graph is a graphical introspection tool. Now we’ll look at some command "
+"line tools for introspecting topics."
+msgstr ""
+"rqt_graph est un outil d'introspection graphique. Nous allons maintenant "
+"examiner certains outils de ligne de commande pour l'introspection des "
+"sujets."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:95
+msgid "3 ros2 topic list"
+msgstr "3 liste de sujets ros2"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:97
+msgid ""
+"Running the ``ros2 topic list`` command in a new terminal will return a list"
+" of all the topics currently active in the system:"
+msgstr ""
+"L'exécution de la commande ``ros2 topic list`` dans un nouveau terminal "
+"renverra une liste de tous les sujets actuellement actifs dans le système :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:107
+msgid ""
+"``ros2 topic list -t`` will return the same list of topics, this time with "
+"the topic type appended in brackets:"
+msgstr ""
+"``ros2 topic list -t`` renverra la même liste de sujets, cette fois avec le "
+"type de sujet ajouté entre parenthèses :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:117
+msgid ""
+"These attributes, particularly the type, are how nodes know they’re talking "
+"about the same information as it moves over topics."
+msgstr ""
+"Ces attributs, en particulier le type, sont la façon dont les nœuds savent "
+"qu'ils parlent de la même information lorsqu'elle se déplace sur les sujets."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:119
+msgid ""
+"If you’re wondering where all these topics are in rqt_graph, you can uncheck"
+" all the boxes under **Hide:**"
+msgstr ""
+"Si vous vous demandez où se trouvent tous ces sujets dans rqt_graph, vous "
+"pouvez décocher toutes les cases sous **Masquer :**"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:123
+msgid "For now, though, leave those options checked to avoid confusion."
+msgstr ""
+"Pour l'instant, cependant, laissez ces options cochées pour éviter toute "
+"confusion."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:126
+msgid "4 ros2 topic echo"
+msgstr "4 écho de sujet ros2"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:128
+msgid "To see the data being published on a topic, use:"
+msgstr "Pour voir les données publiées sur un sujet, utilisez :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:134
+msgid ""
+"Since we know that ``/teleop_turtle`` publishes data to ``/turtlesim`` over "
+"the ``/turtle1/cmd_vel`` topic, let's use ``echo`` to introspect on that "
+"topic:"
+msgstr ""
+"Puisque nous savons que ``/teleop_turtle`` publie des données sur "
+"``/turtlesim`` sur le sujet ``/turtle1/cmd_vel``, utilisons ``echo`` pour "
+"faire une introspection sur ce sujet :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:140
+msgid ""
+"At first, this command won’t return any data. That’s because it’s waiting "
+"for ``/teleop_turtle`` to publish something."
+msgstr ""
+"Au début, cette commande ne renverra aucune donnée. C'est parce qu'il attend"
+" que ``/teleop_turtle`` publie quelque chose."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:143
+msgid ""
+"Return to the terminal where ``turtle_teleop_key`` is running and use the "
+"arrows to move the turtle around. Watch the terminal where your ``echo`` is "
+"running at the same time, and you’ll see position data being published for "
+"every movement you make:"
+msgstr ""
+"Retournez au terminal où ``turtle_teleop_key`` est en cours d'exécution et "
+"utilisez les flèches pour déplacer la tortue. Regardez le terminal sur "
+"lequel votre ``echo`` fonctionne en même temps, et vous verrez les données "
+"de position publiées pour chaque mouvement que vous effectuez :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:158
+msgid "Now return to rqt_graph and uncheck the **Debug** box."
+msgstr "Revenez maintenant à rqt_graph et décochez la case **Debug**."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:162
+msgid ""
+"``/_ros2cli_26646`` is the node created by the ``echo`` we just ran (the "
+"number might be different). Now you can see that the publisher is publishing"
+" data over the ``cmd_vel`` topic, and two subscribers are subscribed."
+msgstr ""
+"``/_ros2cli_26646`` est le nœud créé par le ``echo`` que nous venons "
+"d'exécuter (le nombre peut être différent). Vous pouvez maintenant voir que "
+"l'éditeur publie des données sur le sujet ``cmd_vel`` et que deux abonnés "
+"sont abonnés."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:166
+msgid "5 ros2 topic info"
+msgstr "5 informations sur le sujet ros2"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:168
+msgid ""
+"Topics don’t have to only be point-to-point communication; it can be one-to-"
+"many, many-to-one, or many-to-many."
+msgstr ""
+"Les sujets ne doivent pas uniquement être une communication point à point; "
+"il peut s'agir d'un à plusieurs, de plusieurs à un ou de plusieurs à "
+"plusieurs."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:170
+msgid "Another way to look at this is running:"
+msgstr "Une autre façon de voir cela est de courir:"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:176
+msgid "Which will return:"
+msgstr "Qui reviendra :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:185
+msgid "6 ros2 interface show"
+msgstr "6 spectacle d'interface ros2"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:187
+msgid ""
+"Nodes send data over topics using messages. Publishers and subscribers must "
+"send and receive the same type of message to communicate."
+msgstr ""
+"Les nœuds envoient des données sur des sujets à l'aide de messages. Les "
+"éditeurs et les abonnés doivent envoyer et recevoir le même type de message "
+"pour communiquer."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:190
+msgid ""
+"The topic types we saw earlier after running ``ros2 topic list -t`` let us "
+"know what message type is used on each topic. Recall that the ``cmd_vel`` "
+"topic has the type:"
+msgstr ""
+"Les types de sujets que nous avons vus plus tôt après avoir exécuté ``ros2 "
+"topic list -t`` nous permettent de savoir quel type de message est utilisé "
+"sur chaque sujet. Rappelons que le sujet ``cmd_vel`` a le type :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:197
+msgid ""
+"This means that in the package ``geometry_msgs`` there is a ``msg`` called "
+"``Twist``."
+msgstr ""
+"Cela signifie que dans le paquet ``geometry_msgs`` il y a un ``msg`` appelé "
+"``Twist``."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:199
+msgid ""
+"Now we can run ``ros2 interface show <msg type>`` on this type to learn its "
+"details, specifically, what structure of data the message expects."
+msgstr ""
+"Nous pouvons maintenant exécuter ``ros2 interface show <msg type>`` sur ce "
+"type pour connaître ses détails, en particulier la structure de données "
+"attendue par le message."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:205
+msgid "For the message type from above it yields:"
+msgstr "Pour le type de message ci-dessus, cela donne :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:220
+msgid ""
+"This tells you that the ``/turtlesim`` node is expecting a message with two "
+"vectors, ``linear`` and ``angular``, of three elements each. If you recall "
+"the data we saw ``/teleop_turtle`` passing to ``/turtlesim`` with the "
+"``echo`` command, it’s in the same structure:"
+msgstr ""
+"Cela vous indique que le nœud ``/turtlesim`` attend un message avec deux "
+"vecteurs, ``linear`` et ``angular``, de trois éléments chacun. Si vous vous "
+"souvenez des données que nous avons vues ``/teleop_turtle`` passer à "
+"``/turtlesim`` avec la commande ``echo``, elles sont dans la même "
+"structure :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:236
+msgid "7 ros2 topic pub"
+msgstr "7 pub de sujet ros2"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:238
+msgid ""
+"Now that you have the message structure, you can publish data onto a topic "
+"directly from the command line using:"
+msgstr ""
+"Maintenant que vous avez la structure du message, vous pouvez publier des "
+"données sur un sujet directement à partir de la ligne de commande en "
+"utilisant :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:244
+msgid ""
+"The ``'<args>'`` argument is the actual data you’ll pass to the topic, in "
+"the structure you just discovered in the previous section."
+msgstr ""
+"L'argument ``'<args>'`` est les données réelles que vous passerez au sujet, "
+"dans la structure que vous venez de découvrir dans la section précédente."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:246
+msgid ""
+"It’s important to note that this argument needs to be input in YAML syntax. "
+"Input the full command like so:"
+msgstr ""
+"Il est important de noter que cet argument doit être entré dans la syntaxe "
+"YAML. Entrez la commande complète comme ceci :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:253
+msgid ""
+"``--once`` is an optional argument meaning “publish one message then exit”."
+msgstr ""
+"``--once`` est un argument facultatif signifiant \"publier un message puis "
+"quitter\"."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:255
+msgid "You will receive the following message in the terminal:"
+msgstr "Vous recevrez le message suivant dans le terminal :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:262
+msgid "And you will see your turtle move like so:"
+msgstr "Et vous verrez votre tortue bouger comme ça :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:266
+msgid ""
+"The turtle (and commonly the real robots which it is meant to emulate) "
+"require a steady stream of commands to operate continuously. So, to get the "
+"turtle to keep moving, you can run:"
+msgstr ""
+"La tortue (et généralement les vrais robots qu'elle est censée imiter) "
+"nécessite un flux constant de commandes pour fonctionner en continu. Donc, "
+"pour que la tortue continue de bouger, vous pouvez exécuter :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:273
+msgid ""
+"The difference here is the removal of the ``--once`` option and the addition"
+" of the ``--rate 1`` option, which tells ``ros2 topic pub`` to publish the "
+"command in a steady stream at 1 Hz."
+msgstr ""
+"La différence ici est la suppression de l'option ``--once`` et l'ajout de "
+"l'option ``--rate 1``, ​​qui indique à ``ros2 topic pub`` de publier la "
+"commande dans un flux constant à 1 Hz."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:277
+msgid ""
+"You can refresh rqt_graph to see what’s happening graphically. You will see "
+"the ``ros 2 topic pub ...`` node (``/_ros2cli_30358``) is publishing over "
+"the ``/turtle1/cmd_vel`` topic, and is being received by both the ``ros2 "
+"topic echo ...`` node (``/_ros2cli_26646``) and the ``/turtlesim`` node now."
+msgstr ""
+"Vous pouvez actualiser rqt_graph pour voir ce qui se passe graphiquement. "
+"Vous verrez que le nœud ``ros 2 topic pub ...`` (``/_ros2cli_30358``) publie"
+" sur le sujet ``/turtle1/cmd_vel``, et est reçu par le ``ros2 topic echo "
+"...`` (``/_ros2cli_26646``) et le nœud ``/turtlesim`` maintenant."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:282
+msgid ""
+"Finally, you can run ``echo`` on the ``pose`` topic and recheck rqt_graph:"
+msgstr ""
+"Enfin, vous pouvez exécuter ``echo`` sur le sujet ``pose`` et revérifier "
+"rqt_graph :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:290
+msgid ""
+"You can see that the ``/turtlesim`` node is also publishing to the ``pose`` "
+"topic, which the new ``echo`` node is subscribed to."
+msgstr ""
+"Vous pouvez voir que le nœud ``/turtlesim`` publie également dans le sujet "
+"``pose``, auquel le nouveau nœud ``echo`` est abonné."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:293
+msgid "8 ros2 topic hz"
+msgstr "8 sujet ros2 hz"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:295
+msgid ""
+"For one last introspection on this process, you can view the rate at which "
+"data is published using:"
+msgstr ""
+"Pour une dernière introspection sur ce processus, vous pouvez visualiser le "
+"rythme auquel les données sont publiées à l'aide de :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:301
+msgid ""
+"It will return data on the rate at which the ``/turtlesim`` node is "
+"publishing data to the ``pose`` topic."
+msgstr ""
+"Il renverra des données sur la vitesse à laquelle le nœud ``/turtlesim`` "
+"publie des données dans le sujet ``pose``."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:308
+msgid ""
+"Recall that you set the rate of ``turtle1/cmd_vel`` to publish at a steady 1"
+" Hz using ``ros2 topic pub --rate 1``. If you run the above command with "
+"``turtle1/cmd_vel`` instead of ``turtle1/pose``, you will see an average "
+"reflecting that rate."
+msgstr ""
+"Rappelez-vous que vous avez défini le taux de ``turtle1/cmd_vel`` pour "
+"publier à 1 Hz constant en utilisant ``ros2 topic pub --rate 1``. Si vous "
+"exécutez la commande ci-dessus avec ``turtle1/cmd_vel`` au lieu de "
+"``turtle1/pose``, vous verrez une moyenne reflétant ce taux."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:316
+msgid "9 Clean up"
+msgstr "9 Nettoyer"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:318
+msgid ""
+"At this point you'll have a lot of nodes running. Don’t forget to stop them "
+"by entering ``Ctrl+C`` in each terminal."
+msgstr ""
+"À ce stade, vous aurez beaucoup de nœuds en cours d'exécution. N'oubliez pas"
+" de les arrêter en tapant ``Ctrl+C`` dans chaque terminal."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:322
+msgid "Summary"
+msgstr "Résumé"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:324
+msgid ""
+"Nodes publish information over topics, which allows any number of other "
+"nodes to subscribe to and access that information. In this tutorial you "
+"examined the connections between several nodes over topics using rqt_graph "
+"and command line tools. You should now have a good idea of how data moves "
+"around a ROS 2 system."
+msgstr ""
+"Les nœuds publient des informations sur des sujets, ce qui permet à "
+"n'importe quel nombre d'autres nœuds de s'abonner et d'accéder à ces "
+"informations. Dans ce didacticiel, vous avez examiné les connexions entre "
+"plusieurs nœuds sur des sujets à l'aide de rqt_graph et des outils de ligne "
+"de commande. Vous devriez maintenant avoir une bonne idée de la façon dont "
+"les données se déplacent dans un système ROS 2."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:329
+msgid "Next steps"
+msgstr "Prochaines étapes"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.rst:331
+msgid ""
+"Next you'll learn about another communication type in the ROS graph with the"
+" tutorial :doc:`../Understanding-ROS2-Services/Understanding-ROS2-Services`"
+msgstr ""
+"Ensuite, vous découvrirez un autre type de communication dans le graphe ROS "
+"avec le tutoriel :doc:`../Understanding-ROS2-Services/Understanding-"
+"ROS2-Services`"

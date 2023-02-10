@@ -1,0 +1,187 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 14:06:41.909362\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Concepts/About-RQt.rst:9
+msgid "Overview and usage of RQt"
+msgstr "Présentation et utilisation de RQt"
+
+#: ../../source/Concepts/About-RQt.rst:13
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/Concepts/About-RQt.rst:16
+msgid "Overview"
+msgstr "Aperçu"
+
+#: ../../source/Concepts/About-RQt.rst:18
+msgid ""
+"RQt is a graphical user interface framework that implements various tools "
+"and interfaces in the form of plugins. One can run all the existing GUI "
+"tools as dockable windows within RQt! The tools can still run in a "
+"traditional standalone method, but RQt makes it easier to manage all the "
+"various windows in a single screen layout."
+msgstr ""
+"RQt est un framework d'interface utilisateur graphique qui implémente divers"
+" outils et interfaces sous la forme de plugins. On peut exécuter tous les "
+"outils graphiques existants en tant que fenêtres ancrables dans RQt ! Les "
+"outils peuvent toujours fonctionner dans une méthode autonome "
+"traditionnelle, mais RQt facilite la gestion de toutes les différentes "
+"fenêtres dans une disposition d'écran unique."
+
+#: ../../source/Concepts/About-RQt.rst:22
+msgid "You can run any RQt tools/plugins easily by:"
+msgstr "Vous pouvez exécuter facilement tous les outils/plugins RQt en :"
+
+#: ../../source/Concepts/About-RQt.rst:28
+msgid ""
+"This GUI allows you to choose any available plugins on your system. You can "
+"also run plugins in standalone windows. For example, RQt Python Console:"
+msgstr ""
+"Cette interface graphique vous permet de choisir tous les plugins "
+"disponibles sur votre système. Vous pouvez également exécuter des plugins "
+"dans des fenêtres autonomes. Par exemple, la console Python RQt :"
+
+#: ../../source/Concepts/About-RQt.rst:36
+msgid ""
+"Users can create their own plugins for RQt with either ``Python`` or "
+"``C++``. To see what RQt plugins are available for your system, run:"
+msgstr ""
+"Les utilisateurs peuvent créer leurs propres plugins pour RQt avec "
+"``Python`` ou ``C++``. Pour voir quels plugins RQt sont disponibles pour "
+"votre système, exécutez :"
+
+#: ../../source/Concepts/About-RQt.rst:43
+msgid "And then look for packages that start with ``rqt_``."
+msgstr "Ensuite, recherchez les packages commençant par ``rqt_``."
+
+#: ../../source/Concepts/About-RQt.rst:46
+msgid "System setup"
+msgstr "Installation du système"
+
+#: ../../source/Concepts/About-RQt.rst:49
+msgid "Installing From Debian"
+msgstr "Installation à partir de Debian"
+
+#: ../../source/Concepts/About-RQt.rst:57
+msgid "Building From Source"
+msgstr "Construire à partir de la source"
+
+#: ../../source/Concepts/About-RQt.rst:59
+msgid ""
+"See :doc:`Building RQt from Source <../How-To-Guides/RQt-Source-Install>`."
+msgstr ""
+"Voir :doc:`Building RQt from Source <../How-To-Guides/RQt-Source-Install>`."
+
+#: ../../source/Concepts/About-RQt.rst:62
+msgid "RQt Components Structure"
+msgstr "Structure des composants RQt"
+
+#: ../../source/Concepts/About-RQt.rst:64
+msgid "RQt consists of two metapackages:"
+msgstr "RQt se compose de deux métapaquets :"
+
+#: ../../source/Concepts/About-RQt.rst:66
+msgid "*rqt* - core infrastucture modules."
+msgstr "*rqt* - modules d'infrastructure de base."
+
+#: ../../source/Concepts/About-RQt.rst:67
+msgid "*rqt_common_plugins* - Commonly useful debugging tools."
+msgstr "*rqt_common_plugins* - Outils de débogage couramment utiles."
+
+#: ../../source/Concepts/About-RQt.rst:70
+msgid "Advantage of RQt framework"
+msgstr "Avantage du framework RQt"
+
+#: ../../source/Concepts/About-RQt.rst:72
+msgid "Compared to building your own GUIs from scratch:"
+msgstr ""
+"Par rapport à la création de vos propres interfaces graphiques à partir de "
+"rien :"
+
+#: ../../source/Concepts/About-RQt.rst:74
+msgid ""
+"Standardized common procedures for GUI (start-shutdown hook, restore "
+"previous states)."
+msgstr ""
+"Procédures communes standardisées pour l'interface graphique (crochet de "
+"démarrage-arrêt, restauration des états précédents)."
+
+#: ../../source/Concepts/About-RQt.rst:75
+msgid "Multiple widgets can be docked in a single window."
+msgstr "Plusieurs widgets peuvent être ancrés dans une seule fenêtre."
+
+#: ../../source/Concepts/About-RQt.rst:76
+msgid "Easily turn your existing Qt widgets into RQt plugins."
+msgstr "Transformez facilement vos widgets Qt existants en plugins RQt."
+
+#: ../../source/Concepts/About-RQt.rst:77
+msgid ""
+"Expect support at `ROS Answers <https://answers.ros.org>`__ (ROS community "
+"website for the questions)."
+msgstr ""
+"Attendez-vous à une assistance sur `ROS Answers <https://answers.ros.org>`__"
+" (site Web de la communauté ROS pour les questions)."
+
+#: ../../source/Concepts/About-RQt.rst:79
+msgid "From system architecture's perspective:"
+msgstr "Du point de vue de l'architecture système :"
+
+#: ../../source/Concepts/About-RQt.rst:81
+msgid ""
+"Support multi-platform (basically wherever `QT <http://qt-project.org/>`__ "
+"and ROS run) and multi-language (``Python``, ``C++``)."
+msgstr ""
+"Prise en charge multi-plateforme (essentiellement partout où `QT <http://qt-"
+"project.org/>`__ et ROS s'exécutent) et multi-langage (``Python``, ``C++``)."
+
+#: ../../source/Concepts/About-RQt.rst:82
+msgid ""
+"Manageable lifecycle: RQt plugins using common API makes maintainance & "
+"reuse easier."
+msgstr ""
+"Cycle de vie gérable : les plugins RQt utilisant une API commune facilitent "
+"la maintenance et la réutilisation."
+
+#: ../../source/Concepts/About-RQt.rst:86
+msgid "Further Reading"
+msgstr "Lectures complémentaires"
+
+#: ../../source/Concepts/About-RQt.rst:88
+msgid ""
+"ROS 2 Discourse `announcment of porting to ROS 2 "
+"<https://discourse.ros.org/t/rqt-in-ros2/6428>`__)."
+msgstr ""
+"ROS 2 Discourse `annonce de portage vers ROS 2 "
+"<https://discourse.ros.org/t/rqt-in-ros2/6428>`__)."
+
+#: ../../source/Concepts/About-RQt.rst:89
+msgid "`RQt for ROS 1 documentation <https://wiki.ros.org/rqt>`__."
+msgstr "`Documentation RQt pour ROS 1 <https://wiki.ros.org/rqt>`__."
+
+#: ../../source/Concepts/About-RQt.rst:90
+msgid ""
+"Brief overview of RQt (from `a Willow Garage intern blog post "
+"<http://web.archive.org/web/20130518142837/http://www.willowgarage.com/blog/2012/10/21/ros-"
+"gui>`__)."
+msgstr ""
+"Bref aperçu de RQt (tiré d'un article de blog d'un stagiaire de Willow "
+"Garage "
+"<http://web.archive.org/web/20130518142837/http://www.willowgarage.com/blog/2012/10/21/ros-"
+"gui> `__)."

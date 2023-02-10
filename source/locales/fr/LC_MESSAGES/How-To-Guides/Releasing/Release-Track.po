@@ -1,0 +1,308 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 17:02:42.192495\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:2
+msgid "Release Track"
+msgstr "Piste de sortie"
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:6
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:11
+msgid "What is a Track?"
+msgstr "Qu'est-ce qu'une piste ?"
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:13
+msgid ""
+"Bloom requires the user to enter configuration information when releasing "
+"packages for the first time. It is beneficial to store such configurations "
+"in the release repository so we don't have to manually enter configurations "
+"that won't change for subsequent releases."
+msgstr ""
+"Bloom demande à l'utilisateur d'entrer des informations de configuration "
+"lors de la première publication de packages. Il est avantageux de stocker "
+"ces configurations dans le référentiel de version afin que nous n'ayons pas "
+"à entrer manuellement des configurations qui ne changeront pas pour les "
+"versions ultérieures."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:16
+msgid ""
+"Since some of the configurations will differ when releasing the package for "
+"different ROS distributions, bloom uses **release tracks to store the "
+"configurations for releasing** per distribution. By convention you should "
+"create tracks with the same name as the ROS distro you are releasing for."
+msgstr ""
+"Étant donné que certaines configurations différeront lors de la publication "
+"du package pour différentes distributions ROS, bloom utilise des **pistes de"
+" publication pour stocker les configurations à publier** par distribution. "
+"Par convention, vous devez créer des pistes avec le même nom que la "
+"distribution ROS pour laquelle vous publiez."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:19
+msgid ""
+"All release track configurations are stored in ``tracks.yaml`` on the master"
+" branch of your release repository."
+msgstr ""
+"Toutes les configurations de piste de version sont stockées dans "
+"``tracks.yaml`` sur la branche principale de votre référentiel de version."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:22
+msgid "Track Configurations"
+msgstr "Configurations de piste"
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:24
+msgid ""
+"Track configurations are explained in more detail along with the prompts "
+"from bloom."
+msgstr ""
+"Les configurations de piste sont expliquées plus en détail avec les invites "
+"de bloom."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:29
+msgid "Release Repository url"
+msgstr "URL du référentiel de versions"
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:31
+msgid ""
+"This is the url of your release repository, and should be of form "
+"``https://github.com/ros2-gbp/my_repo-release.git`` if your release "
+"repository is hosted on ros2-gbp."
+msgstr ""
+"Il s'agit de l'URL de votre référentiel de version et doit être de la forme "
+"``https://github.com/ros2-gbp/my_repo-release.git`` si votre référentiel de "
+"version est hébergé sur ros2-gbp."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:38
+msgid "Paste your release repository URL and press Enter."
+msgstr "Collez l'URL de votre référentiel de versions et appuyez sur Entrée."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:40
+msgid ""
+"Bloom may additionally ask you about initializing the new repository, as "
+"following:"
+msgstr ""
+"Bloom peut également vous demander d'initialiser le nouveau référentiel, "
+"comme suit :"
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:48
+msgid "Simply press Enter to accept the default of yes."
+msgstr ""
+"Appuyez simplement sur Entrée pour accepter la valeur par défaut de oui."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:53
+msgid "Repository Name"
+msgstr "Nom du référentiel"
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:55
+msgid ""
+"The repository name is trivial, but it is recommended to set this to the "
+"name of your project."
+msgstr ""
+"Le nom du référentiel est trivial, mais il est recommandé de le définir sur "
+"le nom de votre projet."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:66
+msgid "Type the name of your project (eg. ``my_project``) and press Enter."
+msgstr ""
+"Tapez le nom de votre projet (par exemple, ``my_project``) et appuyez sur "
+"Entrée."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:71
+msgid "Upstream Repository URI"
+msgstr "URI du référentiel en amont"
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:73
+msgid ""
+"The **upstream repository** is the repository where your source code is. "
+"This is most likely an https link to your project hosted on a git hosting "
+"service such as GitHub or GitLab."
+msgstr ""
+"Le **dépôt en amont** est le dépôt où se trouve votre code source. Il s'agit"
+" très probablement d'un lien https vers votre projet hébergé sur un service "
+"d'hébergement git tel que GitHub ou GitLab."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:85
+msgid ""
+"Make sure you **use the https address** (eg. "
+"``https://github.com/my_organization/my_repo.git``) and not the ssh address."
+msgstr ""
+"Assurez-vous d'**utiliser l'adresse https** (par exemple, "
+"``https://github.com/my_organization/my_repo.git``) et non l'adresse ssh."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:90
+msgid "Upstream VCS Type"
+msgstr "Type de VCS en amont"
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:92
+msgid ""
+"This is the `Upstream Repository URI`_'s version control system (VCS) type. "
+"You must specify the type of vcs your repository is using, from  ``svn``, "
+"``git``, ``hg`` or ``tar``."
+msgstr ""
+"Il s'agit du type de système de contrôle de version (VCS) de l'`Upstream "
+"Repository URI`_. Vous devez spécifier le type de vcs que votre référentiel "
+"utilise, parmi ``svn``, ``git``, ``hg`` ou ``tar``."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:108
+msgid ""
+"Most repositories will be using git, but some legacy repositories might be "
+"using hg or svn."
+msgstr ""
+"La plupart des référentiels utiliseront git, mais certains référentiels "
+"hérités pourraient utiliser hg ou svn."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:113
+msgid "Version"
+msgstr "Version"
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:115
+msgid "This is the version of the package you are releasing. (eg. ``1.0.3``)"
+msgstr "Il s'agit de la version du package que vous publiez. (ex. ``1.0.3``)"
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:132
+msgid ""
+"Setting this to ``:{auto}`` (the default, and recommended setup) will "
+"automatically determine the version from the devel branch's package.xml."
+msgstr ""
+"Définir ceci sur ``:{auto}`` (la configuration par défaut et recommandée) "
+"déterminera automatiquement la version à partir du fichier package.xml de la"
+" branche de développement."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:134
+msgid ""
+"Setting this to ``:{ask}`` will bring up a prompt asking for the version "
+"every time you run a release with bloom."
+msgstr ""
+"Définir ceci sur ``:{ask}`` fera apparaître une invite demandant la version "
+"chaque fois que vous exécutez une version avec bloom."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:139
+msgid "Release Tag"
+msgstr "Étiquette de version"
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:141
+msgid ""
+"The Release Tag refers to which tag or branch you want to import the code "
+"from."
+msgstr ""
+"La balise de version fait référence à la balise ou à la branche à partir de "
+"laquelle vous souhaitez importer le code."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:162
+msgid ""
+"Setting this to ``:{version}`` (the default, and recommended setup) will "
+"make the release tag match the version tag."
+msgstr ""
+"Définir ceci sur ``:{version}`` (la configuration par défaut et recommandée)"
+" fera correspondre la balise de version à la balise de version."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:164
+msgid ""
+"A less common setup is to set this to a branch name to always pull in that "
+"branch at the time of release from the upstream project."
+msgstr ""
+"Une configuration moins courante consiste à définir ceci sur un nom de "
+"branche pour toujours extraire cette branche au moment de la publication du "
+"projet en amont."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:166
+msgid ""
+"Alternatively, if you want to be prompted to enter a different tag every "
+"time you do a release, enter ``:{ask}``. ``:{ask}`` is useful if the "
+"upstream project has frequent tagged releases and you want to refer to the "
+"new tag every time you're releasing."
+msgstr ""
+"Alternativement, si vous souhaitez être invité à saisir une balise "
+"différente à chaque fois que vous effectuez une publication, saisissez "
+"``:{ask}``. ``:{ask}`` est utile si le projet en amont a de fréquentes "
+"versions étiquetées et que vous souhaitez vous référer à la nouvelle "
+"étiquette à chaque fois que vous publiez."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:172
+msgid "Upstream Devel Branch"
+msgstr "Branche de développement en amont"
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:174
+msgid ""
+"The upstream devel branch is the name of the branch in your :ref:`upstream "
+"repository <upstream-repository-uri>`. If you use separate branches for each"
+" ROS distribution, this field would be different for each release track. It "
+"is used to determine the version of the package you are releasing when "
+":ref:`Version` is set to ``:{auto}``."
+msgstr ""
+"La branche de développement en amont est le nom de la branche dans votre "
+":ref:`dépôt en amont <upstream-repository-uri>`. Si vous utilisez des "
+"branches distinctes pour chaque distribution ROS, ce champ sera différent "
+"pour chaque piste de version. Il est utilisé pour déterminer la version du "
+"package que vous publiez lorsque :ref:`Version` est défini sur ``:{auto}``."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:186
+msgid ""
+"To release from a branch called ``rolling``, enter ``rolling``. Leaving this"
+" as ``None`` would result in the version being determined from the default "
+"branch of your repository (this is not recommended)."
+msgstr ""
+"Pour libérer d'une branche appelée ``rolling``, entrez ``rolling``. Laisser "
+"ceci sur ``None`` entraînerait la détermination de la version à partir de la"
+" branche par défaut de votre référentiel (ce n'est pas recommandé)."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:192
+msgid "ROS Distro"
+msgstr "Distribution ROS"
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:194
+msgid ""
+"This is the distribution you're planning on releasing the package into."
+msgstr ""
+"Il s'agit de la distribution dans laquelle vous prévoyez de publier le "
+"paquet."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:203
+msgid "If you plan on releasing into ROS rolling, enter ``rolling``."
+msgstr "Si vous envisagez de publier dans ROS Rolling, entrez ``rolling``."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:208
+msgid "Patches Directory"
+msgstr "Répertoire des correctifs"
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:210
+msgid ""
+"This is the directory where any additional patches to the releases are."
+msgstr ""
+"Il s'agit du répertoire où se trouvent tous les correctifs supplémentaires "
+"aux versions."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:225
+msgid ""
+"Adding additional patches to a release is a rarely used feature. For almost "
+"all packages, this should be left as the default ``None``."
+msgstr ""
+"L'ajout de correctifs supplémentaires à une version est une fonctionnalité "
+"rarement utilisée. Pour presque tous les packages, cela devrait être laissé "
+"par défaut ``None``."
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:231
+msgid "Release Repository Push URL"
+msgstr "Publier l'URL push du référentiel"
+
+#: ../../source/How-To-Guides/Releasing/Release-Track.rst:245
+msgid "Can be left as the default in most cases."
+msgstr "Peut être laissé par défaut dans la plupart des cas."

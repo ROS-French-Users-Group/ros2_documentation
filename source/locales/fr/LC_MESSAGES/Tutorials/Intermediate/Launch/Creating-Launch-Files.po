@@ -1,0 +1,386 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 12:02:13.816412\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:7
+msgid "Creating a launch file"
+msgstr "Création d'un fichier de lancement"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:9
+msgid "**Goal:** Create a launch file to run a complex ROS 2 system."
+msgstr ""
+"**Objectif :** Créer un fichier de lancement pour exécuter un système ROS 2 "
+"complexe."
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:11
+msgid "**Tutorial level:** Intermediate"
+msgstr "**Niveau du didacticiel :** Intermédiaire"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:13
+msgid "**Time:** 10 minutes"
+msgstr "**Durée :** 10 minutes"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:17
+msgid "Contents"
+msgstr "Contenu"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:20
+msgid "Prerequisites"
+msgstr "Conditions préalables"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:22
+msgid ""
+"This tutorial uses the :doc:`rqt_graph and turtlesim <../../Beginner-CLI-"
+"Tools/Introducing-Turtlesim/Introducing-Turtlesim>` packages."
+msgstr ""
+"Ce tutoriel utilise les packages :doc:`rqt_graph et turtlesim "
+"<../../Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim>`."
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:24
+msgid "You will also need to use a text editor of your preference."
+msgstr "Vous devrez également utiliser un éditeur de texte de votre choix."
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:26
+msgid ""
+"As always, don’t forget to source ROS 2 in :doc:`every new terminal you open"
+" <../../Beginner-CLI-Tools/Configuring-ROS2-Environment>`."
+msgstr ""
+"Comme toujours, n'oubliez pas de sourcer ROS 2 dans :doc:`chaque nouveau "
+"terminal que vous ouvrez <../../Beginner-CLI-Tools/Configuring-"
+"ROS2-Environment>`."
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:29
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:31
+msgid ""
+"The launch system in ROS 2 is responsible for helping the user describe the "
+"configuration of their system and then execute it as described. The "
+"configuration of the system includes what programs to run, where to run "
+"them, what arguments to pass them, and ROS-specific conventions which make "
+"it easy to reuse components throughout the system by giving them each a "
+"different configuration. It is also responsible for monitoring the state of "
+"the processes launched, and reporting and/or reacting to changes in the "
+"state of those processes."
+msgstr ""
+"Le système de lancement de ROS 2 est chargé d'aider l'utilisateur à décrire "
+"la configuration de son système, puis de l'exécuter comme décrit. La "
+"configuration du système comprend les programmes à exécuter, où les "
+"exécuter, les arguments à transmettre et les conventions spécifiques à ROS "
+"qui facilitent la réutilisation des composants dans tout le système en leur "
+"donnant à chacun une configuration différente. Il est également chargé de "
+"surveiller l'état des processus lancés, de signaler et/ou de réagir aux "
+"changements d'état de ces processus."
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:35
+msgid ""
+"Launch files written in Python, XML, or YAML can start and stop different "
+"nodes as well as trigger and act on various events. See :doc:`../../../How-"
+"To-Guides/Launch-file-different-formats` for a description of the different "
+"formats. The package providing this framework is ``launch_ros``, which uses "
+"the non-ROS-specific ``launch`` framework underneath."
+msgstr ""
+"Les fichiers de lancement écrits en Python, XML ou YAML peuvent démarrer et "
+"arrêter différents nœuds ainsi que déclencher et agir sur divers événements."
+" Voir :doc:`../../../How-To-Guides/Launch-file-different-formats` pour une "
+"description des différents formats. Le package fournissant ce framework est "
+"``launch_ros``, qui utilise le framework ``launch`` non spécifique à ROS en "
+"dessous."
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:39
+msgid ""
+"The `design document <https://design.ros2.org/articles/roslaunch.html>`__ "
+"details the goal of the design of ROS 2's launch system (not all "
+"functionality is currently available)."
+msgstr ""
+"Le `document de conception "
+"<https://design.ros2.org/articles/roslaunch.html>`__ détaille l'objectif de "
+"la conception du système de lancement de ROS 2 (toutes les fonctionnalités "
+"ne sont pas actuellement disponibles)."
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:42
+msgid "Tasks"
+msgstr "Tâches"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:45
+msgid "1 Setup"
+msgstr "1 Configuration"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:47
+msgid "Create a new directory to store your launch files:"
+msgstr "Créez un nouveau répertoire pour stocker vos fichiers de lancement :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:54
+msgid "2 Write the launch file"
+msgstr "2 Écrivez le fichier de lancement"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:56
+msgid ""
+"Let’s put together a ROS 2 launch file using the ``turtlesim`` package and "
+"its executables. As mentioned above, this can either be in Python, XML, or "
+"YAML."
+msgstr ""
+"Constituons un fichier de lancement ROS 2 en utilisant le package "
+"``turtlesim`` et ses exécutables. Comme mentionné ci-dessus, cela peut être "
+"en Python, XML ou YAML."
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:61
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:162
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:272
+msgid "Python"
+msgstr "Python"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:63
+msgid ""
+"Copy and paste the complete code into the "
+"``launch/turtlesim_mimic_launch.py`` file:"
+msgstr ""
+"Copiez et collez le code complet dans le fichier "
+"``launch/turtlesim_mimic_launch.py`` :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:95
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:211
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:279
+msgid "XML"
+msgstr "XML"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:97
+msgid ""
+"Copy and paste the complete code into the "
+"``launch/turtlesim_mimic_launch.xml`` file:"
+msgstr ""
+"Copiez et collez le code complet dans le fichier "
+"``launch/turtlesim_mimic_launch.xml`` :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:110
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:229
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:286
+msgid "YAML"
+msgstr "YAML"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:112
+msgid ""
+"Copy and paste the complete code into the "
+"``launch/turtlesim_mimic_launch.yaml`` file:"
+msgstr ""
+"Copiez et collez le code complet dans le fichier "
+"``launch/turtlesim_mimic_launch.yaml`` :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:144
+msgid "2.1 Examine the launch file"
+msgstr "2.1 Examiner le fichier de lancement"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:146
+msgid ""
+"All of the launch files above are launching a system of three nodes, all "
+"from the ``turtlesim`` package. The goal of the system is to launch two "
+"turtlesim windows, and have one turtle mimic the movements of the other."
+msgstr ""
+"Tous les fichiers de lancement ci-dessus lancent un système de trois nœuds, "
+"tous issus du package ``turtlesim``. Le but du système est de lancer deux "
+"fenêtres de simulation de tortues et de faire en sorte qu'une tortue imite "
+"les mouvements de l'autre."
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:149
+msgid ""
+"When launching the two turtlesim nodes, the only difference between them is "
+"their namespace values. Unique namespaces allow the system to start two "
+"nodes without node name or topic name conflicts. Both turtles in this system"
+" receive commands over the same topic and publish their pose over the same "
+"topic. With unique namespaces, messages meant for different turtles can be "
+"distinguished."
+msgstr ""
+"Lors du lancement des deux nœuds turtlesim, la seule différence entre eux "
+"réside dans leurs valeurs d'espace de noms. Les espaces de noms uniques "
+"permettent au système de démarrer deux nœuds sans conflit de nom de nœud ou "
+"de nom de rubrique. Les deux tortues de ce système reçoivent des commandes "
+"sur le même sujet et publient leur pose sur le même sujet. Avec des espaces "
+"de noms uniques, les messages destinés à différentes tortues peuvent être "
+"distingués."
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:154
+msgid ""
+"The final node is also from the ``turtlesim`` package, but a different "
+"executable: ``mimic``. This node has added configuration details in the form"
+" of remappings. ``mimic``'s ``/input/pose`` topic is remapped to "
+"``/turtlesim1/turtle1/pose`` and it's ``/output/cmd_vel`` topic to "
+"``/turtlesim2/turtle1/cmd_vel``. This means ``mimic`` will subscribe to "
+"``/turtlesim1/sim``'s pose topic and republish it for ``/turtlesim2/sim``'s "
+"velocity command topic to subscribe to. In other words, ``turtlesim2`` will "
+"mimic ``turtlesim1``'s movements."
+msgstr ""
+"Le nœud final provient également du package ``turtlesim``, mais un "
+"exécutable différent : ``mimic``. Ce nœud a ajouté des détails de "
+"configuration sous la forme de remappages. Le sujet ``/input/pose`` de "
+"``mimic`` est remappé sur ``/turtlesim1/turtle1/pose`` et c'est le sujet "
+"``/output/cmd_vel`` sur ``/turtlesim2/turtle1/cmd_vel` `. Cela signifie que "
+"``mimic`` s'abonnera au sujet de pose de ``/turtlesim1/sim`` et le "
+"republiera pour le sujet de commande de vélocité de ``/turtlesim2/sim`` "
+"auquel s'abonner. En d'autres termes, ``turtlesim2`` imitera les mouvements "
+"de ``turtlesim1``."
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:164
+msgid "These import statements pull in some Python ``launch`` modules."
+msgstr ""
+"Ces instructions d'importation récupèrent certains modules Python "
+"``launch``."
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:171
+msgid "Next, the launch description itself begins:"
+msgstr "Ensuite, la description de lancement elle-même commence :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:180
+msgid ""
+"The first two actions in the launch description launch the two turtlesim "
+"windows:"
+msgstr ""
+"Les deux premières actions de la description de lancement lancent les deux "
+"fenêtres turtlesim :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:197
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:220
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:248
+msgid "The final action launches the mimic node with the remaps:"
+msgstr "L'action finale lance le nœud mimique avec les remappages :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:213
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:231
+msgid "The first two actions launch the two turtlesim windows:"
+msgstr "Les deux premières actions lancent les deux fenêtres turtlesim :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:266
+msgid "3 ros2 launch"
+msgstr "lancement de 3 ros2"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:268
+msgid ""
+"To run the launch file created above, enter into the directory you created "
+"earlier and run the following command:"
+msgstr ""
+"Pour exécuter le fichier de lancement créé ci-dessus, entrez dans le "
+"répertoire que vous avez créé précédemment et exécutez la commande "
+"suivante :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:295
+msgid ""
+"It is possible to launch a launch file directly (as we do above), or "
+"provided by a package. When it is provided by a package, the syntax is:"
+msgstr ""
+"Il est possible de lancer un fichier de lancement directement (comme nous le"
+" faisons plus haut), ou fourni par un package. Lorsqu'il est fourni par un "
+"package, la syntaxe est :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:302
+msgid ""
+"You learned about creating packages in :doc:`../../Beginner-Client-"
+"Libraries/Creating-Your-First-ROS2-Package`."
+msgstr ""
+"Vous avez appris à créer des packages dans :doc:`../../Beginner-Client-"
+"Libraries/Creating-Your-First-ROS2-Package`."
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:306
+msgid ""
+"For packages with launch files, it is a good idea to add an ``exec_depend`` "
+"dependency on the ``ros2launch`` package in your package's ``package.xml``:"
+msgstr ""
+"Pour les paquets avec des fichiers de lancement, c'est une bonne idée "
+"d'ajouter une dépendance ``exec_depend`` sur le paquet ``ros2launch`` dans "
+"le ``package.xml`` de votre paquet :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:312
+msgid ""
+"This helps make sure that the ``ros2 launch`` command is available after "
+"building your package. It also ensures that all :doc:`launch file formats "
+"<../../../How-To-Guides/Launch-file-different-formats>` are recognized."
+msgstr ""
+"Cela permet de s'assurer que la commande ``ros2 launch`` est disponible "
+"après la construction de votre package. Il garantit également que tous les "
+":doc:`formats de fichier de lancement <../../../How-To-Guides/Launch-file-"
+"different-formats>` sont reconnus."
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:315
+msgid ""
+"Two turtlesim windows will open, and you will see the following ``[INFO]`` "
+"messages telling you which nodes your launch file has started:"
+msgstr ""
+"Deux fenêtres turtlesim s'ouvriront et vous verrez les messages ``[INFO]`` "
+"suivants vous indiquant quels nœuds votre fichier de lancement a démarré :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:324
+msgid ""
+"To see the system in action, open a new terminal and run the ``ros2 topic "
+"pub`` command on the ``/turtlesim1/turtle1/cmd_vel`` topic to get the first "
+"turtle moving:"
+msgstr ""
+"Pour voir le système en action, ouvrez un nouveau terminal et exécutez la "
+"commande ``ros2 topic pub`` sur le sujet ``/turtlesim1/turtle1/cmd_vel`` "
+"pour faire bouger la première tortue :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:330
+msgid "You will see both turtles following the same path."
+msgstr "Vous verrez les deux tortues suivre le même chemin."
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:335
+msgid "4 Introspect the system with rqt_graph"
+msgstr "4 Introspecter le système avec rqt_graph"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:337
+msgid ""
+"While the system is still running, open a new terminal and run ``rqt_graph``"
+" to get a better idea of the relationship between the nodes in your launch "
+"file."
+msgstr ""
+"Pendant que le système est toujours en cours d'exécution, ouvrez un nouveau "
+"terminal et exécutez ``rqt_graph`` pour avoir une meilleure idée de la "
+"relation entre les nœuds dans votre fichier de lancement."
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:339
+msgid "Run the command:"
+msgstr "Exécutez la commande :"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:347
+msgid ""
+"A hidden node (the ``ros2 topic pub`` command you ran) is publishing data to"
+" the ``/turtlesim1/turtle1/cmd_vel`` topic on the left, which the "
+"``/turtlesim1/sim`` node is subscribed to. The rest of the graph shows what "
+"was described earlier: ``mimic`` is subscribed to ``/turtlesim1/sim``'s pose"
+" topic, and publishes to ``/turtlesim2/sim``'s velocity command topic."
+msgstr ""
+"Un nœud caché (la commande ``ros2 topic pub`` que vous avez exécutée) publie"
+" des données dans le sujet ``/turtlesim1/turtle1/cmd_vel`` à gauche, auquel "
+"le nœud ``/turtlesim1/sim`` est abonné. . Le reste du graphique montre ce "
+"qui a été décrit précédemment : ``mimic`` est abonné au sujet de pose de "
+"``/turtlesim1/sim`` et publie dans le sujet de commande de vélocité de "
+"``/turtlesim2/sim``."
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:351
+msgid "Summary"
+msgstr "Résumé"
+
+#: ../../source/Tutorials/Intermediate/Launch/Creating-Launch-Files.rst:353
+msgid ""
+"Launch files simplify running complex systems with many nodes and specific "
+"configuration details. You can create launch files using Python, XML, or "
+"YAML, and run them using the ``ros2 launch`` command."
+msgstr ""
+"Les fichiers de lancement simplifient l'exécution de systèmes complexes avec"
+" de nombreux nœuds et des détails de configuration spécifiques. Vous pouvez "
+"créer des fichiers de lancement à l'aide de Python, XML ou YAML et les "
+"exécuter à l'aide de la commande ``ros2 launch``."

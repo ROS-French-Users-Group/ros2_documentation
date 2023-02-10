@@ -1,0 +1,377 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 11:53:38.851039\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:7
+msgid "Implementing a custom memory allocator"
+msgstr "Implémentation d'un répartiteur de mémoire personnalisé"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:9
+msgid ""
+"**Goal:** This tutorial will show how to use a custom memory allocator when "
+"writing ROS 2 C++ code."
+msgstr ""
+"**Objectif :** Ce didacticiel montre comment utiliser un répartiteur de "
+"mémoire personnalisé lors de l'écriture de code ROS 2 C++."
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:11
+msgid "**Tutorial level:** Advanced"
+msgstr "**Niveau du didacticiel :** Avancé"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:13
+msgid "**Time:** 20 minutes"
+msgstr "**Durée :** 20 minutes"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:17
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:19
+msgid ""
+"This tutorial will teach you how to integrate a custom allocator for "
+"publishers and subscribers so that the default heap allocator is never "
+"called while your ROS nodes are executing. The code for this tutorial is "
+"available `here "
+"<https://github.com/ros2/demos/blob/rolling/demo_nodes_cpp/src/topics/allocator_tutorial.cpp>`__."
+msgstr ""
+"Ce didacticiel vous apprendra comment intégrer un alternateur personnalisé "
+"pour les éditeurs et les abonnés afin que l'allocateur de tas par défaut ne "
+"soit jamais appelé pendant l'exécution de vos nœuds ROS. Le code de ce "
+"tutoriel est disponible `ici "
+"<https://github.com/ros2/demos/blob/rolling/demo_nodes_cpp/src/topics/allocator_tutorial.cpp>`__."
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:23
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:25
+msgid ""
+"Suppose you want to write real-time safe code, and you've heard about the "
+"many dangers of calling \"new\" during the real-time critical section, "
+"because the default heap allocator on most platforms is nondeterministic."
+msgstr ""
+"Supposons que vous souhaitiez écrire du code sécurisé en temps réel et que "
+"vous ayez entendu parler des nombreux dangers liés à l'appel de \"new\" "
+"pendant la section critique en temps réel, car l'allocateur de tas par "
+"défaut sur la plupart des plates-formes n'est pas déterministe."
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:27
+msgid ""
+"By default, many C++ standard library structures will implicitly allocate "
+"memory as they grow, such as ``std::vector``. However, these data structures"
+" also accept an \"Allocator\" template argument. If you specify a custom "
+"allocator to one of these data structures, it will use that allocator for "
+"you instead of the system allocator to grow or shrink the data structure. "
+"Your custom allocator could have a pool of memory preallocated on the stack,"
+" which might be better suited to real-time applications."
+msgstr ""
+"Par défaut, de nombreuses structures de bibliothèques standard C++ "
+"alloueront implicitement de la mémoire au fur et à mesure de leur "
+"croissance, comme ``std::vector``. Cependant, ces structures de données "
+"acceptent également un argument de modèle \"Allocator\". Si vous spécifiez "
+"un alternateur personnalisé à l'une de ces structures de données, il "
+"utilisera cet alternateur pour vous au lieu de l'allocateur système pour "
+"agrandir ou réduire la structure de données. Votre alternateur personnalisé "
+"peut avoir un pool de mémoire préalloué sur la pile, ce qui peut être mieux "
+"adapté aux applications en temps réel."
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:29
+msgid ""
+"In the ROS 2 C++ client library (rclcpp), we are following a similar "
+"philosophy to the C++ standard library. Publishers, subscribers, and the "
+"Executor accept an Allocator template parameter that controls allocations "
+"made by that entity during execution."
+msgstr ""
+"Dans la bibliothèque cliente ROS 2 C++ (rclcpp), nous suivons une "
+"philosophie similaire à la bibliothèque standard C++. Les éditeurs, les "
+"abonnés et l'exécuteur acceptent un paramètre de modèle Allocator qui "
+"contrôle les allocations effectuées par cette entité lors de l'exécution."
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:32
+msgid "Writing an allocator"
+msgstr "Écrire un répartiteur"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:34
+msgid ""
+"To write an allocator compatible with ROS 2's allocator interface, your "
+"allocator must be compatible with the C++ standard library allocator "
+"interface."
+msgstr ""
+"Pour écrire un alternateur compatible avec l'interface d'allocation de ROS "
+"2, votre alternateur doit être compatible avec l'interface d'allocation de "
+"la bibliothèque standard C++."
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:36
+msgid ""
+"The C++11 library provides something called ``allocator_traits``. The C++11 "
+"standard specifies that a custom allocator only needs to fulfil a minimal "
+"set of requirements to be used to allocate and deallocate memory in a "
+"standard way. ``allocator_traits`` is a generic structure that fills out "
+"other qualities of an allocator based on an allocator written with the "
+"minimal requirements."
+msgstr ""
+"La bibliothèque C++11 fournit quelque chose appelé ``allocator_traits``. La "
+"norme C++11 spécifie qu'un alternateur personnalisé n'a besoin de remplir "
+"qu'un ensemble minimal d'exigences pour être utilisé pour allouer et libérer"
+" de la mémoire de manière standard. ``allocator_traits`` est une structure "
+"générique qui remplit d'autres qualités d'un alternateur basé sur un "
+"alternateur écrit avec les exigences minimales."
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:38
+msgid ""
+"For example, the following declaration for a custom allocator would satisfy "
+"``allocator_traits`` (of course, you would still need to implement the "
+"declared functions in this struct):"
+msgstr ""
+"Par exemple, la déclaration suivante pour un alternateur personnalisé "
+"satisferait ``allocator_traits`` (bien sûr, vous devrez toujours implémenter"
+" les fonctions déclarées dans cette structure) :"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:57
+msgid ""
+"You could then access other functions and members of the allocator filled in"
+" by ``allocator_traits`` like so: "
+"``std::allocator_traits<custom_allocator<T>>::construct(...)``"
+msgstr ""
+"Vous pouvez ensuite accéder à d'autres fonctions et membres de l'allocateur "
+"remplis par ``allocator_traits`` comme ceci : "
+"``std::allocator_traits<custom_allocator<T>>::construct(...)``"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:59
+msgid ""
+"To learn about the full capabilities of ``allocator_traits``, see "
+"https://en.cppreference.com/w/cpp/memory/allocator_traits ."
+msgstr ""
+"Pour en savoir plus sur toutes les fonctionnalités de ``allocator_traits``, "
+"consultez https://en.cppreference.com/w/cpp/memory/allocator_traits ."
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:61
+msgid ""
+"However, some compilers that only have partial C++11 support, such as GCC "
+"4.8, still require allocators to implement a lot of boilerplate code to work"
+" with standard library structures such as vectors and strings, because these"
+" structures do not use ``allocator_traits`` internally. Therefore, if you're"
+" using a compiler with partial C++11 support, your allocator will need to "
+"look more like this:"
+msgstr ""
+"Cependant, certains compilateurs qui n'ont qu'une prise en charge partielle "
+"de C++11, tels que GCC 4.8, nécessitent toujours que les allocateurs "
+"implémentent beaucoup de code passe-partout pour fonctionner avec des "
+"structures de bibliothèque standard telles que des vecteurs et des chaînes, "
+"car ces structures n'utilisent pas `` allocator_traits `` en interne. Par "
+"conséquent, si vous utilisez un compilateur avec une prise en charge "
+"partielle de C++11, votre alternateur devra ressembler davantage à ceci :"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:111
+msgid "Writing an example main"
+msgstr "Rédaction d'un exemple principal"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:113
+msgid ""
+"Once you have written a valid C++ allocator, you must pass it as a shared "
+"pointer to your publisher, subscriber, and executor."
+msgstr ""
+"Une fois que vous avez écrit un répartiteur C++ valide, vous devez le "
+"transmettre en tant que pointeur partagé à votre éditeur, abonné et "
+"exécuteur."
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:129
+msgid ""
+"You will also need to use your allocator to allocate any messages that you "
+"pass along the execution codepath."
+msgstr ""
+"Vous devrez également utiliser votre alternateur pour allouer tous les "
+"messages que vous transmettez le long du chemin de code d'exécution."
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:135
+msgid ""
+"Once you've instantiated the node and added the executor to the node, it's "
+"time to spin:"
+msgstr ""
+"Une fois que vous avez instancié le nœud et ajouté l'exécuteur au nœud, il "
+"est temps de lancer :"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:149
+msgid "Passing an allocator to the intra-process pipeline"
+msgstr "Passer un alternateur au pipeline intra-processus"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:151
+msgid ""
+"Even though we instantiated a publisher and subscriber in the same process, "
+"we aren't using the intra-process pipeline yet."
+msgstr ""
+"Même si nous avons instancié un éditeur et un abonné dans le même processus,"
+" nous n'utilisons pas encore le pipeline intra-processus."
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:153
+msgid ""
+"The IntraProcessManager is a class that is usually hidden from the user, but"
+" in order to pass a custom allocator to it we need to expose it by getting "
+"it from the rclcpp Context. The IntraProcessManager makes use of several "
+"standard library structures, so without a custom allocator it will call the "
+"default new."
+msgstr ""
+"L'IntraProcessManager est une classe qui est généralement cachée à "
+"l'utilisateur, mais pour lui transmettre un alternateur personnalisé, nous "
+"devons l'exposer en l'obtenant à partir du contexte rclcpp. "
+"L'IntraProcessManager utilise plusieurs structures de bibliothèque standard,"
+" donc sans un alternateur personnalisé, il appellera le new par défaut."
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:164
+msgid ""
+"Make sure to instantiate publishers and subscribers AFTER constructing the "
+"node in this way."
+msgstr ""
+"Assurez-vous d'instancier les éditeurs et les abonnés APRÈS avoir construit "
+"le nœud de cette manière."
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:167
+msgid "Testing and verifying the code"
+msgstr "Tester et vérifier le code"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:169
+msgid "How do you know that your custom allocator is actually getting called?"
+msgstr ""
+"Comment savez-vous que votre répartiteur personnalisé est effectivement "
+"appelé ?"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:171
+msgid ""
+"The obvious thing to do would be to count the calls made to your custom "
+"allocator's ``allocate`` and ``deallocate`` functions and compare that to "
+"the calls to ``new`` and ``delete``."
+msgstr ""
+"La chose évidente à faire serait de compter les appels effectués aux "
+"fonctions ``allocate`` et ``deallocate`` de votre allocation personnalisée "
+"et de comparer cela aux appels à ``new`` et ``delete``."
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:173
+msgid "Adding counting to the custom allocator is easy:"
+msgstr "L'ajout du comptage à l'allocateur personnalisé est simple :"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:189
+msgid "You can also override the global new and delete operators:"
+msgstr ""
+"Vous pouvez également remplacer les opérateurs globaux new et delete :"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:213
+msgid ""
+"where the variables we are incrementing are just global static integers, and"
+" ``is_running`` is a global static boolean that gets toggled right before "
+"the call to ``spin``."
+msgstr ""
+"où les variables que nous incrémentons ne sont que des entiers statiques "
+"globaux, et ``is_running`` est un booléen statique global qui est basculé "
+"juste avant l'appel à ``spin``."
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:215
+msgid ""
+"The `example executable "
+"<https://github.com/ros2/demos/blob/rolling/demo_nodes_cpp/src/topics/allocator_tutorial.cpp>`__"
+" prints the value of the variables. To run the example executable, use:"
+msgstr ""
+"L'exemple d'exécutable "
+"<https://github.com/ros2/demos/blob/rolling/demo_nodes_cpp/src/topics/allocator_tutorial.cpp>`__"
+" affiche la valeur des variables. Pour exécuter l'exemple d'exécutable, "
+"utilisez :"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:221
+msgid "or, to run the example with the intra-process pipeline on:"
+msgstr "ou, pour exécuter l'exemple avec le pipeline intra-processus sur :"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:227
+msgid "You should get numbers like:"
+msgstr "Vous devriez obtenir des nombres comme :"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:236
+msgid ""
+"We've caught about 2/3 of the allocations/deallocations that happen on the "
+"execution path, but where do the remaining 1/3 come from?"
+msgstr ""
+"Nous avons détecté environ 2/3 des allocations/désallocations qui se "
+"produisent sur le chemin d'exécution, mais d'où vient le 1/3 restant ?"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:238
+msgid ""
+"As a matter of fact, these allocations/deallocations originate in the "
+"underlying DDS implementation used in this example."
+msgstr ""
+"En fait, ces allocations/désallocations proviennent de l'implémentation DDS "
+"sous-jacente utilisée dans cet exemple."
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:240
+msgid ""
+"Proving this is out of the scope of this tutorial, but you can check out the"
+" test for the allocation path that gets run as part of the ROS 2 continuous "
+"integration testing, which backtraces through the code and figures out "
+"whether certain function calls originate in the rmw implementation or in a "
+"DDS implementation:"
+msgstr ""
+"Prouver cela n'entre pas dans le cadre de ce didacticiel, mais vous pouvez "
+"consulter le test du chemin d'allocation qui est exécuté dans le cadre des "
+"tests d'intégration continue ROS 2, qui revient sur le code et détermine si "
+"certains appels de fonction proviennent du implémentation rmw ou dans une "
+"implémentation DDS :"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:242
+msgid ""
+"https://github.com/ros2/realtime_support/blob/rolling/tlsf_cpp/test/test_tlsf.cpp#L41"
+msgstr ""
+"https://github.com/ros2/realtime_support/blob/rolling/tlsf_cpp/test/test_tlsf.cpp#L41"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:244
+msgid ""
+"Note that this test is not using the custom allocator we just created, but "
+"the TLSF allocator (see below)."
+msgstr ""
+"Notez que ce test n'utilise pas l'allocateur personnalisé que nous venons de"
+" créer, mais l'allocateur TLSF (voir ci-dessous)."
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:247
+msgid "The TLSF allocator"
+msgstr "L'allocateur TLSF"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:249
+msgid ""
+"ROS 2 offers support for the TLSF (Two Level Segregate Fit) allocator, which"
+" was designed to meet real-time requirements:"
+msgstr ""
+"ROS 2 prend en charge l'allocateur TLSF (Two Level Segregate Fit), qui a été"
+" conçu pour répondre aux exigences en temps réel :"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:251
+msgid "https://github.com/ros2/realtime_support/tree/rolling/tlsf_cpp"
+msgstr "https://github.com/ros2/realtime_support/tree/rolling/tlsf_cpp"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:253
+msgid "For more information about TLSF, see http://www.gii.upv.es/tlsf/"
+msgstr "Pour plus d'informations sur TLSF, voir http://www.gii.upv.es/tlsf/"
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:255
+msgid ""
+"Note that the TLSF allocator is licensed under a dual-GPL/LGPL license."
+msgstr "Notez que l'allocateur TLSF est sous licence double GPL/LGPL."
+
+#: ../../source/Tutorials/Advanced/Allocator-Template-Tutorial.rst:257
+msgid ""
+"A full working example using the TLSF allocator is here: "
+"https://github.com/ros2/realtime_support/blob/rolling/tlsf_cpp/example/allocator_example.cpp"
+msgstr ""
+"Un exemple de travail complet utilisant l'allocateur TLSF est ici : "
+"https://github.com/ros2/realtime_support/blob/rolling/tlsf_cpp/example/allocator_example.cpp"

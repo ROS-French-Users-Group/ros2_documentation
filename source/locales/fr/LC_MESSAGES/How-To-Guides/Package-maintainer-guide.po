@@ -1,0 +1,530 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 17:23:04.605518\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:6
+msgid "ROS 2 Package Maintainer Guide"
+msgstr "Guide du responsable du paquet ROS 2"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:8
+msgid ""
+"Each package in the ROS 2 core has one or more maintainers that are "
+"responsibile for the general health of the package. This guide gives some "
+"information about the responsibilities of a ROS 2 core package maintainer."
+msgstr ""
+"Chaque paquet du noyau ROS 2 a un ou plusieurs mainteneurs qui sont "
+"responsables de la santé générale du paquet. Ce guide donne des informations"
+" sur les responsabilités d'un mainteneur de paquet de base ROS 2."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:12
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:15
+msgid "Reviews"
+msgstr "Commentaires"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:17
+msgid ""
+"All incoming code to ROS 2 core repositories must be reviewed. The review is"
+" looking for:"
+msgstr ""
+"Tout le code entrant dans les référentiels principaux de ROS 2 doit être "
+"examiné. La revue recherche :"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:20
+msgid "Suitability in the package"
+msgstr "Convenance dans le paquet"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:21
+msgid "Correct code"
+msgstr "Code correct"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:22
+msgid "Conforms to developer guidelines:"
+msgstr "Conforme aux directives du développeur :"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:24
+msgid ""
+":doc:`Developer Guide <../The-ROS2-Project/Contributing/Developer-Guide>`"
+msgstr ""
+":doc:`Guide du développeur <../The-ROS2-Project/Contributing/Developer-"
+"Guide>`"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:25
+msgid ""
+":doc:`Code Style Guide <../The-ROS2-Project/Contributing/Code-Style-"
+"Language-Versions>`"
+msgstr ""
+":doc:`Guide de style de code <../The-ROS2-Project/Contributing/Code-Style-"
+"Language-Versions>`"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:27
+msgid "Adds tests for the bug/feature"
+msgstr "Ajoute des tests pour le bogue/fonctionnalité"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:28
+msgid "Adds documentation for new features"
+msgstr "Ajoute de la documentation pour les nouvelles fonctionnalités"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:29
+msgid "Clean Continuous Integration run"
+msgstr "Nettoyer l'exécution de l'intégration continue"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:30
+msgid "Targets default branch (usually \"rolling\")"
+msgstr "Cible la branche par défaut (généralement \"rolling\")"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:31
+msgid "Has at least one approval from a maintainer that is not the author"
+msgstr "A au moins une approbation d'un mainteneur qui n'est pas l'auteur"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:34
+msgid "Continuous Integration"
+msgstr "Intégration continue"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:36
+msgid ""
+"All incoming code to ROS 2 core repositories must be run through Continuous "
+"Integration. ROS 2 currently has two separate CI systems, and it is required"
+" that PRs pass both of them before merging."
+msgstr ""
+"Tout le code entrant dans les référentiels principaux de ROS 2 doit être "
+"exécuté via l'intégration continue. ROS 2 dispose actuellement de deux "
+"systèmes CI distincts, et il est nécessaire que les PR réussissent les deux "
+"avant de fusionner."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:40
+msgid "PR builds (https://build.ros2.org/view/Rpr)"
+msgstr "Versions PR (https://build.ros2.org/view/Rpr)"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:42
+msgid ""
+"ROS 2 PR (Pull Request) builds run automatically every time a pull request "
+"is opened. These builds run a build and test of this package, and this "
+"package only. This means that it does not build any dependencies, and it "
+"also does not build any packages that depend upon this package. These builds"
+" are good for quick feedback to see if the change passes linters, unit "
+"tests, etc. There are two major problems with them:"
+msgstr ""
+"Les builds ROS 2 PR (Pull Request) s'exécutent automatiquement chaque fois "
+"qu'une pull request est ouverte. Ces builds exécutent une build et un test "
+"de ce package, et de ce package uniquement. Cela signifie qu'il ne construit"
+" aucune dépendance et qu'il ne construit aucun paquet qui dépend de ce "
+"paquet. Ces versions sont bonnes pour un retour rapide pour voir si le "
+"changement passe les linters, les tests unitaires, etc. Il y a deux "
+"problèmes majeurs avec eux :"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:48
+msgid ""
+"These builds do not work across multiple repositories (so won't work for "
+"adding or changing an API, etc)"
+msgstr ""
+"Ces versions ne fonctionnent pas sur plusieurs référentiels (elles ne "
+"fonctionneront donc pas pour ajouter ou modifier une API, etc.)"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:49
+msgid "These tests only run on Linux (they won't run on macOS or Windows)"
+msgstr ""
+"Ces tests ne fonctionnent que sur Linux (ils ne fonctionneront pas sur macOS"
+" ou Windows)"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:51
+msgid "To address these two problems, there is also the CI builds."
+msgstr "Pour résoudre ces deux problèmes, il existe également les builds CI."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:54
+msgid "CI builds (https://ci.ros2.org)"
+msgstr "Versions CI (https://ci.ros2.org)"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:56
+msgid ""
+"CI builds do not run automatically when a pull request is opened. One of the"
+" maintainers of the package must manually request that a CI build is done by"
+" going to https://ci.ros2.org/job/ci_launcher/ ."
+msgstr ""
+"Les builds de CI ne s'exécutent pas automatiquement lorsqu'une demande "
+"d'extraction est ouverte. L'un des mainteneurs du paquet doit demander "
+"manuellement qu'une construction CI soit effectuée en allant sur "
+"https://ci.ros2.org/job/ci_launcher/ ."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:59
+msgid ""
+"By default, running a job in this way will build and run tests for all "
+"packages (> 300 currently) on all platforms (Linux, macOS, and Windows). As "
+"a full run can take many hours and tie up the CI machines, it is recommended"
+" that all runs here restrict the number of packages that are built and "
+"tested. This can be accomplished by using the colcon arguments ``--packages-"
+"up-to``, ``--packages-select``, ``--packages-above-and-dependencies``, "
+"``--packages-above``, amongst others. See the `colcon documentation "
+"<https://colcon.readthedocs.io/en/released/user/how-to.html#build-only-a-"
+"single-package-or-selected-packages>`__ for more examples on the flags that "
+"can be used. Further documentation on how to use the CI machinery is "
+"available at https://github.com/ros2/ci/blob/master/CI_BUILDERS.md."
+msgstr ""
+"Par défaut, exécuter une tâche de cette manière générera et exécutera des "
+"tests pour tous les packages (> 300 actuellement) sur toutes les plates-"
+"formes (Linux, macOS et Windows). Comme une exécution complète peut prendre "
+"plusieurs heures et immobiliser les machines CI, il est recommandé que "
+"toutes les exécutions ici limitent le nombre de packages construits et "
+"testés. Ceci peut être accompli en utilisant les arguments colcon "
+"``--packages-up-to``, ``--packages-select``, ``--packages-above-and-"
+"dependencies``, ``--packages -above``, entre autres. Voir la `documentation "
+"colcon <https://colcon.readthedocs.io/en/released/user/how-to.html#build-"
+"only-a-single-package-or-selected-packages>`__ pour plus d'exemples sur les "
+"drapeaux qui peuvent être utilisés. Une documentation supplémentaire sur "
+"l'utilisation des machines CI est disponible sur "
+"https://github.com/ros2/ci/blob/master/CI_BUILDERS.md."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:66
+msgid "Merging Pull Requests"
+msgstr "Fusionner les demandes d'extraction"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:68
+msgid "A pull request can be merged if all of the following are true:"
+msgstr ""
+"Une demande d'extraction peut être fusionnée si toutes les conditions "
+"suivantes sont remplies :"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:70
+msgid "The DCO bot reports a passing result"
+msgstr "Le bot DCO signale un résultat positif"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:71
+msgid "The PR build reports a passing result"
+msgstr "La version PR rapporte un résultat satisfaisant"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:72
+msgid "The CI build reports a passing result on all platforms"
+msgstr ""
+"La version CI signale un résultat satisfaisant sur toutes les plates-formes"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:73
+msgid "The code has been reviewed and approved by at least one maintainer"
+msgstr "Le code a été revu et approuvé par au moins un mainteneur"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:75
+msgid ""
+"After a PR is merged, it will automatically get built with the next "
+"`nightlies <https://ci.ros2.org/view/nightly>`__. It is highly recommended "
+"to check the nightlies after merging pull requests to ensure no regressions "
+"have occurred."
+msgstr ""
+"Une fois qu'un PR est fusionné, il sera automatiquement construit avec les "
+"prochains `nightlies <https://ci.ros2.org/view/nightly>`__. Il est fortement"
+" recommandé de vérifier les nightlies après la fusion des pull requests pour"
+" s'assurer qu'aucune régression ne s'est produite."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:79
+msgid "Keeping CI green"
+msgstr "Garder le CI vert"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:81
+msgid ""
+"The nightly jobs that run tests are typically much more comprehensive than "
+"what is done for individual pull requests. For this reason, there can be "
+"regressions that occur in the nightlies that were not seen in the CI jobs. "
+"It is a package maintainers responsibility to check for regressions in their"
+" packages at the following locations:"
+msgstr ""
+"Les tâches nocturnes qui exécutent des tests sont généralement beaucoup plus"
+" complètes que ce qui est fait pour les demandes d'extraction individuelles."
+" Pour cette raison, il peut y avoir des régressions qui se produisent dans "
+"les nightlies qui n'ont pas été observées dans les emplois CI. C'est la "
+"responsabilité des mainteneurs de paquets de vérifier les régressions dans "
+"leurs paquets aux emplacements suivants :"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:85
+msgid "https://ci.ros2.org/view/nightly"
+msgstr "https://ci.ros2.org/view/nightly"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:86
+msgid "https://ci.ros2.org/view/packaging"
+msgstr "https://ci.ros2.org/view/packaging"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:87
+msgid "https://build.ros2.org/view/Rci"
+msgstr "https://build.ros2.org/view/Rci"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:88
+msgid "https://build.ros2.org/view/Rdev"
+msgstr "https://build.ros2.org/view/Rdev"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:90
+msgid ""
+"For any problems that are found, new issues and/or pull requests on the "
+"relevant repositories should be opened."
+msgstr ""
+"Pour tout problème détecté, de nouveaux problèmes et/ou demandes "
+"d'extraction sur les référentiels concernés doivent être ouverts."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:93
+msgid "Making releases"
+msgstr "Faire des communiqués"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:95
+msgid ""
+"In order to get new features and bugfixes out to end users, the package "
+"maintainers must periodically do a release of the package (a release may "
+"also be requested on-demand from other maintainers)."
+msgstr ""
+"Afin d'obtenir de nouvelles fonctionnalités et des corrections de bogues "
+"pour les utilisateurs finaux, les responsables du paquet doivent "
+"périodiquement faire une version du paquet (une version peut également être "
+"demandée à la demande par d'autres responsables)."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:97
+msgid ""
+"As outlined in the :ref:`developer guide <semver>`, ROS 2 packages follow "
+"semver for version numbers."
+msgstr ""
+"Comme indiqué dans le :ref:`guide du développeur <semver>`, les packages ROS"
+" 2 suivent semver pour les numéros de version."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:99
+msgid ""
+"A release in ROS terms consists of two distinct steps: making a source "
+"release, and then making a binary release."
+msgstr ""
+"Une version en termes ROS se compose de deux étapes distinctes : créer une "
+"version source, puis créer une version binaire."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:102
+msgid "Source release"
+msgstr "Version source"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:104
+msgid ""
+"A source release creates a changelog and a tag in the relevant repository."
+msgstr ""
+"Une version source crée un journal des modifications et une balise dans le "
+"référentiel concerné."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:106
+msgid ""
+"The process starts by generating or updating CHANGELOG.rst files with the "
+"following command:"
+msgstr ""
+"Le processus commence par générer ou mettre à jour les fichiers "
+"CHANGELOG.rst avec la commande suivante :"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:112
+msgid ""
+"If one or more packages in the repository don't have contain CHANGELOG.rst, "
+"add the ``--all`` option to populate all of the previous commits for each "
+"package. The ``catkin_generate_changelog`` command will simply populate the "
+"files with the commit logs from the repository. Since those commit logs "
+"aren't always appropriate for a changelog, it is recommended to edit "
+"CHANGELOG.rst and edit it to make it more readable. Once editing is done, it"
+" is important to commit the updated CHANGELOG.rst file to the repository."
+msgstr ""
+"Si un ou plusieurs packages du référentiel ne contiennent pas CHANGELOG.rst,"
+" ajoutez l'option ``--all`` pour remplir tous les commits précédents pour "
+"chaque package. La commande ``catkin_generate_changelog`` remplira "
+"simplement les fichiers avec les journaux de validation du référentiel. "
+"Étant donné que ces journaux de validation ne sont pas toujours appropriés "
+"pour un journal des modifications, il est recommandé de modifier "
+"CHANGELOG.rst et de le modifier pour le rendre plus lisible. Une fois la "
+"modification effectuée, il est important de valider le fichier CHANGELOG.rst"
+" mis à jour dans le référentiel."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:117
+msgid ""
+"The next step is to bump the version in the package.xml and the changelog "
+"files with the following command:"
+msgstr ""
+"L'étape suivante consiste à remonter la version dans le package.xml et les "
+"fichiers changelog avec la commande suivante :"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:123
+msgid ""
+"This command will find all of the packages in the repository, check that the"
+" changelogs exist, check that there are no uncommitted local changes, "
+"increment the version in the package.xml files, and commit/tag the changes "
+"with a bloom-compatible tag. Using this command is the best way to ensure "
+"the release versions are consistent and compatible with bloom. By default, "
+"``catkin_prepare_release`` will bump the patch version of the packages, e.g."
+" 0.1.1 -> 0.1.2 . However, it can also bump the minor or major number, or "
+"even have an exact version set. See the help output from "
+"``catkin_prepare_release`` for more information."
+msgstr ""
+"Cette commande trouvera tous les packages dans le référentiel, vérifiera que"
+" les journaux des modifications existent, vérifiera qu'il n'y a pas de "
+"modifications locales non validées, incrémentera la version dans les "
+"fichiers package.xml et validera/marquera les modifications avec une balise "
+"compatible bloom. L'utilisation de cette commande est le meilleur moyen de "
+"s'assurer que les versions de publication sont cohérentes et compatibles "
+"avec bloom. Par défaut, ``catkin_prepare_release`` remplacera la version "
+"corrigée des packages, par ex. 0.1.1 -> 0.1.2 . Cependant, il peut également"
+" remplacer le numéro mineur ou majeur, ou même avoir un ensemble de versions"
+" exactes. Voir la sortie d'aide de ``catkin_prepare_release`` pour plus "
+"d'informations."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:129
+msgid "Assuming the above was successful, a source release has been made."
+msgstr ""
+"En supposant que ce qui précède a réussi, une version source a été créée."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:132
+msgid "Binary release"
+msgstr "Version binaire"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:134
+msgid ""
+"The next step is to use the ``bloom-release`` command to create a binary "
+"release. For full instructions on how to use bloom, please see "
+"http://wiki.ros.org/bloom. To do a binary release of a package, run:"
+msgstr ""
+"L'étape suivante consiste à utiliser la commande ``bloom-release`` pour "
+"créer une version binaire. Pour des instructions complètes sur l'utilisation"
+" de bloom, veuillez consulter http://wiki.ros.org/bloom. Pour faire une "
+"version binaire d'un paquet, exécutez :"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:142
+msgid ""
+"For instance, to release the ``rclcpp`` repository to the Rolling "
+"distribution, the command would be:"
+msgstr ""
+"Par exemple, pour publier le référentiel ``rclcpp`` dans la distribution "
+"Rolling, la commande serait :"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:148
+msgid ""
+"This command will fetch the release repository, make the necessary changes "
+"to make the release, push the changes to the release repository, and finally"
+" open a pull request to https://github.com/ros/rosdistro ."
+msgstr ""
+"Cette commande récupère le référentiel de version, apporte les modifications"
+" nécessaires pour effectuer la version, envoie les modifications au "
+"référentiel de version et enfin ouvre une demande d'extraction sur "
+"https://github.com/ros/rosdistro ."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:151
+msgid "Backporting to released distributions"
+msgstr "Rétroportage vers les distributions publiées"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:153
+msgid ""
+"All incoming changes should first land on the development branch. Once a "
+"change has been merged onto the development branch, it can be considered for"
+" backporting to released distributions. However, any backported code must "
+"not break `API <https://en.wikipedia.org/wiki/API>`__ or `ABI "
+"<https://en.wikipedia.org/wiki/Application_binary_interface>`__ in a "
+"released distribution. If a change can be backported without breaking API or"
+" ABI, then a new pull request targeting the appropriate branch should be "
+"created. The new pull request should be added to the appropriate "
+"distributions project board at https://github.com/orgs/ros2/projects. The "
+"new pull request should have all of the steps run as before, but making sure"
+" to target the distribution in question for CI, etc."
+msgstr ""
+"Toutes les modifications entrantes doivent d'abord atterrir sur la branche "
+"de développement. Une fois qu'un changement a été fusionné dans la branche "
+"de développement, il peut être envisagé de le rétroporter vers les "
+"distributions publiées. Cependant, tout code rétroporté ne doit pas casser "
+"`API <https://en.wikipedia.org/wiki/API>`__ ou `ABI "
+"<https://en.wikipedia.org/wiki/Application_binary_interface>`__ dans une "
+"version publiée Distribution. Si une modification peut être rétroportée sans"
+" casser l'API ou l'ABI, une nouvelle demande d'extraction ciblant la branche"
+" appropriée doit être créée. La nouvelle demande d'extraction doit être "
+"ajoutée au tableau de projet des distributions appropriées à l'adresse "
+"https://github.com/orgs/ros2/projects. La nouvelle pull request doit avoir "
+"toutes les étapes exécutées comme avant, mais en veillant à cibler la "
+"distribution en question pour CI, etc."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:161
+msgid "Responding to issues"
+msgstr "Répondre aux problèmes"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:163
+msgid ""
+"Package maintainers should also look at incoming issues on the repository "
+"and triage the problems that users are having."
+msgstr ""
+"Les mainteneurs de paquets doivent également examiner les problèmes entrants"
+" sur le référentiel et trier les problèmes rencontrés par les utilisateurs."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:165
+msgid ""
+"For issues that look like questions, the issue should be closed and the user"
+" redirected to https://answers.ros.org."
+msgstr ""
+"Pour les problèmes qui ressemblent à des questions, le problème doit être "
+"fermé et l'utilisateur redirigé vers https://answers.ros.org."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:167
+msgid ""
+"If an issue looks like a problem, but is not relevant to this particular "
+"repository, it should be moved to the appropriate repository with the GitHub"
+" \"Transfer issue\" button."
+msgstr ""
+"Si un problème ressemble à un problème, mais n'est pas pertinent pour ce "
+"référentiel particulier, il doit être déplacé vers le référentiel approprié "
+"avec le bouton GitHub \"Transférer le problème\"."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:169
+msgid ""
+"If the reporter has not provided enough information to determine the cause "
+"of the problem, more information should be requested from the reporter."
+msgstr ""
+"Si le déclarant n'a pas fourni suffisamment d'informations pour déterminer "
+"la cause du problème, il doit lui demander plus d'informations."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:171
+msgid "If this is a new feature, tag the issue with \"help-wanted\"."
+msgstr ""
+"S'il s'agit d'une nouvelle fonctionnalité, marquez le problème avec \"help-"
+"wanted\"."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:173
+msgid ""
+"Any remaining issues should be reproduced, and determined if they are truly "
+"a bug. If it is a bug, fixes are highly appreciated."
+msgstr ""
+"Tous les problèmes restants doivent être reproduits et déterminés s'il "
+"s'agit vraiment d'un bogue. S'il s'agit d'un bogue, les correctifs sont très"
+" appréciés."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:177
+msgid "Getting help"
+msgstr "Obtenir de l'aide"
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:179
+msgid ""
+"While doing maintenance on a package, questions about general procedures or "
+"individual issues may come up."
+msgstr ""
+"Lors de la maintenance d'un package, des questions sur les procédures "
+"générales ou des problèmes individuels peuvent survenir."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:181
+msgid ""
+"For general questions, please follow the :doc:`contributing guidelines "
+"<../The-ROS2-Project/Contributing>`."
+msgstr ""
+"Pour les questions générales, veuillez suivre les :doc:`consignes de "
+"contribution <../The-ROS2-Project/Contributing>`."
+
+#: ../../source/How-To-Guides/Package-maintainer-guide.rst:183
+msgid ""
+"For questions on individual issues, please tag the ROS 2 GitHub team "
+"(@ros/team), and someone on the team will take a look."
+msgstr ""
+"Pour des questions sur des problèmes individuels, veuillez étiqueter "
+"l'équipe ROS 2 GitHub (@ros/team), et un membre de l'équipe y jettera un "
+"coup d'œil."

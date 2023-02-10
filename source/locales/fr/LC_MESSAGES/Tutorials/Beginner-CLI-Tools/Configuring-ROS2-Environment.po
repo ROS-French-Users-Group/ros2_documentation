@@ -1,0 +1,369 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 11:50:38.452262\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:8
+msgid "Configuring environment"
+msgstr "Configuration de l'environnement"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:10
+msgid ""
+"**Goal:** This tutorial will show you how to prepare your ROS 2 environment."
+msgstr ""
+"**Objectif :** Ce tutoriel vous montrera comment préparer votre "
+"environnement ROS 2."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:12
+msgid "**Tutorial level:** Beginner"
+msgstr "**Niveau du tutoriel :** Débutant"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:14
+msgid "**Time:** 5 minutes"
+msgstr "**Durée :** 5 minutes"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:18
+msgid "Contents"
+msgstr "Contenu"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:21
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:23
+msgid ""
+"ROS 2 relies on the notion of combining workspaces using the shell "
+"environment. \"Workspace\" is a ROS term for the location on your system "
+"where you're developing with ROS 2. The core ROS 2 workspace is called the "
+"underlay. Subsequent local workspaces are called overlays. When developing "
+"with ROS 2, you will typically have several workspaces active concurrently."
+msgstr ""
+"ROS 2 repose sur la notion de combinaison d'espaces de travail à l'aide de "
+"l'environnement shell. \"Espace de travail\" est un terme ROS désignant "
+"l'emplacement de votre système où vous développez avec ROS 2. L'espace de "
+"travail principal de ROS 2 est appelé la sous-couche. Les espaces de travail"
+" locaux suivants sont appelés superpositions. Lors du développement avec ROS"
+" 2, vous aurez généralement plusieurs espaces de travail actifs "
+"simultanément."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:29
+msgid ""
+"Combining workspaces makes developing against different versions of ROS 2, "
+"or against different sets of packages, easier. It also allows the "
+"installation of several ROS 2 distributions (or “distros”, e.g. Dashing and "
+"Eloquent) on the same computer and switching between them."
+msgstr ""
+"La combinaison d'espaces de travail facilite le développement avec "
+"différentes versions de ROS 2 ou avec différents ensembles de packages. Il "
+"permet également l'installation de plusieurs distributions ROS 2 (ou "
+"\"distros\", par exemple Dashing et Eloquent) sur le même ordinateur et de "
+"basculer entre elles."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:32
+msgid ""
+"This is accomplished by sourcing setup files every time you open a new "
+"shell, or by adding the source command to your shell startup script once. "
+"Without sourcing the setup files, you won’t be able to access ROS 2 "
+"commands, or find or use ROS 2 packages. In other words, you won’t be able "
+"to use ROS 2."
+msgstr ""
+"Ceci est accompli en recherchant les fichiers de configuration chaque fois "
+"que vous ouvrez un nouveau shell, ou en ajoutant la commande source à votre "
+"script de démarrage du shell une fois. Sans sourcer les fichiers "
+"d'installation, vous ne pourrez pas accéder aux commandes ROS 2, ni trouver "
+"ou utiliser les packages ROS 2. En d'autres termes, vous ne pourrez pas "
+"utiliser ROS 2."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:37
+msgid "Prerequisites"
+msgstr "Conditions préalables"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:39
+msgid ""
+"Before starting these tutorials, install ROS 2 by following the instructions"
+" on the ROS 2 :doc:`../../Installation` page."
+msgstr ""
+"Avant de commencer ces didacticiels, installez ROS 2 en suivant les "
+"instructions de la page ROS 2 :doc:`../../Installation`."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:41
+msgid ""
+"The commands used in this tutorial assume you followed the binary packages "
+"installation guide for your operating system (Debian packages for Linux). "
+"You can still follow along if you built from source, but the path to your "
+"setup files will likely be different. You also won't be able to use the "
+"``sudo apt install ros-<distro>-<package>`` command (used frequently in the "
+"beginner level tutorials) if you install from source."
+msgstr ""
+"Les commandes utilisées dans ce didacticiel supposent que vous avez suivi le"
+" guide d'installation des packages binaires pour votre système "
+"d'exploitation (packages Debian pour Linux). Vous pouvez toujours suivre si "
+"vous avez construit à partir de la source, mais le chemin d'accès à vos "
+"fichiers d'installation sera probablement différent. Vous ne pourrez pas non"
+" plus utiliser la commande ``sudo apt install ros-<distro>-<package>`` "
+"(utilisée fréquemment dans les didacticiels de niveau débutant) si vous "
+"installez à partir des sources."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:45
+msgid ""
+"If you are using Linux or macOS, but are not already familiar with the "
+"shell, `this tutorial <http://www.ee.surrey.ac.uk/Teaching/Unix/>`__ will "
+"help."
+msgstr ""
+"Si vous utilisez Linux ou macOS, mais que vous n'êtes pas encore familiarisé"
+" avec le shell, `ce tutoriel <http://www.ee.surrey.ac.uk/Teaching/Unix/>`__ "
+"vous aidera."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:48
+msgid "Tasks"
+msgstr "Tâches"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:51
+msgid "1 Source the setup files"
+msgstr "1 Source des fichiers d'installation"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:53
+msgid ""
+"You will need to run this command on every new shell you open to have access"
+" to the ROS 2 commands, like so:"
+msgstr ""
+"Vous devrez exécuter cette commande sur chaque nouveau shell que vous ouvrez"
+" pour avoir accès aux commandes ROS 2, comme ceci :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:57
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:88
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:131
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:169
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:216
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:65
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:96
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:137
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:181
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:228
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:71
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:104
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:143
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:193
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:240
+msgid "Windows"
+msgstr "les fenêtres"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:78
+msgid ""
+"The exact command depends on where you installed ROS 2. If you're having "
+"problems, ensure the file path leads to your installation."
+msgstr ""
+"La commande exacte dépend de l'endroit où vous avez installé ROS 2. Si vous "
+"rencontrez des problèmes, assurez-vous que le chemin du fichier mène à votre"
+" installation."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:82
+msgid "2 Add sourcing to your shell startup script"
+msgstr "2 Ajoutez le sourcing à votre script de démarrage du shell"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:84
+msgid ""
+"If you don’t want to have to source the setup file every time you open a new"
+" shell (skipping task 1), then you can add the command to your shell startup"
+" script:"
+msgstr ""
+"Si vous ne voulez pas avoir à sourcer le fichier de configuration à chaque "
+"fois que vous ouvrez un nouveau shell (en sautant la tâche 1), vous pouvez "
+"ajouter la commande à votre script de démarrage du shell :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:94
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:102
+msgid ""
+"To undo this, locate your system’s shell startup script and remove the "
+"appended source command."
+msgstr ""
+"Pour annuler cela, localisez le script de démarrage du shell de votre "
+"système et supprimez la commande source ajoutée."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:106
+msgid ""
+"Only for PowerShell users, create a folder in 'My Documents' called "
+"'WindowsPowerShell'. Within 'WindowsPowerShell', create file "
+"'Microsoft.PowerShell_profile.ps1'. Inside the file, paste:"
+msgstr ""
+"Uniquement pour les utilisateurs de PowerShell, créez un dossier dans 'Mes "
+"documents' appelé 'WindowsPowerShell'. Dans 'WindowsPowerShell', créez le "
+"fichier 'Microsoft.PowerShell_profile.ps1'. Dans le fichier, collez :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:114
+msgid ""
+"PowerShell will request permission to run this script everytime a new shell "
+"is opened. To avoid that issue you can run:"
+msgstr ""
+"PowerShell demandera l'autorisation d'exécuter ce script à chaque fois qu'un"
+" nouveau shell est ouvert. Pour éviter ce problème, vous pouvez exécuter :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:121
+msgid "To undo this, remove the new 'Microsoft.PowerShell_profile.ps1' file."
+msgstr ""
+"Pour annuler cela, supprimez le nouveau fichier "
+"« Microsoft.PowerShell_profile.ps1 »."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:124
+msgid "3 Check environment variables"
+msgstr "3 Vérifier les variables d'environnement"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:126
+msgid ""
+"Sourcing ROS 2 setup files will set several environment variables necessary "
+"for operating ROS 2. If you ever have problems finding or using your ROS 2 "
+"packages, make sure that your environment is properly setup using the "
+"following command:"
+msgstr ""
+"L'approvisionnement des fichiers d'installation de ROS 2 définira plusieurs "
+"variables d'environnement nécessaires au fonctionnement de ROS 2. Si vous "
+"rencontrez des problèmes pour trouver ou utiliser vos packages ROS 2, "
+"assurez-vous que votre environnement est correctement configuré à l'aide de "
+"la commande suivante :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:149
+msgid "Check that variables like ``ROS_DISTRO`` and ``ROS_VERSION`` are set."
+msgstr ""
+"Vérifiez que les variables telles que ``ROS_DISTRO`` et ``ROS_VERSION`` sont"
+" définies."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:157
+msgid ""
+"If the environment variables are not set correctly, return to the ROS 2 "
+"package installation section of the installation guide you followed. If you "
+"need more specific help (because environment setup files can come from "
+"different places), you can `get answers <https://answers.ros.org>`__ from "
+"the community."
+msgstr ""
+"Si les variables d'environnement ne sont pas définies correctement, revenez "
+"à la section d'installation du package ROS 2 du guide d'installation que "
+"vous avez suivi. Si vous avez besoin d'une aide plus spécifique (car les "
+"fichiers de configuration de l'environnement peuvent provenir de différents "
+"endroits), vous pouvez `obtenir des réponses <https://answers.ros.org>`__ de"
+" la communauté."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:161
+msgid "3.1 The ``ROS_DOMAIN_ID`` variable"
+msgstr "3.1 La variable ``ROS_DOMAIN_ID``"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:163
+msgid ""
+"See the `domain ID <../../Concepts/About-Domain-ID>` article for details on "
+"ROS domain IDs."
+msgstr ""
+"Consultez l'article `ID de domaine <../../Concepts/About-Domain-ID>` pour "
+"plus de détails sur les ID de domaine ROS."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:165
+msgid ""
+"Once you have determined a unique integer for your group of ROS 2 agents, "
+"you can set the environment variable with the following command:"
+msgstr ""
+"Une fois que vous avez déterminé un entier unique pour votre groupe d'agents"
+" ROS 2, vous pouvez définir la variable d'environnement avec la commande "
+"suivante :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:175
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:187
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:222
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:234
+msgid ""
+"To maintain this setting between shell sessions, you can add the command to "
+"your shell startup script:"
+msgstr ""
+"Pour conserver ce paramètre entre les sessions shell, vous pouvez ajouter la"
+" commande à votre script de démarrage shell :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:199
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:246
+msgid "If you want to make this permanent between shell sessions, also run:"
+msgstr ""
+"Si vous souhaitez rendre cela permanent entre les sessions shell, exécutez "
+"également :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:206
+msgid "3.2 The ``ROS_LOCALHOST_ONLY`` variable"
+msgstr "3.2 La variable ``ROS_LOCALHOST_ONLY``"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:208
+msgid ""
+"By default, ROS 2 communication is not limited to localhost. "
+"``ROS_LOCALHOST_ONLY`` environment variable allows you to limit ROS 2 "
+"communication to localhost only. This means your ROS 2 system, and its "
+"topics, services, and actions will not be visible to other computers on the "
+"local network. Using ``ROS_LOCALHOST_ONLY`` is helpful in certain settings, "
+"such as classrooms, where multiple robots may publish to the same topic "
+"causing strange behaviors. You can set the environment variable with the "
+"following command:"
+msgstr ""
+"Par défaut, la communication ROS 2 n'est pas limitée à localhost. La "
+"variable d'environnement ``ROS_LOCALHOST_ONLY`` vous permet de limiter la "
+"communication ROS 2 à localhost uniquement. Cela signifie que votre système "
+"ROS 2 et ses rubriques, services et actions ne seront pas visibles par les "
+"autres ordinateurs du réseau local. L'utilisation de ``ROS_LOCALHOST_ONLY`` "
+"est utile dans certains contextes, tels que les salles de classe, où "
+"plusieurs robots peuvent publier sur le même sujet, provoquant des "
+"comportements étranges. Vous pouvez définir la variable d'environnement avec"
+" la commande suivante :"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:254
+msgid "Summary"
+msgstr "Résumé"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:256
+msgid ""
+"The ROS 2 development environment needs to be correctly configured before "
+"use. This can be done in two ways: either sourcing the setup files in every "
+"new shell you open, or adding the source command to your startup script."
+msgstr ""
+"L'environnement de développement ROS 2 doit être correctement configuré "
+"avant utilisation. Cela peut être fait de deux manières : soit en vous "
+"procurant les fichiers d'installation dans chaque nouveau shell que vous "
+"ouvrez, soit en ajoutant la commande source à votre script de démarrage."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:259
+msgid ""
+"If you ever face any problems locating or using packages with ROS 2, the "
+"first thing you should do is check your environment variables and ensure "
+"they are set to the version and distro you intended."
+msgstr ""
+"Si vous rencontrez des problèmes pour localiser ou utiliser des packages "
+"avec ROS 2, la première chose à faire est de vérifier vos variables "
+"d'environnement et de vous assurer qu'elles sont définies sur la version et "
+"la distribution souhaitées."
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:262
+msgid "Next steps"
+msgstr "Prochaines étapes"
+
+#: ../../source/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.rst:264
+msgid ""
+"Now that you have a working ROS 2 installation and you know how to source "
+"its setup files, you can start learning the ins and outs of ROS 2 with the "
+":doc:`turtlesim tool <./Introducing-Turtlesim/Introducing-Turtlesim>`."
+msgstr ""
+"Maintenant que vous avez une installation de ROS 2 fonctionnelle et que vous"
+" savez comment trouver ses fichiers d'installation, vous pouvez commencer à "
+"apprendre les tenants et les aboutissants de ROS 2 avec l'outil "
+":doc:`turtlesim <./Introducing-Turtlesim/Introducing-Turtlesim>` ."

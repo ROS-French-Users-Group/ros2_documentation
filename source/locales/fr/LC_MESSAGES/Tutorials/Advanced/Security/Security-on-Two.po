@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 11:52:08.302804\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:8
+msgid "Ensuring security across machines"
+msgstr "Garantir la sécurité sur toutes les machines"
+
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:10
+msgid "**Goal:** Make two different machines communicate securely."
+msgstr ""
+"**Objectif :** Faire en sorte que deux machines différentes communiquent en "
+"toute sécurité."
+
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:12
+msgid "**Tutorial level:** Advanced"
+msgstr "**Niveau du didacticiel :** Avancé"
+
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:14
+msgid "**Time:** 5 minutes"
+msgstr "**Durée :** 5 minutes"
+
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:19
+msgid "Contents"
+msgstr "Contenu"
+
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:22
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:24
+msgid ""
+"The previous tutorials have used two ROS nodes on the same machine sending "
+"all network communications over the localhost interface. Let's extend that "
+"scenario to involve multiple machines, since the benefits of authentication "
+"and encryption then become more obvious."
+msgstr ""
+"Les tutoriels précédents ont utilisé deux nœuds ROS sur la même machine "
+"envoyant toutes les communications réseau via l'interface localhost. "
+"Étendons ce scénario pour impliquer plusieurs machines, car les avantages de"
+" l'authentification et du chiffrement deviennent alors plus évidents."
+
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:27
+msgid ""
+"Suppose that the machine with the keystore created in the previous demo has "
+"a hostname ``Alice``, and that we want to also use another machine with "
+"hostname ``Bob`` for our multi-machine ``talker/listener`` demo. We need to "
+"move some keys from ``Alice`` to ``Bob`` to allow SROS 2 to authenticate and"
+" encrypt the transmissions."
+msgstr ""
+"Supposons que la machine avec le keystore créé dans la démo précédente ait "
+"un nom d'hôte ``Alice``, et que nous voulions également utiliser une autre "
+"machine avec le nom d'hôte ``Bob`` pour notre démo multi-machine "
+"``talker/listener`` . Nous devons déplacer certaines clés de ``Alice`` à "
+"``Bob`` pour permettre à SROS 2 d'authentifier et de crypter les "
+"transmissions."
+
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:32
+msgid "Create the second keystore"
+msgstr "Créer le deuxième magasin de clés"
+
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:34
+msgid ""
+"Begin by creating an empty keystore on ``Bob``; the keystore is actually "
+"just an empty directory:"
+msgstr ""
+"Commencez par créer un keystore vide sur ``Bob`` ; le keystore n'est en fait"
+" qu'un répertoire vide :"
+
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:38
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:71
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:46
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:78
+msgid "MacOS"
+msgstr "Mac OS"
+
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:54
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:85
+msgid "Windows"
+msgstr "les fenêtres"
+
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:64
+msgid "Copy files"
+msgstr "Copier des fichiers"
+
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:66
+msgid ""
+"Next copy the keys and certificates for the ``talker`` program from "
+"``Alice`` to ``Bob``. Since the keys are just text files, we can use ``scp``"
+" to copy them."
+msgstr ""
+"Copiez ensuite les clés et les certificats du programme ``talker`` de "
+"``Alice`` à ``Bob``. Comme les clés ne sont que des fichiers texte, nous "
+"pouvons utiliser ``scp`` pour les copier."
+
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:92
+msgid ""
+"That will be very quick, since it's just copying some very small text files."
+" Now, we're ready to run a multi-machine talker/listener demo!"
+msgstr ""
+"Ce sera très rapide, car il ne s'agit que de copier de très petits fichiers "
+"texte. Maintenant, nous sommes prêts à exécuter une démo de "
+"locuteur/auditeur multi-machine !"
+
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:97
+msgid "Launch the nodes"
+msgstr "Lancer les nœuds"
+
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:99
+msgid "Once the environment is set up, run the talker on ``Bob``:"
+msgstr "Une fois l'environnement configuré, lancez le talker sur ``Bob`` :"
+
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:105
+msgid "and launch the listener on ``Alice``:"
+msgstr "et lancez l'écouteur sur ``Alice`` :"
+
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:111
+msgid "Alice will now be receiving encrypted messages from Bob."
+msgstr "Alice va maintenant recevoir des messages cryptés de Bob."
+
+#: ../../source/Tutorials/Advanced/Security/Security-on-Two.rst:113
+msgid ""
+"With two machines successfully communicating using both encryption and "
+"authentication, you can use the same procedure to add more machines to your "
+"ROS graph."
+msgstr ""
+"Avec deux machines communiquant avec succès en utilisant à la fois le "
+"cryptage et l'authentification, vous pouvez utiliser la même procédure pour "
+"ajouter plus de machines à votre graphique ROS."

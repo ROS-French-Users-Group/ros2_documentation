@@ -1,0 +1,350 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-03 19:47+0100\n"
+"PO-Revision-Date: 2023-02-09 05:45:45.634866\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:8
+msgid "Roadmap"
+msgstr "Feuille de route"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:12
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:14
+msgid ""
+"This page describes planned work for ROS 2. The set of planned features and "
+"development efforts should provide insight into the overall direction of ROS"
+" 2. If you would like to see other features on the roadmap, please get in "
+"touch with us at info@openrobotics.org."
+msgstr ""
+"Cette page décrit le travail prévu pour ROS 2. L'ensemble des "
+"fonctionnalités prévues et les efforts de développement devraient donner un "
+"aperçu de l'orientation générale de ROS 2. Si vous souhaitez voir d'autres "
+"fonctionnalités sur la feuille de route, veuillez nous contacter à "
+"info@openrobotics .org."
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:19
+msgid "Iron Roadmap"
+msgstr "Feuille de route du fer"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:21
+msgid ""
+"Iron Irwini is the ROS 2 release expected in May 2023. See :ref:`release "
+"<iron-release>` for a detailed timeline."
+msgstr ""
+"Iron Irwini est la version de ROS 2 attendue en mai 2023. Voir :ref:`release"
+" <iron-release>` pour une chronologie détaillée."
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:24
+msgid ""
+"The items in the roadmap below are the major features being worked on by the"
+" ROS 2 community. The \"Size\" is an estimated size of the task, where "
+"*Small* means person-days to complete, *Medium* means person-weeks to "
+"complete, and *Large* means person-months to complete."
+msgstr ""
+"Les éléments de la feuille de route ci-dessous sont les principales "
+"fonctionnalités sur lesquelles travaille la communauté ROS 2. La \"Taille\" "
+"est une estimation de la taille de la tâche, où *Petite* signifie des jours-"
+"personnes à terminer, *Moyenne* signifie des semaines-personnes à terminer "
+"et *Grande* signifie des mois-personnes à terminer."
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:27
+msgid ""
+"If you are working on a feature for ROS 2 Iron and would like to have it "
+"listed, please open a pull request to `ROS 2 Documentation "
+"<https://github.com/ros2/ros2_documentation>`__. If you'd like to take on "
+"one of these tasks, please :doc:`get in touch with us <../Contact>`."
+msgstr ""
+"Si vous travaillez sur une fonctionnalité pour ROS 2 Iron et que vous "
+"souhaitez qu'elle soit répertoriée, veuillez ouvrir une demande d'extraction"
+" à `Documentation ROS 2 <https://github.com/ros2/ros2_documentation>`__. Si "
+"vous souhaitez entreprendre l'une de ces tâches, veuillez :doc:`contactez-"
+"nous <../Contact>`."
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:42
+msgid "Task"
+msgstr "Tâche"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:43
+msgid "Size"
+msgstr "Taille"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:44
+msgid "Owner"
+msgstr "Propriétaire"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:45
+msgid "Expected Completion"
+msgstr "Achèvement prévu"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:46
+msgid "Various improvements and port of further functionality for Diagnostics"
+msgstr ""
+"Diverses améliorations et port de fonctionnalités supplémentaires pour les "
+"diagnostics"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:47
+#: ../../source/The-ROS2-Project/Roadmap.rst:51
+#: ../../source/The-ROS2-Project/Roadmap.rst:55
+#: ../../source/The-ROS2-Project/Roadmap.rst:71
+#: ../../source/The-ROS2-Project/Roadmap.rst:79
+#: ../../source/The-ROS2-Project/Roadmap.rst:83
+#: ../../source/The-ROS2-Project/Roadmap.rst:87
+#: ../../source/The-ROS2-Project/Roadmap.rst:91
+#: ../../source/The-ROS2-Project/Roadmap.rst:99
+#: ../../source/The-ROS2-Project/Roadmap.rst:111
+#: ../../source/The-ROS2-Project/Roadmap.rst:115
+msgid "Medium"
+msgstr "Moyen"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:48
+#: ../../source/The-ROS2-Project/Roadmap.rst:52
+#: ../../source/The-ROS2-Project/Roadmap.rst:56
+msgid "Bosch"
+msgstr "Bosch"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:49
+#: ../../source/The-ROS2-Project/Roadmap.rst:57
+#: ../../source/The-ROS2-Project/Roadmap.rst:65
+#: ../../source/The-ROS2-Project/Roadmap.rst:81
+#: ../../source/The-ROS2-Project/Roadmap.rst:89
+#: ../../source/The-ROS2-Project/Roadmap.rst:109
+#: ../../source/The-ROS2-Project/Roadmap.rst:113
+msgid "Q1 2023"
+msgstr "T1 2023"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:50
+msgid "License linter and copyright file generator for binary packages"
+msgstr ""
+"Linter de licence et générateur de fichiers de droits d'auteur pour les "
+"packages binaires"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:53
+#: ../../source/The-ROS2-Project/Roadmap.rst:85
+#: ../../source/The-ROS2-Project/Roadmap.rst:93
+#: ../../source/The-ROS2-Project/Roadmap.rst:97
+#: ../../source/The-ROS2-Project/Roadmap.rst:101
+#: ../../source/The-ROS2-Project/Roadmap.rst:105
+#: ../../source/The-ROS2-Project/Roadmap.rst:117
+msgid "Q2 2023"
+msgstr "Vomi 2023"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:54
+msgid "rclc Dispatcher Executor for non-POSIX OS"
+msgstr "rclc Dispatcher Executor pour les systèmes d'exploitation non POSIX"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:58
+msgid "Improve rclcpp executor performance"
+msgstr "Améliorer les performances de l'exécuteur rclcpp"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:59
+#: ../../source/The-ROS2-Project/Roadmap.rst:63
+#: ../../source/The-ROS2-Project/Roadmap.rst:103
+#: ../../source/The-ROS2-Project/Roadmap.rst:107
+msgid "Large"
+msgstr "Grand"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:60
+#: ../../source/The-ROS2-Project/Roadmap.rst:64
+#: ../../source/The-ROS2-Project/Roadmap.rst:68
+#: ../../source/The-ROS2-Project/Roadmap.rst:72
+#: ../../source/The-ROS2-Project/Roadmap.rst:76
+#: ../../source/The-ROS2-Project/Roadmap.rst:80
+#: ../../source/The-ROS2-Project/Roadmap.rst:84
+#: ../../source/The-ROS2-Project/Roadmap.rst:88
+#: ../../source/The-ROS2-Project/Roadmap.rst:92
+#: ../../source/The-ROS2-Project/Roadmap.rst:96
+#: ../../source/The-ROS2-Project/Roadmap.rst:100
+#: ../../source/The-ROS2-Project/Roadmap.rst:104
+msgid "Open Robotics"
+msgstr "Robotique ouverte"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:61
+#: ../../source/The-ROS2-Project/Roadmap.rst:69
+#: ../../source/The-ROS2-Project/Roadmap.rst:73
+#: ../../source/The-ROS2-Project/Roadmap.rst:77
+msgid "Q4 2022"
+msgstr "I4 2022"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:62
+msgid "DDS User Experience - Improve the out-of-the-box experience"
+msgstr "Expérience utilisateur DDS - Améliorez l'expérience prête à l'emploi"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:66
+msgid "DDS User Experience - Configuration of Initial Peers for Discovery"
+msgstr ""
+"Expérience utilisateur DDS - Configuration des homologues initiaux pour la "
+"découverte"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:67
+#: ../../source/The-ROS2-Project/Roadmap.rst:75
+#: ../../source/The-ROS2-Project/Roadmap.rst:95
+msgid "Small"
+msgstr "Petit"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:70
+msgid "DDS User Experience - Develop a configuration tool"
+msgstr "Expérience utilisateur DDS - Développer un outil de configuration"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:74
+msgid "Python per-package documentation generation"
+msgstr "Génération de documentation Python par paquet"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:78
+msgid "rclpy performance with large messages"
+msgstr "performances de rclpy avec des messages volumineux"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:82
+msgid "ROS 1 to ROS 2 migration documentation and tools"
+msgstr "Documentation et outils de migration ROS 1 vers ROS 2"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:86
+msgid "SDF integration"
+msgstr "Intégration SDF"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:90
+msgid "Better error message for launch (stretch goal)"
+msgstr "Meilleur message d'erreur pour le lancement (objectif extensible)"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:94
+msgid "Relaunch of individual nodes in a complex system (stretch goal)"
+msgstr ""
+"Relance de nœuds individuels dans un système complexe (objectif étendu)"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:98
+msgid "Logging configuration and features (stretch goal)"
+msgstr "Configuration et fonctionnalités de journalisation (objectif étendu)"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:102
+msgid "Iron release"
+msgstr "Libération de fer"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:106
+msgid ""
+"`ContentFiltering fallback in rcl "
+"<https://github.com/ros2/design/pull/282>`__"
+msgstr ""
+"`ContentFiltering fallback in rcl "
+"<https://github.com/ros2/design/pull/282>`__"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:108
+#: ../../source/The-ROS2-Project/Roadmap.rst:112
+#: ../../source/The-ROS2-Project/Roadmap.rst:116
+msgid "Sony Group Corporation"
+msgstr "Société du groupe Sony"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:110
+msgid ""
+"`on_pub/sub_matched callback support "
+"<https://github.com/ros2/rmw/issues/330>`__"
+msgstr ""
+"`prise en charge du rappel on_pub/sub_matched "
+"<https://github.com/ros2/rmw/issues/330>`__"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:114
+msgid "ROS 2 core ContentFiltering Enhancement"
+msgstr "Amélioration du filtrage de contenu de base ROS 2"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:119
+msgid "Additional project-specific roadmaps can be found in the links below:"
+msgstr ""
+"Des feuilles de route supplémentaires spécifiques au projet peuvent être "
+"trouvées dans les liens ci-dessous :"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:121
+msgid "MoveIt2: https://moveit.ros.org/documentation/contributing/roadmap/"
+msgstr "MoveIt2 : https://moveit.ros.org/documentation/contributing/roadmap/"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:122
+msgid "Nav2: https://navigation.ros.org/roadmap/roadmap.html"
+msgstr "Nav2 : https://navigation.ros.org/roadmap/roadmap.html"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:126
+msgid "Planned releases"
+msgstr "Sorties prévues"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:128
+msgid ""
+"Please see the :doc:`Distributions page <../Releases>` for the timeline of "
+"and information about future distributions."
+msgstr ""
+"Veuillez consulter la :doc:`page Distributions <../Releases>` pour la "
+"chronologie et les informations sur les distributions futures."
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:131
+msgid "Contributing to ROS 2"
+msgstr "Contribuer à ROS 2"
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:133
+msgid ""
+"Looking for something to work on, or just want to help out? Here are a few "
+"resources to get you going."
+msgstr ""
+"Vous cherchez quelque chose sur quoi travailler ou vous voulez simplement "
+"aider? Voici quelques ressources pour vous aider."
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:135
+msgid ""
+"The :doc:`Contributing <Contributing>` guide describes how to make a "
+"contribution to ROS 2."
+msgstr ""
+"Le guide :doc:`Contributing <Contributing>` décrit comment apporter une "
+"contribution à ROS 2."
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:136
+msgid ""
+"Check out the list of :doc:`Feature Ideas <Feature-Ideas>` for inspiration."
+msgstr ""
+"Consultez la liste des :doc:`Feature Ideas <Feature-Ideas>` pour vous "
+"inspirer."
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:137
+msgid ""
+"For more information on the design of ROS 2 please see `design.ros2.org "
+"<https://design.ros2.org>`__."
+msgstr ""
+"Pour plus d'informations sur la conception de ROS 2, veuillez consulter "
+"`design.ros2.org <https://design.ros2.org>`__."
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:138
+msgid ""
+"The core code for ROS 2 is in the `ros2 GitHub organization "
+"<https://github.com/ros2>`__."
+msgstr ""
+"Le code principal de ROS 2 se trouve dans l'organisation `ros2 GitHub "
+"<https://github.com/ros2>`__."
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:139
+msgid ""
+"The Discourse forum/mailing list for discussing ROS 2 design is `ng-ros "
+"<https://discourse.ros.org/c/ng-ros>`__."
+msgstr ""
+"Le forum/la liste de diffusion Discourse pour discuter de la conception de "
+"ROS 2 est `ng-ros <https://discourse.ros.org/c/ng-ros>`__."
+
+#: ../../source/The-ROS2-Project/Roadmap.rst:140
+msgid ""
+"Questions should be asked on `ROS answers <https://answers.ros.org>`__\\ , "
+"make sure to include at least the ``ros2`` tag and the rosdistro version you"
+" are running, e.g. ``humble``."
+msgstr ""
+"Les questions doivent être posées sur `ROS answers "
+"<https://answers.ros.org>`__\\ , assurez-vous d'inclure au moins la balise "
+"``ros2`` et la version de rosdistro que vous utilisez, par exemple. "
+"``humble``."

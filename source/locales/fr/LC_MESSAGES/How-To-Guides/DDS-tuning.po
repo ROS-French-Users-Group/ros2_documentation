@@ -1,0 +1,421 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 17:22:49.268132\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:7
+msgid "DDS tuning information"
+msgstr "Informations de réglage DDS"
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:9
+msgid ""
+"This page provides some guidance on parameter tunings that were found to "
+"address issues faced while using various DDS implementations on Linux in "
+"real-world situations. It is possible that the issues we identified on Linux"
+" or while using one vendor may occur for other platforms and vendors not "
+"documented here."
+msgstr ""
+"Cette page fournit des conseils sur les ajustements de paramètres qui ont "
+"été trouvés pour résoudre les problèmes rencontrés lors de l'utilisation de "
+"diverses implémentations DDS sur Linux dans des situations réelles. Il est "
+"possible que les problèmes que nous avons identifiés sur Linux ou lors de "
+"l'utilisation d'un fournisseur se produisent pour d'autres plates-formes et "
+"fournisseurs non documentés ici."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:12
+msgid ""
+"The recommendations below are starting points for tuning; they worked for "
+"specific systems and environments, but the tuning may vary depending on a "
+"number of factors. You may need to increase or decrease values while "
+"debugging relative to factors like message size, network topology, etc."
+msgstr ""
+"Les recommandations ci-dessous sont des points de départ pour le réglage ; "
+"ils fonctionnaient pour des systèmes et des environnements spécifiques, mais"
+" le réglage peut varier en fonction d'un certain nombre de facteurs. Vous "
+"devrez peut-être augmenter ou diminuer les valeurs lors du débogage en "
+"fonction de facteurs tels que la taille des messages, la topologie du "
+"réseau, etc."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:15
+msgid ""
+"It is important to recognize that tuning parameters can come at a cost to "
+"resources, and may affect parts of your system beyond the scope of the "
+"desired improvements. The benefits of improving reliability should be "
+"weighed against any detriments for each individual case."
+msgstr ""
+"Il est important de reconnaître que les paramètres de réglage peuvent avoir "
+"un coût pour les ressources et peuvent affecter des parties de votre système"
+" au-delà de la portée des améliorations souhaitées. Les avantages de "
+"l'amélioration de la fiabilité doivent être mis en balance avec les "
+"inconvénients pour chaque cas individuel."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:21
+msgid "Cross-vendor tuning"
+msgstr "Réglage multi-fournisseurs"
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:23
+msgid ""
+"**Issue:** Sending data over lossy (usually WiFi) connections becomes "
+"problematic when some IP fragments are dropped, possibly causing the kernel "
+"buffer on the receiving side to become full."
+msgstr ""
+"**Problème :** L'envoi de données via des connexions avec perte "
+"(généralement Wi-Fi) devient problématique lorsque certains fragments IP "
+"sont supprimés, ce qui peut entraîner la saturation de la mémoire tampon du "
+"noyau côté réception."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:25
+msgid ""
+"When a UDP packet is missing at least one IP fragment, the rest of the "
+"received fragments fill up the kernel buffer. By default, the Linux kernel "
+"will time out after 30s of trying to recombine packet fragments. Since the "
+"kernel buffer is full at this point (default size is 256KB), no new "
+"fragments can come in, and so the connection will seemingly \"hang\" for "
+"long periods of time."
+msgstr ""
+"Lorsqu'il manque au moins un fragment IP à un paquet UDP, le reste des "
+"fragments reçus remplit la mémoire tampon du noyau. Par défaut, le noyau "
+"Linux expirera après 30 secondes d'essais de recombinaison de fragments de "
+"paquets. Étant donné que le tampon du noyau est plein à ce stade (la taille "
+"par défaut est de 256 Ko), aucun nouveau fragment ne peut entrer, et la "
+"connexion semblera donc \"se bloquer\" pendant de longues périodes."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:29
+msgid ""
+"This issue is generic across all DDS vendors, so the solutions involve "
+"adjusting kernel parameters."
+msgstr ""
+"Ce problème est générique pour tous les fournisseurs de DDS, les solutions "
+"impliquent donc l'ajustement des paramètres du noyau."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:31
+msgid "**Solution:** Use best-effort QoS settings instead of reliable."
+msgstr ""
+"**Solution :** Utilisez des paramètres de qualité de service au mieux plutôt"
+" que des paramètres fiables."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:33
+msgid ""
+"Best-effort settings reduce the amount of network traffic since the DDS "
+"implementation does not have to incur the overhead of reliable "
+"communications, where publishers require acknowledgements for messages sent "
+"to subscribers and must resend samples that have not been properly received."
+msgstr ""
+"Les paramètres de meilleur effort réduisent la quantité de trafic réseau "
+"puisque l'implémentation DDS n'a pas à supporter la surcharge de "
+"communications fiables, où les éditeurs exigent des accusés de réception "
+"pour les messages envoyés aux abonnés et doivent renvoyer les échantillons "
+"qui n'ont pas été correctement reçus."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:35
+msgid ""
+"If the kernel buffer for IP fragments gets full, though, the symptom is "
+"still the same (blocking for 30s). This solution should improve the issue "
+"somewhat without having to adjust parameters."
+msgstr ""
+"Si le tampon du noyau pour les fragments IP est plein, le symptôme est "
+"toujours le même (blocage pendant 30 secondes). Cette solution devrait "
+"améliorer quelque peu le problème sans avoir à ajuster les paramètres."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:38
+msgid "**Solution:** Reduce the value of the ``ipfrag_time`` parameter."
+msgstr "**Solution :** Réduisez la valeur du paramètre ``ipfrag_time``."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:40
+msgid ""
+"``net.ipv4.ipfrag_time / /proc/sys/net/ipv4/ipfrag_time`` (default 30s) : "
+"Time in seconds to keep an IP fragment in memory."
+msgstr ""
+"``net.ipv4.ipfrag_time / /proc/sys/net/ipv4/ipfrag_time`` (défaut 30s) : "
+"Temps en secondes pour garder un fragment IP en mémoire."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:43
+msgid "Reduce the value, for example, to 3s, by running:"
+msgstr "Réduisez la valeur, par exemple, à 3s, en exécutant :"
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:49
+msgid ""
+"Reducing this parameter’s value also reduces the window of time where no "
+"fragments are received. The parameter is global for all incoming fragments, "
+"so the feasibility of reducing its value needs to be considered for every "
+"environment."
+msgstr ""
+"La réduction de la valeur de ce paramètre réduit également la fenêtre de "
+"temps où aucun fragment n'est reçu. Le paramètre est global pour tous les "
+"fragments entrants, de sorte que la possibilité de réduire sa valeur doit "
+"être envisagée pour chaque environnement."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:52
+msgid ""
+"**Solution:** Increase the value of the ``ipfrag_high_thresh`` parameter."
+msgstr ""
+"**Solution :** Augmentez la valeur du paramètre ``ipfrag_high_thresh``."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:54
+msgid ""
+"``net.ipv4.ipfrag_high_thresh / /proc/sys/net/ipv4/ipfrag_high_thresh`` "
+"(default: 262144 bytes): Maximum memory used to reassemble IP fragments."
+msgstr ""
+"``net.ipv4.ipfrag_high_thresh / /proc/sys/net/ipv4/ipfrag_high_thresh`` (par"
+" défaut : 262144 octets) : mémoire maximale utilisée pour réassembler les "
+"fragments IP."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:57
+msgid "Increase the value, for example, to 128MB, by running:"
+msgstr "Augmentez la valeur, par exemple, à 128 Mo, en exécutant :"
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:63
+msgid ""
+"Significantly increasing this parameter’s value is an attempt to ensure that"
+" the buffer never becomes completely full. However, the value would likely "
+"have to be significantly high to hold all data received during the time "
+"window of ``ipfrag_time``, assuming every UDP packet lacks one fragment."
+msgstr ""
+"L'augmentation significative de la valeur de ce paramètre est une tentative "
+"pour s'assurer que la mémoire tampon ne soit jamais complètement pleine. "
+"Cependant, la valeur devrait probablement être significativement élevée pour"
+" contenir toutes les données reçues pendant la fenêtre temporelle de "
+"``ipfrag_time``, en supposant qu'il manque un fragment à chaque paquet UDP."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:66
+msgid ""
+"**Issue:** Sending custom messages with large variable-sized arrays of non-"
+"primitive types causes high serialization/deserialization overhead and CPU "
+"load. This can lead to stalling of the publisher due to excessive time spent"
+" in ``publish()`` and tools like ``ros2 topic hz`` under reporting the "
+"actual frequency of messages being received. Note that for example "
+"``builtin_interfaces/Time`` is also considered a non-primitive type and will"
+" incur higher serialization overhead. Because of the increased serialization"
+" overhead, severe performance degradation can be observed when naively "
+"transitioning custom message types from ROS 1 to ROS 2."
+msgstr ""
+"**Problème :** L'envoi de messages personnalisés avec de grands tableaux de "
+"taille variable de types non primitifs entraîne une surcharge de "
+"sérialisation/désérialisation élevée et une charge du processeur. Cela peut "
+"entraîner un blocage de l'éditeur en raison d'un temps excessif passé dans "
+"``publish()`` et des outils comme ``ros2 topic hz`` sous-signalant la "
+"fréquence réelle des messages reçus. Notez que, par exemple, "
+"``builtin_interfaces/Time`` est également considéré comme un type non "
+"primitif et entraînera une surcharge de sérialisation plus élevée. En raison"
+" de la surcharge de sérialisation accrue, une grave dégradation des "
+"performances peut être observée lors de la transition naïve des types de "
+"messages personnalisés de ROS 1 à ROS 2."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:71
+msgid ""
+"**Workaround:** Use multiple arrays of primitives instead of a single array "
+"of custom types, or pack into byte array as done e.g. in ``PointCloud2`` "
+"messages. For example, instead of defining a ``FooArray`` message as:"
+msgstr ""
+"**Solution :** Utilisez plusieurs tableaux de primitives au lieu d'un seul "
+"tableau de types personnalisés, ou regroupez-les dans un tableau d'octets, "
+"comme par ex. dans les messages ``PointCloud2``. Par exemple, au lieu de "
+"définir un message ``FooArray`` comme :"
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:78
+msgid "with ``Foo`` is defined as:"
+msgstr "avec ``Foo`` est défini comme :"
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:85
+msgid "Instead, define ``FooArray`` as:"
+msgstr "Au lieu de cela, définissez ``FooArray`` comme :"
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:93
+msgid "Fast RTPS tuning"
+msgstr "Réglage RTPS rapide"
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:95
+msgid ""
+"**Issue:** Fast RTPS floods the network with large pieces of data or fast-"
+"published data when operating over WiFi."
+msgstr ""
+"**Problème :** Le RTPS rapide inonde le réseau de gros volumes de données ou"
+" de données publiées rapidement lorsqu'il fonctionne via le Wi-Fi."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:97
+msgid ""
+"See the solutions under :ref:`Cross-vendor tuning <cross-vendor-tuning>`."
+msgstr ""
+"Voir les solutions sous :ref:`Réglage multi-fournisseurs <cross-vendor-"
+"tuning>`."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:100
+msgid "Cyclone DDS tuning"
+msgstr "Réglage Cyclone DDS"
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:102
+msgid ""
+"**Issue:** Cyclone DDS is not delivering large messages reliably, despite "
+"using reliable settings and transferring over a wired network."
+msgstr ""
+"**Problème :** Cyclone DDS ne transmet pas les messages volumineux de "
+"manière fiable, malgré l'utilisation de paramètres fiables et le transfert "
+"via un réseau câblé."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:104
+msgid ""
+"This issue should be `addressed soon <https://github.com/eclipse-"
+"cyclonedds/cyclonedds/issues/484>`_. Until then, we’ve come up with the "
+"following solution (debugged using `this test program "
+"<https://github.com/jacobperron/pc_pipe>`_):"
+msgstr ""
+"Ce problème devrait être `résolu bientôt <https://github.com/eclipse-"
+"cyclonedds/cyclonedds/issues/484>`_. Jusque-là, nous avons trouvé la "
+"solution suivante (déboguée à l'aide de `ce programme de test "
+"<https://github.com/jacobperron/pc_pipe>`_):"
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:107
+msgid ""
+"**Solution:** Increase the maximum Linux kernel receive buffer size and the "
+"minimum socket receive buffer size that Cyclone uses."
+msgstr ""
+"**Solution :** Augmentez la taille maximale du tampon de réception du noyau "
+"Linux et la taille minimale du tampon de réception du socket utilisées par "
+"Cyclone."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:109
+msgid "*Adjustments to solve for a 9MB message:*"
+msgstr "*Ajustements à résoudre pour un message de 9Mo :*"
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:111
+#: ../../source/How-To-Guides/DDS-tuning.rst:150
+msgid "Set the maximum receive buffer size, ``rmem_max``, by running:"
+msgstr ""
+"Définissez la taille maximale du tampon de réception, ``rmem_max``, en "
+"exécutant :"
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:117
+msgid ""
+"Or permanently set it by editing the ``/etc/sysctl.d/10-cyclone-max.conf`` "
+"file to contain:"
+msgstr ""
+"Ou définissez-le de manière permanente en éditant le fichier "
+"``/etc/sysctl.d/10-cyclone-max.conf`` pour qu'il contienne :"
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:123
+msgid ""
+"Next, to set the minimum socket receive buffer size that Cyclone requests, "
+"write out a configuration file for Cyclone to use while starting, like so:"
+msgstr ""
+"Ensuite, pour définir la taille minimale du tampon de réception des sockets "
+"demandée par Cyclone, écrivez un fichier de configuration que Cyclone "
+"utilisera au démarrage, comme ceci :"
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:137
+msgid ""
+"Then, whenever you are going to run a node, set the following environment "
+"variable:"
+msgstr ""
+"Ensuite, chaque fois que vous allez exécuter un nœud, définissez la variable"
+" d'environnement suivante :"
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:144
+msgid "RTI Connext tuning"
+msgstr "Réglage RTI Connect"
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:146
+msgid ""
+"**Issue:** Connext is not delivering large messages reliably, despite using "
+"reliable settings and transferring over a wired network."
+msgstr ""
+"**Problème :** Connext ne transmet pas les messages volumineux de manière "
+"fiable, malgré l'utilisation de paramètres fiables et le transfert via un "
+"réseau câblé."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:148
+msgid ""
+"**Solution:** This `Connext QoS profile "
+"<https://github.com/jacobperron/pc_pipe/blob/master/etc/ROS2TEST_QOS_PROFILES.xml>`_,"
+" along with increasing the ``rmem_max`` parameter."
+msgstr ""
+"**Solution :** Ce `profil Connect QoS "
+"<https://github.com/jacobperron/pc_pipe/blob/master/etc/ROS2TEST_QOS_PROFILES.xml>`_,"
+" ainsi que l'augmentation du paramètre ``rmem_max``."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:156
+msgid ""
+"By tuning ``net.core.rmem_max`` to 4MB in the Linux kernel, the QoS profile "
+"can produce truly reliable behavior."
+msgstr ""
+"En ajustant ``net.core.rmem_max`` à 4 Mo dans le noyau Linux, le profil QoS "
+"peut produire un comportement vraiment fiable."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:158
+msgid ""
+"This configuration has been proven to reliably deliver messages via "
+"SHMEM|UDPv4, and with just UDPv4 on a single machine. A multi-machine "
+"configuration was also tested with ``rmem_max`` at 4MB and at 20MB (two "
+"machines connected with 1Gbps ethernet), with no dropped messages and "
+"average message delivery times of 700ms and 371ms, respectively."
+msgstr ""
+"Il a été prouvé que cette configuration délivre des messages de manière "
+"fiable via SHMEM|UDPv4, et avec juste UDPv4 sur une seule machine. Une "
+"configuration multi-machines a également été testée avec ``rmem_max`` à 4 Mo"
+" et à 20 Mo (deux machines connectées à 1 Gbit/s d'Ethernet), sans perte de "
+"message et avec des délais de livraison moyens de 700 ms et 371 ms, "
+"respectivement."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:161
+msgid ""
+"Without configuring the kernel’s ``rmem_max``, the same Connext QoS profile "
+"took up to 12 seconds for the data to be delivered. However, it always at "
+"least managed to complete the delivery."
+msgstr ""
+"Sans configurer le ``rmem_max`` du noyau, le même profil Connext QoS prenait"
+" jusqu'à 12 secondes pour que les données soient livrées. Cependant, il a "
+"toujours au moins réussi à terminer la livraison."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:164
+msgid ""
+"**Solution:** Use the `Connext QoS profile "
+"<https://github.com/jacobperron/pc_pipe/blob/master/etc/ROS2TEST_QOS_PROFILES.xml>`_"
+" *without* adjusting ``rmem_max``."
+msgstr ""
+"**Solution :** Utilisez le `Profil Connect QoS "
+"<https://github.com/jacobperron/pc_pipe/blob/master/etc/ROS2TEST_QOS_PROFILES.xml>`_"
+" *sans* ajuster ``rmem_max``."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:166
+msgid ""
+"The ROS2TEST_QOS_PROFILES.xml file was configured using RTI’s documentation "
+"on `configuring flow controllers <https://community.rti.com/forum-"
+"topic/transfering-large-data-over-dds>`_. It has slow, medium and fast flow "
+"controllers (seen in the Connext QoS profile link)."
+msgstr ""
+"Le fichier ROS2TEST_QOS_PROFILES.xml a été configuré à l'aide de la "
+"documentation de RTI sur la `configuration des contrôleurs de flux "
+"<https://community.rti.com/forum-topic/transfering-large-data-over-dds>`_. "
+"Il dispose de contrôleurs de débit lent, moyen et rapide (vu dans le lien du"
+" profil Connext QoS)."
+
+#: ../../source/How-To-Guides/DDS-tuning.rst:168
+msgid ""
+"The medium flow controller produced the best results for our case. However, "
+"the controllers will still need to be tuned for the particular "
+"machine/network/environment they are operating in. The Connext flow "
+"controllers can be used to tune bandwidth and its aggressiveness for sending"
+" out data, though once the bandwidth of a particular setup is passed, "
+"performance will start to drop."
+msgstr ""
+"Le contrôleur de débit moyen a produit les meilleurs résultats pour notre "
+"cas. Cependant, les contrôleurs devront toujours être réglés pour la "
+"machine/le réseau/l'environnement particulier dans lequel ils fonctionnent. "
+"Les contrôleurs de flux Connext peuvent être utilisés pour régler la bande "
+"passante et son agressivité pour l'envoi de données, bien qu'une fois la "
+"bande passante d'une configuration particulière est passé, les performances "
+"commenceront à chuter."

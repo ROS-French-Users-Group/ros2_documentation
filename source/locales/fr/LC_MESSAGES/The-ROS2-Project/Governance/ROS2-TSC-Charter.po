@@ -1,0 +1,781 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 16:32:16.073356\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:9
+msgid "ROS 2 Technical Steering Committee Charter"
+msgstr "Charte du comité de pilotage technique ROS 2"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:0
+msgid "Date"
+msgstr "Date"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:11
+msgid "2021-02-06"
+msgstr "2021-02-06"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:0
+msgid "Version"
+msgstr "Version"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:12
+msgid "0.5"
+msgstr "0.5"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:0
+msgid "Organization"
+msgstr "Organisation"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:13
+msgid "info@openrobotics.org"
+msgstr "info@openrobotics.org"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:17
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:20
+msgid "Guiding Principles & Rationale"
+msgstr "Principes directeurs et justification"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:22
+msgid ""
+"The ROS 2 Project (“ROS 2” or “the project”) operates openly, such that "
+"plans, decisions, and processes are freely available to the general public "
+"in a timely manner. All interested parties should have access to information"
+" about the project direction and timeline, from casual observers to "
+"companies planning product releases."
+msgstr ""
+"Le projet ROS 2 (« ROS 2 » ou « le projet ») fonctionne ouvertement, de "
+"sorte que les plans, les décisions et les processus sont librement "
+"accessibles au grand public en temps opportun. Toutes les parties "
+"intéressées doivent avoir accès aux informations sur l'orientation et le "
+"calendrier du projet, des observateurs occasionnels aux entreprises qui "
+"planifient des versions de produits."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:26
+msgid "Responsibilities of the TSC"
+msgstr "Responsabilités du TSC"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:28
+msgid ""
+"The ROS 2 Technical Steering Committee (“TSC”) is responsible for the "
+"technical direction that the project takes. The TSC makes decisions on the "
+"project roadmap, developer policies and process, release schedule, and other"
+" matters that require technical supervision in ROS 2. It is intended that "
+"these decisions be final and authoritative, but successful implementation of"
+" any decision depends on commitment of the necessary resources from the "
+"organizations represented on the TSC."
+msgstr ""
+"Le comité de pilotage technique du ROS 2 (« TSC ») est responsable de la "
+"direction technique que prend le projet. Le TSC prend des décisions sur la "
+"feuille de route du projet, les politiques et processus de développement, le"
+" calendrier de publication et d'autres questions qui nécessitent une "
+"supervision technique dans ROS 2. Il est prévu que ces décisions soient "
+"définitives et faisant autorité, mais la mise en œuvre réussie de toute "
+"décision dépend de l'engagement du ressources nécessaires de la part des "
+"organisations représentées au TSC."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:32
+msgid "The TSC aims to ensure the following characteristics of the project:"
+msgstr "Le TSC vise à garantir les caractéristiques suivantes du projet :"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:34
+msgid "**Independent and transparent governance**"
+msgstr "**Gouvernance indépendante et transparente**"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:36
+msgid ""
+"The project is driven by the community that contributes to and uses the "
+"resulting software, with Open Robotics as the founding project sponsor."
+msgstr ""
+"Le projet est piloté par la communauté qui contribue et utilise le logiciel "
+"résultant, avec Open Robotics comme sponsor fondateur du projet."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:38
+msgid "**Coordination**"
+msgstr "**Coordination**"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:40
+msgid ""
+"Those individuals and organizations that are contributing the labor and "
+"other resources to develop the project are in regular contact with each "
+"other to coordinate their plans and activities."
+msgstr ""
+"Les individus et les organisations qui contribuent la main-d'œuvre et "
+"d'autres ressources pour développer le projet sont en contact régulier les "
+"uns avec les autres pour coordonner leurs plans et activités."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:42
+msgid "**Pace & quality**"
+msgstr "**Rapide et qualité**"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:44
+msgid ""
+"The project advances as quickly as possible given the available resources "
+"and without sacrificing quality in the resulting software."
+msgstr ""
+"Le projet avance le plus rapidement possible compte tenu des ressources "
+"disponibles et sans sacrifier la qualité du logiciel résultant."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:46
+msgid "**Policies**"
+msgstr "**Stratégies**"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:48
+msgid ""
+"Contributions to the project are received, reviewed, and tested in a manner "
+"that is consistent with the requirements for widespread adoption of the "
+"resulting software in industry."
+msgstr ""
+"Les contributions au projet sont reçues, examinées et testées d'une manière "
+"conforme aux exigences d'adoption généralisée du logiciel résultant dans "
+"l'industrie."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:51
+msgid "Establishment of the TSC"
+msgstr "Création du CST"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:53
+msgid ""
+"The TSC is made up of individuals who contribute materially to the project "
+"and/or individuals who represent organizations that contribute materially to"
+" the project and/or selected community representatives. The TSC seeks to "
+"coordinate the contributions that members and their organizations are "
+"voluntarily making to the project. The TSC cannot compel or oblige any "
+"action on the part of a member, his or her organization, or that "
+"organization’s employees."
+msgstr ""
+"Le TSC est composé d'individus qui contribuent matériellement au projet "
+"et/ou d'individus qui représentent des organisations qui contribuent "
+"matériellement au projet et/ou de représentants sélectionnés de la "
+"communauté. Le TSC cherche à coordonner les contributions que les membres et"
+" leurs organisations apportent volontairement au projet. Le TSC ne peut "
+"contraindre ou obliger une action de la part d'un membre, de son "
+"organisation ou des employés de cette organisation."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:57
+msgid ""
+"Material contribution is the commitment of a minimum level of effort toward "
+"developing software and/or documentation that is contributed to the project "
+"under the appropriate open source license. This contribution may be in the "
+"form of in-kind labor and/or outsourced work. No fees or payments beyond "
+"material contribution to the project are required for TSC membership."
+msgstr ""
+"La contribution matérielle est l'engagement d'un niveau minimum d'effort "
+"vers le développement de logiciels et/ou de documentation qui est contribué "
+"au projet sous la licence open source appropriée. Cette contribution peut "
+"prendre la forme de travail en nature et/ou de travail externalisé. Aucun "
+"frais ou paiement au-delà de la contribution matérielle au projet n'est "
+"requis pour l'adhésion au TSC."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:61
+msgid ""
+"The minimum level of effort commitment required to qualify for TSC "
+"membership is **1 full-time equivalent (FTE)**. This level may be changed by"
+" the TSC via a standard TSC motion and vote."
+msgstr ""
+"Le niveau minimum d'effort requis pour être admissible à l'adhésion au TSC "
+"est de **1 équivalent temps plein (ETP)**. Ce niveau peut être modifié par "
+"le TSC via une motion et un vote standard du TSC."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:64
+msgid "The TSC must have at least three members."
+msgstr "Le TSC doit être composé d'au moins trois membres."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:66
+msgid "TSC membership is not time-limited."
+msgstr "L'adhésion au TSC n'est pas limitée dans le temps."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:68
+msgid ""
+"There is no maximum size for the TSC. A size limit may be established by the"
+" TSC via a standard TSC motion and vote."
+msgstr ""
+"Il n'y a pas de taille maximale pour le TSC. Une limite de taille peut être "
+"établie par le TSC via une motion et un vote standard du TSC."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:71
+msgid ""
+"The TSC may add additional members to the TSC by a standard TSC motion and "
+"vote. When considering the addition of a new member, the TSC is responsible "
+"for determining whether that potential member’s material contributions to "
+"the project are appropriate and sufficient to qualify for membership."
+msgstr ""
+"Le TSC peut ajouter des membres supplémentaires au TSC par une motion et un "
+"vote standard du TSC. Lors de l'examen de l'ajout d'un nouveau membre, le "
+"TSC est chargé de déterminer si les contributions matérielles de ce membre "
+"potentiel au projet sont appropriées et suffisantes pour être admissible à "
+"l'adhésion."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:74
+msgid ""
+"A TSC member may be removed from the TSC by voluntary resignation, by a "
+"standard TSC motion and vote, or in accordance with the following "
+"participation rule:"
+msgstr ""
+"Un membre du TSC peut être retiré du TSC par démission volontaire, par une "
+"motion et un vote standard du TSC, ou conformément à la règle de "
+"participation suivante :"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:76
+msgid ""
+"In the case where an individual TSC member -- within any three-month period "
+"-- attends fewer than 1⁄3 of the regularly scheduled meetings, does not "
+"participate in TSC discussions, and does not participate in TSC votes, the "
+"member shall be automatically removed from the TSC."
+msgstr ""
+"Dans le cas où un membre individuel du TSC - au cours d'une période de trois"
+" mois - assiste à moins d'un tiers des réunions régulièrement programmées, "
+"ne participe pas aux discussions du TSC et ne participe pas aux votes du "
+"TSC, le membre sera automatiquement retiré du TSC."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:78
+msgid ""
+"The TSC will periodically review the material contributions of TSC members "
+"to ensure that they continue to meet the minimum level of effort established"
+" by the TSC for TSC membership. In the case where a TSC member’s material "
+"contributions fall below that minimum level, the TSC may decide to remove "
+"that TSC member by a standard TSC motion and vote."
+msgstr ""
+"Le TSC examinera périodiquement les contributions matérielles des membres du"
+" TSC pour s'assurer qu'ils continuent de respecter le niveau d'effort "
+"minimum établi par le TSC pour l'adhésion au TSC. Dans le cas où les "
+"contributions matérielles d'un membre du TSC tombent en dessous de ce niveau"
+" minimum, le TSC peut décider de retirer ce membre du TSC par une motion et "
+"un vote standard du TSC."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:81
+msgid ""
+"With the exception of Open Robotics, there may be at most one TSC member "
+"from any single employer."
+msgstr ""
+"À l'exception d'Open Robotics, il peut y avoir au plus un membre TSC d'un "
+"même employeur."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:83
+msgid ""
+"A TSC member may designate a proxy to participate in the TSC on that "
+"member’s behalf."
+msgstr ""
+"Un membre du TSC peut désigner un mandataire pour participer au TSC en son "
+"nom."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:85
+msgid ""
+"TSC membership is public; the membership list is published via a website "
+"that Open Robotics maintains and updates periodically."
+msgstr ""
+"L'adhésion au TSC est publique; la liste des membres est publiée via un site"
+" Web qu'Open Robotics maintient et met à jour périodiquement."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:87
+msgid ""
+"Open Robotics, as the founding sponsor of the project, has permanent "
+"membership on the TSC, hosts TSC meetings, and provides a representative to "
+"serve as chairperson."
+msgstr ""
+"Open Robotics, en tant que sponsor fondateur du projet, est membre permanent"
+" du TSC, organise les réunions du TSC et fournit un représentant pour "
+"occuper le poste de président."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:89
+msgid ""
+"Any organization or individual may apply for membership on the TSC by email "
+"to info@openrobotics.org. The ROS 2 TSC applicant intake process is "
+":doc:`here <ROS2-TSC-Intake-process>`."
+msgstr ""
+"Toute organisation ou personne peut demander à devenir membre du TSC par "
+"courrier électronique à info@openrobotics.org. Le processus d'admission des "
+"candidats ROS 2 TSC est :doc:`ici <ROS2-TSC-Intake-process>`."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:93
+msgid "Community representation"
+msgstr "Représentation communautaire"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:95
+msgid ""
+"The TSC shall include a number of individuals who represent the broader ROS "
+"community rather than any particular organisation or individual."
+msgstr ""
+"Le TSC doit inclure un certain nombre de personnes qui représentent la "
+"communauté ROS au sens large plutôt qu'une organisation ou un individu en "
+"particulier."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:97
+msgid ""
+"The number of community representatives shall be set by a decision of the "
+"TSC. However, this number shall not be less than three, and shall also not "
+"be less than 10% of the number of non-community representative members in "
+"the TSC."
+msgstr ""
+"Le nombre de représentants de la communauté est fixé par décision du CST. "
+"Toutefois, ce nombre ne doit pas être inférieur à trois et ne doit pas non "
+"plus être inférieur à 10 % du nombre de membres non représentatifs de la "
+"communauté au sein du CST."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:100
+msgid "A community representative serves for two years."
+msgstr "Un représentant de la communauté siège pendant deux ans."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:102
+msgid ""
+"The term of service begins on the 1st of December immediately following an "
+"election."
+msgstr ""
+"Le mandat commence le 1er décembre suivant immédiatement une élection."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:104
+msgid ""
+"Fifty percent (50%) of the initial set of community representatives shall "
+"serve for only one year in their first term to stagger the community "
+"representative terms."
+msgstr ""
+"Cinquante pour cent (50 %) du groupe initial de représentants de la "
+"communauté ne serviront que pendant un an au cours de leur premier mandat "
+"pour échelonner les mandats des représentants de la communauté."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:106
+msgid ""
+"A community representative may be removed from the TSC earlier than two "
+"years if one of the following conditions is met:"
+msgstr ""
+"Un représentant de la communauté peut être retiré du TSC avant deux ans si "
+"l'une des conditions suivantes est remplie :"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:108
+msgid "The community representative requests to stand down voluntarily."
+msgstr "Le représentant de la communauté demande à se retirer volontairement."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:110
+msgid ""
+"The TSC chairperson deems that the community representative has behaved "
+"inappropriately. The TSC chairperson must make public the reason for "
+"standing down the community representative."
+msgstr ""
+"Le président du TSC estime que le représentant de la communauté s'est "
+"comporté de manière inappropriée. Le président du TSC doit rendre public le "
+"motif de la révocation du représentant de la communauté."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:113
+msgid "When a community representative is removed from the TSC:"
+msgstr "Lorsqu'un représentant de la communauté est retiré du TSC :"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:115
+msgid ""
+"If the number of community representatives is below the specified minimum, "
+"the TSC shall recommend and the chairperson shall appoint a new community "
+"representative to serve the remainder of the removed community "
+"representative's term."
+msgstr ""
+"Si le nombre de représentants de la communauté est inférieur au minimum "
+"spécifié, le TSC recommandera et le président nommera un nouveau "
+"représentant de la communauté pour le reste du mandat du représentant de la "
+"communauté révoqué."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:117
+msgid ""
+"If the number of community representatives is above the specified minimum, "
+"no special action shall be taken."
+msgstr ""
+"Si le nombre de représentants de la communauté est supérieur au minimum "
+"spécifié, aucune mesure particulière ne sera prise."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:119
+msgid "A community representative is selected via an open election."
+msgstr ""
+"Un représentant de la communauté est sélectionné via une élection ouverte."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:121
+msgid ""
+"An individual is eligible to stand for election as a community "
+"representative if:"
+msgstr ""
+"Une personne est éligible pour se présenter aux élections en tant que "
+"représentant de la communauté si :"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:123
+msgid ""
+"The maximum number of community representatives from any single organisation"
+" is one."
+msgstr ""
+"Le nombre maximum de représentants communautaires d'une même organisation "
+"est d'un."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:125
+msgid "The individual has voluntarily nominated themselves."
+msgstr "L'individu s'est volontairement proposé."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:127
+msgid ""
+"That individual's nomination has not been vetoed by the TSC chairperson."
+msgstr ""
+"La nomination de cette personne n'a pas fait l'objet d'un veto de la part du"
+" président du TSC."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:129
+msgid ""
+"Community representative elections shall be held in the following manner:"
+msgstr ""
+"Les élections des représentants de la communauté se déroulent de la manière "
+"suivante :"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:131
+msgid ""
+"On the first Tuesday of September a ROS Discourse post will be made asking "
+"for TSC member nominations."
+msgstr ""
+"Le premier mardi de septembre, un message ROS Discourse sera publié pour "
+"demander les nominations des membres du TSC."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:133
+msgid ""
+"The nomination period will last two weeks until the third Tuesday in "
+"September."
+msgstr ""
+"La période de mise en candidature durera deux semaines jusqu'au troisième "
+"mardi de septembre."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:135
+msgid ""
+"Prospective TSC member nominees must self nominate, but the community is "
+"encouraged to use the nomination Discourse thread to encourage other "
+"community members to run."
+msgstr ""
+"Les membres potentiels du TSC nominés doivent se nommer eux-mêmes, mais la "
+"communauté est encouragée à utiliser le fil de discussion de nomination pour"
+" encourager les autres membres de la communauté à se présenter."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:137
+msgid ""
+"To self-nominate prospective TSC members must submit a candidate packet that"
+" includes a written biography, headshot, a written statement, and optionally"
+" a short video introduction."
+msgstr ""
+"Pour se nommer eux-mêmes, les membres potentiels du TSC doivent soumettre un"
+" dossier de candidature comprenant une biographie écrite, une photo de la "
+"tête, une déclaration écrite et éventuellement une courte introduction "
+"vidéo."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:139
+msgid ""
+"The written statement shall state why the candidate believes themselves "
+"suitable and what they intend to accomplish as a community representative."
+msgstr ""
+"La déclaration écrite doit indiquer pourquoi le candidat s'estime apte et ce"
+" qu'il entend accomplir en tant que représentant de la communauté."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:141
+msgid ""
+"Between the third Tuesday in September and the first Tuesday in October the "
+"ROS 2 TSC will review the candidates for any objections or conflicts of "
+"interest. The TSC chair will prepare a ROS Discourse post that includes all "
+"of the candidate packets."
+msgstr ""
+"Entre le troisième mardi de septembre et le premier mardi d'octobre, le TSC "
+"ROS 2 examinera les candidats pour toute objection ou conflit d'intérêts. Le"
+" président du TSC préparera un article de discours ROS qui comprendra tous "
+"les paquets candidats."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:144
+msgid ""
+"On the first Tuesday of October the candidate packets will be posted to ROS "
+"Discourse along with with the online balloting form."
+msgstr ""
+"Le premier mardi d'octobre, les dossiers des candidats seront publiés sur "
+"ROS Discourse avec le formulaire de vote en ligne."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:146
+msgid ""
+"The period between the start of the election process and the close of voting"
+" may be used for campaigning by candidates."
+msgstr ""
+"La période entre le début du processus électoral et la clôture du scrutin "
+"peut être utilisée pour faire campagne par les candidats."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:148
+msgid ""
+"The eligibility criteria for voters shall be determined by the TSC prior to "
+"commencing an election and clearly stated in the election information from "
+"the start of nominations until the close of voting."
+msgstr ""
+"Les critères d'éligibilité des électeurs doivent être déterminés par le TSC "
+"avant le début d'une élection et clairement indiqués dans les informations "
+"électorales depuis le début des nominations jusqu'à la clôture du vote."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:150
+msgid ""
+"Balloting will be open from the first Tuesday in October until the end of "
+"the first full day of ROSCon."
+msgstr ""
+"Le scrutin sera ouvert du premier mardi d'octobre jusqu'à la fin de la "
+"première journée complète de ROSCon."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:152
+msgid "Balloting shall be conducted using the Condorcet method."
+msgstr "Le scrutin se déroule selon la méthode Condorcet."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:154
+msgid "Candidates are encouraged, but not required, to attend ROSCon."
+msgstr "Les candidats sont encouragés, mais pas obligés, à assister à ROSCon."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:156
+msgid ""
+"The results of the election shall be announced during the closing session of"
+" ROSCon along with an announcement post on ROS Discourse."
+msgstr ""
+"Les résultats de l'élection seront annoncés lors de la session de clôture de"
+" ROSCon avec un message d'annonce sur ROS Discourse."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:158
+msgid ""
+"In the event that ROSCon is not held during a given calendar year for any "
+"reason, then the foregoing election process shall still be followed, with "
+"procedural modifications as necessary, at a time of the TSC’s choosing, but "
+"with the results being announced no later than the 15th of December."
+msgstr ""
+"Dans le cas où le ROSCon n'a pas lieu au cours d'une année civile donnée "
+"pour quelque raison que ce soit, le processus d'élection ci-dessus doit "
+"toujours être suivi, avec les modifications de procédure nécessaires, au "
+"moment choisi par le TSC, mais les résultats étant annoncés au plus tard le "
+"le 15 décembre."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:163
+msgid "Meetings"
+msgstr "Réunions"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:165
+msgid "The TSC meets regularly in-person and/or via an electronic means."
+msgstr ""
+"Le TSC se réunit régulièrement en personne et/ou par voie électronique."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:167
+msgid ""
+"A minimum of three TSC members is required to establish a quorum to hold a "
+"TSC meeting."
+msgstr ""
+"Un minimum de trois membres du TSC est requis pour établir un quorum pour "
+"tenir une réunion du TSC."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:169
+msgid ""
+"Participation in a TSC meeting is open to current members. Other "
+"organizations or individuals may be invited by Open Robotics to observe a "
+"TSC meeting. TSC members may suggest to Open Robotics the names of "
+"individuals or organizations for consideration as potential observers."
+msgstr ""
+"La participation à une réunion du TSC est ouverte aux membres actuels. "
+"D'autres organisations ou individus peuvent être invités par Open Robotics à"
+" observer une réunion du TSC. Les membres du TSC peuvent suggérer à Open "
+"Robotics les noms d'individus ou d'organisations à considérer en tant "
+"qu'observateurs potentiels."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:173
+msgid ""
+"Minutes from each TSC meeting are published by Open Robotics shortly after "
+"the meeting. TSC meetings are not broadcast or recorded verbatim, but they "
+"should be treated as public discussions."
+msgstr ""
+"Les procès-verbaux de chaque réunion du TSC sont publiés par Open Robotics "
+"peu de temps après la réunion. Les réunions du TSC ne sont pas diffusées ou "
+"enregistrées textuellement, mais elles doivent être traitées comme des "
+"discussions publiques."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:177
+msgid "Working Groups"
+msgstr "Groupes de travail"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:179
+msgid ""
+"The TSC may establish one or more working groups (“WGs”) to discuss specific"
+" topics in greater detail than is practical for the TSC as a whole."
+msgstr ""
+"Le TSC peut établir un ou plusieurs groupes de travail (« GT ») pour "
+"discuter de sujets spécifiques plus en détail que ce qui est pratique pour "
+"le TSC dans son ensemble."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:181
+msgid ""
+"A WG may be established by the TSC via standard TSC motion and vote. At the "
+"time of such establishment, the TSC is responsible for deciding the name, "
+"scope, and initial chair of the new WG."
+msgstr ""
+"Un groupe de travail peut être établi par le TSC via une motion et un vote "
+"standard du TSC. Au moment de cette création, le TSC est chargé de décider "
+"du nom, de la portée et du président initial du nouveau groupe de travail."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:184
+msgid "A WG may be dissolved by the TSC via standard TSC motion and vote."
+msgstr ""
+"Un groupe de travail peut être dissous par le TSC via une motion et un vote "
+"standard du TSC."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:186
+msgid ""
+"Each WG must be chaired by a TSC member. The chair of a WG is responsible "
+"for all aspects of that WG’s operation, including membership, meeting "
+"schedule, and decision-making."
+msgstr ""
+"Chaque GT doit être présidé par un membre du TSC. Le président d'un groupe "
+"de travail est responsable de tous les aspects du fonctionnement de ce "
+"groupe de travail, y compris la composition, le calendrier des réunions et "
+"la prise de décision."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:189
+msgid ""
+"A WG may bring findings and/or recommendations to the TSC for discussion "
+"and/or decision."
+msgstr ""
+"Un groupe de travail peut présenter des conclusions et/ou des "
+"recommandations au TSC pour discussion et/ou décision."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:192
+msgid "Voting"
+msgstr "Vote"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:194
+msgid ""
+"The TSC aims to operate by consensus. When consensus cannot be reached, "
+"decisions should in most cases be made by resource commitment: e.g., if a "
+"member wants to include a feature on the roadmap but the rest of the TSC is "
+"uninterested, then that member can choose to commit his or her "
+"organization’s contribution to development of the desired feature and "
+"thereby have it included in the roadmap. In cases where consensus cannot be "
+"reached and resource commitment is insufficient or inappropriate, simple "
+"majority voting is used, with each member having one vote."
+msgstr ""
+"Le TSC vise à fonctionner par consensus. Lorsqu'un consensus ne peut être "
+"atteint, les décisions doivent dans la plupart des cas être prises par "
+"l'engagement de ressources : par exemple, si un membre souhaite inclure une "
+"fonctionnalité dans la feuille de route mais que le reste du TSC n'est pas "
+"intéressé, alors ce membre peut choisir d'engager les ressources de son "
+"organisation. contribuer au développement de la fonctionnalité souhaitée et "
+"ainsi l'inclure dans la feuille de route. Dans les cas où le consensus ne "
+"peut être atteint et que l'engagement des ressources est insuffisant ou "
+"inapproprié, le vote à la majorité simple est utilisé, chaque membre "
+"disposant d'une voix."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:199
+msgid "Project Roles"
+msgstr "Rôles du projet"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:201
+msgid ""
+"TSC membership does not influence the handling of code contributions, which "
+"continues to follow the established federated development model in which "
+"contributions are made by pull request and reviewed and approved by the "
+"appropriate maintainer(s) prior to merging. Commit rights and maintainer "
+"status are earned through code contributions to the relevant package(s)."
+msgstr ""
+"L'adhésion au TSC n'influence pas le traitement des contributions au code, "
+"qui continue de suivre le modèle de développement fédéré établi dans lequel "
+"les contributions sont apportées par demande d'extraction et examinées et "
+"approuvées par le ou les responsables appropriés avant la fusion. Les droits"
+" d'engagement et le statut de responsable sont obtenus grâce aux "
+"contributions de code au(x) package(s) concerné(s)."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:205
+msgid "Confidentiality"
+msgstr "Confidentialité"
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:207
+msgid ""
+"The TSC is set up to transparently guide the community. However, to "
+"facilitate effective communication, the ability to have some confidential "
+"discussions is important. TSC members should share confidential information "
+"within the TSC and other members are expected to respect that "
+"confidentiality. The following are rules regarding confidentiality in TSC "
+"communications, events, and meetings. All other communications may be made "
+"freely available to the broader community for transparency. Breaking the "
+"rules in this section is sufficient, but not necessary, causality for "
+"expulsion of the representative or member company, depending on the nature "
+"of the infraction, from the TSC by a standard motion and vote."
+msgstr ""
+"Le TSC est mis en place pour guider la communauté de manière transparente. "
+"Cependant, pour faciliter une communication efficace, la possibilité d'avoir"
+" des discussions confidentielles est importante. Les membres du TSC doivent "
+"partager des informations confidentielles au sein du TSC et les autres "
+"membres doivent respecter cette confidentialité. Les règles suivantes "
+"concernent la confidentialité des communications, des événements et des "
+"réunions du TSC. Toutes les autres communications peuvent être mises "
+"gratuitement à la disposition de la communauté au sens large à des fins de "
+"transparence. Enfreindre les règles de cette section est une cause "
+"suffisante, mais pas nécessaire, pour l'expulsion du représentant ou de la "
+"société membre, selon la nature de l'infraction, du TSC par une motion et un"
+" vote standard."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:214
+msgid ""
+"Statements made by individuals in discussions surrounding a vote or topic of"
+" contention which are not reflected in the publicly posted minutes should be"
+" considered confidential."
+msgstr ""
+"Les déclarations faites par des individus lors de discussions entourant un "
+"vote ou un sujet de discorde qui ne sont pas reflétées dans les procès-"
+"verbaux publiés publiquement doivent être considérées comme confidentielles."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:216
+msgid ""
+"Statements made by individuals regarding companies, research groups, "
+"individuals, or other entities for which they are not also members should be"
+" considered confidential. This is exempt when the entity in question is a "
+"member and in attendance to the TSC meeting or event."
+msgstr ""
+"Les déclarations faites par des individus concernant des entreprises, des "
+"groupes de recherche, des individus ou d'autres entités dont ils ne sont pas"
+" également membres doivent être considérées comme confidentielles. Ceci est "
+"exonéré lorsque l'entité en question est membre et assiste à la réunion ou à"
+" l'événement du TSC."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:219
+msgid ""
+"Statements made in obvious confidence or explicitly stated as confidential "
+"regarding their own entity or opinions should remain confidential."
+msgstr ""
+"Les déclarations faites à titre confidentiel ou explicitement déclarées "
+"confidentielles concernant leur propre entité ou leurs opinions doivent "
+"rester confidentielles."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:221
+msgid ""
+"Rule a-c may be waived by the TSC member who made the statement only by "
+"explicit verbal or written approval. If the existence of a waiver is put "
+"into question by either party, this waiver is considered nullified."
+msgstr ""
+"La règle a-c peut être annulée par le membre du TSC qui a fait la "
+"déclaration uniquement par approbation verbale ou écrite explicite. Si "
+"l'existence d'une renonciation est remise en cause par l'une ou l'autre des "
+"parties, cette renonciation est considérée comme nulle."
+
+#: ../../source/The-ROS2-Project/Governance/ROS2-TSC-Charter.rst:224
+msgid ""
+"Affiliates of TSC member organizations or guests of TSC events privy to "
+"confidential information will be held to the same standards set out in this "
+"section. It is the responsibility of the TSC member issuing invitations or "
+"sharing information to inform relevant parties of these confidentiality "
+"requirements. If this policy is broken, the TSC member is in full "
+"responsibility for the disclosure."
+msgstr ""
+"Les affiliés des organisations membres du TSC ou les invités des événements "
+"du TSC ayant accès à des informations confidentielles seront tenus de "
+"respecter les mêmes normes énoncées dans cette section. Il est de la "
+"responsabilité du membre du TSC émettant des invitations ou partageant des "
+"informations d'informer les parties concernées de ces exigences de "
+"confidentialité. Si cette politique n'est pas respectée, le membre du TSC "
+"est entièrement responsable de la divulgation."

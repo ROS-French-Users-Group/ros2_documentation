@@ -1,0 +1,154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 17:19:58.266414\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:7
+msgid "Building RQt from source"
+msgstr "Construire RQt à partir de la source"
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:9
+msgid ""
+"We've provided our development setup here to aid future users in easily "
+"extending RQt by creating their own plugins. We encourage you to contribute "
+"those plugins back to the ``ros-visualization`` GitHub repository!"
+msgstr ""
+"Nous avons fourni notre configuration de développement ici pour aider les "
+"futurs utilisateurs à étendre facilement RQt en créant leurs propres "
+"plugins. Nous vous encourageons à remettre ces plugins dans le référentiel "
+"GitHub ``ros-visualization`` !"
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:13
+msgid "System Requirements"
+msgstr "Configuration requise"
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:15
+msgid ""
+"These instructions are written for the target platforms for Crystal Clemmys "
+"(see `REP <https://www.ros.org/reps/rep-2000.html>`__)."
+msgstr ""
+"Ces instructions sont écrites pour les plates-formes cibles de Crystal "
+"Clemmys (voir `REP <https://www.ros.org/reps/rep-2000.html>`__)."
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:17
+msgid "Ubuntu Bionic Beaver 18.04 64-bit"
+msgstr "Ubuntu Bionic Beaver 18.04 64 bits"
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:18
+msgid "Mac OSX Sierra 10.12.x"
+msgstr "Macos Sierra 10.12.x"
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:19
+msgid "Windows 10 with Visual Studio 2017"
+msgstr "Windows 10 avec Visual Studio 2017"
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:22
+msgid "Other Requirements"
+msgstr "Autres exigences"
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:24
+msgid "In ROS 2 Crystal the minimum Qt version is ``Qt5``"
+msgstr "Dans ROS 2 Crystal, la version minimale de Qt est ``Qt5``"
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:27
+msgid "Building From Source"
+msgstr "Construire à partir de la source"
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:29
+msgid ""
+"In order to build RQt from source, first create a ROS 2 workspace at "
+"``~/ros2_ws/``. This is step is already covered in :doc:`building ROS 2 from"
+" source instructions <../Installation>`, so we skip it here."
+msgstr ""
+"Afin de construire RQt à partir des sources, créez d'abord un espace de "
+"travail ROS 2 à ``~/ros2_ws/``. Cette étape est déjà couverte dans "
+":doc:`construire ROS 2 à partir des instructions source <../Installation>`, "
+"nous l'ignorons donc ici."
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:33
+msgid "Download RQt Repositories"
+msgstr "Télécharger les référentiels RQt"
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:40
+msgid ""
+"As an alternative to the hosted ``.repos`` file you can use "
+"``rosinstall_generator`` to generate a custom one:"
+msgstr ""
+"Comme alternative au fichier hébergé ``.repos``, vous pouvez utiliser "
+"``rosinstall_generator`` pour en générer un personnalisé :"
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:48
+msgid "Install Dependencies"
+msgstr "Installer les dépendances"
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:56
+msgid ""
+"For non-Linux platforms, see the :doc:`macOS RQt source install page <RQt-"
+"Source-Install-MacOS>` or the :doc:`Windows 10 RQt source install page <RQt-"
+"Source-Install-Windows10>` before continuing here."
+msgstr ""
+"Pour les plates-formes non-Linux, consultez la :doc:`page d'installation de "
+"la source macOS RQt <RQt-Source-Install-MacOS>` ou la :doc:`page "
+"d'installation de la source Windows 10 RQt <RQt-Source-Install-Windows10>` "
+"avant continue ici."
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:63
+msgid "Build The Workspace"
+msgstr "Construire l'espace de travail"
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:65
+msgid "Generally building a workspace is as simple as:"
+msgstr ""
+"Généralement, la construction d'un espace de travail est aussi simple que :"
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:71
+msgid "For Windows, it is recommended to use the ``--merge-install`` option."
+msgstr ""
+"Pour Windows, il est recommandé d'utiliser l'option ``--merge-install``."
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:77
+msgid "Advanced Colcon usages:"
+msgstr "Utilisations avancées de Colcon :"
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:79
+msgid "Show verbose output on the console:"
+msgstr "Afficher la sortie détaillée sur la console :"
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:85
+msgid "Only build one package and its dependencies:"
+msgstr "Construisez un seul package et ses dépendances :"
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:92
+msgid "Source your environment"
+msgstr "Sourcez votre environnement"
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:94
+msgid "Linux or macOS"
+msgstr "Linux ou macOS"
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:100
+msgid "Windows"
+msgstr "les fenêtres"
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:108
+msgid "Using RQt"
+msgstr "Utilisation de Ryat"
+
+#: ../../source/How-To-Guides/RQt-Source-Install.rst:110
+msgid "See :doc:`Overview of RQt <../Concepts/About-RQt>`."
+msgstr "Voir :doc:`Aperçu de RQt <../Concepts/About-RQt>`."

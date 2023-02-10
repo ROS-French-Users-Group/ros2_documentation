@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 17:22:34.546002\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/How-To-Guides/Ament-CMake-Python-Documentation.rst:6
+msgid "ament_cmake_python user documentation"
+msgstr "documentation utilisateur ament_cmake_python"
+
+#: ../../source/How-To-Guides/Ament-CMake-Python-Documentation.rst:8
+msgid ""
+"``ament_cmake_python`` is a package that provides CMake functions for "
+"packages of the ``ament_cmake`` build type that contain Python code. See the"
+" :doc:`ament_cmake user documentation <Ament-CMake-Documentation>` for more "
+"information."
+msgstr ""
+"``ament_cmake_python`` est un package qui fournit des fonctions CMake pour "
+"les packages du type de construction ``ament_cmake`` contenant du code "
+"Python. Voir la :doc:`ament_cmake documentation utilisateur <Ament-CMake-"
+"Documentation>` pour plus d'informations."
+
+#: ../../source/How-To-Guides/Ament-CMake-Python-Documentation.rst:13
+msgid ""
+"Pure Python packages should use the ``ament_python`` build type in most "
+"cases. To create an ``ament_python`` package, see :doc:`Creating your first "
+"ROS 2 package <../Tutorials/Beginner-Client-Libraries/Creating-Your-First-"
+"ROS2-Package>`. ``ament_cmake_python`` should only be used in cases where "
+"that is not possible, like when mixing C/C++ and Python code."
+msgstr ""
+"Les packages Python purs doivent utiliser le type de construction "
+"``ament_python`` dans la plupart des cas. Pour créer un package "
+"``ament_python``, consultez :doc:`Creating your first ROS 2 package "
+"<../Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package>`. "
+"``ament_cmake_python`` ne doit être utilisé que dans les cas où cela n'est "
+"pas possible, comme lors du mélange de code C/C++ et Python."
+
+#: ../../source/How-To-Guides/Ament-CMake-Python-Documentation.rst:20
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/How-To-Guides/Ament-CMake-Python-Documentation.rst:23
+msgid "Basics"
+msgstr "Bases"
+
+#: ../../source/How-To-Guides/Ament-CMake-Python-Documentation.rst:26
+msgid "Basic project outline"
+msgstr "Aperçu du projet de base"
+
+#: ../../source/How-To-Guides/Ament-CMake-Python-Documentation.rst:28
+msgid ""
+"The outline of a package called \"my_project\" with the ``ament_cmake`` "
+"build type that uses ``ament_cmake_python`` looks like:"
+msgstr ""
+"Le plan d'un paquet appelé \"my_project\" avec le type de construction "
+"``ament_cmake`` qui utilise ``ament_cmake_python`` ressemble à :"
+
+#: ../../source/How-To-Guides/Ament-CMake-Python-Documentation.rst:40
+msgid ""
+"The ``__init__.py`` file can be empty, but it is needed to `make Python "
+"treat the directory containing it as a package "
+"<https://docs.python.org/3/tutorial/modules.html#packages>`__. There can "
+"also be a ``src`` or ``include`` directory alongside the ``CMakeLists.txt`` "
+"which holds C/C++ code."
+msgstr ""
+"Le fichier ``__init__.py`` peut être vide, mais il est nécessaire pour "
+"`faire que Python traite le répertoire le contenant comme un package "
+"<https://docs.python.org/3/tutorial/modules.html#packages> `__. Il peut "
+"également y avoir un répertoire ``src`` ou ``include`` à côté du "
+"``CMakeLists.txt`` qui contient du code C/C++."
+
+#: ../../source/How-To-Guides/Ament-CMake-Python-Documentation.rst:44
+msgid "Using ament_cmake_python"
+msgstr "Utiliser ament_cmake_python"
+
+#: ../../source/How-To-Guides/Ament-CMake-Python-Documentation.rst:46
+msgid ""
+"The package must declare a dependency on ``ament_cmake_python`` in its "
+"``package.xml``."
+msgstr ""
+"Le paquet doit déclarer une dépendance sur ``ament_cmake_python`` dans son "
+"``package.xml``."
+
+#: ../../source/How-To-Guides/Ament-CMake-Python-Documentation.rst:52
+#: ../../source/How-To-Guides/Ament-CMake-Python-Documentation.rst:100
+msgid "The ``CMakeLists.txt`` should contain:"
+msgstr "Le ``CMakeLists.txt`` doit contenir :"
+
+#: ../../source/How-To-Guides/Ament-CMake-Python-Documentation.rst:60
+msgid ""
+"The argument to ``ament_python_install_package()`` is the name of the "
+"directory alongside the ``CMakeLists.txt`` that contains the Python file. In"
+" this case, it is ``my_project``, or ``${PROJECT_NAME}``."
+msgstr ""
+"L'argument de ``ament_python_install_package()`` est le nom du répertoire à "
+"côté de ``CMakeLists.txt`` qui contient le fichier Python. Dans ce cas, il "
+"s'agit de ``my_project``, ou ``${PROJECT_NAME}``."
+
+#: ../../source/How-To-Guides/Ament-CMake-Python-Documentation.rst:65
+msgid ""
+"Calling ``rosidl_generate_interfaces`` and ``ament_python_install_package`` "
+"in the same CMake project does not work. See this `Github issue "
+"<https://github.com/ros2/rosidl_python/issues/141>`_ for more info. It is "
+"best practice to instead separate out the message generation into a separate"
+" package."
+msgstr ""
+"L'appel de ``rosidl_generate_interfaces`` et "
+"``ament_python_install_package`` dans le même projet CMake ne fonctionne "
+"pas. Voir ce `problème Github "
+"<https://github.com/ros2/rosidl_python/issues/141>`_ pour plus "
+"d'informations. Il est préférable de séparer la génération de messages dans "
+"un package séparé."
+
+#: ../../source/How-To-Guides/Ament-CMake-Python-Documentation.rst:69
+msgid ""
+"Then, another Python package that correctly depends on ``my_project`` can "
+"use it as a normal Python module:"
+msgstr ""
+"Ensuite, un autre package Python qui dépend correctement de ``my_project`` "
+"peut l'utiliser comme un module Python normal :"
+
+#: ../../source/How-To-Guides/Ament-CMake-Python-Documentation.rst:75
+msgid ""
+"Assuming ``my_script.py`` contains a function called ``my_function()``."
+msgstr ""
+"En supposant que ``my_script.py`` contient une fonction appelée "
+"``my_function()``."
+
+#: ../../source/How-To-Guides/Ament-CMake-Python-Documentation.rst:78
+msgid "Using ament_cmake_pytest"
+msgstr "Utilisation de ament_cmake_pytest"
+
+#: ../../source/How-To-Guides/Ament-CMake-Python-Documentation.rst:80
+msgid ""
+"The package ``ament_cmake_pytest`` is used to make tests discoverable to "
+"``cmake``. The package must declare a test dependency on "
+"``ament_cmake_pytest`` in its ``package.xml``."
+msgstr ""
+"Le package ``ament_cmake_pytest`` est utilisé pour rendre les tests "
+"détectables par ``cmake``. Le paquet doit déclarer une dépendance de test "
+"sur ``ament_cmake_pytest`` dans son ``package.xml``."
+
+#: ../../source/How-To-Guides/Ament-CMake-Python-Documentation.rst:87
+msgid ""
+"Say the package has a file structure like below, with tests in the ``tests``"
+" folder."
+msgstr ""
+"Supposons que le paquet ait une structure de fichiers comme ci-dessous, avec"
+" des tests dans le dossier ``tests``."
+
+#: ../../source/How-To-Guides/Ament-CMake-Python-Documentation.rst:121
+msgid ""
+"Compared to the usage of ament_python, which supports automatic test "
+"discovery, ament_cmake_pytest must be called with the path to each test "
+"file. The timeout can be reduced as needed."
+msgstr ""
+"Par rapport à l'utilisation d'ament_python, qui prend en charge la "
+"découverte automatique des tests, ament_cmake_pytest doit être appelé avec "
+"le chemin d'accès à chaque fichier de test. Le délai d'attente peut être "
+"réduit si nécessaire."
+
+#: ../../source/How-To-Guides/Ament-CMake-Python-Documentation.rst:124
+msgid ""
+"Now, you can invoke your tests with the :doc:`standard colcon testing "
+"commands <../Tutorials/Intermediate/Testing/CLI>`."
+msgstr ""
+"Maintenant, vous pouvez invoquer vos tests avec les :doc:`commandes de test "
+"colcon standard <../Tutorials/Intermediate/Testing/CLI>`."

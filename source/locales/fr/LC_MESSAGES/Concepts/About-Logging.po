@@ -1,0 +1,778 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 14:07:13.140590\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Concepts/About-Logging.rst:6
+msgid "About logging and logger configuration"
+msgstr ""
+"À propos de la journalisation et de la configuration de l'enregistreur"
+
+#: ../../source/Concepts/About-Logging.rst:11
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/Concepts/About-Logging.rst:14
+msgid "Overview"
+msgstr "Aperçu"
+
+#: ../../source/Concepts/About-Logging.rst:16
+msgid ""
+"The logging subsystem in ROS 2 aims to deliver logging messages to a variety"
+" of targets, including:"
+msgstr ""
+"Le sous-système de journalisation dans ROS 2 vise à fournir des messages de "
+"journalisation à diverses cibles, notamment :"
+
+#: ../../source/Concepts/About-Logging.rst:18
+msgid "To the console (if one is attached)"
+msgstr "À la console (le cas échéant)"
+
+#: ../../source/Concepts/About-Logging.rst:19
+msgid "To log files on disk (if local storage is available)"
+msgstr ""
+"Pour enregistrer des fichiers sur le disque (si le stockage local est "
+"disponible)"
+
+#: ../../source/Concepts/About-Logging.rst:20
+msgid "To the ``/rosout`` topic on the ROS 2 network"
+msgstr "Vers le sujet ``/rosout`` sur le réseau ROS 2"
+
+#: ../../source/Concepts/About-Logging.rst:22
+msgid ""
+"By default, log messages in ROS 2 nodes will go out to the console (on "
+"stderr), to log files on disk, and to the ``/rosout`` topic on the ROS 2 "
+"network. All of the targets can be individually enabled or disabled on a "
+"per-node basis."
+msgstr ""
+"Par défaut, les messages de journalisation des nœuds ROS 2 seront envoyés à "
+"la console (sur stderr), aux fichiers de journalisation sur le disque et à "
+"la rubrique ``/rosout`` sur le réseau ROS 2. Toutes les cibles peuvent être "
+"activées ou désactivées individuellement sur une base par nœud."
+
+#: ../../source/Concepts/About-Logging.rst:25
+msgid ""
+"The rest of this document will go over some of the ideas behind the logging "
+"subsystem."
+msgstr ""
+"Le reste de ce document passera en revue certaines des idées derrière le "
+"sous-système de journalisation."
+
+#: ../../source/Concepts/About-Logging.rst:28
+msgid "Severity level"
+msgstr "Degré de gravité"
+
+#: ../../source/Concepts/About-Logging.rst:30
+msgid ""
+"Log messages have a severity level associated with them: ``DEBUG``, "
+"``INFO``, ``WARN``, ``ERROR`` or ``FATAL``, in ascending order."
+msgstr ""
+"Les messages de log ont un niveau de sévérité qui leur est associé : "
+"``DEBUG``, ``INFO``, ``WARN``, ``ERROR`` ou ``FATAL``, dans l'ordre "
+"croissant."
+
+#: ../../source/Concepts/About-Logging.rst:32
+msgid ""
+"A logger will only process log messages with severity at or higher than a "
+"specified level chosen for the logger."
+msgstr ""
+"Un enregistreur traitera uniquement les messages de journal dont la gravité "
+"est égale ou supérieure à un niveau spécifié choisi pour l'enregistreur."
+
+#: ../../source/Concepts/About-Logging.rst:34
+msgid ""
+"Each node has a logger associated with it that automatically includes the "
+"node's name and namespace. If the node's name is externally remapped to "
+"something other than what is defined in the source code, it will be "
+"reflected in the logger name. Non-node loggers can also be created that use "
+"a specific name."
+msgstr ""
+"Chaque nœud est associé à un enregistreur qui inclut automatiquement le nom "
+"et l'espace de noms du nœud. Si le nom du nœud est remappé en externe sur "
+"autre chose que ce qui est défini dans le code source, il sera reflété dans "
+"le nom de l'enregistreur. Des enregistreurs non-nœuds peuvent également être"
+" créés en utilisant un nom spécifique."
+
+#: ../../source/Concepts/About-Logging.rst:38
+msgid ""
+"Logger names represent a hierarchy. If the level of a logger named "
+"\"abc.def\" is unset, it will defer to the level of its parent named "
+"\"abc\", and if that level is also unset, the default logger level will be "
+"used. When the level of logger \"abc\" is changed, all of its descendants "
+"(e.g. \"abc.def\", \"abc.ghi.jkl\") will have their level impacted unless "
+"their level has been explicitly set."
+msgstr ""
+"Les noms des enregistreurs représentent une hiérarchie. Si le niveau d'un "
+"enregistreur nommé \"abc.def\" n'est pas défini, il s'en remettra au niveau "
+"de son parent nommé \"abc\", et si ce niveau est également non défini, le "
+"niveau d'enregistrement par défaut sera utilisé. Lorsque le niveau de "
+"l'enregistreur \"abc\" est modifié, tous ses descendants (par exemple "
+"\"abc.def\", \"abc.ghi.jkl\") verront leur niveau impacté à moins que leur "
+"niveau n'ait été explicitement défini."
+
+#: ../../source/Concepts/About-Logging.rst:43
+msgid "APIs"
+msgstr "Apis"
+
+#: ../../source/Concepts/About-Logging.rst:45
+msgid ""
+"These are the APIs that end users of the ROS 2 logging infrastructure should"
+" use, split up by client library."
+msgstr ""
+"Ce sont les API que les utilisateurs finaux de l'infrastructure de "
+"journalisation ROS 2 doivent utiliser, réparties par bibliothèque cliente."
+
+#: ../../source/Concepts/About-Logging.rst:49
+#: ../../source/Concepts/About-Logging.rst:185
+msgid "C++"
+msgstr "C++"
+
+#: ../../source/Concepts/About-Logging.rst:51
+msgid ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}`` - output the given printf-style "
+"message every time this line is hit"
+msgstr ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}`` - affiche le message de style "
+"printf donné chaque fois que cette ligne est atteinte"
+
+#: ../../source/Concepts/About-Logging.rst:52
+msgid ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_ONCE`` - output the given printf-"
+"style message only the first time this line is hit"
+msgstr ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_ONCE`` - affiche le message de style "
+"printf donné uniquement la première fois que cette ligne est atteinte"
+
+#: ../../source/Concepts/About-Logging.rst:53
+msgid ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_EXPRESSION`` - output the given "
+"printf-style message only if the given expression is true"
+msgstr ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_EXPRESSION`` - affiche le message de "
+"style printf donné uniquement si l'expression donnée est vraie"
+
+#: ../../source/Concepts/About-Logging.rst:54
+msgid ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_FUNCTION`` - output the given printf-"
+"style message only if the given function returns true"
+msgstr ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_FUNCTION`` - affiche le message de "
+"style printf donné uniquement si la fonction donnée renvoie true"
+
+#: ../../source/Concepts/About-Logging.rst:55
+msgid ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_SKIPFIRST`` - output the given "
+"printf-style message all but the first time this line is hit"
+msgstr ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_SKIPFIRST`` - produit le message de "
+"style printf donné tous sauf la première fois que cette ligne est atteinte"
+
+#: ../../source/Concepts/About-Logging.rst:56
+msgid ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_THROTTLE`` - output the given printf-"
+"style message no more than the given rate in integer milliseconds"
+msgstr ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_THROTTLE`` - produit le message de "
+"style printf donné pas plus que le taux donné en millisecondes entières"
+
+#: ../../source/Concepts/About-Logging.rst:57
+msgid ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_SKIPFIRST_THROTTLE`` - output the "
+"given printf-style message no more than the given rate in integer "
+"milliseconds, but skip the first"
+msgstr ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_SKIPFIRST_THROTTLE`` - produit le "
+"message de style printf donné pas plus que le taux donné en millisecondes "
+"entières, mais ignore le premier"
+
+#: ../../source/Concepts/About-Logging.rst:58
+msgid ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_STREAM`` - output the given C++ "
+"stream-style message every time this line is hit"
+msgstr ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_STREAM`` - affiche le message de "
+"style flux C++ donné chaque fois que cette ligne est atteinte"
+
+#: ../../source/Concepts/About-Logging.rst:59
+msgid ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_STREAM_ONCE`` - output the given C++ "
+"stream-style message only the first time this line is hit"
+msgstr ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_STREAM_ONCE`` - affiche le message de"
+" style flux C++ donné uniquement la première fois que cette ligne est "
+"atteinte"
+
+#: ../../source/Concepts/About-Logging.rst:60
+msgid ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_STREAM_EXPRESSION`` - output the "
+"given C++ stream-style message only if the given expression is true"
+msgstr ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_STREAM_EXPRESSION`` - affiche le "
+"message de style flux C++ donné uniquement si l'expression donnée est vraie"
+
+#: ../../source/Concepts/About-Logging.rst:61
+msgid ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_STREAM_FUNCTION`` - output the given "
+"C++ stream-style message only if the given function returns true"
+msgstr ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_STREAM_FUNCTION`` - affiche le "
+"message de style flux C++ donné uniquement si la fonction donnée renvoie "
+"true"
+
+#: ../../source/Concepts/About-Logging.rst:62
+msgid ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_STREAM_SKIPFIRST`` - output the given"
+" C++ stream-style message all but the first time this line is hit"
+msgstr ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_STREAM_SKIPFIRST`` - produit le "
+"message de style flux C++ donné tous sauf la première fois que cette ligne "
+"est atteinte"
+
+#: ../../source/Concepts/About-Logging.rst:63
+msgid ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_STREAM_THROTTLE`` - output the given "
+"C++ stream-style message no more than the given rate in integer milliseconds"
+msgstr ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_STREAM_THROTTLE`` - produit le "
+"message de style flux C++ donné pas plus que le taux donné en millisecondes "
+"entières"
+
+#: ../../source/Concepts/About-Logging.rst:64
+msgid ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_STREAM_SKIPFIRST_THROTTLE`` - output "
+"the given C++ stream-style message no more than the given rate in integer "
+"milliseconds, but skip the first"
+msgstr ""
+"``RCLCPP_{DEBUG,INFO,WARN,ERROR,FATAL}_STREAM_SKIPFIRST_THROTTLE`` - produit"
+" le message de style flux C++ donné pas plus que le taux donné en "
+"millisecondes entières, mais ignore le premier"
+
+#: ../../source/Concepts/About-Logging.rst:66
+msgid ""
+"Each of the above APIs takes an ``rclcpp::Logger`` object as the first "
+"argument. This can be pulled from the node API by calling "
+"``node->get_logger()`` (recommended), or by constructing a stand-alone "
+"``rclcpp::Logger`` object."
+msgstr ""
+"Chacune des API ci-dessus prend un objet ``rclcpp::Logger`` comme premier "
+"argument. Cela peut être extrait de l'API du nœud en appelant "
+"``node->get_logger()`` (recommandé), ou en construisant un objet autonome "
+"``rclcpp::Logger``."
+
+#: ../../source/Concepts/About-Logging.rst:69
+msgid ""
+"``rcutils_logging_set_logger_level`` - Set the logging level for a "
+"particular logger name to the given severity level"
+msgstr ""
+"``rutils_logging_set_logger_level`` - Définit le niveau de journalisation "
+"pour un nom de journalisation particulier au niveau de gravité donné"
+
+#: ../../source/Concepts/About-Logging.rst:70
+msgid ""
+"``rcutils_logging_get_logger_effective_level`` - Given a logger name, return"
+" the logger level (which may be unset)"
+msgstr ""
+"``rutils_logging_get_logger_effective_level`` - Étant donné un nom "
+"d'enregistreur, renvoie le niveau de l'enregistreur (qui peut être "
+"désactivé)"
+
+#: ../../source/Concepts/About-Logging.rst:72
+#: ../../source/Concepts/About-Logging.rst:191
+msgid "Python"
+msgstr "Python"
+
+#: ../../source/Concepts/About-Logging.rst:74
+msgid ""
+"``logger.{debug,info,warning,error,fatal}`` - output the given Python string"
+" to the logging infrastructure.  The calls accept the following keyword args"
+" to control behavior:"
+msgstr ""
+"``logger.{debug,info,warning,error,fatal}`` - envoie la chaîne Python donnée"
+" à l'infrastructure de journalisation. Les appels acceptent les arguments de"
+" mot clé suivants pour contrôler le comportement :"
+
+#: ../../source/Concepts/About-Logging.rst:76
+msgid ""
+"``throttle_duration_sec`` - if not None, the duration of the throttle "
+"interval in floating-point seconds"
+msgstr ""
+"``throttle_duration_sec`` - si ce n'est pas None, la durée de l'intervalle "
+"de gaz en secondes à virgule flottante"
+
+#: ../../source/Concepts/About-Logging.rst:77
+msgid ""
+"``skip_first`` - if True, output the message all but the first time this "
+"line is hit"
+msgstr ""
+"``skip_first`` - si True, affiche le message tous sauf la première fois que "
+"cette ligne est atteinte"
+
+#: ../../source/Concepts/About-Logging.rst:78
+msgid ""
+"``once`` - if True, only output the message the first time this line is hit"
+msgstr ""
+"``une fois`` - si Vrai, n'affiche le message que la première fois que cette "
+"ligne est atteinte"
+
+#: ../../source/Concepts/About-Logging.rst:80
+msgid ""
+"``rclpy.logging.set_logger_level`` - Set the logging level for a particular "
+"logger name to the given severity level"
+msgstr ""
+"``rclpy.logging.set_logger_level`` - Définit le niveau de journalisation "
+"pour un nom d'enregistreur particulier au niveau de gravité donné"
+
+#: ../../source/Concepts/About-Logging.rst:81
+msgid ""
+"``rclpy.logging.get_logger_effective_level`` - Given a logger name, return "
+"the logger level (which may be unset)"
+msgstr ""
+"``rclpy.logging.get_logger_effective_level`` - Étant donné un nom "
+"d'enregistreur, renvoie le niveau d'enregistreur (qui peut être désactivé)"
+
+#: ../../source/Concepts/About-Logging.rst:84
+msgid "Configuration"
+msgstr "Configuration"
+
+#: ../../source/Concepts/About-Logging.rst:86
+msgid ""
+"Since ``rclcpp`` and ``rclpy`` use the same underlying logging "
+"infrastructure, the configuration options are the same."
+msgstr ""
+"Étant donné que ``rclcpp`` et ``rclpy`` utilisent la même infrastructure de "
+"journalisation sous-jacente, les options de configuration sont les mêmes."
+
+#: ../../source/Concepts/About-Logging.rst:89
+msgid "Environment variables"
+msgstr "Variables d'environnement"
+
+#: ../../source/Concepts/About-Logging.rst:91
+msgid ""
+"The following environment variables control some aspects of the ROS 2 "
+"loggers. For each of the environment settings, note that this is a process-"
+"wide setting, so it applies to all nodes in that process."
+msgstr ""
+"Les variables d'environnement suivantes contrôlent certains aspects des "
+"enregistreurs ROS 2. Pour chacun des paramètres d'environnement, notez qu'il"
+" s'agit d'un paramètre à l'échelle du processus, il s'applique donc à tous "
+"les nœuds de ce processus."
+
+#: ../../source/Concepts/About-Logging.rst:94
+msgid ""
+"``ROS_LOG_DIR`` - Control the logging directory that is used for writing "
+"logging messages to disk (if that is enabled).  If non-empty, use the exact "
+"directory as specified in this variable.  If empty, use the contents of the "
+"``ROS_HOME`` environment variable to construct a path of the form "
+"``$ROS_HOME/.log``.  In all cases, the ``~`` character is expanded to the "
+"user's HOME directory."
+msgstr ""
+"``ROS_LOG_DIR`` - Contrôle le répertoire de journalisation utilisé pour "
+"écrire les messages de journalisation sur le disque (s'il est activé). S'il "
+"n'est pas vide, utilisez le répertoire exact spécifié dans cette variable. "
+"Si vide, utilisez le contenu de la variable d'environnement ``ROS_HOME`` "
+"pour construire un chemin de la forme ``$ROS_HOME/.log``. Dans tous les cas,"
+" le caractère ``~`` est étendu au répertoire HOME de l'utilisateur."
+
+#: ../../source/Concepts/About-Logging.rst:95
+msgid ""
+"``ROS_HOME`` - Control the home directory that is used for various ROS "
+"files, including logging and config files.  In the context of logging, this "
+"variable is used to construct a path to a directory for log files.  If non-"
+"empty, use the contents of this variable for the ROS_HOME path.  In all "
+"cases, the ``~`` character is expanded to the users's HOME directory."
+msgstr ""
+"``ROS_HOME`` - Contrôle le répertoire personnel utilisé pour divers fichiers"
+" ROS, y compris les fichiers de journalisation et de configuration. Dans le "
+"contexte de la journalisation, cette variable est utilisée pour construire "
+"un chemin vers un répertoire pour les fichiers journaux. Si non vide, "
+"utilisez le contenu de cette variable pour le chemin ROS_HOME. Dans tous les"
+" cas, le caractère ``~`` est étendu au répertoire HOME des utilisateurs."
+
+#: ../../source/Concepts/About-Logging.rst:96
+msgid ""
+"``RCUTILS_LOGGING_USE_STDOUT`` - Control what stream output messages go to."
+"  If this is unset or 0, use stderr.  If this is 1, use stdout."
+msgstr ""
+"``RCUTILS_LOGGING_USE_STDOUT`` - Contrôle vers quel flux les messages de "
+"sortie vont. Si ce n'est pas défini ou 0, utilisez stderr. Si c'est 1, "
+"utilisez stdout."
+
+#: ../../source/Concepts/About-Logging.rst:97
+msgid ""
+"``RCUTILS_LOGGING_BUFFERED_STREAM`` - Control whether the logging stream (as"
+" configured in ``RCUTILS_LOGGING_USE_STDOUT``) should be line buffered or "
+"unbuffered.  If this is unset, use the default of the stream (generally line"
+" buffered for stdout, and unbuffered for stderr).  If this is 0, force the "
+"stream to be unbuffered.  If this is 1, force the stream to be line "
+"buffered."
+msgstr ""
+"``RCUTILS_LOGGING_BUFFERED_STREAM`` - Contrôle si le flux de journalisation "
+"(tel que configuré dans ``RCUTILS_LOGGING_USE_STDOUT``) doit être mis en "
+"mémoire tampon ou non. S'il n'est pas défini, utilisez la valeur par défaut "
+"du flux (généralement en mémoire tampon pour stdout et sans mémoire tampon "
+"pour stderr). S'il s'agit de 0, forcez le flux à ne pas être tamponné. Si "
+"c'est 1, force le flux à être mis en mémoire tampon."
+
+#: ../../source/Concepts/About-Logging.rst:98
+msgid ""
+"``RCUTILS_COLORIZED_OUTPUT`` - Control whether colors are used when "
+"outputting messages.  If unset, automatically determine based on the "
+"platform and whether the console is a TTY.  If 0, force disable using colors"
+" for output.  If 1, force enable using colors for output."
+msgstr ""
+"``RCUTILS_COLORIZED_OUTPUT`` - Contrôle si les couleurs sont utilisées lors "
+"de la sortie des messages. S'il n'est pas défini, détermine automatiquement "
+"en fonction de la plate-forme et si la console est un ATS. Si 0, forcer la "
+"désactivation en utilisant des couleurs pour la sortie. Si 1, forcez "
+"l'activation en utilisant des couleurs pour la sortie."
+
+#: ../../source/Concepts/About-Logging.rst:99
+msgid ""
+"``RCUTILS_CONSOLE_OUTPUT_FORMAT`` - Control the fields that are output for "
+"each log message.  The available fields are:"
+msgstr ""
+"``RCUTILS_CONSOLE_OUTPUT_FORMAT`` - Contrôle les champs qui sont sortis pour"
+" chaque message de journal. Les champs disponibles sont :"
+
+#: ../../source/Concepts/About-Logging.rst:101
+msgid "``{severity}`` - The severity level."
+msgstr "``{severity}`` - Le niveau de gravité."
+
+#: ../../source/Concepts/About-Logging.rst:102
+msgid "``{name}`` - The name of the logger (may be empty)."
+msgstr "``{name}`` - Le nom du logger (peut être vide)."
+
+#: ../../source/Concepts/About-Logging.rst:103
+msgid "``{message}`` - The log message (may be empty)."
+msgstr "``{message}`` - Le message du journal (peut être vide)."
+
+#: ../../source/Concepts/About-Logging.rst:104
+msgid ""
+"``{function_name}`` - The function name this was called from (may be empty)."
+msgstr ""
+"``{function_name}`` - Le nom de la fonction à partir de laquelle elle a été "
+"appelée (peut être vide)."
+
+#: ../../source/Concepts/About-Logging.rst:105
+msgid "``{file_name}`` - The file name this was called from (may be empty)."
+msgstr ""
+"``{file_name}`` - Le nom du fichier à partir duquel il a été appelé (peut "
+"être vide)."
+
+#: ../../source/Concepts/About-Logging.rst:106
+msgid "``{time}`` - The time in seconds since the epoch."
+msgstr "``{time}`` - Le temps en secondes depuis l'époque."
+
+#: ../../source/Concepts/About-Logging.rst:107
+msgid "``{time_as_nanoseconds}`` - The time in nanoseconds since the epoch."
+msgstr "``{time_as_nanoseconds}`` - Le temps en nanosecondes depuis l'époque."
+
+#: ../../source/Concepts/About-Logging.rst:108
+msgid ""
+"``{line_number}`` - The line number this was called from (may be empty)."
+msgstr ""
+"``{line_number}`` - Le numéro de ligne à partir duquel il a été appelé (peut"
+" être vide)."
+
+#: ../../source/Concepts/About-Logging.rst:110
+msgid ""
+"If no format is given, a default of ``[{severity}] [{time}] [{name}]: "
+"{message}`` is used."
+msgstr ""
+"Si aucun format n'est donné, une valeur par défaut de ``[{severity}] "
+"[{time}] [{name}] : {message}`` est utilisée."
+
+#: ../../source/Concepts/About-Logging.rst:114
+msgid "Node creation"
+msgstr "Création de nœud"
+
+#: ../../source/Concepts/About-Logging.rst:116
+msgid ""
+"When initializing a ROS 2 node, it is possible to control some aspects of "
+"the behavior via node options. Since these are per-node options, they can be"
+" set differently for different nodes even when the nodes are composed into a"
+" single process."
+msgstr ""
+"Lors de l'initialisation d'un nœud ROS 2, il est possible de contrôler "
+"certains aspects du comportement via les options de nœud. Comme il s'agit "
+"d'options par nœud, elles peuvent être définies différemment pour différents"
+" nœuds, même lorsque les nœuds sont composés en un seul processus."
+
+#: ../../source/Concepts/About-Logging.rst:119
+msgid ""
+"``log_levels`` - The log level to use for a component within this particular"
+" node.  This can be set with the following: ``ros2 run demo_nodes_cpp talker"
+" --ros-args --log-level talker:=DEBUG``"
+msgstr ""
+"``log_levels`` - Le niveau de journalisation à utiliser pour un composant "
+"dans ce nœud particulier. Cela peut être défini avec ce qui suit : ``ros2 "
+"run demo_nodes_cpp talker --ros-args --log-level talker:=DEBUG``"
+
+#: ../../source/Concepts/About-Logging.rst:120
+msgid ""
+"``external_log_config_file`` - The external file to use to configure the "
+"backend logger.  If it is NULL, the default configuration will be used.  "
+"Note that the format of this file is backend-specific (and is currently "
+"unimplemented for the default backend logger of spdlog).  This can be set "
+"with the following: ``ros2 run demo_nodes_cpp talker --ros-args --log-"
+"config-file log-config.txt``"
+msgstr ""
+"``external_log_config_file`` - Le fichier externe à utiliser pour configurer"
+" l'enregistreur principal. S'il est NULL, la configuration par défaut sera "
+"utilisée. Notez que le format de ce fichier est spécifique au backend (et "
+"n'est actuellement pas implémenté pour le logger backend par défaut de "
+"spdlog). Cela peut être défini avec ce qui suit : ``ros2 run demo_nodes_cpp "
+"talker --ros-args --log-config-file log-config.txt``"
+
+#: ../../source/Concepts/About-Logging.rst:121
+msgid ""
+"``log_stdout_disabled`` - Whether to disable writing log messages to the "
+"console.  This can be done with the following: ``ros2 run demo_nodes_cpp "
+"talker --ros-args --disable-stdout-logs``"
+msgstr ""
+"``log_stdout_disabled`` - S'il faut désactiver l'écriture des messages du "
+"journal sur la console. Cela peut être fait avec ce qui suit : ``ros2 run "
+"demo_nodes_cpp talker --ros-args --disable-stdout-logs``"
+
+#: ../../source/Concepts/About-Logging.rst:122
+msgid ""
+"``log_rosout_disabled`` - Whether to disable writing log messages out to "
+"``/rosout``.  This can significantly save on network bandwidth, but external"
+" observers will not be able to monitor logging.  This can be done with the "
+"following: ``ros2 run demo_nodes_cpp talker --ros-args --disable-rosout-"
+"logs``"
+msgstr ""
+"``log_rosout_disabled`` - S'il faut désactiver l'écriture des messages de "
+"journalisation vers ``/rosout``. Cela peut considérablement économiser sur "
+"la bande passante du réseau, mais les observateurs externes ne pourront pas "
+"surveiller la journalisation. Cela peut être fait avec ce qui suit : ``ros2 "
+"run demo_nodes_cpp talker --ros-args --disable-rosout-logs``"
+
+#: ../../source/Concepts/About-Logging.rst:123
+msgid ""
+"``log_ext_lib_disabled`` - Whether to completely disable the use of an "
+"external logger.  This may be faster in some cases, but means that logs will"
+" not be written to disk.  This can be done with the following: ``ros2 run "
+"demo_nodes_cpp talker --ros-args --disable-external-lib-logs``"
+msgstr ""
+"``log_ext_lib_disabled`` - S'il faut complètement désactiver l'utilisation "
+"d'un enregistreur externe. Cela peut être plus rapide dans certains cas, "
+"mais signifie que les journaux ne seront pas écrits sur le disque. Cela peut"
+" être fait avec ce qui suit : ``ros2 run demo_nodes_cpp talker --ros-args "
+"--disable-external-lib-logs``"
+
+#: ../../source/Concepts/About-Logging.rst:126
+msgid "Logging subsystem design"
+msgstr "Conception du sous-système de journalisation"
+
+#: ../../source/Concepts/About-Logging.rst:128
+msgid ""
+"The image below shows the five main pieces to the logging subsystem and how "
+"they interact."
+msgstr ""
+"L'image ci-dessous montre les cinq éléments principaux du sous-système de "
+"journalisation et leur interaction."
+
+#: ../../source/Concepts/About-Logging.rst:None
+msgid "ROS 2 logging architecture"
+msgstr "Architecture de journalisation ROS 2"
+
+#: ../../source/Concepts/About-Logging.rst:136
+msgid "rcutils"
+msgstr "rutils"
+
+#: ../../source/Concepts/About-Logging.rst:138
+msgid ""
+"``rcutils`` has a logging implementation that can format log messages "
+"according to a certain format (see ``Configuration`` above), and output "
+"those log messages to a console. ``rcutils`` implements a complete logging "
+"solution, but allows higher-level components to insert themselves into the "
+"logging infrastructure in a dependency-injection model. This will become "
+"more evident when we talk about the ``rcl`` layer below."
+msgstr ""
+"``rutils`` a une implémentation de journalisation qui peut formater les "
+"messages de journalisation selon un certain format (voir ``Configuration`` "
+"ci-dessus), et afficher ces messages de journalisation sur une console. "
+"``rutils`` implémente une solution de journalisation complète, mais permet "
+"aux composants de niveau supérieur de s'insérer dans l'infrastructure de "
+"journalisation dans un modèle d'injection de dépendances. Cela deviendra "
+"plus évident lorsque nous parlerons de la couche ``rcl`` ci-dessous."
+
+#: ../../source/Concepts/About-Logging.rst:142
+msgid ""
+"Note that this is a *per-process* logging implementation, so anything that "
+"is configured at this level will affect the entire process, not just "
+"individual nodes."
+msgstr ""
+"Notez qu'il s'agit d'une implémentation de journalisation *par processus*, "
+"donc tout ce qui est configuré à ce niveau affectera l'ensemble du "
+"processus, pas seulement les nœuds individuels."
+
+#: ../../source/Concepts/About-Logging.rst:145
+msgid "rcl_logging_spdlog"
+msgstr "rcl_logging_spdlog"
+
+#: ../../source/Concepts/About-Logging.rst:147
+msgid ""
+"``rcl_logging_spdlog`` implements the ``rcl_logging_interface`` API, and "
+"thus provides external logging services to the ``rcl`` layer. In particular,"
+" the ``rcl_logging_spdlog`` implementation takes formatted log messages and "
+"writes them out to log files on disk using the ``spdlog`` library, typically"
+" within ``~/.ros/log`` (though this is configurable; see ``Configuration`` "
+"above)."
+msgstr ""
+"``rcl_logging_spdlog`` implémente l'API ``rcl_logging_interface``, et "
+"fournit ainsi des services de journalisation externes à la couche ``rcl``. "
+"En particulier, l'implémentation ``rcl_logging_spdlog`` prend des messages "
+"de journal formatés et les écrit dans des fichiers journaux sur le disque en"
+" utilisant la bibliothèque ``spdlog``, généralement dans ``~/.ros/log`` "
+"(bien que cela soit configurable ; voir ``Configuration`` ci-dessus)."
+
+#: ../../source/Concepts/About-Logging.rst:151
+msgid "rcl"
+msgstr "RCL"
+
+#: ../../source/Concepts/About-Logging.rst:153
+msgid ""
+"The logging subsystem in ``rcl`` uses ``rcutils`` and ``rcl_logging_spdlog``"
+" to provide the bulk of the ROS 2 logging services. When log messages come "
+"in, ``rcl`` decides where to send them. There are 3 main places that logging"
+" messages can be delivered; an individual node may have any combination of "
+"them enabled:"
+msgstr ""
+"Le sous-système de journalisation dans ``rcl`` utilise ``rcutils`` et "
+"``rcl_logging_spdlog`` pour fournir la majeure partie des services de "
+"journalisation ROS 2. Lorsque les messages de log arrivent, ``rcl`` décide "
+"où les envoyer. Il existe 3 endroits principaux où les messages de "
+"journalisation peuvent être livrés ; un nœud individuel peut avoir n'importe"
+" quelle combinaison d'entre eux activée :"
+
+#: ../../source/Concepts/About-Logging.rst:157
+msgid "To the console via the ``rcutils`` layer"
+msgstr "Vers la console via la couche ``rutils``"
+
+#: ../../source/Concepts/About-Logging.rst:158
+msgid "To disk via the ``rcl_logging_spdlog`` layer"
+msgstr "Vers disque via la couche ``rcl_logging_spdlog``"
+
+#: ../../source/Concepts/About-Logging.rst:159
+msgid "To the ``/rosout`` topic on the ROS 2 network via the RMW layer"
+msgstr "Vers le sujet ``/rosout`` sur le réseau ROS 2 via la couche RMW"
+
+#: ../../source/Concepts/About-Logging.rst:162
+msgid "rclcpp"
+msgstr "RCLCP"
+
+#: ../../source/Concepts/About-Logging.rst:164
+msgid ""
+"This is the main ROS 2 C++ API which sits atop the ``rcl`` API. In the "
+"context of logging, ``rclcpp`` provides the ``RCLCPP_`` logging macros; see "
+"``APIs`` above for a complete list. When one of the ``RCLCPP_`` macros runs,"
+" it checks the current severity level of the node against the severity level"
+" of the macro. If the severity level of the macro is greater than or equal "
+"to the node severity level, the message will be formatted and output to all "
+"of the places that are currently configured. Note that ``rclcpp`` uses a "
+"global mutex for log calls, so all logging calls within the same process end"
+" up being single-threaded."
+msgstr ""
+"Il s'agit de l'API principale de ROS 2 C++ qui se trouve au-dessus de l'API "
+"``rcl``. Dans le contexte de la journalisation, ``rclcpp`` fournit les "
+"macros de journalisation ``RCLCPP_`` ; voir ``APIs`` ci-dessus pour une "
+"liste complète. Lorsqu'une des macros ``RCLCPP_`` s'exécute, elle vérifie le"
+" niveau de gravité actuel du nœud par rapport au niveau de gravité de la "
+"macro. Si le niveau de gravité de la macro est supérieur ou égal au niveau "
+"de gravité du nœud, le message sera formaté et envoyé à tous les "
+"emplacements actuellement configurés. Notez que ``rclcpp`` utilise un mutex "
+"global pour les appels de journalisation, de sorte que tous les appels de "
+"journalisation dans le même processus finissent par être monothread."
+
+#: ../../source/Concepts/About-Logging.rst:172
+msgid "rclpy"
+msgstr "rclpy"
+
+#: ../../source/Concepts/About-Logging.rst:174
+msgid ""
+"This is the main ROS 2 Python API which sits atop the ``rcl`` API. In the "
+"context of logging, ``rclpy`` provides the ``logger.debug``-style functions;"
+" see ``APIs`` above for a complete list. When one of the ``logger.debug`` "
+"functions runs, it checks the current severity level of the node against the"
+" severity level of the macro. If the severity level of the macro is greater "
+"than or equal to the node severity level, the message will be formatted and "
+"output to all of the places that are currently configured."
+msgstr ""
+"Il s'agit de l'API Python principale de ROS 2 qui se trouve au-dessus de "
+"l'API ``rcl``. Dans le contexte de la journalisation, ``rclpy`` fournit les "
+"fonctions de style ``logger.debug`` ; voir ``APIs`` ci-dessus pour une liste"
+" complète. Lorsqu'une des fonctions ``logger.debug`` s'exécute, elle vérifie"
+" le niveau de gravité actuel du nœud par rapport au niveau de gravité de la "
+"macro. Si le niveau de gravité de la macro est supérieur ou égal au niveau "
+"de gravité du nœud, le message sera formaté et envoyé à tous les "
+"emplacements actuellement configurés."
+
+#: ../../source/Concepts/About-Logging.rst:181
+msgid "Logging usage"
+msgstr "Utilisation de la journalisation"
+
+#: ../../source/Concepts/About-Logging.rst:187
+msgid ""
+"See the `rclcpp logging demo "
+"<https://github.com/ros2/demos/tree/rolling/logging_demo>`_ for some simple "
+"examples."
+msgstr ""
+"Voir la `rclcpp logging demo "
+"<https://github.com/ros2/demos/tree/rolling/logging_demo>`_ pour quelques "
+"exemples simples."
+
+#: ../../source/Concepts/About-Logging.rst:188
+msgid ""
+"See the :doc:`logging demo <../Tutorials/Demos/Logging-and-logger-"
+"configuration>` for example usage."
+msgstr ""
+"Voir la :doc:`démo de journalisation <../Tutorials/Demos/Logging-and-logger-"
+"configuration>` pour un exemple d'utilisation."
+
+#: ../../source/Concepts/About-Logging.rst:189
+msgid ""
+"See the `rclcpp documentation "
+"<https://docs.ros2.org/latest/api/rclcpp/logging_8hpp.html>`__ for an "
+"extensive list of functionality."
+msgstr ""
+"Voir la `documentation rclcpp "
+"<https://docs.ros2.org/latest/api/rclcpp/logging_8hpp.html>`__ pour une "
+"liste complète des fonctionnalités."
+
+#: ../../source/Concepts/About-Logging.rst:193
+msgid ""
+"See the `rclpy examples "
+"<https://github.com/ros2/examples/blob/rolling/rclpy/services/minimal_client/examples_rclpy_minimal_client/client.py>`__"
+" for example usage of a node's logger."
+msgstr ""
+"Voir les `exemples rclpy "
+"<https://github.com/ros2/examples/blob/rolling/rclpy/services/minimal_client/examples_rclpy_minimal_client/client.py>`__"
+" pour un exemple d'utilisation de l'enregistreur d'un nœud."
+
+#: ../../source/Concepts/About-Logging.rst:194
+msgid ""
+"See the `rclpy tests "
+"<https://github.com/ros2/rclpy/blob/rolling/rclpy/test/test_logging.py>`__ "
+"for example usage of keyword arguments (e.g. ``skip_first``, ``once``)."
+msgstr ""
+"Voir les `tests rclpy "
+"<https://github.com/ros2/rclpy/blob/rolling/rclpy/test/test_logging.py>`__ "
+"pour un exemple d'utilisation d'arguments de mots-clés (par exemple "
+"``skip_first``, ``once` `)."

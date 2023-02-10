@@ -1,0 +1,477 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 17:02:35.378605\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:2
+msgid "First Time Release"
+msgstr "Première sortie"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:4
+msgid ""
+"This guide explains how to release ROS 2 packages that you have not released"
+" before. Due to numerous options available when releasing ROS packages, this"
+" guide intends to cover the most common scenario and does not cover every "
+"corner-case."
+msgstr ""
+"Ce guide explique comment publier des packages ROS 2 que vous n'avez pas "
+"encore publiés. En raison des nombreuses options disponibles lors de la "
+"publication des packages ROS, ce guide vise à couvrir le scénario le plus "
+"courant et ne couvre pas tous les cas particuliers."
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:9
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:12
+msgid "Be part of a release team"
+msgstr "Faire partie d'une équipe de publication"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:14
+msgid ""
+"You must be part of a :ref:`release team <what-is-a-release-team>`. If you "
+"are not part of a release team yet, follow either:"
+msgstr ""
+"Vous devez faire partie d'une :ref:`équipe de publication <what-is-a-"
+"release-team>`. Si vous ne faites pas encore partie d'une équipe de "
+"publication, suivez soit :"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:17
+msgid ":ref:`Join a release team <join-a-release-team>`"
+msgstr ":ref:`Rejoindre une équipe de publication <join-a-release-team>`"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:18
+msgid ":ref:`Start a new release team <start-a-new-release-team>`"
+msgstr ""
+":ref:`Démarrer une nouvelle équipe de publication <start-a-new-release-"
+"team>`"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:21
+msgid "Create a new release repository"
+msgstr "Créer un nouveau référentiel de version"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:23
+msgid ""
+"You need a :ref:`release repository <what-is-a-release-repository>` to "
+"release a package. Follow :ref:`Create a new release repository <create-a-"
+"new-release-repository>`."
+msgstr ""
+"Vous avez besoin d'un :ref:`release repository <what-is-a-release-"
+"repository>` pour publier un paquet. Suivez :ref:`Créez un nouveau dépôt de "
+"version <create-a-new-release-repository>`."
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:27
+msgid "Install dependencies"
+msgstr "Installer les dépendances"
+
+#: ../../source/How-To-Guides/Releasing/_Install-Dependencies.rst:1
+msgid ""
+"Install tools that you will use in the upcoming steps according to your "
+"platform:"
+msgstr ""
+"Installez les outils que vous utiliserez dans les prochaines étapes en "
+"fonction de votre plateforme :"
+
+#: ../../source/How-To-Guides/Releasing/_Install-Dependencies.rst:5
+msgid "Debian (eg. Ubuntu)"
+msgstr "Debian (par exemple Ubuntu)"
+
+#: ../../source/How-To-Guides/Releasing/_Install-Dependencies.rst:11
+msgid "RPM (eg. RHEL)"
+msgstr "RPM (ex. RHEL)"
+
+#: ../../source/How-To-Guides/Releasing/_Install-Dependencies.rst:17
+msgid "Other"
+msgstr "Autre"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:32
+msgid "Set Up a Personal Access Token"
+msgstr "Configurer un jeton d'accès personnel"
+
+#: ../../source/How-To-Guides/Releasing/_Personal-Access-Token.rst:3
+msgid ""
+"If the file ``~/.config/bloom`` exists on your computer, it is likely that "
+"you have done this before so you should skip this section."
+msgstr ""
+"Si le fichier ``~/.config/bloom`` existe sur votre ordinateur, il est "
+"probable que vous l'ayez déjà fait auparavant, vous devriez donc ignorer "
+"cette section."
+
+#: ../../source/How-To-Guides/Releasing/_Personal-Access-Token.rst:5
+msgid ""
+"During the release process, multiple HTTPS Git operations will be performed "
+"that require password authentication. To avoid being repeatedly asked for a "
+"password, a `Personal Access Token (PAT) "
+"<https://docs.github.com/en/authentication/keeping-your-account-and-data-"
+"secure/creating-a-personal-access-token>`_ will be set up. If you have "
+"multi-factor authentication setup on your GitHub account, you **must** setup"
+" a Personal Access Token."
+msgstr ""
+"Au cours du processus de publication, plusieurs opérations HTTPS Git seront "
+"effectuées qui nécessitent une authentification par mot de passe. Pour "
+"éviter qu'on vous demande à plusieurs reprises un mot de passe, un `Personal"
+" Access Token (PAT) <https://docs.github.com/en/authentication/keeping-your-"
+"account-and-data-secure/creating-a-personal- access-token>`_ sera configuré."
+" Si vous avez configuré l'authentification multifacteur sur votre compte "
+"GitHub, vous **devez** configurer un jeton d'accès personnel."
+
+#: ../../source/How-To-Guides/Releasing/_Personal-Access-Token.rst:9
+msgid "Create a Personal Access Token by:"
+msgstr "Créez un jeton d'accès personnel en :"
+
+#: ../../source/How-To-Guides/Releasing/_Personal-Access-Token.rst:11
+msgid ""
+"Log in to GitHub and go to `Personal access tokens "
+"<https://github.com/settings/tokens>`_."
+msgstr ""
+"Connectez-vous à GitHub et accédez à `Jetons d'accès personnels "
+"<https://github.com/settings/tokens>`_."
+
+#: ../../source/How-To-Guides/Releasing/_Personal-Access-Token.rst:12
+msgid "Click the **Generate new token** button."
+msgstr "Cliquez sur le bouton **Générer un nouveau jeton**."
+
+#: ../../source/How-To-Guides/Releasing/_Personal-Access-Token.rst:13
+msgid "Set **Note** to something like ``Bloom token``."
+msgstr "Définissez **Remarque** sur quelque chose comme ``Bloom token``."
+
+#: ../../source/How-To-Guides/Releasing/_Personal-Access-Token.rst:14
+msgid "Set **Expiration** to **No expiration**."
+msgstr "Définissez **Expiration** sur **Aucune expiration**."
+
+#: ../../source/How-To-Guides/Releasing/_Personal-Access-Token.rst:15
+msgid "Tick the ``public_repo`` and ``workflow`` checkboxes."
+msgstr "Cochez les cases ``public_repo`` et ``workflow``."
+
+#: ../../source/How-To-Guides/Releasing/_Personal-Access-Token.rst:16
+msgid "Click the **Generate token** button."
+msgstr "Cliquez sur le bouton **Générer un jeton**."
+
+#: ../../source/How-To-Guides/Releasing/_Personal-Access-Token.rst:18
+msgid ""
+"After you have created the token, you will end up back at the *Personal "
+"access tokens* page. **Copy the alphanumeric token** that is highlighted in "
+"green."
+msgstr ""
+"Après avoir créé le jeton, vous vous retrouverez sur la page *Jetons d'accès"
+" personnels*. **Copiez le jeton alphanumérique** surligné en vert."
+
+#: ../../source/How-To-Guides/Releasing/_Personal-Access-Token.rst:21
+msgid ""
+"Save your GitHub username and PAT to a new file called ``~/.config/bloom``, "
+"with the format below:"
+msgstr ""
+"Enregistrez votre nom d'utilisateur GitHub et votre PAT dans un nouveau "
+"fichier appelé ``~/.config/bloom``, au format ci-dessous :"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:37
+msgid "Ensure repositories are up-to-date"
+msgstr "Assurez-vous que les référentiels sont à jour"
+
+#: ../../source/How-To-Guides/Releasing/_Ensure-Repositories-Are-Up-To-Date.rst:1
+msgid "Make sure that:"
+msgstr "Sois sûr que:"
+
+#: ../../source/How-To-Guides/Releasing/_Ensure-Repositories-Are-Up-To-Date.rst:3
+msgid "Your repository is hosted on a remote such as GitHub."
+msgstr "Votre référentiel est hébergé sur une télécommande telle que GitHub."
+
+#: ../../source/How-To-Guides/Releasing/_Ensure-Repositories-Are-Up-To-Date.rst:4
+msgid ""
+"You have a clone of the repository on your computer and are on the right "
+"branch."
+msgstr ""
+"Vous avez un clone du référentiel sur votre ordinateur et vous êtes sur la "
+"bonne branche."
+
+#: ../../source/How-To-Guides/Releasing/_Ensure-Repositories-Are-Up-To-Date.rst:5
+msgid "Both the remote repository and your clone are up-to-date."
+msgstr "Le référentiel distant et votre clone sont à jour."
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:42
+msgid "Generate Changelog"
+msgstr "Générer un journal des modifications"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:44
+msgid ""
+"Generate a ``CHANGELOG.rst`` file per package in your repo using the "
+"following command:"
+msgstr ""
+"Générez un fichier ``CHANGELOG.rst`` par package dans votre référentiel à "
+"l'aide de la commande suivante :"
+
+#: ../../source/How-To-Guides/Releasing/_Clean-Up-Changelog.rst:1
+msgid ""
+"Open all ``CHANGELOG.rst`` files in an editor. You will see that "
+"``catkin_generate_changelog`` has auto-generated a forthcoming section with "
+"notes from commit messages:"
+msgstr ""
+"Ouvrez tous les fichiers ``CHANGELOG.rst`` dans un éditeur. Vous verrez que "
+"``catkin_generate_changelog`` a généré automatiquement une section à venir "
+"avec des notes de messages de validation :"
+
+#: ../../source/How-To-Guides/Releasing/_Clean-Up-Changelog.rst:15
+msgid ""
+"Clean up the list of commit messages to concisely convey the notable changes"
+" that have been made to the packages since the last release, and **commit "
+"all the CHANGELOG.rst files.** Do not modify the ``Forthcoming`` header."
+msgstr ""
+"Nettoyez la liste des messages de validation pour transmettre de manière "
+"concise les changements notables qui ont été apportés aux packages depuis la"
+" dernière version, et **commettez tous les fichiers CHANGELOG.rst.** Ne "
+"modifiez pas l'en-tête ``Forthcoming``."
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:53
+msgid "Bump the package version"
+msgstr "Bump la version du package"
+
+#: ../../source/How-To-Guides/Releasing/_Bump-Package-Version.rst:1
+msgid ""
+"Every release of the package must have a unique version number higher than "
+"the previous release. Run:"
+msgstr ""
+"Chaque version du package doit avoir un numéro de version unique supérieur à"
+" celui de la version précédente. Courir:"
+
+#: ../../source/How-To-Guides/Releasing/_Bump-Package-Version.rst:8
+msgid "which performs the following:"
+msgstr "qui effectue les opérations suivantes :"
+
+#: ../../source/How-To-Guides/Releasing/_Bump-Package-Version.rst:10
+msgid "increases the package version in ``package.xml``"
+msgstr "augmente la version du paquet dans ``package.xml``"
+
+#: ../../source/How-To-Guides/Releasing/_Bump-Package-Version.rst:11
+msgid ""
+"replaces the heading ``Forthcoming`` with ``version (date)`` (eg. ``0.0.1 "
+"(2022-01-08)``) in ``CHANGELOG.rst``"
+msgstr ""
+"remplace le titre ``À venir`` par ``version (date)`` (ex. ``0.0.1 "
+"(2022-01-08)``) dans ``CHANGELOG.rst``"
+
+#: ../../source/How-To-Guides/Releasing/_Bump-Package-Version.rst:12
+msgid "commits those changes"
+msgstr "valide ces changements"
+
+#: ../../source/How-To-Guides/Releasing/_Bump-Package-Version.rst:13
+msgid "creates a tag (eg. ``0.0.1``)"
+msgstr "crée une balise (ex. ``0.0.1``)"
+
+#: ../../source/How-To-Guides/Releasing/_Bump-Package-Version.rst:14
+msgid "pushes the changes and the tag to your remote repository"
+msgstr "pousse les modifications et la balise vers votre référentiel distant"
+
+#: ../../source/How-To-Guides/Releasing/_Bump-Package-Version.rst:18
+msgid ""
+"By default the patch version of the package is incremented, such as from "
+"``0.0.0`` to ``0.0.1``. To increment the minor or major version instead, run"
+" ``catkin_prepare_release --bump minor`` or ``catkin_prepare_release --bump "
+"major``. For more details, see ``catkin_prepare_release --help``."
+msgstr ""
+"Par défaut, la version du correctif du paquet est incrémentée, par exemple "
+"de ``0.0.0`` à ``0.0.1``. Pour incrémenter la version mineure ou majeure à "
+"la place, exécutez ``catkin_prepare_release --bump minor`` ou "
+"``catkin_prepare_release --bump major``. Pour plus de détails, voir "
+"``catkin_prepare_release --help``."
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:58
+msgid "Bloom Release"
+msgstr "Libération de la floraison"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:60
+msgid ""
+"Run the following command, replacing ``my_repo`` with the name of your "
+"repository:"
+msgstr ""
+"Exécutez la commande suivante en remplaçant ``my_repo`` par le nom de votre "
+"dépôt :"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:68
+msgid ""
+"``--new-track`` tells bloom to create a new :ref:`track <what-is-a-track>` "
+"and configure it."
+msgstr ""
+"``--new-track`` indique à bloom de créer un nouveau :ref:`track <what-is-a-"
+"track>` et de le configurer."
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:69
+msgid ""
+"``--rosdistro rolling`` indicates that this release is for the ``rolling`` "
+"distro"
+msgstr ""
+"``--rosdistro rolling`` indique que cette version est pour la distribution "
+"``rolling``"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:70
+msgid ""
+"``--track rolling`` indicates that you want the track name to be ``rolling``"
+msgstr ""
+"``--track rolling`` indique que vous voulez que le nom de la piste soit "
+"``rolling``"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:73
+msgid ""
+"You will be prompted to enter information to configure a new track. In a "
+"common scenario such as:"
+msgstr ""
+"Vous serez invité à entrer des informations pour configurer une nouvelle "
+"piste. Dans un scénario courant tel que :"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:76
+msgid "Your packages are in a repository called ``my_repo``"
+msgstr "Vos packages se trouvent dans un référentiel appelé ``my_repo``"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:77
+msgid "You are releasing a branch called ``main``"
+msgstr "Vous libérez une branche appelée ``main``"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:78
+msgid ""
+"The repository is hosted on GitHub at "
+"``https://github.com/my_organization/my_repo.git``"
+msgstr ""
+"Le dépôt est hébergé sur GitHub à "
+"``https://github.com/my_organization/my_repo.git``"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:79
+msgid ""
+"Your release repository is at ``https://github.com/ros2-gbp/my_repo-"
+"release.git``"
+msgstr ""
+"Votre dépôt de version est à ``https://github.com/ros2-gbp/my_repo-"
+"release.git``"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:81
+msgid "You should respond to the prompts as following:"
+msgstr "Vous devez répondre aux invites comme suit :"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:87
+msgid "Configuration"
+msgstr "Configuration"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:88
+msgid "Value"
+msgstr "Valeur"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:89
+msgid ":ref:`Release Repository url <release-repository-url>`"
+msgstr ":ref:`Release Repository url <release-repository-url>`"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:90
+msgid "``https://github.com/ros2-gbp/my_repo-release.git``"
+msgstr "``https://github.com/ros2-gbp/my_repo-release.git``"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:91
+msgid ":ref:`Repository Name <repository-name>`"
+msgstr ":ref:`Nom du référentiel <nom-du-référentiel>`"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:92
+msgid "``my_repo``"
+msgstr "``mon_dépôt``"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:93
+msgid ":ref:`Upstream Repository URI <upstream-repository-uri>`"
+msgstr ":ref:`URI du référentiel en amont <upstream-repository-uri>`"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:94
+msgid "``https://github.com/my_organization/my_repo.git``"
+msgstr "``https://github.com/my_organization/my_repo.git``"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:95
+msgid ":ref:`Upstream VCS Type <upstream-vcs-type>`"
+msgstr ":ref:`Type VCS en amont <type-vcs-amont>`"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:97
+msgid ":ref:`Version <version>`"
+msgstr ":ref:`Version <version>`"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:99
+msgid ":ref:`Release Tag <release-tag>`"
+msgstr ":ref:`Release Tag <release-tag>`"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:101
+msgid ":ref:`Upstream Devel Branch <upstream-devel-branch>`"
+msgstr ":ref:`Branche de développement en amont <branche-devel-amont>`"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:102
+msgid "``main``"
+msgstr "``principal``"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:103
+msgid ":ref:`ROS Distro <ros-distro>`"
+msgstr ":ref:`ROS Distro <ros-distro>`"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:105
+msgid ":ref:`Patches Directory <patches-directory>`"
+msgstr ":ref:`Répertoire des correctifs <répertoire-correctifs>`"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:107
+msgid ":ref:`Release Repository Push URL <release-repository-push-url>`"
+msgstr ":ref:`Release Repository Push URL <release-repository-push-url>`"
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:112
+msgid ""
+"An empty cell in the table indicates that the default value should be used. "
+"Simply respond to the prompt by pressing Enter."
+msgstr ""
+"Une cellule vide dans le tableau indique que la valeur par défaut doit être "
+"utilisée. Répondez simplement à l'invite en appuyant sur Entrée."
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:115
+msgid ""
+"Bloom will automatically create a pull request for you against `rosdistro "
+"<https://github.com/ros/rosdistro>`_."
+msgstr ""
+"Bloom créera automatiquement une pull request pour vous contre `rosdistro "
+"<https://github.com/ros/rosdistro>`_."
+
+#: ../../source/How-To-Guides/Releasing/First-Time-Release.rst:118
+msgid "Next Steps"
+msgstr "Prochaines étapes"
+
+#: ../../source/How-To-Guides/Releasing/_Next-Steps.rst:1
+msgid ""
+"Once your pull request has been submitted, usually within one or two days, "
+"one of the maintainers of rosdistro will review and merge your Pull Request."
+" If your package build is successful, in 24-48 hours your packages will "
+"become available in the **ros-testing** repository, where you can :doc:`test"
+" your pre-release binaries <../../../Installation/Testing>`."
+msgstr ""
+"Une fois votre demande de tirage soumise, généralement dans un délai d'un ou"
+" deux jours, l'un des responsables de rosdistro examinera et fusionnera "
+"votre demande de tirage. Si la construction de votre package réussit, vos "
+"packages seront disponibles dans les 24 à 48 heures dans le référentiel "
+"**ros-testing**, où vous pourrez :doc:`tester vos binaires de pré-version "
+"<../../.. /Installation/Tests>`."
+
+#: ../../source/How-To-Guides/Releasing/_Next-Steps.rst:4
+msgid ""
+"Approximately every two to four weeks, the distribution's release manager "
+"manually synchronizes the contents of ros-testing into the main ROS "
+"repository. This is when your packages actually become available to the rest"
+" of the ROS community. To get updates on when the next synchronization "
+"(sync) is coming, subscribe to the `Packaging and Release Management "
+"Category on ROS Discourse <https://discourse.ros.org/c/release/16>`_."
+msgstr ""
+"Environ toutes les deux à quatre semaines, le gestionnaire de publication de"
+" la distribution synchronise manuellement le contenu de ros-testing dans le "
+"référentiel ROS principal. C'est à ce moment que vos packages deviennent "
+"réellement disponibles pour le reste de la communauté ROS. Pour obtenir des "
+"mises à jour sur la date de la prochaine synchronisation (sync), abonnez-"
+"vous à la catégorie `Packaging and Release Management Category on ROS "
+"Discourse <https://discourse.ros.org/c/release/16>`_."

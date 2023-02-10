@@ -1,0 +1,718 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 11:53:31.633237\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:7
+msgid ""
+"Using Fast DDS Discovery Server as discovery protocol [community-"
+"contributed]"
+msgstr ""
+"Utilisation de Fast DDS Discovery Server comme protocole de découverte "
+"[contribution de la communauté]"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:9
+msgid ""
+"**Goal:** This tutorial will show how to launch ROS 2 Nodes using the **Fast"
+" DDS Discovery Server** discovery protocol."
+msgstr ""
+"**Objectif :** Ce didacticiel montre comment lancer les nœuds ROS 2 à l'aide"
+" du protocole de découverte **Fast DDS Discovery Server**."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:11
+msgid "**Tutorial level:** Advanced"
+msgstr "**Niveau du didacticiel :** Avancé"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:13
+msgid "**Time:** 20 minutes"
+msgstr "**Durée :** 20 minutes"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:17
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:20
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:22
+msgid ""
+"Starting from ROS 2 Eloquent Elusor, the **Fast DDS Discovery Server** "
+"protocol is a feature that offers a centralized dynamic discovery mechanism,"
+" as opposed to the distributed mechanism used in DDS by default. This "
+"tutorial explains how to run some ROS 2 examples using the Fast DDS "
+"Discovery Server feature as discovery communication."
+msgstr ""
+"À partir de ROS 2 Eloquent Elusor, le protocole **Fast DDS Discovery "
+"Server** est une fonctionnalité qui offre un mécanisme de découverte "
+"dynamique centralisé, par opposition au mécanisme distribué utilisé par "
+"défaut dans DDS. Ce didacticiel explique comment exécuter certains exemples "
+"ROS 2 à l'aide de la fonctionnalité Fast DDS Discovery Server en tant que "
+"communication de découverte."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:25
+msgid ""
+"In order to get more information about the available discovery "
+"configuration, please check the `following documentation <https://fast-"
+"dds.docs.eprosima.com/en/v2.1.0/fastdds/discovery/discovery.html>`_ or read "
+"the `Fast DDS Discovery Server specific documentation <https://fast-"
+"dds.docs.eprosima.com/en/v2.1.0/fastdds/discovery/discovery_server.html#discovery-"
+"server>`__."
+msgstr ""
+"Afin d'obtenir plus d'informations sur la configuration de découverte "
+"disponible, veuillez consulter la `documentation suivante <https://fast-"
+"dds.docs.eprosima.com/en/v2.1.0/fastdds/discovery/discovery.html>`_ ou lisez"
+" la `Documentation spécifique au serveur Fast DDS Discovery <https://fast-"
+"dds.docs.eprosima.com/en/v2.1.0/fastdds/discovery/discovery_server.html#discovery-"
+"server>`__."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:27
+msgid ""
+"The `Simple Discovery Protocol <https://fast-"
+"dds.docs.eprosima.com/en/v2.1.0/fastdds/discovery/simple.html>`__ is the "
+"standard protocol defined in the `DDS standard <https://www.omg.org/omg-dds-"
+"portal/>`__. However, it has known disadvantages in some scenarios."
+msgstr ""
+"Le `Simple Discovery Protocol <https://fast-"
+"dds.docs.eprosima.com/en/v2.1.0/fastdds/discovery/simple.html>`__ est le "
+"protocole standard défini dans le `standard DDS <https:/ /www.omg.org/omg-"
+"dds-portal/>`__. Cependant, il présente des inconvénients connus dans "
+"certains scénarios."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:30
+msgid ""
+"It does not **Scale** efficiently, as the number of exchanged packets "
+"increases significantly as new nodes are added."
+msgstr ""
+"Il ne **s'adapte pas** efficacement, car le nombre de paquets échangés "
+"augmente considérablement à mesure que de nouveaux nœuds sont ajoutés."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:31
+msgid ""
+"It requires **multicasting** capabilities that may not work reliably in some"
+" scenarios, e.g. WiFi."
+msgstr ""
+"Il nécessite des capacités de **multidiffusion** qui peuvent ne pas "
+"fonctionner de manière fiable dans certains scénarios, par ex. Wifi."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:33
+msgid ""
+"The **Fast DDS Discovery Server** provides a Client-Server Architecture that"
+" allows nodes to connect with each other using an intermediate server. Each "
+"node functions as a *discovery client*, sharing its info with one or more "
+"*discovery servers* and receiving discovery information from it. This "
+"reduces discovery-related network traffic and it does not require "
+"multicasting capabilities."
+msgstr ""
+"Le **Fast DDS Discovery Server** fournit une architecture client-serveur qui"
+" permet aux nœuds de se connecter les uns aux autres à l'aide d'un serveur "
+"intermédiaire. Chaque nœud fonctionne comme un * client de découverte *, "
+"partageant ses informations avec un ou plusieurs * serveurs de découverte * "
+"et recevant des informations de découverte de celui-ci. Cela réduit le "
+"trafic réseau lié à la découverte et ne nécessite pas de capacités de "
+"multidiffusion."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:40
+msgid ""
+"These discovery servers can be independent, duplicated or connected with "
+"each other in order to create redundancy over the network and avoid having a"
+" single point of failure."
+msgstr ""
+"Ces serveurs de découverte peuvent être indépendants, dupliqués ou connectés"
+" entre eux afin de créer une redondance sur le réseau et éviter d'avoir un "
+"point de défaillance unique."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:43
+msgid "Fast DDS Discovery Server v2"
+msgstr "Serveur de découverte DDS rapide v2"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:45
+msgid ""
+"The latest ROS 2 Foxy Fitzroy release (December 2020) included a new "
+"version, version 2 of the Fast DDS Discovery Server. This version includes a"
+" new filter feature that further reduces the number of discovery messages "
+"sent. This version uses the topic of the different nodes to decide if two "
+"nodes wish to communicate, or if they can be left unmatched (i.e. not "
+"discovering each other). The following figure shows the decrease in "
+"discovery messages:"
+msgstr ""
+"La dernière version de ROS 2 Foxy Fitzroy (décembre 2020) comprenait une "
+"nouvelle version, la version 2 du Fast DDS Discovery Server. Cette version "
+"inclut une nouvelle fonctionnalité de filtrage qui réduit davantage le "
+"nombre de messages de découverte envoyés. Cette version utilise le sujet des"
+" différents nœuds pour décider si deux nœuds souhaitent communiquer, ou "
+"s'ils peuvent être laissés sans correspondance (c'est-à-dire ne pas se "
+"découvrir). La figure suivante montre la diminution des messages de "
+"découverte :"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:53
+msgid ""
+"This architecture reduces the number of messages sent between the server and"
+" clients dramatically. In the following graph, the reduction in network "
+"traffic over the discovery phase for the `RMF Clinic demonstration "
+"<https://github.com/osrf/rmf_demos>`__ is shown:"
+msgstr ""
+"Cette architecture réduit considérablement le nombre de messages envoyés "
+"entre le serveur et les clients. Dans le graphique suivant, la réduction du "
+"trafic réseau au cours de la phase de découverte pour la `démonstration RMF "
+"Clinic <https://github.com/osrf/rmf_demos>`__ est indiquée :"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:60
+msgid ""
+"In order to use this functionality, the discovery server can be configured "
+"using the `XML configuration for Participants <https://fast-"
+"dds.docs.eprosima.com/en/v2.1.0/fastdds/discovery/discovery_server.html#discovery-"
+"server>`__. It is also possible to configure the discovery server using the "
+"``fastdds`` `tool <https://fast-"
+"dds.docs.eprosima.com/en/v2.1.0/fastddscli/cli/cli.html#discovery>`__ and an"
+" `environment variable <https://fast-"
+"dds.docs.eprosima.com/en/v2.1.0/fastdds/env_vars/env_vars.html>`__, which is"
+" the approach used in this tutorial. For a more detailed explanation about "
+"the configuration of the discovery server, visit `the Fast DDS Discovery "
+"Server documentation <https://fast-"
+"dds.docs.eprosima.com/en/v2.1.0/fastdds/discovery/discovery_server.html#discovery-"
+"server>`__."
+msgstr ""
+"Afin d'utiliser cette fonctionnalité, le serveur de découverte peut être "
+"configuré à l'aide de la `Configuration XML pour les participants "
+"<https://fast-"
+"dds.docs.eprosima.com/en/v2.1.0/fastdds/discovery/discovery_server.html#discovery"
+" -serveur>`__. Il est également possible de configurer le serveur de "
+"découverte à l'aide de l'outil ``fastdds`` `<https://fast-"
+"dds.docs.eprosima.com/en/v2.1.0/fastddscli/cli/cli.html#discovery>` __ et "
+"une `variable d'environnement <https://fast-"
+"dds.docs.eprosima.com/en/v2.1.0/fastdds/env_vars/env_vars.html>`__, qui est "
+"l'approche utilisée dans ce tutoriel. Pour une explication plus détaillée "
+"sur la configuration du serveur de découverte, consultez la documentation du"
+" serveur Fast DDS Discovery <https://fast-"
+"dds.docs.eprosima.com/en/v2.1.0/fastdds/discovery/discovery_server.html# "
+"découverte-serveur>`__."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:66
+msgid "Prerequisites"
+msgstr "Conditions préalables"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:68
+msgid ""
+"This tutorial assumes you have a ROS 2 Foxy (or newer) :doc:`installation "
+"<../../../Installation>`. If your installation is using a ROS 2 version "
+"lower than Foxy, you cannot use the ``fastdds`` tool. Thus, in order to use "
+"the Discovery Server, you can update your repository to use a different Fast"
+" DDS version, or configure the discovery server using the `Fast DDS XML QoS "
+"configuration <https://fast-"
+"dds.docs.eprosima.com/en/v2.1.0/fastdds/discovery/discovery_server.html#discovery-"
+"server>`__."
+msgstr ""
+"Ce tutoriel suppose que vous avez un ROS 2 Foxy (ou plus récent) "
+":doc:`installation <../../../Installation>`. Si votre installation utilise "
+"une version de ROS 2 inférieure à Foxy, vous ne pouvez pas utiliser l'outil "
+"``fastdds``. Ainsi, afin d'utiliser le serveur de découverte, vous pouvez "
+"mettre à jour votre référentiel pour utiliser une version différente de Fast"
+" DDS, ou configurer le serveur de découverte à l'aide de la configuration "
+"`Fast DDS XML QoS <https://fast-dds.docs.eprosima.com "
+"/en/v2.1.0/fastdds/discovery/discovery_server.html#discovery-server>`__."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:74
+msgid "Run this tutorial"
+msgstr "Exécutez ce didacticiel"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:76
+msgid ""
+"The ``talker-listener`` ROS 2 demo creates a ``talker`` node that publishes "
+"a \"hello world\" message every second, and a ``listener`` node that listens"
+" to these messages."
+msgstr ""
+"La démo ``talker-listener`` ROS 2 crée un nœud ``talker`` qui publie un "
+"message \"hello world\" toutes les secondes, et un nœud ``listener`` qui "
+"écoute ces messages."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:78
+msgid ""
+"By :doc:`sourcing ROS 2 <../../Beginner-CLI-Tools/Configuring-"
+"ROS2-Environment>` you will get access to the CLI tool ``fastdds``. This "
+"tool gives access to the `discovery tool <https://fast-"
+"dds.docs.eprosima.com/en/v2.1.0/fastddscli/cli/cli.html#discovery>`__, which"
+" can be used to launch a discovery server. This server will manage the "
+"discovery process for the nodes that connect to it."
+msgstr ""
+"En :doc:`sourcing ROS 2 <../../Beginner-CLI-Tools/Configuring-"
+"ROS2-Environment>` vous aurez accès à l'outil CLI ``fastdds``. Cet outil "
+"donne accès à l'`outil de découverte <https://fast-"
+"dds.docs.eprosima.com/en/v2.1.0/fastddscli/cli/cli.html#discovery>`__, qui "
+"peut être utilisé pour lancer un serveur de découverte. Ce serveur gérera le"
+" processus de découverte pour les nœuds qui s'y connectent."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:83
+msgid ""
+"Do not forget to :doc:`source ROS 2 <../../Beginner-CLI-Tools/Configuring-"
+"ROS2-Environment>` in every new terminal opened."
+msgstr ""
+"N'oubliez pas de :doc:`source ROS 2 <../../Beginner-CLI-Tools/Configuring-"
+"ROS2-Environment>` dans chaque nouveau terminal ouvert."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:87
+msgid "Setup Discovery Server"
+msgstr "Configurer le serveur de découverte"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:89
+msgid ""
+"Start by launching a discovery server with id 0, port 11811 (default port) "
+"and listening on all available interfaces."
+msgstr ""
+"Commencez par lancer un serveur de découverte avec l'id 0, le port 11811 "
+"(port par défaut) et en écoutant sur toutes les interfaces disponibles."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:91
+msgid "Open a new terminal and run:"
+msgstr "Ouvrez un nouveau terminal et exécutez :"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:99
+msgid "Launch listener node"
+msgstr "Lancer le nœud d'écoute"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:101
+msgid "Execute the listener demo, to listen to the ``/chatter`` topic."
+msgstr "Exécutez la démo de l'écouteur, pour écouter le sujet ``/chatter``."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:103
+msgid ""
+"In a new terminal, set the environment variable ``ROS_DISCOVERY_SERVER`` to "
+"the location of the discovery server. (Do not forget to source ROS 2 in "
+"every new terminal)"
+msgstr ""
+"Dans un nouveau terminal, définissez la variable d'environnement "
+"``ROS_DISCOVERY_SERVER`` sur l'emplacement du serveur de découverte. "
+"(N'oubliez pas de sourcer ROS 2 dans chaque nouveau terminal)"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:110
+msgid ""
+"Launch the listener node. Use the argument ``--remap "
+"__node:=listener_discovery_server`` to change the node's name for this "
+"tutorial."
+msgstr ""
+"Lancez le nœud d'écoute. Utilisez l'argument ``--remap "
+"__node:=listener_discovery_server`` pour changer le nom du nœud pour ce "
+"tutoriel."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:116
+msgid ""
+"This will create a ROS 2 node, that will automatically create a client for "
+"the discovery server and connect to the server created previously to perform"
+" discovery, rather than using multicast."
+msgstr ""
+"Cela créera un nœud ROS 2, qui créera automatiquement un client pour le "
+"serveur de découverte et se connectera au serveur créé précédemment pour "
+"effectuer la découverte, plutôt que d'utiliser la multidiffusion."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:120
+msgid "Launch talker node"
+msgstr "Lancer le nœud de locuteur"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:122
+msgid ""
+"Open a new terminal and set the ``ROS_DISCOVERY_SERVER`` environment "
+"variable as before so that the node starts a discovery client."
+msgstr ""
+"Ouvrez un nouveau terminal et définissez la variable d'environnement "
+"``ROS_DISCOVERY_SERVER`` comme précédemment afin que le nœud démarre un "
+"client de découverte."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:129
+msgid ""
+"You should now see the talker publishing \"hello world\" messages, and the "
+"listener receiving these messages."
+msgstr ""
+"Vous devriez maintenant voir le locuteur publier des messages \"hello "
+"world\", et l'auditeur recevoir ces messages."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:133
+msgid "Demonstrate Discovery Server execution"
+msgstr "Démontrer l'exécution de Discovery Server"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:135
+msgid ""
+"So far, there is no evidence that this example and the standard talker-"
+"listener example are running differently. To clearly demonstrate this, run "
+"another node that is not connected to the discovery server. Run a new "
+"listener (listening in ``/chatter`` topic by default) in a new terminal and "
+"check that it is not connected to the talker already running."
+msgstr ""
+"Jusqu'à présent, rien ne prouve que cet exemple et l'exemple standard de "
+"locuteur-auditeur fonctionnent différemment. Pour le démontrer clairement, "
+"exécutez un autre nœud qui n'est pas connecté au serveur de découverte. "
+"Exécutez un nouvel écouteur (écoute dans le sujet ``/chatter`` par défaut) "
+"dans un nouveau terminal et vérifiez qu'il n'est pas connecté au talker déjà"
+" en cours d'exécution."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:143
+msgid ""
+"The new listener node should not be receiving the \"hello world\" messages."
+msgstr ""
+"Le nouveau nœud d'écoute ne devrait pas recevoir les messages \"hello "
+"world\"."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:145
+msgid ""
+"To finally verify that everything is running correctly, a new talker can be "
+"created using the simple discovery protocol (the default DDS distributed "
+"discovery mechanism) for discovery."
+msgstr ""
+"Pour enfin vérifier que tout fonctionne correctement, un nouveau locuteur "
+"peut être créé à l'aide du protocole de découverte simple (le mécanisme de "
+"découverte distribuée par défaut de DDS) pour la découverte."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:151
+msgid ""
+"Now you should see the ``simple_listener`` node receiving the \"hello "
+"world\" messages from ``simple_talker`` but not the other messages from "
+"``talker_discovery_server``."
+msgstr ""
+"Vous devriez maintenant voir le nœud ``simple_listener`` recevoir les "
+"messages \"hello world\" de ``simple_talker`` mais pas les autres messages "
+"de ``talker_discovery_server``."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:155
+msgid "Visualization tool ``rqt_graph``"
+msgstr "Outil de visualisation ``rqt_graph``"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:157
+msgid ""
+"The ``rqt_graph`` tool can be used to verify the nodes and structure of this"
+" example. Remember, in order to use ``rqt_graph`` with the discovery server "
+"protocol (i.e., to see the ``listener_discovery_server`` and "
+"``talker_discovery_server`` nodes) the ``ROS_DISCOVERY_SERVER`` environment "
+"variable must be set before launching it."
+msgstr ""
+"L'outil ``rqt_graph`` peut être utilisé pour vérifier les nœuds et la "
+"structure de cet exemple. N'oubliez pas que pour utiliser ``rqt_graph`` avec"
+" le protocole de serveur de découverte (c'est-à-dire pour voir les nœuds "
+"``listener_discovery_server`` et ``talker_discovery_server``), la variable "
+"d'environnement ``ROS_DISCOVERY_SERVER`` doit être définie avant de la "
+"lancer."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:162
+msgid "Advance use cases"
+msgstr "Cas d'utilisation avancés"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:164
+msgid ""
+"The following sections show different features of the discovery server that "
+"allow you to build a robust discovery server over the network."
+msgstr ""
+"Les sections suivantes présentent différentes fonctionnalités du serveur de "
+"découverte qui vous permettent de créer un serveur de découverte robuste sur"
+" le réseau."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:167
+msgid "Server Redundancy"
+msgstr "Redondance de serveur"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:169
+msgid ""
+"By using ``fastdds`` tool, multiple discovery servers can be created. "
+"Discovery clients (ROS nodes) can connect to as many servers as desired. "
+"This allows to have a redundant network that will work even if some servers "
+"or nodes shut down unexpectedly. The figure below shows a simple "
+"architecture that provides server redundancy."
+msgstr ""
+"En utilisant l'outil ``fastdds``, plusieurs serveurs de découverte peuvent "
+"être créés. Les clients de découverte (nœuds ROS) peuvent se connecter à "
+"autant de serveurs que vous le souhaitez. Cela permet d'avoir un réseau "
+"redondant qui fonctionnera même si certains serveurs ou nœuds s'arrêtent de "
+"manière inattendue. La figure ci-dessous montre une architecture simple qui "
+"assure la redondance des serveurs."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:177
+msgid ""
+"In several terminals, run the following code to establish a communication "
+"with redundant servers."
+msgstr ""
+"Dans plusieurs terminaux, exécutez le code suivant pour établir une "
+"communication avec des serveurs redondants."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:187
+msgid ""
+"``--server-id N`` means server with id N. When referencing the servers with "
+"``ROS_DISCOVERY_SERVER``, server ``0`` must be in first place and server "
+"``1`` in second place."
+msgstr ""
+"``--server-id N`` signifie serveur avec id N. Lorsque vous référencez les "
+"serveurs avec ``ROS_DISCOVERY_SERVER``, le serveur ``0`` doit être en "
+"première place et le serveur ``1`` en deuxième place."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:199
+msgid ""
+"Now, if one of these servers fails, there will still be discovery capability"
+" available and nodes will still discover each other."
+msgstr ""
+"Maintenant, si l'un de ces serveurs tombe en panne, il y aura toujours une "
+"capacité de découverte disponible et les nœuds continueront à se découvrir."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:203
+msgid "Backup Server"
+msgstr "Serveur de sauvegarde"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:205
+msgid ""
+"The Fast DDS Discovery Server allows creating a server with backup "
+"functionality. This allows the server to restore the last state it saved in "
+"case of a shutdown."
+msgstr ""
+"Le serveur Fast DDS Discovery permet de créer un serveur avec une "
+"fonctionnalité de sauvegarde. Cela permet au serveur de restaurer le dernier"
+" état qu'il a enregistré en cas d'arrêt."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:211
+msgid ""
+"In different terminals, run the following code to establish a communication "
+"with a backed-up server."
+msgstr ""
+"Dans différents terminaux, exécutez le code suivant pour établir une "
+"communication avec un serveur sauvegardé."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:227
+msgid ""
+"Several backup files are created in the discovery server's working directory"
+" (the directory it was launched in). The two ``SQLite`` files and two "
+"``json`` files contain the information required to start a new server and "
+"restore the failed server's state in case of failure, avoiding the need for "
+"the discovery process to happen again, and without losing information."
+msgstr ""
+"Plusieurs fichiers de sauvegarde sont créés dans le répertoire de travail du"
+" serveur de découverte (le répertoire dans lequel il a été lancé). Les deux "
+"fichiers ``SQLite`` et les deux fichiers ``json`` contiennent les "
+"informations nécessaires pour démarrer un nouveau serveur et restaurer "
+"l'état du serveur défaillant en cas de panne, évitant ainsi que le processus"
+" de découverte ne se reproduise, et sans perdre information."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:232
+msgid "Discovery partitions"
+msgstr "Cloisons de découverte"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:234
+msgid ""
+"Communication with discovery servers can be split to create virtual "
+"partitions in the discovery information. This means that two endpoints will "
+"only know about each other if there is a shared discovery server or a "
+"network of discovery servers between them. We are going to execute an "
+"example with two independent servers. The following figure shows the "
+"architecture."
+msgstr ""
+"La communication avec les serveurs de découverte peut être divisée pour "
+"créer des partitions virtuelles dans les informations de découverte. Cela "
+"signifie que deux points de terminaison ne se connaîtront que s'il existe un"
+" serveur de découverte partagé ou un réseau de serveurs de découverte entre "
+"eux. Nous allons exécuter un exemple avec deux serveurs indépendants. La "
+"figure suivante montre l'architecture."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:242
+msgid ""
+"With this schema ``Listener 1`` will be connected to ``Talker 1`` and "
+"``Talker 2``, as they share ``Server 1``. ``Listener 2`` will connect with "
+"``Talker 1`` as they share ``Server 2``. But ``Listener 2`` will not hear "
+"the messages from ``Talker 2`` because they do not share any discovery "
+"server or discovery servers, including indirectly via connections between "
+"redundant discovery servers."
+msgstr ""
+"Avec ce schéma ``Listener 1`` sera connecté à ``Talker 1`` et ``Talker 2``, "
+"car ils partagent ``Server 1``. ``Listener 2`` se connectera avec ``Talker "
+"1`` car ils partagent ``Server 2``. Mais ``Listener 2`` n'entendra pas les "
+"messages de ``Talker 2`` car ils ne partagent aucun serveur de découverte ou"
+" serveurs de découverte, y compris indirectement via des connexions entre "
+"serveurs de découverte redondants."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:246
+msgid ""
+"Run the first server listening on localhost with the default port of 11811."
+msgstr ""
+"Exécutez le premier serveur à l'écoute sur localhost avec le port par défaut"
+" de 11811."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:252
+msgid ""
+"In another terminal run the second server listening on localhost using "
+"another port, in this case port 11888."
+msgstr ""
+"Dans un autre terminal, exécutez le deuxième serveur en écoutant sur "
+"localhost en utilisant un autre port, dans ce cas le port 11888."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:258
+msgid ""
+"Now, run each node in a different terminal. Use ``ROS_DISCOVERY_SERVER`` "
+"environment variable to decide which server they are connected to. Be aware "
+"that the `ids must match <https://fast-"
+"dds.docs.eprosima.com/en/v2.1.0/fastdds/env_vars/env_vars.html>`__."
+msgstr ""
+"Maintenant, exécutez chaque nœud dans un terminal différent. Utilisez la "
+"variable d'environnement ``ROS_DISCOVERY_SERVER`` pour décider à quel "
+"serveur ils sont connectés. Sachez que les `ids doivent correspondre à "
+"<https://fast-"
+"dds.docs.eprosima.com/en/v2.1.0/fastdds/env_vars/env_vars.html>`__."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:280
+msgid ""
+"We should see how ``Listener 1`` is receiving messages from both talker "
+"nodes, while ``Listener 2`` is in a different partition from ``Talker 2`` "
+"and so does not receive messages from it."
+msgstr ""
+"Nous devrions voir comment ``Listener 1`` reçoit des messages des deux nœuds"
+" locuteurs, tandis que ``Listener 2`` est dans une partition différente de "
+"``Talker 2`` et ne reçoit donc pas de messages de celui-ci."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:284
+msgid ""
+"Once two endpoints (ROS nodes) have discovered each other, they do not need "
+"the discovery server network between them to listen to each other's "
+"messages."
+msgstr ""
+"Une fois que deux points de terminaison (nœuds ROS) se sont découverts, ils "
+"n'ont pas besoin du réseau de serveurs de découverte entre eux pour écouter "
+"les messages de l'autre."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:289
+msgid "Compare Fast DDS Discovery Server with Simple Discovery Protocol"
+msgstr "Comparez Fast DDS Discovery Server avec Simple Discovery Protocol"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:291
+msgid ""
+"In order to compare executing nodes using the Simple Discovery Protocol (the"
+" default DDS mechanism for distributed discovery) or the discovery server, "
+"two scripts that execute a talker and many listeners and analyze the network"
+" traffic during this time are provided. For this experiment, ``tshark`` is "
+"required to be installed on your system. The configuration file is mandatory"
+" in order to avoid using intraprocess mode."
+msgstr ""
+"Afin de comparer les nœuds en cours d'exécution à l'aide du protocole de "
+"découverte simple (le mécanisme DDS par défaut pour la découverte "
+"distribuée) ou du serveur de découverte, deux scripts qui exécutent un "
+"locuteur et de nombreux écouteurs et analysent le trafic réseau pendant ce "
+"temps sont fournis. Pour cette expérience, ``tshark`` doit être installé sur"
+" votre système. Le fichier de configuration est obligatoire pour éviter "
+"d'utiliser le mode intraprocess."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:297
+msgid ""
+"These scripts require a discovery server closure feature that is only "
+"available from versions newer than the version provided in ROS 2 Foxy. In "
+"order to use this functionality, compile ROS 2 with Fast DDS v2.1.0 or "
+"higher."
+msgstr ""
+"Ces scripts nécessitent une fonctionnalité de fermeture de serveur de "
+"découverte qui n'est disponible qu'à partir de versions plus récentes que la"
+" version fournie dans ROS 2 Foxy. Pour utiliser cette fonctionnalité, "
+"compilez ROS 2 avec Fast DDS v2.1.0 ou supérieur."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:300
+msgid ""
+"These scripts' features are references for advanced purposes and their study"
+" is left to the user."
+msgstr ""
+"Les fonctionnalités de ces scripts sont des références à des fins avancées "
+"et leur étude est laissée à l'utilisateur."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:302
+msgid ""
+":download:`bash network traffic generator "
+"<scripts/generate_discovery_packages.bash>`"
+msgstr ""
+":download:`générateur de trafic réseau bash "
+"<scripts/generate_discovery_packages.bash>`"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:304
+msgid ":download:`python3 graph generator <scripts/discovery_packets.py>`"
+msgstr ""
+":download:`générateur de graphes python3 <scripts/discovery_packets.py>`"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:306
+msgid ""
+":download:`XML configuration <scripts/no_intraprocess_configuration.xml>`"
+msgstr ""
+":download:`Configuration XML <scripts/no_intraprocess_configuration.xml>`"
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:308
+msgid ""
+"Run the bash script with the path to ``setup.bash`` file to source ROS 2 as "
+"an argument. This will generate the traffic trace for simple discovery. "
+"Execute the same script with second argument ``SERVER``. It will generate "
+"the trace for using the discovery server."
+msgstr ""
+"Exécutez le script bash avec le chemin du fichier ``setup.bash`` vers la "
+"source ROS 2 comme argument. Cela générera la trace du trafic pour une "
+"découverte simple. Exécutez le même script avec le second argument "
+"``SERVER``. Il générera la trace pour l'utilisation du serveur de "
+"découverte."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:315
+msgid ""
+"Depending on your configuration of ``tcpdump``, this script may require "
+"``sudo`` privileges to read traffic across your network device."
+msgstr ""
+"Selon votre configuration de ``tcpdump``, ce script peut nécessiter des "
+"privilèges ``sudo`` pour lire le trafic sur votre périphérique réseau."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:317
+msgid ""
+"After both executions are done, run the Python script to generate a graph "
+"similar to the one below."
+msgstr ""
+"Une fois les deux exécutions terminées, exécutez le script Python pour "
+"générer un graphique similaire à celui ci-dessous."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:329
+msgid ""
+"This graph is the result of a specific run of the experiment. The reader can"
+" execute the scripts and generate their own results for comparison. It can "
+"easily be seen that network traffic is reduced when using discovery service."
+msgstr ""
+"Ce graphique est le résultat d'une exécution spécifique de l'expérience. Le "
+"lecteur peut exécuter les scripts et générer ses propres résultats à des "
+"fins de comparaison. On peut facilement voir que le trafic réseau est réduit"
+" lors de l'utilisation du service de découverte."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:333
+msgid ""
+"The reduction in traffic is a result of avoiding every node announcing "
+"itself and waiting a response from every other node on the network. This "
+"creates a huge amount of traffic in large architectures. The reduction from "
+"this method increases with the number of nodes, making this architecture "
+"more scalable than the Simple Discovery Protocol approach."
+msgstr ""
+"La réduction du trafic résulte du fait que chaque nœud ne s'annonce pas et "
+"attend une réponse de tous les autres nœuds du réseau. Cela crée une énorme "
+"quantité de trafic dans les grandes architectures. La réduction de cette "
+"méthode augmente avec le nombre de nœuds, ce qui rend cette architecture "
+"plus évolutive que l'approche du protocole de découverte simple."
+
+#: ../../source/Tutorials/Advanced/Discovery-Server/Discovery-Server.rst:337
+msgid ""
+"The new Fast DDS Discovery Server v2 is available since *Fast DDS* v2.0.2, "
+"replacing the old discovery server. In this new version, those nodes that do"
+" not share topics will automatically not discover each other, saving the "
+"whole discovery data required to connect them and their endpoints. The "
+"experiment above does not show this case, but even so the massive reduction "
+"in traffic can be appreciated due to the hidden infrastructure topics of ROS"
+" 2 nodes."
+msgstr ""
+"Le nouveau Fast DDS Discovery Server v2 est disponible depuis *Fast DDS* "
+"v2.0.2, en remplacement de l'ancien serveur de découverte. Dans cette "
+"nouvelle version, les nœuds qui ne partagent pas de sujets ne se "
+"découvriront automatiquement pas, enregistrant toutes les données de "
+"découverte nécessaires pour les connecter et leurs points de terminaison. "
+"L'expérience ci-dessus ne montre pas ce cas, mais même ainsi, la réduction "
+"massive du trafic peut être appréciée en raison des sujets d'infrastructure "
+"cachés des nœuds ROS 2."

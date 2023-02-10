@@ -1,0 +1,652 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 17:20:13.430735\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:7
+msgid "Cross-compilation"
+msgstr "Compilation croisée"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:11
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:13
+msgid ""
+"For background information on cross-compilation, see the :doc:`conceptual "
+"article <../Concepts/About-Cross-Compilation>`."
+msgstr ""
+"Pour des informations générales sur la compilation croisée, consultez "
+":doc:`article conceptuel <../Concepts/About-Cross-Compilation>`."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:15
+msgid ""
+"This document provides you with details on how to cross-compile the ROS 2 "
+"software stack as well as provide examples for cross-compiling to systems "
+"based on the Arm cores."
+msgstr ""
+"Ce document vous fournit des détails sur la façon de compiler de manière "
+"croisée la pile logicielle ROS 2 ainsi que des exemples de compilation "
+"croisée vers des systèmes basés sur les cœurs Arm."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:18
+msgid "cross_compile tool"
+msgstr "outil cross_compile"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:20
+msgid ""
+"Instructions to use the tool are in the `cross_compile package "
+"<https://github.com/ros-tooling/cross_compile>`__."
+msgstr ""
+"Les instructions d'utilisation de l'outil se trouvent dans le `package "
+"cross_compile <https://github.com/ros-tooling/cross_compile>`__."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:23
+msgid "Legacy tool instructions"
+msgstr "Instructions de l'ancien outil"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:25
+msgid ""
+"Follow the steps below only if you are using the old version (release `0.0.1"
+" <https://github.com/ros-tooling/cross_compile/releases/tag/0.0.1>`__) of "
+"the cross-compile tool. For all other purposes, follow the `cross_compile "
+"<https://github.com/ros-tooling/cross_compile>`__ package documentation."
+msgstr ""
+"Suivez les étapes ci-dessous uniquement si vous utilisez l'ancienne version "
+"(version `0.0.1 <https://github.com/ros-"
+"tooling/cross_compile/releases/tag/0.0.1>`__) de l'outil de compilation "
+"croisée . À toutes autres fins, suivez la documentation du package "
+"`cross_compile <https://github.com/ros-tooling/cross_compile>`__."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:29
+msgid ""
+"Although ROS 2 is a rich software stack with a number of dependencies, it "
+"primarily uses two different types of packages:"
+msgstr ""
+"Bien que ROS 2 soit une pile logicielle riche avec un certain nombre de "
+"dépendances, il utilise principalement deux types de packages différents :"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:28
+msgid "Python based software, which requires no cross-compilation."
+msgstr ""
+"Logiciel basé sur Python, qui ne nécessite aucune compilation croisée."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:29
+msgid ""
+"CMake based software, which provides a mechanism to do cross-compilation."
+msgstr ""
+"Logiciel basé sur CMake, qui fournit un mécanisme pour effectuer une "
+"compilation croisée."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:31
+msgid ""
+"Furthermore, the ROS 2 software stack is built with `Colcon "
+"<https://github.com/colcon/colcon-core>`__ which provides a mechanism to "
+"forward parameters to the CMake instance used for the individual build of "
+"each package/library that is part of the ROS 2 distribution."
+msgstr ""
+"De plus, la pile logicielle ROS 2 est construite avec `Colcon "
+"<https://github.com/colcon/colcon-core>`__ qui fournit un mécanisme pour "
+"transmettre les paramètres à l'instance CMake utilisée pour la construction "
+"individuelle de chaque package/bibliothèque qui fait partie de la "
+"distribution ROS 2."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:33
+msgid ""
+"When building ROS 2 natively, the developer is required to download all the "
+"dependencies (e.g. Python and other libraries) before compiling the packages"
+" that are part of the ROS 2 distribution. When cross-compiling, the same "
+"approach is required. The developer must first have the target system's "
+"filesystem with all dependencies already installed."
+msgstr ""
+"Lors de la construction native de ROS 2, le développeur doit télécharger "
+"toutes les dépendances (par exemple, Python et d'autres bibliothèques) avant"
+" de compiler les packages qui font partie de la distribution ROS 2. Lors de "
+"la compilation croisée, la même approche est requise. Le développeur doit "
+"d'abord disposer du système de fichiers du système cible avec toutes les "
+"dépendances déjà installées."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:35
+msgid ""
+"The next sections of this document explain in detail the use of `cmake-"
+"toolchains <https://cmake.org/cmake/help/latest/manual/cmake-"
+"toolchains.7.html>`__ and the `CMAKE_SYSROOT "
+"<https://cmake.org/cmake/help/latest/variable/CMAKE_SYSROOT.html>`__ feature"
+" to cross-compile ROS 2."
+msgstr ""
+"Les sections suivantes de ce document expliquent en détail l'utilisation de "
+"`cmake-toolchains <https://cmake.org/cmake/help/latest/manual/cmake-"
+"toolchains.7.html>`__ et de `CMAKE_SYSROOT <https: "
+"//cmake.org/cmake/help/latest/variable/CMAKE_SYSROOT.html>`__ fonctionnalité"
+" pour cross-compiler ROS 2."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:38
+msgid "CMake toolchain-file"
+msgstr "Fichier de chaîne d'outils CMake"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:40
+msgid ""
+"A CMake toolchain-file is a file which defines variables to configure CMake "
+"for cross-compilation. The basic entries are:"
+msgstr ""
+"Un fichier de chaîne d'outils CMake est un fichier qui définit des variables"
+" pour configurer CMake pour la compilation croisée. Les entrées de base sont"
+" :"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:42
+msgid "``CMAKE_SYSTEM_NAME``: the target platform, e.g. ``linux``"
+msgstr "``CMAKE_SYSTEM_NAME`` : la plate-forme cible, par ex. ``Linux``"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:43
+msgid ""
+"``CMAKE_SYSTEM_PROCESSOR``: the target architecture, e.g. ``aarch64`` or "
+"``arm``"
+msgstr ""
+"``CMAKE_SYSTEM_PROCESSOR`` : l'architecture cible, par ex. ``aarch64`` ou "
+"``arm``"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:44
+msgid "``CMAKE_SYSROOT``: the path to the target file-system"
+msgstr "``CMAKE_SYSROOT`` : le chemin vers le système de fichiers cible"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:45
+msgid ""
+"``CMAKE_C_COMPILER``: the C cross-compiler, e.g. ``aarch64-linux-gnu-gcc``"
+msgstr ""
+"``CMAKE_C_COMPILER`` : le compilateur croisé C, par ex. ``aarch64-linux-gnu-"
+"gcc``"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:46
+msgid ""
+"``CMAKE_CXX_COMPILER``: the C++ cross-compiler, e.g. ``aarch64-linux-"
+"gnu-g++``"
+msgstr ""
+"``CMAKE_CXX_COMPILER`` : le compilateur croisé C++, par ex. ``aarch64-linux-"
+"gnu-g++``"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:47
+msgid ""
+"``CMAKE_FIND_ROOT_PATH``: an alternative path used by the ``find_*`` command"
+" to find the file-system"
+msgstr ""
+"``CMAKE_FIND_ROOT_PATH`` : un chemin alternatif utilisé par la commande "
+"``find_*`` pour trouver le système de fichiers"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:49
+msgid ""
+"When cross-compiling ROS 2, the following options are required to be set:"
+msgstr ""
+"Lors de la compilation croisée de ROS 2, les options suivantes doivent être "
+"définies :"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:51
+msgid ""
+"``CMAKE_FIND_ROOT_PATH``: the alternative path used by the ``find_*`` "
+"command, use it to specify the path to ROS 2 ``/install`` folder"
+msgstr ""
+"``CMAKE_FIND_ROOT_PATH`` : le chemin alternatif utilisé par la commande "
+"``find_*``, utilisez-le pour spécifier le chemin vers le dossier ROS 2 "
+"``/install``"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:52
+msgid ""
+"``CMAKE_FIND_ROOT_PATH_MODE_*``: the search strategy for "
+"program,package,library, and include, usually: ``NEVER`` (look on the host-"
+"fs), ``ONLY`` (look on sysroot), and ``BOTH`` (look on both sysroot and "
+"host-fs)"
+msgstr ""
+"``CMAKE_FIND_ROOT_PATH_MODE_*`` : la stratégie de recherche pour le "
+"programme, le paquet, la bibliothèque et l'inclusion, généralement : `` "
+"NEVER`` (regardez sur l'hôte-fs), `` ONLY`` (regardez sur sysroot) et `` "
+"BOTH`` (regarde à la fois sur sysroot et host-fs)"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:53
+msgid ""
+"``PYTHON_SOABI``: the index name of the python libraries generated by ROS 2,"
+" e.g. ``cpython-36m-aarch64-linux-gnu``"
+msgstr ""
+"``PYTHON_SOABI`` : le nom d'index des bibliothèques python générées par ROS "
+"2, par ex. ``cpython-36m-aarch64-linux-gnu``"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:54
+msgid ""
+"``THREADS_PTHREAD_ARG \"0\" CACHE STRING \"Result from TRY_RUN\" FORCE``: "
+"Force the result of the ``TRY_RUN`` cmd to 0 (success) because binaries can "
+"not run on the host system."
+msgstr ""
+"``THREADS_PTHREAD_ARG \"0\" CACHE STRING \"Résultat de TRY_RUN\" FORCE`` : "
+"force le résultat de la commande ``TRY_RUN`` à 0 (succès) car les binaires "
+"ne peuvent pas s'exécuter sur le système hôte."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:56
+msgid ""
+"The toolchain-file is provided to CMake with the "
+"``-DCMAKE_TOOLCHAIN_FILE=path/to/file`` parameter. This will also set the "
+"``CMAKE_CROSSCOMPILING`` variable to ``true`` which can be used by the "
+"software being built."
+msgstr ""
+"Le fichier de chaîne d'outils est fourni à CMake avec le paramètre "
+"``-DCMAKE_TOOLCHAIN_FILE=path/to/file``. Cela définira également la variable"
+" ``CMAKE_CROSSCOMPILING`` sur ``true`` qui peut être utilisée par le "
+"logiciel en cours de construction."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:58
+msgid ""
+"The ``CMAKE_SYSROOT`` is particularly important for ROS 2 as the packages "
+"need many dependencies (e.g. python, openssl, opencv, poco, eigen3, ...). "
+"Setting ``CMAKE_SYSROOT`` to a target file-system with all the dependencies "
+"installed on it will allow CMake to find them during the cross-compilation."
+msgstr ""
+"Le ``CMAKE_SYSROOT`` est particulièrement important pour ROS 2 car les "
+"packages ont besoin de nombreuses dépendances (par exemple python, openssl, "
+"opencv, poco, eigen3, ...). Définir ``CMAKE_SYSROOT`` sur un système de "
+"fichiers cible avec toutes les dépendances installées dessus permettra à "
+"CMake de les trouver lors de la compilation croisée."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:61
+msgid ""
+"You can find more information on the CMake `documentation "
+"<https://cmake.org/cmake/help/latest/manual/cmake-toolchains.7.html>`__ "
+"page."
+msgstr ""
+"Vous pouvez trouver plus d'informations sur la page CMake `documentation "
+"<https://cmake.org/cmake/help/latest/manual/cmake-toolchains.7.html>`__."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:63
+msgid ""
+"When downloading the ROS 2 source code, a generic toolchain-file is "
+"available in the repository `ros-tooling/cross_compile/cmake-toolchains "
+"<https://github.com/ros-tooling/cross_compile>`__ which can be downloaded "
+"separately. Further examples on using it can be found on the `Cross-"
+"compiling examples for Arm`_ section."
+msgstr ""
+"Lors du téléchargement du code source ROS 2, un fichier de chaîne d'outils "
+"générique est disponible dans le référentiel `ros-"
+"tooling/cross_compile/cmake-toolchains <https://github.com/ros-"
+"tooling/cross_compile>`__ qui peut être téléchargé séparément . D'autres "
+"exemples d'utilisation peuvent être trouvés dans la section `Exemples de "
+"compilation croisée pour Arm`_."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:66
+msgid "Target file-system"
+msgstr "Système de fichiers cible"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:68
+msgid ""
+"As mentioned previously, ROS 2 requires different libraries which needs to "
+"be provided to cross-compile."
+msgstr ""
+"Comme mentionné précédemment, ROS 2 nécessite différentes bibliothèques qui "
+"doivent être fournies pour la compilation croisée."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:73
+msgid "There are a number of ways to obtain the file-system:"
+msgstr "Il existe plusieurs façons d'obtenir le système de fichiers :"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:71
+msgid "downloading a pre-built image"
+msgstr "télécharger une image pré-construite"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:72
+msgid ""
+"installing the dependencies on the target and exporting the file-system "
+"(e.g. with sshfs)"
+msgstr ""
+"installer les dépendances sur la cible et exporter le système de fichiers "
+"(par exemple avec sshfs)"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:73
+msgid ""
+"using qemu + docker (or chroot) to generate the file-system on the host "
+"machine."
+msgstr ""
+"en utilisant qemu + docker (ou chroot) pour générer le système de fichiers "
+"sur la machine hôte."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:75
+msgid ""
+"You can find information on how to use Docker + qemu on the next `Cross-"
+"compiling examples for Arm`_ section."
+msgstr ""
+"Vous pouvez trouver des informations sur l'utilisation de Docker + qemu dans"
+" la prochaine section \"Exemples de compilation croisée pour Arm\"."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:78
+msgid "Build process"
+msgstr "Processus de construction"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:80
+msgid ""
+"The build process is similar to native compilation. The only difference is "
+"an extra argument to ``Colcon`` to specify the ``toolchain-file``:"
+msgstr ""
+"Le processus de construction est similaire à la compilation native. La seule"
+" différence est un argument supplémentaire à ``Colcon`` pour spécifier le "
+"``toolchain-file`` :"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:89
+msgid ""
+"The ``toolchain-file`` provide to CMake the information of the ``cross-"
+"compiler`` and the ``target file-system``. ``Colcon`` will call CMake with "
+"the given toolchain-file on every package of ROS 2."
+msgstr ""
+"Le ``toolchain-file`` fournit à CMake les informations du ``cross-compiler``"
+" et du ``target file-system``. ``Colcon`` appellera CMake avec le fichier de"
+" chaîne d'outils donné sur chaque paquet de ROS 2."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:93
+msgid "Cross-compiling examples for Arm"
+msgstr "Exemples de compilation croisée pour Arm"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:94
+msgid ""
+"After :doc:`downloading the ROS 2 source code "
+"<../Installation/Alternatives/Ubuntu-Development-Setup>`, you can add cross-"
+"compilation assets to the workspace via ``git clone https://github.com/ros-"
+"tooling/cross_compile.git -b 0.0.1 src/ros2/cross_compile``. These are "
+"working examples on how to cross-compile for Arm cores."
+msgstr ""
+"Après :doc:`téléchargement du code source ROS 2 "
+"<../Installation/Alternatives/Ubuntu-Development-Setup>`, vous pouvez "
+"ajouter des ressources de compilation croisée à l'espace de travail via "
+"``git clone https://github.com/ ros-tooling/cross_compile.git -b 0.0.1 "
+"src/ros2/cross_compile``. Ce sont des exemples de travail sur la façon de "
+"compiler de manière croisée pour les cœurs Arm."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:98
+msgid "The following targets are supported:"
+msgstr "Les cibles suivantes sont prises en charge :"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:97
+msgid "Ubuntu-arm64: To be used with any ARMv8-A based system."
+msgstr ""
+"Ubuntu-arm64 : à utiliser avec n'importe quel système basé sur ARMv8-A."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:98
+msgid "Ubuntu-armhf: To be used with any modern ARMv7-A based system."
+msgstr "Ubuntu-armhf : à utiliser avec tout système moderne basé sur ARMv7-A."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:105
+msgid "These are the main steps:"
+msgstr "Voici les principales étapes :"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:101
+msgid "Installing development tools"
+msgstr "Installation des outils de développement"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:102
+msgid "Downloading ROS 2 source code"
+msgstr "Téléchargement du code source ROS 2"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:103
+msgid "Downloading the ROS 2 cross-compilation assets"
+msgstr "Téléchargement des assets de compilation croisée ROS 2"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:104
+msgid "Preparing the sysroot"
+msgstr "Préparation de la racine système"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:105
+msgid "Cross-compiling the ROS 2 software stack"
+msgstr "Compilation croisée de la pile logicielle ROS 2"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:107
+msgid ""
+"The next sections explains in detail each of these steps. For a quick-setup,"
+" have a look at the `Automated Cross-compilation`_."
+msgstr ""
+"Les sections suivantes expliquent en détail chacune de ces étapes. Pour une "
+"configuration rapide, jetez un œil à la `compilation croisée automatisée`_."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:110
+msgid "These steps were tested on an Ubuntu 18.04 (Bionic)"
+msgstr "Ces étapes ont été testées sur un Ubuntu 18.04 (Bionic)"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:113
+msgid "1. Install development tools"
+msgstr "1. Installer les outils de développement"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:115
+msgid ""
+"This step is similar to when building natively. The difference is that some "
+"of the libraries and tools are not required because they will be in the "
+"sysroot instead. The following packages are required"
+msgstr ""
+"Cette étape est similaire à la construction native. La différence est que "
+"certaines bibliothèques et certains outils ne sont pas nécessaires car ils "
+"se trouveront plutôt dans le sysroot. Les packages suivants sont requis"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:134
+msgid ""
+"You can install vcstool and colcon-common-extensions via pip. This means you"
+" are not required to add extra apt repositories."
+msgstr ""
+"Vous pouvez installer vcstool et colcon-common-extensions via pip. Cela "
+"signifie que vous n'êtes pas obligé d'ajouter des référentiels apt "
+"supplémentaires."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:137
+msgid ""
+"Docker is used to build the target environment. Follow the official "
+"`documentation <https://docs.docker.com/install/linux/docker-ce/ubuntu/>`__ "
+"for the installation."
+msgstr ""
+"Docker est utilisé pour créer l'environnement cible. Suivez la "
+"`documentation officielle <https://docs.docker.com/install/linux/docker-"
+"ce/ubuntu/>`__ pour l'installation."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:140
+msgid "2. Download ROS 2 source code"
+msgstr "2. Téléchargez le code source de ROS 2"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:142
+msgid "Then create a workspace and download the ROS 2 source code:"
+msgstr ""
+"Créez ensuite un espace de travail et téléchargez le code source de ROS 2 :"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:154
+msgid "3. Prepare the sysroot"
+msgstr "3. Préparez la racine système"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:156
+msgid ""
+"Build an arm Ubuntu image with all the ROS 2 dependencies using Docker and "
+"qemu: Copy the ``qemu-static`` binary to the workspace. It will be used to "
+"install the ROS 2 dependencies on the target file-system with docker."
+msgstr ""
+"Construisez une image arm Ubuntu avec toutes les dépendances ROS 2 en "
+"utilisant Docker et qemu : Copiez le binaire ``qemu-static`` dans l'espace "
+"de travail. Il sera utilisé pour installer les dépendances ROS 2 sur le "
+"système de fichiers cible avec docker."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:165
+msgid ""
+"The standard :doc:`setup <../Installation/Alternatives/Ubuntu-Development-"
+"Setup>` process of ROS 2 is run inside an arm docker. This is possible "
+"thanks to ``qemu-static``, which will emulate an arm machine. The base image"
+" used is an Ubuntu Bionic from Docker Hub."
+msgstr ""
+"Le processus standard :doc:`setup <../Installation/Alternatives/Ubuntu-"
+"Development-Setup>` de ROS 2 est exécuté dans un docker arm. Ceci est "
+"possible grâce à ``qemu-static``, qui émulera une machine à bras. L'image de"
+" base utilisée est une Ubuntu Bionic de Docker Hub."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:172
+msgid "Export the resulting container to a tarball and extract it:"
+msgstr "Exportez le conteneur résultant dans une archive tar et extrayez-le :"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:181
+msgid ""
+"This container can be used later as virtual target to run the created file-"
+"system and run the demo code."
+msgstr ""
+"Ce conteneur peut être utilisé ultérieurement comme cible virtuelle pour "
+"exécuter le système de fichiers créé et exécuter le code de démonstration."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:184
+msgid "4. Build"
+msgstr "4. Construire"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:186
+msgid "Set the variables used by the generic toolchain-file"
+msgstr ""
+"Définir les variables utilisées par le fichier de chaîne d'outils générique"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:199
+msgid ""
+"The following packages still cause errors during the cross-compilation "
+"(under investigation) and must be disabled for now."
+msgstr ""
+"Les packages suivants provoquent toujours des erreurs lors de la compilation"
+" croisée (en cours d'investigation) et doivent être désactivés pour le "
+"moment."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:207
+msgid ""
+"The ``Poco`` pre-built has a known issue where it is searching for ``libz`` "
+"and ``libpcre`` on the host system instead of SYSROOT. As a workaround for "
+"the moment, please link both libraries into the the host's file-system."
+msgstr ""
+"Le pré-construit ``Poco`` a un problème connu où il recherche ``libz`` et "
+"``libpcre`` sur le système hôte au lieu de SYSROOT. Comme solution de "
+"contournement pour le moment, veuillez lier les deux bibliothèques au "
+"système de fichiers de l'hôte."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:216
+msgid "Then, start a build with colcon specifying the toolchain-file:"
+msgstr ""
+"Ensuite, démarrez une construction avec colcon en spécifiant le fichier de "
+"chaîne d'outils :"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:229
+msgid ""
+"Done! The install and build directories will contain the cross-compiled "
+"assets."
+msgstr ""
+"Fait! Les répertoires d'installation et de construction contiendront les "
+"actifs compilés de manière croisée."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:232
+msgid "Automated Cross-compilation"
+msgstr "Compilation croisée automatisée"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:234
+msgid ""
+"All the steps above are also included into a Dockerfile and can be used for "
+"automation/CI."
+msgstr ""
+"Toutes les étapes ci-dessus sont également incluses dans un Dockerfile et "
+"peuvent être utilisées pour l'automatisation/CI."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:236
+msgid "First, download the dockerfile and build the image:"
+msgstr "Tout d'abord, téléchargez le dockerfile et créez l'image :"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:243
+msgid "Now run the image with: (it will take a while !)"
+msgstr "Maintenant lancez l'image avec : (ça va prendre du temps !)"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:252
+msgid ""
+"..note:: The -v /var/run/docker.sock allow us to use Docker inside Docker."
+msgstr ""
+"..note :: Le -v /var/run/docker.sock nous permet d'utiliser Docker dans "
+"Docker."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:254
+msgid ""
+"The result of the build will be inside the ``ros2_ws`` directory, which can "
+"be exported with:"
+msgstr ""
+"Le résultat de la construction se trouvera dans le répertoire ``ros2_ws``, "
+"qui peut être exporté avec :"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:261
+msgid "Cross-compiling against a pre-built ROS 2"
+msgstr "Compilation croisée avec un ROS 2 pré-construit"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:263
+msgid ""
+"It is possible to cross-compile your packages against a pre-built ROS 2. The"
+" steps are similar to the previous `Cross-compiling examples for Arm`_ "
+"section, with the following modifications:"
+msgstr ""
+"Il est possible de cross-compiler vos packages avec un ROS 2 pré-construit. "
+"Les étapes sont similaires à la section précédente `Exemples de compilation "
+"croisée pour Arm`_, avec les modifications suivantes :"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:265
+msgid ""
+"Instead of downloading the ROS 2 stack, just populate your workspace with "
+"your package (ros2 examples on this case) and the cross-compilation assets:"
+msgstr ""
+"Au lieu de télécharger la pile ROS 2, remplissez simplement votre espace de "
+"travail avec votre package (exemples ros2 dans ce cas) et les ressources de "
+"compilation croisée :"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:275
+msgid ""
+"Generate and export the file-system as described in `3. Prepare the "
+"sysroot`_, but with the provided ``Dockerfile_ubuntu_arm64_prebuilt``. These"
+" ``_prebuilt`` Dockerfile will use the :doc:`binary packages "
+"<../Installation/Ubuntu-Install-Debians>` to install ROS 2 instead of "
+"building from source."
+msgstr ""
+"Générez et exportez le système de fichiers comme décrit dans `3. Préparez le"
+" sysroot`_, mais avec le ``Dockerfile_ubuntu_arm64_prebuilt`` fourni. Ces "
+"Dockerfile ``_prebuilt`` utiliseront les :doc:`packages binaires "
+"<../Installation/Ubuntu-Install-Debians>` pour installer ROS 2 au lieu de "
+"compiler à partir des sources."
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:277
+msgid ""
+"Modify the environment variable ``ROS2_INSTALL_PATH`` to point to the "
+"installation directory:"
+msgstr ""
+"Modifiez la variable d'environnement ``ROS2_INSTALL_PATH`` pour qu'elle "
+"pointe vers le répertoire d'installation :"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:283
+msgid "Source the ``setup.bash`` script on the target file-system:"
+msgstr "Sourcez le script ``setup.bash`` sur le système de fichiers cible :"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:289
+msgid "Then, start a build with ``Colcon`` specifying the ``toolchain-file``:"
+msgstr ""
+"Ensuite, démarrez une compilation avec ``Colcon`` en spécifiant le "
+"``toolchain-file`` :"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:301
+msgid "Run on the target"
+msgstr "Courir sur la cible"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:303
+msgid ""
+"Copy the file-system on your target or use the previously built docker "
+"image:"
+msgstr ""
+"Copiez le système de fichiers sur votre cible ou utilisez l'image docker "
+"précédemment construite :"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:309
+msgid "Source the environment:"
+msgstr "Source l'environnement :"
+
+#: ../../source/How-To-Guides/Cross-compilation.rst:315
+msgid "Run some of the C++ or python examples:"
+msgstr "Exécutez certains des exemples C++ ou Python :"

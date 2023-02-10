@@ -1,0 +1,378 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-07 07:19:17.884364\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:8
+msgid "ROS 2 Iron Irwini (codename 'iron'; May, 2023)"
+msgstr "ROS 2 Iron Irwini (nom de code 'iron'; mai 2023)"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:12
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:14
+msgid ""
+"*Iron Irwini* is the ninth release of ROS 2. What follows is highlights of "
+"the important changes and features in Iron Irwini since the last release."
+msgstr ""
+"*Iron Irwini* est la neuvième version de ROS 2. Ce qui suit présente les "
+"principaux changements et fonctionnalités d'Iron Irwini depuis la dernière "
+"version."
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:18
+msgid "Supported Platforms"
+msgstr "Plates-formes prises en charge"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:20
+msgid "Iron Irwini is primarily supported on the following platforms:"
+msgstr ""
+"Iron Irwini est principalement pris en charge sur les plates-formes "
+"suivantes :"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:22
+msgid "Tier 1 platforms:"
+msgstr "Plateformes de niveau 1 :"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:24
+#: ../../source/Releases/Release-Iron-Irwini.rst:28
+#: ../../source/Releases/Release-Iron-Irwini.rst:32
+msgid "TBD"
+msgstr "À déterminer"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:26
+msgid "Tier 2 platforms:"
+msgstr "Plateformes de niveau 2 :"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:30
+msgid "Tier 3 platforms:"
+msgstr "Plateformes de niveau 3 :"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:34
+msgid ""
+"For more information about RMW implementations, compiler / interpreter "
+"versions, and system dependency versions see `REP 2000 "
+"<https://www.ros.org/reps/rep-2000.html>`__."
+msgstr ""
+"Pour plus d'informations sur les implémentations RMW, les versions du "
+"compilateur/interpréteur et les versions des dépendances système, consultez "
+"`REP 2000 <https://www.ros.org/reps/rep-2000.html>`__."
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:37
+msgid "Installation"
+msgstr "Installation"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:39
+#: ../../source/Releases/Release-Iron-Irwini.rst:91
+msgid "To come."
+msgstr "Venir."
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:42
+msgid "New features in this ROS 2 release"
+msgstr "Nouvelles fonctionnalités de cette version de ROS 2"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:45
+msgid "ros2topic"
+msgstr "ros2topic"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:48
+msgid ""
+"``now`` as keyword for ``builtin_interfaces.msg.Time`` and ``auto`` for "
+"``std_msgs.msg.Header``"
+msgstr ""
+"``now`` comme mot clé pour ``builtin_interfaces.msg.Time`` et ``auto`` pour "
+"``std_msgs.msg.Header``"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:49
+msgid ""
+"``ros2 topic pub`` now allows to set a ``builtin_interfaces.msg.Time`` "
+"message to the current time via the ``now`` keyword. Similarly, a "
+"``std_msg.msg.Header`` message will be automatically generated when passed "
+"the keyword ``auto``. This behavior matches that of ROS 1's ``rostopic`` "
+"(http://wiki.ros.org/ROS/YAMLCommandLine#Headers.2Ftimestamps)"
+msgstr ""
+"``ros2 topic pub`` permet maintenant de définir un message "
+"``builtin_interfaces.msg.Time`` à l'heure actuelle via le mot-clé ``now``. "
+"De même, un message ``std_msg.msg.Header`` sera généré automatiquement lors "
+"du passage du mot-clé ``auto``. Ce comportement correspond à celui de "
+"``rostopic`` de ROS 1 "
+"(http://wiki.ros.org/ROS/YAMLCommandLine#Headers.2Ftimestamps)"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:53
+msgid ""
+"Related PR: `ros2/ros2cli#749 <https://github.com/ros2/ros2cli/pull/749>`_"
+msgstr ""
+"PR associé : `ros2/ros2cli#749 <https://github.com/ros2/ros2cli/pull/749>`_"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:56
+msgid "Changes since the Humble release"
+msgstr "Changements depuis la version Humble"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:59
+msgid "``launch_ros``"
+msgstr "``launch_ros``"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:62
+msgid ""
+"Renamed classes which used ``Ros`` in the name to use ``ROS`` in line with "
+"PEP8"
+msgstr ""
+"Classes renommées qui utilisaient ``Ros`` dans le nom pour utiliser ``ROS`` "
+"conformément à PEP8"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:64
+msgid "Classes that were changed:"
+msgstr "Classes modifiées :"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:66
+msgid "``launch.actions.RosTimer`` -> ``launch.actions.ROSTimer``"
+msgstr "``lancer.actions.RosTimer`` -> ``lancer.actions.ROSTimer``"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:67
+msgid ""
+"``launch.actions.PushRosNamespace`` -> ``launch.actions.PushROSNamespace``"
+msgstr ""
+"``launch.actions.PushRosNamespace`` -> ``launch.actions.PushROSNamespace``"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:69
+msgid "The old class names are still there, but will be deprecated."
+msgstr "Les anciens noms de classe sont toujours là, mais seront obsolètes."
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:72
+msgid "Change to the default console logging file flushing behavior"
+msgstr ""
+"Modification du comportement de vidage du fichier de journalisation de la "
+"console par défaut"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:74
+msgid ""
+"This specifically applies to the default ``spdlog`` based logging backend in"
+" ROS 2, implemented in ``rcl_logging_spdlog``. Log file flushing was changed"
+" to flush every time an \"error\" log message is used, e.g. each "
+"``RCLCPP_ERROR()`` call, and also periodically every five seconds."
+msgstr ""
+"Cela s'applique spécifiquement au backend de journalisation par défaut basé "
+"sur ``spdlog`` dans ROS 2, implémenté dans ``rcl_logging_spdlog``. Le vidage"
+" du fichier journal a été modifié pour se vider à chaque fois qu'un message "
+"de journal \"erreur\" est utilisé, par ex. chaque appel ``RCLCPP_ERROR()``, "
+"et aussi périodiquement toutes les cinq secondes."
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:77
+msgid ""
+"Previously, ``spdlog`` was used without configuring anything other than "
+"creating the sink for logging to a file."
+msgstr ""
+"Auparavant, ``spdlog`` était utilisé sans rien configurer d'autre que la "
+"création du récepteur pour la journalisation dans un fichier."
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:79
+msgid ""
+"We tested the change and did not find that the CPU overhead was significant,"
+" even on machines with slow disks (e.g. sd cards). However, if this change "
+"is causing you problems, you can get the old behavior by setting the "
+"``RCL_LOGGING_SPDLOG_EXPERIMENTAL_OLD_FLUSHING_BEHAVIOR=1`` environment "
+"variable."
+msgstr ""
+"Nous avons testé le changement et n'avons pas constaté que la surcharge du "
+"processeur était significative, même sur des machines avec des disques lents"
+" (par exemple, des cartes SD). Cependant, si ce changement vous cause des "
+"problèmes, vous pouvez obtenir l'ancien comportement en définissant la "
+"variable d'environnement "
+"``RCL_LOGGING_SPDLOG_EXPERIMENTAL_OLD_FLUSHING_BEHAVIOR=1``."
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:82
+msgid ""
+"Later we would like to have support for a full configuration file (see: "
+"https://github.com/ros2/rcl_logging/issues/92), giving you more flexibility "
+"in how the logging is done, but that is work that is only planned right now."
+msgstr ""
+"Plus tard, nous aimerions avoir un support pour un fichier de configuration "
+"complet (voir : https://github.com/ros2/rcl_logging/issues/92), vous donnant"
+" plus de flexibilité dans la façon dont la journalisation est effectuée, "
+"mais c'est un travail qui n'est que prévu à l'instant."
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:84
+msgid ""
+"Therefore, **this environment variable should be considered experimental and"
+" subject to removal without deprecation in the future**, when we add config "
+"file support for the ``rcl_logging_spdlog`` logging backend."
+msgstr ""
+"Par conséquent, **cette variable d'environnement doit être considérée comme "
+"expérimentale et susceptible d'être supprimée sans dépréciation à "
+"l'avenir**, lorsque nous ajouterons la prise en charge des fichiers de "
+"configuration pour le backend de journalisation ``rcl_logging_spdlog``."
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:86
+msgid ""
+"See this pull request for more details about the change: "
+"https://github.com/ros2/rcl_logging/pull/95"
+msgstr ""
+"Voir cette demande d'extraction pour plus de détails sur le changement : "
+"https://github.com/ros2/rcl_logging/pull/95"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:89
+msgid "Known Issues"
+msgstr "Problèmes connus"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:94
+msgid "Release Timeline"
+msgstr "Calendrier de publication"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:97
+msgid "November, 2022 - Platform decisions"
+msgstr "Novembre 2022 - Décisions de la plateforme"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:97
+msgid ""
+"REP 2000 is updated with the target platforms and major dependency versions."
+msgstr ""
+"REP 2000 est mis à jour avec les plates-formes cibles et les principales "
+"versions de dépendance."
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:100
+msgid "By January, 2023 - Rolling platform shift"
+msgstr "D'ici janvier 2023 - Changement de plate-forme roulante"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:100
+msgid ""
+"Build farm is updated with the new platform versions and dependency versions"
+" for Iron Irwini (if necessary)."
+msgstr ""
+"La ferme de construction est mise à jour avec les nouvelles versions de "
+"plate-forme et les versions de dépendance pour Iron Irwini (si nécessaire)."
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:103
+msgid "Mon. April 10, 2023 - Alpha + RMW freeze"
+msgstr "Mon. April 10, 2023 - Alpha + RMW freeze"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:103
+msgid ""
+"Preliminary testing and stabilization of ROS Base [1]_ packages, and API and"
+" feature freeze for RMW provider packages."
+msgstr ""
+"Tests préliminaires et stabilisation des packages ROS Base [1]_, et API et "
+"gel des fonctionnalités pour les packages du fournisseur RMW."
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:108
+msgid "Mon. April 17, 2023 - Freeze"
+msgstr "Lun. 17 avril 2023 - Gel"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:106
+msgid ""
+"API and feature freeze for ROS Base [1]_ packages in Rolling Ridley. Only "
+"bug fix releases should be made after this point. New packages can be "
+"released independently."
+msgstr ""
+"API et gel des fonctionnalités pour les packages ROS Base [1]_ dans Rolling "
+"Ridley. Seules les versions de correctifs de bogues doivent être effectuées "
+"après ce point. De nouveaux packages peuvent être publiés indépendamment."
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:113
+msgid "Mon. April 24, 2023 - Branch"
+msgstr "Mon. April 24, 2023 - Branch"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:111
+msgid ""
+"Branch from Rolling Ridley. ``rosdistro`` is reopened for Rolling PRs for "
+"ROS Base [1]_ packages. Iron development shifts from ``ros-rolling-*`` "
+"packages to ``ros-iron-*`` packages."
+msgstr ""
+"Succursale de Rolling Ridley. ``rosdistro`` est rouvert pour Rolling PRs "
+"pour les packages ROS Base [1]_. Le développement du fer passe des packages "
+"``ros-rolling-*`` aux packages ``ros-iron-*``."
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:117
+msgid "Mon. May 1, 2023 - Beta"
+msgstr "Mon. May 1, 2023 - Beta"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:116
+msgid ""
+"Updated releases of ROS Desktop [2]_ packages available. Call for general "
+"testing."
+msgstr ""
+"Versions mises à jour des packages ROS Desktop [2]_ disponibles. Appel pour "
+"des tests généraux."
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:121
+msgid "Mon. May 15, 2023 - Release Candidate"
+msgstr "Lun. 15 mai 2023 - Candidat à la libération"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:120
+msgid ""
+"Release Candidate packages are built. Updated releases of ROS Desktop [2]_ "
+"packages available."
+msgstr ""
+"Les packages Release Candidate sont créés. Versions mises à jour des "
+"packages ROS Desktop [2]_ disponibles."
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:125
+msgid "Thu. May 18, 2023 - Distro Freeze"
+msgstr "Jeu. 18 mai 2023 - Distro Freeze"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:124
+msgid ""
+"Freeze rosdistro. No PRs for Iron on the ``rosdistro`` repo will be merged "
+"(reopens after the release announcement)."
+msgstr ""
+"Geler rosdistro. Aucun PR pour Iron sur le repo ``rosdistro`` ne sera "
+"fusionné (réouverture après l'annonce de la sortie)."
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:129
+msgid "Tue. May 23, 2023 - General Availability"
+msgstr "Mar. 23 mai 2023 - Disponibilité générale"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:128
+msgid "Release announcement. ``rosdistro`` is reopened for Iron PRs."
+msgstr "Annonce de sortie. ``rosdistro`` est rouvert pour les PR de fer."
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:131
+msgid ""
+"The ``ros_base`` variant is described in `REP 2001 (ros-base) "
+"<https://www.ros.org/reps/rep-2001.html#ros-base>`_."
+msgstr ""
+"La variante ``ros_base`` est décrite dans `REP 2001 (ros-base) "
+"<https://www.ros.org/reps/rep-2001.html#ros-base>`_."
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:132
+msgid ""
+"The ``desktop`` variant is described in `REP 2001 (desktop-variants) "
+"<https://www.ros.org/reps/rep-2001.html#desktop-variants>`_."
+msgstr ""
+"La variante ``desktop`` est décrite dans `REP 2001 (desktop-variants) "
+"<https://www.ros.org/reps/rep-2001.html#desktop-variants>`_."
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:135
+msgid "Development progress"
+msgstr "Avancement du développement"
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:137
+msgid ""
+"For progress on the development and release of Iron Irwini, see `the "
+"tracking GitHub issue <https://github.com/ros2/ros2/issues/1298>`__."
+msgstr ""
+"Pour connaître l'avancement du développement et de la publication d'Iron "
+"Irwini, consultez `the tracking GitHub issue "
+"<https://github.com/ros2/ros2/issues/1298>`__."
+
+#: ../../source/Releases/Release-Iron-Irwini.rst:139
+msgid ""
+"For the broad process followed by Iron Irwini, see the :doc:`process "
+"description page <Release-Process>`."
+msgstr ""
+"Pour le processus général suivi par Iron Irwini, voir la :doc:`page de "
+"description du processus <Release-Process>`."

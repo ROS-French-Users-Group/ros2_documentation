@@ -1,0 +1,546 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 11:55:31.022058\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:9
+msgid "Implementing custom interfaces"
+msgstr "Implémentation d'interfaces personnalisées"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:11
+msgid "**Goal:** Learn more ways to implement custom interfaces in ROS 2"
+msgstr ""
+"**Objectif :** Découvrir d'autres façons d'implémenter des interfaces "
+"personnalisées dans ROS 2"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:13
+msgid "**Tutorial level:** Beginner"
+msgstr "**Niveau du tutoriel :** Débutant"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:15
+msgid "**Time:** 15 minutes"
+msgstr "**Durée :** 15 minutes"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:19
+msgid "Contents"
+msgstr "Contenu"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:22
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:24
+msgid ""
+"In a :doc:`previous tutorial <./Custom-ROS2-Interfaces>`, you learned how to"
+" create custom msg and srv interfaces."
+msgstr ""
+"Dans un :doc:`tutoriel précédent <./Custom-ROS2-Interfaces>`, vous avez "
+"appris à créer des interfaces msg et srv personnalisées."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:26
+msgid ""
+"While best practice is to declare interfaces in dedicated interface "
+"packages, sometimes it can be convenient to declare, create and use an "
+"interface all in one package."
+msgstr ""
+"Bien que la meilleure pratique consiste à déclarer les interfaces dans des "
+"packages d'interface dédiés, il peut parfois être pratique de déclarer, de "
+"créer et d'utiliser une interface dans un seul package."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:28
+msgid ""
+"Recall that interfaces can currently only be defined in CMake packages. It "
+"is possible, however, to have Python libraries and nodes in CMake packages "
+"(using `ament_cmake_python "
+"<https://github.com/ament/ament_cmake/tree/rolling/ament_cmake_python>`_), "
+"so you could define interfaces and Python nodes together in one package. "
+"We'll use a CMake package and C++ nodes here for the sake of simplicity."
+msgstr ""
+"Rappelez-vous que les interfaces ne peuvent actuellement être définies que "
+"dans les packages CMake. Il est cependant possible d'avoir des bibliothèques"
+" et des nœuds Python dans les packages CMake (en utilisant "
+"`ament_cmake_python "
+"<https://github.com/ament/ament_cmake/tree/rolling/ament_cmake_python>`_), "
+"vous pouvez donc définir des interfaces et des nœuds Python ensemble dans un"
+" seul paquet. Nous utiliserons ici un package CMake et des nœuds C++ par "
+"souci de simplicité."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:32
+msgid ""
+"This tutorial will focus on the msg interface type, but the steps here are "
+"applicable to all interface types."
+msgstr ""
+"Ce didacticiel se concentrera sur le type d'interface msg, mais les étapes "
+"ici sont applicables à tous les types d'interface."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:35
+msgid "Prerequisites"
+msgstr "Conditions préalables"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:37
+msgid ""
+"We assume you've reviewed the basics in the :doc:`./Custom-ROS2-Interfaces` "
+"tutorial before working through this one."
+msgstr ""
+"Nous supposons que vous avez passé en revue les bases du didacticiel "
+":doc:`./Custom-ROS2-Interfaces` avant de travailler sur celui-ci."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:39
+msgid ""
+"You should have :doc:`ROS 2 installed <../../Installation>`, a "
+":doc:`workspace <./Creating-A-Workspace/Creating-A-Workspace>`, and an "
+"understanding of :doc:`creating packages <./Creating-Your-First-"
+"ROS2-Package>`."
+msgstr ""
+"Vous devez avoir :doc:`ROS 2 installé <../../Installation>`, un "
+":doc:`workspace <./Creating-A-Workspace/Creating-A-Workspace>` et une "
+"compréhension de :doc :`création de packages <./Creating-Your-First-"
+"ROS2-Package>`."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:41
+msgid ""
+"As always, don’t forget to :doc:`source ROS 2 <../Beginner-CLI-"
+"Tools/Configuring-ROS2-Environment>` in every new terminal you open."
+msgstr ""
+"Comme toujours, n'oubliez pas de :doc:`source ROS 2 <../Beginner-CLI-"
+"Tools/Configuring-ROS2-Environment>` dans chaque nouveau terminal que vous "
+"ouvrez."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:44
+msgid "Tasks"
+msgstr "Tâches"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:47
+msgid "1 Create a package"
+msgstr "1 Créer un package"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:49
+msgid ""
+"In your workspace ``src`` directory, create a package ``more_interfaces`` "
+"and make a folder within it for msg files:"
+msgstr ""
+"Dans le répertoire ``src`` de votre espace de travail, créez un package "
+"``more_interfaces`` et créez-y un dossier pour les fichiers msg :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:57
+msgid "2 Create a msg file"
+msgstr "2 Créer un fichier msg"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:59
+msgid "Inside ``more_interfaces/msg``, create a new file ``AddressBook.msg``"
+msgstr ""
+"Dans ``more_interfaces/msg``, créez un nouveau fichier ``AddressBook.msg``"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:61
+msgid ""
+"Paste the following code to create a message meant to carry information "
+"about an individual:"
+msgstr ""
+"Collez le code suivant pour créer un message destiné à transmettre des "
+"informations sur un individu :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:74
+msgid "This message is composed of 5 fields:"
+msgstr "Ce message est composé de 5 champs :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:76
+msgid "first_name: of type string"
+msgstr "prénom : de type chaîne"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:77
+msgid "last_name: of type string"
+msgstr "nom_de_famille : de type chaîne"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:78
+msgid "gender: of type bool, that can be either MALE or FEMALE"
+msgstr "genre : de type bool, qui peut être soit MALE soit FEMALE"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:79
+msgid "age: of type uint8"
+msgstr "âge : de type uint8"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:80
+msgid "address: of type string"
+msgstr "adresse : de type chaîne"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:82
+msgid ""
+"Notice that it's possible to set default values for fields within the "
+"message definition. See :doc:`../../Concepts/About-ROS-Interfaces` for more "
+"ways you can customize interfaces."
+msgstr ""
+"Notez qu'il est possible de définir des valeurs par défaut pour les champs "
+"dans la définition du message. Voir :doc:`../../Concepts/About-ROS-"
+"Interfaces` pour plus de façons de personnaliser les interfaces."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:85
+msgid ""
+"Next, we need to make sure that the msg file is turned into source code for "
+"C++, Python, and other languages."
+msgstr ""
+"Ensuite, nous devons nous assurer que le fichier msg est transformé en code "
+"source pour C++, Python et d'autres langages."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:88
+msgid "2.1 Build a msg file"
+msgstr "2.1 Construire un fichier msg"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:90
+msgid "Open ``package.xml``, and add the following lines:"
+msgstr "Ouvrez ``package.xml`` et ajoutez les lignes suivantes :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:100
+msgid ""
+"Note that at build time, we need ``rosidl_default_generators``, while at "
+"runtime, we only need ``rosidl_default_runtime``."
+msgstr ""
+"Notez qu'au moment de la construction, nous avons besoin de "
+"``rosidl_default_generators``, tandis qu'au moment de l'exécution, nous "
+"n'avons besoin que de ``rosidl_default_runtime``."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:102
+msgid "Open ``CMakeLists.txt`` and add the following lines:"
+msgstr "Ouvrez ``CMakeLists.txt`` et ajoutez les lignes suivantes :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:104
+msgid "Find the package that generates message code from msg/srv files:"
+msgstr ""
+"Recherchez le package qui génère le code de message à partir des fichiers "
+"msg/srv :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:110
+msgid "Declare the list of messages you want to generate:"
+msgstr "Déclarez la liste des messages que vous souhaitez générer :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:118
+msgid ""
+"By adding the .msg files manually, we make sure that CMake knows when it has"
+" to reconfigure the project after you add other .msg files."
+msgstr ""
+"En ajoutant les fichiers .msg manuellement, nous nous assurons que CMake "
+"sait quand il doit reconfigurer le projet après avoir ajouté d'autres "
+"fichiers .msg."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:120
+msgid "Generate the messages:"
+msgstr "Générez les messages :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:128
+msgid "Also make sure you export the message runtime dependency:"
+msgstr ""
+"Assurez-vous également d'exporter la dépendance d'exécution du message :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:134
+msgid ""
+"Now you're ready to generate source files from your msg definition. We'll "
+"skip the compile step for now as we do it all together below in step 4."
+msgstr ""
+"Vous êtes maintenant prêt à générer des fichiers source à partir de votre "
+"définition msg. Nous allons ignorer l'étape de compilation pour l'instant "
+"car nous le faisons tous ensemble ci-dessous à l'étape 4."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:138
+msgid "2.2 (Extra) Set multiple interfaces"
+msgstr "2.2 (Extra) Définir plusieurs interfaces"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:142
+msgid "You can use ``set`` to neatly list all of your interfaces:"
+msgstr ""
+"Vous pouvez utiliser ``set`` pour lister soigneusement toutes vos "
+"interfaces :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:158
+msgid "And generate all lists at once like so:"
+msgstr "Et générez toutes les listes à la fois comme ceci :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:169
+msgid "3 Use an interface from the same package"
+msgstr "3 Utiliser une interface du même package"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:171
+msgid "Now we can start writing code that uses this message."
+msgstr ""
+"Nous pouvons maintenant commencer à écrire du code qui utilise ce message."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:173
+msgid ""
+"In ``more_interfaces/src`` create a file called ``publish_address_book.cpp``"
+" and paste the following code:"
+msgstr ""
+"Dans ``more_interfaces/src`` créez un fichier appelé "
+"``publish_address_book.cpp`` et collez le code suivant :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:227
+msgid "3.1 The code explained"
+msgstr "3.1 Le code expliqué"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:233
+msgid "Include the header of our newly created ``AddressBook.msg``."
+msgstr "Incluez l'en-tête de notre nouveau ``AddressBook.msg``."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:248
+msgid "Create a node and an ``AddressBook`` publisher."
+msgstr "Créez un nœud et un éditeur ``AddressBook``."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:254
+msgid "Create a callback to publish the messages periodically."
+msgstr "Créez un rappel pour publier périodiquement les messages."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:260
+msgid "Create an ``AddressBook`` message instance that we will later publish."
+msgstr ""
+"Créez une instance de message ``AddressBook`` que nous publierons plus tard."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:270
+msgid "Populate ``AddressBook`` fields."
+msgstr "Remplir les champs ``Carnet d'adresses``."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:279
+msgid "Finally send the message periodically."
+msgstr "Enfin, envoyez le message périodiquement."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:285
+msgid ""
+"Create a 1 second timer to call our ``publish_msg`` function every second."
+msgstr ""
+"Créez un minuteur de 1 seconde pour appeler notre fonction ``publish_msg`` "
+"toutes les secondes."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:288
+msgid "3.2 Build the publisher"
+msgstr "3.2 Créer l'éditeur"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:290
+msgid ""
+"We need to create a new target for this node in the ``CMakeLists.txt``:"
+msgstr ""
+"Nous devons créer une nouvelle cible pour ce nœud dans le "
+"``CMakeLists.txt`` :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:308
+msgid "3.3 Link against the interface"
+msgstr "3.3 Lien contre l'interface"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:310
+msgid ""
+"In order to use the messages generated in the same package we need to use "
+"the following CMake code:"
+msgstr ""
+"Pour utiliser les messages générés dans le même package, nous devons "
+"utiliser le code CMake suivant :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:319
+msgid ""
+"This finds the relevant generated C++ code from ``AddressBook.msg`` and "
+"allows your target to link against it."
+msgstr ""
+"Cela trouve le code C++ généré pertinent à partir de ``AddressBook.msg`` et "
+"permet à votre cible de s'y connecter."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:321
+msgid ""
+"You may have noticed that this step was not necessary when the interfaces "
+"being used were from a package that was built separately. This CMake code is"
+" only required when you want to use interfaces in the same package as the "
+"one in which they are used."
+msgstr ""
+"Vous avez peut-être remarqué que cette étape n'était pas nécessaire lorsque "
+"les interfaces utilisées provenaient d'un package construit séparément. Ce "
+"code CMake n'est requis que lorsque vous souhaitez utiliser des interfaces "
+"dans le même package que celui dans lequel elles sont utilisées."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:325
+msgid "4 Try it out"
+msgstr "4 Essayez-le"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:327
+msgid "Return to the root of the workspace to build the package:"
+msgstr "Revenez à la racine de l'espace de travail pour créer le package :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:331
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:356
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:390
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:338
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:363
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:397
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:345
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:370
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:404
+msgid "Windows"
+msgstr "les fenêtres"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:352
+msgid "Then source the workspace and run the publisher:"
+msgstr "Sourcez ensuite l'espace de travail et exécutez l'éditeur :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:377
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:411
+msgid "Or using Powershell:"
+msgstr "Ou en utilisant Powershell :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:384
+msgid ""
+"You should see the publisher relaying the msg you defined, including the "
+"values you set in ``publish_address_book.cpp``."
+msgstr ""
+"Vous devriez voir l'éditeur relayer le message que vous avez défini, y "
+"compris les valeurs que vous avez définies dans "
+"``publish_address_book.cpp``."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:386
+msgid ""
+"To confirm the message is being published on the ``address_book`` topic, "
+"open another terminal, source the workspace, and call ``topic echo``:"
+msgstr ""
+"Pour confirmer que le message est publié sur le sujet ``address_book``, "
+"ouvrez un autre terminal, sourcez l'espace de travail et appelez ``topic "
+"echo`` :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:418
+msgid ""
+"We won't create a subscriber in this tutorial, but you can try to write one "
+"yourself for practice (use :doc:`./Writing-A-Simple-Cpp-Publisher-And-"
+"Subscriber` to help)."
+msgstr ""
+"Nous ne créerons pas d'abonné dans ce didacticiel, mais vous pouvez essayer "
+"d'en écrire un vous-même pour vous entraîner (utilisez :doc:`./Writing-A-"
+"Simple-Cpp-Publisher-And-Subscriber` pour vous aider)."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:421
+msgid "5 (Extra) Use an existing interface definition"
+msgstr "5 (Extra) Utiliser une définition d'interface existante"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:425
+msgid ""
+"You can use an existing interface definition in a new interface definition. "
+"For example, let's say there is a message named ``Contact.msg`` that belongs"
+" to an existing ROS 2 package named ``rosidl_tutorials_msgs``. Assume that "
+"its definition is identical to our custom-made ``AddressBook.msg`` interface"
+" from earlier."
+msgstr ""
+"Vous pouvez utiliser une définition d'interface existante dans une nouvelle "
+"définition d'interface. Par exemple, supposons qu'il existe un message nommé"
+" ``Contact.msg`` qui appartient à un package ROS 2 existant nommé "
+"``rosidl_tutorials_msgs``. Supposons que sa définition soit identique à "
+"notre interface personnalisée ``AddressBook.msg`` de la version précédente."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:429
+msgid ""
+"In that case you could have defined ``AddressBook.msg`` (an interface in the"
+" package *with* your nodes) as type ``Contact`` (an interface in a "
+"*separate* package). You could even define ``AddressBook.msg`` as an *array*"
+" of type ``Contact``, like so:"
+msgstr ""
+"Dans ce cas, vous auriez pu définir ``AddressBook.msg`` (une interface dans "
+"le package *avec* vos nœuds) comme type ``Contact`` (une interface dans un "
+"package *séparé*). Vous pouvez même définir ``AddressBook.msg`` comme un "
+"*tableau* de type ``Contact``, comme ceci :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:436
+msgid ""
+"To generate this message you would need to declare a dependency on "
+"``Contact.msg's`` package, ``rosidl_tutorials_msgs``, in ``package.xml``:"
+msgstr ""
+"Pour générer ce message, vous devez déclarer une dépendance au package "
+"``Contact.msg's``, ``rosidl_tutorials_msgs``, dans ``package.xml`` :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:444
+msgid "And in ``CMakeLists.txt``:"
+msgstr "Et dans ``CMakeLists.txt`` :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:455
+msgid ""
+"You would also need to include the header of ``Contact.msg`` in you "
+"publisher node in order to be able to add ``contacts`` to your "
+"``address_book``."
+msgstr ""
+"Vous devrez également inclure l'en-tête de ``Contact.msg`` dans votre nœud "
+"d'éditeur afin de pouvoir ajouter ``contacts`` à votre ``carnet "
+"d'adresses``."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:461
+msgid "You could change the call back to something like this:"
+msgstr "Vous pouvez modifier l'appel en quelque chose comme ceci :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:495
+msgid ""
+"Building and running these changes would show the msg defined as expected, "
+"as well as the array of msgs defined above."
+msgstr ""
+"La construction et l'exécution de ces modifications afficheraient le msg "
+"défini comme prévu, ainsi que le tableau de msgs défini ci-dessus."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:498
+msgid "Summary"
+msgstr "Résumé"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:500
+msgid ""
+"In this tutorial, you tried out different field types for defining "
+"interfaces, then built an interface in the same package where it's being "
+"used."
+msgstr ""
+"Dans ce didacticiel, vous avez essayé différents types de champs pour "
+"définir des interfaces, puis créé une interface dans le même package où elle"
+" est utilisée."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:502
+msgid ""
+"You also learned how to use another interface as a field type, as well as "
+"the ``package.xml``, ``CMakeLists.txt``, and ``#include`` statements "
+"necessary for utilizing that feature."
+msgstr ""
+"Vous avez également appris à utiliser une autre interface comme type de "
+"champ, ainsi que les instructions ``package.xml``, ``CMakeLists.txt`` et "
+"``#include`` nécessaires à l'utilisation de cette fonctionnalité."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:505
+msgid "Next steps"
+msgstr "Prochaines étapes"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:507
+msgid ""
+"Next you will create a simple ROS 2 package with a custom parameter that you"
+" will learn to set from a launch file. Again, you can choose to write it in "
+"either :doc:`C++ <./Using-Parameters-In-A-Class-CPP>` or :doc:`Python "
+"<./Using-Parameters-In-A-Class-Python>`."
+msgstr ""
+"Ensuite, vous allez créer un package ROS 2 simple avec un paramètre "
+"personnalisé que vous apprendrez à définir à partir d'un fichier de "
+"lancement. Encore une fois, vous pouvez choisir de l'écrire en :doc:`C++ "
+"<./Using-Parameters-In-A-Class-CPP>` ou :doc:`Python <./Using-Parameters-In-"
+"A-Class- Python>`."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:511
+msgid "Related content"
+msgstr "Contenu connexe"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.rst:513
+msgid ""
+"There are `several design articles <https://design.ros2.org/#interfaces>`_ "
+"on ROS 2 interfaces and the IDL (interface definition language)."
+msgstr ""
+"Il existe `plusieurs articles de conception "
+"<https://design.ros2.org/#interfaces>`_ sur les interfaces ROS 2 et l'IDL "
+"(langage de définition d'interface)."

@@ -1,0 +1,459 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 11:56:41.910395\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:6
+msgid "Creating and using plugins (C++)"
+msgstr "Créer et utiliser des plugins (C++)"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:8
+msgid "**Goal:** Learn to create and load a simple plugin using pluginlib"
+msgstr ""
+"**Objectif :** Apprendre à créer et à charger un plugin simple à l'aide de "
+"pluginlib"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:10
+msgid "**Tutorial level:** Beginner"
+msgstr "**Niveau du tutoriel :** Débutant"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:12
+msgid "**Time:** 20 minutes"
+msgstr "**Durée :** 20 minutes"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:16
+msgid "Contents"
+msgstr "Contenu"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:19
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:21
+msgid ""
+"This tutorial is derived from `<http://wiki.ros.org/pluginlib>`_ and "
+"`Writing and Using a Simple Plugin Tutorial "
+"<http://wiki.ros.org/pluginlib/Tutorials/Writing%20and%20Using%20a%20Simple%20Plugin>`_."
+msgstr ""
+"Ce tutoriel est dérivé de `<http://wiki.ros.org/pluginlib>`_ et `Writing and"
+" Using a Simple Plugin Tutorial "
+"<http://wiki.ros.org/pluginlib/Tutorials/Writing%20and%20Using "
+"%20a%20Simple%20Plug-in>`_."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:23
+msgid ""
+"pluginlib is a C++ library for loading and unloading plugins from within a "
+"ROS package. Plugins are dynamically loadable classes that are loaded from a"
+" runtime library (i.e. shared object, dynamically linked library). With "
+"pluginlib, one does not have to explicitly link their application against "
+"the library containing the classes -- instead pluginlib can open a library "
+"containing exported classes at any point without the application having any "
+"prior awareness of the library or the header file containing the class "
+"definition. Plugins are useful for extending/modifying application behavior "
+"without needing the application source code."
+msgstr ""
+"pluginlib est une bibliothèque C++ pour charger et décharger des plugins à "
+"partir d'un package ROS. Les plugins sont des classes chargeables "
+"dynamiquement qui sont chargées à partir d'une bibliothèque d'exécution "
+"(c'est-à-dire un objet partagé, une bibliothèque liée dynamiquement). Avec "
+"pluginlib, il n'est pas nécessaire de lier explicitement leur application à "
+"la bibliothèque contenant les classes - à la place, pluginlib peut ouvrir "
+"une bibliothèque contenant des classes exportées à tout moment sans que "
+"l'application ait connaissance préalable de la bibliothèque ou du fichier "
+"d'en-tête contenant la définition de classe . Les plugins sont utiles pour "
+"étendre/modifier le comportement de l'application sans avoir besoin du code "
+"source de l'application."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:26
+msgid "Prerequisites"
+msgstr "Conditions préalables"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:28
+msgid ""
+"This tutorial assumes basic C++ knowledge and that you have ``pluginlib`` "
+"installed."
+msgstr ""
+"Ce tutoriel suppose des connaissances de base en C++ et que vous avez "
+"installé ``pluginlib``."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:36
+msgid "Tasks"
+msgstr "Tâches"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:38
+msgid ""
+"In this tutorial, you will create a two new packages, one that defines the "
+"base class, and the other that provides the plugins. The base class will "
+"define a generic polygon class, and then our plugins will define specific "
+"shapes."
+msgstr ""
+"Dans ce didacticiel, vous allez créer deux nouveaux packages, l'un "
+"définissant la classe de base et l'autre fournissant les plugins. La classe "
+"de base définira une classe de polygone générique, puis nos plugins "
+"définiront des formes spécifiques."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:42
+msgid "1 Create the Base Class Package"
+msgstr "1 Créer le package de classe de base"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:44
+msgid ""
+"Create a new empty package in your ``ros2_ws/src`` folder with the following"
+" terminal command."
+msgstr ""
+"Créez un nouveau package vide dans votre dossier ``ros2_ws/src`` avec la "
+"commande de terminal suivante."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:51
+msgid ""
+"Open your favorite editor, edit "
+"``ros2_ws/src/polygon_base/include/polygon_base/regular_polygon.hpp``, and "
+"paste the following inside of it:"
+msgstr ""
+"Ouvrez votre éditeur préféré, éditez "
+"``ros2_ws/src/polygon_base/include/polygon_base/regular_polygon.hpp`` et "
+"collez-y ce qui suit :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:74
+msgid ""
+"This code above should be pretty self explanatory... we're creating an "
+"abstract class called ``RegularPolygon``. One thing to notice is the "
+"presence of the initialize method. With ``pluginlib``, a constructor without"
+" parameters is required for classes so, if any parameters are required, we "
+"use the initialize method to initialize the object."
+msgstr ""
+"Ce code ci-dessus devrait être assez explicite... nous créons une classe "
+"abstraite appelée ``RegularPolygon``. Une chose à noter est la présence de "
+"la méthode initialize. Avec ``pluginlib``, un constructeur sans paramètres "
+"est requis pour les classes donc, si des paramètres sont requis, nous "
+"utilisons la méthode initialize pour initialiser l'objet."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:76
+msgid ""
+"We need to make this header available to other classes, so open "
+"``ros2_ws/src/polygon_base/CMakeLists.txt`` for editing. Add the following "
+"lines after the ``ament_target_dependencies`` command."
+msgstr ""
+"Nous devons rendre cet en-tête disponible pour les autres classes, alors "
+"ouvrez ``ros2_ws/src/polygon_base/CMakeLists.txt`` pour l'éditer. Ajoutez "
+"les lignes suivantes après la commande ``ament_target_dependencies``."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:85
+msgid "And add this command before the ``ament_package`` command"
+msgstr "Et ajoutez cette commande avant la commande ``ament_package``"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:93
+msgid "We will return to this package later to write our test node."
+msgstr ""
+"Nous reviendrons sur ce package plus tard pour écrire notre nœud de test."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:96
+msgid "2 Create the Plugin Package"
+msgstr "2 Créer le package de plug-in"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:97
+msgid ""
+"Now we're going to write two non-virtual implementations of our abstract "
+"class. Create a second empty package in your ``ros2_ws/src`` folder with the"
+" following terminal command."
+msgstr ""
+"Nous allons maintenant écrire deux implémentations non virtuelles de notre "
+"classe abstraite. Créez un deuxième package vide dans votre dossier "
+"``ros2_ws/src`` avec la commande de terminal suivante."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:104
+msgid "2.1 Source code for the plugins"
+msgstr "2.1 Code source des plugins"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:106
+msgid ""
+"Open ``ros2_ws/src/polygon_plugins/src/polygon_plugins.cpp`` for editing, "
+"and paste the following inside of it:"
+msgstr ""
+"Ouvrez ``ros2_ws/src/polygon_plugins/src/polygon_plugins.cpp`` pour le "
+"modifier et collez-y ce qui suit :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:160
+msgid ""
+"The implementation of the Square and Triangle classes should be fairly "
+"straightforward: save the side length, and use it to calculate the area. The"
+" only piece that is pluginlib specific is the last three lines, which "
+"invokes some magical macros that register the classes as actual plugins. "
+"Let's go through the arguments to the ``PLUGINLIB_EXPORT_CLASS`` macro:"
+msgstr ""
+"L'implémentation des classes Square et Triangle devrait être assez simple : "
+"enregistrez la longueur du côté et utilisez-la pour calculer l'aire. Le seul"
+" élément spécifique à pluginlib est les trois dernières lignes, qui "
+"invoquent des macros magiques qui enregistrent les classes en tant que "
+"plugins réels. Passons en revue les arguments de la macro "
+"``PLUGINLIB_EXPORT_CLASS`` :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:162
+msgid ""
+"The fully-qualified type of the plugin class, in this case, "
+"``polygon_plugins::Square``."
+msgstr ""
+"Le type complet de la classe de plugin, dans ce cas, "
+"``polygon_plugins::Square``."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:163
+msgid ""
+"The fully-qualified type of the base class, in this case, "
+"``polygon_base::RegularPolygon``."
+msgstr ""
+"Le type complet de la classe de base, dans ce cas, "
+"``polygon_base::RegularPolygon``."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:166
+msgid "2.2 Plugin Declaration XML"
+msgstr "2.2 XML de déclaration de plugin"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:167
+msgid ""
+"The steps above make it so that instances of our plugins can be created once"
+" the library they exist in is loaded, but the plugin loader still needs a "
+"way to find that library and to know what to reference within that library. "
+"To this end, we'll also create an XML file that, along with a special export"
+" line in the package manifest, makes all the necessary information about our"
+" plugins available to the ROS toolchain."
+msgstr ""
+"Les étapes ci-dessus permettent de créer des instances de nos plugins une "
+"fois que la bibliothèque dans laquelle ils existent est chargée, mais le "
+"chargeur de plugins a toujours besoin d'un moyen de trouver cette "
+"bibliothèque et de savoir quoi référencer dans cette bibliothèque. À cette "
+"fin, nous allons également créer un fichier XML qui, avec une ligne "
+"d'exportation spéciale dans le manifeste du package, met toutes les "
+"informations nécessaires sur nos plugins à la disposition de la chaîne "
+"d'outils ROS."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:169
+msgid ""
+"Create ``ros2_ws/src/polygon_plugins/plugins.xml`` with the following code:"
+msgstr ""
+"Créez ``ros2_ws/src/polygon_plugins/plugins.xml`` avec le code suivant :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:182
+msgid "A couple things to note:"
+msgstr "Quelques points à noter :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:184
+msgid ""
+"The ``library`` tag gives the relative path to a library that contains the "
+"plugins that we want to export. In ROS 2, that is just the name of the "
+"library. In ROS 1 it contained the prefix ``lib`` or sometimes ``lib/lib`` "
+"(i.e. ``lib/libpolygon_plugins``) but here it is simpler."
+msgstr ""
+"La balise ``library`` donne le chemin relatif vers une bibliothèque qui "
+"contient les plugins que nous voulons exporter. Dans ROS 2, c'est juste le "
+"nom de la bibliothèque. Dans ROS 1, il contenait le préfixe ``lib`` ou "
+"parfois ``lib/lib`` (c'est-à-dire ``lib/libpolygon_plugins``) mais ici c'est"
+" plus simple."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:185
+msgid ""
+"The ``class`` tag declares a plugin that we want to export from our library."
+" Let's go through its parameters:"
+msgstr ""
+"La balise ``class`` déclare un plugin que nous voulons exporter depuis notre"
+" bibliothèque. Passons en revue ses paramètres :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:187
+msgid ""
+"``type``: The fully qualified type of the plugin. For us, that's "
+"``polygon_plugins::Square``."
+msgstr ""
+"``type`` : le type complet du plugin. Pour nous, c'est "
+"``polygon_plugins::Square``."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:188
+msgid ""
+"``base_class``: The fully qualified base class type for the plugin. For us, "
+"that's ``polygon_base::RegularPolygon``."
+msgstr ""
+"``base_class`` : Le type de classe de base complet pour le plugin. Pour "
+"nous, c'est ``polygon_base::RegularPolygon``."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:189
+msgid "``description``: A description of the plugin and what it does."
+msgstr "``description`` : une description du plugin et de ce qu'il fait."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:190
+msgid ""
+"``name``: There used to be a name attribute, but it is no longer required."
+msgstr ""
+"``name`` : il y avait un attribut de nom, mais il n'est plus nécessaire."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:193
+msgid "2.3 CMake Plugin Declaration"
+msgstr "2.3 Déclaration du plugin CMake"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:194
+msgid ""
+"The last step is to export your plugins via ``CMakeLists.txt``. This is a "
+"change from ROS 1, where the exporting was done via ``package.xml``. Add the"
+" following block to your ``ros2_ws/src/polygon_plugins/CMakeLists.txt`` "
+"after the line reading ``find_package(pluginlib REQUIRED)``"
+msgstr ""
+"La dernière étape consiste à exporter vos plugins via ``CMakeLists.txt``. "
+"C'est un changement par rapport à ROS 1, où l'exportation se faisait via "
+"``package.xml``. Ajoutez le bloc suivant à votre "
+"``ros2_ws/src/polygon_plugins/CMakeLists.txt`` après la ligne indiquant "
+"``find_package(pluginlib REQUIRED)``"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:218
+msgid "And before the ``ament_package`` command, add"
+msgstr "Et avant la commande ``ament_package``, ajoutez"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:230
+msgid "The arguments to this CMake command are"
+msgstr "Les arguments de cette commande CMake sont"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:232
+msgid "The package for the base class, i.e. ``polygon_base``"
+msgstr "Le package pour la classe de base, c'est-à-dire ``polygon_base``"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:233
+msgid "The relative path to the Plugin Declaration xml, i.e. ``plugins.xml``"
+msgstr ""
+"Le chemin relatif vers la déclaration de plugin xml, c'est-à-dire "
+"``plugins.xml``"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:237
+msgid "3 Use the Plugins"
+msgstr "3 Utilisez les plugins"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:238
+msgid ""
+"Now its time to use the plugins. This can be done in any package, but here "
+"we're going to do it in the base package. Edit "
+"``ros2_ws/src/polygon_base/src/area_node.cpp`` to contain the following:"
+msgstr ""
+"Il est maintenant temps d'utiliser les plugins. Cela peut être fait dans "
+"n'importe quel package, mais ici nous allons le faire dans le package de "
+"base. Modifiez ``ros2_ws/src/polygon_base/src/area_node.cpp`` pour contenir "
+"les éléments suivants :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:272
+msgid ""
+"The ``ClassLoader`` is the key class to understand, defined in the "
+"``class_loader.hpp`` `header "
+"<https://github.com/ros/pluginlib/blob/ros2/pluginlib/include/pluginlib/class_loader.hpp>`_."
+msgstr ""
+"Le ``ClassLoader`` est la classe clé à comprendre, définie dans le "
+"``class_loader.hpp`` `header "
+"<https://github.com/ros/pluginlib/blob/ros2/pluginlib/include/pluginlib/class_loader."
+" hpp>`_."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:274
+msgid ""
+"It is templated with the base class, i.e. ``polygon_base::RegularPolygon``"
+msgstr ""
+"Il est modélisé avec la classe de base, c'est-à-dire "
+"``polygon_base::RegularPolygon``"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:275
+msgid ""
+"The first argument is a string for the package name of the base class, i.e. "
+"``polygon_base``"
+msgstr ""
+"Le premier argument est une chaîne pour le nom du package de la classe de "
+"base, c'est-à-dire ``polygon_base``"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:276
+msgid ""
+"The second argument is a string with the fully qualified base class type for"
+" the plugin, i.e. ``polygon_base::RegularPolygon``"
+msgstr ""
+"Le deuxième argument est une chaîne avec le type de classe de base "
+"entièrement qualifié pour le plugin, c'est-à-dire "
+"``polygon_base::RegularPolygon``"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:278
+msgid ""
+"There are a number of ways to instantiate an instance of the class. In this "
+"example, we're using shared pointers. We just need to call "
+"``createSharedInstance`` with the fully-qualified type of the plugin class, "
+"in this case, ``polygon_plugins::Square``."
+msgstr ""
+"Il existe plusieurs façons d'instancier une instance de la classe. Dans cet "
+"exemple, nous utilisons des pointeurs partagés. Nous avons juste besoin "
+"d'appeler ``createSharedInstance`` avec le type complet de la classe du "
+"plugin, dans ce cas, ``polygon_plugins::Square``."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:280
+msgid ""
+"Important note: the ``polygon_base`` package in which this node is defined "
+"does NOT depend on the ``polygon_plugins`` class. The plugins will be loaded"
+" dynamically without any dependency needing to be declared. Furthermore, "
+"we're instantiating the classes with hardcoded plugin names, but you can "
+"also do so dynamically with parameters, etc."
+msgstr ""
+"Remarque importante : le package ``polygon_base`` dans lequel ce nœud est "
+"défini ne dépend PAS de la classe ``polygon_plugins``. Les plugins seront "
+"chargés dynamiquement sans qu'aucune dépendance n'ait besoin d'être "
+"déclarée. De plus, nous instancions les classes avec des noms de plug-ins "
+"codés en dur, mais vous pouvez également le faire de manière dynamique avec "
+"des paramètres, etc."
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:283
+msgid "4 Build and run"
+msgstr "4 Construire et exécuter"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:285
+msgid ""
+"Navigate back to the root of your workspace, ``ros2_ws``, and build your new"
+" packages:"
+msgstr ""
+"Revenez à la racine de votre espace de travail, ``ros2_ws``, et créez vos "
+"nouveaux packages :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:291
+msgid "From ``ros2_ws``, be sure to source the setup files:"
+msgstr ""
+"À partir de ``ros2_ws``, assurez-vous de sourcer les fichiers "
+"d'installation :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:295
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:301
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:307
+msgid "Windows"
+msgstr "les fenêtres"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:313
+msgid "Now run the node:"
+msgstr "Exécutez maintenant le nœud :"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:319
+msgid "It should print"
+msgstr "Il devrait imprimer"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:329
+msgid "Summary"
+msgstr "Résumé"
+
+#: ../../source/Tutorials/Beginner-Client-Libraries/Pluginlib.rst:331
+msgid "Congratulations! You've just written and used your first plugins."
+msgstr ""
+"Toutes nos félicitations! Vous venez d'écrire et d'utiliser vos premiers "
+"plugins."

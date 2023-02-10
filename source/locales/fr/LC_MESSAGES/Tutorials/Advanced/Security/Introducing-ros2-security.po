@@ -1,0 +1,421 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 11:52:21.661231\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:9
+msgid "Setting up security"
+msgstr "Mise en place de la sécurité"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:11
+msgid "**Goal:** Set up security with ``sros2``."
+msgstr "**Objectif :** Configurer la sécurité avec ``sros2``."
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:13
+msgid "**Tutorial level:** Advanced"
+msgstr "**Niveau du didacticiel :** Avancé"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:15
+msgid "**Time:** 15 minutes"
+msgstr "**Durée :** 15 minutes"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:20
+msgid "Contents"
+msgstr "Contenu"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:23
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:25
+msgid ""
+"The ``sros2`` package provides the tools and instructions to use ROS2 on top"
+" of DDS-Security. The security features have been tested across platforms "
+"(Linux, macOS, and Windows) as well as across different languages (C++ and "
+"Python). The SROS2 has been designed to work with any secure middleware, "
+"although not all middleware is open source and support varies depending on "
+"the ROS distribution in use. Please reach out to the :ref:`ROS 2 Security "
+"Working Group <Security Working Group>` if you encounter any support issues."
+msgstr ""
+"Le package ``sros2`` fournit les outils et les instructions pour utiliser "
+"ROS2 en plus de DDS-Security. Les fonctionnalités de sécurité ont été "
+"testées sur plusieurs plates-formes (Linux, macOS et Windows) ainsi que dans"
+" différents langages (C++ et Python). Le SROS2 a été conçu pour fonctionner "
+"avec n'importe quel middleware sécurisé, bien que tous les middleware ne "
+"soient pas open source et que la prise en charge varie en fonction de la "
+"distribution ROS utilisée. Veuillez contacter le :ref:`Groupe de travail sur"
+" la sécurité ROS 2 <Groupe de travail sur la sécurité>` si vous rencontrez "
+"des problèmes d'assistance."
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:32
+msgid "Installation"
+msgstr "Installation"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:34
+msgid ""
+"Typically security is available following installation using the :doc:`ROS 2"
+" Installation Guide <../../../Installation>` and the :doc:`configuration "
+"guide <../../Beginner-CLI-Tools/Configuring-ROS2-Environment>`. However, if "
+"you intend to install from source or switch middleware implementations, "
+"consider the following caveats:"
+msgstr ""
+"Généralement, la sécurité est disponible après l'installation à l'aide du "
+":doc:`Guide d'installation de ROS 2 <../../../Installation>` et du "
+":doc:`guide de configuration <../../Beginner-CLI-Tools/ Configuration-"
+"ROS2-Environnement>`. Toutefois, si vous avez l'intention d'installer à "
+"partir de la source ou de changer d'implémentation de middleware, tenez "
+"compte des mises en garde suivantes :"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:39
+msgid "Installing from source"
+msgstr "Installation à partir des sources"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:41
+msgid ""
+"Before installing from source, you will need to have a recent version "
+"openssl (1.0.2g or later) installed:"
+msgstr ""
+"Avant d'installer à partir des sources, vous devez disposer d'une version "
+"récente d'openssl (1.0.2g ou ultérieure) :"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:45
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:99
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:125
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:155
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:194
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:52
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:105
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:132
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:162
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:202
+msgid "MacOS"
+msgstr "Mac OS"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:58
+msgid ""
+"You will need to have OpenSSL on your library path to run DDS-Security "
+"demos. Run the following command, and consider adding to your "
+"``~/.bash_profile``:"
+msgstr ""
+"Vous aurez besoin d'OpenSSL sur votre chemin de bibliothèque pour exécuter "
+"des démos DDS-Security. Exécutez la commande suivante et envisagez d'ajouter"
+" à votre ``~/.bash_profile`` :"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:67
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:111
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:139
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:169
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:210
+msgid "Windows"
+msgstr "les fenêtres"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:69
+msgid ""
+"If you don't have OpenSSL installed, please follow :ref:`these instructions "
+"<windows-install-binary-installing-prerequisites>`"
+msgstr ""
+"Si vous n'avez pas installé OpenSSL, veuillez suivre :ref:`ces instructions "
+"<windows-install-binary-installing-prerequisites>`"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:71
+msgid ""
+"Fast DDS requires an additional CMake flag to build the security plugins, so"
+" the colcon invocation needs to be modified to pass:"
+msgstr ""
+"Fast DDS nécessite un indicateur CMake supplémentaire pour créer les plugins"
+" de sécurité, donc l'invocation de colcon doit être modifiée pour passer :"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:79
+msgid "Selecting an alternate middleware"
+msgstr "Sélection d'un middleware alternatif"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:81
+msgid ""
+"If you choose not to use the default middleware implementation, be sure to "
+":doc:`change your DDS implementation <../../../Installation/DDS-"
+"Implementations/>` before proceeding."
+msgstr ""
+"Si vous choisissez de ne pas utiliser l'implémentation middleware par "
+"défaut, assurez-vous de :doc:`changer votre implémentation DDS "
+"<../../../Installation/DDS-Implementations/>` avant de continuer."
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:83
+msgid ""
+"ROS2 allows you to change the DDS implementation at runtime. See `how to "
+"work with mulitple RMW implementations <../../../How-To-Guides/Working-with-"
+"multiple-RMW-implementations>` to explore different middleware "
+"implementations."
+msgstr ""
+"ROS2 vous permet de modifier l'implémentation DDS au moment de l'exécution. "
+"Voir `comment travailler avec plusieurs implémentations RMW <../../../How-"
+"To-Guides/Working-with-multiple-RMW-implementations>` pour explorer "
+"différentes implémentations de middleware."
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:86
+msgid "Note that secure communication between vendors is not supported."
+msgstr ""
+"Notez que la communication sécurisée entre les fournisseurs n'est pas prise "
+"en charge."
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:91
+msgid "Run the demo"
+msgstr "Exécutez la démo"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:94
+msgid "1\\. Create a folder for the security files"
+msgstr "1\\. Créer un dossier pour les fichiers de sécurité"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:95
+msgid ""
+"Begin by creating folder to store all the files necessary for this demo:"
+msgstr ""
+"Commencez par créer un dossier pour stocker tous les fichiers nécessaires à "
+"cette démo :"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:118
+msgid "2\\. Generate a keystore"
+msgstr "2\\. Générer un magasin de clés"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:120
+msgid ""
+"Use the ``sros2`` utilities to create the keystore. Files in the keystore "
+"will be used to enable security for all the participants in the ROS 2 graph."
+msgstr ""
+"Utilisez les utilitaires ``sros2`` pour créer le keystore. Les fichiers du "
+"magasin de clés seront utilisés pour activer la sécurité de tous les "
+"participants du graphe ROS 2."
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:147
+msgid "3\\. Generate keys and certificates"
+msgstr "3\\. Générer des clés et des certificats"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:149
+msgid ""
+"Once the keystore is created, create keys and certificates for each node "
+"with security enabled. For our demo, that includes the talker and listener "
+"nodes. This command uses the ``create_enclave`` feature which is covered in "
+"more detail in the next tutorial."
+msgstr ""
+"Une fois le magasin de clés créé, créez des clés et des certificats pour "
+"chaque nœud avec la sécurité activée. Pour notre démo, cela inclut les nœuds"
+" locuteur et auditeur. Cette commande utilise la fonctionnalité "
+"``create_enclave`` qui est couverte plus en détail dans le prochain "
+"tutoriel."
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:177
+msgid ""
+"If ``unable to write 'random state'`` appears then set the environment "
+"variable ``RANDFILE``."
+msgstr ""
+"Si ``unable to write 'random state'`` apparaît alors définissez la variable "
+"d'environnement ``RANDFILE``."
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:183
+msgid "Then re-run the commands above."
+msgstr "Ensuite, relancez les commandes ci-dessus."
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:187
+msgid "4\\. Configure environment variables"
+msgstr "4\\. Configurer les variables d'environnement"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:189
+msgid ""
+"Three environment variables allow the middleware to locate encryption "
+"materials and enable (and possibly enforce) security. These and other "
+"security-related environment variables are described in the `ROS 2 DDS-"
+"Security Integration design document "
+"<https://design.ros2.org/articles/ros2_dds_security.html>`_."
+msgstr ""
+"Trois variables d'environnement permettent au middleware de localiser les "
+"matériaux de chiffrement et d'activer (et éventuellement d'appliquer) la "
+"sécurité. Ces variables d'environnement et d'autres liées à la sécurité sont"
+" décrites dans le `Document de conception de l'intégration ROS 2 DDS-"
+"Security <https://design.ros2.org/articles/ros2_dds_security.html>`_."
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:218
+msgid ""
+"These variables need to be defined in each terminal used for the demo. For "
+"convenience you can add them to your boot environment."
+msgstr ""
+"Ces variables doivent être définies dans chaque terminal utilisé pour la "
+"démonstration. Pour plus de commodité, vous pouvez les ajouter à votre "
+"environnement de démarrage."
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:223
+msgid "5\\. Run the ``talker/listener`` demo"
+msgstr "5\\. Exécutez la démo ``talker/listener``"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:225
+msgid "Begin the demo by launching the talker node."
+msgstr "Commencez la démo en lançant le nœud Talker."
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:231
+msgid ""
+"In another terminal, do the same to launch the ``listener`` node. The "
+"environment variables in this terminal must be properly set as described in "
+"step 4 above."
+msgstr ""
+"Dans un autre terminal, faites de même pour lancer le nœud ``listener``. Les"
+" variables d'environnement de ce terminal doivent être correctement définies"
+" comme décrit à l'étape 4 ci-dessus."
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:238
+msgid ""
+"These nodes will be communicating using authentication and encryption! If "
+"you look at the packet contents (for example, using ``tcpdump`` or "
+"``Wireshark`` as covered in another tutorial), you can see that the messages"
+" are encrypted."
+msgstr ""
+"Ces nœuds communiqueront en utilisant l'authentification et le cryptage ! Si"
+" vous regardez le contenu du paquet (par exemple, en utilisant ``tcpdump`` "
+"ou ``Wireshark`` comme couvert dans un autre tutoriel), vous pouvez voir que"
+" les messages sont cryptés."
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:241
+msgid ""
+"Note: You can switch between the C++ (demo_nodes_cpp) and Python "
+"(demo_nodes_py) packages arbitrarily."
+msgstr ""
+"Remarque : Vous pouvez basculer arbitrairement entre les packages C++ "
+"(demo_nodes_cpp) et Python (demo_nodes_py)."
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:243
+msgid ""
+"These nodes are able to communicate because we have created the appropriate "
+"keys and certificates for them."
+msgstr ""
+"Ces nœuds sont capables de communiquer car nous avons créé les clés et les "
+"certificats appropriés pour eux."
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:245
+msgid "Leave both nodes running as you answer the questions below."
+msgstr ""
+"Laissez les deux nœuds fonctionner pendant que vous répondez aux questions "
+"ci-dessous."
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:249
+msgid "Take the Quiz!"
+msgstr "Fais le quiz!"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:253
+msgid "Question 1"
+msgstr "question 1"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:255
+msgid ""
+"Open another terminal session, but **do not** set the environment variables "
+"so that security is not enabled. Start the listener. What do you expect to "
+"happen?"
+msgstr ""
+"Ouvrez une autre session de terminal, mais ** ne définissez pas ** les "
+"variables d'environnement afin que la sécurité ne soit pas activée. Démarrez"
+" l'écouteur. Qu'attendez-vous qu'il se passe ?"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:259
+msgid "Answer 1"
+msgstr "Réponse 1"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:261
+msgid ""
+"The listener launches but does not receive any messages. All traffic is "
+"encrypted, and without security enabled the listener does not receive "
+"anything."
+msgstr ""
+"Le programme d'écoute se lance mais ne reçoit aucun message. Tout le trafic "
+"est crypté et sans la sécurité activée, l'auditeur ne reçoit rien."
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:267
+msgid "Question 2"
+msgstr "question 2"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:269
+msgid ""
+"Stop the listener, set the environment variable ``ROS_SECURITY_ENABLE`` to "
+"``true`` and start the listener again. What results do you expect this time?"
+msgstr ""
+"Arrêtez l'écouteur, définissez la variable d'environnement "
+"``ROS_SECURITY_ENABLE`` sur ``true`` et redémarrez l'écouteur. Quels "
+"résultats attendez-vous cette fois ?"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:272
+msgid "Answer 2"
+msgstr "Réponse 2"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:274
+msgid ""
+"The listener still launches but does not receive messages. Although security"
+" has now been enabled, it is not been configured properly since ROS is "
+"unable to locate the key files. The listener launches, but in non-secure "
+"mode since security is not enforced, which means that although the properly "
+"configured talker is sending encrypted messages, this listener is unable to "
+"decrypt them."
+msgstr ""
+"Le programme d'écoute se lance toujours mais ne reçoit pas de messages. Bien"
+" que la sécurité ait maintenant été activée, elle n'a pas été configurée "
+"correctement car ROS est incapable de localiser les fichiers de clé. Le "
+"listener se lance, mais en mode non sécurisé puisque la sécurité n'est pas "
+"appliquée, ce qui signifie que bien que le talker correctement configuré "
+"envoie des messages chiffrés, ce listener est incapable de les déchiffrer."
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:280
+msgid "Question 3"
+msgstr "question 3"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:282
+msgid ""
+"Stop the listener and set ``ROS_SECURITY_STRATEGY`` to ``Enforce``. What "
+"happens now?"
+msgstr ""
+"Arrêtez l'écouteur et définissez ``ROS_SECURITY_STRATEGY`` sur ``Enforce``. "
+"Que se passe-t-il maintenant ?"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:285
+msgid "Answer 3"
+msgstr "Réponse 3"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:287
+msgid ""
+"The listener fails to launch. Security has been enabled and is being "
+"enforced. Since it still is not properly configured, an error is thrown "
+"rather than launching in non-secure mode."
+msgstr ""
+"L'écouteur ne parvient pas à se lancer. La sécurité a été activée et est "
+"appliquée. Comme il n'est toujours pas correctement configuré, une erreur "
+"est renvoyée plutôt que de se lancer en mode non sécurisé."
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:293
+msgid "Learn More!"
+msgstr "Apprendre encore plus!"
+
+#: ../../source/Tutorials/Advanced/Security/Introducing-ros2-security.rst:295
+msgid ""
+"Are you ready to go further with ROS Security? Take a look at the `Secure "
+"Turtlebot2 Demo <https://github.com/ros-swg/turtlebot3_demo>`_. You'll find "
+"a functioning and complex implementation of ROS 2 security, ready to try out"
+" your own custom scenarios. Be sure to create pull requests and issues here "
+"so we can continue improving security support in ROS!"
+msgstr ""
+"Êtes-vous prêt à aller plus loin avec ROS Security ? Jetez un œil à la "
+"`Secure Turtlebot2 Demo <https://github.com/ros-swg/turtlebot3_demo>`_. Vous"
+" trouverez une implémentation fonctionnelle et complexe de la sécurité ROS "
+"2, prête à essayer vos propres scénarios personnalisés. Assurez-vous de "
+"créer des demandes d'extraction et des problèmes ici afin que nous puissions"
+" continuer à améliorer la prise en charge de la sécurité dans ROS !"

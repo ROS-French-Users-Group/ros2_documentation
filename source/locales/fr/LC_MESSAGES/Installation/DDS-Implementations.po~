@@ -1,0 +1,381 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-01-07 17:35:06.854152\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/Installation/DDS-Implementations.rst:2
+msgid "DDS implementations"
+msgstr "Implémentations DDS"
+
+#: ../../source/Installation/DDS-Implementations.rst:4
+msgid ""
+"By default, ROS 2 uses DDS as its `middleware "
+"<https://design.ros2.org/articles/ros_on_dds.html>`__. It is compatible with"
+" multiple DDS or RTPS (the DDS wire protocol) vendors. There is currently "
+"support for eProsima's Fast DDS, RTI's Connext DDS, Eclipse Cyclone DDS, and"
+" GurumNetworks GurumDDS. See https://ros.org/reps/rep-2000.html for "
+"supported DDS vendors by distribution."
+msgstr ""
+"Par défaut, ROS 2 utilise DDS comme `middleware "
+"<https://design.ros2.org/articles/ros_on_dds.html>`__. Il est compatible "
+"avec plusieurs fournisseurs DDS ou RTPS (le protocole filaire DDS). Il "
+"existe actuellement un support pour Fast DDS d'eProsima, Connext DDS de RTI,"
+" Eclipse Cyclone DDS et GurumNetworks GurumDDS. Voir "
+"https://ros.org/reps/rep-2000.html pour les fournisseurs DDS pris en charge "
+"par distribution."
+
+#: ../../source/Installation/DDS-Implementations.rst:9
+msgid "In Rolling, the default DDS vendor is eProsima's Fast DDS."
+msgstr "Dans Rolling, le fournisseur DDS par défaut est Fast DDS d'eProsima."
+
+#: ../../source/Installation/DDS-Implementations.rst:11
+msgid ""
+":doc:`Working with Eclipse Cyclone DDS <DDS-Implementations/Working-with-"
+"Eclipse-CycloneDDS>` explains how to utilize Cyclone DDS."
+msgstr ""
+":doc:`Working with Eclipse Cyclone DDS <DDS-Implementations/Working-with-"
+"Eclipse-CycloneDDS>` explique comment utiliser Cyclone DDS."
+
+#: ../../source/Installation/DDS-Implementations.rst:12
+msgid ""
+":doc:`Working with eProsima Fast DDS <DDS-Implementations/Working-with-"
+"eProsima-Fast-DDS>` explains how to utilize Fast DDS."
+msgstr ""
+":doc:`Travailler avec eProsima Fast DDS <DDS-Implementations/Working-with-"
+"eProsima-Fast-DDS>` explique comment utiliser Fast DDS."
+
+#: ../../source/Installation/DDS-Implementations.rst:13
+msgid ""
+":doc:`Working with GurumNetworks GurumDDS <DDS-Implementations/Working-with-"
+"GurumNetworks-GurumDDS>` explains how to utilize GurumDDS."
+msgstr ""
+":doc:`Travailler avec GurumNetworks GurumDDS <DDS-Implementations/Working-"
+"with-GurumNetworks-GurumDDS>` explique comment utiliser GurumDDS."
+
+#: ../../source/Installation/DDS-Implementations.rst:21
+msgid ""
+"If you would like to use one of the other vendors you will need to install "
+"their software separately before building. The ROS 2 build will "
+"automatically build support for vendors that have been installed and sourced"
+" correctly."
+msgstr ""
+"Si vous souhaitez utiliser l'un des autres fournisseurs, vous devrez "
+"installer leur logiciel séparément avant de construire. La version ROS 2 "
+"créera automatiquement la prise en charge des fournisseurs qui ont été "
+"correctement installés et sourcés."
+
+#: ../../source/Installation/DDS-Implementations.rst:24
+msgid ""
+"Once you've installed a new DDS vendor, you can change the vendor used at "
+"runtime: :doc:`Working with Multiple RMW Implementations <../How-To-"
+"Guides/Working-with-multiple-RMW-implementations>`."
+msgstr ""
+"Une fois que vous avez installé un nouveau fournisseur DDS, vous pouvez "
+"changer le fournisseur utilisé lors de l'exécution : :doc:`Working with "
+"Multiple RMW Implementations <../How-To-Guides/Working-with-multiple-RMW-"
+"implementations>`."
+
+#: ../../source/Installation/DDS-Implementations.rst:26
+msgid ""
+"Detailed instructions for installing other DDS vendors are provided below."
+msgstr ""
+"Des instructions détaillées pour l'installation d'autres fournisseurs de DDS"
+" sont fournies ci-dessous."
+
+#: ../../source/Installation/DDS-Implementations.rst:30
+msgid "Platforms / Installation types"
+msgstr "Plates-formes / Types d'installation"
+
+#: ../../source/Installation/DDS-Implementations.rst:33
+msgid "Ubuntu Linux source install"
+msgstr "Installation des sources Linux d'Ubuntu"
+
+#: ../../source/Installation/DDS-Implementations.rst:36
+#: ../../source/Installation/DDS-Implementations.rst:88
+msgid "RTI Connext (version 6.0.1, amd64 only)"
+msgstr "RTI Connext (version 6.0.1, amd64 uniquement)"
+
+#: ../../source/Installation/DDS-Implementations.rst:39
+msgid "Debian packages provided in the ROS 2 apt repositories"
+msgstr "Paquets Debian fournis dans les dépôts ROS 2 apt"
+
+#: ../../source/Installation/DDS-Implementations.rst:41
+msgid ""
+"You can install a Debian package of RTI Connext available on the ROS 2 apt "
+"repositories. You will need to accept a license from RTI."
+msgstr ""
+"Vous pouvez installer un paquet Debian de RTI Connext disponible sur les "
+"dépôts ROS 2 apt. Vous devrez accepter une licence de RTI."
+
+#: ../../source/Installation/DDS-Implementations.rst:48
+#: ../../source/Installation/DDS-Implementations.rst:76
+msgid "Source the setup file to set the ``NDDSHOME`` environment variable."
+msgstr ""
+"Sourcez le fichier d'installation pour définir la variable d'environnement "
+"``NDDSHOME``."
+
+#: ../../source/Installation/DDS-Implementations.rst:54
+msgid ""
+"Note: when using ``zsh`` you need to be in the directory of the script when "
+"sourcing it to have it work properly"
+msgstr ""
+"Remarque : lors de l'utilisation de ``zsh``, vous devez être dans le "
+"répertoire du script lors de sa recherche pour qu'il fonctionne "
+"correctement."
+
+#: ../../source/Installation/DDS-Implementations.rst:56
+#: ../../source/Installation/DDS-Implementations.rst:82
+msgid "Now you can build as normal and support for RTI will be built as well."
+msgstr ""
+"Maintenant, vous pouvez construire normalement et le support pour RTI sera "
+"également construit."
+
+#: ../../source/Installation/DDS-Implementations.rst:59
+msgid "Official binary packages from RTI"
+msgstr "Paquets binaires officiels de RTI"
+
+#: ../../source/Installation/DDS-Implementations.rst:61
+msgid ""
+"You can install the Connext 6.0.1 package for Linux provided by RTI, via "
+"options available for :doc:`university, purchase or evaluation <DDS-"
+"Implementations/Install-Connext-University-Eval>`"
+msgstr ""
+"Vous pouvez installer le package Connext 6.0.1 pour Linux fourni par RTI, "
+"via les options disponibles pour :doc:`university, achat ou évaluation <DDS-"
+"Implementations/Install-Connext-University-Eval>`"
+
+#: ../../source/Installation/DDS-Implementations.rst:63
+msgid ""
+"After downloading, use ``chmod +x`` on the ``.run`` executable and then "
+"execute it. Note that if you're installing to a system directory use "
+"``sudo`` as well."
+msgstr ""
+"Après le téléchargement, utilisez ``chmod +x`` sur l'exécutable ``.run`` "
+"puis exécutez-le. Notez que si vous installez dans un répertoire système, "
+"utilisez également ``sudo``."
+
+#: ../../source/Installation/DDS-Implementations.rst:66
+msgid "The default location is ``~/rti_connext_dds-6.0.1``"
+msgstr "L'emplacement par défaut est ``~/rti_connext_dds-6.0.1``"
+
+#: ../../source/Installation/DDS-Implementations.rst:68
+msgid ""
+"After installation, run RTI launcher and point it to your license file "
+"(obtained from RTI)."
+msgstr ""
+"Après l'installation, lancez le lanceur RTI et pointez-le vers votre fichier"
+" de licence (obtenu auprès de RTI)."
+
+#: ../../source/Installation/DDS-Implementations.rst:70
+msgid ""
+"Add the following line to your ``.bashrc`` file pointing to your copy of the"
+" license."
+msgstr ""
+"Ajoutez la ligne suivante à votre fichier ``.bashrc`` pointant vers votre "
+"copie de la licence."
+
+#: ../../source/Installation/DDS-Implementations.rst:85
+msgid "Ubuntu Linux binary install"
+msgstr "Installation binaire Ubuntu Linux"
+
+#: ../../source/Installation/DDS-Implementations.rst:90
+msgid ""
+"To use RTI Connext DDS there are full-suite install options available for "
+":doc:`university, purchase or evaluation <DDS-Implementations/Install-"
+"Connext-University-Eval>` or you can install a libraries-only Debian package"
+" of RTI Connext 6.0.1, available from the OSRF Apt repository under a `non-"
+"commercial license <https://www.rti.com/ncl>`__."
+msgstr ""
+"Pour utiliser RTI Connext DDS, des options d'installation complètes sont "
+"disponibles pour :doc:`university, achat ou évaluation <DDS-"
+"Implementations/Install-Connext-University-Eval>` ou vous pouvez installer "
+"un package Debian de RTI Connext réservé aux bibliothèques 6.0.1, disponible"
+" sur le référentiel OSRF Apt sous une `licence non commerciale "
+"<https://www.rti.com/ncl>`__."
+
+#: ../../source/Installation/DDS-Implementations.rst:94
+msgid "To install the libs-only Debian package:"
+msgstr "Pour installer le paquet Debian libs-only :"
+
+#: ../../source/Installation/DDS-Implementations.rst:100
+msgid ""
+"You will need to accept a license agreement from RTI, and will find an "
+"'rti_license.dat file in the installation."
+msgstr ""
+"Vous devrez accepter un contrat de licence de RTI et trouverez un fichier "
+"'rti_license.dat dans l'installation."
+
+#: ../../source/Installation/DDS-Implementations.rst:102
+msgid ""
+"Add the following line to your ``.bashrc`` file pointing to your copy of the"
+" license (and source it)."
+msgstr ""
+"Ajoutez la ligne suivante à votre fichier ``.bashrc`` pointant vers votre "
+"copie de la licence (et sourcez-la)."
+
+#: ../../source/Installation/DDS-Implementations.rst:108
+msgid ""
+"All options need you to source the setup file to set the ``NDDSHOME`` "
+"environment variable:"
+msgstr ""
+"Toutes les options nécessitent que vous sourcez le fichier de configuration "
+"pour définir la variable d'environnement ``NDDSHOME`` :"
+
+#: ../../source/Installation/DDS-Implementations.rst:114
+msgid ""
+"Note: the above may need modification to match your RTI installation "
+"location"
+msgstr ""
+"Remarque : ce qui précède peut nécessiter des modifications pour "
+"correspondre à votre emplacement d'installation RTI"
+
+#: ../../source/Installation/DDS-Implementations.rst:116
+#: ../../source/Installation/DDS-Implementations.rst:138
+#: ../../source/Installation/DDS-Implementations.rst:159
+#: ../../source/Installation/DDS-Implementations.rst:180
+#: ../../source/Installation/DDS-Implementations.rst:199
+msgid ""
+"If you want to install the Connext DDS-Security plugins please refer to "
+":doc:`this page <DDS-Implementations/Install-Connext-Security-Plugins>`."
+msgstr ""
+"Si vous souhaitez installer les plugins Connext DDS-Security, veuillez vous "
+"référer à :doc:`cette page <DDS-Implementations/Install-Connext-Security-"
+"Plugins>`."
+
+#: ../../source/Installation/DDS-Implementations.rst:119
+msgid "OSX source install"
+msgstr "Installation des sources OSX"
+
+#: ../../source/Installation/DDS-Implementations.rst:122
+msgid "RTI Connext (6.0.1)"
+msgstr "Connexion RTI (6.0.1)"
+
+#: ../../source/Installation/DDS-Implementations.rst:124
+#: ../../source/Installation/DDS-Implementations.rst:167
+msgid ""
+"If you would like to also build against RTI Connext DDS there are options "
+"available for :doc:`university, purchase or evaluation <DDS-"
+"Implementations/Install-Connext-University-Eval>`"
+msgstr ""
+"Si vous souhaitez également construire avec RTI Connext DDS, des options "
+"sont disponibles pour :doc:`université, achat ou évaluation <DDS-"
+"Implementations/Install-Connext-University-Eval>`"
+
+#: ../../source/Installation/DDS-Implementations.rst:126
+msgid ""
+"You also need a Java runtime installed to run the RTI code generator, which "
+"you can get `here <https://support.apple.com/kb/DL1572?locale=en_US>`__."
+msgstr ""
+"Vous avez également besoin d'un runtime Java installé pour exécuter le "
+"générateur de code RTI, que vous pouvez obtenir `ici "
+"<https://support.apple.com/kb/DL1572?locale=en_US>`__."
+
+#: ../../source/Installation/DDS-Implementations.rst:128
+#: ../../source/Installation/DDS-Implementations.rst:149
+#: ../../source/Installation/DDS-Implementations.rst:191
+msgid "After installing, run RTI launcher and point it to your license file."
+msgstr ""
+"Après l'installation, exécutez le lanceur RTI et pointez-le vers votre "
+"fichier de licence."
+
+#: ../../source/Installation/DDS-Implementations.rst:130
+#: ../../source/Installation/DDS-Implementations.rst:151
+msgid ""
+"Source the setup file to set the ``NDDSHOME`` environment variable before "
+"building your workspace."
+msgstr ""
+"Sourcez le fichier d'installation pour définir la variable d'environnement "
+"``NDDSHOME`` avant de créer votre espace de travail."
+
+#: ../../source/Installation/DDS-Implementations.rst:136
+msgid ""
+"You may need to increase shared memory resources following "
+"https://community.rti.com/kb/osx510"
+msgstr ""
+"Vous devrez peut-être augmenter les ressources de mémoire partagée en "
+"suivant https://community.rti.com/kb/osx510"
+
+#: ../../source/Installation/DDS-Implementations.rst:141
+msgid "OSX binary install"
+msgstr "Installation binaire OSX"
+
+#: ../../source/Installation/DDS-Implementations.rst:145
+msgid "Enable Connext support"
+msgstr "Activer la prise en charge de Connect"
+
+#: ../../source/Installation/DDS-Implementations.rst:147
+#: ../../source/Installation/DDS-Implementations.rst:189
+msgid ""
+"To use RTI Connext DDS there are options available for :doc:`university, "
+"purchase or evaluation <DDS-Implementations/Install-Connext-University-"
+"Eval>`"
+msgstr ""
+"Pour utiliser RTI Connext DDS, des options sont disponibles pour "
+":doc:`université, achat ou évaluation <DDS-Implementations/Install-Connext-"
+"University-Eval>`"
+
+#: ../../source/Installation/DDS-Implementations.rst:157
+msgid ""
+"You may need to increase shared memory resources following "
+"https://community.rti.com/kb/osx510."
+msgstr ""
+"Vous devrez peut-être augmenter les ressources de mémoire partagée en "
+"suivant https://community.rti.com/kb/osx510."
+
+#: ../../source/Installation/DDS-Implementations.rst:162
+msgid "Windows source install"
+msgstr "Installation des sources Windows"
+
+#: ../../source/Installation/DDS-Implementations.rst:165
+msgid "RTI Connext 6.0.1"
+msgstr "RTI Connect 6.0.1"
+
+#: ../../source/Installation/DDS-Implementations.rst:169
+msgid "After installing, use the RTI Launcher to load your license file."
+msgstr ""
+"Après l'installation, utilisez le lanceur RTI pour charger votre fichier de "
+"licence."
+
+#: ../../source/Installation/DDS-Implementations.rst:171
+msgid "Then before building ROS 2, set up the Connext environment:"
+msgstr "Ensuite, avant de créer ROS 2, configurez l'environnement Connext :"
+
+#: ../../source/Installation/DDS-Implementations.rst:177
+msgid ""
+"Note that this path might need to be slightly altered depending on where you"
+" selected to install RTI Connext DDS, and which version of Visual Studio was"
+" selected. The path above is the current default path as of version 6.0.1, "
+"but will change as the version numbers increment in the future."
+msgstr ""
+"Notez que ce chemin peut devoir être légèrement modifié en fonction de "
+"l'endroit où vous avez choisi d'installer RTI Connext DDS et de la version "
+"de Visual Studio qui a été sélectionnée. Le chemin ci-dessus est le chemin "
+"par défaut actuel à partir de la version 6.0.1, mais il changera à mesure "
+"que les numéros de version augmenteront à l'avenir."
+
+#: ../../source/Installation/DDS-Implementations.rst:183
+msgid "Windows binary install"
+msgstr "Installation binaire Windows"
+
+#: ../../source/Installation/DDS-Implementations.rst:187
+msgid "RTI Connext"
+msgstr "RTI Connect"
+
+#: ../../source/Installation/DDS-Implementations.rst:193
+msgid "Then before using ROS 2, set up the Connext environment:"
+msgstr "Ensuite, avant d'utiliser ROS 2, configurez l'environnement Connext :"

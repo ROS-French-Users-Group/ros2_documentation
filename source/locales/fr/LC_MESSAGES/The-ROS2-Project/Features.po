@@ -1,0 +1,320 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Open Robotics
+# This file is distributed under the same license as the ROS 2 documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ROS 2 documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-07 08:44+0100\n"
+"PO-Revision-Date: 2023-02-09 05:46:02.343984\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translated-By: potranslator 1.1.5\n"
+
+#: ../../source/The-ROS2-Project/Features.rst:8
+msgid "Features Status"
+msgstr "Statut des fonctionnalités"
+
+#: ../../source/The-ROS2-Project/Features.rst:10
+msgid ""
+"The features listed below are available in the current ROS 2 release. Unless"
+" otherwise specified, the features are available for all supported platforms"
+" (Ubuntu 22.04 (Jammy), Windows 10), DDS implementations (eProsima Fast DDS,"
+" RTI Connext DDS, and Eclipse Cyclone DDS) and programming language client "
+"libraries (C++ and Python). For planned future development, see the "
+":doc:`Roadmap <Roadmap>`."
+msgstr ""
+"Les fonctionnalités répertoriées ci-dessous sont disponibles dans la version"
+" actuelle de ROS 2. Sauf indication contraire, les fonctionnalités sont "
+"disponibles pour toutes les plates-formes prises en charge (Ubuntu 22.04 "
+"(Jammy), Windows 10), les implémentations DDS (eProsima Fast DDS, RTI "
+"Connext DDS et Eclipse Cyclone DDS) et les bibliothèques clientes de langage"
+" de programmation (C++ et Python). Pour les développements futurs prévus, "
+"consultez la :doc:`Roadmap <Roadmap>`."
+
+#: ../../source/The-ROS2-Project/Features.rst:17
+msgid "Functionality"
+msgstr "Fonctionnalité"
+
+#: ../../source/The-ROS2-Project/Features.rst:18
+msgid "Link"
+msgstr "Lien"
+
+#: ../../source/The-ROS2-Project/Features.rst:19
+msgid "Fine print"
+msgstr "Petits caractères"
+
+#: ../../source/The-ROS2-Project/Features.rst:20
+msgid "Discovery, transport and serialization over DDS"
+msgstr "Découverte, transport et sérialisation sur DDS"
+
+#: ../../source/The-ROS2-Project/Features.rst:21
+msgid "`Article <https://design.ros2.org/articles/ros_on_dds.html>`__"
+msgstr "`Article <https://design.ros2.org/articles/ros_on_dds.html>`__"
+
+#: ../../source/The-ROS2-Project/Features.rst:23
+msgid ""
+"Support for :doc:`multiple DDS implementations <../Concepts/About-Different-"
+"Middleware-Vendors>`, chosen at runtime"
+msgstr ""
+"Prise en charge de :doc:`plusieurs implémentations DDS <../Concepts/About-"
+"Different-Middleware-Vendors>`, choisies au moment de l'exécution"
+
+#: ../../source/The-ROS2-Project/Features.rst:24
+msgid ""
+":doc:`Concept <../Concepts/About-Different-Middleware-Vendors>`, :doc:`How-"
+"to Guide <../How-To-Guides/Working-with-multiple-RMW-implementations>`"
+msgstr ""
+":doc:`Concept <../Concepts/About-Different-Middleware-Vendors>`, :doc:`Guide"
+" pratique <../How-To-Guides/Working-with-multiple-RMW-implementations>`"
+
+#: ../../source/The-ROS2-Project/Features.rst:25
+msgid ""
+"Currently Eclipse Cyclone DDS, eProsima Fast DDS, and RTI Connext DDS are "
+"fully supported."
+msgstr ""
+"Actuellement, Eclipse Cyclone DDS, eProsima Fast DDS et RTI Connext DDS sont"
+" entièrement pris en charge."
+
+#: ../../source/The-ROS2-Project/Features.rst:26
+msgid ""
+"Common core client library that is wrapped by language-specific libraries"
+msgstr ""
+"Bibliothèque cliente de base commune qui est enveloppée par des "
+"bibliothèques spécifiques à la langue"
+
+#: ../../source/The-ROS2-Project/Features.rst:27
+msgid ":doc:`Details <../Concepts/About-ROS-2-Client-Libraries>`"
+msgstr ":doc:`Détails <../Concepts/About-ROS-2-Client-Libraries>`"
+
+#: ../../source/The-ROS2-Project/Features.rst:29
+msgid "Publish/subscribe over topics"
+msgstr "Publier/s'abonner sur des sujets"
+
+#: ../../source/The-ROS2-Project/Features.rst:30
+msgid ""
+"`Sample code <https://github.com/ros2/examples>`__\\ , `Article "
+"<https://design.ros2.org/articles/topic_and_service_names.html>`__"
+msgstr ""
+"`Exemple de code <https://github.com/ros2/examples>`__\\ , `Article "
+"<https://design.ros2.org/articles/topic_and_service_names.html>`__"
+
+#: ../../source/The-ROS2-Project/Features.rst:32
+msgid "Clients and services"
+msgstr "Clients et services"
+
+#: ../../source/The-ROS2-Project/Features.rst:33
+msgid "`Sample code <https://github.com/ros2/examples>`__"
+msgstr "`Exemple de code <https://github.com/ros2/examples>`__"
+
+#: ../../source/The-ROS2-Project/Features.rst:35
+msgid "Set/retrieve parameters"
+msgstr "Définir/récupérer les paramètres"
+
+#: ../../source/The-ROS2-Project/Features.rst:36
+msgid ""
+"`Sample code "
+"<https://github.com/ros2/demos/tree/0.5.1/demo_nodes_cpp/src/parameters>`__"
+msgstr ""
+"`Exemple de code "
+"<https://github.com/ros2/demos/tree/0.5.1/demo_nodes_cpp/src/parameters>`__"
+
+#: ../../source/The-ROS2-Project/Features.rst:38
+msgid "ROS 1 - ROS 2 communication bridge"
+msgstr "Pont de communication ROS 1 - ROS 2"
+
+#: ../../source/The-ROS2-Project/Features.rst:39
+msgid ""
+"`Tutorial <https://github.com/ros2/ros1_bridge/blob/master/README.md>`__"
+msgstr ""
+"`Tutoriel <https://github.com/ros2/ros1_bridge/blob/master/README.md>`__"
+
+#: ../../source/The-ROS2-Project/Features.rst:40
+msgid "Available for topics and services, not yet available for actions."
+msgstr ""
+"Disponible pour les sujets et les services, pas encore disponible pour les "
+"actions."
+
+#: ../../source/The-ROS2-Project/Features.rst:41
+msgid "Quality of service settings for handling non-ideal networks"
+msgstr ""
+"Paramètres de qualité de service pour la gestion de réseaux non idéaux"
+
+#: ../../source/The-ROS2-Project/Features.rst:42
+msgid ":doc:`Demo <../Tutorials/Demos/Quality-of-Service>`"
+msgstr ":doc:`Démo <../Tutorials/Demos/Quality-of-Service>`"
+
+#: ../../source/The-ROS2-Project/Features.rst:44
+msgid "Inter- and intra-process communication using the same API"
+msgstr "Communication inter- et intra-processus utilisant la même API"
+
+#: ../../source/The-ROS2-Project/Features.rst:45
+msgid ":doc:`Demo <../Tutorials/Demos/Intra-Process-Communication>`"
+msgstr ":doc:`Démo <../Tutorials/Demos/Intra-Process-Communication>`"
+
+#: ../../source/The-ROS2-Project/Features.rst:46
+#: ../../source/The-ROS2-Project/Features.rst:49
+#: ../../source/The-ROS2-Project/Features.rst:55
+#: ../../source/The-ROS2-Project/Features.rst:82
+msgid "Currently only in C++."
+msgstr "Actuellement uniquement en C++."
+
+#: ../../source/The-ROS2-Project/Features.rst:47
+msgid "Composition of node components at compile, link, load, or run time"
+msgstr ""
+"Composition des composants de nœud au moment de la compilation, de la "
+"liaison, du chargement ou de l'exécution"
+
+#: ../../source/The-ROS2-Project/Features.rst:48
+msgid ":doc:`Demo <../Tutorials/Intermediate/Composition>`"
+msgstr ":doc:`Démo <../Tutoriels/Intermédiaire/Composition>`"
+
+#: ../../source/The-ROS2-Project/Features.rst:50
+msgid "Multiple executors (at level of callback groups) in same node"
+msgstr ""
+"Plusieurs exécuteurs (au niveau des groupes de rappel) dans le même nœud"
+
+#: ../../source/The-ROS2-Project/Features.rst:51
+msgid ""
+"`Demo "
+"<https://github.com/ros2/examples/tree/humble/rclcpp/executors/cbg_executor>`__"
+msgstr ""
+"`Démo "
+"<https://github.com/ros2/examples/tree/humble/rclcpp/executors/cbg_executor>`__"
+
+#: ../../source/The-ROS2-Project/Features.rst:52
+msgid "Only in C++."
+msgstr "Uniquement en C++."
+
+#: ../../source/The-ROS2-Project/Features.rst:53
+msgid "Support for nodes with managed lifecycles"
+msgstr "Prise en charge des nœuds avec des cycles de vie gérés"
+
+#: ../../source/The-ROS2-Project/Features.rst:54
+msgid ":doc:`Demo <../Tutorials/Demos/Managed-Nodes>`"
+msgstr ":doc:`Démo <../Tutorials/Demos/Managed-Nodes>`"
+
+#: ../../source/The-ROS2-Project/Features.rst:56
+msgid "DDS-Security support"
+msgstr "Prise en charge de la sécurité DDS"
+
+#: ../../source/The-ROS2-Project/Features.rst:57
+msgid "`Demo <https://github.com/ros2/sros2>`__"
+msgstr "`Démo <https://github.com/ros2/sros2>`__"
+
+#: ../../source/The-ROS2-Project/Features.rst:59
+msgid "Command-line introspection tools using an extensible framework"
+msgstr ""
+"Outils d'introspection en ligne de commande utilisant un framework "
+"extensible"
+
+#: ../../source/The-ROS2-Project/Features.rst:60
+msgid ":doc:`Concept <../Concepts/About-Command-Line-Tools>`"
+msgstr ":doc:`Concept <../Concepts/About-Command-Line-Tools>`"
+
+#: ../../source/The-ROS2-Project/Features.rst:62
+msgid "Launch system for coordinating multiple nodes"
+msgstr "Système de lancement pour coordonner plusieurs nœuds"
+
+#: ../../source/The-ROS2-Project/Features.rst:63
+msgid ":doc:`Tutorial <../Tutorials/Intermediate/Launch/Launch-system>`"
+msgstr ":doc:`Tutoriel <../Tutorials/Intermediate/Launch/Launch-system>`"
+
+#: ../../source/The-ROS2-Project/Features.rst:65
+msgid "Namespace support for nodes and topics"
+msgstr "Prise en charge des espaces de noms pour les nœuds et les sujets"
+
+#: ../../source/The-ROS2-Project/Features.rst:66
+msgid ""
+"`Article <https://design.ros2.org/articles/topic_and_service_names.html>`__"
+msgstr ""
+"`Article <https://design.ros2.org/articles/topic_and_service_names.html>`__"
+
+#: ../../source/The-ROS2-Project/Features.rst:68
+msgid "Static remapping of ROS names"
+msgstr "Remappage statique des noms ROS"
+
+#: ../../source/The-ROS2-Project/Features.rst:69
+msgid ":doc:`How-to Guide <../How-To-Guides/Node-arguments>`"
+msgstr ":doc:`Guide pratique <../How-To-Guides/Node-arguments>`"
+
+#: ../../source/The-ROS2-Project/Features.rst:71
+msgid "Demos of an all-ROS 2 mobile robot"
+msgstr "Démos d'un robot mobile tout ROS 2"
+
+#: ../../source/The-ROS2-Project/Features.rst:72
+msgid "`Demo <https://github.com/ros2/turtlebot2_demo>`__"
+msgstr "`Démo <https://github.com/ros2/turtlebot2_demo>`__"
+
+#: ../../source/The-ROS2-Project/Features.rst:74
+msgid "Preliminary support for real-time code"
+msgstr "Prise en charge préliminaire du code en temps réel"
+
+#: ../../source/The-ROS2-Project/Features.rst:75
+msgid ""
+":doc:`Demo <../Tutorials/Demos/Real-Time-Programming>`, :doc:`demo "
+"<../Tutorials/Advanced/Allocator-Template-Tutorial>`"
+msgstr ""
+":doc:`Demo <../Tutorials/Demos/Real-Time-Programming>`, :doc:`demo "
+"<../Tutorials/Advanced/Allocator-Template-Tutorial>`"
+
+#: ../../source/The-ROS2-Project/Features.rst:76
+msgid "Linux only. Not available for Fast RTPS."
+msgstr "Linux uniquement. Non disponible pour Fast RTPS."
+
+#: ../../source/The-ROS2-Project/Features.rst:77
+msgid "Preliminary support for \"bare-metal\" microcontrollers"
+msgstr "Prise en charge préliminaire des microcontrôleurs \"bare-metal\""
+
+#: ../../source/The-ROS2-Project/Features.rst:78
+msgid "`Wiki <https://github.com/ros2/freertps/wiki>`__"
+msgstr "``Wiki <https://github.com/ros2/freertps/wiki>`__"
+
+#: ../../source/The-ROS2-Project/Features.rst:80
+msgid "Content filtering subscription"
+msgstr "Abonnement au filtrage de contenu"
+
+#: ../../source/The-ROS2-Project/Features.rst:81
+msgid ":doc:`Demo <../Tutorials/Demos/Content-Filtering-Subscription>`"
+msgstr ":doc:`Démo <../Tutorials/Demos/Content-Filtering-Subscription>`"
+
+#: ../../source/The-ROS2-Project/Features.rst:84
+msgid ""
+"Besides core features of the platform, the biggest impact of ROS comes from "
+"its available packages. The following are a few high-profile packages which "
+"are available in the latest release:"
+msgstr ""
+"Outre les fonctionnalités de base de la plate-forme, le plus grand impact de"
+" ROS provient de ses packages disponibles. Voici quelques packages de haut "
+"niveau disponibles dans la dernière version :"
+
+#: ../../source/The-ROS2-Project/Features.rst:87
+msgid "`gazebo_ros_pkgs <https://index.ros.org/r/gazebo_ros_pkgs/>`__"
+msgstr "`gazebo_ros_pkgs <https://index.ros.org/r/gazebo_ros_pkgs/>`__"
+
+#: ../../source/The-ROS2-Project/Features.rst:88
+msgid "`image_transport <https://index.ros.org/r/image_common>`__"
+msgstr "`image_transport <https://index.ros.org/r/image_common>`__"
+
+#: ../../source/The-ROS2-Project/Features.rst:89
+msgid "`navigation2 <https://index.ros.org/r/navigation2/>`__"
+msgstr "`navigation2 <https://index.ros.org/r/navigation2/>`__"
+
+#: ../../source/The-ROS2-Project/Features.rst:90
+msgid "`rosbag2 <https://index.ros.org/r/rosbag2/>`__"
+msgstr "erosbag2 <https://index.ros.org/r/rosbag2/>yo__"
+
+#: ../../source/The-ROS2-Project/Features.rst:91
+msgid "`RQt <https://index.ros.org/r/rqt/>`__"
+msgstr "chrysat <http://index.ros.org/r/ryat/>ч__"
+
+#: ../../source/The-ROS2-Project/Features.rst:92
+msgid "`RViz2 <https://index.ros.org/r/rviz/>`__"
+msgstr "irvzi <http://index.rus.org/r/rviz/>a"
