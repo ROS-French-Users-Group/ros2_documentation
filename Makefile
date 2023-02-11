@@ -4,7 +4,7 @@ SOURCE     = source
 OUT        = build
 LINKCHECKDIR  = $(OUT)/linkcheck
 BUILD      = python3 -m sphinx
-OPTS       =-c . --line-width=76
+OPTS       =-vv -c . 
 
 help:
 	@$(BUILD) -M help "$(SOURCE)" "$(OUT)" $(OPTS)
