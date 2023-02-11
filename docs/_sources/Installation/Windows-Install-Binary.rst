@@ -1,146 +1,141 @@
-Windows (binaire)
-=================
+Windows (binary)
+================
 
-.. contents:: Table des matières
+.. contents:: Table of Contents
    :depth: 2
    :local:
 
-Cette page explique comment installer ROS 2 sur Windows à partir d'un paquet binaire pré-construit.
+This page explains how to install ROS 2 on Windows from a pre-built binary package.
 
 .. note::
 
-    Le binaire pré-construit n'inclut pas tous les paquets ROS 2.
-    Tous les paquets de la `variante de base ROS <https://ros.org/reps/rep-2001.html#ros-base>`_ sont inclus, et seul un sous-ensemble de paquets de la `variante de bureau ROS <https://ros.org/reps/rep-2001.html#desktop-variants>`_ sont inclus.
-    La liste exacte des packages est décrite par les référentiels répertoriés dans `ce fichier ros2.repos <https://github.com/ros2/ros2/blob/rolling/ros2.repos>`_.
+    The pre-built binary does not include all ROS 2 packages.
+    All packages in the `ROS base variant <https://ros.org/reps/rep-2001.html#ros-base>`_ are included, and only a subset of packages in the `ROS desktop variant <https://ros.org/reps/rep-2001.html#desktop-variants>`_ are included.
+    The exact list of packages are described by the repositories listed in `this ros2.repos file <https://github.com/ros2/ros2/blob/{REPOS_FILE_BRANCH}/ros2.repos>`_.
 
+System requirements
+-------------------
 
-Configuration requise
----------------------
-
-Seul Windows 10 est pris en charge.
+Only Windows 10 is supported.
 
 .. _windows-install-binary-installing-prerequisites:
 
 .. include:: _Windows-Install-Prerequisites.rst
 
-Téléchargement de ROS 2
------------------------
+Downloading ROS 2
+-----------------
 
-Les versions binaires de {DISTRO_TITLE_FULL} ne sont pas fournies.
-Au lieu de cela, vous pouvez télécharger tous les soirs :ref:`binaries prerelease <Prerelease_binaries>`.
+Binary releases of {DISTRO_TITLE_FULL} are not provided.
+Instead you may download nightly :ref:`prerelease binaries <Prerelease_binaries>`.
 
-* Téléchargez le dernier package pour Windows, par exemple, ``ros2-package-windows-AMD64.zip``.
-
-.. note::
-
-    Il peut y avoir plus d'une option de téléchargement binaire qui peut entraîner une différence de nom de fichier.
+* Download the latest package for Windows, e.g., ``ros2-package-windows-AMD64.zip``.
 
 .. note::
 
-    Pour installer des bibliothèques de débogage pour ROS 2, voir `Suppléments pour le débogage`_.
-    Continuez ensuite en téléchargeant ``ros2-package-windows-debug-AMD64.zip``.
+    There may be more than one binary download option which might cause the file name to differ.
 
-* Décompressez le fichier zip quelque part (nous supposerons ``C:\dev\ros2_{DISTRO}``\ ).
+.. note::
 
-Configuration de l'environnement
---------------------------------
+    To install debug libraries for ROS 2, see `Extra Stuff for Debug`_.
+    Then continue on with downloading ``ros2-package-windows-debug-AMD64.zip``.
 
-Démarrez un shell de commande et sourcez le fichier de configuration ROS 2 pour configurer l'espace de travail:
+* Unpack the zip file somewhere (we'll assume ``C:\dev\ros2_{DISTRO}``\ ).
+
+Environment setup
+-----------------
+
+Start a command shell and source the ROS 2 setup file to set up the workspace:
 
 .. code-block:: bash
 
    call C:\dev\ros2_{DISTRO}\local_setup.bat
 
-Il est normal que la commande précédente, si rien d'autre ne s'est mal passé, affiche "Le système ne peut pas trouver le chemin spécifié". exactement une fois.
+It is normal that the previous command, if nothing else went wrong, outputs "The system cannot find the path specified." exactly once.
 
-Essayez quelques exemples
--------------------------
+Try some examples
+-----------------
 
-Dans un shell de commande, configurez l'environnement ROS 2 comme décrit ci-dessus, puis exécutez un ``talker`` C++\ :
+In a command shell, set up the ROS 2 environment as described above and then run a C++ ``talker``\ :
 
 .. code-block:: bash
 
    ros2 run demo_nodes_cpp talker
 
-Démarrez un autre shell de commande et exécutez un ``listener`` Python\ :
+Start another command shell and run a Python ``listener``\ :
 
 .. code-block:: bash
 
    ros2 run demo_nodes_py listener
 
-Vous devriez voir le ``talker`` dire ``Publishing`` (qu'il publie des messages) et le ``listener`` dire ``I heard`` ces messages.
-Cela permet de vérifier que les API C++ et Python fonctionnent correctement.
-Hourra!
+You should see the ``talker`` saying that it's ``Publishing`` messages and the ``listener`` saying ``I heard`` those messages.
+This verifies both the C++ and Python APIs are working properly.
+Hooray!
 
 
-Etapes après l'installation
+Next steps after installing
 ---------------------------
-Continuez avec les :doc:`tutoriels et démos <../../Tutorials>` pour configurer votre environnement, créer votre propre espace de travail et vos paquets, et apprendre les concepts de base de ROS 2.
+Continue with the :doc:`tutorials and demos <../../Tutorials>` to configure your environment, create your own workspace and packages, and learn ROS 2 core concepts.
 
+Additional RMW implementations (optional)
+-----------------------------------------
+The default middleware that ROS 2 uses is ``Fast DDS``, but the middleware (RMW) can be replaced at runtime.
+See the :doc:`guide <../How-To-Guides/Working-with-multiple-RMW-implementations>` on how to work with multiple RMWs.
 
-Implémentations RMW supplémentaires (facultatif)
-------------------------------------------------
-Le middleware par défaut utilisé par ROS 2 est ``Fast DDS``, mais le middleware (RMW) peut être remplacé au moment de l'exécution.
-Consultez le :doc:`guide <../How-To-Guides/Working-with-multiple-RMW-implementations>` pour savoir comment travailler avec plusieurs RMW.
+Troubleshooting
+---------------
 
-Dépannage
+Troubleshooting techniques can be found :ref:`here <windows-troubleshooting>`.
+
+Uninstall
 ---------
 
-Les techniques de dépannage peuvent être trouvées :ref:`ici <windows-troubleshooting>`.
+1. If you installed your workspace with colcon as instructed above, "uninstalling" could be just a matter of opening a new terminal and not sourcing the workspace's ``setup`` file.
+   This way, your environment will behave as though there is no {DISTRO_TITLE} install on your system.
 
-
-Déinstaller
------------
-
-1. Si vous avez installé votre espace de travail avec colcon comme indiqué ci-dessus, la "désinstallation" pourrait consister simplement à ouvrir un nouveau terminal et à ne pas rechercher le fichier ``setup`` de l'espace de travail.
-   De cette façon, votre environnement se comportera comme s'il n'y avait pas d'installation {DISTRO_TITLE} sur votre système.
-
-2. Si vous essayez également de libérer de l'espace, vous pouvez supprimer tout le répertoire de l'espace de travail avec:
+2. If you're also trying to free up space, you can delete the entire workspace directory with:
 
    .. code-block:: bash
 
     rmdir /s /q \ros2_{DISTRO}
 
-Suppléments pour le débogage
-----------------------------
+Extra Stuff for Debug
+---------------------
 
-Pour télécharger les bibliothèques de débogage de ROS 2, vous devez télécharger ``ros2-{DISTRO}-*-windows-debug-AMD64.zip``. Veuillez noter que les bibliothèques de débogage nécessitent une configuration
-supplémentaire pour fonctionner comme indiqué ci-dessous.
+To download the ROS 2 debug libraries you'll need to download ``ros2-{DISTRO}-*-windows-debug-AMD64.zip``.
+Please note that debug libraries require some more additional configuration/setup to work as given below.
 
-L'installation de Python peut nécessiter une modification pour activer les symboles de débogage et les binaires de débogage:
+Python installation may require modification to enable debugging symbols and debug binaries:
 
-* Effectuez une recherche dans la **Barre de recherche** de Windows et ouvrez **Applications et fonctionnalités**.
-* Recherchez la version Python installée.
+* Search in windows **Search Bar** and open **Apps and Features**.
+* Search for the installed Python version.
 
-* Cliquez sur Modifier.
+* Click Modify.
 
       .. image:: images/python_installation_modify.png
          :width: 500 px
 
-* Cliquez sur Suivant pour accéder aux **Options avancées**.
+* Click Next to go to **Advanced Options**.
 
       .. image:: images/python_installation_next.png
          :width: 500 px
 
-* Assurez-vous que **Télécharger les symboles de débogage** et **Télécharger les fichiers binaires de débogage** sont cochés.
+* Make sure **Download debugging symbols** and **Download debug binaries** are checked.
 
       .. image:: images/python_installation_enable_debug.png
          :width: 500 px
 
-* Cliquez sur Installer.
+* Click Install.
 
-(Alternative) Installation de ROS 2 Build à partir de aka.ms/ros
-----------------------------------------------------------------
+(Alternative) ROS 2 Build Installation from aka.ms/ros
+--------------------------------------------------------
 
-Le projet https://aka.ms/ros héberge les builds ROS 2 et fournit des instantanés de version.
-Cette section explique comment installer ROS 2 à partir de ce canal.
+https://aka.ms/ros project hosts ROS 2 builds against the release snapshots.
+This section explains how to install ROS 2 from this channel.
 
+Install ROS 2 builds
+^^^^^^^^^^^^^^^^^^^^
 
-Installer les versions de ROS 2 construits
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Dans une invite de commandes pour administrateur, exécutez les commandes suivantes.
-
+In an administrative command prompt, run the following commands.
 
 .. code-block:: bash
 
@@ -150,31 +145,29 @@ Dans une invite de commandes pour administrateur, exécutez les commandes suivan
    choco source add -n=ros-win -s="https://aka.ms/ros/public" --priority=1
    choco upgrade ros-foxy-desktop -y --execution-timeout=0
 
-Configuration de l'environnement
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Environment setup
+^^^^^^^^^^^^^^^^^^
 
-Démarrez une invite de commande administrative et sourcez le fichier de configuration ROS 2 pour configurer l'espace de travail:
-
+Start an administrative command prompt and source the ROS 2 setup file to set up the workspace:
 
 .. code-block:: bash
 
    call C:\opt\ros\foxy\x64\local_setup.bat
 
-Etre à jour
-^^^^^^^^^^^^^^^^
+Stay up-to-date
+^^^^^^^^^^^^^^^
 
-Pour vous tenir au courant des dernières versions, exécutez:
+To keep up-to-date with the latest builds, run:
 
 .. code-block:: bash
 
    set ChocolateyInstall=c:\opt\chocolatey
    choco upgrade all -y --execution-timeout=0
 
-Désinstaller
-^^^^^^^^^^^^
+Uninstall
+^^^^^^^^^
 
-Si vous souhaitez supprimer complètement l'environnement téléchargé ci-dessus, exécutez cette commande:
-
+If you want to completely remove the environment downloaded above, run this command:
 
 .. code-block:: bash
 

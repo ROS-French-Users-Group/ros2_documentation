@@ -4,7 +4,7 @@
 Installation
 ============
 
-Options pour installer ROS 2 {DISTRO_TITLE_FULL}:
+Options for installing ROS 2 {DISTRO_TITLE_FULL}:
 
 .. toctree::
    :hidden:
@@ -18,21 +18,21 @@ Options pour installer ROS 2 {DISTRO_TITLE_FULL}:
    Installation/Testing
    Installation/DDS-Implementations
 
-Paquets binaires
-----------------
+Binary packages
+---------------
 
-Les paquets binaires ne sont créés que les systèmes de niveau 1 (Tier 1) listés ici: `REP-2000 <https://www.ros.org/reps/rep-2000.html#rolling-ridley-june-2020-ongoing>`__.
-Comme Rolling est une distribution de développement, cette liste peut être mise à jour à tout moment.
-Si vous n'utilisez aucun de ces systèmes d'exploitation il est possible que vous ayez besoin de construire ROS-2 à partir des ou d'utiliser :doc:`une solution à partir de <How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers>` pour faire fonctionner ROS 2 sur votre ordinateur.
+Binaries are only created for the Tier 1 operating systems listed in `REP-2000 <https://www.ros.org/reps/rep-2000.html#rolling-ridley-june-2020-ongoing>`__.
+Given the nature of Rolling, this list may be updated at any time.
+If you are not running any of the following operating systems you may need to build from source or use a :doc:`container solution <How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers>` to run ROS 2 on your platform.
 
-L'OSRF fournit des paquets binaires ROS 2 pour les systèmes suivants:
+We provide ROS 2 binary packages for the following platforms:
 
 * Ubuntu Linux - Jammy Jellyfish (22.04)
 
-  * :doc:`Debian packages <Installation/Ubuntu-Install-Debians>` (recommendé)
+  * :doc:`Debian packages <Installation/Ubuntu-Install-Debians>` (recommended)
   * :doc:`"fat" archive <Installation/Alternatives/Ubuntu-Install-Binary>`
 
-* RHEL 8 (RedHat Entreprise Linux)
+* RHEL 8
 
   * :doc:`RPM packages <Installation/RHEL-Install-RPMs>` (recommended)
   * :doc:`"fat" archive <Installation/Alternatives/RHEL-Install-Binary>`
@@ -42,10 +42,10 @@ L'OSRF fournit des paquets binaires ROS 2 pour les systèmes suivants:
 
 .. _building-from-source:
 
-Compiler à partir des sources
------------------------------
+Building from source
+--------------------
 
-L'OSRF supporte la construction de ROS 2 à partir des sources pour les plateformes suivantes:
+We support building ROS 2 from source on the following platforms:
 
 
 * :doc:`Ubuntu Linux <Installation/Alternatives/Ubuntu-Development-Setup>`
@@ -54,34 +54,34 @@ L'OSRF supporte la construction de ROS 2 à partir des sources pour les platefor
 * :doc:`macOS <Installation/Alternatives/macOS-Development-Setup>`
 
 
-Quelle installation devait vous choisir ?
------------------------------------------
+Which install should you choose?
+--------------------------------
 
-Installer à partir de paquets binaires ou à partir des sources devrait, dans les deux cas, fournir une installation complètement fonctionnelle de ROS-2.
-Les différences entre les options dépend de ce que vous avez prévu de faire avec ROS 2.
+Installing from binary packages or from source will both result in a fully-functional and usable ROS 2 install.
+Differences between the options depend on what you plan to do with ROS 2.
 
-Les **paquets binaires** sont pour une utilisation générique et fournissent une installation pré construite de ROS 2.
-C'est particulièrement adapté aux personnes souhaitant plonger dans ROS-2 et l'utiliser tel quel.
+**Binary packages** are for general use and provide an already-built install of ROS 2.
+This is great for people who want to dive in and start using ROS 2 as-is, right away.
 
-Les utilisateurs Linux ont deux options pour installer les paquets binaires:
+Linux users have two options for installing binary packages:
 
-- Les paquets Debian
-- Un "énorme" fichier d'archives
+- Debian packages
+- "fat" archive
 
-Installer à partir des paquets Debian est la méthode recommandée.
-C'est le plus simple car cela installe les dépendances nécessaires automatiquement.
-Il met également à jour les paquets en même temps que les mises à jour du système d'exploitation.
+Installing from Debian packages is the recommended method.
+It's more convenient because it installs its necessary dependencies automatically.
+It also updates alongside regular system updates.
 
-Cependant, vous avez besoin de l'accès root/super utilisateur pour installer les paquets Debian.
-Si vous n'avez pas l'accès root, ce qui est souvent le cas pour les étudiants, l'"énorme" archive est le meilleur choix.
+However, you need root access in order to install Debian packages.
+If you don't have root access, the "fat" archive is the next best choice.
 
-Les utilisateurs macOS et Windows qui souhaitent installer à partir de paquets binaires n'ont que l'option "énorme" archive
-(Les paquets Debian sont uniquement disponibles sur Ubuntu/Debian).
+macOS and Windows users who choose to install from binary packages only have the "fat" archive option
+(Debian packages are exclusive to Ubuntu/Debian).
 
-**Construire à partir des sources** est destiné aux développeurs qui cherchent à modifier ou enlever explicitement des parties de la base de ROS 2.
-C'est également recommandé pour les plateformes qui n'ont pas de paquets binaires.
-Construire à partir des sources vous permet également d'installer les dernières versions de  ROS 2.
+**Building from source** is meant for developers looking to alter or explicitly omit parts of ROS 2's base.
+It is also recommended for platforms that don't support binaries.
+Building from source also gives you the option to install the absolute latest version of ROS 2.
 
-Contributeur au coeur de ROS 2 ?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Si vous avez prévu de contribuer directement aux paquets essentiels de ROS 2, il est possible d'installer les :doc:`derniers développements à partir des sources <Installation/Alternatives/Latest-Development-Setup>` qui ont les mêmes instructions d'installation que la :ref:`distribution Rolling <rolling_distribution>`.
+Contributing to ROS 2 core?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+If you plan to contribute directly to ROS 2 core packages, you can install the :doc:`latest development from source <Installation/Alternatives/Latest-Development-Setup>` which shares installation instructions with the :ref:`Rolling distribution <rolling_distribution>`.

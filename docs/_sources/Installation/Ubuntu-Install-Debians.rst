@@ -5,43 +5,43 @@
 Ubuntu (Debian)
 ===============
 
-.. contents:: Table des matières
+.. contents:: Table of Contents
    :depth: 2
    :local:
 
-Les paquets Debian de ROS 2 {DISTRO_TITLE_FULL} sont disponibles pour Ubuntu Jammy.
-La distribution continue Ridley change de plateforme cible de temps en temps lorsque de nouvelles plateformes sont choisies pour le développement.
-Les plateformes cibles sont définies dans la `REP 2000 <https://github.com/ros-infrastructure/rep/blob/master/rep-2000.rst>`__
-La plupart des utilisateurs souhaitent utiliser une distribution ROS stable.
+Debian packages for ROS 2 {DISTRO_TITLE_FULL} are currently available for Ubuntu Jammy.
+The Rolling Ridley distribution will change target platforms from time to time as new platforms are selected for development.
+The target platforms are defined in `REP 2000 <https://github.com/ros-infrastructure/rep/blob/master/rep-2000.rst>`__
+Most people will want to use a stable ROS distribution.
 
-Ressources
-----------
+Resources
+---------
 
-* Statut de la page:
+* Status Page:
 
   * ROS 2 {DISTRO_TITLE} (Ubuntu Jammy): `amd64 <http://repo.ros2.org/status_page/ros_{DISTRO}_default.html>`__\ , `arm64 <http://repo.ros2.org/status_page/ros_{DISTRO}_ujv8.html>`__
-* `Instance de Jenkins <http://build.ros2.org/>`__
-* `Dépôts <http://repo.ros2.org>`__
+* `Jenkins Instance <http://build.ros2.org/>`__
+* `Repositories <http://repo.ros2.org>`__
 
 
-Configurer la langue
---------------------
+Set locale
+----------
 
 .. include:: _Ubuntu-Set-Locale.rst
 
 .. _linux-install-debians-setup-sources:
 
-Configurer les sources des dépôts apt
--------------------------------------
+Setup Sources
+-------------
 
 .. include:: _Apt-Repositories.rst
 
 .. _linux-install-debians-install-ros-2-packages:
 
-Installer les paquets ROS 2
----------------------------
+Install ROS 2 packages
+----------------------
 
-Mettre à jour votre cache des dépôts apt après avoir configurer les sources des dépôts apt.
+Update your apt repository caches after setting up the repositories.
 
 .. code-block:: bash
 
@@ -51,107 +51,104 @@ Mettre à jour votre cache des dépôts apt après avoir configurer les sources 
 
 .. warning::
 
-   A cause de mise à jour anticipées d'Ubuntu 22.04 il est important que les paquets dépendants de  ``systemd`` et ``udev`` soient mis à jour avant d'installer ROS 2.
-   L'installation des dépendances de ROS 2 sur un système fraîchement installé sans mise à jour peut déclencher la **suppression de paquets systèmes critiques**.
+   Due to early updates in Ubuntu 22.04 it is important that ``systemd`` and ``udev``-related packages are updated before installing ROS 2.
+   The installation of ROS 2's dependencies on a freshly installed system without upgrading can trigger the **removal of critical system packages**.
 
-   Les pages `ros2/ros2#1272 <https://github.com/ros2/ros2/issues/1272>`_ et `Launchpad #1974196 <https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1974196>`_ contiennent plus d'informations.
+   Please refer to `ros2/ros2#1272 <https://github.com/ros2/ros2/issues/1272>`_ and `Launchpad #1974196 <https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1974196>`_ for more information.
 
-L'installation Desktop est recommandée car elle fournit: ROS, RViz, demos, tutorials. Pour l'effectuer:
+Desktop Install (Recommended): ROS, RViz, demos, tutorials.
 
 .. code-block:: bash
 
    sudo apt install ros-{DISTRO}-desktop
 
-L'installation ROS-Base Install n'installe que l'essentiel: les bibliothèques de communication, les paquets de messages , les outils de commande en ligne.
-
-Pas d'outils graphiques pour les interfaces utilisateurs.
+ROS-Base Install (Bare Bones): Communication libraries, message packages, command line tools.
+No GUI tools.
 
 .. code-block:: bash
 
    sudo apt install ros-{DISTRO}-ros-base
 
-Les outils de développements: Compilateurs et les autres outils pour construire des paquets ROS
+Development tools: Compilers and other tools to build ROS packages
 
 .. code-block:: bash
 
    sudo apt install ros-dev-tools
 
-La configuration de l'environnement
------------------------------------
+Environment setup
+-----------------
 
-Sourcer le script de configuration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sourcing the setup script
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Pour configurer votre environnement il faut source le script suivant:
+Set up your environment by sourcing the following file.
 
 .. code-block:: bash
 
-   # Remplacez ".bash" avec votre shell si vous n'utilisez pas bash
-   # Les valeurs possibles sont: setup.bash, setup.sh, setup.zsh
+   # Replace ".bash" with your shell if you're not using bash
+   # Possible values are: setup.bash, setup.sh, setup.zsh
    source /opt/ros/{DISTRO}/setup.bash
 
-Essayer quelques exemples
--------------------------
+Try some examples
+-----------------
 
 Talker-listener
 ^^^^^^^^^^^^^^^
 
-Si vous avez installé ``ros-{DISTRO}-desktop`` comme décrit ci-dessus vous pouvez essayer certains exemples.
+If you installed ``ros-{DISTRO}-desktop`` above you can try some examples.
 
-Dans un terminal, il faut sourcer le fichier de configuration et exécuter le programme C++ ``talker``\ :
+In one terminal, source the setup file and then run a C++ ``talker``\ :
 
 .. code-block:: bash
 
    source /opt/ros/{DISTRO}/setup.bash
    ros2 run demo_nodes_cpp talker
 
-Dans un autre terminal il faut sourcer le fichier de configuration et exécuter le programme Python ``listener``\ :
+In another terminal source the setup file and then run a Python ``listener``\ :
 
 .. code-block:: bash
 
    source /opt/ros/{DISTRO}/setup.bash
    ros2 run demo_nodes_py listener
 
-Vous devriez voir le ``talker`` dire qu'il publie (i.e., ``Publishing``) des messages et le ``listener`` dire qu'il entend
-(i.e. ``I heard``) ces messages.
-Cela permet de vérifier que les APIs C++ et Python fonctionnent correctement.
-Hourra !
+You should see the ``talker`` saying that it's ``Publishing`` messages and the ``listener`` saying ``I heard`` those messages.
+This verifies both the C++ and Python APIs are working properly.
+Hooray!
 
-Les étapes après l'installation
--------------------------------
-Il faut ensuite lire :doc:`tutoriels et démonstrations <../../Tutorials>` pour configurer votre environnement, créer votre propre espace de travail et paquets, et apprendre les concepts ROS-2 essentiels.
+Next steps after installing
+---------------------------
+Continue with the :doc:`tutorials and demos <../../Tutorials>` to configure your environment, create your own workspace and packages, and learn ROS 2 core concepts.
 
-Utiliser le pont ROS 1
+Using the ROS 1 bridge
 ----------------------
-Le pont ROS 1 peut connecter des topics de ROS 1 à ROS 2 et vice-versa. Vous pouvez consulter la page de `documentation <https://github.com/ros2/ros1_bridge/blob/master/README.md>`__ pour des explications sur la construction et l'utilisation du pont ROS 1.
+The ROS 1 bridge can connect topics from ROS 1 to ROS 2 and vice-versa. See the dedicated `documentation <https://github.com/ros2/ros1_bridge/blob/master/README.md>`__ on how to build and use the ROS 1 bridge.
 
-Les implémentations addtionnelles RMW implementations (optionel)
-----------------------------------------------------------------
-L'intergiciel par défaut qu'utilise ROS 2 est ``Fast DDS``, mais l'intergiciel (RMW) peut-être remplacé à l'exécution.
-Voir le :doc:`guide <../../How-To-Guides/Working-with-multiple-RMW-implementations>` sur la façon de travailler
-avec de multiple RMWs.
+Additional RMW implementations (optional)
+-----------------------------------------
+The default middleware that ROS 2 uses is ``Fast DDS``, but the middleware (RMW) can be replaced at runtime.
+See the :doc:`guide <../How-To-Guides/Working-with-multiple-RMW-implementations>` on how to work with multiple RMWs.
 
-Dépannage
+Troubleshooting
+---------------
+
+Troubleshooting techniques can be found :doc:`here <../How-To-Guides/Installation-Troubleshooting>`.
+
+Uninstall
 ---------
 
-Les techniques de dépannages peuvent être trouvées :ref:`ici <linux-troubleshooting>`.
-
-Dé-installer
-------------
-
-Si vous devez dé-installer ROS 2 ou basculer sur une installation basée source alors que vous avez déjà
-fait une installation à partir des binaires, vous pouvez exécuter la commande suivante:
+If you need to uninstall ROS 2 or switch to a source-based install once you
+have already installed from binaries, run the following command:
 
 .. code-block:: bash
 
   sudo apt remove ~nros-{DISTRO}-* && sudo apt autoremove
 
-Vous pouvez également souhaiter enlever le répertoire:
+You may also want to remove the repository:
 
 .. code-block:: bash
 
   sudo rm /etc/apt/sources.list.d/ros2.list
   sudo apt update
   sudo apt autoremove
-  # Il est préférable de mettre à jour les paquets cachés par l'installation de ROS 2.
+  # Consider upgrading for packages previously shadowed.
   sudo apt upgrade

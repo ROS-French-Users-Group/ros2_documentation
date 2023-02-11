@@ -8,45 +8,45 @@
 Ubuntu (source)
 ===============
 
-.. contents:: Table des matières
+.. contents:: Table of Contents
    :depth: 2
    :local:
 
 
-Configuration requise
----------------------
-Les plateformes cibles basées sur Debian pour  {DISTRO_TITLE_FULL} sont:
+System requirements
+-------------------
+The current Debian-based target platforms for {DISTRO_TITLE_FULL} are:
 
-- Niveau 1: Ubuntu Linux - Jammy (22.04) 64-bit
-- Niveau 3: Ubuntu Linux - Focal (20.04) 64-bit
-- Niveau 3: Debian Linux - Bullseye (11) 64-bit
+- Tier 1: Ubuntu Linux - Jammy (22.04) 64-bit
+- Tier 3: Ubuntu Linux - Focal (20.04) 64-bit
+- Tier 3: Debian Linux - Bullseye (11) 64-bit
 
 
-Les autres plateformes Linux supportées avec différents niveaux sont:
+Other Linux platforms with varying support levels include:
 
-- Arch Linux, voir `instructions alternatives <https://wiki.archlinux.org/index.php/ROS#ROS_2>`__
-- Fedora Linux, voir :doc:`instructions alternatives <Fedora-Development-Setup>`
-- OpenEmbedded / webOS OSE, voir `instructions alternatives <https://github.com/ros/meta-ros/wiki/OpenEmbedded-Build-Instructions>`__
+- Arch Linux, see `alternate instructions <https://wiki.archlinux.org/index.php/ROS#ROS_2>`__
+- Fedora Linux, see :doc:`alternate instructions <Fedora-Development-Setup>`
+- OpenEmbedded / webOS OSE, see `alternate instructions <https://github.com/ros/meta-ros/wiki/OpenEmbedded-Build-Instructions>`__
 
-Comme défini dans  `REP 2000 <https://www.ros.org/reps/rep-2000.html>`_.
+As defined in `REP 2000 <https://www.ros.org/reps/rep-2000.html>`_.
 
-Installation du système
------------------------
+System setup
+------------
 
-Spécifier la langue
-^^^^^^^^^^^^^^^^^^^
+Set locale
+^^^^^^^^^^
 
 .. include:: ../_Ubuntu-Set-Locale.rst
 
-Ajouter le dépôt apt ROS 2
+Add the ROS 2 apt repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. include:: ../_Apt-Repositories.rst
 
-Installer les outils de développement et ceux de ROS
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Install development tools and ROS tools
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Installation des paquets communs.
+Install common packages.
 
 .. code-block:: bash
 
@@ -56,11 +56,11 @@ Installation des paquets communs.
      python3-pytest-cov \
      ros-dev-tools
 
-Installation des paquets suivant votre version d'Ubuntu.
+Install packages according to your Ubuntu version.
 
 .. tabs::
 
-   .. group-tab:: Ubuntu 22.04 LTS et plus récent
+   .. group-tab:: Ubuntu 22.04 LTS and later
 
       .. code-block:: console
 
@@ -93,10 +93,10 @@ Installation des paquets suivant votre version d'Ubuntu.
 
 .. _Rolling_linux-dev-get-ros2-code:
 
-Obtenir le code ROS 2
----------------------
+Get ROS 2 code
+--------------
 
-Il faut créer un espace de travail et cloner tous les dépôts:
+Create a workspace and clone all repos:
 
 .. code-block:: bash
 
@@ -106,8 +106,8 @@ Il faut créer un espace de travail et cloner tous les dépôts:
 
 .. _linux-development-setup-install-dependencies-using-rosdep:
 
-Installer les dépendences en utilisant rosdep
----------------------------------------------
+Install dependencies using rosdep
+---------------------------------
 
 .. include:: ../_Apt-Upgrade-Admonition.rst
 
@@ -119,93 +119,89 @@ Installer les dépendences en utilisant rosdep
 
 .. include:: ../_rosdep_Linux_Mint.rst
 
-Installer des implémentations DDS additionnelles (optionel)
------------------------------------------------------------
+Install additional DDS implementations (optional)
+-------------------------------------------------
 
-Si vous souhaitez utiliser un autre fournisseur de DDS ou de RTPS vendor en plus de la version par défaut, il est possible de trouver les instructions :doc:`ici <../DDS-Implementations>`.
+If you would like to use another DDS or RTPS vendor besides the default, you can find instructions :doc:`here <../DDS-Implementations>`.
 
-Construire le code dans l'espace de travail
--------------------------------------------
+Build the code in the workspace
+-------------------------------
 
-Si vous avez déjà installé ROS 2 d'une autre façon (soit par des paquets Debians ou une distribution binaire), assurez vous que vous exécutez les commandes suivantes dans un nouvel environnement
-où les autres installations n'ont pas été "sourcées".
-Il faut également vous assurer que vous n'avez pas la ligne ``source /opt/ros/${ROS_DISTRO}/setup.bash`` dans votre fichier ``.bashrc``.
-Vous pouvez vous assurez que ROS 2 n'a pas été sourcé avec la commande ``printenv | grep -i ROS``.
-La sortie devrait être vide.
+If you have already installed ROS 2 another way (either via Debians or the binary distribution), make sure that you run the below commands in a fresh environment that does not have those other installations sourced.
+Also ensure that you do not have ``source /opt/ros/${ROS_DISTRO}/setup.bash`` in your ``.bashrc``.
+You can make sure that ROS 2 is not sourced with the command ``printenv | grep -i ROS``.
+The output should be empty.
 
-Plus d'informations sur l'utilisation d'un espace de travail ROS est disponible dans  :doc:`ce tutoriel <../../Tutorials/Beginner-Client-Libraries/Colcon-Tutorial>`.
+More info on working with a ROS workspace can be found in :doc:`this tutorial <../../Tutorials/Beginner-Client-Libraries/Colcon-Tutorial>`.
 
 .. code-block:: bash
 
    cd ~/ros2_{DISTRO}/
    colcon build --symlink-install
 
-Note: si vous avez des problèmes pour compiler tous les exemples et que cela vous empêche d'obtenir une construction réussie, vous pouvez utiliser ``COLCON_IGNORE`` de la même manière que `CATKIN_IGNORE <https://github.com/ros-infrastructure/rep/blob/master/rep-0128.rst>`__ pour ignorer le sous arbre ou retirer le répertoire de l'espace de travail.
-Prenons un exemple: vous souhaiteriez éviter d'installer la librairie OpenCV particulièrement lourde.
-Il suffit d'exécuter ``touch COLCON_IGNORE`` dans le répertoire ``cam2image`` dans demo pour ne pas l'inclure dans le processus de construction.
+Note: if you are having trouble compiling all examples and this is preventing you from completing a successful build, you can use ``COLCON_IGNORE`` in the same manner as `CATKIN_IGNORE <https://github.com/ros-infrastructure/rep/blob/master/rep-0128.rst>`__ to ignore the subtree or remove the folder from the workspace.
+Take for instance: you would like to avoid installing the large OpenCV library.
+Well then simply run ``touch COLCON_IGNORE`` in the ``cam2image`` demo directory to leave it out of the build process.
 
-Configuration de l'environnement
---------------------------------
+Environment setup
+-----------------
 
-Sourcer le script ```setup```
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Source the setup script
+^^^^^^^^^^^^^^^^^^^^^^^
 
-Configurer votre environnement en sourçant le fichier suivant:
+Set up your environment by sourcing the following file.
 
 .. code-block:: bash
 
-   # Remplacer ".bash" avec votre shell si vous n'utilisez pas bash
-   # Les valeurs possibles sont: setup.bash, setup.sh, setup.zsh
+   # Replace ".bash" with your shell if you're not using bash
+   # Possible values are: setup.bash, setup.sh, setup.zsh
    . ~/ros2_{DISTRO}/install/local_setup.bash
 
 .. _talker-listener:
 
-Quelques exemples
+Try some examples
 -----------------
 
-Dans un terminal, il faut sourcer le fichier de configuration (setup) et lancer ensuite le programme C++ ``talker``\ :
+In one terminal, source the setup file and then run a C++ ``talker``\ :
 
 .. code-block:: bash
 
    . ~/ros2_{DISTRO}/install/local_setup.bash
    ros2 run demo_nodes_cpp talker
 
-Dans un autre terminal il faut également sourcer le fichier de configuration et ensuite exécuter le programme python ``listener``\ :
+In another terminal source the setup file and then run a Python ``listener``\ :
 
 .. code-block:: bash
 
    . ~/ros2_{DISTRO}/install/local_setup.bash
    ros2 run demo_nodes_py listener
 
-Vous devriez voir le ``talker`` dire qu'il publie (i.e., ``Publishing``) des messages et le ``listener`` dire qu'il entend
-(i.e. ``I heard``) ces messages.
-Cela permet de vérifier ques les APIs C++ et Python fonctionnent correctement.
-Hourra !
+You should see the ``talker`` saying that it's ``Publishing`` messages and the ``listener`` saying ``I heard`` those messages.
+This verifies both the C++ and Python APIs are working properly.
+Hooray!
 
-Les étapes après l'installation
--------------------------------
-Il faut ensuite lire :doc:`tutoriels et démonstrations <../../Tutorials>` pour configurer votre environnement, créer votre propre espace de travail et paquets, et apprendre les concepts ROS-2 essentiels.
+Next steps after installing
+---------------------------
+Continue with the :doc:`tutorials and demos <../../Tutorials>` to configure your environment, create your own workspace and packages, and learn ROS 2 core concepts.
 
-Utiliser le pont ROS 1
+Using the ROS 1 bridge
 ----------------------
-Le pont ROS 1 peut connecter des topics de ROS 1 à ROS 2 et vice-versa. Vous pouvez consulter la page de `documentation <https://github.com/ros2/ros1_bridge/blob/master/README.md>`__ pour des explications sur la construction et l'utilisation du pont ROS 1.
+The ROS 1 bridge can connect topics from ROS 1 to ROS 2 and vice-versa. See the dedicated `documentation <https://github.com/ros2/ros1_bridge/blob/master/README.md>`__ on how to build and use the ROS 1 bridge.
 
-Les implémentations addtionnelles RMW implementations (optionel)
-----------------------------------------------------------------
-L'intergiciel par défaut qu'utilise ROS 2 est ``Fast DDS``, mais l'intergiciel (RMW) peut-être remplacé à l'exécution.
-Voir le :doc:`guide <../../How-To-Guides/Working-with-multiple-RMW-implementations>` sur la façon de travailler
-avec de multiple RMWs.
+Additional RMW implementations (optional)
+-----------------------------------------
+The default middleware that ROS 2 uses is ``Fast DDS``, but the middleware (RMW) can be replaced at runtime.
+See the :doc:`guide <../../How-To-Guides/Working-with-multiple-RMW-implementations>` on how to work with multiple RMWs.
 
-Compilateurs alternatifs
-------------------------
+Alternate compilers
+-------------------
 
-Utiliser un compilateur différent de gcc pour compiler ROS 2 est facile. Si vous définissez les variables d'environnement ``CC`` et ``CXX`` sur des exécutables point vers un compilateur C et/ou C++ fonctionnel, respectivement, et que vous relancez la configuration de CMake (en utilisant ``--force-cmake-config`` ou en supprimant les packages que vous souhaitez recompilter), CMake
-se reconfigurera et utilisera le compilateur spécifié.
+Using a different compiler besides gcc to compile ROS 2 is easy. If you set the environment variables ``CC`` and ``CXX`` to executables for a working C and C++ compiler, respectively, and retrigger CMake configuration (by using ``--force-cmake-config`` or by deleting the packages you want to be affected), CMake will reconfigure and use the different compiler.
 
 Clang
 ^^^^^
 
-Pour configurer CMake de façon à ce qu'il détecte et utilise Clang:
+To configure CMake to detect and use Clang:
 
 .. code-block:: bash
 
@@ -214,22 +210,23 @@ Pour configurer CMake de façon à ce qu'il détecte et utilise Clang:
    export CXX=clang++
    colcon build --cmake-force-configure
 
-Mise à jour
------------
+Stay up to date
+---------------
 
-Voir :doc:`../Maintaining-a-Source-Checkout` pour mettre à jour réguliérement votre installation source.
+See :doc:`../Maintaining-a-Source-Checkout` to periodically refresh your source installation.
 
-Dépannage
+Troubleshooting
+---------------
+
+Troubleshooting techniques can be found :ref:`here <linux-troubleshooting>`.
+
+Uninstall
 ---------
 
-Les techniques de dépannages peuvent être trouvées :ref:`ici <linux-troubleshooting>`.
+1. If you installed your workspace with colcon as instructed above, "uninstalling" could be just a matter of opening a new terminal and not sourcing the workspace's ``setup`` file.
+   This way, your environment will behave as though there is no {DISTRO_TITLE} install on your system.
 
-Déinstaller
------------
-
-1. Si vous avez installé votre espace de travail avec colcon comme indiqué ci-dessus, la \"désinstallation\" pourrait consister simplement à ouvrir un nouveau terminal et à ne pas rechercher le fichier ``setup`` de l'espace de travail. De cette façon, votre environnement se comportera comme s'il n'y avait pas d'installation {DISTRO_TITLE} sur votre système.
-
-2. Si vous souhaitez également libérer de l'espace disque, vous pouvez effacer le répertoire de l'espace de travail entièrement avec:
+2. If you're also trying to free up space, you can delete the entire workspace directory with:
 
    .. code-block:: bash
 

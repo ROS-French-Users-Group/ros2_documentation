@@ -1,7 +1,7 @@
 Alternatives
 ============
 
-Une liste d'installation alternatives pour ROS 2 – que ce soit en construisant à partir des sources ou en installant un paquet binaire.
+A list of alternative ways to install ROS 2 – whether it's by building from source or installing a binary.
 
 .. toctree::
    :maxdepth: 1

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Passing ROS arguments to nodes via the command-line &mdash; Documentation ROS 2 documentation </title>
+  <title>Passer des arguments ROS aux nœuds via la ligne de commande &mdash; Documentation ROS 2 documentation </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -25,8 +25,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Synchronous vs. asynchronous service clients" href="Sync-Vs-Async.html" />
-    <link rel="prev" title="Migrating YAML parameter files from ROS 1 to ROS 2" href="Parameters-YAML-files-migration-guide.html" /> 
+    <link rel="next" title="Clients de service synchrones ou asynchrones" href="Sync-Vs-Async.html" />
+    <link rel="prev" title="Migration des fichiers de paramètres YAML de ROS 1 vers ROS 2" href="Parameters-YAML-files-migration-guide.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,279 +50,279 @@
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">Windows (binaire)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/RHEL-Install-RPMs.html">RHEL (RPM)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Alternatives.html">Alternatives</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/Alternatives/Ubuntu-Development-Setup.html">Ubuntu (source)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/Alternatives/Ubuntu-Install-Binary.html">Ubuntu (binary)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/Alternatives/Ubuntu-Development-Setup.html">gratuit (source)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/Alternatives/Ubuntu-Install-Binary.html">gratuit (binaire)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/Alternatives/Windows-Development-Setup.html">Windows (source)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/Alternatives/RHEL-Development-Setup.html">RHEL (source)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/Alternatives/RHEL-Install-Binary.html">RHEL (binary)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/Alternatives/macOS-Development-Setup.html">macOS (source)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/Alternatives/RHEL-Install-Binary.html">RHEL (binaire)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/Alternatives/macOS-Development-Setup.html">mac OS (source)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/Alternatives/Fedora-Development-Setup.html">Fedora (source)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/Alternatives/Latest-Development-Setup.html">Latest development (source)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/Alternatives/Latest-Development-Setup.html">Dernier développement (source)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">Maintenir une installation à partir des sources via git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">Maintenir la vérification de la source</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">Tester avec des binaires de pré-version</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">Les implémentations DDS</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">Connext security plugins</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-University-Eval.html">RTI Connext DDS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">Eclipse Cyclone DDS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">Implémentations DDS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">Plugins de sécurité Connect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-University-Eval.html">RTI Connect DDS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">Éclipse Cyclone DDS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">GurumNetworks GurumDDS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html">eProsima Fast DDS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html">DDS rapide eProsima</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Releases.html">Distributions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Humble-Hawksbill.html">Humble Hawksbill (<code class="docutils literal notranslate"><span class="pre">humble</span></code>)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Humble-Hawksbill-Complete-Changelog.html">Humble Hawksbill changelog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Humble-Hawksbill-Complete-Changelog.html">Journal des modifications de Humble Hawksbill</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy (<code class="docutils literal notranslate"><span class="pre">foxy</span></code>)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Development Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rouler Ridley (<code class="docutils literal notranslate"><span class="pre">rouler</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Développement Répartition</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (nom de code “iron”; mai 2023)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Galactic-Geochelone.html">Galactic Geochelone (<code class="docutils literal notranslate"><span class="pre">galactic</span></code>)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../Releases/Galactic-Geochelone-Complete-Changelog.html">Galactic Geochelone changelog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">Distributions en fin de vie</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Galactic-Geochelone.html">Géochelone Galactique (<code class="docutils literal notranslate"><span class="pre">galactique</span></code>)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Releases/Galactic-Geochelone-Complete-Changelog.html">Journal des modifications de Galactic Geochelone</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Eloquent-Elusor.html">Eloquent Elusor (<code class="docutils literal notranslate"><span class="pre">eloquent</span></code>)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Dashing-Diademata.html">Dashing Diademata (<code class="docutils literal notranslate"><span class="pre">dashing</span></code>)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Crystal-Clemmys.html">Crystal Clemmys (<code class="docutils literal notranslate"><span class="pre">crystal</span></code>)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Bouncy-Bolson.html">Bouncy Bolson (<code class="docutils literal notranslate"><span class="pre">bouncy</span></code>)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Ardent-Apalone.html">Ardent Apalone (<code class="docutils literal notranslate"><span class="pre">ardent</span></code>)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Beta3-Overview.html">Beta 3 (<code class="docutils literal notranslate"><span class="pre">r2b3</span></code>)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Beta2-Overview.html">Beta 2 (<code class="docutils literal notranslate"><span class="pre">r2b2</span></code>)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Releases/Beta1-Overview.html">Beta 1 (<code class="docutils literal notranslate"><span class="pre">Asphalt</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Eloquent-Elusor.html">Eloquent Elusor (``éloquent””)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Dashing-Diademata.html">Dashing Diademata (<code class="docutils literal notranslate"><span class="pre">fringant</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Crystal-Clemmys.html">Cristal Clemmys (<code class="docutils literal notranslate"><span class="pre">cristal</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Bouncy-Bolson.html">Bouncy Bolson (<code class="docutils literal notranslate"><span class="pre">rebondissant</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Ardent-Apalone.html">Apalone ardent (<code class="docutils literal notranslate"><span class="pre">ardent</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Beta3-Overview.html">Bêta 3 (<code class="docutils literal notranslate"><span class="pre">r2b3</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Beta2-Overview.html">Bêta 2 (<code class="docutils literal notranslate"><span class="pre">r2b2</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Beta1-Overview.html">Bêta 1 (<code class="docutils literal notranslate"><span class="pre">Asphalte</span></code>)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Releases/Alpha-Overview.html">Alphas</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Process.html">Development process for a release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Process.html">Processus de développement d’une version</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutorials</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools.html">Beginner: CLI tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html">Configuring environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Using <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> and <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Understanding nodes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Understanding topics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services.html">Understanding services</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html">Understanding parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions.html">Understanding actions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Using-Rqt-Console/Using-Rqt-Console.html">Using <code class="docutils literal notranslate"><span class="pre">rqt_console</span></code> to view logs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.html">Launching nodes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.html">Recording and playing back data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutoriels</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools.html">Débutant : outils CLI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html">Configuration de l’environnement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utiliser <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> et <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Comprendre les nœuds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Comprendre les sujets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services.html">Comprendre les services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html">Comprendre les paramètres</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions.html">Comprendre les actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Using-Rqt-Console/Using-Rqt-Console.html">Utilisation de <code class="docutils literal notranslate"><span class="pre">rqt_console</span></code> pour afficher les journaux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.html">Nœuds de lancement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.html">Enregistrement et lecture de données</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries.html">Beginner: Client libraries</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html">Using <code class="docutils literal notranslate"><span class="pre">colcon</span></code> to build packages</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.html">Creating a workspace</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html">Creating a package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html">Writing a simple publisher and subscriber (C++)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html">Writing a simple publisher and subscriber (Python)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Service-And-Client.html">Writing a simple service and client (C++)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Service-And-Client.html">Writing a simple service and client (Python)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces.html">Creating custom msg and srv files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.html">Implementing custom interfaces</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-CPP.html">Using parameters in a class (C++)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-Python.html">Using parameters in a class (Python)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Getting-Started-With-Ros2doctor.html">Using <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> to identify issues</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Pluginlib.html">Creating and using plugins (C++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries.html">Débutant : Bibliothèques clientes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html">Utiliser <code class="docutils literal notranslate"><span class="pre">colcon</span></code> pour créer des packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.html">Créer un espace de travail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html">Création d’un paquet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html">Écrire un simple éditeur et abonné (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html">Écrire un simple éditeur et abonné (Python)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Service-And-Client.html">Ecrire un service et un client simples (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Service-And-Client.html">Écrire un service et un client simples (Python)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces.html">Création de fichiers msg et srv personnalisés</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.html">Implémentation d’interfaces personnalisées</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-CPP.html">Utiliser des paramètres dans une classe (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-Python.html">Utiliser des paramètres dans une classe (Python)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Getting-Started-With-Ros2doctor.html">Utiliser <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> pour identifier les problèmes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Pluginlib.html">Créer et utiliser des plugins (C++)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Intermediate.html">Intermediate</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Intermediate/Rosdep.html">Managing Dependencies with rosdep</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Intermediate/Creating-an-Action.html">Creating an action</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Intermediate/Writing-an-Action-Server-Client/Cpp.html">Writing an action server and client (C++)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Intermediate/Writing-an-Action-Server-Client/Py.html">Writing an action server and client (Python)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Intermediate/Composition.html">Composing multiple nodes in a single process</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Intermediate/Monitoring-For-Parameter-Changes-CPP.html">Monitoring for parameter changes (C++)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Intermediate/Launch/Launch-Main.html">Launch</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Launch/Creating-Launch-Files.html">Creating a launch file</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Launch/Launch-system.html">Integrating launch files into ROS 2 packages</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Launch/Using-Substitutions.html">Using substitutions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Launch/Using-Event-Handlers.html">Using event handlers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.html">Managing large projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Intermediate.html">Intermédiaire</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Intermediate/Rosdep.html">Gestion des dépendances avec rosdep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Intermediate/Creating-an-Action.html">Créer une action</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Intermediate/Writing-an-Action-Server-Client/Cpp.html">Ecriture d’un serveur d’action et d’un client (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Intermediate/Writing-an-Action-Server-Client/Py.html">Ecriture d’un serveur d’action et d’un client (Python)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Intermediate/Composition.html">Composer plusieurs nœuds en un seul processus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Intermediate/Monitoring-For-Parameter-Changes-CPP.html">Surveillance des changements de paramètres (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Intermediate/Launch/Launch-Main.html">Lancement</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Launch/Creating-Launch-Files.html">Création d’un fichier de lancement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Launch/Launch-system.html">Intégration des fichiers de lancement dans les packages ROS 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Launch/Using-Substitutions.html">Utiliser des substitutions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Launch/Using-Event-Handlers.html">Utilisation des gestionnaires d’événements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.html">Gestion de grands projets</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Tf2-Main.html"><code class="docutils literal notranslate"><span class="pre">tf2</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Introduction-To-Tf2.html">Introducing <code class="docutils literal notranslate"><span class="pre">tf2</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Py.html">Writing a static broadcaster (Python)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html">Writing a static broadcaster (C++)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Py.html">Writing a broadcaster (Python)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Cpp.html">Writing a broadcaster (C++)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Listener-Py.html">Writing a listener (Python)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Listener-Cpp.html">Writing a listener (C++)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.html">Adding a frame (Python)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Adding-A-Frame-Cpp.html">Adding a frame (C++)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Py.html">Using time (Python)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.html">Using time (C++)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Time-Travel-With-Tf2-Py.html">Traveling in time (Python)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Time-Travel-With-Tf2-Cpp.html">Traveling in time (C++)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Debugging-Tf2-Problems.html">Debugging</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Quaternion-Fundamentals.html">Quaternion fundamentals</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.html">Using stamped datatypes with <code class="docutils literal notranslate"><span class="pre">tf2_ros::MessageFilter</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Tf2-Main.html">tracé</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Introduction-To-Tf2.html">Présentation de <code class="docutils literal notranslate"><span class="pre">tf2</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Py.html">Écrire un diffuseur statique (Python)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html">Écrire un diffuseur statique (C++)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Py.html">Écrire un diffuseur (Python)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Cpp.html">Ecrire un diffuseur (C++)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Listener-Py.html">Écrire un écouteur (Python)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Listener-Cpp.html">Écrire un écouteur (C++)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.html">Ajouter un cadre (Python)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Adding-A-Frame-Cpp.html">Ajouter un cadre (C++)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Py.html">Utiliser le temps (Python)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.html">Utilisation du temps (C++)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Time-Travel-With-Tf2-Py.html">Voyager dans le temps (Python)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Time-Travel-With-Tf2-Cpp.html">Voyager dans le temps (C++)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Debugging-Tf2-Problems.html">Débogage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Quaternion-Fundamentals.html">Fondamentaux du quaternion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.html">Utiliser des types de données tamponnés avec <code class="docutils literal notranslate"><span class="pre">tf2_ros::MessageFilter</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Intermediate/Testing/Testing-Main.html">Testing</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Testing/CLI.html">Running Tests in ROS 2 from the Command Line</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Testing/Python.html">Writing Basic Tests with Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Intermediate/Testing/Testing-Main.html">Essai</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Testing/CLI.html">Exécution de tests dans ROS 2 à partir de la ligne de commande</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/Testing/Python.html">Écrire des tests de base avec Python</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Intermediate/URDF/URDF-Main.html">URDF</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html">Building a visual robot model from scratch</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.html">Building a movable robot model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html">Adding physical and collision properties</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/URDF/Using-Xacro-to-Clean-Up-a-URDF-File.html">Using Xacro to clean up your code</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/URDF/Using-URDF-with-Robot-State-Publisher.html">Using URDF with <code class="docutils literal notranslate"><span class="pre">robot_state_publisher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html">Construire un modèle de robot visuel à partir de zéro</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.html">Construire un modèle de robot mobile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html">Ajout de propriétés physiques et de collision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/URDF/Using-Xacro-to-Clean-Up-a-URDF-File.html">Utiliser Xacro pour nettoyer votre code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Intermediate/URDF/Using-URDF-with-Robot-State-Publisher.html">Utiliser URDF avec <code class="docutils literal notranslate"><span class="pre">robot_state_publisher</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Advanced.html">Advanced</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Advanced/Topic-Statistics-Tutorial/Topic-Statistics-Tutorial.html">Enabling topic statistics (C++)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Advanced/Discovery-Server/Discovery-Server.html">Using Fast DDS Discovery Server as discovery protocol [community-contributed]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Advanced/Allocator-Template-Tutorial.html">Implementing a custom memory allocator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Advanced/FastDDS-Configuration.html">Unlocking the potential of Fast DDS middleware [community-contributed]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-CPP.html">Recording a bag from a node (C++)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-Py.html">Recording a bag from a node (Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Advanced.html">Avancé</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Advanced/Topic-Statistics-Tutorial/Topic-Statistics-Tutorial.html">Activation des statistiques de sujet (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Advanced/Discovery-Server/Discovery-Server.html">Utilisation de Fast DDS Discovery Server comme protocole de découverte [contribution de la communauté]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Advanced/Allocator-Template-Tutorial.html">Implémentation d’un répartiteur de mémoire personnalisé</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Advanced/FastDDS-Configuration.html">Libérer le potentiel du middleware Fast DDS [contribution de la communauté]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-CPP.html">Enregistrer un sac à partir d’un nœud (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-Py.html">Enregistrer un sac à partir d’un nœud (Python)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Advanced/Simulators/Simulation-Main.html">Simulation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Advanced/Simulators/Webots.html">Setting up a robot simulation (Webots)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Advanced/Simulators/Gazebo.html">Setting up a robot simulation (Gazebo)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Advanced/Simulators/Webots.html">Mise en place d’une simulation de robot (Webots)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Advanced/Simulators/Gazebo.html">Mise en place d’une simulation de robot (Gazebo)</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Advanced/Security/Security-Main.html">Security</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Advanced/Security/Introducing-ros2-security.html">Setting up security</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Advanced/Security/The-Keystore.html">Understanding the security keystore</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Advanced/Security/Security-on-Two.html">Ensuring security across machines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Advanced/Security/Examine-Traffic.html">Examining network traffic</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Advanced/Security/Access-Controls.html">Setting access controls</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Demos.html">Demos</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Demos/Quality-of-Service.html">Using quality-of-service settings for lossy networks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Demos/Managed-Nodes.html">Managing nodes with managed lifecycles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Demos/Intra-Process-Communication.html">Setting up efficient intra-process communication</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Demos/Rosbag-with-ROS1-Bridge.html">Recording and playing back data with <code class="docutils literal notranslate"><span class="pre">rosbag</span></code> using the ROS 1 bridge</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Demos/Real-Time-Programming.html">Understanding real-time programming</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Demos/dummy-robot-demo.html">Experimenting with a dummy robot</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Demos/Logging-and-logger-configuration.html">Logging</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Demos/Content-Filtering-Subscription.html">Creating a content filtering subscription</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Miscellaneous.html">Miscellaneous</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Miscellaneous/Deploying-ROS-2-on-IBM-Cloud.html">Deploying on IBM Cloud Kubernetes [community-contributed]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Miscellaneous/Eclipse-Oxygen-with-ROS-2-and-rviz2.html">Using Eclipse Oxygen with <code class="docutils literal notranslate"><span class="pre">rviz2</span></code> [community-contributed]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Miscellaneous/Building-Realtime-rt_preempt-kernel-for-ROS-2.html">Building a real-time Linux kernel [community-contributed]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Miscellaneous/Building-ROS2-Package-with-eclipse-2021-06.html">Building a package with Eclipse 2021-06</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Advanced/Security/Security-Main.html">Sécurité</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Advanced/Security/Introducing-ros2-security.html">Mise en place de la sécurité</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Advanced/Security/The-Keystore.html">Comprendre le magasin de clés de sécurité</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Advanced/Security/Security-on-Two.html">Garantir la sécurité sur toutes les machines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Advanced/Security/Examine-Traffic.html">Examen du trafic réseau</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Tutorials/Advanced/Security/Access-Controls.html">Paramétrage des contrôles d’accès</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="../How-To-Guides.html">How-to Guides</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Installation-Troubleshooting.html">Installation troubleshooting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Developing-a-ROS-2-Package.html">Developing a ROS 2 package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Ament-CMake-Documentation.html">ament_cmake user documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Ament-CMake-Python-Documentation.html">ament_cmake_python user documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Launch-files-migration-guide.html">Migrating launch files from ROS 1 to ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Launch-file-different-formats.html">Using Python, XML, and YAML for ROS 2 Launch Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Launching-composable-nodes.html">Using ROS 2 launch to launch composable nodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Parameters-YAML-files-migration-guide.html">Migrating YAML parameter files from ROS 1 to ROS 2</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Passing ROS arguments to nodes via the command-line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Sync-Vs-Async.html">Synchronous vs. asynchronous service clients</a></li>
-<li class="toctree-l2"><a class="reference internal" href="DDS-tuning.html">DDS tuning information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Overriding-QoS-Policies-For-Recording-And-Playback.html">rosbag2: Overriding QoS Policies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Working-with-multiple-RMW-implementations.html">Working with multiple ROS 2 middleware implementations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Cross-compilation.html">Cross-compilation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Releasing/Releasing-a-Package.html">Releasing a Package</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Releasing/First-Time-Release.html">First Time Release</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Releasing/Subsequent-Releases.html">Subsequent Releases</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Releasing/Release-Team-Repository.html">Release Team / Repository</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Releasing/Release-Track.html">Release Track</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Demos.html">Démos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Demos/Quality-of-Service.html">Utilisation des paramètres de qualité de service pour les réseaux avec perte</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Demos/Managed-Nodes.html">Gestion des nœuds avec des cycles de vie gérés</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Demos/Intra-Process-Communication.html">Mettre en place une communication intra-process efficace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Demos/Rosbag-with-ROS1-Bridge.html">Enregistrement et lecture de données avec <code class="docutils literal notranslate"><span class="pre">rosbag</span></code> en utilisant le pont ROS 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Demos/Real-Time-Programming.html">Comprendre la programmation temps réel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Demos/dummy-robot-demo.html">Expérimenter avec un robot factice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Demos/Logging-and-logger-configuration.html">Enregistrement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Demos/Content-Filtering-Subscription.html">Création d’un abonnement au filtrage de contenu</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="Using-Python-Packages.html">Using Python Packages with ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="RQt-Port-Plugin-Windows.html">Porting RQt plugins to Windows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Run-2-nodes-in-single-or-separate-docker-containers.html">Running ROS 2 nodes in Docker [community-contributed]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Visualizing-ROS-2-Data-With-Foxglove-Studio.html">Visualizing ROS 2 data with Foxglove Studio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Package-maintainer-guide.html">ROS 2 Package Maintainer Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Building-a-Custom-Debian-Package.html">Building a custom Debian package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Building-ROS-2-with-Tracing-Instrumentation.html">Building ROS 2 with tracing instrumentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Topics-Services-Actions.html">Topics vs Services vs Actions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Using-Variants.html">Using variants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Using-ros2-param.html">Using the <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> command-line tool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Using-ros1_bridge-Jammy-upstream.html">Using <code class="docutils literal notranslate"><span class="pre">ros1_bridge</span></code> with upstream ROS on Ubuntu 22.04</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Disabling-ZeroCopy-loaned-messages.html">Disabling Zero Copy Loaned Messages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Installing-on-Raspberry-Pi.html">ROS 2 on Raspberry Pi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Using-callback-groups.html">Using Callback Groups</a></li>
-<li class="toctree-l2"><a class="reference internal" href="RQt-Source-Install.html">Building RQt from source</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="RQt-Source-Install-MacOS.html">Building RQt from source on macOS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="RQt-Source-Install-Windows10.html">Building RQt from source on Windows 10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Miscellaneous.html">Divers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Miscellaneous/Deploying-ROS-2-on-IBM-Cloud.html">Déploiement sur IBM Cloud Kubernetes [contribution de la communauté]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Miscellaneous/Eclipse-Oxygen-with-ROS-2-and-rviz2.html">Utiliser Eclipse Oxygen avec <code class="docutils literal notranslate"><span class="pre">rviz2</span></code> [community-contributed]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Miscellaneous/Building-Realtime-rt_preempt-kernel-for-ROS-2.html">Construire un noyau Linux en temps réel [contribution de la communauté]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Miscellaneous/Building-ROS2-Package-with-eclipse-2021-06.html">Construire un package avec Eclipse 2021-06</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Concepts.html">Concepts</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Domain-ID.html">The ROS_DOMAIN_ID</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Different-Middleware-Vendors.html">About different ROS 2 DDS/RTPS vendors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Logging.html">About logging and logger configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Quality-of-Service-Settings.html">About Quality of Service settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-2-Client-Libraries.html">About ROS 2 client libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-Interfaces.html">About ROS 2 interfaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-2-Parameters.html">About parameters in ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Executors.html">Executors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Topic-Statistics.html">About topic statistics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Command-Line-Tools.html">Introspection with command line tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-RQt.html">Overview and usage of RQt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Composition.html">About Composition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Catment.html">On the mixing of ament and catkin (catment)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Cross-Compilation.html">About Cross-compilation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Security.html">About ROS 2 Security</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Tf2.html">About tf2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Build-System.html">About the build system</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Internal-Interfaces.html">About internal ROS 2 interfaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Middleware-Implementations.html">About ROS 2 middleware implementations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-2-Client-Libraries.html">About ROS 2 client libraries</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../How-To-Guides.html">Guides pratiques</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Installation-Troubleshooting.html">Dépannage de l’installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Developing-a-ROS-2-Package.html">Développement d’un package ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ament-CMake-Documentation.html">documentation utilisateur ament_cmake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ament-CMake-Python-Documentation.html">documentation utilisateur ament_cmake_python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Launch-files-migration-guide.html">Migration des fichiers de lancement de ROS 1 vers ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Launch-file-different-formats.html">Utilisation de Python, XML et YAML pour les fichiers de lancement ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Launching-composable-nodes.html">Utilisation du lancement de ROS 2 pour lancer des nœuds composables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Parameters-YAML-files-migration-guide.html">Migration des fichiers de paramètres YAML de ROS 1 vers ROS 2</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Passer des arguments ROS aux nœuds via la ligne de commande</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sync-Vs-Async.html">Clients de service synchrones ou asynchrones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DDS-tuning.html">Informations de réglage DDS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Overriding-QoS-Policies-For-Recording-And-Playback.html">rosbag2 : Remplacement des politiques de QoS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Working-with-multiple-RMW-implementations.html">Travailler avec plusieurs implémentations de middleware ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Cross-compilation.html">Compilation croisée</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Releasing/Releasing-a-Package.html">Libérer un paquet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Releasing/First-Time-Release.html">Première sortie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Releasing/Subsequent-Releases.html">Versions ultérieures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Releasing/Release-Team-Repository.html">Équipe de publication / Référentiel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Releasing/Release-Track.html">Piste de sortie</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Contact.html">Contact</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../The-ROS2-Project.html">The ROS 2 Project</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../The-ROS2-Project/Contributing.html">Contributing</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../The-ROS2-Project/Contributing/Developer-Guide.html">ROS 2 developer guide</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../The-ROS2-Project/Contributing/Code-Style-Language-Versions.html">Code style and language versions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../The-ROS2-Project/Contributing/Quality-Guide.html">Quality guide: ensuring code quality</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../The-ROS2-Project/Contributing/Migration-Guide.html">Migration guide from ROS 1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../The-ROS2-Project/Contributing/Migration-Guide-Python.html">Python migration guide from ROS 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using-Python-Packages.html">Utilisation de packages Python avec ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RQt-Port-Plugin-Windows.html">Portage des plugins RQt vers Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Run-2-nodes-in-single-or-separate-docker-containers.html">Exécution de nœuds ROS 2 dans Docker [contribution de la communauté]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Visualizing-ROS-2-Data-With-Foxglove-Studio.html">Visualiser les données ROS 2 avec Foxglove Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Package-maintainer-guide.html">Guide du responsable du paquet ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Building-a-Custom-Debian-Package.html">Construire un paquet Debian personnalisé</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Building-ROS-2-with-Tracing-Instrumentation.html">Construire ROS 2 avec instrumentation de traçage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topics-Services-Actions.html">Sujets vs Services vs Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using-Variants.html">Utiliser des variantes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using-ros2-param.html">Utilisation de l’outil de ligne de commande <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using-ros1_bridge-Jammy-upstream.html">Utilisation de <code class="docutils literal notranslate"><span class="pre">ros1_bridge</span></code> avec ROS en amont sur Ubuntu 22.04</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Disabling-ZeroCopy-loaned-messages.html">Désactivation des messages prêtés sans copie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Installing-on-Raspberry-Pi.html">ROS 2 sur Raspberry Pi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using-callback-groups.html">Utilisation des groupes de rappel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RQt-Source-Install.html">Construire RQt à partir de la source</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="RQt-Source-Install-MacOS.html">Construire RQt à partir de la source sur macOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RQt-Source-Install-Windows10.html">Construire RQt à partir de la source sur Windows 10</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../The-ROS2-Project/Contributing/Build-Farms.html">ROS Build Farms</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../The-ROS2-Project/Contributing/Windows-Tips-and-Tricks.html">Windows Tips and Tricks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../The-ROS2-Project/Contributing/Contributing-To-ROS-2-Documentation.html">Contributing to ROS 2 Documentation</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../The-ROS2-Project/Features.html">Features Status</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../The-ROS2-Project/Feature-Ideas.html">Feature Ideas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../The-ROS2-Project/Roadmap.html">Roadmap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../The-ROS2-Project/ROSCon-Content.html">ROSCon Talks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../The-ROS2-Project/Governance.html">Project Governance</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../The-ROS2-Project/Governance/ROS2-TSC-Charter.html">ROS 2 Technical Steering Committee Charter</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../The-ROS2-Project/Governance/ROS2-TSC-Intake-process.html">ROS 2 TSC applicant intake process</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.html">How to Start a Community Working Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Concepts.html">Notions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Domain-ID.html">Le ROS_DOMAIN_ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Different-Middleware-Vendors.html">À propos des différents fournisseurs ROS 2 DDS/RTPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Logging.html">À propos de la journalisation et de la configuration de l’enregistreur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Quality-of-Service-Settings.html">À propos des paramètres de qualité de service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-2-Client-Libraries.html">À propos des bibliothèques clientes ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-Interfaces.html">À propos des interfaces ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-2-Parameters.html">À propos des paramètres dans ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Executors.html">Exécuteurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Topic-Statistics.html">À propos des statistiques de sujet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Command-Line-Tools.html">Introspection avec des outils en ligne de commande</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-RQt.html">Présentation et utilisation de RQt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Composition.html">À propos de la composition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Catment.html">Sur le mélange d’ament et de chaton (catment)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Cross-Compilation.html">À propos de la compilation croisée</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Security.html">À propos de la sécurité ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Tf2.html">À propos de TF2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Build-System.html">À propos du système de construction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Internal-Interfaces.html">À propos des interfaces ROS 2 internes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Middleware-Implementations.html">À propos des implémentations de middleware ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-2-Client-Libraries.html">À propos des bibliothèques clientes ROS 2</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../The-ROS2-Project/Marketing.html">Marketing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Contact.html">Contacter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../The-ROS2-Project.html">Le projet ROS 2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../The-ROS2-Project/Contributing.html">Contribuant</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../The-ROS2-Project/Contributing/Developer-Guide.html">Guide du développeur ROS 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../The-ROS2-Project/Contributing/Code-Style-Language-Versions.html">Style de code et versions linguistiques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../The-ROS2-Project/Contributing/Quality-Guide.html">Guide qualité : assurer la qualité du code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../The-ROS2-Project/Contributing/Migration-Guide.html">Guide de migration depuis ROS 1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../The-ROS2-Project/Contributing/Migration-Guide-Python.html">Guide de migration Python depuis ROS 1</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Related-Projects.html">Related Projects</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Intel-ROS2-Projects.html">Intel ROS 2 Projects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">NVIDIA ROS 2 Projects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../The-ROS2-Project/Contributing/Build-Farms.html">Fermes de construction ROS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../The-ROS2-Project/Contributing/Windows-Tips-and-Tricks.html">Trucs et astuces Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../The-ROS2-Project/Contributing/Contributing-To-ROS-2-Documentation.html">Contribuer à la documentation ROS 2</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../The-ROS2-Project/Features.html">Statut des fonctionnalités</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../The-ROS2-Project/Feature-Ideas.html">Idées de fonctionnalités</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../The-ROS2-Project/Roadmap.html">Feuille de route</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../The-ROS2-Project/ROSCon-Content.html">Pourparlers ROSCon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../The-ROS2-Project/Governance.html">Gouvernance du projet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../The-ROS2-Project/Governance/ROS2-TSC-Charter.html">Charte du comité de pilotage technique ROS 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../The-ROS2-Project/Governance/ROS2-TSC-Intake-process.html">Processus d’admission des candidats ROS 2 TSC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.html">Comment démarrer un groupe de travail communautaire</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../The-ROS2-Project/Marketing.html">Commercialisation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Related-Projects.html">Projets liés</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Intel-ROS2-Projects.html">Projets Intel ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">Projets NVIDIA ROS 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">Glossaire</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Citations.html">Citations</a></li>
 </ul>
 
@@ -340,10 +340,10 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a></li>
-          <li class="breadcrumb-item"><a href="../How-To-Guides.html">How-to Guides</a></li>
-      <li class="breadcrumb-item active">Passing ROS arguments to nodes via the command-line</li>
+          <li class="breadcrumb-item"><a href="../How-To-Guides.html">Guides pratiques</a></li>
+      <li class="breadcrumb-item active">Passer des arguments ROS aux nœuds via la ligne de commande</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ROS-French-Users-Group/ros2_documentation/blob/rolling/source/How-To-Guides/Node-arguments.rst" class="fa fa-github"> Éditer sur GitHub</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/How-To-Guides/Node-arguments.rst" class="fa fa-github"> Éditer sur GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -354,44 +354,38 @@
 
 
   <div class="section" id="passing-ros-arguments-to-nodes-via-the-command-line">
-<h1>Passing ROS arguments to nodes via the command-line<a class="headerlink" href="#passing-ros-arguments-to-nodes-via-the-command-line" title="Lien permanent vers ce titre"></a></h1>
+<h1>Passer des arguments ROS aux nœuds via la ligne de commande<a class="headerlink" href="#passing-ros-arguments-to-nodes-via-the-command-line" title="Lien permanent vers ce titre"></a></h1>
 <div class="contents local topic" id="table-of-contents">
-<p class="topic-title">Table of Contents</p>
+<p class="topic-title">Table des matières</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#name-remapping" id="id1">Name remapping</a></p></li>
-<li><p><a class="reference internal" href="#logger-configuration" id="id2">Logger configuration</a></p></li>
-<li><p><a class="reference internal" href="#parameters" id="id3">Parameters</a></p></li>
+<li><p><a class="reference internal" href="#name-remapping" id="id1">Remappage du nom</a></p></li>
+<li><p><a class="reference internal" href="#logger-configuration" id="id2">Configuration de l’enregistreur</a></p></li>
+<li><p><a class="reference internal" href="#parameters" id="id3">Paramètres</a></p></li>
 </ul>
 </div>
-<p>All ROS nodes take a set of arguments that allow various properties to be reconfigured.
-Examples include configuring the name/namespace of the node, topic/service names used, and parameters on the node.
-All ROS-specific arguments have to be specified after a <code class="docutils literal notranslate"><span class="pre">--ros-args</span></code> flag:</p>
+<p>Tous les nœuds ROS prennent un ensemble d’arguments qui permettent de reconfigurer diverses propriétés. Les exemples incluent la configuration du nom/espace de noms du nœud, les noms de sujet/service utilisés et les paramètres sur le nœud. Tous les arguments spécifiques à ROS doivent être spécifiés après un drapeau <code class="docutils literal notranslate"><span class="pre">--ros-args</span></code> :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>my_package<span class="w"> </span>node_executable<span class="w"> </span>--ros-args<span class="w"> </span>...
 </pre></div>
 </div>
-<p>For more details, see <a class="reference external" href="https://design.ros2.org/articles/ros_command_line_arguments.html">this design doc</a>.</p>
+<p>Pour plus de détails, voir <a class="reference external" href="https://design.ros2.org/articles/ros_command_line_arguments.html">ce document de conception</a>.</p>
 <div class="section" id="name-remapping">
-<h2><a class="toc-backref" href="#id1">Name remapping</a><a class="headerlink" href="#name-remapping" title="Lien permanent vers ce titre"></a></h2>
-<p>Names within a node (e.g. topics/services) can be remapped using the syntax <code class="docutils literal notranslate"><span class="pre">-r</span> <span class="pre">&lt;old</span> <span class="pre">name&gt;:=&lt;new</span> <span class="pre">name&gt;</span></code>.
-The name/namespace of the node itself can be remapped using <code class="docutils literal notranslate"><span class="pre">-r</span> <span class="pre">__node:=&lt;new</span> <span class="pre">node</span> <span class="pre">name&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">-r</span> <span class="pre">__ns:=&lt;new</span> <span class="pre">node</span> <span class="pre">namespace&gt;</span></code>.</p>
-<p>Note that these remappings are « static » remappings, in that they apply for the lifetime of the node.
-« Dynamic » remapping of names after nodes have been started is not yet supported.</p>
-<p>See <a class="reference external" href="https://design.ros2.org/articles/static_remapping.html">this design doc</a> for more details on remapping arguments (not all functionality is available yet).</p>
+<h2><a class="toc-backref" href="#id1">Remappage du nom</a><a class="headerlink" href="#name-remapping" title="Lien permanent vers ce titre"></a></h2>
+<p>Les noms au sein d’un nœud (par exemple, les sujets/services) peuvent être remappés en utilisant la syntaxe <code class="docutils literal notranslate"><span class="pre">-r</span> <span class="pre">&lt;ancien</span> <span class="pre">nom&gt;:=&lt;nouveau</span> <span class="pre">nom&gt;</span></code>. Le nom/espace de noms du nœud lui-même peut être remappé en utilisant <code class="docutils literal notranslate"><span class="pre">-r</span> <span class="pre">__node:=&lt;nouveau</span> <span class="pre">nom</span> <span class="pre">de</span> <span class="pre">nœud&gt;</span></code> et <code class="docutils literal notranslate"><span class="pre">-r</span> <span class="pre">__ns:=&lt;nouvel</span> <span class="pre">espace</span> <span class="pre">de</span> <span class="pre">noms</span> <span class="pre">de</span> <span class="pre">nœud&gt;</span></code>.</p>
+<p>Notez que ces remappages sont des remappages « statiques », en ce sens qu’ils s’appliquent pendant toute la durée de vie du nœud. Le remappage « dynamique » des noms après le démarrage des nœuds n’est pas encore pris en charge.</p>
+<p>Voir <a class="reference external" href="https://design.ros2.org/articles/static_remapping.html">cette documentation de conception</a> pour plus de détails sur les arguments de remappage (toutes les fonctionnalités ne sont pas encore disponibles).</p>
 <div class="section" id="example">
-<h3>Example<a class="headerlink" href="#example" title="Lien permanent vers ce titre"></a></h3>
-<p>The following invocation will cause the <code class="docutils literal notranslate"><span class="pre">talker</span></code> node to be started under the node name <code class="docutils literal notranslate"><span class="pre">my_talker</span></code>, publishing on the topic named <code class="docutils literal notranslate"><span class="pre">my_topic</span></code> instead of the default of <code class="docutils literal notranslate"><span class="pre">chatter</span></code>.
-The namespace, which must start with a forward slash, is set to <code class="docutils literal notranslate"><span class="pre">/demo</span></code>, which means that topics are created in that namespace (<code class="docutils literal notranslate"><span class="pre">/demo/my_topic</span></code>), as opposed to globally (<code class="docutils literal notranslate"><span class="pre">/my_topic</span></code>).</p>
+<h3>Exemple<a class="headerlink" href="#example" title="Lien permanent vers ce titre"></a></h3>
+<p>L’invocation suivante entraînera le démarrage du nœud <code class="docutils literal notranslate"><span class="pre">talker</span></code> sous le nom de nœud <code class="docutils literal notranslate"><span class="pre">my_talker</span></code>, en publiant sur le sujet nommé <code class="docutils literal notranslate"><span class="pre">my_topic</span></code> au lieu de la valeur par défaut de <code class="docutils literal notranslate"><span class="pre">chatter</span></code>. L’espace de noms, qui doit commencer par une barre oblique, est défini sur <code class="docutils literal notranslate"><span class="pre">/demo</span></code>, ce qui signifie que les sujets sont créés dans cet espace de noms (<code class="docutils literal notranslate"><span class="pre">/demo/my_topic</span></code>), par opposition à globalement (<a href="#id1"><span class="problematic" id="id2">``</span></a>/my_topic <a href="#id3"><span class="problematic" id="id4">``</span></a>).</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>demo_nodes_cpp<span class="w"> </span>talker<span class="w"> </span>--ros-args<span class="w"> </span>-r<span class="w"> </span>__ns:<span class="o">=</span>/demo<span class="w"> </span>-r<span class="w"> </span>__node:<span class="o">=</span>my_talker<span class="w"> </span>-r<span class="w"> </span>chatter:<span class="o">=</span>my_topic
 </pre></div>
 </div>
 <div class="section" id="passing-remapping-arguments-to-specific-nodes">
-<h4>Passing remapping arguments to specific nodes<a class="headerlink" href="#passing-remapping-arguments-to-specific-nodes" title="Lien permanent vers ce titre"></a></h4>
-<p>If multiple nodes are being run within a single process (e.g. using <a class="reference internal" href="../Concepts/About-Composition.html"><span class="doc">Composition</span></a>), remapping arguments can be passed to a specific node using its name as a prefix.
-For example, the following will pass the remapping arguments to the specified nodes:</p>
+<h4>Passer des arguments de remappage à des nœuds spécifiques<a class="headerlink" href="#passing-remapping-arguments-to-specific-nodes" title="Lien permanent vers ce titre"></a></h4>
+<p>Si plusieurs nœuds sont exécutés dans un même processus (par exemple, en utilisant <a class="reference internal" href="../Concepts/About-Composition.html"><span class="doc">Composition</span></a>), les arguments de remappage peuvent être passés à un nœud spécifique en utilisant son nom comme préfixe. Par exemple, ce qui suit transmettra les arguments de remappage aux nœuds spécifiés :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>composition<span class="w"> </span>manual_composition<span class="w"> </span>--ros-args<span class="w"> </span>-r<span class="w"> </span>talker:__node:<span class="o">=</span>my_talker<span class="w"> </span>-r<span class="w"> </span>listener:__node:<span class="o">=</span>my_listener
 </pre></div>
 </div>
-<p>The following example will both change the node name and remap a topic (node and namespace changes are always applied <em>before</em> topic remapping):</p>
+<p>L’exemple suivant modifiera à la fois le nom du nœud et remappera un sujet (les changements de nœud et d’espace de noms sont toujours appliqués <em>avant</em> le remappage du sujet) :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>composition<span class="w"> </span>manual_composition<span class="w"> </span>--ros-args<span class="w"> </span>-r<span class="w"> </span>talker:__node:<span class="o">=</span>my_talker<span class="w"> </span>-r<span class="w"> </span>my_talker:chatter:<span class="o">=</span>my_topic<span class="w"> </span>-r<span class="w"> </span>listener:__node:<span class="o">=</span>my_listener<span class="w"> </span>-r<span class="w"> </span>my_listener:chatter:<span class="o">=</span>my_topic
 </pre></div>
 </div>
@@ -399,22 +393,22 @@ For example, the following will pass the remapping arguments to the specified no
 </div>
 </div>
 <div class="section" id="logger-configuration">
-<h2><a class="toc-backref" href="#id2">Logger configuration</a><a class="headerlink" href="#logger-configuration" title="Lien permanent vers ce titre"></a></h2>
-<p>See <code class="docutils literal notranslate"><span class="pre">--log-level</span></code> argument usage in <a class="reference internal" href="../Tutorials/Demos/Logging-and-logger-configuration.html"><span class="doc">the logging page</span></a>.</p>
+<h2><a class="toc-backref" href="#id2">Configuration de l’enregistreur</a><a class="headerlink" href="#logger-configuration" title="Lien permanent vers ce titre"></a></h2>
+<p>Voir l’utilisation de l’argument <code class="docutils literal notranslate"><span class="pre">--log-level</span></code> dans <a class="reference internal" href="../Tutorials/Demos/Logging-and-logger-configuration.html"><span class="doc">la page de journalisation</span></a>.</p>
 </div>
 <div class="section" id="parameters">
-<h2><a class="toc-backref" href="#id3">Parameters</a><a class="headerlink" href="#parameters" title="Lien permanent vers ce titre"></a></h2>
+<h2><a class="toc-backref" href="#id3">Paramètres</a><a class="headerlink" href="#parameters" title="Lien permanent vers ce titre"></a></h2>
 <div class="section" id="setting-parameters-directly-from-the-command-line">
-<span id="nodeargsparameters"></span><h3>Setting parameters directly from the command line<a class="headerlink" href="#setting-parameters-directly-from-the-command-line" title="Lien permanent vers ce titre"></a></h3>
-<p>You can set parameters directly from the command line using the following syntax:</p>
+<span id="nodeargsparameters"></span><h3>Réglage des paramètres directement depuis la ligne de commande<a class="headerlink" href="#setting-parameters-directly-from-the-command-line" title="Lien permanent vers ce titre"></a></h3>
+<p>Vous pouvez définir les paramètres directement depuis la ligne de commande en utilisant la syntaxe suivante :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>package_name<span class="w"> </span>executable_name<span class="w"> </span>--ros-args<span class="w"> </span>-p<span class="w"> </span>param_name:<span class="o">=</span>param_value
 </pre></div>
 </div>
-<p>As an example, you can run:</p>
+<p>Par exemple, vous pouvez exécuter :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>demo_nodes_cpp<span class="w"> </span>parameter_blackboard<span class="w"> </span>--ros-args<span class="w"> </span>-p<span class="w"> </span>some_int:<span class="o">=</span><span class="m">42</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;a_string:=Hello world&quot;</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;some_lists.some_integers:=[1, 2, 3, 4]&quot;</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;some_lists.some_doubles:=[3.14, 2.718]&quot;</span>
 </pre></div>
 </div>
-<p>Other nodes will be able to retrieve the parameter values, e.g.:</p>
+<p>D’autres nœuds pourront récupérer les valeurs des paramètres, par exemple :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ros2<span class="w"> </span>param<span class="w"> </span>list<span class="w"> </span>parameter_blackboard
 a_string
 qos_overrides./parameter_events.publisher.depth
@@ -429,10 +423,10 @@ use_sim_time
 </div>
 </div>
 <div class="section" id="setting-parameters-from-yaml-files">
-<h3>Setting parameters from YAML files<a class="headerlink" href="#setting-parameters-from-yaml-files" title="Lien permanent vers ce titre"></a></h3>
-<p>Parameters can be set from the command-line in the form of yaml files.</p>
-<p><a class="reference external" href="https://github.com/ros2/rcl/tree/rolling/rcl_yaml_param_parser">See here</a> for examples of the yaml file syntax.</p>
-<p>As an example, save the following as <code class="docutils literal notranslate"><span class="pre">demo_params.yaml</span></code>:</p>
+<h3>Définition des paramètres à partir de fichiers YAML<a class="headerlink" href="#setting-parameters-from-yaml-files" title="Lien permanent vers ce titre"></a></h3>
+<p>Les paramètres peuvent être définis à partir de la ligne de commande sous la forme de fichiers yaml.</p>
+<p><a class="reference external" href="https://github.com/ros2/rcl/tree/rolling/rcl_yaml_param_parser">Voir ici</a> pour des exemples de la syntaxe du fichier yaml.</p>
+<p>Par exemple, enregistrez ce qui suit sous <code class="docutils literal notranslate"><span class="pre">demo_params.yaml</span></code> :</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">parameter_blackboard</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">ros__parameters</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">some_int</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">42</span>
@@ -442,12 +436,12 @@ use_sim_time
 <span class="w">            </span><span class="nt">some_doubles </span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">3.14</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2.718</span><span class="p p-Indicator">]</span>
 </pre></div>
 </div>
-<p>Then either declare the parameters within your node with <code class="docutils literal notranslate"><span class="pre">declare_parameter</span></code>  or <code class="docutils literal notranslate"><span class="pre">declare_parameters</span></code> (see <a class="reference external" href="https://docs.ros2.org/foxy/api/rclcpp/classrclcpp_1_1Node.html#a095ea977b26e7464d9371efea5f36c42">documentation</a> for function signatures), or <a class="reference external" href="https://docs.ros2.org/foxy/api/rclcpp/classrclcpp_1_1NodeOptions.html#a094ceb7af7c9b358ec007a4b8e14d40d">set the node to automatically declare parameters</a> if they were passed in via a command line override.</p>
-<p>Then run the following:</p>
+<p>Ensuite, déclarez les paramètres dans votre nœud avec <code class="docutils literal notranslate"><span class="pre">declare_parameter</span></code> ou <code class="docutils literal notranslate"><span class="pre">declare_parameters</span></code> (voir <a class="reference external" href="https://docs.ros2.org/foxy/api/rclcpp/classrclcpp_1_1Node.html#a095ea977b26e7464d9371efea5f36c42">documentation</a> pour signatures de fonction), ou <a class="reference external" href="https://docs.ros2.org/foxy/api/rclcpp/classrclcpp_1_1NodeOptions.html#a094ceb7af7c9b358ec007a4b8e14d40d">configurer le nœud pour qu’il déclare automatiquement les paramètres</a> s’ils ont été transmis via un remplacement de ligne de commande.</p>
+<p>Exécutez ensuite ce qui suit :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>demo_nodes_cpp<span class="w"> </span>parameter_blackboard<span class="w"> </span>--ros-args<span class="w"> </span>--params-file<span class="w"> </span>demo_params.yaml
 </pre></div>
 </div>
-<p>Other nodes will be able to retrieve the parameter values, e.g.:</p>
+<p>D’autres nœuds pourront récupérer les valeurs des paramètres, par exemple :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ros2<span class="w"> </span>param<span class="w"> </span>list<span class="w"> </span>parameter_blackboard
 a_string
 qos_overrides./parameter_events.publisher.depth
@@ -469,8 +463,8 @@ use_sim_time
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
-        <a href="Parameters-YAML-files-migration-guide.html" class="btn btn-neutral float-left" title="Migrating YAML parameter files from ROS 1 to ROS 2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
-        <a href="Sync-Vs-Async.html" class="btn btn-neutral float-right" title="Synchronous vs. asynchronous service clients" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Parameters-YAML-files-migration-guide.html" class="btn btn-neutral float-left" title="Migration des fichiers de paramètres YAML de ROS 1 vers ROS 2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Sync-Vs-Async.html" class="btn btn-neutral float-right" title="Clients de service synchrones ou asynchrones" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
