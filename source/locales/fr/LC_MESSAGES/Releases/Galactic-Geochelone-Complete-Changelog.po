@@ -2735,7 +2735,7 @@ msgstr ""
 msgid "Fixes a use-after-free of \"lease\" objects with manual-by-topic writers;"
 msgstr ""
 "Corrige une utilisation après libération des objets \"bail\" avec des "
-"rédacteurs manuels par sujet ;"
+"rédacteurs manuels par topic ;"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:894
 msgid ""
@@ -2755,7 +2755,7 @@ msgid ""
 "Fix a crash when doing an instance lookup on a built-in topic using the key "
 "value;"
 msgstr ""
-"Correction d'un plantage lors d'une recherche d'instance sur un sujet "
+"Correction d'un plantage lors d'une recherche d'instance sur un topic "
 "intégré à l'aide de la valeur clé ;"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:896
@@ -3301,7 +3301,7 @@ msgid ""
 "Add Topic Statistics Example (`#281 "
 "<https://github.com/ros2/examples/issues/281>`__)"
 msgstr ""
-"Ajouter un exemple de statistiques de sujet (`#281 "
+"Ajouter un exemple de statistiques de topic (`#281 "
 "<https://github.com/ros2/examples/issues/281>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:1073
@@ -3808,7 +3808,7 @@ msgid ""
 "Added more parameters for camera topic examples (`#465 "
 "<https://github.com/ros2/demos/issues/465>`__)"
 msgstr ""
-"Ajout de plus de paramètres pour les exemples de sujet de caméra (`#465 "
+"Ajout de plus de paramètres pour les exemples de topic de caméra (`#465 "
 "<https://github.com/ros2/demos/issues/465>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:1265
@@ -3926,7 +3926,7 @@ msgid ""
 "camera info topic."
 msgstr ""
 "Étendre la documentation de ``getCameraInfoTopic`` Documenter le fait que "
-"l'argument ``base_topic`` doit être résolu afin de construire le bon sujet "
+"l'argument ``base_topic`` doit être résolu afin de construire le bon topic "
 "d'informations sur la caméra."
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:1287
@@ -6575,7 +6575,7 @@ msgid ""
 "Add convenient node method to get a final topic/service name (`#835 "
 "<https://github.com/ros2/rcl/issues/835>`__)"
 msgstr ""
-"Ajoutez une méthode de nœud pratique pour obtenir un nom de sujet/service "
+"Ajoutez une méthode de nœud pratique pour obtenir un nom de topic/service "
 "final (`#835 <https://github.com/ros2/rcl/issues/835>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:1859
@@ -8370,7 +8370,7 @@ msgid ""
 "Allow reconfiguring 'clock' topic qos (`#1512 "
 "<https://github.com/ros2/rclcpp/issues/1512>`__)"
 msgstr ""
-"Autoriser la reconfiguration du sujet 'clock' qos (`#1512 "
+"Autoriser la reconfiguration du topic 'clock' qos (`#1512 "
 "<https://github.com/ros2/rclcpp/issues/1512>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:2167
@@ -8438,7 +8438,7 @@ msgid ""
 "Modify excluding callback duration from topic statistics (`#1492 "
 "<https://github.com/ros2/rclcpp/issues/1492>`__)"
 msgstr ""
-"Modifier l'exclusion de la durée de rappel des statistiques de sujet (`#1492"
+"Modifier l'exclusion de la durée de rappel des statistiques de topic (`#1492"
 " <https://github.com/ros2/rclcpp/issues/1492>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:2175
@@ -8695,7 +8695,7 @@ msgid ""
 "Add methods in topic and service interface to resolve a name (`#1410 "
 "<https://github.com/ros2/rclcpp/issues/1410>`__)"
 msgstr ""
-"Ajouter des méthodes dans le sujet et l'interface de service pour résoudre "
+"Ajouter des méthodes dans le topic et l'interface de service pour résoudre "
 "un nom (`#1410 <https://github.com/ros2/rclcpp/issues/1410>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:2205
@@ -9067,7 +9067,7 @@ msgid ""
 "Include topic name in QoS mismatch warning messages (`#1286 "
 "<https://github.com/ros2/rclcpp/issues/1286>`__)"
 msgstr ""
-"Inclure le nom du sujet dans les messages d'avertissement d'incompatibilité "
+"Inclure le nom du topic dans les messages d'avertissement d'incompatibilité "
 "QoS (`#1286 <https://github.com/ros2/rclcpp/issues/1286>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:2256
@@ -9216,7 +9216,7 @@ msgid ""
 "Fix topic stats test, wait for more messages, only check the ones with "
 "samples (`#1274 <https://github.com/ros2/rclcpp/issues/1274>`__)"
 msgstr ""
-"Corrigez le test des statistiques du sujet, attendez plus de messages, ne "
+"Corrigez le test des statistiques du topic, attendez plus de messages, ne "
 "vérifiez que ceux avec des exemples (`#1274 "
 "<https://github.com/ros2/rclcpp/issues/1274>`__)"
 
@@ -9603,7 +9603,7 @@ msgid ""
 "<https://github.com/ros2/rclcpp/issues/1151>`__)"
 msgstr ""
 "Ajout d'une vérification de la période de publication des statistiques de "
-"sujets non valides (`#1151 <https://github.com/ros2/rclcpp/issues/1151>`__)"
+"topics non valides (`#1151 <https://github.com/ros2/rclcpp/issues/1151>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:2321
 msgid ""
@@ -10735,7 +10735,7 @@ msgid ""
 "Add method in Node to resolve a topic or service name (`#636 "
 "<https://github.com/ros2/rclpy/issues/636>`__)"
 msgstr ""
-"Ajouter une méthode dans Node pour résoudre un sujet ou un nom de service "
+"Ajouter une méthode dans Node pour résoudre un topic ou un nom de service "
 "(`#636 <https://github.com/ros2/rclpy/issues/636>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:2514
@@ -10782,7 +10782,7 @@ msgid ""
 "Add in the topic name when QoS events are fired. (`#621 "
 "<https://github.com/ros2/rclpy/issues/621>`__)"
 msgstr ""
-"Ajoutez le nom de la rubrique lorsque les événements QoS sont déclenchés. "
+"Ajoutez le nom du topic lorsque les événements QoS sont déclenchés. "
 "(`#621 <https://github.com/ros2/rclpy/issues/621>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:2520
@@ -10849,7 +10849,7 @@ msgid ""
 "Use absolute parameter events topic name (`#612 "
 "<https://github.com/ros2/rclpy/issues/612>`__)"
 msgstr ""
-"Utiliser le nom de sujet des événements de paramètres absolus (`#612 "
+"Utiliser le nom de topic des événements de paramètres absolus (`#612 "
 "<https://github.com/ros2/rclpy/issues/612>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:2528
@@ -12230,7 +12230,7 @@ msgstr "Supprimer le code commenté/inutilisé"
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:2753
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:2790
 msgid "Avoid topic name validation in get_info functions"
-msgstr "Éviter la validation du nom de sujet dans les fonctions get_info"
+msgstr "Éviter la validation du nom de topic dans les fonctions get_info"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:2723
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:2754
@@ -12424,7 +12424,7 @@ msgid ""
 "Add ability to override of endpoint qos settings based on topic name (Pro)."
 msgstr ""
 "Ajout de la possibilité de remplacer les paramètres QOS du point de "
-"terminaison en fonction du nom du sujet (Pro)."
+"terminaison en fonction du nom du topic (Pro)."
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:2772
 msgid "Optimize QoS for reliable large data (Pro)."
@@ -13105,7 +13105,7 @@ msgid ""
 "Load profiles based on topic names (`#335 "
 "<https://github.com/ros2/rmw_fastrtps/issues/335>`__)"
 msgstr ""
-"Charger les profils en fonction des noms de sujet (`#335 "
+"Charger les profils en fonction des noms de topic (`#335 "
 "<https://github.com/ros2/rmw_fastrtps/issues/335>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:2898
@@ -13441,7 +13441,7 @@ msgid ""
 "Load profiles based on topic names in rmw_fastrtps_dynamic_cpp (`#497 "
 "<https://github.com/ros2/rmw_fastrtps/issues/497>`__)"
 msgstr ""
-"Charger les profils en fonction des noms de sujet dans "
+"Charger les profils en fonction des noms de topic dans "
 "rmw_fastrtps_dynamic_cpp (`#497 "
 "<https://github.com/ros2/rmw_fastrtps/issues/497>`__)"
 
@@ -13679,7 +13679,7 @@ msgid ""
 "Fix trying to get topic data that was already removed. (`#417 "
 "<https://github.com/ros2/rmw_fastrtps/issues/417>`__)"
 msgstr ""
-"Correction d'essayer d'obtenir des données de sujet qui ont déjà été "
+"Correction d'essayer d'obtenir des données de topic qui ont déjà été "
 "supprimées. (`#417 <https://github.com/ros2/rmw_fastrtps/issues/417>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:3018
@@ -14070,7 +14070,7 @@ msgid ""
 "use hardcoded QoS (keep all, transient local) for /tf_static topic in "
 "dynamic_bridge (`#282 <https://github.com/ros2/ros1_bridge/issues/282>`__)"
 msgstr ""
-"utiliser la QoS codée en dur (garder tout, transitoire local) pour le sujet "
+"utiliser la QoS codée en dur (garder tout, transitoire local) pour le topic "
 "/tf_static dans dynamic_bridge (`#282 "
 "<https://github.com/ros2/ros1_bridge/issues/282>`__)"
 
@@ -14079,7 +14079,7 @@ msgid ""
 "document explicitly passing the topic type to 'ros2 topic echo' (`#279 "
 "<https://github.com/ros2/ros1_bridge/issues/279>`__)"
 msgstr ""
-"document passant explicitement le type de sujet à 'ros2 topic echo' (`#279 "
+"document passant explicitement le type de topic à 'ros2 topic echo' (`#279 "
 "<https://github.com/ros2/ros1_bridge/issues/279>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:3093
@@ -14397,8 +14397,8 @@ msgstr ""
 "Appliqué révision des commentaires - le consommateur de cache prend "
 "maintenant un rappel et est indépendant du stockage - changements d'espace "
 "de noms, renommage, nettoyage - comptage et journalisation des messages par "
-"sujet * linter * Modifications après examen : correction du vidage, du "
-"nombre de sujets, etc. s'éteint maintenant correctement * documentation des "
+"topic * linter * Modifications après examen : correction du vidage, du "
+"nombre de topics, etc. s'éteint maintenant correctement * documentation des "
 "classes de cache * signature simplifiée * quelques tests pour le cache * "
 "révision des adresses : constructeur explicite et style doxygen * correction"
 " des avertissements Windows * avertissement de non-concordance de type fixe "
@@ -15139,7 +15139,7 @@ msgid ""
 "Add verbose info for topic list. (`#351 "
 "<https://github.com/ros2/ros2cli/issues/351>`__)"
 msgstr ""
-"Ajoutez des informations détaillées pour la liste des sujets. (`#351 "
+"Ajoutez des informations détaillées pour la liste des topics. (`#351 "
 "<https://github.com/ros2/ros2cli/issues/351>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:3365
@@ -15163,7 +15163,7 @@ msgid ""
 "Fix the test to use the topic name. (`#566 "
 "<https://github.com/ros2/ros2cli/issues/566>`__)"
 msgstr ""
-"Corrigez le test pour utiliser le nom du sujet. (`#566 "
+"Corrigez le test pour utiliser le nom du topic. (`#566 "
 "<https://github.com/ros2/ros2cli/issues/566>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:3369
@@ -15219,7 +15219,7 @@ msgid ""
 "Add option to ros2 topic echo to report lost messages. (`#542 "
 "<https://github.com/ros2/ros2cli/issues/542>`__)"
 msgstr ""
-"Ajouter une option à l'écho du sujet ros2 pour signaler les messages perdus."
+"Ajouter une option à l'écho du topic ros2 pour signaler les messages perdus."
 " (`#542 <https://github.com/ros2/ros2cli/issues/542>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:3376
@@ -15227,7 +15227,7 @@ msgid ""
 "Support QoS Depth and History via ros2 topic pub/echo. (`#528 "
 "<https://github.com/ros2/ros2cli/issues/528>`__)"
 msgstr ""
-"Prise en charge de la profondeur et de l'historique de la QoS via le sujet "
+"Prise en charge de la profondeur et de l'historique de la QoS via le topic "
 "pub/echo ros2. (`#528 <https://github.com/ros2/ros2cli/issues/528>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:3377
@@ -16109,7 +16109,7 @@ msgid ""
 "More reliable topic remapping test (`#456 "
 "<https://github.com/ros2/rosbag2/issues/456>`__)"
 msgstr ""
-"Test de remappage de sujet plus fiable (`#456 "
+"Test de remappage de topic plus fiable (`#456 "
 "<https://github.com/ros2/rosbag2/issues/456>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:3647
@@ -17330,7 +17330,7 @@ msgid ""
 "Port the topic and node selection dialogs to ROS2 (`#86 "
 "<https://github.com/ros-visualization/rqt_bag/issues/86>`__)"
 msgstr ""
-"Portez les boîtes de dialogue de sélection de sujet et de nœud vers ROS2 "
+"Portez les boîtes de dialogue de sélection de topic et de nœud vers ROS2 "
 "(`#86 <https://github.com/ros-visualization/rqt_bag/issues/86>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:3985
@@ -17641,7 +17641,7 @@ msgid ""
 "fix publishing wrong topic after scrolling (`#362 <https://github.com/ros-"
 "visualization/rqt_common_plugins/pull/362>`__)"
 msgstr ""
-"correction de la publication d'un mauvais sujet après le défilement (`#362 "
+"correction de la publication d'un mauvais topic après le défilement (`#362 "
 "<https://github.com/ros-visualization/rqt_common_plugins/pull/362>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:4022
@@ -17672,7 +17672,7 @@ msgid ""
 "fix topic type retrieval for multiple bag files (`#279 "
 "<https://github.com/ros-visualization/rqt_common_plugins/issues/279>`__)"
 msgstr ""
-"correction de la récupération du type de sujet pour plusieurs fichiers bag "
+"correction de la récupération du type de topic pour plusieurs fichiers bag "
 "(`#279 <https://github.com/ros-"
 "visualization/rqt_common_plugins/issues/279>`__)"
 
@@ -17696,11 +17696,11 @@ msgstr ""
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:4029
 msgid "implement recording of topic subsets"
-msgstr "mettre en œuvre l'enregistrement de sous-ensembles de sujets"
+msgstr "mettre en œuvre l'enregistrement de sous-ensembles de topics"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:4030
 msgid "sort the list of topics"
-msgstr "trier la liste des sujets"
+msgstr "trier la liste des topics"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:4031
 msgid ""
@@ -17748,7 +17748,7 @@ msgstr ""
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:4036
 msgid "fix closing and reopening topic views"
-msgstr "correction de la fermeture et de la réouverture des vues de sujet"
+msgstr "correction de la fermeture et de la réouverture des vues de topic"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:4037
 msgid "use queue_size for Python publishers"
@@ -17821,7 +17821,7 @@ msgid ""
 "fix long topic names (`#114 <https://github.com/ros-"
 "visualization/rqt_common_plugins/issues/114>`__)"
 msgstr ""
-"correction des noms de sujet longs (`#114 <https://github.com/ros-"
+"correction des noms de topic longs (`#114 <https://github.com/ros-"
 "visualization/rqt_common_plugins/issues/114>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:4047
@@ -18078,7 +18078,7 @@ msgid ""
 "information to the node tooltip (`#61 <https://github.com/ros-"
 "visualization/rqt_graph/issues/61>`__)"
 msgstr ""
-"Mettez les sujets qui ont des incompatibilités qos en rouge dans le "
+"Mettez les topics qui ont des incompatibilités qos en rouge dans le "
 "graphique, ajoutez des informations à l'info-bulle du nœud (`#61 "
 "<https://github.com/ros-visualization/rqt_graph/issues/61>`__)"
 
@@ -18087,7 +18087,7 @@ msgid ""
 "Add node name, topic name, and endpoint kind to the qos edge tooltip (`#60 "
 "<https://github.com/ros-visualization/rqt_graph/issues/60>`__)"
 msgstr ""
-"Ajoutez le nom du nœud, le nom du sujet et le type de point de terminaison à"
+"Ajoutez le nom du nœud, le nom du topic et le type de point de terminaison à"
 " l'info-bulle qos edge (`#60 <https://github.com/ros-"
 "visualization/rqt_graph/issues/60>`__)"
 
@@ -18926,7 +18926,7 @@ msgid ""
 "<https://github.com/ros2/rviz/issues/597>`__)"
 msgstr ""
 "Correction de l'erreur de segmentation lors de la modification de la taille "
-"du filtre pour un sujet inexistant (`#597 "
+"du filtre pour un topic inexistant (`#597 "
 "<https://github.com/ros2/rviz/issues/597>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:4325
@@ -18942,7 +18942,7 @@ msgid ""
 "Fix topic IntProperty number ranges (`#596 "
 "<https://github.com/ros2/rviz/issues/596>`__)"
 msgstr ""
-"Correction des plages de numéros de sujet IntProperty (`#596 "
+"Correction des plages de numéros de topic IntProperty (`#596 "
 "<https://github.com/ros2/rviz/issues/596>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:4327
@@ -18967,7 +18967,7 @@ msgid ""
 "Filter topics in drop down menu (`#591 "
 "<https://github.com/ros2/rviz/issues/591>`__)"
 msgstr ""
-"Filtrer les sujets dans le menu déroulant (`#591 "
+"Filtrer les topics dans le menu déroulant (`#591 "
 "<https://github.com/ros2/rviz/issues/591>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:4330
@@ -19490,7 +19490,7 @@ msgid ""
 "Enable topic \"ros_discovery_info\" for rmw_connextdds (`#253 "
 "<https://github.com/ros2/sros2/issues/253>`__)"
 msgstr ""
-"Activer le sujet \"ros_discovery_info\" pour rmw_connextdds (`#253 "
+"Activer le topic \"ros_discovery_info\" pour rmw_connextdds (`#253 "
 "<https://github.com/ros2/sros2/issues/253>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:4498
@@ -19515,7 +19515,7 @@ msgid ""
 "parameter_events topic is now absolute (#233) Signed-off-by: Mikael Arguedas"
 " <mikael.arguedas@gmail.com>"
 msgstr ""
-"Le sujet parameter_events est maintenant absolu (#233) Signé par : Mikael "
+"Le topic parameter_events est maintenant absolu (#233) Signé par : Mikael "
 "Arguedas <mikael.arguedas@gmail.com>"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:4501
@@ -19531,7 +19531,7 @@ msgid ""
 "add cyclonedds to the list of rmw using graph info topics (`#231 "
 "<https://github.com/ros2/sros2/issues/231>`__)"
 msgstr ""
-"ajouter cyclonedds à ​​la liste des rmw en utilisant des sujets "
+"ajouter cyclonedds à ​​la liste des rmw en utilisant des topics "
 "d'informations graphiques (`#231 "
 "<https://github.com/ros2/sros2/issues/231>`__)"
 
@@ -20349,7 +20349,7 @@ msgid ""
 "Add missing empty topic name tests. (`#136 "
 "<https://github.com/ros2/rmw_implementation/issues/136>`__)"
 msgstr ""
-"Ajoutez des tests de nom de sujet vides manquants. (`#136 "
+"Ajoutez des tests de nom de topic vides manquants. (`#136 "
 "<https://github.com/ros2/rmw_implementation/issues/136>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:4740
@@ -20885,7 +20885,7 @@ msgid ""
 "Allow reconfiguring qos of tf and tf_static topics through parameters (`#381"
 " <https://github.com/ros2/geometry2/issues/381>`__)"
 msgstr ""
-"Autoriser la reconfiguration du qos des sujets tf et tf_static via des "
+"Autoriser la reconfiguration du qos des topics tf et tf_static via des "
 "paramètres (`#381 <https://github.com/ros2/geometry2/issues/381>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:4885
@@ -21024,7 +21024,7 @@ msgid ""
 "Use global namespace for TransformListener topics (`#390 "
 "<https://github.com/ros2/geometry2/issues/390>`__)"
 msgstr ""
-"Utiliser l'espace de noms global pour les sujets TransformListener (`#390 "
+"Utiliser l'espace de noms global pour les topics TransformListener (`#390 "
 "<https://github.com/ros2/geometry2/issues/390>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:4913
@@ -21239,7 +21239,7 @@ msgid ""
 "Create new topic statistics demo package (`#454 "
 "<https://github.com/ros2/demos/issues/454>`__)"
 msgstr ""
-"Créer un nouveau package de démonstration de statistiques de sujet (`#454 "
+"Créer un nouveau package de démonstration de statistiques de topic (`#454 "
 "<https://github.com/ros2/demos/issues/454>`__)"
 
 #: ../../source/Releases/Galactic-Geochelone-Complete-Changelog.rst:4986
