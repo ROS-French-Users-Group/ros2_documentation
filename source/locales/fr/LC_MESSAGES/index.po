@@ -29,11 +29,11 @@ msgid ""
 "algorithms to powerful developer tools, ROS has the open source tools you "
 "need for your next robotics project."
 msgstr ""
-"**Le système d'exploitation du robot (ROS) est un ensemble de bibliothèques "
+"**Le système d'exploitation de robot (ROS) est un ensemble de bibliothèques "
 "logicielles et d'outils permettant de créer des applications robotiques.** "
-"Des pilotes et des algorithmes de pointe aux puissants outils de "
+"Grâce à des pilotes et des algorithmes de pointe ainsi que des puissants outils de "
 "développement, ROS dispose des outils open source dont vous avez besoin pour"
-" votre prochain projet de robotique."
+" votre prochain projet de robotique !"
 
 #: ../../source/index.rst:27
 msgid ""
@@ -59,8 +59,8 @@ msgid ""
 "If you use ROS 2 in your work, please see :doc:`Citations <Citations>` to "
 "cite ROS 2."
 msgstr ""
-"Si vous utilisez ROS 2 dans votre travail, veuillez consulter "
-":doc:`Citations <Citations>` pour citer ROS 2."
+"Si vous utilisez ROS 2 dans votre travail, vous trouverez dans "
+":doc:`Citations <Citations>` les références pour citer ROS 2."
 
 #: ../../source/index.rst:36
 msgid "Getting started"
@@ -72,7 +72,7 @@ msgstr ":doc:`Installation <Installation>`"
 
 #: ../../source/index.rst:40
 msgid "Instructions to set up ROS 2 for the first time"
-msgstr "Instructions pour configurer ROS 2 pour la première fois"
+msgstr "Instructions afin de configurer ROS 2 pour la première fois"
 
 #: ../../source/index.rst:42
 msgid ":doc:`Tutorials <Tutorials>`"
@@ -87,8 +87,8 @@ msgid ""
 "Hands-on sample projects that help you build a progression of necessary "
 "skills"
 msgstr ""
-"Exemples de projets pratiques qui vous aident à développer une progression "
-"des compétences nécessaires"
+"Exemples de projets pratiques qui vous aideront à développer progressivement "
+"les compétences nécessaires"
 
 #: ../../source/index.rst:47
 msgid ":doc:`How-To-Guides`"
@@ -99,7 +99,7 @@ msgid ""
 "Quick answers to your \"How do I...?\" questions without working through the"
 " :doc:`Tutorials <Tutorials>`"
 msgstr ""
-"Des réponses rapides à votre \"Comment puis-je...?\" questions sans passer "
+"Des réponses rapides aux questions \"Comment puis-je...?\" sans passer "
 "par les :doc:`Tutoriels <Tutoriels>`"
 
 #: ../../source/index.rst:51
@@ -111,7 +111,7 @@ msgid ""
 "High-level explanations of core ROS 2 concepts covered in the "
 ":doc:`Tutorials <Tutorials>`"
 msgstr ""
-"Explications de haut niveau des concepts de base de ROS 2 couverts dans les "
+"L'introduction aux concepts de base de ROS 2 est couverte dans les "
 ":doc:`Tutoriels <Tutoriels>`"
 
 #: ../../source/index.rst:55
@@ -140,7 +140,7 @@ msgid ""
 "instructions for migrating existing ROS 1 content to ROS 2"
 msgstr ""
 "Meilleures pratiques et méthodologie pour contribuer à ROS 2, ainsi que des "
-"instructions pour migrer le contenu ROS 1 existant vers ROS 2"
+"instructions pour migrer vos codes de ROS 1 vers ROS 2"
 
 #: ../../source/index.rst:69
 msgid ":doc:`Distributions <Releases>`"
@@ -299,7 +299,7 @@ msgid ""
 "Generates commands to emulate the `ROS Buildfarm <https://build.ros.org/>`_ "
 "on your local machine"
 msgstr ""
-"Génère des commandes pour émuler le `ROS Buildfarm "
+"Génèrer des commandes pour émuler le `ROS Buildfarm "
 "<https://build.ros.org/>`_ sur votre machine locale"
 
 #: ../../source/index.rst:125
@@ -339,7 +339,7 @@ msgid ""
 "ROS 1 and ROS 2 product landing page, with high-level description of ROS and"
 " links to other ROS sites"
 msgstr ""
-"Page de destination des produits ROS 1 et ROS 2, avec une description de "
+"Page des produits ROS 1 et ROS 2, avec une description de "
 "haut niveau de ROS et des liens vers d'autres sites ROS"
 
 #: ../../source/index.rst:142
